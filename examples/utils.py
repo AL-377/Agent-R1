@@ -1,0 +1,171 @@
+import openai
+from openai import OpenAI
+
+from typing import Dict, List, Optional, Any, Union
+import os
+
+from dotenv import load_dotenv
+load_dotenv()
+
+model2api = {
+    "DeepSeek-R1": os.getenv("DEEPSEEK_R1_API_KEY"),
+    "o1-mini-2024-09-12": os.getenv("O1_MINI_API_KEY"),
+    "o3-2025-04-16": os.getenv("O3_API_KEY"),
+    "gpt-5-2025-08-07": os.getenv("GPT_5_API_KEY"),
+    "gpt-4o-2024-11-20": os.getenv("GPT_4O_API_KEY"),
+    "gpt-4o-mini-2024-07-18": os.getenv("GPT_4O_MINI_API_KEY")
+}
+
+def query_llm(
+    model_name: str,
+    **kwargs: Any
+):
+    if model_name in ["gpt-oss-120b","gpt-4o-2024-11-20","gpt-4o-mini-2024-07-18","DeepSeek-R1","o1-mini-2024-09-12"]:
+        if model_name=="DeepSeek-R1":
+            model_name="deepseek-r1"
+        if model_name=="o1-mini-2024-09-12":
+            model_name="o1-mini"
+        return query_llm_outer(
+            model_name=model_name,
+            **kwargs
+        )
+    else:
+        return query_llm_inhouse(
+            model_name=model_name,
+            **kwargs
+        )
+
+def query_llm_outer(
+    model_name: str,
+    messages: Union[List[Dict[str, str]], str],
+    api_key: str=os.getenv("YUNWU_API_KEY"),
+    base_url: str = "https://yunwu.ai/v1/",
+    system: Optional[str] = None,
+    max_tokens: Optional[int] = 16384,
+    temperature: float = 1.0,
+    top_p: float = 0.7,
+    **kwargs: Any
+) -> Dict[str, Optional[str]]:
+    """
+    查询 LLM API 并返回推理内容和响应
+    
+    Args:
+        model_name: 模型名称
+        messages: 消息列表，格式为 [{"role": "user", "content": "..."}]，或者直接传入字符串（会自动包装为 user role）
+        api_key: API 密钥
+        base_url: API 基础 URL，默认为 "https://yunwu.ai/v1/"
+        system: 可选的 system 消息（字符串）
+        max_tokens: 最大生成 token 数，默认为 None（由模型决定）
+        temperature: 温度参数，默认为 1.0
+        top_p: top_p 参数，默认为 0.7
+        **kwargs: 其他传递给 API 的参数
+    
+    Returns:
+        包含 'reasoning_content' 和 'response' 的字典
+    """
+    # 处理 messages：如果是字符串，自动包装
+    if isinstance(messages, str):
+        messages = [{"role": "user", "content": messages}]
+    
+    # 处理 system：如果提供了 system 参数，添加到 messages 开头
+    if system is not None:
+        messages = [{"role": "system", "content": system}] + messages
+    
+    client = OpenAI(
+        api_key=api_key,
+        base_url=base_url
+    )
+    
+    # 准备 API 调用参数
+    api_params = {
+        "messages": messages,
+        "model": model_name,
+        "temperature": temperature,
+        # "top_p": top_p,
+        **kwargs
+    }
+    
+    # 如果提供了 max_tokens，添加到参数中
+    if max_tokens is not None:
+        api_params["max_tokens"] = max_tokens
+    
+    chat_completion = client.chat.completions.create(**api_params)
+    
+    message = chat_completion.choices[0].message
+    
+    # 提取 reasoning_content（如果存在）
+    reasoning_content = None
+    if hasattr(message, 'reasoning_content') and message.reasoning_content:
+        reasoning_content = message.reasoning_content
+    elif hasattr(message, 'reasoning') and message.reasoning:
+        reasoning_content = message.reasoning
+    
+    # 提取 response
+    response = message.content if message.content else ""
+    
+    return {
+        'reasoning_content': reasoning_content,
+        'response': response
+    }
+
+def query_llm_inhouse(
+    model_name: str,
+    messages: Union[List[Dict[str, str]], str],
+    system: Optional[str] = None,
+    max_tokens: Optional[int] = 16384,
+    temperature: float = 1.0,
+    top_p: float = 0.7,
+    **kwargs: Any
+) -> Dict[str, Optional[str]]:
+    global model2api
+    # 处理 messages：如果是字符串，自动包装
+    if isinstance(messages, str):
+        messages = [{"role": "user", "content": messages}]
+    
+    # 处理 system：如果提供了 system 参数，添加到 messages 开头
+    if system is not None:
+        messages = [{"role": "system", "content": system}] + messages
+
+
+    client = openai.AzureOpenAI(
+        api_key=model2api[model_name],
+        azure_endpoint="https://search.bytedance.net/gpt/openapi/online/v2/crawl",
+        api_version="2024-03-01-preview",
+    )
+    extra_args = {
+        "top_p": top_p,
+        "temperature": temperature,
+    }
+    if model_name in ["DeepSeek-R1"]:
+        response = client.chat.completions.create(
+            model=model_name,
+            messages=messages,
+            max_tokens=max_tokens,
+            extra_headers={
+                "X-TT-LOGID": "${your_logid}"
+            },
+            **extra_args
+        )
+    else:
+        response = client.chat.completions.create(
+            model=model_name,
+            messages=messages,
+            max_tokens=max_tokens,
+            extra_headers={
+                "X-TT-LOGID": "${your_logid}"
+            },
+        )
+    model_response = response.choices[0].message.content
+    reasoning_content =   response.choices[0].message.reasoning_content
+    return {
+        'reasoning_content': reasoning_content,
+        'response': model_response
+    }
+
+if __name__ == "__main__":
+    ans = query_llm(
+        model_name="DeepSeek-R1",
+        messages="你好?请问人生的意义是什么",
+    )
+    print(ans['response'])
+    print(ans['reasoning_content'])
