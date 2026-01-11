@@ -5,5 +5,8 @@ def _default_env(name):
     elif name == "retool":
         from agent_r1.tool.envs.retool import ReToolEnv
         return ReToolEnv
+    elif name == "memory":
+        from agent_r1.tool.envs.memory import MemoryEnv
+        return MemoryEnv
     else:
         raise NotImplementedError(f"Tool environment {name} is not implemented")

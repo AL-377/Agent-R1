@@ -8,6 +8,9 @@ def _default_compute_score_format(data_source, solution_str, extra_info=None):
     elif data_source == 'BytedTsinghua-SIA/DAPO-Math-17k':
         from . import retool
         res = retool.compute_score_format(solution_str)
+    elif data_source == 'memory/medical_dialogue' or data_source.startswith('memory/'):
+        from . import memory
+        res = memory.compute_score_format(solution_str)
     else:
         raise NotImplementedError
     
@@ -26,6 +29,9 @@ def _default_compute_score_answer(data_source, solution_str, ground_truth, extra
     elif data_source == 'BytedTsinghua-SIA/DAPO-Math-17k':
         from . import retool
         res = retool.compute_score_answer(solution_str, ground_truth)
+    elif data_source == 'memory/medical_dialogue' or data_source.startswith('memory/'):
+        from . import memory
+        res = memory.compute_score_operations(solution_str, ground_truth, extra_info)
     else:
         raise NotImplementedError
     
@@ -44,6 +50,9 @@ def _default_compute_score_format_answer(data_source, solution_str, ground_truth
     elif data_source == 'BytedTsinghua-SIA/DAPO-Math-17k':
         from . import retool
         res = retool.compute_score_format_answer(solution_str, ground_truth)
+    elif data_source == 'memory/medical_dialogue' or data_source.startswith('memory/'):
+        from . import memory
+        res = memory.compute_score(solution_str, ground_truth, extra_info)
     else:
         raise NotImplementedError
     
