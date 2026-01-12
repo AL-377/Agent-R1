@@ -548,7 +548,7 @@ def process_dataset(input_file: str, output_file: str,
             processed_messages = process_patient_dialogues(
                 patient_id, sessions, model_name
             )
-            all_processed_data.extend(processed_messages)
+            all_processed_data.extend({"patient_id": patient_id, "messages": processed_messages})
             print(f"  Processed {len(processed_messages)} messages")
         except Exception as e:
             print(f"  Error processing patient {patient_id}: {e}")
