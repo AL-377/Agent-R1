@@ -12,11 +12,9 @@ from typing import Dict, List, Any, Optional, Tuple
 from collections import defaultdict
 import sys
 import os
+from tqdm import tqdm
 
-# Add parent directory to path to import utils
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-from examples.utils import query_llm
+from agent_r1.utils.llm import query_llm
 from agent_r1.tool.memory_manager import MemoryManager
 
 
@@ -193,7 +191,7 @@ For each information item (which already has the layer specified):
 - If it's new information, use memory_insert with the extracted layer and content
 - If it updates existing information, use memory_update (you need to find the memory_id from current state)
 - If it's redundant or should be removed, use memory_delete
-- If no operation is needed, use memory_wait
+- If no operation is needed, use memory_wait. **It is used when the information is already in the memory and no update is needed.**
 
 Important:
 - The layer is already specified in each item (working, identity, history, or experience)
@@ -414,8 +412,7 @@ def process_patient_dialogues(patient_id: str, sessions: List[Dict],
     """
     # Initialize memory manager for this patient
     try:
-        # Use CPU device for preprocessing to avoid GPU requirements
-        memory_manager = MemoryManager(device="cpu")
+        memory_manager = MemoryManager(device="cuda")
     except Exception as e:
         print(f"Warning: Failed to initialize MemoryManager with embeddings: {e}")
         print("Attempting to use MemoryManager without embeddings...")
@@ -433,7 +430,11 @@ def process_patient_dialogues(patient_id: str, sessions: List[Dict],
     dialogue_history = []
     
     # Process each session
-    for session_idx, session in enumerate(sessions):
+    for session_idx, session in tqdm(enumerate(sessions), desc="Processing dialogues"):
+        # Reset working memory at the start of each session
+        memory_manager.reset_working_memory()
+        
+        # Get dialogue from session
         dialogue = session.get("dialogue", [])
         
         # Add session separator (except for first session)
@@ -459,14 +460,14 @@ def process_patient_dialogues(patient_id: str, sessions: List[Dict],
             
             # Extract to_memory
             to_memory = extract_to_memory(text, dialogue_history, model_name)
-            
+            print(f"to_memory: {to_memory}")
             # Generate function calls if to_memory is not empty
             function_calls = []
             if to_memory:
                 function_calls = generate_memory_function_calls(
                     to_memory, memory_state_before, model_name
                 )
-            
+                print(f"function_calls: {function_calls}")
             # Execute function calls
             memory_changed = False
             if function_calls:

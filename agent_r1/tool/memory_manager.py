@@ -115,6 +115,11 @@ class MemoryManager:
             self.indices[layer_name] = index
             print(f"[MemoryManager] Initialized {self.index_type} index for layer: {layer_name}")
     
+    def reset_working_memory(self):
+        """Reset working memory"""
+        self.memories[MemoryLayer.WORKING.value] = []
+        self.indices[MemoryLayer.WORKING.value].reset()
+    
     def insert(self, layer: str, content: str, metadata: Dict[str, Any] = None) -> str:
         """
         Insert a new memory item
