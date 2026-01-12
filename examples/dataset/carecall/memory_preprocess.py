@@ -9,13 +9,14 @@ import json
 import re
 import copy
 import concurrent.futures
+import multiprocessing
 from typing import Dict, List, Any, Optional, Tuple
 from collections import defaultdict
 import sys
 import os
 from tqdm import tqdm
 
-from agent_r1.utils.llm import query_llm_inhouse
+from agent_r1.utils.llm import query_llm_inhouse,open_proxy,close_proxy
 from agent_r1.tool.memory_manager import MemoryManager
 
 
@@ -125,13 +126,17 @@ Return only the JSON list, no other text."""
         )
         
         result_text = response.get("response", "").strip()
-        
+        # if with think, extract content after <think>**</think>
+        if result_text.startswith("<think>"):
+            think_end = result_text.find("</think>")
+            if think_end != -1:
+                result_text = result_text[think_end+len("</think>"):].strip()
         # Try to parse JSON
         # Remove markdown code blocks if present
         result_text = re.sub(r"```json\s*", "", result_text)
         result_text = re.sub(r"```\s*", "", result_text)
         result_text = result_text.strip()
-        
+        print(result_text)
         # Try to extract JSON array
         if result_text.startswith("["):
             memory_items = json.loads(result_text)
@@ -221,11 +226,17 @@ Return only the JSON list, no other text."""
         
         result_text = response.get("response", "").strip()
         
+        # if with think, extract content after <think>**</think>
+        if result_text.startswith("<think>"):
+            think_end = result_text.find("</think>")
+            if think_end != -1:
+                result_text = result_text[think_end+len("</think>"):].strip()
         # Remove markdown code blocks if present
         result_text = re.sub(r"```json\s*", "", result_text)
         result_text = re.sub(r"```\s*", "", result_text)
         result_text = result_text.strip()
         
+        print(result_text)
         # Try to parse JSON
         if result_text.startswith("["):
             function_calls = json.loads(result_text)
@@ -351,7 +362,7 @@ Return only the JSON object, no other text."""
             model_name=model_name,
             messages=prompt,
             temperature=0.7,
-            max_tokens=500
+            max_tokens=16384
         )
         
         result_text = response.get("response", "").strip()
@@ -583,6 +594,14 @@ def process_dataset(input_file: str, output_file: str,
 def main():
     import argparse
     
+    # Set multiprocessing start method to 'spawn' for CUDA compatibility
+    # This must be done before creating any ProcessPoolExecutor
+    try:
+        multiprocessing.set_start_method('spawn', force=True)
+    except RuntimeError:
+        # Start method may already be set, which is fine
+        pass
+    
     parser = argparse.ArgumentParser(
         description="Process medical dialogue data into memory evaluation format"
     )
@@ -629,4 +648,5 @@ def main():
 
 
 if __name__ == "__main__":
+    open_proxy()
     main()

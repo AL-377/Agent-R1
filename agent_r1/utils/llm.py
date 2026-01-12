@@ -16,6 +16,16 @@ model2api = {
     "gpt-4o-mini-2024-07-18": os.getenv("GPT_4O_MINI_API_KEY")
 }
 
+def close_proxy():
+    os.environ["no_proxy"]=""
+    os.environ["http_proxy"]=""
+    os.environ["https_proxy"]=""
+
+def open_proxy():
+    os.environ["no_proxy"]=""
+    os.environ["http_proxy"]="http://seed_gui_osworld_proxy:2Gj6QEgYtInSL5Xx@id3473.http-sg-idc-idc-sg-flow.forward-proxy.byted.org:8080"
+    os.environ["https_proxy"]="http://seed_gui_osworld_proxy:2Gj6QEgYtInSL5Xx@id3473.http-sg-idc-idc-sg-flow.forward-proxy.byted.org:8080"
+
 def query_llm(
     model_name: str,
     **kwargs: Any
@@ -63,6 +73,7 @@ def query_llm_outer(
     Returns:
         包含 'reasoning_content' 和 'response' 的字典
     """
+    close_proxy()
     # 处理 messages：如果是字符串，自动包装
     if isinstance(messages, str):
         messages = [{"role": "user", "content": messages}]
@@ -102,7 +113,7 @@ def query_llm_outer(
     
     # 提取 response
     response = message.content if message.content else ""
-    
+    open_proxy()
     return {
         'reasoning_content': reasoning_content,
         'response': response
@@ -118,6 +129,8 @@ def query_llm_inhouse(
     **kwargs: Any
 ) -> Dict[str, Optional[str]]:
     global model2api
+    
+    close_proxy()
     # 处理 messages：如果是字符串，自动包装
     if isinstance(messages, str):
         messages = [{"role": "user", "content": messages}]
@@ -157,6 +170,7 @@ def query_llm_inhouse(
         )
     model_response = response.choices[0].message.content
     reasoning_content =   response.choices[0].message.reasoning_content
+    open_proxy()
     return {
         'reasoning_content': reasoning_content,
         'response': model_response
