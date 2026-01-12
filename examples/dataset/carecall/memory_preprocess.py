@@ -8,13 +8,14 @@ For each patient, maintains an oracle_memory_base and processes dialogues sequen
 import json
 import re
 import copy
+import concurrent.futures
 from typing import Dict, List, Any, Optional, Tuple
 from collections import defaultdict
 import sys
 import os
 from tqdm import tqdm
 
-from agent_r1.utils.llm import query_llm
+from agent_r1.utils.llm import query_llm_inhouse
 from agent_r1.tool.memory_manager import MemoryManager
 
 
@@ -116,7 +117,7 @@ Important:
 Return only the JSON list, no other text."""
 
     try:
-        response = query_llm(
+        response = query_llm_inhouse(
             model_name=model_name,
             messages=prompt,
             temperature=0.3,
@@ -211,7 +212,7 @@ Example:
 Return only the JSON list, no other text."""
 
     try:
-        response = query_llm(
+        response = query_llm_inhouse(
             model_name=model_name,
             messages=prompt,
             temperature=0.3,
@@ -346,7 +347,7 @@ Example:
 Return only the JSON object, no other text."""
 
     try:
-        response = query_llm(
+        response = query_llm_inhouse(
             model_name=model_name,
             messages=prompt,
             temperature=0.7,
@@ -398,7 +399,7 @@ def format_memory_state(memory_state: Dict[str, Any]) -> str:
 
 
 def process_patient_dialogues(patient_id: str, sessions: List[Dict], 
-                             model_name: str = "gpt-4o-2024-11-20") -> List[Dict]:
+                             model_name: str = "gpt-4o-2024-11-20") -> Optional[Dict]:
     """
     Process all dialogues for a single patient.
     
@@ -408,111 +409,121 @@ def process_patient_dialogues(patient_id: str, sessions: List[Dict],
         model_name: LLM model name
     
     Returns:
-        List of processed messages in target format
+        Dict with "patient_id" and "messages" keys, or None if processing failed
     """
-    # Initialize memory manager for this patient
+    print(f"Processing patient {patient_id}")
     try:
-        memory_manager = MemoryManager(device="cuda")
-    except Exception as e:
-        print(f"Warning: Failed to initialize MemoryManager with embeddings: {e}")
-        print("Attempting to use MemoryManager without embeddings...")
-        # Try to create a minimal memory manager
-        # For now, raise the error - user should install required dependencies
-        raise RuntimeError(
-            f"MemoryManager initialization failed. Please ensure FlagEmbedding and faiss are installed. "
-            f"Error: {e}"
-        )
-    
-    # Store processed messages
-    processed_messages = []
-    
-    # Track dialogue history
-    dialogue_history = []
-    
-    # Process each session
-    for session_idx, session in tqdm(enumerate(sessions), desc="Processing dialogues"):
-        # Reset working memory at the start of each session
-        memory_manager.reset_working_memory()
+        # Initialize memory manager for this patient
+        try:
+            memory_manager = MemoryManager(device="cuda")
+        except Exception as e:
+            print(f"Warning: Failed to initialize MemoryManager with embeddings: {e}")
+            print("Attempting to use MemoryManager without embeddings...")
+            # Try to create a minimal memory manager
+            # For now, raise the error - user should install required dependencies
+            raise RuntimeError(
+                f"MemoryManager initialization failed. Please ensure FlagEmbedding and faiss are installed. "
+                f"Error: {e}"
+            )
         
-        # Get dialogue from session
-        dialogue = session.get("dialogue", [])
+        # Store processed messages
+        processed_messages = []
         
-        # Add session separator (except for first session)
-        if session_idx > 0:
-            processed_messages.append("---诊疗分割线---")
+        # Track dialogue history
+        dialogue_history = []
         
-        # Process each message in the dialogue
-        for msg in dialogue:
-            role = msg.get("role", "")
-            text = msg.get("text", "")
+        # Process each session
+        for session_idx, session in enumerate(sessions):
+            # Reset working memory at the start of each session
+            memory_manager.reset_working_memory()
             
-            # Map roles: system -> assistant, user -> user
-            # Skip if role is not user or system
-            if role not in ["user", "system"]:
-                dialogue_history.append(msg)
-                continue
+            # Get dialogue from session
+            dialogue = session.get("dialogue", [])
             
-            # Map system to assistant for output
-            output_role = "assistant" if role == "system" else "user"
+            # Add session separator (except for first session)
+            if session_idx > 0:
+                processed_messages.append("---诊疗分割线---")
             
-            # Get current memory state before processing
-            memory_state_before = copy.deepcopy(memory_manager.get_memory_state())
-            
-            # Extract to_memory
-            to_memory = extract_to_memory(text, dialogue_history, model_name)
-            print(f"to_memory: {to_memory}")
-            # Generate function calls if to_memory is not empty
-            function_calls = []
-            if to_memory:
-                function_calls = generate_memory_function_calls(
-                    to_memory, memory_state_before, model_name
-                )
-                print(f"function_calls: {function_calls}")
-            # Execute function calls
-            memory_changed = False
-            if function_calls:
-                memory_changed = execute_memory_operations(function_calls, memory_manager)
-            
-            # Get memory state after processing
-            memory_state_after = memory_manager.get_memory_state()
-            
-            # Generate memory_query if memory changed
-            memory_query = None
-            if memory_changed:
-                memory_query = generate_memory_query(to_memory, memory_changed, model_name)
-            
-            # Format memory state for output
-            oracle_memory_base = {
-                "working": memory_state_after.get("working", []),
-                "identity": memory_state_after.get("identity", []),
-                "history": memory_state_after.get("history", []),
-                "experience": memory_state_after.get("experience", [])
-            }
-            
-            # Create processed message in target format
-            # Format: {role: {content, to_memory, oracle_memory_base, memory_query?}}
-            processed_msg = {
-                output_role: {
-                    "content": text,
-                    "to_memory": to_memory if to_memory else [None],
-                    "oracle_memory_base": oracle_memory_base
+            # Process each message in the dialogue
+            for msg in dialogue:
+                role = msg.get("role", "")
+                text = msg.get("text", "")
+                
+                # Map roles: system -> assistant, user -> user
+                # Skip if role is not user or system
+                if role not in ["user", "system"]:
+                    dialogue_history.append(msg)
+                    continue
+                
+                # Map system to assistant for output
+                output_role = "assistant" if role == "system" else "user"
+                
+                # Get current memory state before processing
+                memory_state_before = copy.deepcopy(memory_manager.get_memory_state())
+                
+                # Extract to_memory
+                to_memory = extract_to_memory(text, dialogue_history, model_name)
+                print(f"Patient {patient_id} to_memory: {to_memory}")
+                # Generate function calls if to_memory is not empty
+                function_calls = []
+                if to_memory:
+                    function_calls = generate_memory_function_calls(
+                        to_memory, memory_state_before, model_name
+                    )
+                    print(f"Patient {patient_id} function_calls: {function_calls}")
+                # Execute function calls
+                memory_changed = False
+                if function_calls:
+                    memory_changed = execute_memory_operations(function_calls, memory_manager)
+                
+                # Get memory state after processing
+                memory_state_after = memory_manager.get_memory_state()
+                
+                # Generate memory_query if memory changed
+                memory_query = None
+                if memory_changed:
+                    memory_query = generate_memory_query(to_memory, memory_changed, model_name)
+                
+                # Format memory state for output
+                oracle_memory_base = {
+                    "working": memory_state_after.get("working", []),
+                    "identity": memory_state_after.get("identity", []),
+                    "history": memory_state_after.get("history", []),
+                    "experience": memory_state_after.get("experience", [])
                 }
-            }
-            
-            if memory_query:
-                processed_msg[output_role]["memory_query"] = memory_query
-            
-            processed_messages.append(processed_msg)
-            
-            # Update dialogue history
-            dialogue_history.append(msg)
-    
-    return processed_messages
+                
+                # Create processed message in target format
+                # Format: {role: {content, to_memory, oracle_memory_base, memory_query?}}
+                processed_msg = {
+                    output_role: {
+                        "content": text,
+                        "to_memory": to_memory if to_memory else [None],
+                        "oracle_memory_base": oracle_memory_base
+                    }
+                }
+                
+                # Add memory_query if available
+                if memory_query:
+                    processed_msg[output_role]["memory_query"] = memory_query
+                
+                # Add to processed messages
+                processed_messages.append(processed_msg)
+                
+                # Update dialogue history
+                dialogue_history.append(msg)
+        
+        print(f"Completed processing patient {patient_id}")
+        return {"patient_id": patient_id, "messages": processed_messages}
+        
+    except Exception as e:
+        print(f"Error processing patient {patient_id}: {e}")
+        return None
 
 
 def process_dataset(input_file: str, output_file: str, 
                    model_name: str = "gpt-4o-2024-11-20",
-                   max_patients: Optional[int] = None):
+                   max_patients: Optional[int] = None,
+                   workers: int = 4) -> None:
     """
     Process the entire dataset.
     
@@ -521,6 +532,7 @@ def process_dataset(input_file: str, output_file: str,
         output_file: Path to output JSON file
         model_name: LLM model name to use
         max_patients: Maximum number of patients to process (None for all)
+        workers: Number of concurrent workers to use
     """
     print(f"Loading data from {input_file}...")
     with open(input_file, 'r', encoding='utf-8') as f:
@@ -539,26 +551,33 @@ def process_dataset(input_file: str, output_file: str,
     
     all_processed_data = []
     
-    for idx, patient_id in enumerate(patient_ids):
-        print(f"\nProcessing patient {patient_id} ({idx+1}/{len(patient_ids)})...")
-        sessions = patient_dialogues[patient_id]
-        print(f"  Found {len(sessions)} sessions")
+    # Process patients in parallel
+    with concurrent.futures.ProcessPoolExecutor(max_workers=workers) as executor:
+        # Prepare tasks
+        future_to_patient = {
+            executor.submit(process_patient_dialogues, patient_id, patient_dialogues[patient_id], model_name): 
+            patient_id for patient_id in patient_ids
+        }
         
-        try:
-            processed_messages = process_patient_dialogues(
-                patient_id, sessions, model_name
-            )
-            all_processed_data.extend({"patient_id": patient_id, "messages": processed_messages})
-            print(f"  Processed {len(processed_messages)} messages")
-        except Exception as e:
-            print(f"  Error processing patient {patient_id}: {e}")
-            continue
+        # Process results as they complete
+        for future in tqdm(concurrent.futures.as_completed(future_to_patient), total=len(patient_ids)):
+            patient_id = future_to_patient[future]
+            try:
+                result = future.result()
+                if result:
+                    all_processed_data.append(result)
+                    print(f"  Processed {len(result['messages'])} messages for patient {patient_id}")
+            except Exception as e:
+                print(f"  Error processing patient {patient_id}: {e}")
+    
+    # Sort results by patient_id to maintain order
+    all_processed_data.sort(key=lambda x: x['patient_id'])
     
     print(f"\nSaving processed data to {output_file}...")
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(all_processed_data, f, ensure_ascii=False, indent=2)
     
-    print(f"Done! Processed {len(all_processed_data)} messages from {len(patient_ids)} patients")
+    print(f"Done! Processed {len(all_processed_data)} patients")
 
 
 def main():
@@ -591,6 +610,12 @@ def main():
         default=None,
         help="Maximum number of patients to process (for testing)"
     )
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=4,
+        help="Number of concurrent workers to use"
+    )
     
     args = parser.parse_args()
     
@@ -598,10 +623,10 @@ def main():
         input_file=args.input,
         output_file=args.output,
         model_name=args.model,
-        max_patients=args.max_patients
+        max_patients=args.max_patients,
+        workers=args.workers
     )
 
 
 if __name__ == "__main__":
     main()
-
