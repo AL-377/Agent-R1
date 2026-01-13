@@ -16,6 +16,13 @@ import sys
 import os
 from tqdm import tqdm
 
+# Try to import torch for CUDA device detection
+try:
+    import torch
+    TORCH_AVAILABLE = True
+except ImportError:
+    TORCH_AVAILABLE = False
+
 from agent_r1.utils.llm import query_llm_inhouse,open_proxy,close_proxy
 from agent_r1.tool.memory_manager import MemoryManager
 
@@ -121,8 +128,8 @@ Return only the JSON list, no other text."""
         response = query_llm_inhouse(
             model_name=model_name,
             messages=prompt,
-            temperature=0.3,
-            max_tokens=1000
+            temperature=0.7,
+            max_tokens=16384
         )
         
         result_text = response.get("response", "").strip()
@@ -220,8 +227,8 @@ Return only the JSON list, no other text."""
         response = query_llm_inhouse(
             model_name=model_name,
             messages=prompt,
-            temperature=0.3,
-            max_tokens=2000
+            temperature=0.7,
+            max_tokens=16384
         )
         
         result_text = response.get("response", "").strip()
@@ -409,8 +416,100 @@ def format_memory_state(memory_state: Dict[str, Any]) -> str:
     return "\n".join(lines) if lines else "No memories stored yet."
 
 
+def save_patient_cache(patient_id: str, result: Dict, cache_dir: str) -> None:
+    """
+    Save processed patient data to cache file.
+    
+    Args:
+        patient_id: Patient ID
+        result: Processed patient data
+        cache_dir: Cache directory path
+    """
+    if result is None:
+        return
+    
+    os.makedirs(cache_dir, exist_ok=True)
+    cache_file = os.path.join(cache_dir, f"patient_{patient_id}.json")
+    try:
+        # Use atomic write: write to temp file first, then rename
+        temp_file = cache_file + ".tmp"
+        with open(temp_file, 'w', encoding='utf-8') as f:
+            json.dump(result, f, ensure_ascii=False, indent=2)
+        os.replace(temp_file, cache_file)
+    except Exception as e:
+        print(f"Warning: Failed to save cache for patient {patient_id}: {e}")
+
+
+def load_patient_cache(patient_id: str, cache_dir: str) -> Optional[Dict]:
+    """
+    Load processed patient data from cache file.
+    
+    Args:
+        patient_id: Patient ID
+        cache_dir: Cache directory path
+    
+    Returns:
+        Cached patient data or None if not found
+    """
+    cache_file = os.path.join(cache_dir, f"patient_{patient_id}.json")
+    if not os.path.exists(cache_file):
+        return None
+    
+    try:
+        with open(cache_file, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"Warning: Failed to load cache for patient {patient_id}: {e}")
+        return None
+
+
+def load_all_cached_patients(cache_dir: str) -> Dict[str, Dict]:
+    """
+    Load all cached patient data.
+    
+    Args:
+        cache_dir: Cache directory path
+    
+    Returns:
+        Dictionary mapping patient_id to cached data
+    """
+    cached_patients = {}
+    if not os.path.exists(cache_dir):
+        return cached_patients
+    
+    try:
+        for filename in os.listdir(cache_dir):
+            if filename.startswith("patient_") and filename.endswith(".json"):
+                # Extract patient_id from filename
+                patient_id = filename[8:-5]  # Remove "patient_" prefix and ".json" suffix
+                cached_data = load_patient_cache(patient_id, cache_dir)
+                if cached_data:
+                    cached_patients[patient_id] = cached_data
+    except Exception as e:
+        print(f"Warning: Error loading cache directory: {e}")
+    
+    return cached_patients
+
+
+def get_available_cuda_devices() -> int:
+    """
+    Get the number of available CUDA devices.
+    
+    Returns:
+        Number of available CUDA devices, or 1 if CUDA is not available
+    """
+    if not TORCH_AVAILABLE:
+        return 1
+    
+    if torch.cuda.is_available():
+        return torch.cuda.device_count()
+    return 1
+
+
 def process_patient_dialogues(patient_id: str, sessions: List[Dict], 
-                             model_name: str = "gpt-4o-2024-11-20") -> Optional[Dict]:
+                             model_name: str = "gpt-4o-2024-11-20",
+                             device_id: Optional[int] = None,
+                             cache_dir: Optional[str] = None) -> Optional[Dict]:
     """
     Process all dialogues for a single patient.
     
@@ -418,15 +517,24 @@ def process_patient_dialogues(patient_id: str, sessions: List[Dict],
         patient_id: Patient ID
         sessions: List of dialogue sessions for this patient
         model_name: LLM model name
+        device_id: CUDA device ID to use (None for default "cuda", or int for "cuda:{device_id}")
+        cache_dir: Optional cache directory to save results
     
     Returns:
         Dict with "patient_id" and "messages" keys, or None if processing failed
     """
-    print(f"Processing patient {patient_id}")
+    # Determine device string
+    if device_id is not None:
+        device = f"cuda:{device_id}"
+    else:
+        device = "cuda"
+    
+    print(f"Processing patient {patient_id} on {device}")
+    
     try:
         # Initialize memory manager for this patient
         try:
-            memory_manager = MemoryManager(device="cuda")
+            memory_manager = MemoryManager(device=device)
         except Exception as e:
             print(f"Warning: Failed to initialize MemoryManager with embeddings: {e}")
             print("Attempting to use MemoryManager without embeddings...")
@@ -524,7 +632,13 @@ def process_patient_dialogues(patient_id: str, sessions: List[Dict],
                 dialogue_history.append(msg)
         
         print(f"Completed processing patient {patient_id}")
-        return {"patient_id": patient_id, "messages": processed_messages}
+        result = {"patient_id": patient_id, "messages": processed_messages}
+        
+        # Save to cache if cache_dir is provided
+        if cache_dir:
+            save_patient_cache(patient_id, result, cache_dir)
+        
+        return result
         
     except Exception as e:
         print(f"Error processing patient {patient_id}: {e}")
@@ -534,7 +648,9 @@ def process_patient_dialogues(patient_id: str, sessions: List[Dict],
 def process_dataset(input_file: str, output_file: str, 
                    model_name: str = "gpt-4o-2024-11-20",
                    max_patients: Optional[int] = None,
-                   workers: int = 4) -> None:
+                   workers: int = 4,
+                   cache_dir: Optional[str] = None,
+                   use_cache: bool = True) -> None:
     """
     Process the entire dataset.
     
@@ -544,7 +660,18 @@ def process_dataset(input_file: str, output_file: str,
         model_name: LLM model name to use
         max_patients: Maximum number of patients to process (None for all)
         workers: Number of concurrent workers to use
+        cache_dir: Cache directory path (auto-generated if None)
+        use_cache: Whether to use cache for resuming
     """
+    # Setup cache directory
+    if cache_dir is None and use_cache:
+        # Generate cache directory based on output file
+        base_name = os.path.splitext(os.path.basename(output_file))[0]
+        cache_dir = os.path.join(os.path.dirname(output_file), f".{base_name}_cache")
+    
+    if use_cache:
+        os.makedirs(cache_dir, exist_ok=True)
+        print(f"Using cache directory: {cache_dir}")
     print(f"Loading data from {input_file}...")
     with open(input_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -554,41 +681,91 @@ def process_dataset(input_file: str, output_file: str,
     
     print(f"Found {len(patient_dialogues)} patients")
     
+    # Sort patient IDs numerically if possible, otherwise alphabetically
+    def sort_key(pid):
+        try:
+            return int(pid)
+        except ValueError:
+            return pid
+    
     if max_patients:
-        patient_ids = sorted(patient_dialogues.keys())[:max_patients]
+        patient_ids = sorted(patient_dialogues.keys(), key=sort_key)[:max_patients]
         print(f"Processing first {len(patient_ids)} patients...")
     else:
-        patient_ids = sorted(patient_dialogues.keys())
+        patient_ids = sorted(patient_dialogues.keys(), key=sort_key)
     
+    # Load cached patients if using cache
+    cached_patients = {}
+    if use_cache:
+        print("Loading cached patients...")
+        cached_patients = load_all_cached_patients(cache_dir)
+        if cached_patients:
+            print(f"Found {len(cached_patients)} cached patients")
+    
+    # Filter out already processed patients
+    patients_to_process = []
     all_processed_data = []
     
-    # Process patients in parallel
-    with concurrent.futures.ProcessPoolExecutor(max_workers=workers) as executor:
-        # Prepare tasks
-        future_to_patient = {
-            executor.submit(process_patient_dialogues, patient_id, patient_dialogues[patient_id], model_name): 
-            patient_id for patient_id in patient_ids
-        }
-        
-        # Process results as they complete
-        for future in tqdm(concurrent.futures.as_completed(future_to_patient), total=len(patient_ids)):
-            patient_id = future_to_patient[future]
-            try:
-                result = future.result()
-                if result:
-                    all_processed_data.append(result)
-                    print(f"  Processed {len(result['messages'])} messages for patient {patient_id}")
-            except Exception as e:
-                print(f"  Error processing patient {patient_id}: {e}")
+    for patient_id in patient_ids:
+        if use_cache and patient_id in cached_patients:
+            print(f"  Using cached data for patient {patient_id}")
+            all_processed_data.append(cached_patients[patient_id])
+        else:
+            patients_to_process.append(patient_id)
     
-    # Sort results by patient_id to maintain order
-    all_processed_data.sort(key=lambda x: x['patient_id'])
+    if not patients_to_process:
+        print("All patients are already processed in cache!")
+    else:
+        print(f"Processing {len(patients_to_process)} new patients...")
+        
+        # Get available CUDA devices and distribute evenly
+        num_devices = get_available_cuda_devices()
+        print(f"Detected {num_devices} CUDA device(s)")
+        if num_devices > 1:
+            print(f"Distributing workers across {num_devices} devices in round-robin fashion")
+        
+        # Process patients in parallel
+        with concurrent.futures.ProcessPoolExecutor(max_workers=workers) as executor:
+            # Prepare tasks with device assignment
+            future_to_patient = {}
+            for idx, patient_id in enumerate(patients_to_process):
+                # Assign device ID in round-robin fashion
+                # If only one device, use None to use default "cuda"
+                # If multiple devices, assign device_id = 0, 1, 2, ... in round-robin
+                device_id = idx % num_devices if num_devices > 1 else None
+                future = executor.submit(
+                    process_patient_dialogues, 
+                    patient_id, 
+                    patient_dialogues[patient_id], 
+                    model_name,
+                    device_id,
+                    cache_dir if use_cache else None
+                )
+                future_to_patient[future] = patient_id
+            
+            # Process results as they complete
+            for future in tqdm(concurrent.futures.as_completed(future_to_patient), total=len(patients_to_process)):
+                patient_id = future_to_patient[future]
+                try:
+                    result = future.result()
+                    if result:
+                        all_processed_data.append(result)
+                        print(f"  Processed {len(result['messages'])} messages for patient {patient_id}")
+                except Exception as e:
+                    print(f"  Error processing patient {patient_id}: {e}")
+        
+    # Sort results by patient_id to maintain order (using same sort_key as above)
+    all_processed_data.sort(key=lambda x: sort_key(x['patient_id']))
     
     print(f"\nSaving processed data to {output_file}...")
+    # Create output directory if it doesn't exist
+    os.makedirs(os.path.dirname(output_file) if os.path.dirname(output_file) else '.', exist_ok=True)
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(all_processed_data, f, ensure_ascii=False, indent=2)
     
-    print(f"Done! Processed {len(all_processed_data)} patients")
+    print(f"Done! Processed {len(all_processed_data)} patients total")
+    if use_cache:
+        print(f"Cache saved in: {cache_dir}")
 
 
 def main():
@@ -635,6 +812,17 @@ def main():
         default=4,
         help="Number of concurrent workers to use"
     )
+    parser.add_argument(
+        "--cache-dir",
+        type=str,
+        default=None,
+        help="Cache directory path (auto-generated if not specified)"
+    )
+    parser.add_argument(
+        "--no-cache",
+        action="store_true",
+        help="Disable cache (don't use or save cache)"
+    )
     
     args = parser.parse_args()
     
@@ -643,7 +831,9 @@ def main():
         output_file=args.output,
         model_name=args.model,
         max_patients=args.max_patients,
-        workers=args.workers
+        workers=args.workers,
+        cache_dir=args.cache_dir,
+        use_cache=not args.no_cache
     )
 
 
