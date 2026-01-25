@@ -201,9 +201,9 @@ Answer:"""
     
     # Use query_llm from utils
     try:
-        from agent_r1.utils.llm import query_llm
+        from agent_r1.utils.llm import query_llm_inhouse
         
-        result = query_llm(
+        result = query_llm_inhouse(
             model_name=chat_model_name,
             messages=prompt,
             system="You are a medical assistant. Answer questions based on the provided patient memory information.",
@@ -264,7 +264,7 @@ Are these answers consistent? Respond with only "Yes" or "No"."""
     
     # Use query_llm from utils
     try:
-        from agent_r1.utils.llm import query_llm
+        from agent_r1.utils.llm import query_llm_inhouse
         
         judge_prompt = f"""Compare these two answers and determine if they are consistent (meaning the same thing).
 
@@ -273,7 +273,7 @@ Answer 2: {ground_truth_answer}
 
 Are these answers consistent? Respond with only "Yes" or "No"."""
         
-        result = query_llm(
+        result = query_llm_inhouse(
             model_name=judge_model_name,
             messages=judge_prompt,
             system="You are a judge that determines if two answers are consistent (meaning the same thing). Respond with only 'Yes' or 'No'.",

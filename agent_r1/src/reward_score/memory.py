@@ -473,6 +473,7 @@ def compute_score_operations(
     
     Returns:
         Operations score (0.0 to 1.0)
+    TODO: 修复
     """
     operations = extract_memory_operations(solution_str)
     

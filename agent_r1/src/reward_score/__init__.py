@@ -31,7 +31,8 @@ def _default_compute_score_answer(data_source, solution_str, ground_truth, extra
         res = retool.compute_score_answer(solution_str, ground_truth)
     elif data_source == 'memory/medical_dialogue' or data_source.startswith('memory/'):
         from . import memory
-        res = memory.compute_score_operations(solution_str, ground_truth, extra_info)
+        # res = memory.compute_score_operations(solution_str, ground_truth, extra_info)
+        res = memory.compute_score(solution_str, ground_truth, extra_info)
     else:
         raise NotImplementedError
     

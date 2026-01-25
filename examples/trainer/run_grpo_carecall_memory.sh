@@ -6,18 +6,18 @@ export PROJECT_NAME='carecall-memory'
 export EXPERIMENT_NAME=grpo-carecall-memory-qwen2.5-3b
 
 python3 -m agent_r1.src.main_agent \
-    data.train_files=['data/carecall_memory/train.parquet'] \
-    data.val_files=['data/carecall_memory/val.parquet'] \
-    data.train_batch_size=128 \
-    data.max_prompt_length=4096 \
-    data.max_response_length=2048 \
-    data.max_response_length_single_turn=1024 \
+    data.train_files=['examples/dataset/carecall/carecall_train_v1.parquet'] \
+    data.val_files=['examples/dataset/carecall/carecall_train_v1.parquet'] \
+    data.train_batch_size=64 \
+    data.max_prompt_length=8192 \
+    data.max_response_length=8192 \
+    data.max_response_length_single_turn=8192 \
     data.use_default_tool_template=False \
     data.reward_fn_key='memory/medical_dialogue' \
     actor_rollout_ref.model.path=$BASE_MODEL \
     actor_rollout_ref.actor.optim.lr=1e-6 \
     actor_rollout_ref.model.use_remove_padding=True \
-    actor_rollout_ref.actor.ppo_mini_batch_size=64 \
+    actor_rollout_ref.actor.ppo_mini_batch_size=32 \
     actor_rollout_ref.actor.ppo_micro_batch_size_per_gpu=1 \
     actor_rollout_ref.model.enable_gradient_checkpointing=True \
     actor_rollout_ref.actor.fsdp_config.param_offload=False \
@@ -45,7 +45,7 @@ python3 -m agent_r1.src.main_agent \
     trainer.total_epochs=10 \
     trainer.val_before_train=True \
     trainer.log_val_generations=0 \
-    tool.max_turns=5 \
+    tool.max_turns=1 \
     tool.tools=['memory_insert','memory_update','memory_delete','memory_wait'] \
     tool.env=memory \
     tool.max_tool_response_length=512 $@
