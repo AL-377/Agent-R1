@@ -37,13 +37,8 @@ python examples/data_preprocess/carecall_memory_rl.py \
 # Process all patients
 python examples/data_preprocess/carecall_memory_rl.py \
     --input_dir examples/dataset/carecall-examiner \
-    --output data/carecall_memory/train.parquet
+    --output examples/dataset/carecall/carecall_train_v1.parquet
 
-# Process first 10 patients for testing
-python examples/data_preprocess/carecall_memory_rl.py \
-    --input_dir examples/dataset/carecall-examiner \
-    --output data/carecall_memory/train_sample.parquet \
-    --max_patients 10
 ```
 
 ## Data Format

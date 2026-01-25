@@ -110,7 +110,7 @@ def verify_memory_operations(
     if extra_info is not None:
         expected_operations = extra_info.get("expected_operations", [])
         dialogue_context = extra_info.get("dialogue_context", "")
-        memory_state = extra_info.get("memory_state", {})
+        memory_state = json.loads(extra_info.get("memory_state", "{}"))
         
         operation_score, operation_details = verify_operations_correctness(
             operations=operations,
@@ -421,7 +421,7 @@ def compute_score(
     # If we have memory_query, use CareCall workflow (with or without custom functions)
     if extra_info:
         memory_query = extra_info.get("memory_query")
-        previous_memory = extra_info.get("previous_memory") or extra_info.get("memory_state")
+        previous_memory = json.loads(extra_info.get("memory_state"))
         supposed_new_memory_things = extra_info.get("supposed_new_memory_things", [])
         
         if memory_query and previous_memory:
@@ -479,7 +479,7 @@ def compute_score_operations(
     if extra_info is not None:
         expected_operations = extra_info.get("expected_operations", [])
         dialogue_context = extra_info.get("dialogue_context", "")
-        memory_state = extra_info.get("memory_state", {})
+        memory_state = json.loads(extra_info.get("memory_state", "{}"))
         
         score, _ = verify_operations_correctness(
             operations=operations,
