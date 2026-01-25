@@ -394,7 +394,15 @@ def verify_thought_quality(
     return min(score, 1.0)
 
 
-def compute_score(solution_str: str, ground_truth: str = None, extra_info: Dict[str, Any] = None) -> float:
+def compute_score(
+    solution_str: str,
+    ground_truth: str = None,
+    extra_info: Dict[str, Any] = None,
+    chat_model_func: Optional[callable] = None,
+    judge_model_func: Optional[callable] = None,
+    chat_model_name: str = "gpt-4o-2024-11-20",
+    judge_model_name: str = "DeepSeek-R1"
+) -> float:
     """
     Main scoring function for memory model verification
     
@@ -402,10 +410,36 @@ def compute_score(solution_str: str, ground_truth: str = None, extra_info: Dict[
         solution_str: Solution string
         ground_truth: Ground truth
         extra_info: Additional information
+        chat_model_func: Optional function to call chat model (for CareCall workflow)
+        judge_model_func: Optional function to call judge model (for CareCall workflow)
+        chat_model_name: Model name for chat (default: "gpt-4o-2024-11-20")
+        judge_model_name: Model name for judge (default: "DeepSeek-R1")
     
     Returns:
         Score (0.0 to 1.0)
     """
+    # If we have memory_query, use CareCall workflow (with or without custom functions)
+    if extra_info:
+        memory_query = extra_info.get("memory_query")
+        previous_memory = extra_info.get("previous_memory") or extra_info.get("memory_state")
+        supposed_new_memory_things = extra_info.get("supposed_new_memory_things", [])
+        
+        if memory_query and previous_memory:
+            try:
+                from . import carecall_memory
+                return carecall_memory.compute_score(
+                    solution_str,
+                    ground_truth,
+                    extra_info,
+                    chat_model_func,
+                    judge_model_func,
+                    chat_model_name,
+                    judge_model_name
+                )
+            except Exception as e:
+                print(f"Error using CareCall memory scoring: {e}, falling back to standard scoring")
+    
+    # Standard scoring
     result = verify_memory_operations(solution_str, ground_truth, extra_info)
     return result["score"]
 
