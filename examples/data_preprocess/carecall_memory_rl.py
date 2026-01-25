@@ -170,7 +170,7 @@ def format_dialogue_context(
     """
     dialogue_lines = []
     
-    for i in range(query_position):
+    for i in range(query_position+1):
         msg = consultation[i]
         if "assistant" in msg:
             content = msg["assistant"].get("content", "")
@@ -311,9 +311,8 @@ Your response should start with <think> for your thinking process, followed by t
                     "consultation_idx": consult_idx,
                     "message_idx": msg_idx,
                     "dialogue_context": dialogue_context,
-                    "memory_state": previous_memory,
-                    "previous_memory": previous_memory,  # Alias for compatibility
-                    "oracle_memory_base": oracle_memory_base,
+                    "memory_state": json.dumps(previous_memory, ensure_ascii=False),
+                    "oracle_memory_base": json.dumps(oracle_memory_base, ensure_ascii=False),
                     "memory_query": memory_query,
                     "supposed_new_memory_things": [
                         {"layer": layer, "id": mem_id}
@@ -379,7 +378,7 @@ def process_dataset(
     # Save to parquet
     if all_samples:
         df = pd.DataFrame(all_samples)
-        df.to_parquet(output_file, index=False)
+        df.to_parquet(output_file, index=False, engine="pyarrow",row_group_size=4)
         print(f"\nTotal: {len(all_samples)} training samples saved to {output_file}")
     else:
         print("No samples generated!")

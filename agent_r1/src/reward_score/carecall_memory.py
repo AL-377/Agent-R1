@@ -373,8 +373,8 @@ def compute_score(
     # Extract memory operations
     operations = extract_memory_operations(solution_str)
     
-    # Get previous_memory and other info
-    previous_memory = extra_info.get("previous_memory")
+    # Get memory_state and other info
+    previous_memory = json.loads(extra_info.get("memory_state"))
     memory_query = extra_info.get("memory_query")
     supposed_new_memory_things = extra_info.get("supposed_new_memory_things", [])
     
@@ -468,7 +468,7 @@ def compute_score_operations(
         return 0.0
     
     operations = extract_memory_operations(solution_str)
-    previous_memory = extra_info.get("previous_memory")
+    previous_memory = json.loads(extra_info.get("memory_state"))
     supposed_new_memory_things = extra_info.get("supposed_new_memory_things", [])
     
     if previous_memory is None:
