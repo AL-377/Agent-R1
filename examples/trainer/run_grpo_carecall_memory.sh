@@ -16,7 +16,14 @@ export RAY_WORKER_REGISTER_TIMEOUT_S=300
 ray stop --force 2>/dev/null || true
 sleep 2
 
-# export BASE_MODEL='Qwen/Qwen2.5-3B-Instruct'  # Qwen 2.5 3B model
+if [ -z "$BASE_MODEL" ]; then
+  LOCAL_QWEN_MODEL="/home/tiger/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1"
+  if [ -d "$LOCAL_QWEN_MODEL" ]; then
+    BASE_MODEL="$LOCAL_QWEN_MODEL"
+  else
+    BASE_MODEL="Qwen/Qwen2.5-3B-Instruct"
+  fi
+fi
 export PROJECT_NAME='carecall-memory'
 export EXPERIMENT_NAME=grpo-carecall-memory-qwen2.5-3b
 export SWANLAB_API_KEY=$SWANLAB_API_KEY

@@ -1139,8 +1139,6 @@ class RewardModelWorker(Worker):
         self.reward_module = self._build_model(config=self.config)
 
     def _forward_micro_batch(self, micro_batch):
-        from flash_attn.bert_padding import index_first_axis, pad_input, rearrange, unpad_input
-
         from verl.utils.ulysses import gather_outpus_and_unpad, ulysses_pad_and_slice_inputs
 
         with torch.no_grad(), torch.autocast(device_type="cuda", dtype=torch.bfloat16):
@@ -1148,6 +1146,16 @@ class RewardModelWorker(Worker):
             batch_size, seqlen = input_ids.shape
             attention_mask = micro_batch["attention_mask"]
             position_ids = micro_batch["position_ids"]
+
+            if self.use_remove_padding:
+                try:
+                    from flash_attn.bert_padding import index_first_axis, pad_input, rearrange, unpad_input
+                except Exception as exc:  # pragma: no cover - optional dependency
+                    logger.warning(
+                        "flash-attn is unavailable (%s). Disabling remove_padding.",
+                        exc,
+                    )
+                    self.use_remove_padding = False
 
             if self.use_remove_padding:
                 input_ids_rmpad, indices, *_ = unpad_input(input_ids.unsqueeze(-1), attention_mask)  # input_ids_rmpad (total_nnz, ...)
