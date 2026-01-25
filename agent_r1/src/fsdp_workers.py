@@ -206,11 +206,21 @@ class ActorRolloutRefWorker(Worker):
             else:
                 actor_module_class = AutoModelForCausalLM
 
+            attn_impl = "flash_attention_2"
+            try:
+                import flash_attn  # noqa: F401
+            except Exception as exc:  # pragma: no cover - optional dependency
+                logger.warning(
+                    "flash-attn is unavailable (%s). Falling back to eager attention.",
+                    exc,
+                )
+                attn_impl = "eager"
+
             actor_module = actor_module_class.from_pretrained(
                 pretrained_model_name_or_path=local_path,
                 torch_dtype=torch_dtype,
                 config=actor_model_config,
-                attn_implementation="flash_attention_2",
+                attn_implementation=attn_impl,
                 trust_remote_code=trust_remote_code,
             )
 
