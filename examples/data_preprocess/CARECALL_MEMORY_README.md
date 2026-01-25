@@ -94,6 +94,38 @@ During training:
    - Check coverage: percentage of `supposed_new_memory_things` present in `after_memory_base`
    - Final score: 50% consistency + 50% coverage
 
+## Training Scripts
+
+### PPO Training
+
+```bash
+bash examples/trainer/run_ppo_carecall_memory.sh
+```
+
+**Features**:
+- Uses value function (critic) for advantage estimation
+- Requires critic model training
+- `algorithm.use_kl_in_reward=True`
+
+### GRPO Training
+
+```bash
+bash examples/trainer/run_grpo_carecall_memory.sh
+```
+
+**Features**:
+- No value function (critic) needed - more efficient
+- Uses KL divergence loss directly in actor
+- `actor_rollout_ref.actor.use_kl_loss=True`
+- `algorithm.use_kl_in_reward=False`
+- Higher `n_repeat=5` for more diverse rollouts
+
+**GRPO vs PPO**:
+- GRPO is simpler (no critic) and often faster
+- GRPO uses direct KL penalty in loss
+- PPO uses value function for better advantage estimates
+- Choose based on your computational resources and training stability needs
+
 ## Notes
 
 - Only `memory_query` positions with first-time memory IDs are included (positions without deletions are skipped)
