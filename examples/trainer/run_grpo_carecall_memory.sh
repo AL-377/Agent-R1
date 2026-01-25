@@ -26,7 +26,7 @@ if [ -z "$BASE_MODEL" ]; then
 fi
 export PROJECT_NAME='carecall-memory'
 export EXPERIMENT_NAME=grpo-carecall-memory-qwen2.5-3b
-export SWANLAB_API_KEY=$SWANLAB_API_KEY
+export SWANLAB_API_KEY=IQLCKdLdPp6ZTpRFBqRgM
 
 # Local model
 export MEMORY_EMBEDDING_MODEL="BAAI/bge-large-en-v1.5"
