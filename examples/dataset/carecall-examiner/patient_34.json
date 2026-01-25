@@ -1,0 +1,4940 @@
+{
+  "patient_id": "34",
+  "messages": [
+    {
+      "assistant": {
+        "content": "Hello, sir, i'm calling from the administrative welfare center.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Hello?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Is the call okay now?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Sir, have you eaten?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes. i just ate.",
+        "to_memory": [
+          "working: Patient has eaten recently"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b1285d9a-d848-4b78-86db-6469e63f32c5",
+              "content": "Patient has eaten recently",
+              "timestamp": 1768257589.4308593,
+              "metadata": {}
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "Has the patient eaten recently?",
+          "answer": "Yes, the patient has eaten recently.",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "b1285d9a-d848-4b78-86db-6469e63f32c5"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Well done. is there any inconvenience?",
+        "to_memory": [
+          "identity: Patient is male",
+          "working: Patient has eaten recently"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b1285d9a-d848-4b78-86db-6469e63f32c5",
+              "content": "Patient has eaten recently",
+              "timestamp": 1768257589.4308593,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "What if it's inconvenient?",
+        "to_memory": [
+          "working: Patient has eaten recently"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b1285d9a-d848-4b78-86db-6469e63f32c5",
+              "content": "Patient has eaten recently",
+              "timestamp": 1768257589.4308593,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "What is the patient's gender?",
+          "answer": "The patient is male.",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "09a6fae0-164d-407d-ab4f-b7f920ce18fc"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "You're sick or uncomfortable.",
+        "to_memory": [
+          "working: Current complaint is being sick or uncomfortable"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b1285d9a-d848-4b78-86db-6469e63f32c5",
+              "content": "Patient has eaten recently",
+              "timestamp": 1768257589.4308593,
+              "metadata": {}
+            },
+            {
+              "id": "79991e56-f40c-466c-b54c-873fd82764c0",
+              "content": "Current complaint is being sick or uncomfortable",
+              "timestamp": 1768257633.9028382,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Oh, i'm not feeling well.",
+        "to_memory": [
+          "working: Current complaint is not feeling well"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b1285d9a-d848-4b78-86db-6469e63f32c5",
+              "content": "Patient has eaten recently",
+              "timestamp": 1768257589.4308593,
+              "metadata": {}
+            },
+            {
+              "id": "79991e56-f40c-466c-b54c-873fd82764c0",
+              "content": "Current complaint is being sick or uncomfortable",
+              "timestamp": 1768257633.9028382,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "As a male patient who has eaten recently, is it safe to administer a medication requiring an empty stomach?",
+          "answer": "No, the patient has eaten recently.",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "09a6fae0-164d-407d-ab4f-b7f920ce18fc"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "b1285d9a-d848-4b78-86db-6469e63f32c5"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "What's wrong with you?",
+        "to_memory": [
+          "working: Current complaint is not feeling well"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b1285d9a-d848-4b78-86db-6469e63f32c5",
+              "content": "Patient has eaten recently",
+              "timestamp": 1768257589.4308593,
+              "metadata": {}
+            },
+            {
+              "id": "79991e56-f40c-466c-b54c-873fd82764c0",
+              "content": "Current complaint is being sick or uncomfortable",
+              "timestamp": 1768257633.9028382,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "I have high blood pressure.",
+        "to_memory": [
+          "working: Current complaint is high blood pressure"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b1285d9a-d848-4b78-86db-6469e63f32c5",
+              "content": "Patient has eaten recently",
+              "timestamp": 1768257589.4308593,
+              "metadata": {}
+            },
+            {
+              "id": "79991e56-f40c-466c-b54c-873fd82764c0",
+              "content": "Current complaint is being sick or uncomfortable",
+              "timestamp": 1768257633.9028382,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "What is the patient's gender?",
+          "answer": "The patient is male.",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "09a6fae0-164d-407d-ab4f-b7f920ce18fc"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Oh, it must be hard. are you taking medicine?",
+        "to_memory": [
+          "working: Current complaint is high blood pressure"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b1285d9a-d848-4b78-86db-6469e63f32c5",
+              "content": "Patient has eaten recently",
+              "timestamp": 1768257589.4308593,
+              "metadata": {}
+            },
+            {
+              "id": "79991e56-f40c-466c-b54c-873fd82764c0",
+              "content": "Current complaint is being sick or uncomfortable",
+              "timestamp": 1768257633.9028382,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          "history: Patient has high blood pressure",
+          "working: Patient is taking medication for high blood pressure"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b1285d9a-d848-4b78-86db-6469e63f32c5",
+              "content": "Patient has eaten recently",
+              "timestamp": 1768257589.4308593,
+              "metadata": {}
+            },
+            {
+              "id": "79991e56-f40c-466c-b54c-873fd82764c0",
+              "content": "Current complaint is being sick or uncomfortable",
+              "timestamp": 1768257633.9028382,
+              "metadata": {}
+            },
+            {
+              "id": "6ee7ef08-d1cf-4a16-bc1b-3dc12875fa48",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257700.4125478,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "What is the patient's current complaint?",
+          "answer": "The patient is feeling sick or uncomfortable.",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "79991e56-f40c-466c-b54c-873fd82764c0"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "I'm worried that you have to exercise regularly and control your diet.",
+        "to_memory": [
+          "history: Patient has high blood pressure",
+          "history: Patient is taking medication for high blood pressure",
+          "working: Current advice given includes exercising regularly and controlling diet"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b1285d9a-d848-4b78-86db-6469e63f32c5",
+              "content": "Patient has eaten recently",
+              "timestamp": 1768257589.4308593,
+              "metadata": {}
+            },
+            {
+              "id": "79991e56-f40c-466c-b54c-873fd82764c0",
+              "content": "Current complaint is being sick or uncomfortable",
+              "timestamp": 1768257633.9028382,
+              "metadata": {}
+            },
+            {
+              "id": "6ee7ef08-d1cf-4a16-bc1b-3dc12875fa48",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257700.4125478,
+              "metadata": {}
+            },
+            {
+              "id": "60c7fd23-bac7-4e73-91d1-8fdb8b00e11c",
+              "content": "Current advice given includes exercising regularly and controlling diet",
+              "timestamp": 1768257728.0840738,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Right.",
+        "to_memory": [
+          "history: Patient has high blood pressure",
+          "working: Patient is taking medication for high blood pressure",
+          "working: Treatment plan includes regular exercise and diet control"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b1285d9a-d848-4b78-86db-6469e63f32c5",
+              "content": "Patient has eaten recently",
+              "timestamp": 1768257589.4308593,
+              "metadata": {}
+            },
+            {
+              "id": "79991e56-f40c-466c-b54c-873fd82764c0",
+              "content": "Current complaint is being sick or uncomfortable",
+              "timestamp": 1768257633.9028382,
+              "metadata": {}
+            },
+            {
+              "id": "6ee7ef08-d1cf-4a16-bc1b-3dc12875fa48",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257700.4125478,
+              "metadata": {}
+            },
+            {
+              "id": "60c7fd23-bac7-4e73-91d1-8fdb8b00e11c",
+              "content": "Current advice given includes exercising regularly and controlling diet",
+              "timestamp": 1768257728.0840738,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "Is it safe for the patient to use NSAIDs for their current discomfort given their medical history?",
+          "answer": "No, NSAIDs may worsen high blood pressure and should be avoided.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "20c495f5-9bde-4395-8f67-65dfc0079826"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "79991e56-f40c-466c-b54c-873fd82764c0"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "But you'll get better if you keep taking care of it. don't worry too much.",
+        "to_memory": [
+          "history: Patient has high blood pressure",
+          "history: Patient is taking medication for high blood pressure",
+          "working: Current treatment plan includes regular exercise and diet control"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b1285d9a-d848-4b78-86db-6469e63f32c5",
+              "content": "Patient has eaten recently",
+              "timestamp": 1768257589.4308593,
+              "metadata": {}
+            },
+            {
+              "id": "79991e56-f40c-466c-b54c-873fd82764c0",
+              "content": "Current complaint is being sick or uncomfortable",
+              "timestamp": 1768257633.9028382,
+              "metadata": {}
+            },
+            {
+              "id": "6ee7ef08-d1cf-4a16-bc1b-3dc12875fa48",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257700.4125478,
+              "metadata": {}
+            },
+            {
+              "id": "60c7fd23-bac7-4e73-91d1-8fdb8b00e11c",
+              "content": "Current advice given includes exercising regularly and controlling diet",
+              "timestamp": 1768257728.0840738,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Thank you.",
+        "to_memory": [
+          "working: Patient is taking medicine",
+          "working: Treatment plan includes regular exercise and diet control"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b1285d9a-d848-4b78-86db-6469e63f32c5",
+              "content": "Patient has eaten recently",
+              "timestamp": 1768257589.4308593,
+              "metadata": {}
+            },
+            {
+              "id": "79991e56-f40c-466c-b54c-873fd82764c0",
+              "content": "Current complaint is being sick or uncomfortable",
+              "timestamp": 1768257633.9028382,
+              "metadata": {}
+            },
+            {
+              "id": "6ee7ef08-d1cf-4a16-bc1b-3dc12875fa48",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257700.4125478,
+              "metadata": {}
+            },
+            {
+              "id": "60c7fd23-bac7-4e73-91d1-8fdb8b00e11c",
+              "content": "Current advice given includes exercising regularly and controlling diet",
+              "timestamp": 1768257728.0840738,
+              "metadata": {}
+            },
+            {
+              "id": "b939b159-eb9b-4691-8551-97e766f9f8b7",
+              "content": "Patient is taking medicine",
+              "timestamp": 1768257852.5751352,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "What condition is the patient's medication prescribed for?",
+          "answer": "The patient is taking medication for high blood pressure.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "20c495f5-9bde-4395-8f67-65dfc0079826"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Don't mention it. i hope you continue to be healthy.",
+        "to_memory": [
+          "working: Treatment plan includes regular exercise and diet control"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b1285d9a-d848-4b78-86db-6469e63f32c5",
+              "content": "Patient has eaten recently",
+              "timestamp": 1768257589.4308593,
+              "metadata": {}
+            },
+            {
+              "id": "79991e56-f40c-466c-b54c-873fd82764c0",
+              "content": "Current complaint is being sick or uncomfortable",
+              "timestamp": 1768257633.9028382,
+              "metadata": {}
+            },
+            {
+              "id": "6ee7ef08-d1cf-4a16-bc1b-3dc12875fa48",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257700.4125478,
+              "metadata": {}
+            },
+            {
+              "id": "60c7fd23-bac7-4e73-91d1-8fdb8b00e11c",
+              "content": "Current advice given includes exercising regularly and controlling diet",
+              "timestamp": 1768257728.0840738,
+              "metadata": {}
+            },
+            {
+              "id": "b939b159-eb9b-4691-8551-97e766f9f8b7",
+              "content": "Patient is taking medicine",
+              "timestamp": 1768257852.5751352,
+              "metadata": {}
+            },
+            {
+              "id": "6841c675-7325-4ed2-a334-c08288e3bdf3",
+              "content": "Treatment plan includes regular exercise and diet control",
+              "timestamp": 1768257940.1774614,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          "working: Patient is advised to exercise regularly and control diet"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b1285d9a-d848-4b78-86db-6469e63f32c5",
+              "content": "Patient has eaten recently",
+              "timestamp": 1768257589.4308593,
+              "metadata": {}
+            },
+            {
+              "id": "79991e56-f40c-466c-b54c-873fd82764c0",
+              "content": "Current complaint is being sick or uncomfortable",
+              "timestamp": 1768257633.9028382,
+              "metadata": {}
+            },
+            {
+              "id": "6ee7ef08-d1cf-4a16-bc1b-3dc12875fa48",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257700.4125478,
+              "metadata": {}
+            },
+            {
+              "id": "60c7fd23-bac7-4e73-91d1-8fdb8b00e11c",
+              "content": "Current advice given includes exercising regularly and controlling diet",
+              "timestamp": 1768257728.0840738,
+              "metadata": {}
+            },
+            {
+              "id": "b939b159-eb9b-4691-8551-97e766f9f8b7",
+              "content": "Patient is taking medicine",
+              "timestamp": 1768257852.5751352,
+              "metadata": {}
+            },
+            {
+              "id": "6841c675-7325-4ed2-a334-c08288e3bdf3",
+              "content": "Treatment plan includes regular exercise and diet control",
+              "timestamp": 1768257940.1774614,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "What is the patient's gender?",
+          "answer": "The patient is male.",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "09a6fae0-164d-407d-ab4f-b7f920ce18fc"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Do you have any other questions?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b1285d9a-d848-4b78-86db-6469e63f32c5",
+              "content": "Patient has eaten recently",
+              "timestamp": 1768257589.4308593,
+              "metadata": {}
+            },
+            {
+              "id": "79991e56-f40c-466c-b54c-873fd82764c0",
+              "content": "Current complaint is being sick or uncomfortable",
+              "timestamp": 1768257633.9028382,
+              "metadata": {}
+            },
+            {
+              "id": "6ee7ef08-d1cf-4a16-bc1b-3dc12875fa48",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257700.4125478,
+              "metadata": {}
+            },
+            {
+              "id": "60c7fd23-bac7-4e73-91d1-8fdb8b00e11c",
+              "content": "Current advice given includes exercising regularly and controlling diet",
+              "timestamp": 1768257728.0840738,
+              "metadata": {}
+            },
+            {
+              "id": "b939b159-eb9b-4691-8551-97e766f9f8b7",
+              "content": "Patient is taking medicine",
+              "timestamp": 1768257852.5751352,
+              "metadata": {}
+            },
+            {
+              "id": "6841c675-7325-4ed2-a334-c08288e3bdf3",
+              "content": "Treatment plan includes regular exercise and diet control",
+              "timestamp": 1768257940.1774614,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "No.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b1285d9a-d848-4b78-86db-6469e63f32c5",
+              "content": "Patient has eaten recently",
+              "timestamp": 1768257589.4308593,
+              "metadata": {}
+            },
+            {
+              "id": "79991e56-f40c-466c-b54c-873fd82764c0",
+              "content": "Current complaint is being sick or uncomfortable",
+              "timestamp": 1768257633.9028382,
+              "metadata": {}
+            },
+            {
+              "id": "6ee7ef08-d1cf-4a16-bc1b-3dc12875fa48",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257700.4125478,
+              "metadata": {}
+            },
+            {
+              "id": "60c7fd23-bac7-4e73-91d1-8fdb8b00e11c",
+              "content": "Current advice given includes exercising regularly and controlling diet",
+              "timestamp": 1768257728.0840738,
+              "metadata": {}
+            },
+            {
+              "id": "b939b159-eb9b-4691-8551-97e766f9f8b7",
+              "content": "Patient is taking medicine",
+              "timestamp": 1768257852.5751352,
+              "metadata": {}
+            },
+            {
+              "id": "6841c675-7325-4ed2-a334-c08288e3bdf3",
+              "content": "Treatment plan includes regular exercise and diet control",
+              "timestamp": 1768257940.1774614,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "What is the patient taking medication for?",
+          "answer": "High blood pressure",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "20c495f5-9bde-4395-8f67-65dfc0079826"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Yes, then i'll call you again next time.",
+        "to_memory": [
+          "working: Patient plans to contact again next time"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b1285d9a-d848-4b78-86db-6469e63f32c5",
+              "content": "Patient has eaten recently",
+              "timestamp": 1768257589.4308593,
+              "metadata": {}
+            },
+            {
+              "id": "79991e56-f40c-466c-b54c-873fd82764c0",
+              "content": "Current complaint is being sick or uncomfortable",
+              "timestamp": 1768257633.9028382,
+              "metadata": {}
+            },
+            {
+              "id": "6ee7ef08-d1cf-4a16-bc1b-3dc12875fa48",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257700.4125478,
+              "metadata": {}
+            },
+            {
+              "id": "60c7fd23-bac7-4e73-91d1-8fdb8b00e11c",
+              "content": "Current advice given includes exercising regularly and controlling diet",
+              "timestamp": 1768257728.0840738,
+              "metadata": {}
+            },
+            {
+              "id": "b939b159-eb9b-4691-8551-97e766f9f8b7",
+              "content": "Patient is taking medicine",
+              "timestamp": 1768257852.5751352,
+              "metadata": {}
+            },
+            {
+              "id": "6841c675-7325-4ed2-a334-c08288e3bdf3",
+              "content": "Treatment plan includes regular exercise and diet control",
+              "timestamp": 1768257940.1774614,
+              "metadata": {}
+            },
+            {
+              "id": "b8cefada-0327-42c7-a42f-b902e26c446e",
+              "content": "Patient plans to contact again next time",
+              "timestamp": 1768258000.4714818,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b1285d9a-d848-4b78-86db-6469e63f32c5",
+              "content": "Patient has eaten recently",
+              "timestamp": 1768257589.4308593,
+              "metadata": {}
+            },
+            {
+              "id": "79991e56-f40c-466c-b54c-873fd82764c0",
+              "content": "Current complaint is being sick or uncomfortable",
+              "timestamp": 1768257633.9028382,
+              "metadata": {}
+            },
+            {
+              "id": "6ee7ef08-d1cf-4a16-bc1b-3dc12875fa48",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257700.4125478,
+              "metadata": {}
+            },
+            {
+              "id": "60c7fd23-bac7-4e73-91d1-8fdb8b00e11c",
+              "content": "Current advice given includes exercising regularly and controlling diet",
+              "timestamp": 1768257728.0840738,
+              "metadata": {}
+            },
+            {
+              "id": "b939b159-eb9b-4691-8551-97e766f9f8b7",
+              "content": "Patient is taking medicine",
+              "timestamp": 1768257852.5751352,
+              "metadata": {}
+            },
+            {
+              "id": "6841c675-7325-4ed2-a334-c08288e3bdf3",
+              "content": "Treatment plan includes regular exercise and diet control",
+              "timestamp": 1768257940.1774614,
+              "metadata": {}
+            },
+            {
+              "id": "b8cefada-0327-42c7-a42f-b902e26c446e",
+              "content": "Patient plans to contact again next time",
+              "timestamp": 1768258000.4714818,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "What is the patient's gender?",
+          "answer": "The patient is male.",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "09a6fae0-164d-407d-ab4f-b7f920ce18fc"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Yes, i'm going to get going today! thank you for calling me",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b1285d9a-d848-4b78-86db-6469e63f32c5",
+              "content": "Patient has eaten recently",
+              "timestamp": 1768257589.4308593,
+              "metadata": {}
+            },
+            {
+              "id": "79991e56-f40c-466c-b54c-873fd82764c0",
+              "content": "Current complaint is being sick or uncomfortable",
+              "timestamp": 1768257633.9028382,
+              "metadata": {}
+            },
+            {
+              "id": "6ee7ef08-d1cf-4a16-bc1b-3dc12875fa48",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257700.4125478,
+              "metadata": {}
+            },
+            {
+              "id": "60c7fd23-bac7-4e73-91d1-8fdb8b00e11c",
+              "content": "Current advice given includes exercising regularly and controlling diet",
+              "timestamp": 1768257728.0840738,
+              "metadata": {}
+            },
+            {
+              "id": "b939b159-eb9b-4691-8551-97e766f9f8b7",
+              "content": "Patient is taking medicine",
+              "timestamp": 1768257852.5751352,
+              "metadata": {}
+            },
+            {
+              "id": "6841c675-7325-4ed2-a334-c08288e3bdf3",
+              "content": "Treatment plan includes regular exercise and diet control",
+              "timestamp": 1768257940.1774614,
+              "metadata": {}
+            },
+            {
+              "id": "b8cefada-0327-42c7-a42f-b902e26c446e",
+              "content": "Patient plans to contact again next time",
+              "timestamp": 1768258000.4714818,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    "---诊疗分割线---",
+    {
+      "assistant": {
+        "content": "Hello, sir, i'm calling from the administrative welfare center.",
+        "to_memory": [
+          "working: Current call is from the administrative welfare center"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Hello.",
+        "to_memory": [
+          "identity: Patient is male"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "Where is the current call coming from?",
+          "answer": "The current call is from the administrative welfare center.",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "b92a9a2e-ea05-4c49-ac76-fd870f987f70"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "I'm calling to ask how you're doing.",
+        "to_memory": [
+          "identity: Patient is male (referred to as sir)",
+          "working: Call purpose is to check on patient's well-being",
+          "working: Call initiated from administrative welfare center"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            },
+            {
+              "id": "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff",
+              "content": "Call purpose is to check on patient's well-being",
+              "timestamp": 1768258103.6425905,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "I'm fine.",
+        "to_memory": [
+          "working: Patient reports feeling fine"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            },
+            {
+              "id": "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff",
+              "content": "Call purpose is to check on patient's well-being",
+              "timestamp": 1768258103.6425905,
+              "metadata": {}
+            },
+            {
+              "id": "1c446124-c45f-4f1a-aafc-90aedabc602d",
+              "content": "Patient reports feeling fine",
+              "timestamp": 1768258135.7593482,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "How is the patient currently feeling?",
+          "answer": "The patient reports feeling fine.",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "1c446124-c45f-4f1a-aafc-90aedabc602d"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "It sounds good. how is your high blood pressure?",
+        "to_memory": [
+          "working: Patient reports feeling fine"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            },
+            {
+              "id": "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff",
+              "content": "Call purpose is to check on patient's well-being",
+              "timestamp": 1768258103.6425905,
+              "metadata": {}
+            },
+            {
+              "id": "1c446124-c45f-4f1a-aafc-90aedabc602d",
+              "content": "Patient reports feeling fine",
+              "timestamp": 1768258135.7593482,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "I still manage.",
+        "to_memory": [
+          "history: Patient has high blood pressure",
+          "working: Current status of high blood pressure is being managed"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            },
+            {
+              "id": "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff",
+              "content": "Call purpose is to check on patient's well-being",
+              "timestamp": 1768258103.6425905,
+              "metadata": {}
+            },
+            {
+              "id": "1c446124-c45f-4f1a-aafc-90aedabc602d",
+              "content": "Patient reports feeling fine",
+              "timestamp": 1768258135.7593482,
+              "metadata": {}
+            },
+            {
+              "id": "e7a121e5-7746-4cbc-b6aa-9f0f6017dd90",
+              "content": "Current status of high blood pressure is being managed",
+              "timestamp": 1768258186.4859293,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "What is the patient's gender?",
+          "answer": "The patient is male.",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "09a6fae0-164d-407d-ab4f-b7f920ce18fc"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "I see. are you taking your medicine well?",
+        "to_memory": [
+          "history: Patient has high blood pressure",
+          "history: Patient is prescribed medication for high blood pressure",
+          "working: Current discussion about medication adherence"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            },
+            {
+              "id": "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff",
+              "content": "Call purpose is to check on patient's well-being",
+              "timestamp": 1768258103.6425905,
+              "metadata": {}
+            },
+            {
+              "id": "1c446124-c45f-4f1a-aafc-90aedabc602d",
+              "content": "Patient reports feeling fine",
+              "timestamp": 1768258135.7593482,
+              "metadata": {}
+            },
+            {
+              "id": "e7a121e5-7746-4cbc-b6aa-9f0f6017dd90",
+              "content": "Current status of high blood pressure is being managed",
+              "timestamp": 1768258186.4859293,
+              "metadata": {}
+            },
+            {
+              "id": "b6b73c2d-d01e-461c-9174-0050e03f0c41",
+              "content": "Current discussion about medication adherence",
+              "timestamp": 1768258267.8079312,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          "working: Patient is managing high blood pressure",
+          "working: Patient is taking medication as prescribed",
+          "history: Patient has high blood pressure"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            },
+            {
+              "id": "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff",
+              "content": "Call purpose is to check on patient's well-being",
+              "timestamp": 1768258103.6425905,
+              "metadata": {}
+            },
+            {
+              "id": "1c446124-c45f-4f1a-aafc-90aedabc602d",
+              "content": "Patient reports feeling fine",
+              "timestamp": 1768258135.7593482,
+              "metadata": {}
+            },
+            {
+              "id": "e7a121e5-7746-4cbc-b6aa-9f0f6017dd90",
+              "content": "Current status of high blood pressure is being managed",
+              "timestamp": 1768258186.4859293,
+              "metadata": {}
+            },
+            {
+              "id": "b6b73c2d-d01e-461c-9174-0050e03f0c41",
+              "content": "Current discussion about medication adherence",
+              "timestamp": 1768258267.8079312,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "Considering the patient's medical history and the current administrative context, what is a likely reason for the welfare center's call?",
+          "answer": "The welfare center is likely following up on the patient's prescribed high blood pressure medication management.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "860b1722-5657-444f-ba5d-bd28116d1281"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "b92a9a2e-ea05-4c49-ac76-fd870f987f70"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Are you eating well?",
+        "to_memory": [
+          "history: Patient has high blood pressure",
+          "history: Patient is taking prescribed medication for high blood pressure"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            },
+            {
+              "id": "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff",
+              "content": "Call purpose is to check on patient's well-being",
+              "timestamp": 1768258103.6425905,
+              "metadata": {}
+            },
+            {
+              "id": "1c446124-c45f-4f1a-aafc-90aedabc602d",
+              "content": "Patient reports feeling fine",
+              "timestamp": 1768258135.7593482,
+              "metadata": {}
+            },
+            {
+              "id": "e7a121e5-7746-4cbc-b6aa-9f0f6017dd90",
+              "content": "Current status of high blood pressure is being managed",
+              "timestamp": 1768258186.4859293,
+              "metadata": {}
+            },
+            {
+              "id": "b6b73c2d-d01e-461c-9174-0050e03f0c41",
+              "content": "Current discussion about medication adherence",
+              "timestamp": 1768258267.8079312,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "That's the problem.",
+        "to_memory": [
+          "history: Patient has high blood pressure",
+          "working: Patient is taking prescribed medication as directed",
+          "working: Current issue is difficulty eating well"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            },
+            {
+              "id": "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff",
+              "content": "Call purpose is to check on patient's well-being",
+              "timestamp": 1768258103.6425905,
+              "metadata": {}
+            },
+            {
+              "id": "1c446124-c45f-4f1a-aafc-90aedabc602d",
+              "content": "Patient reports feeling fine",
+              "timestamp": 1768258135.7593482,
+              "metadata": {}
+            },
+            {
+              "id": "e7a121e5-7746-4cbc-b6aa-9f0f6017dd90",
+              "content": "Current status of high blood pressure is being managed",
+              "timestamp": 1768258186.4859293,
+              "metadata": {}
+            },
+            {
+              "id": "b6b73c2d-d01e-461c-9174-0050e03f0c41",
+              "content": "Current discussion about medication adherence",
+              "timestamp": 1768258267.8079312,
+              "metadata": {}
+            },
+            {
+              "id": "17cb3717-3f6d-42ba-9d4b-f1891ccdea90",
+              "content": "Current issue is difficulty eating well",
+              "timestamp": 1768258409.293922,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "Given the patient's high blood pressure medication, is it safe for the administrative welfare center to recommend a sodium-rich dietary supplement?",
+          "answer": "No, sodium can exacerbate high blood pressure and interfere with medication efficacy.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "860b1722-5657-444f-ba5d-bd28116d1281"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "b92a9a2e-ea05-4c49-ac76-fd870f987f70"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Why? don't you have any appetite?",
+        "to_memory": [
+          "working: Patient is taking their medicine well",
+          "working: Current complaint is not eating well"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            },
+            {
+              "id": "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff",
+              "content": "Call purpose is to check on patient's well-being",
+              "timestamp": 1768258103.6425905,
+              "metadata": {}
+            },
+            {
+              "id": "1c446124-c45f-4f1a-aafc-90aedabc602d",
+              "content": "Patient reports feeling fine",
+              "timestamp": 1768258135.7593482,
+              "metadata": {}
+            },
+            {
+              "id": "e7a121e5-7746-4cbc-b6aa-9f0f6017dd90",
+              "content": "Current status of high blood pressure is being managed",
+              "timestamp": 1768258186.4859293,
+              "metadata": {}
+            },
+            {
+              "id": "b6b73c2d-d01e-461c-9174-0050e03f0c41",
+              "content": "Current discussion about medication adherence",
+              "timestamp": 1768258267.8079312,
+              "metadata": {}
+            },
+            {
+              "id": "17cb3717-3f6d-42ba-9d4b-f1891ccdea90",
+              "content": "Current issue is difficulty eating well",
+              "timestamp": 1768258409.293922,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Since i live alone, it's a little hard to eat alone.",
+        "to_memory": [
+          "working: Patient is adherent to medication",
+          "working: Patient finds it hard to eat alone due to living alone"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            },
+            {
+              "id": "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff",
+              "content": "Call purpose is to check on patient's well-being",
+              "timestamp": 1768258103.6425905,
+              "metadata": {}
+            },
+            {
+              "id": "1c446124-c45f-4f1a-aafc-90aedabc602d",
+              "content": "Patient reports feeling fine",
+              "timestamp": 1768258135.7593482,
+              "metadata": {}
+            },
+            {
+              "id": "e7a121e5-7746-4cbc-b6aa-9f0f6017dd90",
+              "content": "Current status of high blood pressure is being managed",
+              "timestamp": 1768258186.4859293,
+              "metadata": {}
+            },
+            {
+              "id": "b6b73c2d-d01e-461c-9174-0050e03f0c41",
+              "content": "Current discussion about medication adherence",
+              "timestamp": 1768258267.8079312,
+              "metadata": {}
+            },
+            {
+              "id": "17cb3717-3f6d-42ba-9d4b-f1891ccdea90",
+              "content": "Current issue is difficulty eating well",
+              "timestamp": 1768258409.293922,
+              "metadata": {}
+            },
+            {
+              "id": "1f3bd1c4-d7b8-4ba5-a460-2cc026fe9ab4",
+              "content": "Patient is adherent to medication",
+              "timestamp": 1768258482.0807257,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "Considering the patient's medical history, how does their current adherence to treatment impact their high blood pressure management?",
+          "answer": "The patient's adherence to medication supports effective control of their high blood pressure, as indicated by their history and current compliance.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "860b1722-5657-444f-ba5d-bd28116d1281"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "1f3bd1c4-d7b8-4ba5-a460-2cc026fe9ab4"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "I see. then why don't you eat something simple?",
+        "to_memory": [
+          "working: Patient lives alone",
+          "working: Current complaint is difficulty eating alone"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            },
+            {
+              "id": "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff",
+              "content": "Call purpose is to check on patient's well-being",
+              "timestamp": 1768258103.6425905,
+              "metadata": {}
+            },
+            {
+              "id": "1c446124-c45f-4f1a-aafc-90aedabc602d",
+              "content": "Patient reports feeling fine",
+              "timestamp": 1768258135.7593482,
+              "metadata": {}
+            },
+            {
+              "id": "e7a121e5-7746-4cbc-b6aa-9f0f6017dd90",
+              "content": "Current status of high blood pressure is being managed",
+              "timestamp": 1768258186.4859293,
+              "metadata": {}
+            },
+            {
+              "id": "b6b73c2d-d01e-461c-9174-0050e03f0c41",
+              "content": "Current discussion about medication adherence",
+              "timestamp": 1768258267.8079312,
+              "metadata": {}
+            },
+            {
+              "id": "17cb3717-3f6d-42ba-9d4b-f1891ccdea90",
+              "content": "Current issue is difficulty eating well",
+              "timestamp": 1768258409.293922,
+              "metadata": {}
+            },
+            {
+              "id": "1f3bd1c4-d7b8-4ba5-a460-2cc026fe9ab4",
+              "content": "Patient is adherent to medication",
+              "timestamp": 1768258482.0807257,
+              "metadata": {}
+            },
+            {
+              "id": "9c85c08e-68f2-42c8-960c-9ccde6a39683",
+              "content": "Patient lives alone",
+              "timestamp": 1768258536.0728798,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "We should.",
+        "to_memory": [
+          "identity: Patient lives alone",
+          "working: Patient finds it hard to eat alone"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            },
+            {
+              "id": "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff",
+              "content": "Call purpose is to check on patient's well-being",
+              "timestamp": 1768258103.6425905,
+              "metadata": {}
+            },
+            {
+              "id": "1c446124-c45f-4f1a-aafc-90aedabc602d",
+              "content": "Patient reports feeling fine",
+              "timestamp": 1768258135.7593482,
+              "metadata": {}
+            },
+            {
+              "id": "e7a121e5-7746-4cbc-b6aa-9f0f6017dd90",
+              "content": "Current status of high blood pressure is being managed",
+              "timestamp": 1768258186.4859293,
+              "metadata": {}
+            },
+            {
+              "id": "b6b73c2d-d01e-461c-9174-0050e03f0c41",
+              "content": "Current discussion about medication adherence",
+              "timestamp": 1768258267.8079312,
+              "metadata": {}
+            },
+            {
+              "id": "17cb3717-3f6d-42ba-9d4b-f1891ccdea90",
+              "content": "Current issue is difficulty eating well",
+              "timestamp": 1768258409.293922,
+              "metadata": {}
+            },
+            {
+              "id": "1f3bd1c4-d7b8-4ba5-a460-2cc026fe9ab4",
+              "content": "Patient is adherent to medication",
+              "timestamp": 1768258482.0807257,
+              "metadata": {}
+            },
+            {
+              "id": "9c85c08e-68f2-42c8-960c-9ccde6a39683",
+              "content": "Patient lives alone",
+              "timestamp": 1768258536.0728798,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "What condition is the patient's medication prescribed to treat?",
+          "answer": "The patient is prescribed medication for high blood pressure.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "860b1722-5657-444f-ba5d-bd28116d1281"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Yes, make sure you eat.",
+        "to_memory": [
+          "identity: Patient lives alone",
+          "working: Patient finds it hard to eat alone, considering simple meals"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            },
+            {
+              "id": "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff",
+              "content": "Call purpose is to check on patient's well-being",
+              "timestamp": 1768258103.6425905,
+              "metadata": {}
+            },
+            {
+              "id": "1c446124-c45f-4f1a-aafc-90aedabc602d",
+              "content": "Patient reports feeling fine",
+              "timestamp": 1768258135.7593482,
+              "metadata": {}
+            },
+            {
+              "id": "e7a121e5-7746-4cbc-b6aa-9f0f6017dd90",
+              "content": "Current status of high blood pressure is being managed",
+              "timestamp": 1768258186.4859293,
+              "metadata": {}
+            },
+            {
+              "id": "b6b73c2d-d01e-461c-9174-0050e03f0c41",
+              "content": "Current discussion about medication adherence",
+              "timestamp": 1768258267.8079312,
+              "metadata": {}
+            },
+            {
+              "id": "17cb3717-3f6d-42ba-9d4b-f1891ccdea90",
+              "content": "Current issue is difficulty eating well",
+              "timestamp": 1768258409.293922,
+              "metadata": {}
+            },
+            {
+              "id": "1f3bd1c4-d7b8-4ba5-a460-2cc026fe9ab4",
+              "content": "Patient is adherent to medication",
+              "timestamp": 1768258482.0807257,
+              "metadata": {}
+            },
+            {
+              "id": "9c85c08e-68f2-42c8-960c-9ccde6a39683",
+              "content": "Patient lives alone",
+              "timestamp": 1768258536.0728798,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          "working: Patient reports reduced appetite due to living alone and difficulty eating alone"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            },
+            {
+              "id": "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff",
+              "content": "Call purpose is to check on patient's well-being",
+              "timestamp": 1768258103.6425905,
+              "metadata": {}
+            },
+            {
+              "id": "1c446124-c45f-4f1a-aafc-90aedabc602d",
+              "content": "Patient reports feeling fine",
+              "timestamp": 1768258135.7593482,
+              "metadata": {}
+            },
+            {
+              "id": "e7a121e5-7746-4cbc-b6aa-9f0f6017dd90",
+              "content": "Current status of high blood pressure is being managed",
+              "timestamp": 1768258186.4859293,
+              "metadata": {}
+            },
+            {
+              "id": "b6b73c2d-d01e-461c-9174-0050e03f0c41",
+              "content": "Current discussion about medication adherence",
+              "timestamp": 1768258267.8079312,
+              "metadata": {}
+            },
+            {
+              "id": "17cb3717-3f6d-42ba-9d4b-f1891ccdea90",
+              "content": "Current issue is difficulty eating well",
+              "timestamp": 1768258409.293922,
+              "metadata": {}
+            },
+            {
+              "id": "1f3bd1c4-d7b8-4ba5-a460-2cc026fe9ab4",
+              "content": "Patient is adherent to medication",
+              "timestamp": 1768258482.0807257,
+              "metadata": {}
+            },
+            {
+              "id": "9c85c08e-68f2-42c8-960c-9ccde6a39683",
+              "content": "Patient lives alone",
+              "timestamp": 1768258536.0728798,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Is there any inconvenience?",
+        "to_memory": [
+          "working: Patient finds it hard to eat alone due to living alone"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            },
+            {
+              "id": "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff",
+              "content": "Call purpose is to check on patient's well-being",
+              "timestamp": 1768258103.6425905,
+              "metadata": {}
+            },
+            {
+              "id": "1c446124-c45f-4f1a-aafc-90aedabc602d",
+              "content": "Patient reports feeling fine",
+              "timestamp": 1768258135.7593482,
+              "metadata": {}
+            },
+            {
+              "id": "e7a121e5-7746-4cbc-b6aa-9f0f6017dd90",
+              "content": "Current status of high blood pressure is being managed",
+              "timestamp": 1768258186.4859293,
+              "metadata": {}
+            },
+            {
+              "id": "b6b73c2d-d01e-461c-9174-0050e03f0c41",
+              "content": "Current discussion about medication adherence",
+              "timestamp": 1768258267.8079312,
+              "metadata": {}
+            },
+            {
+              "id": "17cb3717-3f6d-42ba-9d4b-f1891ccdea90",
+              "content": "Current issue is difficulty eating well",
+              "timestamp": 1768258409.293922,
+              "metadata": {}
+            },
+            {
+              "id": "1f3bd1c4-d7b8-4ba5-a460-2cc026fe9ab4",
+              "content": "Patient is adherent to medication",
+              "timestamp": 1768258482.0807257,
+              "metadata": {}
+            },
+            {
+              "id": "9c85c08e-68f2-42c8-960c-9ccde6a39683",
+              "content": "Patient lives alone",
+              "timestamp": 1768258536.0728798,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Nothing but a meal.",
+        "to_memory": [
+          "working: Current complaint is nothing but a meal"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            },
+            {
+              "id": "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff",
+              "content": "Call purpose is to check on patient's well-being",
+              "timestamp": 1768258103.6425905,
+              "metadata": {}
+            },
+            {
+              "id": "1c446124-c45f-4f1a-aafc-90aedabc602d",
+              "content": "Patient reports feeling fine",
+              "timestamp": 1768258135.7593482,
+              "metadata": {}
+            },
+            {
+              "id": "e7a121e5-7746-4cbc-b6aa-9f0f6017dd90",
+              "content": "Current status of high blood pressure is being managed",
+              "timestamp": 1768258186.4859293,
+              "metadata": {}
+            },
+            {
+              "id": "b6b73c2d-d01e-461c-9174-0050e03f0c41",
+              "content": "Current discussion about medication adherence",
+              "timestamp": 1768258267.8079312,
+              "metadata": {}
+            },
+            {
+              "id": "17cb3717-3f6d-42ba-9d4b-f1891ccdea90",
+              "content": "Current issue is difficulty eating well",
+              "timestamp": 1768258409.293922,
+              "metadata": {}
+            },
+            {
+              "id": "1f3bd1c4-d7b8-4ba5-a460-2cc026fe9ab4",
+              "content": "Patient is adherent to medication",
+              "timestamp": 1768258482.0807257,
+              "metadata": {}
+            },
+            {
+              "id": "9c85c08e-68f2-42c8-960c-9ccde6a39683",
+              "content": "Patient lives alone",
+              "timestamp": 1768258536.0728798,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "I see. i hope you continue to be healthy.",
+        "to_memory": [
+          "working: Current complaint is related to meals"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            },
+            {
+              "id": "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff",
+              "content": "Call purpose is to check on patient's well-being",
+              "timestamp": 1768258103.6425905,
+              "metadata": {}
+            },
+            {
+              "id": "1c446124-c45f-4f1a-aafc-90aedabc602d",
+              "content": "Patient reports feeling fine",
+              "timestamp": 1768258135.7593482,
+              "metadata": {}
+            },
+            {
+              "id": "e7a121e5-7746-4cbc-b6aa-9f0f6017dd90",
+              "content": "Current status of high blood pressure is being managed",
+              "timestamp": 1768258186.4859293,
+              "metadata": {}
+            },
+            {
+              "id": "b6b73c2d-d01e-461c-9174-0050e03f0c41",
+              "content": "Current discussion about medication adherence",
+              "timestamp": 1768258267.8079312,
+              "metadata": {}
+            },
+            {
+              "id": "17cb3717-3f6d-42ba-9d4b-f1891ccdea90",
+              "content": "Current issue is difficulty eating well",
+              "timestamp": 1768258409.293922,
+              "metadata": {}
+            },
+            {
+              "id": "1f3bd1c4-d7b8-4ba5-a460-2cc026fe9ab4",
+              "content": "Patient is adherent to medication",
+              "timestamp": 1768258482.0807257,
+              "metadata": {}
+            },
+            {
+              "id": "9c85c08e-68f2-42c8-960c-9ccde6a39683",
+              "content": "Patient lives alone",
+              "timestamp": 1768258536.0728798,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Thank you.",
+        "to_memory": [
+          "working: Patient reports no current complaints except meal-related inconvenience"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            },
+            {
+              "id": "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff",
+              "content": "Call purpose is to check on patient's well-being",
+              "timestamp": 1768258103.6425905,
+              "metadata": {}
+            },
+            {
+              "id": "1c446124-c45f-4f1a-aafc-90aedabc602d",
+              "content": "Patient reports feeling fine",
+              "timestamp": 1768258135.7593482,
+              "metadata": {}
+            },
+            {
+              "id": "e7a121e5-7746-4cbc-b6aa-9f0f6017dd90",
+              "content": "Current status of high blood pressure is being managed",
+              "timestamp": 1768258186.4859293,
+              "metadata": {}
+            },
+            {
+              "id": "b6b73c2d-d01e-461c-9174-0050e03f0c41",
+              "content": "Current discussion about medication adherence",
+              "timestamp": 1768258267.8079312,
+              "metadata": {}
+            },
+            {
+              "id": "17cb3717-3f6d-42ba-9d4b-f1891ccdea90",
+              "content": "Current issue is difficulty eating well",
+              "timestamp": 1768258409.293922,
+              "metadata": {}
+            },
+            {
+              "id": "1f3bd1c4-d7b8-4ba5-a460-2cc026fe9ab4",
+              "content": "Patient is adherent to medication",
+              "timestamp": 1768258482.0807257,
+              "metadata": {}
+            },
+            {
+              "id": "9c85c08e-68f2-42c8-960c-9ccde6a39683",
+              "content": "Patient lives alone",
+              "timestamp": 1768258536.0728798,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "Considering the patient's medical history, why is the current call focused on checking their well-being?",
+          "answer": "The call aims to monitor the patient's well-being in the context of their ongoing high blood pressure medication management.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "20c495f5-9bde-4395-8f67-65dfc0079826"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Yes, go in. can i end the call here?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            },
+            {
+              "id": "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff",
+              "content": "Call purpose is to check on patient's well-being",
+              "timestamp": 1768258103.6425905,
+              "metadata": {}
+            },
+            {
+              "id": "1c446124-c45f-4f1a-aafc-90aedabc602d",
+              "content": "Patient reports feeling fine",
+              "timestamp": 1768258135.7593482,
+              "metadata": {}
+            },
+            {
+              "id": "e7a121e5-7746-4cbc-b6aa-9f0f6017dd90",
+              "content": "Current status of high blood pressure is being managed",
+              "timestamp": 1768258186.4859293,
+              "metadata": {}
+            },
+            {
+              "id": "b6b73c2d-d01e-461c-9174-0050e03f0c41",
+              "content": "Current discussion about medication adherence",
+              "timestamp": 1768258267.8079312,
+              "metadata": {}
+            },
+            {
+              "id": "17cb3717-3f6d-42ba-9d4b-f1891ccdea90",
+              "content": "Current issue is difficulty eating well",
+              "timestamp": 1768258409.293922,
+              "metadata": {}
+            },
+            {
+              "id": "1f3bd1c4-d7b8-4ba5-a460-2cc026fe9ab4",
+              "content": "Patient is adherent to medication",
+              "timestamp": 1768258482.0807257,
+              "metadata": {}
+            },
+            {
+              "id": "9c85c08e-68f2-42c8-960c-9ccde6a39683",
+              "content": "Patient lives alone",
+              "timestamp": 1768258536.0728798,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            },
+            {
+              "id": "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff",
+              "content": "Call purpose is to check on patient's well-being",
+              "timestamp": 1768258103.6425905,
+              "metadata": {}
+            },
+            {
+              "id": "1c446124-c45f-4f1a-aafc-90aedabc602d",
+              "content": "Patient reports feeling fine",
+              "timestamp": 1768258135.7593482,
+              "metadata": {}
+            },
+            {
+              "id": "e7a121e5-7746-4cbc-b6aa-9f0f6017dd90",
+              "content": "Current status of high blood pressure is being managed",
+              "timestamp": 1768258186.4859293,
+              "metadata": {}
+            },
+            {
+              "id": "b6b73c2d-d01e-461c-9174-0050e03f0c41",
+              "content": "Current discussion about medication adherence",
+              "timestamp": 1768258267.8079312,
+              "metadata": {}
+            },
+            {
+              "id": "17cb3717-3f6d-42ba-9d4b-f1891ccdea90",
+              "content": "Current issue is difficulty eating well",
+              "timestamp": 1768258409.293922,
+              "metadata": {}
+            },
+            {
+              "id": "1f3bd1c4-d7b8-4ba5-a460-2cc026fe9ab4",
+              "content": "Patient is adherent to medication",
+              "timestamp": 1768258482.0807257,
+              "metadata": {}
+            },
+            {
+              "id": "9c85c08e-68f2-42c8-960c-9ccde6a39683",
+              "content": "Patient lives alone",
+              "timestamp": 1768258536.0728798,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "What condition is the patient currently taking medication for?",
+          "answer": "High blood pressure.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "20c495f5-9bde-4395-8f67-65dfc0079826"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Yes, i'm going to get going today! thank you for calling me",
+        "to_memory": [
+          "working: No current symptoms or complaints reported"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b92a9a2e-ea05-4c49-ac76-fd870f987f70",
+              "content": "Current call is from the administrative welfare center",
+              "timestamp": 1768258035.2063684,
+              "metadata": {}
+            },
+            {
+              "id": "e61f3d23-1c8e-4c16-9fe8-2fcd06f001ff",
+              "content": "Call purpose is to check on patient's well-being",
+              "timestamp": 1768258103.6425905,
+              "metadata": {}
+            },
+            {
+              "id": "1c446124-c45f-4f1a-aafc-90aedabc602d",
+              "content": "Patient reports feeling fine",
+              "timestamp": 1768258135.7593482,
+              "metadata": {}
+            },
+            {
+              "id": "e7a121e5-7746-4cbc-b6aa-9f0f6017dd90",
+              "content": "Current status of high blood pressure is being managed",
+              "timestamp": 1768258186.4859293,
+              "metadata": {}
+            },
+            {
+              "id": "b6b73c2d-d01e-461c-9174-0050e03f0c41",
+              "content": "Current discussion about medication adherence",
+              "timestamp": 1768258267.8079312,
+              "metadata": {}
+            },
+            {
+              "id": "17cb3717-3f6d-42ba-9d4b-f1891ccdea90",
+              "content": "Current issue is difficulty eating well",
+              "timestamp": 1768258409.293922,
+              "metadata": {}
+            },
+            {
+              "id": "1f3bd1c4-d7b8-4ba5-a460-2cc026fe9ab4",
+              "content": "Patient is adherent to medication",
+              "timestamp": 1768258482.0807257,
+              "metadata": {}
+            },
+            {
+              "id": "9c85c08e-68f2-42c8-960c-9ccde6a39683",
+              "content": "Patient lives alone",
+              "timestamp": 1768258536.0728798,
+              "metadata": {}
+            },
+            {
+              "id": "a2a8f7dc-7dc1-4ede-813a-09be6f348fae",
+              "content": "No current symptoms or complaints reported",
+              "timestamp": 1768258687.9919147,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    "---诊疗分割线---",
+    {
+      "assistant": {
+        "content": "Hello, sir, i'm calling from the administrative welfare center.",
+        "to_memory": [
+          "working: Current caller is from the administrative welfare center"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e5c367e-ed13-4bc6-8004-863c56d81634",
+              "content": "Current caller is from the administrative welfare center",
+              "timestamp": 1768258712.9596891,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Hello.",
+        "to_memory": [
+          "working: Assistant is calling from the administrative welfare center"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e5c367e-ed13-4bc6-8004-863c56d81634",
+              "content": "Current caller is from the administrative welfare center",
+              "timestamp": 1768258712.9596891,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "What condition is the patient currently managing with medication?",
+          "answer": "The patient is taking medication for high blood pressure.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "20c495f5-9bde-4395-8f67-65dfc0079826"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Is the call okay now?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e5c367e-ed13-4bc6-8004-863c56d81634",
+              "content": "Current caller is from the administrative welfare center",
+              "timestamp": 1768258712.9596891,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Go ahead.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e5c367e-ed13-4bc6-8004-863c56d81634",
+              "content": "Current caller is from the administrative welfare center",
+              "timestamp": 1768258712.9596891,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "Considering the patient's medical history, what is a likely reason the administrative welfare center is involved?",
+          "answer": "The administrative welfare center may be coordinating support or resources related to managing the patient's high blood pressure.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "5164fa93-3ff5-4e4d-9fc2-9398845852a6"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "3e5c367e-ed13-4bc6-8004-863c56d81634"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "How are you doing these days?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e5c367e-ed13-4bc6-8004-863c56d81634",
+              "content": "Current caller is from the administrative welfare center",
+              "timestamp": 1768258712.9596891,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "It's normal.",
+        "to_memory": [
+          "working: Patient reports current condition as normal"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e5c367e-ed13-4bc6-8004-863c56d81634",
+              "content": "Current caller is from the administrative welfare center",
+              "timestamp": 1768258712.9596891,
+              "metadata": {}
+            },
+            {
+              "id": "f797ef6b-d3ef-4859-af8c-393d441132e8",
+              "content": "Patient reports current condition as normal",
+              "timestamp": 1768258798.1373122,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "What condition is the patient prescribed medication for?",
+          "answer": "High blood pressure",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "860b1722-5657-444f-ba5d-bd28116d1281"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Oh, how's your high blood pressure?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e5c367e-ed13-4bc6-8004-863c56d81634",
+              "content": "Current caller is from the administrative welfare center",
+              "timestamp": 1768258712.9596891,
+              "metadata": {}
+            },
+            {
+              "id": "f797ef6b-d3ef-4859-af8c-393d441132e8",
+              "content": "Patient reports current condition as normal",
+              "timestamp": 1768258798.1373122,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Still trying to be careful.",
+        "to_memory": [
+          "history: Patient has high blood pressure",
+          "working: Patient is still trying to be careful with their high blood pressure management"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e5c367e-ed13-4bc6-8004-863c56d81634",
+              "content": "Current caller is from the administrative welfare center",
+              "timestamp": 1768258712.9596891,
+              "metadata": {}
+            },
+            {
+              "id": "f797ef6b-d3ef-4859-af8c-393d441132e8",
+              "content": "Patient reports current condition as normal",
+              "timestamp": 1768258798.1373122,
+              "metadata": {}
+            },
+            {
+              "id": "30652547-d139-4b43-b6cd-43876e1aa7ad",
+              "content": "Patient is still trying to be careful with their high blood pressure management",
+              "timestamp": 1768258844.8292465,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "Does the patient live with anyone?",
+          "answer": "The patient lives alone.",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "cd54c315-a2a5-4b01-99e5-43161d320e82"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "You're doing great. by the way, are you eating well?",
+        "to_memory": [
+          "history: Patient has high blood pressure, currently managing it carefully"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e5c367e-ed13-4bc6-8004-863c56d81634",
+              "content": "Current caller is from the administrative welfare center",
+              "timestamp": 1768258712.9596891,
+              "metadata": {}
+            },
+            {
+              "id": "f797ef6b-d3ef-4859-af8c-393d441132e8",
+              "content": "Patient reports current condition as normal",
+              "timestamp": 1768258798.1373122,
+              "metadata": {}
+            },
+            {
+              "id": "30652547-d139-4b43-b6cd-43876e1aa7ad",
+              "content": "Patient is still trying to be careful with their high blood pressure management",
+              "timestamp": 1768258844.8292465,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Trying to eat a lot of raw vegetables.",
+        "to_memory": [
+          "history: Patient has a history of high blood pressure",
+          "working: Patient is currently trying to eat a lot of raw vegetables"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e5c367e-ed13-4bc6-8004-863c56d81634",
+              "content": "Current caller is from the administrative welfare center",
+              "timestamp": 1768258712.9596891,
+              "metadata": {}
+            },
+            {
+              "id": "f797ef6b-d3ef-4859-af8c-393d441132e8",
+              "content": "Patient reports current condition as normal",
+              "timestamp": 1768258798.1373122,
+              "metadata": {}
+            },
+            {
+              "id": "30652547-d139-4b43-b6cd-43876e1aa7ad",
+              "content": "Patient is still trying to be careful with their high blood pressure management",
+              "timestamp": 1768258844.8292465,
+              "metadata": {}
+            },
+            {
+              "id": "1c235a57-4490-41c1-89ef-a1b9d10c53e4",
+              "content": "Patient is currently trying to eat a lot of raw vegetables",
+              "timestamp": 1768258888.6422997,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "What dietary change is the patient currently making?",
+          "answer": "The patient is trying to eat a lot of raw vegetables.",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "1c235a57-4490-41c1-89ef-a1b9d10c53e4"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Oh, i heard that eating a lot of vegetables is good for your health.",
+        "to_memory": [
+          "history: Patient has high blood pressure",
+          "working: Patient is trying to eat a lot of raw vegetables",
+          "experience: Eating a lot of vegetables is good for health"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e5c367e-ed13-4bc6-8004-863c56d81634",
+              "content": "Current caller is from the administrative welfare center",
+              "timestamp": 1768258712.9596891,
+              "metadata": {}
+            },
+            {
+              "id": "f797ef6b-d3ef-4859-af8c-393d441132e8",
+              "content": "Patient reports current condition as normal",
+              "timestamp": 1768258798.1373122,
+              "metadata": {}
+            },
+            {
+              "id": "30652547-d139-4b43-b6cd-43876e1aa7ad",
+              "content": "Patient is still trying to be careful with their high blood pressure management",
+              "timestamp": 1768258844.8292465,
+              "metadata": {}
+            },
+            {
+              "id": "1c235a57-4490-41c1-89ef-a1b9d10c53e4",
+              "content": "Patient is currently trying to eat a lot of raw vegetables",
+              "timestamp": 1768258888.6422997,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "3fb9d77d-8c81-4292-b0af-f5568f2445a8",
+              "content": "Eating a lot of vegetables is good for health",
+              "timestamp": 1768258902.6807137,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          "history: Patient has high blood pressure",
+          "working: Patient is trying to eat a lot of raw vegetables"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e5c367e-ed13-4bc6-8004-863c56d81634",
+              "content": "Current caller is from the administrative welfare center",
+              "timestamp": 1768258712.9596891,
+              "metadata": {}
+            },
+            {
+              "id": "f797ef6b-d3ef-4859-af8c-393d441132e8",
+              "content": "Patient reports current condition as normal",
+              "timestamp": 1768258798.1373122,
+              "metadata": {}
+            },
+            {
+              "id": "30652547-d139-4b43-b6cd-43876e1aa7ad",
+              "content": "Patient is still trying to be careful with their high blood pressure management",
+              "timestamp": 1768258844.8292465,
+              "metadata": {}
+            },
+            {
+              "id": "1c235a57-4490-41c1-89ef-a1b9d10c53e4",
+              "content": "Patient is currently trying to eat a lot of raw vegetables",
+              "timestamp": 1768258888.6422997,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "3fb9d77d-8c81-4292-b0af-f5568f2445a8",
+              "content": "Eating a lot of vegetables is good for health",
+              "timestamp": 1768258902.6807137,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "I think it would be good if you continue to eat.",
+        "to_memory": [
+          "working: Patient is trying to eat a lot of raw vegetables and should continue",
+          "experience: Eating a lot of vegetables is good for health"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e5c367e-ed13-4bc6-8004-863c56d81634",
+              "content": "Current caller is from the administrative welfare center",
+              "timestamp": 1768258712.9596891,
+              "metadata": {}
+            },
+            {
+              "id": "f797ef6b-d3ef-4859-af8c-393d441132e8",
+              "content": "Patient reports current condition as normal",
+              "timestamp": 1768258798.1373122,
+              "metadata": {}
+            },
+            {
+              "id": "30652547-d139-4b43-b6cd-43876e1aa7ad",
+              "content": "Patient is still trying to be careful with their high blood pressure management",
+              "timestamp": 1768258844.8292465,
+              "metadata": {}
+            },
+            {
+              "id": "1c235a57-4490-41c1-89ef-a1b9d10c53e4",
+              "content": "Patient is currently trying to eat a lot of raw vegetables",
+              "timestamp": 1768258888.6422997,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "3fb9d77d-8c81-4292-b0af-f5568f2445a8",
+              "content": "Eating a lot of vegetables is good for health",
+              "timestamp": 1768258902.6807137,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "We should.",
+        "to_memory": [
+          "working: Patient is trying to eat a lot of raw vegetables"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e5c367e-ed13-4bc6-8004-863c56d81634",
+              "content": "Current caller is from the administrative welfare center",
+              "timestamp": 1768258712.9596891,
+              "metadata": {}
+            },
+            {
+              "id": "f797ef6b-d3ef-4859-af8c-393d441132e8",
+              "content": "Patient reports current condition as normal",
+              "timestamp": 1768258798.1373122,
+              "metadata": {}
+            },
+            {
+              "id": "30652547-d139-4b43-b6cd-43876e1aa7ad",
+              "content": "Patient is still trying to be careful with their high blood pressure management",
+              "timestamp": 1768258844.8292465,
+              "metadata": {}
+            },
+            {
+              "id": "1c235a57-4490-41c1-89ef-a1b9d10c53e4",
+              "content": "Patient is currently trying to eat a lot of raw vegetables",
+              "timestamp": 1768258888.6422997,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "3fb9d77d-8c81-4292-b0af-f5568f2445a8",
+              "content": "Eating a lot of vegetables is good for health",
+              "timestamp": 1768258902.6807137,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "How might the patient's current dietary focus on raw vegetables relate to their medical history?",
+          "answer": "The increased intake of raw vegetables may support blood pressure management, aligning with their history of hypertension medication.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "20c495f5-9bde-4395-8f67-65dfc0079826"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "1c235a57-4490-41c1-89ef-a1b9d10c53e4"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Is there any inconvenience?",
+        "to_memory": [
+          "working: Patient is trying to eat a lot of raw vegetables"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e5c367e-ed13-4bc6-8004-863c56d81634",
+              "content": "Current caller is from the administrative welfare center",
+              "timestamp": 1768258712.9596891,
+              "metadata": {}
+            },
+            {
+              "id": "f797ef6b-d3ef-4859-af8c-393d441132e8",
+              "content": "Patient reports current condition as normal",
+              "timestamp": 1768258798.1373122,
+              "metadata": {}
+            },
+            {
+              "id": "30652547-d139-4b43-b6cd-43876e1aa7ad",
+              "content": "Patient is still trying to be careful with their high blood pressure management",
+              "timestamp": 1768258844.8292465,
+              "metadata": {}
+            },
+            {
+              "id": "1c235a57-4490-41c1-89ef-a1b9d10c53e4",
+              "content": "Patient is currently trying to eat a lot of raw vegetables",
+              "timestamp": 1768258888.6422997,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "3fb9d77d-8c81-4292-b0af-f5568f2445a8",
+              "content": "Eating a lot of vegetables is good for health",
+              "timestamp": 1768258902.6807137,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "None.",
+        "to_memory": [
+          "working: Patient is advised to continue eating vegetables",
+          "experience: Eating a lot of vegetables is beneficial for health"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e5c367e-ed13-4bc6-8004-863c56d81634",
+              "content": "Current caller is from the administrative welfare center",
+              "timestamp": 1768258712.9596891,
+              "metadata": {}
+            },
+            {
+              "id": "f797ef6b-d3ef-4859-af8c-393d441132e8",
+              "content": "Patient reports current condition as normal",
+              "timestamp": 1768258798.1373122,
+              "metadata": {}
+            },
+            {
+              "id": "30652547-d139-4b43-b6cd-43876e1aa7ad",
+              "content": "Patient is still trying to be careful with their high blood pressure management",
+              "timestamp": 1768258844.8292465,
+              "metadata": {}
+            },
+            {
+              "id": "1c235a57-4490-41c1-89ef-a1b9d10c53e4",
+              "content": "Patient is currently trying to eat a lot of raw vegetables",
+              "timestamp": 1768258888.6422997,
+              "metadata": {}
+            },
+            {
+              "id": "0ac8d8c8-20ef-43cb-8b6e-b2ac8c0be173",
+              "content": "Patient is advised to continue eating vegetables",
+              "timestamp": 1768259001.5185618,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "3fb9d77d-8c81-4292-b0af-f5568f2445a8",
+              "content": "Eating a lot of vegetables is good for health",
+              "timestamp": 1768258902.6807137,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "Given the patient's history of high blood pressure, is their current condition being reported as normal consistent?",
+          "answer": "No, high blood pressure is a chronic condition; confirm current blood pressure readings.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "5164fa93-3ff5-4e4d-9fc2-9398845852a6"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "f797ef6b-d3ef-4859-af8c-393d441132e8"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "It sounds good. i hope you continue to be healthy.",
+        "to_memory": [
+          "working: Patient should continue to eat as advised",
+          "working: No current inconveniences reported"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e5c367e-ed13-4bc6-8004-863c56d81634",
+              "content": "Current caller is from the administrative welfare center",
+              "timestamp": 1768258712.9596891,
+              "metadata": {}
+            },
+            {
+              "id": "f797ef6b-d3ef-4859-af8c-393d441132e8",
+              "content": "Patient reports current condition as normal",
+              "timestamp": 1768258798.1373122,
+              "metadata": {}
+            },
+            {
+              "id": "30652547-d139-4b43-b6cd-43876e1aa7ad",
+              "content": "Patient is still trying to be careful with their high blood pressure management",
+              "timestamp": 1768258844.8292465,
+              "metadata": {}
+            },
+            {
+              "id": "1c235a57-4490-41c1-89ef-a1b9d10c53e4",
+              "content": "Patient is currently trying to eat a lot of raw vegetables",
+              "timestamp": 1768258888.6422997,
+              "metadata": {}
+            },
+            {
+              "id": "0ac8d8c8-20ef-43cb-8b6e-b2ac8c0be173",
+              "content": "Patient is advised to continue eating vegetables",
+              "timestamp": 1768259001.5185618,
+              "metadata": {}
+            },
+            {
+              "id": "1c5c292d-b820-4f9a-9af0-f0bf804aa0cb",
+              "content": "No current inconveniences reported",
+              "timestamp": 1768259056.450992,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "3fb9d77d-8c81-4292-b0af-f5568f2445a8",
+              "content": "Eating a lot of vegetables is good for health",
+              "timestamp": 1768258902.6807137,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Thank you.",
+        "to_memory": [
+          "working: Patient reports no current inconvenience"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e5c367e-ed13-4bc6-8004-863c56d81634",
+              "content": "Current caller is from the administrative welfare center",
+              "timestamp": 1768258712.9596891,
+              "metadata": {}
+            },
+            {
+              "id": "f797ef6b-d3ef-4859-af8c-393d441132e8",
+              "content": "Patient reports current condition as normal",
+              "timestamp": 1768258798.1373122,
+              "metadata": {}
+            },
+            {
+              "id": "30652547-d139-4b43-b6cd-43876e1aa7ad",
+              "content": "Patient is still trying to be careful with their high blood pressure management",
+              "timestamp": 1768258844.8292465,
+              "metadata": {}
+            },
+            {
+              "id": "1c235a57-4490-41c1-89ef-a1b9d10c53e4",
+              "content": "Patient is currently trying to eat a lot of raw vegetables",
+              "timestamp": 1768258888.6422997,
+              "metadata": {}
+            },
+            {
+              "id": "0ac8d8c8-20ef-43cb-8b6e-b2ac8c0be173",
+              "content": "Patient is advised to continue eating vegetables",
+              "timestamp": 1768259001.5185618,
+              "metadata": {}
+            },
+            {
+              "id": "1c5c292d-b820-4f9a-9af0-f0bf804aa0cb",
+              "content": "No current inconveniences reported",
+              "timestamp": 1768259056.450992,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "3fb9d77d-8c81-4292-b0af-f5568f2445a8",
+              "content": "Eating a lot of vegetables is good for health",
+              "timestamp": 1768258902.6807137,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "Did the patient mention any current inconveniences?",
+          "answer": "The patient reported no current inconveniences.",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "1c5c292d-b820-4f9a-9af0-f0bf804aa0cb"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Yes, can i end the call here today?",
+        "to_memory": [
+          "working: Patient reports no current inconveniences or complaints",
+          "working: Patient requested to end the call"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e5c367e-ed13-4bc6-8004-863c56d81634",
+              "content": "Current caller is from the administrative welfare center",
+              "timestamp": 1768258712.9596891,
+              "metadata": {}
+            },
+            {
+              "id": "f797ef6b-d3ef-4859-af8c-393d441132e8",
+              "content": "Patient reports current condition as normal",
+              "timestamp": 1768258798.1373122,
+              "metadata": {}
+            },
+            {
+              "id": "30652547-d139-4b43-b6cd-43876e1aa7ad",
+              "content": "Patient is still trying to be careful with their high blood pressure management",
+              "timestamp": 1768258844.8292465,
+              "metadata": {}
+            },
+            {
+              "id": "1c235a57-4490-41c1-89ef-a1b9d10c53e4",
+              "content": "Patient is currently trying to eat a lot of raw vegetables",
+              "timestamp": 1768258888.6422997,
+              "metadata": {}
+            },
+            {
+              "id": "0ac8d8c8-20ef-43cb-8b6e-b2ac8c0be173",
+              "content": "Patient is advised to continue eating vegetables",
+              "timestamp": 1768259001.5185618,
+              "metadata": {}
+            },
+            {
+              "id": "1c5c292d-b820-4f9a-9af0-f0bf804aa0cb",
+              "content": "No current inconveniences reported",
+              "timestamp": 1768259056.450992,
+              "metadata": {}
+            },
+            {
+              "id": "d9871bdd-9f18-40f8-af61-d4c2736fbd0e",
+              "content": "Patient requested to end the call",
+              "timestamp": 1768259087.7639413,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "3fb9d77d-8c81-4292-b0af-f5568f2445a8",
+              "content": "Eating a lot of vegetables is good for health",
+              "timestamp": 1768258902.6807137,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes. go in.",
+        "to_memory": [
+          "working: No current symptoms or complaints reported"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e5c367e-ed13-4bc6-8004-863c56d81634",
+              "content": "Current caller is from the administrative welfare center",
+              "timestamp": 1768258712.9596891,
+              "metadata": {}
+            },
+            {
+              "id": "f797ef6b-d3ef-4859-af8c-393d441132e8",
+              "content": "Patient reports current condition as normal",
+              "timestamp": 1768258798.1373122,
+              "metadata": {}
+            },
+            {
+              "id": "30652547-d139-4b43-b6cd-43876e1aa7ad",
+              "content": "Patient is still trying to be careful with their high blood pressure management",
+              "timestamp": 1768258844.8292465,
+              "metadata": {}
+            },
+            {
+              "id": "1c235a57-4490-41c1-89ef-a1b9d10c53e4",
+              "content": "Patient is currently trying to eat a lot of raw vegetables",
+              "timestamp": 1768258888.6422997,
+              "metadata": {}
+            },
+            {
+              "id": "0ac8d8c8-20ef-43cb-8b6e-b2ac8c0be173",
+              "content": "Patient is advised to continue eating vegetables",
+              "timestamp": 1768259001.5185618,
+              "metadata": {}
+            },
+            {
+              "id": "1c5c292d-b820-4f9a-9af0-f0bf804aa0cb",
+              "content": "No current inconveniences reported",
+              "timestamp": 1768259056.450992,
+              "metadata": {}
+            },
+            {
+              "id": "d9871bdd-9f18-40f8-af61-d4c2736fbd0e",
+              "content": "Patient requested to end the call",
+              "timestamp": 1768259087.7639413,
+              "metadata": {}
+            },
+            {
+              "id": "166be161-6bc4-4336-996f-2e0fb8a1251b",
+              "content": "No current symptoms or complaints reported",
+              "timestamp": 1768259110.3021355,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "3fb9d77d-8c81-4292-b0af-f5568f2445a8",
+              "content": "Eating a lot of vegetables is good for health",
+              "timestamp": 1768258902.6807137,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "What condition is the patient prescribed medication for?",
+          "answer": "High blood pressure.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "860b1722-5657-444f-ba5d-bd28116d1281"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Yes! then i'll call you again later. thank you.",
+        "to_memory": [
+          "working: Patient plans to call again later"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e5c367e-ed13-4bc6-8004-863c56d81634",
+              "content": "Current caller is from the administrative welfare center",
+              "timestamp": 1768258712.9596891,
+              "metadata": {}
+            },
+            {
+              "id": "f797ef6b-d3ef-4859-af8c-393d441132e8",
+              "content": "Patient reports current condition as normal",
+              "timestamp": 1768258798.1373122,
+              "metadata": {}
+            },
+            {
+              "id": "30652547-d139-4b43-b6cd-43876e1aa7ad",
+              "content": "Patient is still trying to be careful with their high blood pressure management",
+              "timestamp": 1768258844.8292465,
+              "metadata": {}
+            },
+            {
+              "id": "1c235a57-4490-41c1-89ef-a1b9d10c53e4",
+              "content": "Patient is currently trying to eat a lot of raw vegetables",
+              "timestamp": 1768258888.6422997,
+              "metadata": {}
+            },
+            {
+              "id": "0ac8d8c8-20ef-43cb-8b6e-b2ac8c0be173",
+              "content": "Patient is advised to continue eating vegetables",
+              "timestamp": 1768259001.5185618,
+              "metadata": {}
+            },
+            {
+              "id": "1c5c292d-b820-4f9a-9af0-f0bf804aa0cb",
+              "content": "No current inconveniences reported",
+              "timestamp": 1768259056.450992,
+              "metadata": {}
+            },
+            {
+              "id": "d9871bdd-9f18-40f8-af61-d4c2736fbd0e",
+              "content": "Patient requested to end the call",
+              "timestamp": 1768259087.7639413,
+              "metadata": {}
+            },
+            {
+              "id": "166be161-6bc4-4336-996f-2e0fb8a1251b",
+              "content": "No current symptoms or complaints reported",
+              "timestamp": 1768259110.3021355,
+              "metadata": {}
+            },
+            {
+              "id": "9ec6cb4d-5f15-4a6c-9bb0-feb4068bf753",
+              "content": "Patient plans to call again later",
+              "timestamp": 1768259137.5521224,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "09a6fae0-164d-407d-ab4f-b7f920ce18fc",
+              "content": "Patient is male",
+              "timestamp": 1768257611.8833525,
+              "metadata": {}
+            },
+            {
+              "id": "cd54c315-a2a5-4b01-99e5-43161d320e82",
+              "content": "Patient lives alone",
+              "timestamp": 1768258557.782427,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "5164fa93-3ff5-4e4d-9fc2-9398845852a6",
+              "content": "Patient has high blood pressure",
+              "timestamp": 1768257700.3877788,
+              "metadata": {}
+            },
+            {
+              "id": "20c495f5-9bde-4395-8f67-65dfc0079826",
+              "content": "Patient is taking medication for high blood pressure",
+              "timestamp": 1768257728.0590882,
+              "metadata": {}
+            },
+            {
+              "id": "860b1722-5657-444f-ba5d-bd28116d1281",
+              "content": "Patient is prescribed medication for high blood pressure",
+              "timestamp": 1768258267.783521,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "3fb9d77d-8c81-4292-b0af-f5568f2445a8",
+              "content": "Eating a lot of vegetables is good for health",
+              "timestamp": 1768258902.6807137,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

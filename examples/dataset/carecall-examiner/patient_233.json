@@ -1,0 +1,4387 @@
+{
+  "patient_id": "233",
+  "messages": [
+    {
+      "assistant": {
+        "content": "Hello, sir, i'm calling from the administrative welfare center.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Huh? who?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "I'm calling from the administrative welfare center. is the call okay now?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Oh, yeah, yeah.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "I'm calling to ask how you're doing.",
+        "to_memory": [
+          "working: Purpose of call is to check on user's well-being"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7c462394-8cdf-4845-a60d-9a613a89cd19",
+              "content": "Purpose of call is to check on user's well-being",
+              "timestamp": 1768310603.3506262,
+              "metadata": {}
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Well, let's just do it.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7c462394-8cdf-4845-a60d-9a613a89cd19",
+              "content": "Purpose of call is to check on user's well-being",
+              "timestamp": 1768310603.3506262,
+              "metadata": {}
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "What is the purpose of this call?",
+          "answer": "The purpose is to check on the user's well-being.",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "7c462394-8cdf-4845-a60d-9a613a89cd19"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Is there any inconvenience?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7c462394-8cdf-4845-a60d-9a613a89cd19",
+              "content": "Purpose of call is to check on user's well-being",
+              "timestamp": 1768310603.3506262,
+              "metadata": {}
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "No, my stomach hurts a little because i ate old food.",
+        "to_memory": [
+          "working: Current complaint is stomach pain due to eating old food",
+          "experience: Eating old food can cause stomach pain"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7c462394-8cdf-4845-a60d-9a613a89cd19",
+              "content": "Purpose of call is to check on user's well-being",
+              "timestamp": 1768310603.3506262,
+              "metadata": {}
+            },
+            {
+              "id": "0acf7780-f683-4a47-91e0-dbaae0754c61",
+              "content": "Current complaint is stomach pain due to eating old food",
+              "timestamp": 1768310624.6603036,
+              "metadata": {}
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "What caused the patient's stomach pain?",
+          "answer": "Eating old food",
+          "source": [
+            {
+              "layer": "experience",
+              "ids": [
+                "8e5804ee-01e6-4039-b3dc-6e3dce978edd"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Oh, does it hurt a lot?",
+        "to_memory": [
+          "working: Current complaint is stomach pain due to eating old food"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7c462394-8cdf-4845-a60d-9a613a89cd19",
+              "content": "Purpose of call is to check on user's well-being",
+              "timestamp": 1768310603.3506262,
+              "metadata": {}
+            },
+            {
+              "id": "0acf7780-f683-4a47-91e0-dbaae0754c61",
+              "content": "Current complaint is stomach pain due to eating old food",
+              "timestamp": 1768310624.6603036,
+              "metadata": {}
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "I had some diarrhea.",
+        "to_memory": [
+          "working: Current complaint is stomach pain due to eating old food",
+          "working: Current complaint includes diarrhea"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7c462394-8cdf-4845-a60d-9a613a89cd19",
+              "content": "Purpose of call is to check on user's well-being",
+              "timestamp": 1768310603.3506262,
+              "metadata": {}
+            },
+            {
+              "id": "0acf7780-f683-4a47-91e0-dbaae0754c61",
+              "content": "Current complaint is stomach pain due to eating old food",
+              "timestamp": 1768310624.6603036,
+              "metadata": {}
+            },
+            {
+              "id": "ecc677a2-b611-499a-aadb-42bd8f531414",
+              "content": "Current complaint includes diarrhea",
+              "timestamp": 1768310646.6732965,
+              "metadata": {}
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Did you go to the hospital?",
+        "to_memory": [
+          "working: Current complaints are stomach pain and diarrhea due to eating old food"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7c462394-8cdf-4845-a60d-9a613a89cd19",
+              "content": "Purpose of call is to check on user's well-being",
+              "timestamp": 1768310603.3506262,
+              "metadata": {}
+            },
+            {
+              "id": "0acf7780-f683-4a47-91e0-dbaae0754c61",
+              "content": "Current complaint is stomach pain due to eating old food",
+              "timestamp": 1768310624.6603036,
+              "metadata": {}
+            },
+            {
+              "id": "ecc677a2-b611-499a-aadb-42bd8f531414",
+              "content": "Current complaint includes diarrhea",
+              "timestamp": 1768310646.6732965,
+              "metadata": {}
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "I'm waiting for my son to come with me.",
+        "to_memory": [
+          "working: Current complaint is stomach pain from eating old food",
+          "working: Patient experienced diarrhea",
+          "working: Patient is waiting for son to accompany them to hospital"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7c462394-8cdf-4845-a60d-9a613a89cd19",
+              "content": "Purpose of call is to check on user's well-being",
+              "timestamp": 1768310603.3506262,
+              "metadata": {}
+            },
+            {
+              "id": "0acf7780-f683-4a47-91e0-dbaae0754c61",
+              "content": "Current complaint is stomach pain due to eating old food",
+              "timestamp": 1768310624.6603036,
+              "metadata": {}
+            },
+            {
+              "id": "ecc677a2-b611-499a-aadb-42bd8f531414",
+              "content": "Current complaint includes diarrhea",
+              "timestamp": 1768310646.6732965,
+              "metadata": {}
+            },
+            {
+              "id": "e14903a5-d3e0-4463-be9e-2c265cfee8f2",
+              "content": "Patient is waiting for son to accompany them to hospital",
+              "timestamp": 1768310681.180713,
+              "metadata": {}
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "I see, you have a caring son.",
+        "to_memory": [
+          "working: Current complaint is stomach pain and diarrhea due to eating old food",
+          "working: Patient is waiting for son to accompany to hospital"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7c462394-8cdf-4845-a60d-9a613a89cd19",
+              "content": "Purpose of call is to check on user's well-being",
+              "timestamp": 1768310603.3506262,
+              "metadata": {}
+            },
+            {
+              "id": "0acf7780-f683-4a47-91e0-dbaae0754c61",
+              "content": "Current complaint is stomach pain due to eating old food",
+              "timestamp": 1768310624.6603036,
+              "metadata": {}
+            },
+            {
+              "id": "ecc677a2-b611-499a-aadb-42bd8f531414",
+              "content": "Current complaint includes diarrhea",
+              "timestamp": 1768310646.6732965,
+              "metadata": {}
+            },
+            {
+              "id": "e14903a5-d3e0-4463-be9e-2c265cfee8f2",
+              "content": "Patient is waiting for son to accompany them to hospital",
+              "timestamp": 1768310681.180713,
+              "metadata": {}
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Right, well.",
+        "to_memory": [
+          "working: Current complaint is diarrhea",
+          "working: Patient is waiting to go to the hospital with their son"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7c462394-8cdf-4845-a60d-9a613a89cd19",
+              "content": "Purpose of call is to check on user's well-being",
+              "timestamp": 1768310603.3506262,
+              "metadata": {}
+            },
+            {
+              "id": "0acf7780-f683-4a47-91e0-dbaae0754c61",
+              "content": "Current complaint is stomach pain due to eating old food",
+              "timestamp": 1768310624.6603036,
+              "metadata": {}
+            },
+            {
+              "id": "ecc677a2-b611-499a-aadb-42bd8f531414",
+              "content": "Current complaint includes diarrhea",
+              "timestamp": 1768310646.6732965,
+              "metadata": {}
+            },
+            {
+              "id": "e14903a5-d3e0-4463-be9e-2c265cfee8f2",
+              "content": "Patient is waiting for son to accompany them to hospital",
+              "timestamp": 1768310681.180713,
+              "metadata": {}
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "What can happen if someone eats old food?",
+          "answer": "Eating old food can cause stomach pain.",
+          "source": [
+            {
+              "layer": "experience",
+              "ids": [
+                "8e5804ee-01e6-4039-b3dc-6e3dce978edd"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "I hope you get well soon.",
+        "to_memory": [
+          "working: Current complaint is diarrhea",
+          "working: Patient is waiting for son to accompany to hospital"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7c462394-8cdf-4845-a60d-9a613a89cd19",
+              "content": "Purpose of call is to check on user's well-being",
+              "timestamp": 1768310603.3506262,
+              "metadata": {}
+            },
+            {
+              "id": "0acf7780-f683-4a47-91e0-dbaae0754c61",
+              "content": "Current complaint is stomach pain due to eating old food",
+              "timestamp": 1768310624.6603036,
+              "metadata": {}
+            },
+            {
+              "id": "ecc677a2-b611-499a-aadb-42bd8f531414",
+              "content": "Current complaint includes diarrhea",
+              "timestamp": 1768310646.6732965,
+              "metadata": {}
+            },
+            {
+              "id": "e14903a5-d3e0-4463-be9e-2c265cfee8f2",
+              "content": "Patient is waiting for son to accompany them to hospital",
+              "timestamp": 1768310681.180713,
+              "metadata": {}
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          "working: Patient is waiting for son to accompany to hospital"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7c462394-8cdf-4845-a60d-9a613a89cd19",
+              "content": "Purpose of call is to check on user's well-being",
+              "timestamp": 1768310603.3506262,
+              "metadata": {}
+            },
+            {
+              "id": "0acf7780-f683-4a47-91e0-dbaae0754c61",
+              "content": "Current complaint is stomach pain due to eating old food",
+              "timestamp": 1768310624.6603036,
+              "metadata": {}
+            },
+            {
+              "id": "ecc677a2-b611-499a-aadb-42bd8f531414",
+              "content": "Current complaint includes diarrhea",
+              "timestamp": 1768310646.6732965,
+              "metadata": {}
+            },
+            {
+              "id": "e14903a5-d3e0-4463-be9e-2c265cfee8f2",
+              "content": "Patient is waiting for son to accompany them to hospital",
+              "timestamp": 1768310681.180713,
+              "metadata": {}
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "What can happen if someone eats old food?",
+          "answer": "Eating old food can cause stomach pain.",
+          "source": [
+            {
+              "layer": "experience",
+              "ids": [
+                "8e5804ee-01e6-4039-b3dc-6e3dce978edd"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Did you sleep well last night?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7c462394-8cdf-4845-a60d-9a613a89cd19",
+              "content": "Purpose of call is to check on user's well-being",
+              "timestamp": 1768310603.3506262,
+              "metadata": {}
+            },
+            {
+              "id": "0acf7780-f683-4a47-91e0-dbaae0754c61",
+              "content": "Current complaint is stomach pain due to eating old food",
+              "timestamp": 1768310624.6603036,
+              "metadata": {}
+            },
+            {
+              "id": "ecc677a2-b611-499a-aadb-42bd8f531414",
+              "content": "Current complaint includes diarrhea",
+              "timestamp": 1768310646.6732965,
+              "metadata": {}
+            },
+            {
+              "id": "e14903a5-d3e0-4463-be9e-2c265cfee8f2",
+              "content": "Patient is waiting for son to accompany them to hospital",
+              "timestamp": 1768310681.180713,
+              "metadata": {}
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "I just slept.",
+        "to_memory": [
+          "identity: Patient has a caring son",
+          "working: Patient reported 'I just slept' regarding last night's sleep"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7c462394-8cdf-4845-a60d-9a613a89cd19",
+              "content": "Purpose of call is to check on user's well-being",
+              "timestamp": 1768310603.3506262,
+              "metadata": {}
+            },
+            {
+              "id": "0acf7780-f683-4a47-91e0-dbaae0754c61",
+              "content": "Current complaint is stomach pain due to eating old food",
+              "timestamp": 1768310624.6603036,
+              "metadata": {}
+            },
+            {
+              "id": "ecc677a2-b611-499a-aadb-42bd8f531414",
+              "content": "Current complaint includes diarrhea",
+              "timestamp": 1768310646.6732965,
+              "metadata": {}
+            },
+            {
+              "id": "e14903a5-d3e0-4463-be9e-2c265cfee8f2",
+              "content": "Patient is waiting for son to accompany them to hospital",
+              "timestamp": 1768310681.180713,
+              "metadata": {}
+            },
+            {
+              "id": "0f406cf1-a0cb-4c00-acd6-b8c7eff9d4ef",
+              "content": "Patient reported 'I just slept' regarding last night's sleep",
+              "timestamp": 1768310791.4019835,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "I see. then can i end the call here today?",
+        "to_memory": [
+          "working: Patient reported having slept last night",
+          "working: Patient requested to end the call today"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7c462394-8cdf-4845-a60d-9a613a89cd19",
+              "content": "Purpose of call is to check on user's well-being",
+              "timestamp": 1768310603.3506262,
+              "metadata": {}
+            },
+            {
+              "id": "0acf7780-f683-4a47-91e0-dbaae0754c61",
+              "content": "Current complaint is stomach pain due to eating old food",
+              "timestamp": 1768310624.6603036,
+              "metadata": {}
+            },
+            {
+              "id": "ecc677a2-b611-499a-aadb-42bd8f531414",
+              "content": "Current complaint includes diarrhea",
+              "timestamp": 1768310646.6732965,
+              "metadata": {}
+            },
+            {
+              "id": "e14903a5-d3e0-4463-be9e-2c265cfee8f2",
+              "content": "Patient is waiting for son to accompany them to hospital",
+              "timestamp": 1768310681.180713,
+              "metadata": {}
+            },
+            {
+              "id": "0f406cf1-a0cb-4c00-acd6-b8c7eff9d4ef",
+              "content": "Patient reported 'I just slept' regarding last night's sleep",
+              "timestamp": 1768310791.4019835,
+              "metadata": {}
+            },
+            {
+              "id": "d7d5f223-5503-40d3-8ae9-79df4f52abb9",
+              "content": "Patient requested to end the call today",
+              "timestamp": 1768310828.1919613,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    "---诊疗分割线---",
+    {
+      "assistant": {
+        "content": "Hello, sir, i'm calling from the administrative welfare center.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yeah.",
+        "to_memory": [
+          "identity: Patient is male",
+          "working: Call is from administrative welfare center"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Do you mind if i call you now?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "Where is the current call coming from?",
+          "answer": "The call is from the administrative welfare center.",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Sir, did you go to the hospital with your son last time?",
+        "to_memory": [
+          "working: Assistant is inquiring if the patient (sir) went to the hospital with his son last time"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            },
+            {
+              "id": "ce1e03b0-ef3a-4a1c-8fb7-3d710df5c10e",
+              "content": "Assistant is inquiring if the patient (sir) went to the hospital with his son last time",
+              "timestamp": 1768310926.1425488,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes, i was hospitalized for a few days.",
+        "to_memory": [
+          "history: Patient was hospitalized for a few days"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            },
+            {
+              "id": "ce1e03b0-ef3a-4a1c-8fb7-3d710df5c10e",
+              "content": "Assistant is inquiring if the patient (sir) went to the hospital with his son last time",
+              "timestamp": 1768310926.1425488,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "Given your history of hospitalization, can you confirm if the time you were hospitalized for a few days was when you went to the hospital with your son?",
+          "answer": "Yes, the hospitalization aligns with the previous inquiry about going to the hospital with his son.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "db31a018-0b0a-4238-80d5-498f3862dd83"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "ce1e03b0-ef3a-4a1c-8fb7-3d710df5c10e"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Oh, you must have been very sick. how are you now?",
+        "to_memory": [
+          "history: Patient was hospitalized for a few days"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            },
+            {
+              "id": "ce1e03b0-ef3a-4a1c-8fb7-3d710df5c10e",
+              "content": "Assistant is inquiring if the patient (sir) went to the hospital with his son last time",
+              "timestamp": 1768310926.1425488,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "I've been cured and discharged.",
+        "to_memory": [
+          "identity: Gender is male",
+          "history: Patient was hospitalized for a few days",
+          "working: Patient has been cured and discharged"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            },
+            {
+              "id": "ce1e03b0-ef3a-4a1c-8fb7-3d710df5c10e",
+              "content": "Assistant is inquiring if the patient (sir) went to the hospital with his son last time",
+              "timestamp": 1768310926.1425488,
+              "metadata": {}
+            },
+            {
+              "id": "5dfe4925-85b6-4338-81ff-ff93360b0874",
+              "content": "Patient has been cured and discharged",
+              "timestamp": 1768310979.7577026,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Great. i think it's better not to eat old food from now on.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            },
+            {
+              "id": "ce1e03b0-ef3a-4a1c-8fb7-3d710df5c10e",
+              "content": "Assistant is inquiring if the patient (sir) went to the hospital with his son last time",
+              "timestamp": 1768310926.1425488,
+              "metadata": {}
+            },
+            {
+              "id": "5dfe4925-85b6-4338-81ff-ff93360b0874",
+              "content": "Patient has been cured and discharged",
+              "timestamp": 1768310979.7577026,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Well, to do that. this time, i've been hit hard.",
+        "to_memory": [
+          "history: Patient was previously hospitalized and has been cured and discharged",
+          "working: Current complaint is being hit hard this time"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            },
+            {
+              "id": "ce1e03b0-ef3a-4a1c-8fb7-3d710df5c10e",
+              "content": "Assistant is inquiring if the patient (sir) went to the hospital with his son last time",
+              "timestamp": 1768310926.1425488,
+              "metadata": {}
+            },
+            {
+              "id": "5dfe4925-85b6-4338-81ff-ff93360b0874",
+              "content": "Patient has been cured and discharged",
+              "timestamp": 1768310979.7577026,
+              "metadata": {}
+            },
+            {
+              "id": "62b2feee-4a04-441a-bda2-1fa41ddd4959",
+              "content": "Current complaint is being hit hard this time",
+              "timestamp": 1768310996.138846,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "Did the assistant inquire whether the patient went to the hospital with his son during their last visit?",
+          "answer": "Yes, the assistant inquired if the patient went to the hospital with his son last time.",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "ce1e03b0-ef3a-4a1c-8fb7-3d710df5c10e"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Yes, you'll be fine if you're careful in the future.",
+        "to_memory": [
+          "history: Patient was hospitalized for a few days and discharged after being cured",
+          "history: Patient experienced a significant health impact (hit hard) during recent illness"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            },
+            {
+              "id": "ce1e03b0-ef3a-4a1c-8fb7-3d710df5c10e",
+              "content": "Assistant is inquiring if the patient (sir) went to the hospital with his son last time",
+              "timestamp": 1768310926.1425488,
+              "metadata": {}
+            },
+            {
+              "id": "5dfe4925-85b6-4338-81ff-ff93360b0874",
+              "content": "Patient has been cured and discharged",
+              "timestamp": 1768310979.7577026,
+              "metadata": {}
+            },
+            {
+              "id": "62b2feee-4a04-441a-bda2-1fa41ddd4959",
+              "content": "Current complaint is being hit hard this time",
+              "timestamp": 1768310996.138846,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes, yes.",
+        "to_memory": [
+          "history: Patient was previously hospitalized and cured",
+          "history: Patient's recent severe illness may be related to old food consumption",
+          "working: Treatment plan includes avoiding old food"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            },
+            {
+              "id": "ce1e03b0-ef3a-4a1c-8fb7-3d710df5c10e",
+              "content": "Assistant is inquiring if the patient (sir) went to the hospital with his son last time",
+              "timestamp": 1768310926.1425488,
+              "metadata": {}
+            },
+            {
+              "id": "5dfe4925-85b6-4338-81ff-ff93360b0874",
+              "content": "Patient has been cured and discharged",
+              "timestamp": 1768310979.7577026,
+              "metadata": {}
+            },
+            {
+              "id": "62b2feee-4a04-441a-bda2-1fa41ddd4959",
+              "content": "Current complaint is being hit hard this time",
+              "timestamp": 1768310996.138846,
+              "metadata": {}
+            },
+            {
+              "id": "848d842a-887e-4501-8a05-d6032454e74e",
+              "content": "Treatment plan includes avoiding old food",
+              "timestamp": 1768311053.4269366,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "How does the patient's current complaint relate to their past health history?",
+          "answer": "The current complaint of being hit hard this time mirrors the significant health impact experienced during their recent illness, suggesting a recurrent or worsening pattern.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "651005ef-9196-4720-9bee-3f12185304ad"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "62b2feee-4a04-441a-bda2-1fa41ddd4959"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Did you eat today?",
+        "to_memory": [
+          "history: Patient was previously hospitalized and discharged after treatment",
+          "history: Patient experienced a severe illness recently (hit hard)",
+          "working: Advised to avoid eating old food",
+          "working: Current inquiry about whether the patient ate today"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            },
+            {
+              "id": "ce1e03b0-ef3a-4a1c-8fb7-3d710df5c10e",
+              "content": "Assistant is inquiring if the patient (sir) went to the hospital with his son last time",
+              "timestamp": 1768310926.1425488,
+              "metadata": {}
+            },
+            {
+              "id": "5dfe4925-85b6-4338-81ff-ff93360b0874",
+              "content": "Patient has been cured and discharged",
+              "timestamp": 1768310979.7577026,
+              "metadata": {}
+            },
+            {
+              "id": "62b2feee-4a04-441a-bda2-1fa41ddd4959",
+              "content": "Current complaint is being hit hard this time",
+              "timestamp": 1768310996.138846,
+              "metadata": {}
+            },
+            {
+              "id": "848d842a-887e-4501-8a05-d6032454e74e",
+              "content": "Treatment plan includes avoiding old food",
+              "timestamp": 1768311053.4269366,
+              "metadata": {}
+            },
+            {
+              "id": "d44eb68f-4680-4184-acba-e818d7343086",
+              "content": "Current inquiry about whether the patient ate today",
+              "timestamp": 1768311080.138009,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes, i did.",
+        "to_memory": [
+          "working: Current complaint related to consumption of old food",
+          "working: Treatment plan includes avoiding old food",
+          "working: Patient ate today"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            },
+            {
+              "id": "ce1e03b0-ef3a-4a1c-8fb7-3d710df5c10e",
+              "content": "Assistant is inquiring if the patient (sir) went to the hospital with his son last time",
+              "timestamp": 1768310926.1425488,
+              "metadata": {}
+            },
+            {
+              "id": "5dfe4925-85b6-4338-81ff-ff93360b0874",
+              "content": "Patient has been cured and discharged",
+              "timestamp": 1768310979.7577026,
+              "metadata": {}
+            },
+            {
+              "id": "62b2feee-4a04-441a-bda2-1fa41ddd4959",
+              "content": "Current complaint is being hit hard this time",
+              "timestamp": 1768310996.138846,
+              "metadata": {}
+            },
+            {
+              "id": "848d842a-887e-4501-8a05-d6032454e74e",
+              "content": "Treatment plan includes avoiding old food",
+              "timestamp": 1768311053.4269366,
+              "metadata": {}
+            },
+            {
+              "id": "d44eb68f-4680-4184-acba-e818d7343086",
+              "content": "Current inquiry about whether the patient ate today",
+              "timestamp": 1768311080.138009,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "Given the patient's history of severe illness potentially linked to old food consumption, how does their recent discharge relate to this past event?",
+          "answer": "The discharge indicates successful treatment resolved the severe illness caused by old food consumption.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "c6ed86a0-270d-4511-b58e-581f5140db4d"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "5dfe4925-85b6-4338-81ff-ff93360b0874"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "What did you eat?",
+        "to_memory": [
+          "working: Patient ate today"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            },
+            {
+              "id": "ce1e03b0-ef3a-4a1c-8fb7-3d710df5c10e",
+              "content": "Assistant is inquiring if the patient (sir) went to the hospital with his son last time",
+              "timestamp": 1768310926.1425488,
+              "metadata": {}
+            },
+            {
+              "id": "5dfe4925-85b6-4338-81ff-ff93360b0874",
+              "content": "Patient has been cured and discharged",
+              "timestamp": 1768310979.7577026,
+              "metadata": {}
+            },
+            {
+              "id": "62b2feee-4a04-441a-bda2-1fa41ddd4959",
+              "content": "Current complaint is being hit hard this time",
+              "timestamp": 1768310996.138846,
+              "metadata": {}
+            },
+            {
+              "id": "848d842a-887e-4501-8a05-d6032454e74e",
+              "content": "Treatment plan includes avoiding old food",
+              "timestamp": 1768311053.4269366,
+              "metadata": {}
+            },
+            {
+              "id": "d44eb68f-4680-4184-acba-e818d7343086",
+              "content": "Current inquiry about whether the patient ate today",
+              "timestamp": 1768311080.138009,
+              "metadata": {}
+            },
+            {
+              "id": "eb1d714b-886d-46e1-873c-d8a8b577dc2c",
+              "content": "Patient ate today",
+              "timestamp": 1768311117.323702,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "We had grilled meat.",
+        "to_memory": [
+          "working: Patient ate grilled meat today"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            },
+            {
+              "id": "ce1e03b0-ef3a-4a1c-8fb7-3d710df5c10e",
+              "content": "Assistant is inquiring if the patient (sir) went to the hospital with his son last time",
+              "timestamp": 1768310926.1425488,
+              "metadata": {}
+            },
+            {
+              "id": "5dfe4925-85b6-4338-81ff-ff93360b0874",
+              "content": "Patient has been cured and discharged",
+              "timestamp": 1768310979.7577026,
+              "metadata": {}
+            },
+            {
+              "id": "62b2feee-4a04-441a-bda2-1fa41ddd4959",
+              "content": "Current complaint is being hit hard this time",
+              "timestamp": 1768310996.138846,
+              "metadata": {}
+            },
+            {
+              "id": "848d842a-887e-4501-8a05-d6032454e74e",
+              "content": "Treatment plan includes avoiding old food",
+              "timestamp": 1768311053.4269366,
+              "metadata": {}
+            },
+            {
+              "id": "d44eb68f-4680-4184-acba-e818d7343086",
+              "content": "Current inquiry about whether the patient ate today",
+              "timestamp": 1768311080.138009,
+              "metadata": {}
+            },
+            {
+              "id": "eb1d714b-886d-46e1-873c-d8a8b577dc2c",
+              "content": "Patient ate today",
+              "timestamp": 1768311117.323702,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "Considering the patient's recent medical history, why might the administrative welfare center be contacting them now?",
+          "answer": "The patient's recent hospitalization likely requires follow-up coordination with the administrative welfare center for ongoing care or support.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "db31a018-0b0a-4238-80d5-498f3862dd83"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Oh, it must have been delicious.",
+        "to_memory": [
+          "working: Patient ate grilled meat today"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            },
+            {
+              "id": "ce1e03b0-ef3a-4a1c-8fb7-3d710df5c10e",
+              "content": "Assistant is inquiring if the patient (sir) went to the hospital with his son last time",
+              "timestamp": 1768310926.1425488,
+              "metadata": {}
+            },
+            {
+              "id": "5dfe4925-85b6-4338-81ff-ff93360b0874",
+              "content": "Patient has been cured and discharged",
+              "timestamp": 1768310979.7577026,
+              "metadata": {}
+            },
+            {
+              "id": "62b2feee-4a04-441a-bda2-1fa41ddd4959",
+              "content": "Current complaint is being hit hard this time",
+              "timestamp": 1768310996.138846,
+              "metadata": {}
+            },
+            {
+              "id": "848d842a-887e-4501-8a05-d6032454e74e",
+              "content": "Treatment plan includes avoiding old food",
+              "timestamp": 1768311053.4269366,
+              "metadata": {}
+            },
+            {
+              "id": "d44eb68f-4680-4184-acba-e818d7343086",
+              "content": "Current inquiry about whether the patient ate today",
+              "timestamp": 1768311080.138009,
+              "metadata": {}
+            },
+            {
+              "id": "eb1d714b-886d-46e1-873c-d8a8b577dc2c",
+              "content": "Patient ate today",
+              "timestamp": 1768311117.323702,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes, i wrapped it with chives and it was delicious.",
+        "to_memory": [
+          "working: Patient ate grilled meat wrapped with chives"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            },
+            {
+              "id": "ce1e03b0-ef3a-4a1c-8fb7-3d710df5c10e",
+              "content": "Assistant is inquiring if the patient (sir) went to the hospital with his son last time",
+              "timestamp": 1768310926.1425488,
+              "metadata": {}
+            },
+            {
+              "id": "5dfe4925-85b6-4338-81ff-ff93360b0874",
+              "content": "Patient has been cured and discharged",
+              "timestamp": 1768310979.7577026,
+              "metadata": {}
+            },
+            {
+              "id": "62b2feee-4a04-441a-bda2-1fa41ddd4959",
+              "content": "Current complaint is being hit hard this time",
+              "timestamp": 1768310996.138846,
+              "metadata": {}
+            },
+            {
+              "id": "848d842a-887e-4501-8a05-d6032454e74e",
+              "content": "Treatment plan includes avoiding old food",
+              "timestamp": 1768311053.4269366,
+              "metadata": {}
+            },
+            {
+              "id": "d44eb68f-4680-4184-acba-e818d7343086",
+              "content": "Current inquiry about whether the patient ate today",
+              "timestamp": 1768311080.138009,
+              "metadata": {}
+            },
+            {
+              "id": "eb1d714b-886d-46e1-873c-d8a8b577dc2c",
+              "content": "Patient ate today",
+              "timestamp": 1768311117.323702,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "Given your history of severe illness linked to old food, is eating chives-wrapped food safe now?",
+          "answer": "No, the current severe complaint likely stems from old food consumption despite chives.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "c6ed86a0-270d-4511-b58e-581f5140db4d"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "62b2feee-4a04-441a-bda2-1fa41ddd4959"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Well done. please continue to eat well.",
+        "to_memory": [
+          "working: Patient ate grilled meat wrapped with chives",
+          "working: Assistant advised to continue eating well"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            },
+            {
+              "id": "ce1e03b0-ef3a-4a1c-8fb7-3d710df5c10e",
+              "content": "Assistant is inquiring if the patient (sir) went to the hospital with his son last time",
+              "timestamp": 1768310926.1425488,
+              "metadata": {}
+            },
+            {
+              "id": "5dfe4925-85b6-4338-81ff-ff93360b0874",
+              "content": "Patient has been cured and discharged",
+              "timestamp": 1768310979.7577026,
+              "metadata": {}
+            },
+            {
+              "id": "62b2feee-4a04-441a-bda2-1fa41ddd4959",
+              "content": "Current complaint is being hit hard this time",
+              "timestamp": 1768310996.138846,
+              "metadata": {}
+            },
+            {
+              "id": "848d842a-887e-4501-8a05-d6032454e74e",
+              "content": "Treatment plan includes avoiding old food",
+              "timestamp": 1768311053.4269366,
+              "metadata": {}
+            },
+            {
+              "id": "d44eb68f-4680-4184-acba-e818d7343086",
+              "content": "Current inquiry about whether the patient ate today",
+              "timestamp": 1768311080.138009,
+              "metadata": {}
+            },
+            {
+              "id": "eb1d714b-886d-46e1-873c-d8a8b577dc2c",
+              "content": "Patient ate today",
+              "timestamp": 1768311117.323702,
+              "metadata": {}
+            },
+            {
+              "id": "c40dad9c-42b0-4555-b704-928fc9bc9fce",
+              "content": "Assistant advised to continue eating well",
+              "timestamp": 1768311160.648407,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Oh, my god, nagging.",
+        "to_memory": [
+          "working: Patient ate grilled meat wrapped with chives"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            },
+            {
+              "id": "ce1e03b0-ef3a-4a1c-8fb7-3d710df5c10e",
+              "content": "Assistant is inquiring if the patient (sir) went to the hospital with his son last time",
+              "timestamp": 1768310926.1425488,
+              "metadata": {}
+            },
+            {
+              "id": "5dfe4925-85b6-4338-81ff-ff93360b0874",
+              "content": "Patient has been cured and discharged",
+              "timestamp": 1768310979.7577026,
+              "metadata": {}
+            },
+            {
+              "id": "62b2feee-4a04-441a-bda2-1fa41ddd4959",
+              "content": "Current complaint is being hit hard this time",
+              "timestamp": 1768310996.138846,
+              "metadata": {}
+            },
+            {
+              "id": "848d842a-887e-4501-8a05-d6032454e74e",
+              "content": "Treatment plan includes avoiding old food",
+              "timestamp": 1768311053.4269366,
+              "metadata": {}
+            },
+            {
+              "id": "d44eb68f-4680-4184-acba-e818d7343086",
+              "content": "Current inquiry about whether the patient ate today",
+              "timestamp": 1768311080.138009,
+              "metadata": {}
+            },
+            {
+              "id": "eb1d714b-886d-46e1-873c-d8a8b577dc2c",
+              "content": "Patient ate today",
+              "timestamp": 1768311117.323702,
+              "metadata": {}
+            },
+            {
+              "id": "c40dad9c-42b0-4555-b704-928fc9bc9fce",
+              "content": "Assistant advised to continue eating well",
+              "timestamp": 1768311160.648407,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "Considering the patient's recent hospitalization, what does their ability to eat today suggest about their progress?",
+          "answer": "It indicates improvement from their hospitalized state, as they were previously unable to eat but have now resumed intake.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "db31a018-0b0a-4238-80d5-498f3862dd83"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "eb1d714b-886d-46e1-873c-d8a8b577dc2c"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "No. i'm saying this because i'm worried.",
+        "to_memory": [
+          "working: Patient expresses worry"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            },
+            {
+              "id": "ce1e03b0-ef3a-4a1c-8fb7-3d710df5c10e",
+              "content": "Assistant is inquiring if the patient (sir) went to the hospital with his son last time",
+              "timestamp": 1768310926.1425488,
+              "metadata": {}
+            },
+            {
+              "id": "5dfe4925-85b6-4338-81ff-ff93360b0874",
+              "content": "Patient has been cured and discharged",
+              "timestamp": 1768310979.7577026,
+              "metadata": {}
+            },
+            {
+              "id": "62b2feee-4a04-441a-bda2-1fa41ddd4959",
+              "content": "Current complaint is being hit hard this time",
+              "timestamp": 1768310996.138846,
+              "metadata": {}
+            },
+            {
+              "id": "848d842a-887e-4501-8a05-d6032454e74e",
+              "content": "Treatment plan includes avoiding old food",
+              "timestamp": 1768311053.4269366,
+              "metadata": {}
+            },
+            {
+              "id": "d44eb68f-4680-4184-acba-e818d7343086",
+              "content": "Current inquiry about whether the patient ate today",
+              "timestamp": 1768311080.138009,
+              "metadata": {}
+            },
+            {
+              "id": "eb1d714b-886d-46e1-873c-d8a8b577dc2c",
+              "content": "Patient ate today",
+              "timestamp": 1768311117.323702,
+              "metadata": {}
+            },
+            {
+              "id": "c40dad9c-42b0-4555-b704-928fc9bc9fce",
+              "content": "Assistant advised to continue eating well",
+              "timestamp": 1768311160.648407,
+              "metadata": {}
+            },
+            {
+              "id": "be2275cf-b2bc-4c3f-ba37-4883c6d3a588",
+              "content": "Patient expresses worry",
+              "timestamp": 1768311190.6903949,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "All right. i know.",
+        "to_memory": [
+          "working: Assistant expressed concern about patient's eating habits"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            },
+            {
+              "id": "ce1e03b0-ef3a-4a1c-8fb7-3d710df5c10e",
+              "content": "Assistant is inquiring if the patient (sir) went to the hospital with his son last time",
+              "timestamp": 1768310926.1425488,
+              "metadata": {}
+            },
+            {
+              "id": "5dfe4925-85b6-4338-81ff-ff93360b0874",
+              "content": "Patient has been cured and discharged",
+              "timestamp": 1768310979.7577026,
+              "metadata": {}
+            },
+            {
+              "id": "62b2feee-4a04-441a-bda2-1fa41ddd4959",
+              "content": "Current complaint is being hit hard this time",
+              "timestamp": 1768310996.138846,
+              "metadata": {}
+            },
+            {
+              "id": "848d842a-887e-4501-8a05-d6032454e74e",
+              "content": "Treatment plan includes avoiding old food",
+              "timestamp": 1768311053.4269366,
+              "metadata": {}
+            },
+            {
+              "id": "d44eb68f-4680-4184-acba-e818d7343086",
+              "content": "Current inquiry about whether the patient ate today",
+              "timestamp": 1768311080.138009,
+              "metadata": {}
+            },
+            {
+              "id": "eb1d714b-886d-46e1-873c-d8a8b577dc2c",
+              "content": "Patient ate today",
+              "timestamp": 1768311117.323702,
+              "metadata": {}
+            },
+            {
+              "id": "c40dad9c-42b0-4555-b704-928fc9bc9fce",
+              "content": "Assistant advised to continue eating well",
+              "timestamp": 1768311160.648407,
+              "metadata": {}
+            },
+            {
+              "id": "be2275cf-b2bc-4c3f-ba37-4883c6d3a588",
+              "content": "Patient expresses worry",
+              "timestamp": 1768311190.6903949,
+              "metadata": {}
+            },
+            {
+              "id": "55998751-a35d-4fab-b487-5befe84323af",
+              "content": "Assistant expressed concern about patient's eating habits",
+              "timestamp": 1768311205.2529707,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "How long was the patient hospitalized?",
+          "answer": "The patient was hospitalized for a few days.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "db31a018-0b0a-4238-80d5-498f3862dd83"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Yes, so can i end the call here today?",
+        "to_memory": [
+          "working: Patient requests to end the call today"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ddc0e6d3-8e70-42a4-8fd4-33579e20f4b3",
+              "content": "Call is from administrative welfare center",
+              "timestamp": 1768310882.7556224,
+              "metadata": {}
+            },
+            {
+              "id": "ce1e03b0-ef3a-4a1c-8fb7-3d710df5c10e",
+              "content": "Assistant is inquiring if the patient (sir) went to the hospital with his son last time",
+              "timestamp": 1768310926.1425488,
+              "metadata": {}
+            },
+            {
+              "id": "5dfe4925-85b6-4338-81ff-ff93360b0874",
+              "content": "Patient has been cured and discharged",
+              "timestamp": 1768310979.7577026,
+              "metadata": {}
+            },
+            {
+              "id": "62b2feee-4a04-441a-bda2-1fa41ddd4959",
+              "content": "Current complaint is being hit hard this time",
+              "timestamp": 1768310996.138846,
+              "metadata": {}
+            },
+            {
+              "id": "848d842a-887e-4501-8a05-d6032454e74e",
+              "content": "Treatment plan includes avoiding old food",
+              "timestamp": 1768311053.4269366,
+              "metadata": {}
+            },
+            {
+              "id": "d44eb68f-4680-4184-acba-e818d7343086",
+              "content": "Current inquiry about whether the patient ate today",
+              "timestamp": 1768311080.138009,
+              "metadata": {}
+            },
+            {
+              "id": "eb1d714b-886d-46e1-873c-d8a8b577dc2c",
+              "content": "Patient ate today",
+              "timestamp": 1768311117.323702,
+              "metadata": {}
+            },
+            {
+              "id": "c40dad9c-42b0-4555-b704-928fc9bc9fce",
+              "content": "Assistant advised to continue eating well",
+              "timestamp": 1768311160.648407,
+              "metadata": {}
+            },
+            {
+              "id": "be2275cf-b2bc-4c3f-ba37-4883c6d3a588",
+              "content": "Patient expresses worry",
+              "timestamp": 1768311190.6903949,
+              "metadata": {}
+            },
+            {
+              "id": "55998751-a35d-4fab-b487-5befe84323af",
+              "content": "Assistant expressed concern about patient's eating habits",
+              "timestamp": 1768311205.2529707,
+              "metadata": {}
+            },
+            {
+              "id": "3c00b459-5c4f-417e-9949-32318d5edea8",
+              "content": "Patient requests to end the call today",
+              "timestamp": 1768311233.2711506,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    "---诊疗分割线---",
+    {
+      "assistant": {
+        "content": "Hello, sir, i'm calling from the administrative welfare center.",
+        "to_memory": [
+          "working: Patient advised to continue eating well"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5878a2f9-4147-469b-bc1f-e124075c62e4",
+              "content": "Patient advised to continue eating well",
+              "timestamp": 1768311272.889722,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5878a2f9-4147-469b-bc1f-e124075c62e4",
+              "content": "Patient advised to continue eating well",
+              "timestamp": 1768311272.889722,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "Considering the patient's recent health challenges, how does the advice to continue eating well relate to their recovery process?",
+          "answer": "The advice to maintain proper nutrition supports recovery from the significant health impact experienced during their recent illness.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "651005ef-9196-4720-9bee-3f12185304ad"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "5878a2f9-4147-469b-bc1f-e124075c62e4"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Yes, can you hear me well?",
+        "to_memory": [
+          "working: Call is from the administrative welfare center"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5878a2f9-4147-469b-bc1f-e124075c62e4",
+              "content": "Patient advised to continue eating well",
+              "timestamp": 1768311272.889722,
+              "metadata": {}
+            },
+            {
+              "id": "11564949-35f1-4a2d-904c-7f7af644630f",
+              "content": "Call is from the administrative welfare center",
+              "timestamp": 1768311306.5763736,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5878a2f9-4147-469b-bc1f-e124075c62e4",
+              "content": "Patient advised to continue eating well",
+              "timestamp": 1768311272.889722,
+              "metadata": {}
+            },
+            {
+              "id": "11564949-35f1-4a2d-904c-7f7af644630f",
+              "content": "Call is from the administrative welfare center",
+              "timestamp": 1768311306.5763736,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "How does the recommendation to continue eating well relate to the patient's history of severe illness linked to old food consumption?",
+          "answer": "The advice supports recovery and reduces recurrence risk by promoting safe dietary practices, contrasting with past issues from old food.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "c6ed86a0-270d-4511-b58e-581f5140db4d"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "5878a2f9-4147-469b-bc1f-e124075c62e4"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "How are you feeling today, sir?",
+        "to_memory": [
+          "working: Call is from the administrative welfare center",
+          "working: User confirmed they can hear well"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5878a2f9-4147-469b-bc1f-e124075c62e4",
+              "content": "Patient advised to continue eating well",
+              "timestamp": 1768311272.889722,
+              "metadata": {}
+            },
+            {
+              "id": "11564949-35f1-4a2d-904c-7f7af644630f",
+              "content": "Call is from the administrative welfare center",
+              "timestamp": 1768311306.5763736,
+              "metadata": {}
+            },
+            {
+              "id": "8468cced-ea7b-4542-bd91-b7920e2da80b",
+              "content": "User confirmed they can hear well",
+              "timestamp": 1768311337.3135195,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "All right.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5878a2f9-4147-469b-bc1f-e124075c62e4",
+              "content": "Patient advised to continue eating well",
+              "timestamp": 1768311272.889722,
+              "metadata": {}
+            },
+            {
+              "id": "11564949-35f1-4a2d-904c-7f7af644630f",
+              "content": "Call is from the administrative welfare center",
+              "timestamp": 1768311306.5763736,
+              "metadata": {}
+            },
+            {
+              "id": "8468cced-ea7b-4542-bd91-b7920e2da80b",
+              "content": "User confirmed they can hear well",
+              "timestamp": 1768311337.3135195,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "Did the user confirm their ability to hear clearly?",
+          "answer": "Yes, the user confirmed they can hear well.",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "8468cced-ea7b-4542-bd91-b7920e2da80b"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "It sounds good. did you eat?",
+        "to_memory": [
+          "identity: Gender is male",
+          "working: Patient reports feeling all right"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5878a2f9-4147-469b-bc1f-e124075c62e4",
+              "content": "Patient advised to continue eating well",
+              "timestamp": 1768311272.889722,
+              "metadata": {}
+            },
+            {
+              "id": "11564949-35f1-4a2d-904c-7f7af644630f",
+              "content": "Call is from the administrative welfare center",
+              "timestamp": 1768311306.5763736,
+              "metadata": {}
+            },
+            {
+              "id": "8468cced-ea7b-4542-bd91-b7920e2da80b",
+              "content": "User confirmed they can hear well",
+              "timestamp": 1768311337.3135195,
+              "metadata": {}
+            },
+            {
+              "id": "f5b7532f-dea1-4592-aac2-236e634c615c",
+              "content": "Patient reports feeling all right",
+              "timestamp": 1768311390.560515,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "I did.",
+        "to_memory": [
+          "identity: Gender is male",
+          "working: Patient is feeling all right",
+          "working: Patient has eaten today"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5878a2f9-4147-469b-bc1f-e124075c62e4",
+              "content": "Patient advised to continue eating well",
+              "timestamp": 1768311272.889722,
+              "metadata": {}
+            },
+            {
+              "id": "11564949-35f1-4a2d-904c-7f7af644630f",
+              "content": "Call is from the administrative welfare center",
+              "timestamp": 1768311306.5763736,
+              "metadata": {}
+            },
+            {
+              "id": "8468cced-ea7b-4542-bd91-b7920e2da80b",
+              "content": "User confirmed they can hear well",
+              "timestamp": 1768311337.3135195,
+              "metadata": {}
+            },
+            {
+              "id": "f5b7532f-dea1-4592-aac2-236e634c615c",
+              "content": "Patient reports feeling all right",
+              "timestamp": 1768311390.560515,
+              "metadata": {}
+            },
+            {
+              "id": "85f2b9c6-e70e-4cfc-8ebf-18258772ba42",
+              "content": "Patient has eaten today",
+              "timestamp": 1768311442.8625326,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "What may have contributed to the patient's recent severe illness?",
+          "answer": "The patient's recent severe illness may be related to old food consumption.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "c6ed86a0-270d-4511-b58e-581f5140db4d"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "What did you eat?",
+        "to_memory": [
+          "identity: Patient gender is male",
+          "working: Patient has eaten today"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5878a2f9-4147-469b-bc1f-e124075c62e4",
+              "content": "Patient advised to continue eating well",
+              "timestamp": 1768311272.889722,
+              "metadata": {}
+            },
+            {
+              "id": "11564949-35f1-4a2d-904c-7f7af644630f",
+              "content": "Call is from the administrative welfare center",
+              "timestamp": 1768311306.5763736,
+              "metadata": {}
+            },
+            {
+              "id": "8468cced-ea7b-4542-bd91-b7920e2da80b",
+              "content": "User confirmed they can hear well",
+              "timestamp": 1768311337.3135195,
+              "metadata": {}
+            },
+            {
+              "id": "f5b7532f-dea1-4592-aac2-236e634c615c",
+              "content": "Patient reports feeling all right",
+              "timestamp": 1768311390.560515,
+              "metadata": {}
+            },
+            {
+              "id": "85f2b9c6-e70e-4cfc-8ebf-18258772ba42",
+              "content": "Patient has eaten today",
+              "timestamp": 1768311442.8625326,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "I ate white kimchi today.",
+        "to_memory": [
+          "working: Patient ate white kimchi today"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5878a2f9-4147-469b-bc1f-e124075c62e4",
+              "content": "Patient advised to continue eating well",
+              "timestamp": 1768311272.889722,
+              "metadata": {}
+            },
+            {
+              "id": "11564949-35f1-4a2d-904c-7f7af644630f",
+              "content": "Call is from the administrative welfare center",
+              "timestamp": 1768311306.5763736,
+              "metadata": {}
+            },
+            {
+              "id": "8468cced-ea7b-4542-bd91-b7920e2da80b",
+              "content": "User confirmed they can hear well",
+              "timestamp": 1768311337.3135195,
+              "metadata": {}
+            },
+            {
+              "id": "f5b7532f-dea1-4592-aac2-236e634c615c",
+              "content": "Patient reports feeling all right",
+              "timestamp": 1768311390.560515,
+              "metadata": {}
+            },
+            {
+              "id": "85f2b9c6-e70e-4cfc-8ebf-18258772ba42",
+              "content": "Patient has eaten today",
+              "timestamp": 1768311442.8625326,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "How does the patient's consumption of white kimchi today relate to their recent hospitalization and medical advice?",
+          "answer": "It aligns with the advice to continue eating well, likely supporting recovery post-hospitalization.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "db31a018-0b0a-4238-80d5-498f3862dd83"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "5878a2f9-4147-469b-bc1f-e124075c62e4"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Oh, i see. did you sleep well last night?",
+        "to_memory": [
+          "working: Patient ate white kimchi today",
+          "working: Current inquiry about sleep quality last night"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5878a2f9-4147-469b-bc1f-e124075c62e4",
+              "content": "Patient advised to continue eating well",
+              "timestamp": 1768311272.889722,
+              "metadata": {}
+            },
+            {
+              "id": "11564949-35f1-4a2d-904c-7f7af644630f",
+              "content": "Call is from the administrative welfare center",
+              "timestamp": 1768311306.5763736,
+              "metadata": {}
+            },
+            {
+              "id": "8468cced-ea7b-4542-bd91-b7920e2da80b",
+              "content": "User confirmed they can hear well",
+              "timestamp": 1768311337.3135195,
+              "metadata": {}
+            },
+            {
+              "id": "f5b7532f-dea1-4592-aac2-236e634c615c",
+              "content": "Patient reports feeling all right",
+              "timestamp": 1768311390.560515,
+              "metadata": {}
+            },
+            {
+              "id": "85f2b9c6-e70e-4cfc-8ebf-18258772ba42",
+              "content": "Patient has eaten today",
+              "timestamp": 1768311442.8625326,
+              "metadata": {}
+            },
+            {
+              "id": "eb5e695e-4f2a-4f8d-b8e9-549f07536d83",
+              "content": "Current inquiry about sleep quality last night",
+              "timestamp": 1768311520.6260068,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          "working: Patient ate white kimchi today",
+          "working: Patient slept well last night"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5878a2f9-4147-469b-bc1f-e124075c62e4",
+              "content": "Patient advised to continue eating well",
+              "timestamp": 1768311272.889722,
+              "metadata": {}
+            },
+            {
+              "id": "11564949-35f1-4a2d-904c-7f7af644630f",
+              "content": "Call is from the administrative welfare center",
+              "timestamp": 1768311306.5763736,
+              "metadata": {}
+            },
+            {
+              "id": "8468cced-ea7b-4542-bd91-b7920e2da80b",
+              "content": "User confirmed they can hear well",
+              "timestamp": 1768311337.3135195,
+              "metadata": {}
+            },
+            {
+              "id": "f5b7532f-dea1-4592-aac2-236e634c615c",
+              "content": "Patient reports feeling all right",
+              "timestamp": 1768311390.560515,
+              "metadata": {}
+            },
+            {
+              "id": "85f2b9c6-e70e-4cfc-8ebf-18258772ba42",
+              "content": "Patient has eaten today",
+              "timestamp": 1768311442.8625326,
+              "metadata": {}
+            },
+            {
+              "id": "eb5e695e-4f2a-4f8d-b8e9-549f07536d83",
+              "content": "Current inquiry about sleep quality last night",
+              "timestamp": 1768311520.6260068,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "Considering the patient's recent severe illness, what does the fact that they have eaten today suggest about their current health status?",
+          "answer": "It indicates potential improvement in their condition, as their recent illness had a significant health impact but they are now able to eat.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "651005ef-9196-4720-9bee-3f12185304ad"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "85f2b9c6-e70e-4cfc-8ebf-18258772ba42"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "It sounds good. what are you going to do today?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5878a2f9-4147-469b-bc1f-e124075c62e4",
+              "content": "Patient advised to continue eating well",
+              "timestamp": 1768311272.889722,
+              "metadata": {}
+            },
+            {
+              "id": "11564949-35f1-4a2d-904c-7f7af644630f",
+              "content": "Call is from the administrative welfare center",
+              "timestamp": 1768311306.5763736,
+              "metadata": {}
+            },
+            {
+              "id": "8468cced-ea7b-4542-bd91-b7920e2da80b",
+              "content": "User confirmed they can hear well",
+              "timestamp": 1768311337.3135195,
+              "metadata": {}
+            },
+            {
+              "id": "f5b7532f-dea1-4592-aac2-236e634c615c",
+              "content": "Patient reports feeling all right",
+              "timestamp": 1768311390.560515,
+              "metadata": {}
+            },
+            {
+              "id": "85f2b9c6-e70e-4cfc-8ebf-18258772ba42",
+              "content": "Patient has eaten today",
+              "timestamp": 1768311442.8625326,
+              "metadata": {}
+            },
+            {
+              "id": "eb5e695e-4f2a-4f8d-b8e9-549f07536d83",
+              "content": "Current inquiry about sleep quality last night",
+              "timestamp": 1768311520.6260068,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "I'm going to talk to you, run the washing machine, and so on.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5878a2f9-4147-469b-bc1f-e124075c62e4",
+              "content": "Patient advised to continue eating well",
+              "timestamp": 1768311272.889722,
+              "metadata": {}
+            },
+            {
+              "id": "11564949-35f1-4a2d-904c-7f7af644630f",
+              "content": "Call is from the administrative welfare center",
+              "timestamp": 1768311306.5763736,
+              "metadata": {}
+            },
+            {
+              "id": "8468cced-ea7b-4542-bd91-b7920e2da80b",
+              "content": "User confirmed they can hear well",
+              "timestamp": 1768311337.3135195,
+              "metadata": {}
+            },
+            {
+              "id": "f5b7532f-dea1-4592-aac2-236e634c615c",
+              "content": "Patient reports feeling all right",
+              "timestamp": 1768311390.560515,
+              "metadata": {}
+            },
+            {
+              "id": "85f2b9c6-e70e-4cfc-8ebf-18258772ba42",
+              "content": "Patient has eaten today",
+              "timestamp": 1768311442.8625326,
+              "metadata": {}
+            },
+            {
+              "id": "eb5e695e-4f2a-4f8d-b8e9-549f07536d83",
+              "content": "Current inquiry about sleep quality last night",
+              "timestamp": 1768311520.6260068,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "Considering the patient's history of severe illness linked to old food consumption, how does the current advice to continue eating well relate to their past condition?",
+          "answer": "The advice to maintain proper nutrition helps prevent recurrence of illness caused by consuming expired or contaminated food.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "c6ed86a0-270d-4511-b58e-581f5140db4d"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "5878a2f9-4147-469b-bc1f-e124075c62e4"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "I see. is there any inconvenience?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5878a2f9-4147-469b-bc1f-e124075c62e4",
+              "content": "Patient advised to continue eating well",
+              "timestamp": 1768311272.889722,
+              "metadata": {}
+            },
+            {
+              "id": "11564949-35f1-4a2d-904c-7f7af644630f",
+              "content": "Call is from the administrative welfare center",
+              "timestamp": 1768311306.5763736,
+              "metadata": {}
+            },
+            {
+              "id": "8468cced-ea7b-4542-bd91-b7920e2da80b",
+              "content": "User confirmed they can hear well",
+              "timestamp": 1768311337.3135195,
+              "metadata": {}
+            },
+            {
+              "id": "f5b7532f-dea1-4592-aac2-236e634c615c",
+              "content": "Patient reports feeling all right",
+              "timestamp": 1768311390.560515,
+              "metadata": {}
+            },
+            {
+              "id": "85f2b9c6-e70e-4cfc-8ebf-18258772ba42",
+              "content": "Patient has eaten today",
+              "timestamp": 1768311442.8625326,
+              "metadata": {}
+            },
+            {
+              "id": "eb5e695e-4f2a-4f8d-b8e9-549f07536d83",
+              "content": "Current inquiry about sleep quality last night",
+              "timestamp": 1768311520.6260068,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "It's all right.",
+        "to_memory": [
+          "working: No current inconvenience reported"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5878a2f9-4147-469b-bc1f-e124075c62e4",
+              "content": "Patient advised to continue eating well",
+              "timestamp": 1768311272.889722,
+              "metadata": {}
+            },
+            {
+              "id": "11564949-35f1-4a2d-904c-7f7af644630f",
+              "content": "Call is from the administrative welfare center",
+              "timestamp": 1768311306.5763736,
+              "metadata": {}
+            },
+            {
+              "id": "8468cced-ea7b-4542-bd91-b7920e2da80b",
+              "content": "User confirmed they can hear well",
+              "timestamp": 1768311337.3135195,
+              "metadata": {}
+            },
+            {
+              "id": "f5b7532f-dea1-4592-aac2-236e634c615c",
+              "content": "Patient reports feeling all right",
+              "timestamp": 1768311390.560515,
+              "metadata": {}
+            },
+            {
+              "id": "85f2b9c6-e70e-4cfc-8ebf-18258772ba42",
+              "content": "Patient has eaten today",
+              "timestamp": 1768311442.8625326,
+              "metadata": {}
+            },
+            {
+              "id": "eb5e695e-4f2a-4f8d-b8e9-549f07536d83",
+              "content": "Current inquiry about sleep quality last night",
+              "timestamp": 1768311520.6260068,
+              "metadata": {}
+            },
+            {
+              "id": "c17c6f09-4b50-4e5e-bd0b-ad2116429c86",
+              "content": "No current inconvenience reported",
+              "timestamp": 1768311548.287487,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "How might the administrative welfare center's call relate to the patient's history of severe illness linked to old food consumption?",
+          "answer": "The administrative welfare center is likely following up on public health concerns or food safety issues connected to the patient's recent illness from old food consumption.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "c6ed86a0-270d-4511-b58e-581f5140db4d"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "11564949-35f1-4a2d-904c-7f7af644630f"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "I'm so glad. i hope you continue to be healthy.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5878a2f9-4147-469b-bc1f-e124075c62e4",
+              "content": "Patient advised to continue eating well",
+              "timestamp": 1768311272.889722,
+              "metadata": {}
+            },
+            {
+              "id": "11564949-35f1-4a2d-904c-7f7af644630f",
+              "content": "Call is from the administrative welfare center",
+              "timestamp": 1768311306.5763736,
+              "metadata": {}
+            },
+            {
+              "id": "8468cced-ea7b-4542-bd91-b7920e2da80b",
+              "content": "User confirmed they can hear well",
+              "timestamp": 1768311337.3135195,
+              "metadata": {}
+            },
+            {
+              "id": "f5b7532f-dea1-4592-aac2-236e634c615c",
+              "content": "Patient reports feeling all right",
+              "timestamp": 1768311390.560515,
+              "metadata": {}
+            },
+            {
+              "id": "85f2b9c6-e70e-4cfc-8ebf-18258772ba42",
+              "content": "Patient has eaten today",
+              "timestamp": 1768311442.8625326,
+              "metadata": {}
+            },
+            {
+              "id": "eb5e695e-4f2a-4f8d-b8e9-549f07536d83",
+              "content": "Current inquiry about sleep quality last night",
+              "timestamp": 1768311520.6260068,
+              "metadata": {}
+            },
+            {
+              "id": "c17c6f09-4b50-4e5e-bd0b-ad2116429c86",
+              "content": "No current inconvenience reported",
+              "timestamp": 1768311548.287487,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          "working: Patient reports no current inconvenience or symptoms"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5878a2f9-4147-469b-bc1f-e124075c62e4",
+              "content": "Patient advised to continue eating well",
+              "timestamp": 1768311272.889722,
+              "metadata": {}
+            },
+            {
+              "id": "11564949-35f1-4a2d-904c-7f7af644630f",
+              "content": "Call is from the administrative welfare center",
+              "timestamp": 1768311306.5763736,
+              "metadata": {}
+            },
+            {
+              "id": "8468cced-ea7b-4542-bd91-b7920e2da80b",
+              "content": "User confirmed they can hear well",
+              "timestamp": 1768311337.3135195,
+              "metadata": {}
+            },
+            {
+              "id": "f5b7532f-dea1-4592-aac2-236e634c615c",
+              "content": "Patient reports feeling all right",
+              "timestamp": 1768311390.560515,
+              "metadata": {}
+            },
+            {
+              "id": "85f2b9c6-e70e-4cfc-8ebf-18258772ba42",
+              "content": "Patient has eaten today",
+              "timestamp": 1768311442.8625326,
+              "metadata": {}
+            },
+            {
+              "id": "eb5e695e-4f2a-4f8d-b8e9-549f07536d83",
+              "content": "Current inquiry about sleep quality last night",
+              "timestamp": 1768311520.6260068,
+              "metadata": {}
+            },
+            {
+              "id": "c17c6f09-4b50-4e5e-bd0b-ad2116429c86",
+              "content": "No current inconvenience reported",
+              "timestamp": 1768311548.287487,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Yes, then i'll end the call here today.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5878a2f9-4147-469b-bc1f-e124075c62e4",
+              "content": "Patient advised to continue eating well",
+              "timestamp": 1768311272.889722,
+              "metadata": {}
+            },
+            {
+              "id": "11564949-35f1-4a2d-904c-7f7af644630f",
+              "content": "Call is from the administrative welfare center",
+              "timestamp": 1768311306.5763736,
+              "metadata": {}
+            },
+            {
+              "id": "8468cced-ea7b-4542-bd91-b7920e2da80b",
+              "content": "User confirmed they can hear well",
+              "timestamp": 1768311337.3135195,
+              "metadata": {}
+            },
+            {
+              "id": "f5b7532f-dea1-4592-aac2-236e634c615c",
+              "content": "Patient reports feeling all right",
+              "timestamp": 1768311390.560515,
+              "metadata": {}
+            },
+            {
+              "id": "85f2b9c6-e70e-4cfc-8ebf-18258772ba42",
+              "content": "Patient has eaten today",
+              "timestamp": 1768311442.8625326,
+              "metadata": {}
+            },
+            {
+              "id": "eb5e695e-4f2a-4f8d-b8e9-549f07536d83",
+              "content": "Current inquiry about sleep quality last night",
+              "timestamp": 1768311520.6260068,
+              "metadata": {}
+            },
+            {
+              "id": "c17c6f09-4b50-4e5e-bd0b-ad2116429c86",
+              "content": "No current inconvenience reported",
+              "timestamp": 1768311548.287487,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9748d609-454d-4cc8-a562-f862c551d1c9",
+              "content": "Patient has a caring son",
+              "timestamp": 1768310791.3769736,
+              "metadata": {}
+            },
+            {
+              "id": "801c46f0-09bd-46dc-83bc-0981fd103680",
+              "content": "Patient is male",
+              "timestamp": 1768310882.730554,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "db31a018-0b0a-4238-80d5-498f3862dd83",
+              "content": "Patient was hospitalized for a few days",
+              "timestamp": 1768310944.9934242,
+              "metadata": {}
+            },
+            {
+              "id": "651005ef-9196-4720-9bee-3f12185304ad",
+              "content": "Patient experienced a significant health impact (hit hard) during recent illness",
+              "timestamp": 1768311025.32603,
+              "metadata": {}
+            },
+            {
+              "id": "c6ed86a0-270d-4511-b58e-581f5140db4d",
+              "content": "Patient's recent severe illness may be related to old food consumption",
+              "timestamp": 1768311053.401723,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "8e5804ee-01e6-4039-b3dc-6e3dce978edd",
+              "content": "Eating old food can cause stomach pain",
+              "timestamp": 1768310624.6855788,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

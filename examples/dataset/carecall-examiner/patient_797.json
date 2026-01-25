@@ -1,0 +1,5254 @@
+{
+  "patient_id": "797",
+  "messages": [
+    {
+      "assistant": {
+        "content": "Hello, sir, i'm calling from the administrative welfare center.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes. hi.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Yes, can i speak to you now?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Yes, sir, how are you doing?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Well, i'm just fine.",
+        "to_memory": [
+          "working: Patient states they are feeling fine"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ea3f4eda-1db2-414e-b7c2-6f9bbd2d0b2e",
+              "content": "Patient states they are feeling fine",
+              "timestamp": 1768622168.4704862,
+              "metadata": {}
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "How is the patient currently feeling?",
+          "answer": "The patient states they are feeling fine.",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "ea3f4eda-1db2-414e-b7c2-6f9bbd2d0b2e"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Great. how is your health?",
+        "to_memory": [
+          "working: Patient reports being 'just fine'"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ea3f4eda-1db2-414e-b7c2-6f9bbd2d0b2e",
+              "content": "Patient states they are feeling fine",
+              "timestamp": 1768622168.4704862,
+              "metadata": {}
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "I'm a little bothered because i feel a tingling sensation when i pee.",
+        "to_memory": [
+          "identity: Gender is male",
+          "working: Current complaint is tingling sensation when urinating"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ea3f4eda-1db2-414e-b7c2-6f9bbd2d0b2e",
+              "content": "Patient states they are feeling fine",
+              "timestamp": 1768622168.4704862,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "What is the patient's gender?",
+          "answer": "Male",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "9aa32e80-74d6-41da-b641-0455e33690ed"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Did you go to the hospital?",
+        "to_memory": [
+          "identity: Gender is male",
+          "working: Current complaint is tingling sensation during urination"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ea3f4eda-1db2-414e-b7c2-6f9bbd2d0b2e",
+              "content": "Patient states they are feeling fine",
+              "timestamp": 1768622168.4704862,
+              "metadata": {}
+            },
+            {
+              "id": "4a8f0d7f-3242-4a84-89c4-fea66b8cc858",
+              "content": "Current complaint is tingling sensation during urination",
+              "timestamp": 1768622250.0765653,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "No.",
+        "to_memory": [
+          "working: Current complaint is tingling sensation when urinating",
+          "working: Patient has not gone to the hospital"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ea3f4eda-1db2-414e-b7c2-6f9bbd2d0b2e",
+              "content": "Patient states they are feeling fine",
+              "timestamp": 1768622168.4704862,
+              "metadata": {}
+            },
+            {
+              "id": "4a8f0d7f-3242-4a84-89c4-fea66b8cc858",
+              "content": "Current complaint is tingling sensation during urination",
+              "timestamp": 1768622250.0765653,
+              "metadata": {}
+            },
+            {
+              "id": "cb8564b9-0b7d-48f4-9415-438e600fcc9c",
+              "content": "Patient has not gone to the hospital",
+              "timestamp": 1768622274.24744,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "If you still feel uncomfortable, make sure to see a doctor.",
+        "to_memory": [
+          "working: Current complaint is tingling sensation when urinating",
+          "working: Patient has not visited the hospital"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ea3f4eda-1db2-414e-b7c2-6f9bbd2d0b2e",
+              "content": "Patient states they are feeling fine",
+              "timestamp": 1768622168.4704862,
+              "metadata": {}
+            },
+            {
+              "id": "4a8f0d7f-3242-4a84-89c4-fea66b8cc858",
+              "content": "Current complaint is tingling sensation during urination",
+              "timestamp": 1768622250.0765653,
+              "metadata": {}
+            },
+            {
+              "id": "cb8564b9-0b7d-48f4-9415-438e600fcc9c",
+              "content": "Patient has not gone to the hospital",
+              "timestamp": 1768622274.24744,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "I'm a little afraid of going to the hospital.",
+        "to_memory": [
+          "working: Current complaint is tingling sensation when urinating",
+          "working: Patient is afraid of going to the hospital"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ea3f4eda-1db2-414e-b7c2-6f9bbd2d0b2e",
+              "content": "Patient states they are feeling fine",
+              "timestamp": 1768622168.4704862,
+              "metadata": {}
+            },
+            {
+              "id": "4a8f0d7f-3242-4a84-89c4-fea66b8cc858",
+              "content": "Current complaint is tingling sensation during urination",
+              "timestamp": 1768622250.0765653,
+              "metadata": {}
+            },
+            {
+              "id": "cb8564b9-0b7d-48f4-9415-438e600fcc9c",
+              "content": "Patient has not gone to the hospital",
+              "timestamp": 1768622274.24744,
+              "metadata": {}
+            },
+            {
+              "id": "02d7717c-948d-40d4-8afa-c5d2009c070f",
+              "content": "Patient is afraid of going to the hospital",
+              "timestamp": 1768622318.9569218,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "You must be worried about going to the hospital. may i ask why?",
+        "to_memory": [
+          "working: Current complaint is tingling sensation when urinating",
+          "working: Patient is afraid of going to the hospital"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ea3f4eda-1db2-414e-b7c2-6f9bbd2d0b2e",
+              "content": "Patient states they are feeling fine",
+              "timestamp": 1768622168.4704862,
+              "metadata": {}
+            },
+            {
+              "id": "4a8f0d7f-3242-4a84-89c4-fea66b8cc858",
+              "content": "Current complaint is tingling sensation during urination",
+              "timestamp": 1768622250.0765653,
+              "metadata": {}
+            },
+            {
+              "id": "cb8564b9-0b7d-48f4-9415-438e600fcc9c",
+              "content": "Patient has not gone to the hospital",
+              "timestamp": 1768622274.24744,
+              "metadata": {}
+            },
+            {
+              "id": "02d7717c-948d-40d4-8afa-c5d2009c070f",
+              "content": "Patient is afraid of going to the hospital",
+              "timestamp": 1768622318.9569218,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "I just thought it would be a big illness,",
+        "to_memory": [
+          "working: Patient is afraid of going to the hospital due to fear of a serious illness"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ea3f4eda-1db2-414e-b7c2-6f9bbd2d0b2e",
+              "content": "Patient states they are feeling fine",
+              "timestamp": 1768622168.4704862,
+              "metadata": {}
+            },
+            {
+              "id": "4a8f0d7f-3242-4a84-89c4-fea66b8cc858",
+              "content": "Current complaint is tingling sensation during urination",
+              "timestamp": 1768622250.0765653,
+              "metadata": {}
+            },
+            {
+              "id": "cb8564b9-0b7d-48f4-9415-438e600fcc9c",
+              "content": "Patient has not gone to the hospital",
+              "timestamp": 1768622274.24744,
+              "metadata": {}
+            },
+            {
+              "id": "02d7717c-948d-40d4-8afa-c5d2009c070f",
+              "content": "Patient is afraid of going to the hospital",
+              "timestamp": 1768622318.9569218,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Oh, that's why you hesitate. but you might feel more comfortable going to the hospital and getting a test.",
+        "to_memory": [
+          "working: Patient is hesitant to go to the hospital due to fear of serious illness",
+          "working: Patient is advised to go to the hospital and get a test"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ea3f4eda-1db2-414e-b7c2-6f9bbd2d0b2e",
+              "content": "Patient states they are feeling fine",
+              "timestamp": 1768622168.4704862,
+              "metadata": {}
+            },
+            {
+              "id": "4a8f0d7f-3242-4a84-89c4-fea66b8cc858",
+              "content": "Current complaint is tingling sensation during urination",
+              "timestamp": 1768622250.0765653,
+              "metadata": {}
+            },
+            {
+              "id": "cb8564b9-0b7d-48f4-9415-438e600fcc9c",
+              "content": "Patient has not gone to the hospital",
+              "timestamp": 1768622274.24744,
+              "metadata": {}
+            },
+            {
+              "id": "02d7717c-948d-40d4-8afa-c5d2009c070f",
+              "content": "Patient is afraid of going to the hospital",
+              "timestamp": 1768622318.9569218,
+              "metadata": {}
+            },
+            {
+              "id": "084e75e2-407c-419f-a8e7-6dc54b7dcbe6",
+              "content": "Patient is advised to go to the hospital and get a test",
+              "timestamp": 1768622377.1507459,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "You'd better go, wouldn't you?",
+        "to_memory": [
+          "working: Patient is afraid of having a serious illness",
+          "working: Recommendation to go to the hospital for testing"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ea3f4eda-1db2-414e-b7c2-6f9bbd2d0b2e",
+              "content": "Patient states they are feeling fine",
+              "timestamp": 1768622168.4704862,
+              "metadata": {}
+            },
+            {
+              "id": "4a8f0d7f-3242-4a84-89c4-fea66b8cc858",
+              "content": "Current complaint is tingling sensation during urination",
+              "timestamp": 1768622250.0765653,
+              "metadata": {}
+            },
+            {
+              "id": "cb8564b9-0b7d-48f4-9415-438e600fcc9c",
+              "content": "Patient has not gone to the hospital",
+              "timestamp": 1768622274.24744,
+              "metadata": {}
+            },
+            {
+              "id": "02d7717c-948d-40d4-8afa-c5d2009c070f",
+              "content": "Patient is afraid of going to the hospital",
+              "timestamp": 1768622318.9569218,
+              "metadata": {}
+            },
+            {
+              "id": "084e75e2-407c-419f-a8e7-6dc54b7dcbe6",
+              "content": "Patient is advised to go to the hospital and get a test",
+              "timestamp": 1768622377.1507459,
+              "metadata": {}
+            },
+            {
+              "id": "1f7cf189-cad1-4f71-901c-7f1d513f6e2e",
+              "content": "Patient is afraid of having a serious illness",
+              "timestamp": 1768622411.781073,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "Is there a contradiction between the patient's reported well-being and their demographic profile?",
+          "answer": "No, no contradiction between male identity and feeling fine.",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "9aa32e80-74d6-41da-b641-0455e33690ed"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "ea3f4eda-1db2-414e-b7c2-6f9bbd2d0b2e"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Yes, of course. don't worry too much. go ahead.",
+        "to_memory": [
+          "working: Patient is afraid of going to the hospital due to fear of a serious illness",
+          "working: Patient is hesitant but considering going to the hospital for testing"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ea3f4eda-1db2-414e-b7c2-6f9bbd2d0b2e",
+              "content": "Patient states they are feeling fine",
+              "timestamp": 1768622168.4704862,
+              "metadata": {}
+            },
+            {
+              "id": "4a8f0d7f-3242-4a84-89c4-fea66b8cc858",
+              "content": "Current complaint is tingling sensation during urination",
+              "timestamp": 1768622250.0765653,
+              "metadata": {}
+            },
+            {
+              "id": "cb8564b9-0b7d-48f4-9415-438e600fcc9c",
+              "content": "Patient has not gone to the hospital",
+              "timestamp": 1768622274.24744,
+              "metadata": {}
+            },
+            {
+              "id": "02d7717c-948d-40d4-8afa-c5d2009c070f",
+              "content": "Patient is afraid of going to the hospital",
+              "timestamp": 1768622318.9569218,
+              "metadata": {}
+            },
+            {
+              "id": "084e75e2-407c-419f-a8e7-6dc54b7dcbe6",
+              "content": "Patient is advised to go to the hospital and get a test",
+              "timestamp": 1768622377.1507459,
+              "metadata": {}
+            },
+            {
+              "id": "1f7cf189-cad1-4f71-901c-7f1d513f6e2e",
+              "content": "Patient is afraid of having a serious illness",
+              "timestamp": 1768622411.781073,
+              "metadata": {}
+            },
+            {
+              "id": "210343b0-6735-4065-ac89-5952cefe5879",
+              "content": "Patient is hesitant but considering going to the hospital for testing",
+              "timestamp": 1768622443.2541292,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          "working: Patient is concerned about a possible serious illness and agreed to go to the hospital for testing"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ea3f4eda-1db2-414e-b7c2-6f9bbd2d0b2e",
+              "content": "Patient states they are feeling fine",
+              "timestamp": 1768622168.4704862,
+              "metadata": {}
+            },
+            {
+              "id": "4a8f0d7f-3242-4a84-89c4-fea66b8cc858",
+              "content": "Current complaint is tingling sensation during urination",
+              "timestamp": 1768622250.0765653,
+              "metadata": {}
+            },
+            {
+              "id": "cb8564b9-0b7d-48f4-9415-438e600fcc9c",
+              "content": "Patient has not gone to the hospital",
+              "timestamp": 1768622274.24744,
+              "metadata": {}
+            },
+            {
+              "id": "02d7717c-948d-40d4-8afa-c5d2009c070f",
+              "content": "Patient is afraid of going to the hospital",
+              "timestamp": 1768622318.9569218,
+              "metadata": {}
+            },
+            {
+              "id": "084e75e2-407c-419f-a8e7-6dc54b7dcbe6",
+              "content": "Patient is advised to go to the hospital and get a test",
+              "timestamp": 1768622377.1507459,
+              "metadata": {}
+            },
+            {
+              "id": "1f7cf189-cad1-4f71-901c-7f1d513f6e2e",
+              "content": "Patient is afraid of having a serious illness",
+              "timestamp": 1768622411.781073,
+              "metadata": {}
+            },
+            {
+              "id": "210343b0-6735-4065-ac89-5952cefe5879",
+              "content": "Patient is hesitant but considering going to the hospital for testing",
+              "timestamp": 1768622443.2541292,
+              "metadata": {}
+            },
+            {
+              "id": "eda1b832-a3a3-4046-8dc9-1ae1fa4951c8",
+              "content": "Patient is concerned about a possible serious illness and agreed to go to the hospital for testing",
+              "timestamp": 1768622529.3546948,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "By the way, did you eat today?",
+        "to_memory": [
+          "working: Patient expressed concern about a possible serious illness",
+          "working: Recommended to go to the hospital and get a test",
+          "working: Inquired whether patient ate today"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ea3f4eda-1db2-414e-b7c2-6f9bbd2d0b2e",
+              "content": "Patient states they are feeling fine",
+              "timestamp": 1768622168.4704862,
+              "metadata": {}
+            },
+            {
+              "id": "4a8f0d7f-3242-4a84-89c4-fea66b8cc858",
+              "content": "Current complaint is tingling sensation during urination",
+              "timestamp": 1768622250.0765653,
+              "metadata": {}
+            },
+            {
+              "id": "cb8564b9-0b7d-48f4-9415-438e600fcc9c",
+              "content": "Patient has not gone to the hospital",
+              "timestamp": 1768622274.24744,
+              "metadata": {}
+            },
+            {
+              "id": "02d7717c-948d-40d4-8afa-c5d2009c070f",
+              "content": "Patient is afraid of going to the hospital",
+              "timestamp": 1768622318.9569218,
+              "metadata": {}
+            },
+            {
+              "id": "084e75e2-407c-419f-a8e7-6dc54b7dcbe6",
+              "content": "Patient is advised to go to the hospital and get a test",
+              "timestamp": 1768622377.1507459,
+              "metadata": {}
+            },
+            {
+              "id": "1f7cf189-cad1-4f71-901c-7f1d513f6e2e",
+              "content": "Patient is afraid of having a serious illness",
+              "timestamp": 1768622411.781073,
+              "metadata": {}
+            },
+            {
+              "id": "210343b0-6735-4065-ac89-5952cefe5879",
+              "content": "Patient is hesitant but considering going to the hospital for testing",
+              "timestamp": 1768622443.2541292,
+              "metadata": {}
+            },
+            {
+              "id": "eda1b832-a3a3-4046-8dc9-1ae1fa4951c8",
+              "content": "Patient is concerned about a possible serious illness and agreed to go to the hospital for testing",
+              "timestamp": 1768622529.3546948,
+              "metadata": {}
+            },
+            {
+              "id": "810a0eed-5de4-4532-970d-bf62dfdd1a66",
+              "content": "Patient expressed concern about a possible serious illness",
+              "timestamp": 1768622584.659646,
+              "metadata": {}
+            },
+            {
+              "id": "f6f27977-a53c-4714-bb70-c4e5a31cb366",
+              "content": "Inquired whether patient ate today",
+              "timestamp": 1768622584.6847396,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "I ate earlier.",
+        "to_memory": [
+          "working: Patient ate earlier today"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ea3f4eda-1db2-414e-b7c2-6f9bbd2d0b2e",
+              "content": "Patient states they are feeling fine",
+              "timestamp": 1768622168.4704862,
+              "metadata": {}
+            },
+            {
+              "id": "4a8f0d7f-3242-4a84-89c4-fea66b8cc858",
+              "content": "Current complaint is tingling sensation during urination",
+              "timestamp": 1768622250.0765653,
+              "metadata": {}
+            },
+            {
+              "id": "cb8564b9-0b7d-48f4-9415-438e600fcc9c",
+              "content": "Patient has not gone to the hospital",
+              "timestamp": 1768622274.24744,
+              "metadata": {}
+            },
+            {
+              "id": "02d7717c-948d-40d4-8afa-c5d2009c070f",
+              "content": "Patient is afraid of going to the hospital",
+              "timestamp": 1768622318.9569218,
+              "metadata": {}
+            },
+            {
+              "id": "084e75e2-407c-419f-a8e7-6dc54b7dcbe6",
+              "content": "Patient is advised to go to the hospital and get a test",
+              "timestamp": 1768622377.1507459,
+              "metadata": {}
+            },
+            {
+              "id": "1f7cf189-cad1-4f71-901c-7f1d513f6e2e",
+              "content": "Patient is afraid of having a serious illness",
+              "timestamp": 1768622411.781073,
+              "metadata": {}
+            },
+            {
+              "id": "210343b0-6735-4065-ac89-5952cefe5879",
+              "content": "Patient is hesitant but considering going to the hospital for testing",
+              "timestamp": 1768622443.2541292,
+              "metadata": {}
+            },
+            {
+              "id": "eda1b832-a3a3-4046-8dc9-1ae1fa4951c8",
+              "content": "Patient is concerned about a possible serious illness and agreed to go to the hospital for testing",
+              "timestamp": 1768622529.3546948,
+              "metadata": {}
+            },
+            {
+              "id": "810a0eed-5de4-4532-970d-bf62dfdd1a66",
+              "content": "Patient expressed concern about a possible serious illness",
+              "timestamp": 1768622584.659646,
+              "metadata": {}
+            },
+            {
+              "id": "f6f27977-a53c-4714-bb70-c4e5a31cb366",
+              "content": "Inquired whether patient ate today",
+              "timestamp": 1768622584.6847396,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Well done. can i end the call here today?",
+        "to_memory": [
+          "working: Patient ate earlier today"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ea3f4eda-1db2-414e-b7c2-6f9bbd2d0b2e",
+              "content": "Patient states they are feeling fine",
+              "timestamp": 1768622168.4704862,
+              "metadata": {}
+            },
+            {
+              "id": "4a8f0d7f-3242-4a84-89c4-fea66b8cc858",
+              "content": "Current complaint is tingling sensation during urination",
+              "timestamp": 1768622250.0765653,
+              "metadata": {}
+            },
+            {
+              "id": "cb8564b9-0b7d-48f4-9415-438e600fcc9c",
+              "content": "Patient has not gone to the hospital",
+              "timestamp": 1768622274.24744,
+              "metadata": {}
+            },
+            {
+              "id": "02d7717c-948d-40d4-8afa-c5d2009c070f",
+              "content": "Patient is afraid of going to the hospital",
+              "timestamp": 1768622318.9569218,
+              "metadata": {}
+            },
+            {
+              "id": "084e75e2-407c-419f-a8e7-6dc54b7dcbe6",
+              "content": "Patient is advised to go to the hospital and get a test",
+              "timestamp": 1768622377.1507459,
+              "metadata": {}
+            },
+            {
+              "id": "1f7cf189-cad1-4f71-901c-7f1d513f6e2e",
+              "content": "Patient is afraid of having a serious illness",
+              "timestamp": 1768622411.781073,
+              "metadata": {}
+            },
+            {
+              "id": "210343b0-6735-4065-ac89-5952cefe5879",
+              "content": "Patient is hesitant but considering going to the hospital for testing",
+              "timestamp": 1768622443.2541292,
+              "metadata": {}
+            },
+            {
+              "id": "eda1b832-a3a3-4046-8dc9-1ae1fa4951c8",
+              "content": "Patient is concerned about a possible serious illness and agreed to go to the hospital for testing",
+              "timestamp": 1768622529.3546948,
+              "metadata": {}
+            },
+            {
+              "id": "810a0eed-5de4-4532-970d-bf62dfdd1a66",
+              "content": "Patient expressed concern about a possible serious illness",
+              "timestamp": 1768622584.659646,
+              "metadata": {}
+            },
+            {
+              "id": "f6f27977-a53c-4714-bb70-c4e5a31cb366",
+              "content": "Inquired whether patient ate today",
+              "timestamp": 1768622584.6847396,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          "working: Patient ate earlier today"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ea3f4eda-1db2-414e-b7c2-6f9bbd2d0b2e",
+              "content": "Patient states they are feeling fine",
+              "timestamp": 1768622168.4704862,
+              "metadata": {}
+            },
+            {
+              "id": "4a8f0d7f-3242-4a84-89c4-fea66b8cc858",
+              "content": "Current complaint is tingling sensation during urination",
+              "timestamp": 1768622250.0765653,
+              "metadata": {}
+            },
+            {
+              "id": "cb8564b9-0b7d-48f4-9415-438e600fcc9c",
+              "content": "Patient has not gone to the hospital",
+              "timestamp": 1768622274.24744,
+              "metadata": {}
+            },
+            {
+              "id": "02d7717c-948d-40d4-8afa-c5d2009c070f",
+              "content": "Patient is afraid of going to the hospital",
+              "timestamp": 1768622318.9569218,
+              "metadata": {}
+            },
+            {
+              "id": "084e75e2-407c-419f-a8e7-6dc54b7dcbe6",
+              "content": "Patient is advised to go to the hospital and get a test",
+              "timestamp": 1768622377.1507459,
+              "metadata": {}
+            },
+            {
+              "id": "1f7cf189-cad1-4f71-901c-7f1d513f6e2e",
+              "content": "Patient is afraid of having a serious illness",
+              "timestamp": 1768622411.781073,
+              "metadata": {}
+            },
+            {
+              "id": "210343b0-6735-4065-ac89-5952cefe5879",
+              "content": "Patient is hesitant but considering going to the hospital for testing",
+              "timestamp": 1768622443.2541292,
+              "metadata": {}
+            },
+            {
+              "id": "eda1b832-a3a3-4046-8dc9-1ae1fa4951c8",
+              "content": "Patient is concerned about a possible serious illness and agreed to go to the hospital for testing",
+              "timestamp": 1768622529.3546948,
+              "metadata": {}
+            },
+            {
+              "id": "810a0eed-5de4-4532-970d-bf62dfdd1a66",
+              "content": "Patient expressed concern about a possible serious illness",
+              "timestamp": 1768622584.659646,
+              "metadata": {}
+            },
+            {
+              "id": "f6f27977-a53c-4714-bb70-c4e5a31cb366",
+              "content": "Inquired whether patient ate today",
+              "timestamp": 1768622584.6847396,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Yes, then i'll call you again next time.",
+        "to_memory": [
+          "working: Patient ate today",
+          "working: Patient plans to call again next time"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ea3f4eda-1db2-414e-b7c2-6f9bbd2d0b2e",
+              "content": "Patient states they are feeling fine",
+              "timestamp": 1768622168.4704862,
+              "metadata": {}
+            },
+            {
+              "id": "4a8f0d7f-3242-4a84-89c4-fea66b8cc858",
+              "content": "Current complaint is tingling sensation during urination",
+              "timestamp": 1768622250.0765653,
+              "metadata": {}
+            },
+            {
+              "id": "cb8564b9-0b7d-48f4-9415-438e600fcc9c",
+              "content": "Patient has not gone to the hospital",
+              "timestamp": 1768622274.24744,
+              "metadata": {}
+            },
+            {
+              "id": "02d7717c-948d-40d4-8afa-c5d2009c070f",
+              "content": "Patient is afraid of going to the hospital",
+              "timestamp": 1768622318.9569218,
+              "metadata": {}
+            },
+            {
+              "id": "084e75e2-407c-419f-a8e7-6dc54b7dcbe6",
+              "content": "Patient is advised to go to the hospital and get a test",
+              "timestamp": 1768622377.1507459,
+              "metadata": {}
+            },
+            {
+              "id": "1f7cf189-cad1-4f71-901c-7f1d513f6e2e",
+              "content": "Patient is afraid of having a serious illness",
+              "timestamp": 1768622411.781073,
+              "metadata": {}
+            },
+            {
+              "id": "210343b0-6735-4065-ac89-5952cefe5879",
+              "content": "Patient is hesitant but considering going to the hospital for testing",
+              "timestamp": 1768622443.2541292,
+              "metadata": {}
+            },
+            {
+              "id": "eda1b832-a3a3-4046-8dc9-1ae1fa4951c8",
+              "content": "Patient is concerned about a possible serious illness and agreed to go to the hospital for testing",
+              "timestamp": 1768622529.3546948,
+              "metadata": {}
+            },
+            {
+              "id": "810a0eed-5de4-4532-970d-bf62dfdd1a66",
+              "content": "Patient expressed concern about a possible serious illness",
+              "timestamp": 1768622584.659646,
+              "metadata": {}
+            },
+            {
+              "id": "f6f27977-a53c-4714-bb70-c4e5a31cb366",
+              "content": "Inquired whether patient ate today",
+              "timestamp": 1768622584.6847396,
+              "metadata": {}
+            },
+            {
+              "id": "1168b2bd-51c2-421d-af9c-09bcc52f68d8",
+              "content": "Patient ate today",
+              "timestamp": 1768622639.7321749,
+              "metadata": {}
+            },
+            {
+              "id": "0ea6bd72-7d9d-4f39-bf90-78fca6018911",
+              "content": "Patient plans to call again next time",
+              "timestamp": 1768622639.7572691,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    "---诊疗分割线---",
+    {
+      "assistant": {
+        "content": "Hello, sir, i'm calling from the administrative welfare center.",
+        "to_memory": [
+          "identity: Gender is male (referred to as 'sir')",
+          "working: Patient ate earlier today",
+          "working: Call ended with plan to contact again next time",
+          "working: Current message is from administrative welfare center"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          "identity: Patient gender is male"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "What is the patient's gender?",
+          "answer": "Male",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "9aa32e80-74d6-41da-b641-0455e33690ed"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Yes, can you hear me well?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "I can hear you well.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "What is the patient's gender?",
+          "answer": "Male",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "9aa32e80-74d6-41da-b641-0455e33690ed"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Sir, the last time you peed, did you go to the hospital?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "I've been there.",
+        "to_memory": [
+          "identity: Gender is male",
+          "history: Patient went to the hospital after last urination"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "What was the plan made at the end of the call?",
+          "answer": "The plan was to contact again next time.",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "4b899860-b484-47f0-8319-684d97f2e953"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "I see. how are you now?",
+        "to_memory": [
+          "history: Patient went to the hospital after last urination"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "I got better after taking my meds.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "When did the patient go to the hospital?",
+          "answer": "After their last urination.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "It sounds good. what did the hospital say?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "It's called simple bladder inflammation, so take your medication.",
+        "to_memory": [
+          "history: Diagnosed with simple bladder inflammation",
+          "history: Prescribed medication for bladder inflammation",
+          "history: Patient reported improvement after taking medication"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "How does the patient's recent meal relate to the medical advice to take medication for simple bladder inflammation, given their hospital visit after urination?",
+          "answer": "The hospital visit (history) suggests urinary concerns, likely leading to a cystitis diagnosis. The advice to take medication aligns with managing this condition, and the recent meal (working memory) indicates proper timing for medication administration (e.g., with food to avoid gastrointestinal irritation).",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "e929944d-87a4-422f-9873-e42f80f607f3"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "I see. take your medicine well, and if you rest well, you will get better soon.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Thank you.",
+        "to_memory": [
+          "working: Current treatment is taking medication for simple bladder inflammation",
+          "history: Diagnosed with simple bladder inflammation"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            },
+            {
+              "id": "04863033-181b-4dd2-a889-174d676fb704",
+              "content": "Current treatment is taking medication for simple bladder inflammation",
+              "timestamp": 1768622829.4586823,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Don't mention it. i hope you continue to be healthy.",
+        "to_memory": [
+          "history: Diagnosed with simple bladder inflammation",
+          "working: Patient reports improvement after taking medication"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            },
+            {
+              "id": "04863033-181b-4dd2-a889-174d676fb704",
+              "content": "Current treatment is taking medication for simple bladder inflammation",
+              "timestamp": 1768622829.4586823,
+              "metadata": {}
+            },
+            {
+              "id": "e3a5f446-3042-4c31-9020-d4a0f9875620",
+              "content": "Patient reports improvement after taking medication",
+              "timestamp": 1768622860.1529443,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          "working: Diagnosis of simple bladder inflammation",
+          "working: Treatment plan includes medication and rest"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            },
+            {
+              "id": "04863033-181b-4dd2-a889-174d676fb704",
+              "content": "Current treatment is taking medication for simple bladder inflammation",
+              "timestamp": 1768622829.4586823,
+              "metadata": {}
+            },
+            {
+              "id": "e3a5f446-3042-4c31-9020-d4a0f9875620",
+              "content": "Patient reports improvement after taking medication",
+              "timestamp": 1768622860.1529443,
+              "metadata": {}
+            },
+            {
+              "id": "66de29b1-3b44-4c58-95ed-4eeb2b90e708",
+              "content": "Diagnosis of simple bladder inflammation",
+              "timestamp": 1768622877.5076785,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "Given the patient’s history of simple bladder inflammation, is it safe to proceed with a urinalysis requiring fasting after they ate earlier today?",
+          "answer": "No, postpone urinalysis until fasting conditions are met to ensure accurate results.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "e929944d-87a4-422f-9873-e42f80f607f3"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Is there any other inconvenience?",
+        "to_memory": [
+          "working: Current diagnosis is simple bladder inflammation",
+          "working: Treatment plan includes medication and rest",
+          "experience: General advice for bladder inflammation includes rest and medication"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            },
+            {
+              "id": "04863033-181b-4dd2-a889-174d676fb704",
+              "content": "Current treatment is taking medication for simple bladder inflammation",
+              "timestamp": 1768622829.4586823,
+              "metadata": {}
+            },
+            {
+              "id": "e3a5f446-3042-4c31-9020-d4a0f9875620",
+              "content": "Patient reports improvement after taking medication",
+              "timestamp": 1768622860.1529443,
+              "metadata": {}
+            },
+            {
+              "id": "66de29b1-3b44-4c58-95ed-4eeb2b90e708",
+              "content": "Diagnosis of simple bladder inflammation",
+              "timestamp": 1768622877.5076785,
+              "metadata": {}
+            },
+            {
+              "id": "3cdb7552-78cd-41cd-8215-3dee88d96f58",
+              "content": "Treatment plan includes medication and rest",
+              "timestamp": 1768622916.0331068,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "There's nothing else.",
+        "to_memory": [
+          "working: Patient is advised to take medicine and rest",
+          "working: No additional inconveniences or complaints reported"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            },
+            {
+              "id": "04863033-181b-4dd2-a889-174d676fb704",
+              "content": "Current treatment is taking medication for simple bladder inflammation",
+              "timestamp": 1768622829.4586823,
+              "metadata": {}
+            },
+            {
+              "id": "e3a5f446-3042-4c31-9020-d4a0f9875620",
+              "content": "Patient reports improvement after taking medication",
+              "timestamp": 1768622860.1529443,
+              "metadata": {}
+            },
+            {
+              "id": "66de29b1-3b44-4c58-95ed-4eeb2b90e708",
+              "content": "Diagnosis of simple bladder inflammation",
+              "timestamp": 1768622877.5076785,
+              "metadata": {}
+            },
+            {
+              "id": "3cdb7552-78cd-41cd-8215-3dee88d96f58",
+              "content": "Treatment plan includes medication and rest",
+              "timestamp": 1768622916.0331068,
+              "metadata": {}
+            },
+            {
+              "id": "721c4faa-87d1-4741-96b3-3b8b0bb5a08d",
+              "content": "Patient is advised to take medicine and rest",
+              "timestamp": 1768622939.5432105,
+              "metadata": {}
+            },
+            {
+              "id": "a38bc488-3f51-4730-bb87-385a63c191f3",
+              "content": "No additional inconveniences or complaints reported",
+              "timestamp": 1768622939.5684001,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "I see. how are you sleeping?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            },
+            {
+              "id": "04863033-181b-4dd2-a889-174d676fb704",
+              "content": "Current treatment is taking medication for simple bladder inflammation",
+              "timestamp": 1768622829.4586823,
+              "metadata": {}
+            },
+            {
+              "id": "e3a5f446-3042-4c31-9020-d4a0f9875620",
+              "content": "Patient reports improvement after taking medication",
+              "timestamp": 1768622860.1529443,
+              "metadata": {}
+            },
+            {
+              "id": "66de29b1-3b44-4c58-95ed-4eeb2b90e708",
+              "content": "Diagnosis of simple bladder inflammation",
+              "timestamp": 1768622877.5076785,
+              "metadata": {}
+            },
+            {
+              "id": "3cdb7552-78cd-41cd-8215-3dee88d96f58",
+              "content": "Treatment plan includes medication and rest",
+              "timestamp": 1768622916.0331068,
+              "metadata": {}
+            },
+            {
+              "id": "721c4faa-87d1-4741-96b3-3b8b0bb5a08d",
+              "content": "Patient is advised to take medicine and rest",
+              "timestamp": 1768622939.5432105,
+              "metadata": {}
+            },
+            {
+              "id": "a38bc488-3f51-4730-bb87-385a63c191f3",
+              "content": "No additional inconveniences or complaints reported",
+              "timestamp": 1768622939.5684001,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Good night.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            },
+            {
+              "id": "04863033-181b-4dd2-a889-174d676fb704",
+              "content": "Current treatment is taking medication for simple bladder inflammation",
+              "timestamp": 1768622829.4586823,
+              "metadata": {}
+            },
+            {
+              "id": "e3a5f446-3042-4c31-9020-d4a0f9875620",
+              "content": "Patient reports improvement after taking medication",
+              "timestamp": 1768622860.1529443,
+              "metadata": {}
+            },
+            {
+              "id": "66de29b1-3b44-4c58-95ed-4eeb2b90e708",
+              "content": "Diagnosis of simple bladder inflammation",
+              "timestamp": 1768622877.5076785,
+              "metadata": {}
+            },
+            {
+              "id": "3cdb7552-78cd-41cd-8215-3dee88d96f58",
+              "content": "Treatment plan includes medication and rest",
+              "timestamp": 1768622916.0331068,
+              "metadata": {}
+            },
+            {
+              "id": "721c4faa-87d1-4741-96b3-3b8b0bb5a08d",
+              "content": "Patient is advised to take medicine and rest",
+              "timestamp": 1768622939.5432105,
+              "metadata": {}
+            },
+            {
+              "id": "a38bc488-3f51-4730-bb87-385a63c191f3",
+              "content": "No additional inconveniences or complaints reported",
+              "timestamp": 1768622939.5684001,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "When did the patient go to the hospital in relation to their urination?",
+          "answer": "After their last urination.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Great. did you eat today?",
+        "to_memory": [
+          "working: Patient reports sleeping well"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            },
+            {
+              "id": "04863033-181b-4dd2-a889-174d676fb704",
+              "content": "Current treatment is taking medication for simple bladder inflammation",
+              "timestamp": 1768622829.4586823,
+              "metadata": {}
+            },
+            {
+              "id": "e3a5f446-3042-4c31-9020-d4a0f9875620",
+              "content": "Patient reports improvement after taking medication",
+              "timestamp": 1768622860.1529443,
+              "metadata": {}
+            },
+            {
+              "id": "66de29b1-3b44-4c58-95ed-4eeb2b90e708",
+              "content": "Diagnosis of simple bladder inflammation",
+              "timestamp": 1768622877.5076785,
+              "metadata": {}
+            },
+            {
+              "id": "3cdb7552-78cd-41cd-8215-3dee88d96f58",
+              "content": "Treatment plan includes medication and rest",
+              "timestamp": 1768622916.0331068,
+              "metadata": {}
+            },
+            {
+              "id": "721c4faa-87d1-4741-96b3-3b8b0bb5a08d",
+              "content": "Patient is advised to take medicine and rest",
+              "timestamp": 1768622939.5432105,
+              "metadata": {}
+            },
+            {
+              "id": "a38bc488-3f51-4730-bb87-385a63c191f3",
+              "content": "No additional inconveniences or complaints reported",
+              "timestamp": 1768622939.5684001,
+              "metadata": {}
+            },
+            {
+              "id": "a2faa871-813d-49d7-be99-ff7359ee1c17",
+              "content": "Patient reports sleeping well",
+              "timestamp": 1768622961.2912722,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "I just ate.",
+        "to_memory": [
+          "working: Patient reported sleeping well",
+          "working: Patient ate today"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            },
+            {
+              "id": "04863033-181b-4dd2-a889-174d676fb704",
+              "content": "Current treatment is taking medication for simple bladder inflammation",
+              "timestamp": 1768622829.4586823,
+              "metadata": {}
+            },
+            {
+              "id": "e3a5f446-3042-4c31-9020-d4a0f9875620",
+              "content": "Patient reports improvement after taking medication",
+              "timestamp": 1768622860.1529443,
+              "metadata": {}
+            },
+            {
+              "id": "66de29b1-3b44-4c58-95ed-4eeb2b90e708",
+              "content": "Diagnosis of simple bladder inflammation",
+              "timestamp": 1768622877.5076785,
+              "metadata": {}
+            },
+            {
+              "id": "3cdb7552-78cd-41cd-8215-3dee88d96f58",
+              "content": "Treatment plan includes medication and rest",
+              "timestamp": 1768622916.0331068,
+              "metadata": {}
+            },
+            {
+              "id": "721c4faa-87d1-4741-96b3-3b8b0bb5a08d",
+              "content": "Patient is advised to take medicine and rest",
+              "timestamp": 1768622939.5432105,
+              "metadata": {}
+            },
+            {
+              "id": "a38bc488-3f51-4730-bb87-385a63c191f3",
+              "content": "No additional inconveniences or complaints reported",
+              "timestamp": 1768622939.5684001,
+              "metadata": {}
+            },
+            {
+              "id": "a2faa871-813d-49d7-be99-ff7359ee1c17",
+              "content": "Patient reports sleeping well",
+              "timestamp": 1768622961.2912722,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "Considering the patient's medical history and current advice, why is it be important that they just ate?",
+          "answer": "Eating may support medication adherence and rest, aligning with the treatment plan for their diagnosed bladder inflammation.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "721c4faa-87d1-4741-96b3-3b8b0bb5a08d"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Well done. what are you going to do today?",
+        "to_memory": [
+          "working: Patient reports sleeping well",
+          "working: Patient has eaten today"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            },
+            {
+              "id": "04863033-181b-4dd2-a889-174d676fb704",
+              "content": "Current treatment is taking medication for simple bladder inflammation",
+              "timestamp": 1768622829.4586823,
+              "metadata": {}
+            },
+            {
+              "id": "e3a5f446-3042-4c31-9020-d4a0f9875620",
+              "content": "Patient reports improvement after taking medication",
+              "timestamp": 1768622860.1529443,
+              "metadata": {}
+            },
+            {
+              "id": "66de29b1-3b44-4c58-95ed-4eeb2b90e708",
+              "content": "Diagnosis of simple bladder inflammation",
+              "timestamp": 1768622877.5076785,
+              "metadata": {}
+            },
+            {
+              "id": "3cdb7552-78cd-41cd-8215-3dee88d96f58",
+              "content": "Treatment plan includes medication and rest",
+              "timestamp": 1768622916.0331068,
+              "metadata": {}
+            },
+            {
+              "id": "721c4faa-87d1-4741-96b3-3b8b0bb5a08d",
+              "content": "Patient is advised to take medicine and rest",
+              "timestamp": 1768622939.5432105,
+              "metadata": {}
+            },
+            {
+              "id": "a38bc488-3f51-4730-bb87-385a63c191f3",
+              "content": "No additional inconveniences or complaints reported",
+              "timestamp": 1768622939.5684001,
+              "metadata": {}
+            },
+            {
+              "id": "a2faa871-813d-49d7-be99-ff7359ee1c17",
+              "content": "Patient reports sleeping well",
+              "timestamp": 1768622961.2912722,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "To go to senior college.",
+        "to_memory": [
+          "working: Patient has eaten today",
+          "working: Patient plans to go to senior college today"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            },
+            {
+              "id": "04863033-181b-4dd2-a889-174d676fb704",
+              "content": "Current treatment is taking medication for simple bladder inflammation",
+              "timestamp": 1768622829.4586823,
+              "metadata": {}
+            },
+            {
+              "id": "e3a5f446-3042-4c31-9020-d4a0f9875620",
+              "content": "Patient reports improvement after taking medication",
+              "timestamp": 1768622860.1529443,
+              "metadata": {}
+            },
+            {
+              "id": "66de29b1-3b44-4c58-95ed-4eeb2b90e708",
+              "content": "Diagnosis of simple bladder inflammation",
+              "timestamp": 1768622877.5076785,
+              "metadata": {}
+            },
+            {
+              "id": "3cdb7552-78cd-41cd-8215-3dee88d96f58",
+              "content": "Treatment plan includes medication and rest",
+              "timestamp": 1768622916.0331068,
+              "metadata": {}
+            },
+            {
+              "id": "721c4faa-87d1-4741-96b3-3b8b0bb5a08d",
+              "content": "Patient is advised to take medicine and rest",
+              "timestamp": 1768622939.5432105,
+              "metadata": {}
+            },
+            {
+              "id": "a38bc488-3f51-4730-bb87-385a63c191f3",
+              "content": "No additional inconveniences or complaints reported",
+              "timestamp": 1768622939.5684001,
+              "metadata": {}
+            },
+            {
+              "id": "a2faa871-813d-49d7-be99-ff7359ee1c17",
+              "content": "Patient reports sleeping well",
+              "timestamp": 1768622961.2912722,
+              "metadata": {}
+            },
+            {
+              "id": "639d0e98-5ea0-48bd-93c0-cc23a539e0e8",
+              "content": "Patient plans to go to senior college today",
+              "timestamp": 1768623006.9187799,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "What improvement did the patient report after taking the medication?",
+          "answer": "The patient reported improvement after taking medication.",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "e3a5f446-3042-4c31-9020-d4a0f9875620"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Oh, i see. take care.",
+        "to_memory": [
+          "working: Patient ate today",
+          "working: Patient plans to go to senior college today"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            },
+            {
+              "id": "04863033-181b-4dd2-a889-174d676fb704",
+              "content": "Current treatment is taking medication for simple bladder inflammation",
+              "timestamp": 1768622829.4586823,
+              "metadata": {}
+            },
+            {
+              "id": "e3a5f446-3042-4c31-9020-d4a0f9875620",
+              "content": "Patient reports improvement after taking medication",
+              "timestamp": 1768622860.1529443,
+              "metadata": {}
+            },
+            {
+              "id": "66de29b1-3b44-4c58-95ed-4eeb2b90e708",
+              "content": "Diagnosis of simple bladder inflammation",
+              "timestamp": 1768622877.5076785,
+              "metadata": {}
+            },
+            {
+              "id": "3cdb7552-78cd-41cd-8215-3dee88d96f58",
+              "content": "Treatment plan includes medication and rest",
+              "timestamp": 1768622916.0331068,
+              "metadata": {}
+            },
+            {
+              "id": "721c4faa-87d1-4741-96b3-3b8b0bb5a08d",
+              "content": "Patient is advised to take medicine and rest",
+              "timestamp": 1768622939.5432105,
+              "metadata": {}
+            },
+            {
+              "id": "a38bc488-3f51-4730-bb87-385a63c191f3",
+              "content": "No additional inconveniences or complaints reported",
+              "timestamp": 1768622939.5684001,
+              "metadata": {}
+            },
+            {
+              "id": "a2faa871-813d-49d7-be99-ff7359ee1c17",
+              "content": "Patient reports sleeping well",
+              "timestamp": 1768622961.2912722,
+              "metadata": {}
+            },
+            {
+              "id": "639d0e98-5ea0-48bd-93c0-cc23a539e0e8",
+              "content": "Patient plans to go to senior college today",
+              "timestamp": 1768623006.9187799,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            },
+            {
+              "id": "04863033-181b-4dd2-a889-174d676fb704",
+              "content": "Current treatment is taking medication for simple bladder inflammation",
+              "timestamp": 1768622829.4586823,
+              "metadata": {}
+            },
+            {
+              "id": "e3a5f446-3042-4c31-9020-d4a0f9875620",
+              "content": "Patient reports improvement after taking medication",
+              "timestamp": 1768622860.1529443,
+              "metadata": {}
+            },
+            {
+              "id": "66de29b1-3b44-4c58-95ed-4eeb2b90e708",
+              "content": "Diagnosis of simple bladder inflammation",
+              "timestamp": 1768622877.5076785,
+              "metadata": {}
+            },
+            {
+              "id": "3cdb7552-78cd-41cd-8215-3dee88d96f58",
+              "content": "Treatment plan includes medication and rest",
+              "timestamp": 1768622916.0331068,
+              "metadata": {}
+            },
+            {
+              "id": "721c4faa-87d1-4741-96b3-3b8b0bb5a08d",
+              "content": "Patient is advised to take medicine and rest",
+              "timestamp": 1768622939.5432105,
+              "metadata": {}
+            },
+            {
+              "id": "a38bc488-3f51-4730-bb87-385a63c191f3",
+              "content": "No additional inconveniences or complaints reported",
+              "timestamp": 1768622939.5684001,
+              "metadata": {}
+            },
+            {
+              "id": "a2faa871-813d-49d7-be99-ff7359ee1c17",
+              "content": "Patient reports sleeping well",
+              "timestamp": 1768622961.2912722,
+              "metadata": {}
+            },
+            {
+              "id": "639d0e98-5ea0-48bd-93c0-cc23a539e0e8",
+              "content": "Patient plans to go to senior college today",
+              "timestamp": 1768623006.9187799,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "Given the patient's reported improvement with medication, why was a follow-up contact planned?",
+          "answer": "To monitor sustained progress and ensure continued adherence, as the patient's history of improvement aligns with the need for ongoing evaluation.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "ece00120-850c-4d06-9e0c-bb8ad002a495"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "4b899860-b484-47f0-8319-684d97f2e953"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Yes, i'm going to get going today! thank you for calling me",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e929944d-87a4-422f-9873-e42f80f607f3",
+              "content": "Patient ate earlier today",
+              "timestamp": 1768622676.804183,
+              "metadata": {}
+            },
+            {
+              "id": "4b899860-b484-47f0-8319-684d97f2e953",
+              "content": "Call ended with plan to contact again next time",
+              "timestamp": 1768622676.829335,
+              "metadata": {}
+            },
+            {
+              "id": "280f4e94-7a9a-4361-9745-27e4296b0e95",
+              "content": "Current message is from administrative welfare center",
+              "timestamp": 1768622676.8524761,
+              "metadata": {}
+            },
+            {
+              "id": "04863033-181b-4dd2-a889-174d676fb704",
+              "content": "Current treatment is taking medication for simple bladder inflammation",
+              "timestamp": 1768622829.4586823,
+              "metadata": {}
+            },
+            {
+              "id": "e3a5f446-3042-4c31-9020-d4a0f9875620",
+              "content": "Patient reports improvement after taking medication",
+              "timestamp": 1768622860.1529443,
+              "metadata": {}
+            },
+            {
+              "id": "66de29b1-3b44-4c58-95ed-4eeb2b90e708",
+              "content": "Diagnosis of simple bladder inflammation",
+              "timestamp": 1768622877.5076785,
+              "metadata": {}
+            },
+            {
+              "id": "3cdb7552-78cd-41cd-8215-3dee88d96f58",
+              "content": "Treatment plan includes medication and rest",
+              "timestamp": 1768622916.0331068,
+              "metadata": {}
+            },
+            {
+              "id": "721c4faa-87d1-4741-96b3-3b8b0bb5a08d",
+              "content": "Patient is advised to take medicine and rest",
+              "timestamp": 1768622939.5432105,
+              "metadata": {}
+            },
+            {
+              "id": "a38bc488-3f51-4730-bb87-385a63c191f3",
+              "content": "No additional inconveniences or complaints reported",
+              "timestamp": 1768622939.5684001,
+              "metadata": {}
+            },
+            {
+              "id": "a2faa871-813d-49d7-be99-ff7359ee1c17",
+              "content": "Patient reports sleeping well",
+              "timestamp": 1768622961.2912722,
+              "metadata": {}
+            },
+            {
+              "id": "639d0e98-5ea0-48bd-93c0-cc23a539e0e8",
+              "content": "Patient plans to go to senior college today",
+              "timestamp": 1768623006.9187799,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    "---诊疗分割线---",
+    {
+      "assistant": {
+        "content": "Hello, sir, i'm calling from the administrative welfare center.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          "identity: Patient is male (referred to as sir)",
+          "working: Patient plans to go to senior college"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3ff5dd08-3079-4133-98fc-c5fc86decca6",
+              "content": "Patient plans to go to senior college",
+              "timestamp": 1768623085.8371212,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "What general advice is recommended for bladder inflammation?",
+          "answer": "The general advice includes rest and medication.",
+          "source": [
+            {
+              "layer": "experience",
+              "ids": [
+                "d7898e0e-980d-4eb4-8b6c-b686a772d387"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Yes, can you hear me well?",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3ff5dd08-3079-4133-98fc-c5fc86decca6",
+              "content": "Patient plans to go to senior college",
+              "timestamp": 1768623085.8371212,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes. i can hear you.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3ff5dd08-3079-4133-98fc-c5fc86decca6",
+              "content": "Patient plans to go to senior college",
+              "timestamp": 1768623085.8371212,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "What future plan did the patient mention?",
+          "answer": "The patient plans to go to senior college.",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "3ff5dd08-3079-4133-98fc-c5fc86decca6"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "How are you taking your bladder inflammation medication?",
+        "to_memory": [
+          "working: Current topic is bladder inflammation medication usage"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3ff5dd08-3079-4133-98fc-c5fc86decca6",
+              "content": "Patient plans to go to senior college",
+              "timestamp": 1768623085.8371212,
+              "metadata": {}
+            },
+            {
+              "id": "74d763e6-2e3b-44b4-90c8-bd5de158521d",
+              "content": "Current topic is bladder inflammation medication usage",
+              "timestamp": 1768623146.201874,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes. i'm almost all better now.",
+        "to_memory": [
+          "working: Patient is taking bladder inflammation medication and reports feeling almost all better now",
+          "history: Patient has bladder inflammation"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3ff5dd08-3079-4133-98fc-c5fc86decca6",
+              "content": "Patient plans to go to senior college",
+              "timestamp": 1768623085.8371212,
+              "metadata": {}
+            },
+            {
+              "id": "74d763e6-2e3b-44b4-90c8-bd5de158521d",
+              "content": "Current topic is bladder inflammation medication usage",
+              "timestamp": 1768623146.201874,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            },
+            {
+              "id": "97720012-655d-4136-936a-a7838f23c215",
+              "content": "Patient has bladder inflammation",
+              "timestamp": 1768623177.5843182,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "I'm glad you're almost healed. are there any other inconveniences?",
+        "to_memory": [
+          "working: Current status is almost healed from bladder inflammation",
+          "history: Diagnosed with bladder inflammation",
+          "history: Prescribed bladder inflammation medication"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3ff5dd08-3079-4133-98fc-c5fc86decca6",
+              "content": "Patient plans to go to senior college",
+              "timestamp": 1768623085.8371212,
+              "metadata": {}
+            },
+            {
+              "id": "74d763e6-2e3b-44b4-90c8-bd5de158521d",
+              "content": "Current topic is bladder inflammation medication usage",
+              "timestamp": 1768623146.201874,
+              "metadata": {}
+            },
+            {
+              "id": "6dd2ac22-ab04-4491-8a5b-22773f44c0f3",
+              "content": "Current status is almost healed from bladder inflammation",
+              "timestamp": 1768623240.8374403,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            },
+            {
+              "id": "97720012-655d-4136-936a-a7838f23c215",
+              "content": "Patient has bladder inflammation",
+              "timestamp": 1768623177.5843182,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "No.",
+        "to_memory": [
+          "working: Patient is taking medication for bladder inflammation",
+          "working: Patient reports improvement in bladder inflammation symptoms",
+          "working: No other current complaints reported",
+          "history: Diagnosed with bladder inflammation"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3ff5dd08-3079-4133-98fc-c5fc86decca6",
+              "content": "Patient plans to go to senior college",
+              "timestamp": 1768623085.8371212,
+              "metadata": {}
+            },
+            {
+              "id": "74d763e6-2e3b-44b4-90c8-bd5de158521d",
+              "content": "Current topic is bladder inflammation medication usage",
+              "timestamp": 1768623146.201874,
+              "metadata": {}
+            },
+            {
+              "id": "6dd2ac22-ab04-4491-8a5b-22773f44c0f3",
+              "content": "Current status is almost healed from bladder inflammation",
+              "timestamp": 1768623240.8374403,
+              "metadata": {}
+            },
+            {
+              "id": "203b7f51-a34a-4489-9552-034e14f5f510",
+              "content": "Patient is taking medication for bladder inflammation",
+              "timestamp": 1768623298.4793453,
+              "metadata": {}
+            },
+            {
+              "id": "5eaadfe4-397a-49d6-aa05-bc42f75b1c43",
+              "content": "No other current complaints reported",
+              "timestamp": 1768623298.5044565,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            },
+            {
+              "id": "97720012-655d-4136-936a-a7838f23c215",
+              "content": "Patient has bladder inflammation",
+              "timestamp": 1768623177.5843182,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "What is the current topic of discussion?",
+          "answer": "Bladder inflammation medication usage",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "74d763e6-2e3b-44b4-90c8-bd5de158521d"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "By the way, are you attending the senior citizens' college?",
+        "to_memory": [
+          "history: Patient has bladder inflammation",
+          "working: Patient is taking bladder inflammation medication and is almost recovered"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3ff5dd08-3079-4133-98fc-c5fc86decca6",
+              "content": "Patient plans to go to senior college",
+              "timestamp": 1768623085.8371212,
+              "metadata": {}
+            },
+            {
+              "id": "74d763e6-2e3b-44b4-90c8-bd5de158521d",
+              "content": "Current topic is bladder inflammation medication usage",
+              "timestamp": 1768623146.201874,
+              "metadata": {}
+            },
+            {
+              "id": "6dd2ac22-ab04-4491-8a5b-22773f44c0f3",
+              "content": "Current status is almost healed from bladder inflammation",
+              "timestamp": 1768623240.8374403,
+              "metadata": {}
+            },
+            {
+              "id": "203b7f51-a34a-4489-9552-034e14f5f510",
+              "content": "Patient is taking medication for bladder inflammation",
+              "timestamp": 1768623298.4793453,
+              "metadata": {}
+            },
+            {
+              "id": "5eaadfe4-397a-49d6-aa05-bc42f75b1c43",
+              "content": "No other current complaints reported",
+              "timestamp": 1768623298.5044565,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            },
+            {
+              "id": "97720012-655d-4136-936a-a7838f23c215",
+              "content": "Patient has bladder inflammation",
+              "timestamp": 1768623177.5843182,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Well, i'm doing fine.",
+        "to_memory": [
+          "working: Current status is almost healed from bladder inflammation",
+          "working: No other current complaints",
+          "identity: Patient is a senior citizen",
+          "history: History of bladder inflammation treated with medication"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3ff5dd08-3079-4133-98fc-c5fc86decca6",
+              "content": "Patient plans to go to senior college",
+              "timestamp": 1768623085.8371212,
+              "metadata": {}
+            },
+            {
+              "id": "74d763e6-2e3b-44b4-90c8-bd5de158521d",
+              "content": "Current topic is bladder inflammation medication usage",
+              "timestamp": 1768623146.201874,
+              "metadata": {}
+            },
+            {
+              "id": "6dd2ac22-ab04-4491-8a5b-22773f44c0f3",
+              "content": "Current status is almost healed from bladder inflammation",
+              "timestamp": 1768623240.8374403,
+              "metadata": {}
+            },
+            {
+              "id": "203b7f51-a34a-4489-9552-034e14f5f510",
+              "content": "Patient is taking medication for bladder inflammation",
+              "timestamp": 1768623298.4793453,
+              "metadata": {}
+            },
+            {
+              "id": "5eaadfe4-397a-49d6-aa05-bc42f75b1c43",
+              "content": "No other current complaints reported",
+              "timestamp": 1768623298.5044565,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            },
+            {
+              "id": "317a5e5a-63e3-4d69-a265-504d66e625e6",
+              "content": "Patient is a senior citizen",
+              "timestamp": 1768623392.0739934,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            },
+            {
+              "id": "97720012-655d-4136-936a-a7838f23c215",
+              "content": "Patient has bladder inflammation",
+              "timestamp": 1768623177.5843182,
+              "metadata": {}
+            },
+            {
+              "id": "dfae2c0b-1d3a-4f15-8610-e491f98bef71",
+              "content": "History of bladder inflammation treated with medication",
+              "timestamp": 1768623392.0993795,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "Considering the patient's medical history, what is the likely reason they are currently taking medication?",
+          "answer": "The patient is taking medication to treat their diagnosed simple bladder inflammation.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "203b7f51-a34a-4489-9552-034e14f5f510"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "I see. what kind of class do you have today?",
+        "to_memory": [
+          "identity: Patient is a senior citizen (attends senior citizens' college)",
+          "working: Discussing patient's class at senior citizens' college today"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3ff5dd08-3079-4133-98fc-c5fc86decca6",
+              "content": "Patient plans to go to senior college",
+              "timestamp": 1768623085.8371212,
+              "metadata": {}
+            },
+            {
+              "id": "74d763e6-2e3b-44b4-90c8-bd5de158521d",
+              "content": "Current topic is bladder inflammation medication usage",
+              "timestamp": 1768623146.201874,
+              "metadata": {}
+            },
+            {
+              "id": "6dd2ac22-ab04-4491-8a5b-22773f44c0f3",
+              "content": "Current status is almost healed from bladder inflammation",
+              "timestamp": 1768623240.8374403,
+              "metadata": {}
+            },
+            {
+              "id": "203b7f51-a34a-4489-9552-034e14f5f510",
+              "content": "Patient is taking medication for bladder inflammation",
+              "timestamp": 1768623298.4793453,
+              "metadata": {}
+            },
+            {
+              "id": "5eaadfe4-397a-49d6-aa05-bc42f75b1c43",
+              "content": "No other current complaints reported",
+              "timestamp": 1768623298.5044565,
+              "metadata": {}
+            },
+            {
+              "id": "9c00245b-0b62-4e46-ab5d-c8f950436e79",
+              "content": "Discussing patient's class at senior citizens' college today",
+              "timestamp": 1768623423.3015475,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            },
+            {
+              "id": "317a5e5a-63e3-4d69-a265-504d66e625e6",
+              "content": "Patient is a senior citizen",
+              "timestamp": 1768623392.0739934,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            },
+            {
+              "id": "97720012-655d-4136-936a-a7838f23c215",
+              "content": "Patient has bladder inflammation",
+              "timestamp": 1768623177.5843182,
+              "metadata": {}
+            },
+            {
+              "id": "dfae2c0b-1d3a-4f15-8610-e491f98bef71",
+              "content": "History of bladder inflammation treated with medication",
+              "timestamp": 1768623392.0993795,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "I heard there's a natural cosmetics class.",
+        "to_memory": [
+          "identity: Patient attends senior citizens' college",
+          "working: Patient reports no current inconveniences",
+          "working: Patient is almost healed from previous condition",
+          "working: Patient has a natural cosmetics class today"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3ff5dd08-3079-4133-98fc-c5fc86decca6",
+              "content": "Patient plans to go to senior college",
+              "timestamp": 1768623085.8371212,
+              "metadata": {}
+            },
+            {
+              "id": "74d763e6-2e3b-44b4-90c8-bd5de158521d",
+              "content": "Current topic is bladder inflammation medication usage",
+              "timestamp": 1768623146.201874,
+              "metadata": {}
+            },
+            {
+              "id": "6dd2ac22-ab04-4491-8a5b-22773f44c0f3",
+              "content": "Current status is almost healed from bladder inflammation",
+              "timestamp": 1768623240.8374403,
+              "metadata": {}
+            },
+            {
+              "id": "203b7f51-a34a-4489-9552-034e14f5f510",
+              "content": "Patient is taking medication for bladder inflammation",
+              "timestamp": 1768623298.4793453,
+              "metadata": {}
+            },
+            {
+              "id": "5eaadfe4-397a-49d6-aa05-bc42f75b1c43",
+              "content": "No other current complaints reported",
+              "timestamp": 1768623298.5044565,
+              "metadata": {}
+            },
+            {
+              "id": "9c00245b-0b62-4e46-ab5d-c8f950436e79",
+              "content": "Discussing patient's class at senior citizens' college today",
+              "timestamp": 1768623423.3015475,
+              "metadata": {}
+            },
+            {
+              "id": "c26c7e4b-0168-4db7-a8ed-8642d552cdd2",
+              "content": "Patient has a natural cosmetics class today",
+              "timestamp": 1768623470.4082608,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            },
+            {
+              "id": "317a5e5a-63e3-4d69-a265-504d66e625e6",
+              "content": "Patient is a senior citizen",
+              "timestamp": 1768623392.0739934,
+              "metadata": {}
+            },
+            {
+              "id": "e269cd60-10b6-42f5-b0a6-fde49b1973d5",
+              "content": "Patient attends senior citizens' college",
+              "timestamp": 1768623470.38304,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            },
+            {
+              "id": "97720012-655d-4136-936a-a7838f23c215",
+              "content": "Patient has bladder inflammation",
+              "timestamp": 1768623177.5843182,
+              "metadata": {}
+            },
+            {
+              "id": "dfae2c0b-1d3a-4f15-8610-e491f98bef71",
+              "content": "History of bladder inflammation treated with medication",
+              "timestamp": 1768623392.0993795,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "What general advice is recommended for bladder inflammation?",
+          "answer": "Rest and medication.",
+          "source": [
+            {
+              "layer": "experience",
+              "ids": [
+                "d7898e0e-980d-4eb4-8b6c-b686a772d387"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Oh, really? what kind of material is it made of?",
+        "to_memory": [
+          "identity: Patient is a senior citizen (attends senior citizens' college)",
+          "working: Attending a natural cosmetics class"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3ff5dd08-3079-4133-98fc-c5fc86decca6",
+              "content": "Patient plans to go to senior college",
+              "timestamp": 1768623085.8371212,
+              "metadata": {}
+            },
+            {
+              "id": "74d763e6-2e3b-44b4-90c8-bd5de158521d",
+              "content": "Current topic is bladder inflammation medication usage",
+              "timestamp": 1768623146.201874,
+              "metadata": {}
+            },
+            {
+              "id": "6dd2ac22-ab04-4491-8a5b-22773f44c0f3",
+              "content": "Current status is almost healed from bladder inflammation",
+              "timestamp": 1768623240.8374403,
+              "metadata": {}
+            },
+            {
+              "id": "203b7f51-a34a-4489-9552-034e14f5f510",
+              "content": "Patient is taking medication for bladder inflammation",
+              "timestamp": 1768623298.4793453,
+              "metadata": {}
+            },
+            {
+              "id": "5eaadfe4-397a-49d6-aa05-bc42f75b1c43",
+              "content": "No other current complaints reported",
+              "timestamp": 1768623298.5044565,
+              "metadata": {}
+            },
+            {
+              "id": "9c00245b-0b62-4e46-ab5d-c8f950436e79",
+              "content": "Discussing patient's class at senior citizens' college today",
+              "timestamp": 1768623423.3015475,
+              "metadata": {}
+            },
+            {
+              "id": "c26c7e4b-0168-4db7-a8ed-8642d552cdd2",
+              "content": "Patient has a natural cosmetics class today",
+              "timestamp": 1768623470.4082608,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            },
+            {
+              "id": "317a5e5a-63e3-4d69-a265-504d66e625e6",
+              "content": "Patient is a senior citizen",
+              "timestamp": 1768623392.0739934,
+              "metadata": {}
+            },
+            {
+              "id": "e269cd60-10b6-42f5-b0a6-fde49b1973d5",
+              "content": "Patient attends senior citizens' college",
+              "timestamp": 1768623470.38304,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            },
+            {
+              "id": "97720012-655d-4136-936a-a7838f23c215",
+              "content": "Patient has bladder inflammation",
+              "timestamp": 1768623177.5843182,
+              "metadata": {}
+            },
+            {
+              "id": "dfae2c0b-1d3a-4f15-8610-e491f98bef71",
+              "content": "History of bladder inflammation treated with medication",
+              "timestamp": 1768623392.0993795,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "I don't know. i have to go to find out.",
+        "to_memory": [
+          "identity: Senior citizen (implied by attending senior citizens' college)",
+          "working: Planning to attend natural cosmetics class at senior citizens' college; needs to find out materials used"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3ff5dd08-3079-4133-98fc-c5fc86decca6",
+              "content": "Patient plans to go to senior college",
+              "timestamp": 1768623085.8371212,
+              "metadata": {}
+            },
+            {
+              "id": "74d763e6-2e3b-44b4-90c8-bd5de158521d",
+              "content": "Current topic is bladder inflammation medication usage",
+              "timestamp": 1768623146.201874,
+              "metadata": {}
+            },
+            {
+              "id": "6dd2ac22-ab04-4491-8a5b-22773f44c0f3",
+              "content": "Current status is almost healed from bladder inflammation",
+              "timestamp": 1768623240.8374403,
+              "metadata": {}
+            },
+            {
+              "id": "203b7f51-a34a-4489-9552-034e14f5f510",
+              "content": "Patient is taking medication for bladder inflammation",
+              "timestamp": 1768623298.4793453,
+              "metadata": {}
+            },
+            {
+              "id": "5eaadfe4-397a-49d6-aa05-bc42f75b1c43",
+              "content": "No other current complaints reported",
+              "timestamp": 1768623298.5044565,
+              "metadata": {}
+            },
+            {
+              "id": "9c00245b-0b62-4e46-ab5d-c8f950436e79",
+              "content": "Discussing patient's class at senior citizens' college today",
+              "timestamp": 1768623423.3015475,
+              "metadata": {}
+            },
+            {
+              "id": "c26c7e4b-0168-4db7-a8ed-8642d552cdd2",
+              "content": "Patient has a natural cosmetics class today",
+              "timestamp": 1768623470.4082608,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            },
+            {
+              "id": "317a5e5a-63e3-4d69-a265-504d66e625e6",
+              "content": "Patient is a senior citizen",
+              "timestamp": 1768623392.0739934,
+              "metadata": {}
+            },
+            {
+              "id": "e269cd60-10b6-42f5-b0a6-fde49b1973d5",
+              "content": "Patient attends senior citizens' college",
+              "timestamp": 1768623470.38304,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            },
+            {
+              "id": "97720012-655d-4136-936a-a7838f23c215",
+              "content": "Patient has bladder inflammation",
+              "timestamp": 1768623177.5843182,
+              "metadata": {}
+            },
+            {
+              "id": "dfae2c0b-1d3a-4f15-8610-e491f98bef71",
+              "content": "History of bladder inflammation treated with medication",
+              "timestamp": 1768623392.0993795,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "Given the patient's recent hospital visit following their last urination, how does this relate to the current discussion about bladder inflammation medication?",
+          "answer": "The hospital visit likely indicated urinary symptoms requiring evaluation, which aligns with addressing bladder inflammation through appropriate medication.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "74d763e6-2e3b-44b4-90c8-bd5de158521d"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "I see. please tell me how you feel later.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3ff5dd08-3079-4133-98fc-c5fc86decca6",
+              "content": "Patient plans to go to senior college",
+              "timestamp": 1768623085.8371212,
+              "metadata": {}
+            },
+            {
+              "id": "74d763e6-2e3b-44b4-90c8-bd5de158521d",
+              "content": "Current topic is bladder inflammation medication usage",
+              "timestamp": 1768623146.201874,
+              "metadata": {}
+            },
+            {
+              "id": "6dd2ac22-ab04-4491-8a5b-22773f44c0f3",
+              "content": "Current status is almost healed from bladder inflammation",
+              "timestamp": 1768623240.8374403,
+              "metadata": {}
+            },
+            {
+              "id": "203b7f51-a34a-4489-9552-034e14f5f510",
+              "content": "Patient is taking medication for bladder inflammation",
+              "timestamp": 1768623298.4793453,
+              "metadata": {}
+            },
+            {
+              "id": "5eaadfe4-397a-49d6-aa05-bc42f75b1c43",
+              "content": "No other current complaints reported",
+              "timestamp": 1768623298.5044565,
+              "metadata": {}
+            },
+            {
+              "id": "9c00245b-0b62-4e46-ab5d-c8f950436e79",
+              "content": "Discussing patient's class at senior citizens' college today",
+              "timestamp": 1768623423.3015475,
+              "metadata": {}
+            },
+            {
+              "id": "c26c7e4b-0168-4db7-a8ed-8642d552cdd2",
+              "content": "Patient has a natural cosmetics class today",
+              "timestamp": 1768623470.4082608,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            },
+            {
+              "id": "317a5e5a-63e3-4d69-a265-504d66e625e6",
+              "content": "Patient is a senior citizen",
+              "timestamp": 1768623392.0739934,
+              "metadata": {}
+            },
+            {
+              "id": "e269cd60-10b6-42f5-b0a6-fde49b1973d5",
+              "content": "Patient attends senior citizens' college",
+              "timestamp": 1768623470.38304,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            },
+            {
+              "id": "97720012-655d-4136-936a-a7838f23c215",
+              "content": "Patient has bladder inflammation",
+              "timestamp": 1768623177.5843182,
+              "metadata": {}
+            },
+            {
+              "id": "dfae2c0b-1d3a-4f15-8610-e491f98bef71",
+              "content": "History of bladder inflammation treated with medication",
+              "timestamp": 1768623392.0993795,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3ff5dd08-3079-4133-98fc-c5fc86decca6",
+              "content": "Patient plans to go to senior college",
+              "timestamp": 1768623085.8371212,
+              "metadata": {}
+            },
+            {
+              "id": "74d763e6-2e3b-44b4-90c8-bd5de158521d",
+              "content": "Current topic is bladder inflammation medication usage",
+              "timestamp": 1768623146.201874,
+              "metadata": {}
+            },
+            {
+              "id": "6dd2ac22-ab04-4491-8a5b-22773f44c0f3",
+              "content": "Current status is almost healed from bladder inflammation",
+              "timestamp": 1768623240.8374403,
+              "metadata": {}
+            },
+            {
+              "id": "203b7f51-a34a-4489-9552-034e14f5f510",
+              "content": "Patient is taking medication for bladder inflammation",
+              "timestamp": 1768623298.4793453,
+              "metadata": {}
+            },
+            {
+              "id": "5eaadfe4-397a-49d6-aa05-bc42f75b1c43",
+              "content": "No other current complaints reported",
+              "timestamp": 1768623298.5044565,
+              "metadata": {}
+            },
+            {
+              "id": "9c00245b-0b62-4e46-ab5d-c8f950436e79",
+              "content": "Discussing patient's class at senior citizens' college today",
+              "timestamp": 1768623423.3015475,
+              "metadata": {}
+            },
+            {
+              "id": "c26c7e4b-0168-4db7-a8ed-8642d552cdd2",
+              "content": "Patient has a natural cosmetics class today",
+              "timestamp": 1768623470.4082608,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            },
+            {
+              "id": "317a5e5a-63e3-4d69-a265-504d66e625e6",
+              "content": "Patient is a senior citizen",
+              "timestamp": 1768623392.0739934,
+              "metadata": {}
+            },
+            {
+              "id": "e269cd60-10b6-42f5-b0a6-fde49b1973d5",
+              "content": "Patient attends senior citizens' college",
+              "timestamp": 1768623470.38304,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            },
+            {
+              "id": "97720012-655d-4136-936a-a7838f23c215",
+              "content": "Patient has bladder inflammation",
+              "timestamp": 1768623177.5843182,
+              "metadata": {}
+            },
+            {
+              "id": "dfae2c0b-1d3a-4f15-8610-e491f98bef71",
+              "content": "History of bladder inflammation treated with medication",
+              "timestamp": 1768623392.0993795,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "Considering the patient's history of improvement with medication, how does this relate to their current status of bladder inflammation?",
+          "answer": "The reported improvement after medication aligns with the current status of being almost healed from bladder inflammation.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "ece00120-850c-4d06-9e0c-bb8ad002a495"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "6dd2ac22-ab04-4491-8a5b-22773f44c0f3"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Okay, so can we end the call here today?",
+        "to_memory": [
+          "working: User is planning to attend a natural cosmetics class and will provide feedback later"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3ff5dd08-3079-4133-98fc-c5fc86decca6",
+              "content": "Patient plans to go to senior college",
+              "timestamp": 1768623085.8371212,
+              "metadata": {}
+            },
+            {
+              "id": "74d763e6-2e3b-44b4-90c8-bd5de158521d",
+              "content": "Current topic is bladder inflammation medication usage",
+              "timestamp": 1768623146.201874,
+              "metadata": {}
+            },
+            {
+              "id": "6dd2ac22-ab04-4491-8a5b-22773f44c0f3",
+              "content": "Current status is almost healed from bladder inflammation",
+              "timestamp": 1768623240.8374403,
+              "metadata": {}
+            },
+            {
+              "id": "203b7f51-a34a-4489-9552-034e14f5f510",
+              "content": "Patient is taking medication for bladder inflammation",
+              "timestamp": 1768623298.4793453,
+              "metadata": {}
+            },
+            {
+              "id": "5eaadfe4-397a-49d6-aa05-bc42f75b1c43",
+              "content": "No other current complaints reported",
+              "timestamp": 1768623298.5044565,
+              "metadata": {}
+            },
+            {
+              "id": "9c00245b-0b62-4e46-ab5d-c8f950436e79",
+              "content": "Discussing patient's class at senior citizens' college today",
+              "timestamp": 1768623423.3015475,
+              "metadata": {}
+            },
+            {
+              "id": "c26c7e4b-0168-4db7-a8ed-8642d552cdd2",
+              "content": "Patient has a natural cosmetics class today",
+              "timestamp": 1768623470.4082608,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            },
+            {
+              "id": "317a5e5a-63e3-4d69-a265-504d66e625e6",
+              "content": "Patient is a senior citizen",
+              "timestamp": 1768623392.0739934,
+              "metadata": {}
+            },
+            {
+              "id": "e269cd60-10b6-42f5-b0a6-fde49b1973d5",
+              "content": "Patient attends senior citizens' college",
+              "timestamp": 1768623470.38304,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            },
+            {
+              "id": "97720012-655d-4136-936a-a7838f23c215",
+              "content": "Patient has bladder inflammation",
+              "timestamp": 1768623177.5843182,
+              "metadata": {}
+            },
+            {
+              "id": "dfae2c0b-1d3a-4f15-8610-e491f98bef71",
+              "content": "History of bladder inflammation treated with medication",
+              "timestamp": 1768623392.0993795,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "Yes.",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3ff5dd08-3079-4133-98fc-c5fc86decca6",
+              "content": "Patient plans to go to senior college",
+              "timestamp": 1768623085.8371212,
+              "metadata": {}
+            },
+            {
+              "id": "74d763e6-2e3b-44b4-90c8-bd5de158521d",
+              "content": "Current topic is bladder inflammation medication usage",
+              "timestamp": 1768623146.201874,
+              "metadata": {}
+            },
+            {
+              "id": "6dd2ac22-ab04-4491-8a5b-22773f44c0f3",
+              "content": "Current status is almost healed from bladder inflammation",
+              "timestamp": 1768623240.8374403,
+              "metadata": {}
+            },
+            {
+              "id": "203b7f51-a34a-4489-9552-034e14f5f510",
+              "content": "Patient is taking medication for bladder inflammation",
+              "timestamp": 1768623298.4793453,
+              "metadata": {}
+            },
+            {
+              "id": "5eaadfe4-397a-49d6-aa05-bc42f75b1c43",
+              "content": "No other current complaints reported",
+              "timestamp": 1768623298.5044565,
+              "metadata": {}
+            },
+            {
+              "id": "9c00245b-0b62-4e46-ab5d-c8f950436e79",
+              "content": "Discussing patient's class at senior citizens' college today",
+              "timestamp": 1768623423.3015475,
+              "metadata": {}
+            },
+            {
+              "id": "c26c7e4b-0168-4db7-a8ed-8642d552cdd2",
+              "content": "Patient has a natural cosmetics class today",
+              "timestamp": 1768623470.4082608,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            },
+            {
+              "id": "317a5e5a-63e3-4d69-a265-504d66e625e6",
+              "content": "Patient is a senior citizen",
+              "timestamp": 1768623392.0739934,
+              "metadata": {}
+            },
+            {
+              "id": "e269cd60-10b6-42f5-b0a6-fde49b1973d5",
+              "content": "Patient attends senior citizens' college",
+              "timestamp": 1768623470.38304,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            },
+            {
+              "id": "97720012-655d-4136-936a-a7838f23c215",
+              "content": "Patient has bladder inflammation",
+              "timestamp": 1768623177.5843182,
+              "metadata": {}
+            },
+            {
+              "id": "dfae2c0b-1d3a-4f15-8610-e491f98bef71",
+              "content": "History of bladder inflammation treated with medication",
+              "timestamp": 1768623392.0993795,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "Given the patient's history of hospitalization after their last urination, is it safe to proceed without further evaluation since no other complaints are currently reported?",
+          "answer": "No, the history of hospitalization after urination warrants evaluation despite no current complaints.",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "5eaadfe4-397a-49d6-aa05-bc42f75b1c43"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "I'll call you again next time.",
+        "to_memory": [
+          "working: Patient plans to call again next time"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3ff5dd08-3079-4133-98fc-c5fc86decca6",
+              "content": "Patient plans to go to senior college",
+              "timestamp": 1768623085.8371212,
+              "metadata": {}
+            },
+            {
+              "id": "74d763e6-2e3b-44b4-90c8-bd5de158521d",
+              "content": "Current topic is bladder inflammation medication usage",
+              "timestamp": 1768623146.201874,
+              "metadata": {}
+            },
+            {
+              "id": "6dd2ac22-ab04-4491-8a5b-22773f44c0f3",
+              "content": "Current status is almost healed from bladder inflammation",
+              "timestamp": 1768623240.8374403,
+              "metadata": {}
+            },
+            {
+              "id": "203b7f51-a34a-4489-9552-034e14f5f510",
+              "content": "Patient is taking medication for bladder inflammation",
+              "timestamp": 1768623298.4793453,
+              "metadata": {}
+            },
+            {
+              "id": "5eaadfe4-397a-49d6-aa05-bc42f75b1c43",
+              "content": "No other current complaints reported",
+              "timestamp": 1768623298.5044565,
+              "metadata": {}
+            },
+            {
+              "id": "9c00245b-0b62-4e46-ab5d-c8f950436e79",
+              "content": "Discussing patient's class at senior citizens' college today",
+              "timestamp": 1768623423.3015475,
+              "metadata": {}
+            },
+            {
+              "id": "c26c7e4b-0168-4db7-a8ed-8642d552cdd2",
+              "content": "Patient has a natural cosmetics class today",
+              "timestamp": 1768623470.4082608,
+              "metadata": {}
+            },
+            {
+              "id": "47bc4f3c-7764-4ac4-9325-386947ef7810",
+              "content": "Patient plans to call again next time",
+              "timestamp": 1768623597.5249999,
+              "metadata": {}
+            }
+          ],
+          "identity": [
+            {
+              "id": "9aa32e80-74d6-41da-b641-0455e33690ed",
+              "content": "Gender is male",
+              "timestamp": 1768622205.561744,
+              "metadata": {}
+            },
+            {
+              "id": "317a5e5a-63e3-4d69-a265-504d66e625e6",
+              "content": "Patient is a senior citizen",
+              "timestamp": 1768623392.0739934,
+              "metadata": {}
+            },
+            {
+              "id": "e269cd60-10b6-42f5-b0a6-fde49b1973d5",
+              "content": "Patient attends senior citizens' college",
+              "timestamp": 1768623470.38304,
+              "metadata": {}
+            }
+          ],
+          "history": [
+            {
+              "id": "84d7bdab-4a6a-40f2-90fc-5e3d31bbc81f",
+              "content": "Patient went to the hospital after last urination",
+              "timestamp": 1768622765.1533632,
+              "metadata": {}
+            },
+            {
+              "id": "01dfeb41-6a0a-487e-b399-d9ece1ba2ff0",
+              "content": "Diagnosed with simple bladder inflammation",
+              "timestamp": 1768622808.446736,
+              "metadata": {}
+            },
+            {
+              "id": "a66fdbe7-1214-406f-be51-2df6f663888f",
+              "content": "Prescribed medication for bladder inflammation",
+              "timestamp": 1768622808.4716787,
+              "metadata": {}
+            },
+            {
+              "id": "ece00120-850c-4d06-9e0c-bb8ad002a495",
+              "content": "Patient reported improvement after taking medication",
+              "timestamp": 1768622808.494362,
+              "metadata": {}
+            },
+            {
+              "id": "97720012-655d-4136-936a-a7838f23c215",
+              "content": "Patient has bladder inflammation",
+              "timestamp": 1768623177.5843182,
+              "metadata": {}
+            },
+            {
+              "id": "dfae2c0b-1d3a-4f15-8610-e491f98bef71",
+              "content": "History of bladder inflammation treated with medication",
+              "timestamp": 1768623392.0993795,
+              "metadata": {}
+            }
+          ],
+          "experience": [
+            {
+              "id": "d7898e0e-980d-4eb4-8b6c-b686a772d387",
+              "content": "General advice for bladder inflammation includes rest and medication",
+              "timestamp": 1768622916.0587785,
+              "metadata": {}
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

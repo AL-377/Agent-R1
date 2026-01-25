@@ -15,7 +15,7 @@ from tqdm import tqdm
 
 from agent_r1.utils.llm import query_llm_inhouse
 
-DEFAULT_MODEL = "gpt-4o-2024-11-20"
+DEFAULT_MODEL = "DeepSeek-R1"
 
 
 def _strip_think_and_fence(text: str) -> str:
