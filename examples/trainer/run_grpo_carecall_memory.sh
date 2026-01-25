@@ -1,9 +1,32 @@
 #!/bin/bash
-# Training script for CareCall Memory Model using GRPO with Qwen 2.5 3B
 
-export BASE_MODEL='Qwen/Qwen2.5-3B-Instruct'  # Qwen 2.5 3B model
+# Fix Ray issues
+export RAY_DISABLE_IMPORT_WARNING=1
+export RAY_DEDUP_LOGS=0
+export RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO=0
+# Disable dashboard/metrics to avoid dashboard_agent crash on some envs
+export RAY_DISABLE_DASHBOARD=1
+export RAY_ENABLE_METRICS_COLLECTION=0
+# Fix worker registration issues
+export RAY_OBJECT_STORE_ALLOW_SLOW_STORAGE=1
+export RAY_BACKEND_LOG_LEVEL=error
+export RAY_WORKER_REGISTER_TIMEOUT_S=300
+
+# Clean up any existing Ray sessions before starting
+ray stop --force 2>/dev/null || true
+sleep 2
+
+# export BASE_MODEL='Qwen/Qwen2.5-3B-Instruct'  # Qwen 2.5 3B model
 export PROJECT_NAME='carecall-memory'
 export EXPERIMENT_NAME=grpo-carecall-memory-qwen2.5-3b
+export SWANLAB_API_KEY=$SWANLAB_API_KEY
+
+# Local model
+export MEMORY_EMBEDDING_MODEL="BAAI/bge-large-en-v1.5"
+export MEMORY_EMBEDDING_LOCAL_ONLY=1
+export HF_HOME=/home/tiger/.cache/huggingface
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
 
 python3 -m agent_r1.src.main_agent \
     data.train_files=['examples/dataset/carecall/carecall_train_v1.parquet'] \
@@ -32,10 +55,10 @@ python3 -m agent_r1.src.main_agent \
     actor_rollout_ref.rollout.n_repeat=5 \
     actor_rollout_ref.ref.log_prob_micro_batch_size_per_gpu=1 \
     actor_rollout_ref.ref.fsdp_config.param_offload=True \
-    algorithm.adv_estimator=gae \
+    algorithm.adv_estimator=grpo \
     algorithm.kl_ctrl.kl_coef=0.001 \
     algorithm.use_kl_in_reward=False \
-    trainer.logger=['console','wandb'] \
+    trainer.logger=['console','swanlab'] \
     trainer.project_name=$PROJECT_NAME \
     trainer.experiment_name=$EXPERIMENT_NAME \
     trainer.n_gpus_per_node=8 \
@@ -48,5 +71,6 @@ python3 -m agent_r1.src.main_agent \
     tool.max_turns=1 \
     tool.tools=['memory_insert','memory_update','memory_delete','memory_wait'] \
     tool.env=memory \
-    tool.max_tool_response_length=512 $@
+    tool.max_tool_response_length=512 \
+    ray_init.num_cpus=32 $@  # Limit
 

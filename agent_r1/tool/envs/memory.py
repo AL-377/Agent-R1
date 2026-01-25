@@ -8,6 +8,7 @@ from agent_r1.tool.memory_manager import MemoryManager
 from typing import List, Dict, Tuple, Any
 import re
 import json
+import os
 
 
 class MemoryEnv(BaseToolEnv):
@@ -43,7 +44,7 @@ class MemoryEnv(BaseToolEnv):
         self.tools = tools
         self.tool_map = {tool.name: tool for tool in self.tools}
         self.max_tool_response_length = max_tool_response_length
-        
+        embedding_model = os.environ.get("MEMORY_EMBEDDING_MODEL", embedding_model)
         # Initialize or use provided memory manager
         if memory_manager is None:
             self.memory_manager = MemoryManager(
