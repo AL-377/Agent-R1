@@ -9,7 +9,9 @@ import json
 import os
 import random
 import re
+import concurrent.futures
 from typing import Any, Dict, List, Optional, Tuple
+from tqdm import tqdm
 
 from agent_r1.utils.llm import query_llm_inhouse
 
@@ -347,30 +349,357 @@ def _load_input_data(input_file: str) -> List[Dict[str, Any]]:
     raise ValueError("Unsupported input format.")
 
 
-def process_dataset(
+def _extract_patient_id_from_filename(filename: str) -> Optional[str]:
+    """Extract patient ID from filename like 'patient_0.json'."""
+    match = re.match(r"patient_(\d+)\.json$", filename)
+    if match:
+        return match.group(1)
+    return None
+
+
+def _scan_patient_files(input_dir: str) -> List[Tuple[str, str]]:
+    """
+    Scan directory for patient JSON files.
+    
+    Args:
+        input_dir: Directory containing patient JSON files
+        
+    Returns:
+        List of (patient_id, file_path) tuples
+    """
+    patient_files = []
+    if not os.path.isdir(input_dir):
+        raise ValueError(f"Input directory does not exist: {input_dir}")
+    
+    for filename in os.listdir(input_dir):
+        if not filename.endswith(".json"):
+            continue
+        patient_id = _extract_patient_id_from_filename(filename)
+        if patient_id is not None:
+            file_path = os.path.join(input_dir, filename)
+            patient_files.append((patient_id, file_path))
+    
+    # Sort by patient_id numerically
+    def sort_key(item):
+        try:
+            return int(item[0])
+        except ValueError:
+            return item[0]
+    
+    patient_files.sort(key=sort_key)
+    return patient_files
+
+
+def save_patient_cache(patient_id: str, result: Dict, cache_dir: str) -> None:
+    """
+    Save processed patient data to cache file.
+    
+    Args:
+        patient_id: Patient ID
+        result: Processed patient data
+        cache_dir: Cache directory path
+    """
+    if result is None:
+        return
+    
+    os.makedirs(cache_dir, exist_ok=True)
+    cache_file = os.path.join(cache_dir, f"patient_{patient_id}.json")
+    try:
+        # Use atomic write: write to temp file first, then rename
+        temp_file = cache_file + ".tmp"
+        with open(temp_file, 'w', encoding='utf-8') as f:
+            json.dump(result, f, ensure_ascii=False, indent=2)
+        os.replace(temp_file, cache_file)
+    except Exception as e:
+        print(f"Warning: Failed to save cache for patient {patient_id}: {e}")
+
+
+def load_patient_cache(patient_id: str, cache_dir: str) -> Optional[Dict]:
+    """
+    Load processed patient data from cache file.
+    
+    Args:
+        patient_id: Patient ID
+        cache_dir: Cache directory path
+    
+    Returns:
+        Cached patient data or None if not found
+    """
+    cache_file = os.path.join(cache_dir, f"patient_{patient_id}.json")
+    if not os.path.exists(cache_file):
+        return None
+    
+    try:
+        with open(cache_file, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"Warning: Failed to load cache for patient {patient_id}: {e}")
+        return None
+
+
+def load_all_cached_patients(cache_dir: str) -> Dict[str, Dict]:
+    """
+    Load all cached patient data.
+    
+    Args:
+        cache_dir: Cache directory path
+    
+    Returns:
+        Dictionary mapping patient_id to cached data
+    """
+    cached_patients = {}
+    if not os.path.exists(cache_dir):
+        return cached_patients
+    
+    try:
+        for filename in os.listdir(cache_dir):
+            if filename.startswith("patient_") and filename.endswith(".json"):
+                # Extract patient_id from filename
+                patient_id = filename[8:-5]  # Remove "patient_" prefix and ".json" suffix
+                cached_data = load_patient_cache(patient_id, cache_dir)
+                if cached_data:
+                    cached_patients[patient_id] = cached_data
+    except Exception as e:
+        print(f"Warning: Error loading cache directory: {e}")
+    
+    return cached_patients
+
+
+def _process_single_patient(
+    patient_id: str,
     input_file: str,
-    output_file: str,
+    model_name: str,
+    seed: int,
+    trigger_prob: float,
+    cache_dir: Optional[str] = None,
+) -> Optional[Dict[str, Any]]:
+    """
+    Process a single patient file.
+    
+    Args:
+        patient_id: Patient ID
+        input_file: Path to patient JSON file
+        model_name: LLM model name
+        seed: Random seed (will be offset by patient_id for determinism)
+        trigger_prob: Trigger probability
+        cache_dir: Optional cache directory
+        
+    Returns:
+        Processed patient data or None if failed
+    """
+    try:
+        # Load patient data
+        with open(input_file, "r", encoding="utf-8") as f:
+            patient_data = json.load(f)
+        
+        # Ensure patient_id is set
+        if isinstance(patient_data, dict):
+            patient_data["patient_id"] = patient_id
+        
+        # Create RNG with seed offset by patient_id for determinism
+        rng = random.Random(seed + int(patient_id) if patient_id.isdigit() else seed)
+        
+        # Process patient
+        result = _process_patient(patient_data, model_name, rng, trigger_prob)
+        
+        # Save to cache if cache_dir is provided
+        if cache_dir and result:
+            save_patient_cache(patient_id, result, cache_dir)
+        
+        return result
+    except Exception as e:
+        print(f"Error processing patient {patient_id}: {e}")
+        return None
+
+
+def process_dataset(
+    input_file: Optional[str] = None,
+    input_dir: Optional[str] = None,
+    output_file: str = None,
+    output_dir: Optional[str] = None,
     model_name: str = DEFAULT_MODEL,
     seed: int = 42,
     trigger_prob: float = 0.3,
     max_patients: Optional[int] = None,
+    workers: int = 4,
+    cache_dir: Optional[str] = None,
+    use_cache: bool = True,
 ) -> None:
-    rng = random.Random(seed)
-    data = _load_input_data(input_file)
+    """
+    Process dataset in batch mode (directory) or single file mode.
+    
+    Args:
+        input_file: Input JSON file (single file mode)
+        input_dir: Input directory containing patient JSON files (batch mode)
+        output_file: Output JSON file (single file mode or batch mode summary)
+        output_dir: Output directory for individual patient files (batch mode)
+        model_name: LLM model name
+        seed: Random seed
+        trigger_prob: Trigger probability
+        max_patients: Maximum number of patients to process
+        workers: Number of concurrent workers
+        cache_dir: Cache directory path (auto-generated if None)
+        use_cache: Whether to use cache
+    """
+    # Determine mode
+    if input_dir:
+        # Batch mode: process directory
+        _process_dataset_batch(
+            input_dir=input_dir,
+            output_file=output_file,
+            output_dir=output_dir,
+            model_name=model_name,
+            seed=seed,
+            trigger_prob=trigger_prob,
+            max_patients=max_patients,
+            workers=workers,
+            cache_dir=cache_dir,
+            use_cache=use_cache,
+        )
+    elif input_file:
+        # Single file mode: backward compatibility
+        rng = random.Random(seed)
+        data = _load_input_data(input_file)
+        if max_patients:
+            data = data[:max_patients]
+
+        processed = []
+        for patient in data:
+            processed.append(_process_patient(patient, model_name, rng, trigger_prob))
+
+        os.makedirs(os.path.dirname(output_file) if os.path.dirname(output_file) else '.', exist_ok=True)
+        with open(output_file, "w", encoding="utf-8") as f:
+            json.dump(processed, f, ensure_ascii=False, indent=2)
+    else:
+        raise ValueError("Either input_file or input_dir must be provided.")
+
+
+def _process_dataset_batch(
+    input_dir: str,
+    output_file: Optional[str] = None,
+    output_dir: Optional[str] = None,
+    model_name: str = DEFAULT_MODEL,
+    seed: int = 42,
+    trigger_prob: float = 0.3,
+    max_patients: Optional[int] = None,
+    workers: int = 4,
+    cache_dir: Optional[str] = None,
+    use_cache: bool = True,
+) -> None:
+    """
+    Process dataset in batch mode from directory.
+    """
+    # Setup cache directory
+    if cache_dir is None and use_cache:
+        if output_dir:
+            cache_dir = os.path.join(output_dir, ".cache")
+        elif output_file:
+            base_name = os.path.splitext(os.path.basename(output_file))[0]
+            cache_dir = os.path.join(os.path.dirname(output_file), f".{base_name}_cache")
+        else:
+            cache_dir = os.path.join(input_dir, ".examiner_cache")
+    
+    if use_cache:
+        os.makedirs(cache_dir, exist_ok=True)
+        print(f"Using cache directory: {cache_dir}")
+    
+    # Scan patient files
+    print(f"Scanning patient files in {input_dir}...")
+    patient_files = _scan_patient_files(input_dir)
+    print(f"Found {len(patient_files)} patient files")
+    
     if max_patients:
-        data = data[:max_patients]
-
-    processed = []
-    for patient in data:
-        processed.append(_process_patient(patient, model_name, rng, trigger_prob))
-
-    os.makedirs(os.path.dirname(output_file), exist_ok=True)
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(processed, f, ensure_ascii=False, indent=2)
+        patient_files = patient_files[:max_patients]
+        print(f"Processing first {len(patient_files)} patients...")
+    
+    # Load cached patients
+    cached_patients = {}
+    if use_cache:
+        print("Loading cached patients...")
+        cached_patients = load_all_cached_patients(cache_dir)
+        if cached_patients:
+            print(f"Found {len(cached_patients)} cached patients")
+    
+    # Filter out already processed patients
+    patients_to_process = []
+    all_processed_data = []
+    
+    for patient_id, file_path in patient_files:
+        if use_cache and patient_id in cached_patients:
+            print(f"  Using cached data for patient {patient_id}")
+            all_processed_data.append(cached_patients[patient_id])
+        else:
+            patients_to_process.append((patient_id, file_path))
+    
+    if not patients_to_process:
+        print("All patients are already processed in cache!")
+    else:
+        print(f"Processing {len(patients_to_process)} new patients with {workers} workers...")
+        
+        # Process patients in parallel
+        with concurrent.futures.ProcessPoolExecutor(max_workers=workers) as executor:
+            # Submit tasks
+            future_to_patient = {}
+            for patient_id, file_path in patients_to_process:
+                future = executor.submit(
+                    _process_single_patient,
+                    patient_id=patient_id,
+                    input_file=file_path,
+                    model_name=model_name,
+                    seed=seed,
+                    trigger_prob=trigger_prob,
+                    cache_dir=cache_dir if use_cache else None,
+                )
+                future_to_patient[future] = patient_id
+            
+            # Process results as they complete
+            for future in tqdm(concurrent.futures.as_completed(future_to_patient), total=len(patients_to_process)):
+                patient_id = future_to_patient[future]
+                try:
+                    result = future.result()
+                    if result:
+                        all_processed_data.append(result)
+                        # Save individual file if output_dir is specified
+                        if output_dir:
+                            os.makedirs(output_dir, exist_ok=True)
+                            output_file_path = os.path.join(output_dir, f"patient_{patient_id}.json")
+                            with open(output_file_path, 'w', encoding='utf-8') as f:
+                                json.dump(result, f, ensure_ascii=False, indent=2)
+                except Exception as e:
+                    print(f"  Error processing patient {patient_id}: {e}")
+    
+    # Sort results by patient_id
+    def sort_key(item):
+        pid = item.get("patient_id", "")
+        try:
+            return int(pid)
+        except ValueError:
+            return pid
+    
+    all_processed_data.sort(key=sort_key)
+    
+    # Save summary file if output_file is specified
+    if output_file:
+        print(f"\nSaving processed data to {output_file}...")
+        os.makedirs(os.path.dirname(output_file) if os.path.dirname(output_file) else '.', exist_ok=True)
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(all_processed_data, f, ensure_ascii=False, indent=2)
+    
+    print(f"Done! Processed {len(all_processed_data)} patients total")
+    if use_cache:
+        print(f"Cache saved in: {cache_dir}")
 
 
 def main():
     import argparse
+    import multiprocessing
+
+    # Set multiprocessing start method to 'spawn' for compatibility
+    try:
+        multiprocessing.set_start_method('spawn', force=True)
+    except RuntimeError:
+        # Start method may already be set, which is fine
+        pass
 
     parser = argparse.ArgumentParser(
         description="Generate memory_query with Examiner Agent for carecall dataset."
@@ -378,14 +707,26 @@ def main():
     parser.add_argument(
         "--input_file",
         type=str,
-        required=True,
-        help="Input JSON file (raw carecall cache or list of patients).",
+        default=None,
+        help="Input JSON file (single file mode). Mutually exclusive with --input_dir.",
+    )
+    parser.add_argument(
+        "--input_dir",
+        type=str,
+        default=None,
+        help="Input directory containing patient JSON files (batch mode). Mutually exclusive with --input_file.",
     )
     parser.add_argument(
         "--output_file",
         type=str,
-        required=True,
-        help="Output JSON file with memory_query added.",
+        default=None,
+        help="Output JSON file (summary file in batch mode).",
+    )
+    parser.add_argument(
+        "--output_dir",
+        type=str,
+        default=None,
+        help="Output directory for individual patient files (batch mode).",
     )
     parser.add_argument(
         "--model_name",
@@ -411,14 +752,47 @@ def main():
         default=None,
         help="Optional max patients to process.",
     )
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=4,
+        help="Number of concurrent workers (batch mode only).",
+    )
+    parser.add_argument(
+        "--cache_dir",
+        type=str,
+        default=None,
+        help="Cache directory path (auto-generated if not specified).",
+    )
+    parser.add_argument(
+        "--no_cache",
+        action="store_true",
+        help="Disable cache (don't use or save cache).",
+    )
     args = parser.parse_args()
+    
+    # Validate arguments
+    if not args.input_file and not args.input_dir:
+        parser.error("Either --input_file or --input_dir must be provided.")
+    if args.input_file and args.input_dir:
+        parser.error("--input_file and --input_dir are mutually exclusive.")
+    if args.input_file and not args.output_file:
+        parser.error("In single file mode (--input_file), --output_file must be provided.")
+    if args.input_dir and not args.output_file and not args.output_dir:
+        parser.error("In batch mode (--input_dir), either --output_file or --output_dir must be provided.")
+    
     process_dataset(
         input_file=args.input_file,
+        input_dir=args.input_dir,
         output_file=args.output_file,
+        output_dir=args.output_dir,
         model_name=args.model_name,
         seed=args.seed,
         trigger_prob=args.trigger_prob,
         max_patients=args.max_patients,
+        workers=args.workers,
+        cache_dir=args.cache_dir,
+        use_cache=not args.no_cache,
     )
 
 
