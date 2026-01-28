@@ -367,6 +367,7 @@ def compute_score(
     Returns:
         Score (0.0 to 1.0)
     """
+    print(f"Input solution_str: {solution_str}")
     if solution_str is None or extra_info is None:
         return 0.0
     
@@ -407,7 +408,7 @@ def compute_score(
     
     # Combined score: 50% consistency, 50% coverage
     final_score = 0.5 * consistency_score + 0.5 * coverage_score
-    
+    print(f"Output final_score: {final_score}")
     return final_score
 
 

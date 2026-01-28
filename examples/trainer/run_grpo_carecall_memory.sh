@@ -38,10 +38,10 @@ export TRANSFORMERS_OFFLINE=1
 python3 -m agent_r1.src.main_agent \
     data.train_files=['examples/dataset/carecall/carecall_train_v1.parquet'] \
     data.val_files=['examples/dataset/carecall/carecall_train_v1.parquet'] \
-    data.train_batch_size=64 \
+    data.train_batch_size=32 \
     data.max_prompt_length=8192 \
     data.max_response_length=8192 \
-    data.max_response_length_single_turn=8192 \
+    data.max_response_length_single_turn=1024 \
     data.use_default_tool_template=False \
     data.reward_fn_key='data_source' \
     actor_rollout_ref.model.path=$BASE_MODEL \
@@ -60,7 +60,7 @@ python3 -m agent_r1.src.main_agent \
     actor_rollout_ref.rollout.name=vllm \
     actor_rollout_ref.rollout.stop_token_ids=[] \
     actor_rollout_ref.rollout.gpu_memory_utilization=0.6 \
-    actor_rollout_ref.rollout.n_repeat=5 \
+    actor_rollout_ref.rollout.n_repeat=4 \
     actor_rollout_ref.ref.log_prob_micro_batch_size_per_gpu=1 \
     actor_rollout_ref.ref.fsdp_config.param_offload=True \
     algorithm.adv_estimator=grpo \

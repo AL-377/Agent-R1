@@ -454,7 +454,9 @@ def compute_score_format(solution_str: str) -> float:
     Returns:
         Format score (0.0 to 1.0)
     """
+    print(f"Input solution_str: {solution_str}")
     operations = extract_memory_operations(solution_str)
+    print(f"Output operations: {operations}")
     return verify_format(solution_str, operations)
 
 
