@@ -25,7 +25,7 @@ if [ -z "$BASE_MODEL" ]; then
   fi
 fi
 export PROJECT_NAME='carecall-memory'
-export EXPERIMENT_NAME=grpo-carecall-memory-qwen2.5-3b
+export EXPERIMENT_NAME=grpo-carecall-memory-qwen2.5-3b-cliph2.8
 export SWANLAB_API_KEY=IQLCKdLdPp6ZTpRFBqRgM
 
 # Local model
@@ -35,13 +35,15 @@ export HF_HOME=/home/tiger/.cache/huggingface
 export HF_HUB_OFFLINE=1
 export TRANSFORMERS_OFFLINE=1
 
+DEFAULT_CHECKPOINT_DIR=/mnt/hdfs/ljt/models/qwen/ckpts/${PROJECT_NAME}/${EXPERIMENT_NAME}
+
 python3 -m agent_r1.src.main_agent \
     data.train_files=['examples/dataset/carecall/carecall_train_v1.parquet'] \
     data.val_files=['examples/dataset/carecall/carecall_train_v1.parquet'] \
     data.train_batch_size=32 \
     data.max_prompt_length=8192 \
     data.max_response_length=8192 \
-    data.max_response_length_single_turn=1024 \
+    data.max_response_length_single_turn=8192 \
     data.use_default_tool_template=False \
     data.reward_fn_key='data_source' \
     actor_rollout_ref.model.path=$BASE_MODEL \
@@ -54,6 +56,7 @@ python3 -m agent_r1.src.main_agent \
     actor_rollout_ref.actor.fsdp_config.optimizer_offload=False \
     actor_rollout_ref.actor.use_kl_loss=True \
     actor_rollout_ref.actor.kl_loss_coef=0.001 \
+    actor_rollout_ref.actor.clip_ratio_high=0.28 \
     actor_rollout_ref.rollout.log_prob_micro_batch_size_per_gpu=1 \
     actor_rollout_ref.rollout.tensor_model_parallel_size=8 \
     actor_rollout_ref.rollout.dtype=float16 \
@@ -71,7 +74,8 @@ python3 -m agent_r1.src.main_agent \
     trainer.experiment_name=$EXPERIMENT_NAME \
     trainer.n_gpus_per_node=8 \
     trainer.nnodes=1 \
-    trainer.save_freq=-1 \
+    trainer.save_freq=5 \
+    trainer.default_local_dir=${DEFAULT_CHECKPOINT_DIR} \
     trainer.test_freq=-1 \
     trainer.total_epochs=10 \
     trainer.val_before_train=False \

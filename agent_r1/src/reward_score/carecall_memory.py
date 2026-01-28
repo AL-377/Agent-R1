@@ -389,8 +389,8 @@ def compute_score(
         print(f"Error executing memory operations: {e}")
         return 0.0
     
-    # Check memory coverage
-    coverage_score = check_memory_coverage(after_memory_base, supposed_new_memory_things)
+    # Check memory coverage TODO: 目前先不检查coverage
+    # coverage_score = check_memory_coverage(after_memory_base, supposed_new_memory_things)
     
     # Verify with chat model and judge
     chat_answer = verify_with_chat_model(
@@ -399,15 +399,20 @@ def compute_score(
         chat_model_func,
         chat_model_name
     )
+    print(f"chat_answer: {chat_answer}")
+
     consistency_score = judge_answer_consistency(
         chat_answer,
         ground_truth or memory_query.get("answer", ""),
         judge_model_func,
         judge_model_name
     )
+    print(f"consistency_score: {consistency_score}")
     
     # Combined score: 50% consistency, 50% coverage
-    final_score = 0.5 * consistency_score + 0.5 * coverage_score
+    # final_score = 0.5 * consistency_score + 0.5 * coverage_score
+    final_score = consistency_score
+
     print(f"Output final_score: {final_score}")
     return final_score
 
