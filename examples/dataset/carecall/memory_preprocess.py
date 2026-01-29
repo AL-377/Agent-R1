@@ -411,7 +411,7 @@ def format_memory_state(memory_state: Dict[str, Any]) -> str:
             for item in items:
                 item_id = item.get("id", "unknown")
                 content = item.get("content", "")
-                lines.append(f"  - [{item_id[:8]}] {content}")
+                lines.append(f"  - [{item_id}] {content}")
     
     return "\n".join(lines) if lines else "No memories stored yet."
 

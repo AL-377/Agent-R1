@@ -39,8 +39,8 @@ DEFAULT_CHECKPOINT_DIR=/mnt/hdfs/ljt/models/qwen/ckpts/${PROJECT_NAME}/${EXPERIM
 DEFAULT_CASES_DIR=/mnt/hdfs/ljt/models/qwen/cases/${PROJECT_NAME}/${EXPERIMENT_NAME}
 
 python3 -m agent_r1.src.main_agent \
-    data.train_files=['examples/dataset/carecall/carecall_train_v1.parquet'] \
-    data.val_files=['examples/dataset/carecall/carecall_train_v1.parquet'] \
+    data.train_files=['examples/dataset/carecall/carecall_train_v1_fix_memory_state.parquet'] \
+    data.val_files=['examples/dataset/carecall/carecall_train_v1_fix_memory_state.parquet'] \
     data.train_batch_size=32 \
     data.max_prompt_length=8192 \
     data.max_response_length=8192 \

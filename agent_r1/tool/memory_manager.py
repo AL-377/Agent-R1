@@ -377,7 +377,7 @@ class MemoryManager:
             if len(memory_items) > 0:
                 summary_parts.append(f"\n{layer_name.upper()} MEMORY ({len(memory_items)} items):")
                 for item in memory_items[-5:]:  # Show last 5 items
-                    summary_parts.append(f"  - [{item.id[:8]}] {item.content[:100]}...")
+                    summary_parts.append(f"  - [{item.id}] {item.content[:100]}...")
         
         return "\n".join(summary_parts) if summary_parts else "No memories stored yet."
     
