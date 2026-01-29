@@ -63,6 +63,7 @@ def _default_compute_score_format_answer(data_source, solution_str, ground_truth
         return float(res[0])
     
 def _default_compute_score(data_source, solution_str, ground_truth, extra_info=None):
+    # 最后reward tensor 赋值来自score
     return {
         "score": _default_compute_score_format_answer(data_source, solution_str, ground_truth, extra_info),
         "acc": _default_compute_score_answer(data_source, solution_str, ground_truth, extra_info),
