@@ -392,17 +392,19 @@ Answer 1: {chat_answer}
 Answer 2: {ground_truth_answer}
 
 Are these answers consistent? Respond with only "Yes" or "No"."""
+        print(f"Calling judge model function with prompt: {judge_prompt}")
         
         result = query_llm_inhouse(
             model_name=judge_model_name,
             messages=judge_prompt,
             system="You are a judge that determines if two answers are consistent (meaning the same thing). Respond with only 'Yes' or 'No'.",
             temperature=0.0,
-            max_tokens=50
+            max_tokens=1024
         )
         
         response = result.get('response', 'No').strip()
         response_lower = response.lower().strip()
+        print(f"Judge model response: {response_lower}")
         
         if "yes" in response_lower:
             return 1.0

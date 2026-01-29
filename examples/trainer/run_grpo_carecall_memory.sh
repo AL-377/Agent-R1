@@ -67,7 +67,7 @@ python3 -m agent_r1.src.main_agent \
     actor_rollout_ref.rollout.n_repeat=4 \
     actor_rollout_ref.ref.log_prob_micro_batch_size_per_gpu=1 \
     actor_rollout_ref.ref.fsdp_config.param_offload=True \
-    actor_rollout_ref.actor.checkpoint.contents=['model', 'optimizer', 'extra','hf_model'] \
+    actor_rollout_ref.actor.checkpoint.contents=['model','optimizer','extra','hf_model'] \
     algorithm.adv_estimator=grpo \
     algorithm.kl_ctrl.kl_coef=0.001 \
     algorithm.use_kl_in_reward=False \

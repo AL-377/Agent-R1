@@ -401,7 +401,7 @@ def compute_score(
     chat_model_func: Optional[callable] = None,
     judge_model_func: Optional[callable] = None,
     chat_model_name: str = "gpt-4o-2024-11-20",
-    judge_model_name: str = "DeepSeek-R1"
+    judge_model_name: str = "gpt-4o-2024-11-20"
 ) -> float:
     """
     Main scoring function for memory model verification
@@ -413,7 +413,7 @@ def compute_score(
         chat_model_func: Optional function to call chat model (for CareCall workflow)
         judge_model_func: Optional function to call judge model (for CareCall workflow)
         chat_model_name: Model name for chat (default: "gpt-4o-2024-11-20")
-        judge_model_name: Model name for judge (default: "DeepSeek-R1")
+        judge_model_name: Model name for judge (default: "gpt-4o-2024-11-20")
     
     Returns:
         Score (0.0 to 1.0)
