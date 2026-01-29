@@ -12,6 +12,7 @@ import re
 import json
 from typing import Dict, List, Any, Optional, Tuple
 import copy
+from jsonschema import validate, ValidationError
 
 # Note: We implement memory operations directly without MemoryManager
 # to preserve original memory IDs for verification
@@ -25,7 +26,15 @@ def extract_memory_operations(solution_str: str) -> List[Dict[str, Any]]:
         solution_str: Solution string containing tool calls
     
     Returns:
-        List of memory operation dictionaries
+        List of memory operation dictionaries with format:
+        [
+            {
+                "action": "memory_insert",
+                "arguments": {...},
+                "raw_tool_call": {...}  # Original tool call dict for validation
+            },
+            ...
+        ]
     """
     operations = []
     
@@ -39,12 +48,122 @@ def extract_memory_operations(solution_str: str) -> List[Dict[str, Any]]:
             if "name" in tool_call and tool_call["name"].startswith("memory_"):
                 operations.append({
                     "action": tool_call["name"],
-                    "arguments": tool_call.get("arguments", {})
+                    "arguments": tool_call.get("arguments", {}),
+                    "raw_tool_call": tool_call  # Keep original for validation
                 })
         except json.JSONDecodeError:
             continue
     
     return operations
+
+
+def get_memory_action_schemas() -> Dict[str, Dict]:
+    """
+    Get JSON schemas for all memory actions (standard function calling format)
+    
+    Returns:
+        Dictionary mapping action names to their JSON schemas
+    """
+    return {
+        "memory_insert": {
+            "type": "object",
+            "properties": {
+                "layer": {
+                    "type": "string",
+                    "enum": ["working", "identity", "history", "experience"]
+                },
+                "content": {
+                    "type": "string"
+                },
+                "metadata": {
+                    "type": "object",
+                    "additionalProperties": True
+                }
+            },
+            "required": ["layer", "content"],
+            "additionalProperties": False
+        },
+        "memory_update": {
+            "type": "object",
+            "properties": {
+                "layer": {
+                    "type": "string",
+                    "enum": ["working", "identity", "history", "experience"]
+                },
+                "memory_id": {
+                    "type": "string"
+                },
+                "content": {
+                    "type": "string"
+                },
+                "metadata": {
+                    "type": "object",
+                    "additionalProperties": True
+                }
+            },
+            "required": ["layer", "memory_id", "content"],
+            "additionalProperties": False
+        },
+        "memory_delete": {
+            "type": "object",
+            "properties": {
+                "layer": {
+                    "type": "string",
+                    "enum": ["working", "identity", "history", "experience"]
+                },
+                "memory_id": {
+                    "type": "string"
+                }
+            },
+            "required": ["layer", "memory_id"],
+            "additionalProperties": False
+        },
+        "memory_wait": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": False
+        }
+    }
+
+
+def validate_memory_operations(operations: List[Dict[str, Any]]) -> float:
+    """
+    Validate memory operations using jsonschema (standard function calling format)
+    
+    Args:
+        operations: List of memory operation dictionaries from extract_memory_operations
+    
+    Returns:
+        Validation score: 1.0 if all operations are valid, 0.0 otherwise
+    """
+    if not operations:
+        return 0.0
+    
+    schemas = get_memory_action_schemas()
+    
+    for op in operations:
+        action = op.get("action")
+        arguments = op.get("arguments", {})
+        
+        # Check if action is valid
+        if action not in schemas:
+            print(f"Invalid action: {action}")
+            return 0.0
+        
+        # Get schema for this action
+        schema = schemas[action]
+        
+        # Validate arguments against schema
+        try:
+            validate(instance=arguments, schema=schema)
+        except ValidationError as e:
+            print(f"Validation failed for {action}: {e.message}")
+            print(f"Arguments: {arguments}")
+            return 0.0
+    
+    # All operations passed validation
+    return 1.0
 
 
 def execute_memory_operations(
@@ -374,6 +493,14 @@ def compute_score(
     
     # Extract memory operations
     operations = extract_memory_operations(solution_str)
+    
+    # Validate operations using jsonschema (standard function calling format)
+    validation_score = validate_memory_operations(operations)
+    print(f"Validation score (jsonschema): {validation_score}")
+    
+    # If validation fails, return 0.0 immediately
+    if validation_score == 0.0:
+        return 0.0
     
     # Get memory_state and other info
     previous_memory = json.loads(extra_info.get("memory_state",{}))
