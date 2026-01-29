@@ -449,10 +449,14 @@ def compute_score_format(solution_str: str) -> float:
     Returns:
         Format score (0.0 to 1.0)
     """
-    print(f"Input solution_str: {solution_str}")
-    operations = extract_memory_operations(solution_str)
-    print(f"Output operations: {operations}")
-    return verify_format(solution_str, operations)
+    try:
+        from . import carecall_memory
+        return carecall_memory.compute_score_format(
+            solution_str
+        )
+    except Exception as e:
+        print(f"Error using CareCall memory scoring: {e}, falling back to standard scoring")
+        return 0.0
 
 
 def compute_score_operations(

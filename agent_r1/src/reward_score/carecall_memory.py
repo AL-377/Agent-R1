@@ -555,31 +555,14 @@ def compute_score_format(solution_str: str) -> float:
     Returns:
         Format score (0.0 to 1.0)
     """
+    # Extract memory operations
     operations = extract_memory_operations(solution_str)
     
-    if not operations:
-        return 0.3  # Some score for having output
+    # Validate operations using jsonschema (standard function calling format)
+    validation_score = validate_memory_operations(operations)
+    print(f"Validation score (jsonschema): {validation_score}")
     
-    # Check format validity
-    valid_ops = 0
-    for op in operations:
-        action = op.get("action")
-        args = op.get("arguments", {})
-        
-        if action in ["memory_insert", "memory_update", "memory_delete", "memory_wait"]:
-            if action == "memory_wait" or "arguments" in op:
-                valid_ops += 1
-    
-    format_score = valid_ops / len(operations) if operations else 0.0
-    
-    # Check for thought/reasoning
-    thought_pattern = re.compile(r'<think>(.*?)</think>', re.DOTALL)
-    has_thought = bool(thought_pattern.search(solution_str))
-    
-    if has_thought:
-        format_score = min(1.0, format_score + 0.2)
-    
-    return format_score
+    return validation_score
 
 
 def compute_score_operations(
