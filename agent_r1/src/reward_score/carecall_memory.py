@@ -193,6 +193,7 @@ Answer:"""
     if chat_model_func is not None:
         # Use provided function
         try:
+            print(f"Calling chat model function with prompt: {prompt}")
             answer = chat_model_func(prompt)
             return answer
         except Exception as e:
@@ -243,10 +244,10 @@ Answer 1: {chat_answer}
 Answer 2: {ground_truth_answer}
 
 Are these answers consistent? Respond with only "Yes" or "No"."""
-            
+            print(f"Calling judge model function with prompt: {judge_prompt}")
             response = judge_model_func(judge_prompt)
             response_lower = response.lower().strip()
-            
+            print(f"Judge model response: {response_lower}")
             if "yes" in response_lower:
                 return 1.0
             elif "no" in response_lower:
@@ -375,7 +376,7 @@ def compute_score(
     operations = extract_memory_operations(solution_str)
     
     # Get memory_state and other info
-    previous_memory = json.loads(extra_info.get("memory_state"))
+    previous_memory = json.loads(extra_info.get("memory_state",{}))
     memory_query = extra_info.get("memory_query")
     supposed_new_memory_things = extra_info.get("supposed_new_memory_things", [])
     

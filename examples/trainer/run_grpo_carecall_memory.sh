@@ -36,6 +36,7 @@ export HF_HUB_OFFLINE=1
 export TRANSFORMERS_OFFLINE=1
 
 DEFAULT_CHECKPOINT_DIR=/mnt/hdfs/ljt/models/qwen/ckpts/${PROJECT_NAME}/${EXPERIMENT_NAME}
+DEFAULT_CASES_DIR=/mnt/hdfs/ljt/models/qwen/cases/${PROJECT_NAME}/${EXPERIMENT_NAME}
 
 python3 -m agent_r1.src.main_agent \
     data.train_files=['examples/dataset/carecall/carecall_train_v1.parquet'] \
@@ -76,6 +77,7 @@ python3 -m agent_r1.src.main_agent \
     trainer.nnodes=1 \
     trainer.save_freq=5 \
     trainer.default_local_dir=${DEFAULT_CHECKPOINT_DIR} \
+    trainer.rollout_data_dir=${DEFAULT_CASES_DIR} \
     trainer.test_freq=-1 \
     trainer.total_epochs=10 \
     trainer.val_before_train=False \
