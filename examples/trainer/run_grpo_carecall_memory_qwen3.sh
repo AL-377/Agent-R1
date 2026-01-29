@@ -17,15 +17,15 @@ ray stop --force 2>/dev/null || true
 sleep 2
 
 if [ -z "$BASE_MODEL" ]; then
-  LOCAL_QWEN_MODEL="/home/tiger/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1"
+  LOCAL_QWEN_MODEL="/home/tiger/.cache/huggingface/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554"
   if [ -d "$LOCAL_QWEN_MODEL" ]; then
     BASE_MODEL="$LOCAL_QWEN_MODEL"
   else
-    BASE_MODEL="Qwen/Qwen2.5-3B-Instruct"
+    BASE_MODEL="Qwen/Qwen3-4B-Instruct-2507"
   fi
 fi
 export PROJECT_NAME='carecall-memory'
-export EXPERIMENT_NAME=grpo-carecall-memory-qwen2.5-3b-cliph2.8-fix-format-score
+export EXPERIMENT_NAME=grpo-carecall-memory-qwen3-4b-cliph2.8-fix-format-score
 export SWANLAB_API_KEY=IQLCKdLdPp6ZTpRFBqRgM
 
 # Local model
@@ -67,7 +67,7 @@ python3 -m agent_r1.src.main_agent \
     actor_rollout_ref.rollout.n_repeat=4 \
     actor_rollout_ref.ref.log_prob_micro_batch_size_per_gpu=1 \
     actor_rollout_ref.ref.fsdp_config.param_offload=True \
-    actor_rollout_ref.actor.checkpoint.contents=['model','optimizer','extra','hf_model'] \
+    actor_rollout_ref.actor.checkpoint.contents=['model','optimizer','extra'] \
     algorithm.adv_estimator=grpo \
     algorithm.kl_ctrl.kl_coef=0.001 \
     algorithm.use_kl_in_reward=False \
