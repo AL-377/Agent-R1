@@ -110,7 +110,7 @@ def verify_memory_operations(
     if extra_info is not None:
         expected_operations = extra_info.get("expected_operations", [])
         dialogue_context = extra_info.get("dialogue_context", "")
-        memory_state = extra_info.get("memory_state", {})
+        memory_state = json.loads(extra_info.get("memory_state", "{}"))
         
         operation_score, operation_details = verify_operations_correctness(
             operations=operations,
@@ -401,7 +401,7 @@ def compute_score(
     chat_model_func: Optional[callable] = None,
     judge_model_func: Optional[callable] = None,
     chat_model_name: str = "gpt-4o-2024-11-20",
-    judge_model_name: str = "DeepSeek-R1"
+    judge_model_name: str = "gpt-4o-2024-11-20"
 ) -> float:
     """
     Main scoring function for memory model verification
@@ -413,35 +413,30 @@ def compute_score(
         chat_model_func: Optional function to call chat model (for CareCall workflow)
         judge_model_func: Optional function to call judge model (for CareCall workflow)
         chat_model_name: Model name for chat (default: "gpt-4o-2024-11-20")
-        judge_model_name: Model name for judge (default: "DeepSeek-R1")
+        judge_model_name: Model name for judge (default: "gpt-4o-2024-11-20")
     
     Returns:
         Score (0.0 to 1.0)
     """
     # If we have memory_query, use CareCall workflow (with or without custom functions)
-    if extra_info:
-        memory_query = extra_info.get("memory_query")
-        previous_memory = extra_info.get("previous_memory") or extra_info.get("memory_state")
-        supposed_new_memory_things = extra_info.get("supposed_new_memory_things", [])
-        
-        if memory_query and previous_memory:
-            try:
-                from . import carecall_memory
-                return carecall_memory.compute_score(
-                    solution_str,
-                    ground_truth,
-                    extra_info,
-                    chat_model_func,
-                    judge_model_func,
-                    chat_model_name,
-                    judge_model_name
-                )
-            except Exception as e:
-                print(f"Error using CareCall memory scoring: {e}, falling back to standard scoring")
+    memory_query = extra_info.get("memory_query")
+    previous_memory = json.loads(extra_info.get("memory_state"))
+    supposed_new_memory_things = extra_info.get("supposed_new_memory_things", [])
     
-    # Standard scoring
-    result = verify_memory_operations(solution_str, ground_truth, extra_info)
-    return result["score"]
+    try:
+        from . import carecall_memory
+        return carecall_memory.compute_score(
+            solution_str,
+            ground_truth,
+            extra_info,
+            chat_model_func,
+            judge_model_func,
+            chat_model_name,
+            judge_model_name
+        )
+    except Exception as e:
+        print(f"Error using CareCall memory scoring: {e}, falling back to standard scoring")
+        return 0.0
 
 
 def compute_score_format(solution_str: str) -> float:
@@ -454,8 +449,14 @@ def compute_score_format(solution_str: str) -> float:
     Returns:
         Format score (0.0 to 1.0)
     """
-    operations = extract_memory_operations(solution_str)
-    return verify_format(solution_str, operations)
+    try:
+        from . import carecall_memory
+        return carecall_memory.compute_score_format(
+            solution_str
+        )
+    except Exception as e:
+        print(f"Error using CareCall memory scoring: {e}, falling back to standard scoring")
+        return 0.0
 
 
 def compute_score_operations(
@@ -473,13 +474,14 @@ def compute_score_operations(
     
     Returns:
         Operations score (0.0 to 1.0)
+    TODO: 修复
     """
     operations = extract_memory_operations(solution_str)
     
     if extra_info is not None:
         expected_operations = extra_info.get("expected_operations", [])
         dialogue_context = extra_info.get("dialogue_context", "")
-        memory_state = extra_info.get("memory_state", {})
+        memory_state = json.loads(extra_info.get("memory_state", "{}"))
         
         score, _ = verify_operations_correctness(
             operations=operations,

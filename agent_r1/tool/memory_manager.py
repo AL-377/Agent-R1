@@ -87,11 +87,19 @@ class MemoryManager:
     def _init_embedding_model(self):
         """Initialize the embedding model"""
         print(f"[MemoryManager] Loading embedding model: {self.embedding_model_name}")
-        self.model = FlagAutoModel.from_finetuned(
-            self.embedding_model_name,
-            query_instruction_for_retrieval="Represent this sentence for searching relevant passages: ",
-            devices=self.device,
-        )
+        model_kwargs = {
+            "query_instruction_for_retrieval": "Represent this sentence for searching relevant passages: ",
+            "devices": self.device,
+        }
+        local_files_only = os.environ.get("MEMORY_EMBEDDING_LOCAL_ONLY")
+        if local_files_only is not None:
+            model_kwargs["local_files_only"] = local_files_only.lower() in {"1", "true", "yes"}
+        model_class = os.environ.get("MEMORY_EMBEDDING_MODEL_CLASS")
+        if model_class:
+            model_kwargs["model_class"] = model_class
+        self.model = FlagAutoModel.from_finetuned(self.embedding_model_name, **model_kwargs)
+
+
         # Get embedding dimension (typically 1024 for bge-large-en-v1.5)
         test_embedding = self.model.encode_queries(["test"])
         self.embedding_dim = test_embedding.shape[1]
@@ -369,7 +377,7 @@ class MemoryManager:
             if len(memory_items) > 0:
                 summary_parts.append(f"\n{layer_name.upper()} MEMORY ({len(memory_items)} items):")
                 for item in memory_items[-5:]:  # Show last 5 items
-                    summary_parts.append(f"  - [{item.id[:8]}] {item.content[:100]}...")
+                    summary_parts.append(f"  - [{item.id}] {item.content[:100]}...")
         
         return "\n".join(summary_parts) if summary_parts else "No memories stored yet."
     

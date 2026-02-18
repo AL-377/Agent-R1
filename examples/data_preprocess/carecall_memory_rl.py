@@ -170,7 +170,7 @@ def format_dialogue_context(
     """
     dialogue_lines = []
     
-    for i in range(query_position):
+    for i in range(query_position+1):
         msg = consultation[i]
         if "assistant" in msg:
             content = msg["assistant"].get("content", "")
@@ -199,7 +199,7 @@ def format_memory_state(memory_state: Dict[str, Any]) -> str:
             for item in items:
                 item_id = item.get("id", "unknown")
                 content = item.get("content", "")
-                lines.append(f"  - [{item_id[:8]}] {content}")
+                lines.append(f"  - [{item_id}] {content}")
     
     return "\n".join(lines) if lines else "No memories stored yet."
 
@@ -285,14 +285,83 @@ Current Memory State:
 {memory_text}
 
 Based on the dialogue context and current memory state, decide what memory operations (if any) are needed.
-You can:
-1. Insert new memory entries (memory_insert)
-2. Update existing memory entries (memory_update)
-3. Delete memory entries (memory_delete)
-4. Wait if no operation is needed (memory_wait)
 
-Think about what information should be stored or updated, then perform the appropriate memory operations.
-Your response should start with <think> for your thinking process, followed by the memory operations."""
+MEMORY LAYERS:
+- working: Current dialogue key information (temporary, session-specific). Store patient basic info, current symptoms, examination results, diagnosis conclusions that are relevant to the current consultation session.
+- identity: Patient identity and basic information layer (permanent patient characteristics). Store patient name, age, gender, occupation, and other stable personal information.
+- history: Historical diagnosis and medical history layer (past medical events). Store past diagnoses, medical history, previous treatments, chronic conditions, and historical medical events.
+- experience: Clinical experience and case layer (general medical knowledge). Store clinical observations, treatment patterns, and general medical knowledge that can be referenced for future cases.
+
+AVAILABLE MEMORY TOOLS:
+1. memory_insert(layer, content, metadata=None)
+   - Insert a new memory entry into the specified memory layer
+   - Parameters:
+     * layer: One of "working", "identity", "history", or "experience"
+     * content: Memory content to store (text format)
+     * metadata: Optional metadata dictionary (can be omitted)
+   - Use when: Adding new information that doesn't exist in current memory
+
+2. memory_update(layer, memory_id, content, metadata=None)
+   - Update an existing memory entry
+   - Parameters:
+     * layer: One of "working", "identity", "history", or "experience"
+     * memory_id: The ID of the memory item to update (must exist in current memory state)
+     * content: New content to replace the existing content
+     * metadata: Optional metadata dictionary (can be omitted)
+   - Use when: Information needs to be updated or corrected
+
+3. memory_delete(layer, memory_id)
+   - Delete an existing memory entry
+   - Parameters:
+     * layer: One of "working", "identity", "history", or "experience"
+     * memory_id: The ID of the memory item to delete (must exist in current memory state)
+   - Use when: Information is no longer valid or should be removed
+
+4. memory_wait()
+   - No memory operation needed
+   - Parameters: None
+   - Use when: The information is already in the memory and no update is needed, or no memory operation is required
+
+OUTPUT FORMAT:
+Your response must follow this exact format:
+
+1. Start with your thinking process in <think> tags:
+   <think>
+   [Your thinking about what memory operations are needed based on the dialogue context and current memory state]
+   </think>
+
+2. Then provide memory operations using <tool_call> tags. Each operation should be in a separate <tool_call> block:
+   <tool_call>
+   {{
+     "name": "memory_insert",
+     "arguments": {{
+       "layer": "working",
+       "content": "Patient reports headache and nausea"
+     }}
+   }}
+   </tool_call>
+   
+   <tool_call>
+   {{
+     "name": "memory_update",
+     "arguments": {{
+       "layer": "identity",
+       "memory_id": "abc123...",
+       "content": "Patient name is John, age 45"
+     }}
+   }}
+   </tool_call>
+
+IMPORTANT GUIDELINES:
+- Analyze the dialogue context carefully to identify what information should be stored
+- Check the current memory state to see if information already exists (if so, use memory_update or memory_wait)
+- For memory_update and memory_delete, you MUST provide a valid memory_id from the current memory state
+- You can output multiple memory operations if needed
+- If no memory operation is needed, use memory_wait
+- Each tool_call must be valid JSON format
+- The layer must be one of: "working", "identity", "history", or "experience"
+
+Think about what information should be stored or updated, then perform the appropriate memory operations."""
 
             # Create training sample
             sample = {
@@ -311,9 +380,8 @@ Your response should start with <think> for your thinking process, followed by t
                     "consultation_idx": consult_idx,
                     "message_idx": msg_idx,
                     "dialogue_context": dialogue_context,
-                    "memory_state": previous_memory,
-                    "previous_memory": previous_memory,  # Alias for compatibility
-                    "oracle_memory_base": oracle_memory_base,
+                    "memory_state": json.dumps(previous_memory, ensure_ascii=False),
+                    "oracle_memory_base": json.dumps(oracle_memory_base, ensure_ascii=False),
                     "memory_query": memory_query,
                     "supposed_new_memory_things": [
                         {"layer": layer, "id": mem_id}
@@ -379,7 +447,7 @@ def process_dataset(
     # Save to parquet
     if all_samples:
         df = pd.DataFrame(all_samples)
-        df.to_parquet(output_file, index=False)
+        df.to_parquet(output_file, index=False, engine="pyarrow",row_group_size=4)
         print(f"\nTotal: {len(all_samples)} training samples saved to {output_file}")
     else:
         print("No samples generated!")

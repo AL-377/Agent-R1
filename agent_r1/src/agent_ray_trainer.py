@@ -1026,10 +1026,12 @@ class RayAgentTrainer(object):
 
                 with _timer("step", timing_raw):
                     with _timer("gen", timing_raw):
+                        print("Start gen_batch_output")
                         gen_batch_output = generation_manager.run_llm_loop(
                             gen_batch=gen_batch,
                             env=self.env,
                         )
+                        print("Finish gen_batch_output")
 
                     # for key in gen_batch_output.batch.keys():
                     #     gen_batch_output.batch[key] = gen_batch_output.batch[key].long()
@@ -1052,13 +1054,16 @@ class RayAgentTrainer(object):
                             del gen_baseline_batch, gen_baseline_output
 
                     batch = batch.union(gen_batch_output)
-
+                    print("Begin compute_response_mask")
                     batch.batch["response_mask"] = compute_response_mask(batch)
+                    print("Finish compute_response_mask")
                     # balance the number of valid tokens on each dp rank.
                     # Note that this breaks the order of data inside the batch.
                     # Please take care when you implement group based adv computation such as GRPO and rloo
+                    print("Begin _balance_batch")
                     if self.config.trainer.balance_batch:
                         self._balance_batch(batch, metrics=metrics)
+                    print("Finish _balance_batch")
 
                     # compute global_valid tokens
                     batch.meta_info["global_token_num"] = torch.sum(batch.batch["attention_mask"], dim=-1).tolist()
@@ -1066,6 +1071,7 @@ class RayAgentTrainer(object):
                     # Create action mask
                     batch, metrics = self._create_action_mask(batch, metrics)
                     
+                    print("Begin compute_reward")
                     with _timer("reward", timing_raw):
                         # compute reward model score
                         if self.use_rm:
@@ -1076,7 +1082,10 @@ class RayAgentTrainer(object):
                             future_reward = compute_reward_async.remote(batch, self.config, self.tokenizer)
                         else:
                             reward_tensor, reward_extra_infos_dict = compute_reward(batch, self.reward_fn)
+                    print("Finish compute_reward")
 
+
+                    print("Begin compute_old_log_prob")
                     # recompute old_log_probs
                     with _timer("old_log_prob", timing_raw):
                         old_log_prob = self.actor_rollout_wg.compute_log_prob(batch)
@@ -1088,7 +1097,8 @@ class RayAgentTrainer(object):
                         metrics.update(old_log_prob_metrics)
                         old_log_prob.batch.pop("entropys")
                         batch = batch.union(old_log_prob)
-
+                    print("Finish compute_old_log_prob")
+                    
                     # for key in batch.batch.keys():
                     #     if key != "old_log_probs":
                     #         batch.batch[key] = batch.batch[key].long()
@@ -1135,7 +1145,7 @@ class RayAgentTrainer(object):
                         # compute advantages, executed on the driver process
 
                         norm_adv_by_std_in_grpo = self.config.algorithm.get("norm_adv_by_std_in_grpo", True)  # GRPO adv normalization factor
-
+                        print("Begin compute_advantage")
                         batch = compute_advantage(
                             batch,
                             adv_estimator=self.config.algorithm.adv_estimator,
@@ -1145,6 +1155,7 @@ class RayAgentTrainer(object):
                             norm_adv_by_std_in_grpo=norm_adv_by_std_in_grpo,
                             multi_turn=self.config.actor_rollout_ref.rollout.multi_turn.enable,
                         )
+                        print("Finish compute_advantage")
 
                     # update critic
                     if self.use_critic:

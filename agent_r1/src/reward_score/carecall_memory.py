@@ -12,6 +12,7 @@ import re
 import json
 from typing import Dict, List, Any, Optional, Tuple
 import copy
+from jsonschema import validate, ValidationError
 
 # Note: We implement memory operations directly without MemoryManager
 # to preserve original memory IDs for verification
@@ -25,7 +26,15 @@ def extract_memory_operations(solution_str: str) -> List[Dict[str, Any]]:
         solution_str: Solution string containing tool calls
     
     Returns:
-        List of memory operation dictionaries
+        List of memory operation dictionaries with format:
+        [
+            {
+                "action": "memory_insert",
+                "arguments": {...},
+                "raw_tool_call": {...}  # Original tool call dict for validation
+            },
+            ...
+        ]
     """
     operations = []
     
@@ -39,12 +48,122 @@ def extract_memory_operations(solution_str: str) -> List[Dict[str, Any]]:
             if "name" in tool_call and tool_call["name"].startswith("memory_"):
                 operations.append({
                     "action": tool_call["name"],
-                    "arguments": tool_call.get("arguments", {})
+                    "arguments": tool_call.get("arguments", {}),
+                    "raw_tool_call": tool_call  # Keep original for validation
                 })
         except json.JSONDecodeError:
             continue
     
     return operations
+
+
+def get_memory_action_schemas() -> Dict[str, Dict]:
+    """
+    Get JSON schemas for all memory actions (standard function calling format)
+    
+    Returns:
+        Dictionary mapping action names to their JSON schemas
+    """
+    return {
+        "memory_insert": {
+            "type": "object",
+            "properties": {
+                "layer": {
+                    "type": "string",
+                    "enum": ["working", "identity", "history", "experience"]
+                },
+                "content": {
+                    "type": "string"
+                },
+                "metadata": {
+                    "type": "object",
+                    "additionalProperties": True
+                }
+            },
+            "required": ["layer", "content"],
+            "additionalProperties": False
+        },
+        "memory_update": {
+            "type": "object",
+            "properties": {
+                "layer": {
+                    "type": "string",
+                    "enum": ["working", "identity", "history", "experience"]
+                },
+                "memory_id": {
+                    "type": "string"
+                },
+                "content": {
+                    "type": "string"
+                },
+                "metadata": {
+                    "type": "object",
+                    "additionalProperties": True
+                }
+            },
+            "required": ["layer", "memory_id", "content"],
+            "additionalProperties": False
+        },
+        "memory_delete": {
+            "type": "object",
+            "properties": {
+                "layer": {
+                    "type": "string",
+                    "enum": ["working", "identity", "history", "experience"]
+                },
+                "memory_id": {
+                    "type": "string"
+                }
+            },
+            "required": ["layer", "memory_id"],
+            "additionalProperties": False
+        },
+        "memory_wait": {
+            "type": "object",
+            "properties": {},
+            "required": [],
+            "additionalProperties": False
+        }
+    }
+
+
+def validate_memory_operations(operations: List[Dict[str, Any]]) -> float:
+    """
+    Validate memory operations using jsonschema (standard function calling format)
+    
+    Args:
+        operations: List of memory operation dictionaries from extract_memory_operations
+    
+    Returns:
+        Validation score: 1.0 if all operations are valid, 0.0 otherwise
+    """
+    if not operations:
+        return 0.0
+    
+    schemas = get_memory_action_schemas()
+    
+    for op in operations:
+        action = op.get("action")
+        arguments = op.get("arguments", {})
+        
+        # Check if action is valid
+        if action not in schemas:
+            print(f"Invalid action: {action}")
+            return 0.0
+        
+        # Get schema for this action
+        schema = schemas[action]
+        
+        # Validate arguments against schema
+        try:
+            validate(instance=arguments, schema=schema)
+        except ValidationError as e:
+            print(f"Validation failed for {action}: {e.message}")
+            print(f"Arguments: {arguments}")
+            return 0.0
+    
+    # All operations passed validation
+    return 1.0
 
 
 def execute_memory_operations(
@@ -193,6 +312,7 @@ Answer:"""
     if chat_model_func is not None:
         # Use provided function
         try:
+            print(f"Calling chat model function with prompt: {prompt}")
             answer = chat_model_func(prompt)
             return answer
         except Exception as e:
@@ -201,9 +321,9 @@ Answer:"""
     
     # Use query_llm from utils
     try:
-        from agent_r1.utils.llm import query_llm
+        from agent_r1.utils.llm import query_llm_inhouse
         
-        result = query_llm(
+        result = query_llm_inhouse(
             model_name=chat_model_name,
             messages=prompt,
             system="You are a medical assistant. Answer questions based on the provided patient memory information.",
@@ -243,10 +363,10 @@ Answer 1: {chat_answer}
 Answer 2: {ground_truth_answer}
 
 Are these answers consistent? Respond with only "Yes" or "No"."""
-            
+            print(f"Calling judge model function with prompt: {judge_prompt}")
             response = judge_model_func(judge_prompt)
             response_lower = response.lower().strip()
-            
+            print(f"Judge model response: {response_lower}")
             if "yes" in response_lower:
                 return 1.0
             elif "no" in response_lower:
@@ -264,7 +384,7 @@ Are these answers consistent? Respond with only "Yes" or "No"."""
     
     # Use query_llm from utils
     try:
-        from agent_r1.utils.llm import query_llm
+        from agent_r1.utils.llm import query_llm_inhouse
         
         judge_prompt = f"""Compare these two answers and determine if they are consistent (meaning the same thing).
 
@@ -272,17 +392,19 @@ Answer 1: {chat_answer}
 Answer 2: {ground_truth_answer}
 
 Are these answers consistent? Respond with only "Yes" or "No"."""
+        print(f"Calling judge model function with prompt: {judge_prompt}")
         
-        result = query_llm(
+        result = query_llm_inhouse(
             model_name=judge_model_name,
             messages=judge_prompt,
             system="You are a judge that determines if two answers are consistent (meaning the same thing). Respond with only 'Yes' or 'No'.",
             temperature=0.0,
-            max_tokens=50
+            max_tokens=1024
         )
         
         response = result.get('response', 'No').strip()
         response_lower = response.lower().strip()
+        print(f"Judge model response: {response_lower}")
         
         if "yes" in response_lower:
             return 1.0
@@ -367,14 +489,23 @@ def compute_score(
     Returns:
         Score (0.0 to 1.0)
     """
+    print(f"Input solution_str: {solution_str}")
     if solution_str is None or extra_info is None:
         return 0.0
     
     # Extract memory operations
     operations = extract_memory_operations(solution_str)
     
-    # Get previous_memory and other info
-    previous_memory = extra_info.get("previous_memory")
+    # Validate operations using jsonschema (standard function calling format)
+    validation_score = validate_memory_operations(operations)
+    print(f"Validation score (jsonschema): {validation_score}")
+    
+    # If validation fails, return 0.0 immediately
+    if validation_score == 0.0:
+        return 0.0
+    
+    # Get memory_state and other info
+    previous_memory = json.loads(extra_info.get("memory_state",{}))
     memory_query = extra_info.get("memory_query")
     supposed_new_memory_things = extra_info.get("supposed_new_memory_things", [])
     
@@ -388,8 +519,8 @@ def compute_score(
         print(f"Error executing memory operations: {e}")
         return 0.0
     
-    # Check memory coverage
-    coverage_score = check_memory_coverage(after_memory_base, supposed_new_memory_things)
+    # Check memory coverage TODO: 目前先不检查coverage
+    # coverage_score = check_memory_coverage(after_memory_base, supposed_new_memory_things)
     
     # Verify with chat model and judge
     chat_answer = verify_with_chat_model(
@@ -398,16 +529,21 @@ def compute_score(
         chat_model_func,
         chat_model_name
     )
+    print(f"chat_answer: {chat_answer}")
+
     consistency_score = judge_answer_consistency(
         chat_answer,
         ground_truth or memory_query.get("answer", ""),
         judge_model_func,
         judge_model_name
     )
+    print(f"consistency_score: {consistency_score}")
     
     # Combined score: 50% consistency, 50% coverage
-    final_score = 0.5 * consistency_score + 0.5 * coverage_score
-    
+    # final_score = 0.5 * consistency_score + 0.5 * coverage_score
+    final_score = consistency_score
+
+    print(f"Output final_score: {final_score}")
     return final_score
 
 
@@ -421,31 +557,14 @@ def compute_score_format(solution_str: str) -> float:
     Returns:
         Format score (0.0 to 1.0)
     """
+    # Extract memory operations
     operations = extract_memory_operations(solution_str)
     
-    if not operations:
-        return 0.3  # Some score for having output
+    # Validate operations using jsonschema (standard function calling format)
+    validation_score = validate_memory_operations(operations)
+    print(f"Validation score (jsonschema): {validation_score}")
     
-    # Check format validity
-    valid_ops = 0
-    for op in operations:
-        action = op.get("action")
-        args = op.get("arguments", {})
-        
-        if action in ["memory_insert", "memory_update", "memory_delete", "memory_wait"]:
-            if action == "memory_wait" or "arguments" in op:
-                valid_ops += 1
-    
-    format_score = valid_ops / len(operations) if operations else 0.0
-    
-    # Check for thought/reasoning
-    thought_pattern = re.compile(r'<think>(.*?)</think>', re.DOTALL)
-    has_thought = bool(thought_pattern.search(solution_str))
-    
-    if has_thought:
-        format_score = min(1.0, format_score + 0.2)
-    
-    return format_score
+    return validation_score
 
 
 def compute_score_operations(
@@ -468,7 +587,7 @@ def compute_score_operations(
         return 0.0
     
     operations = extract_memory_operations(solution_str)
-    previous_memory = extra_info.get("previous_memory")
+    previous_memory = json.loads(extra_info.get("memory_state"))
     supposed_new_memory_things = extra_info.get("supposed_new_memory_things", [])
     
     if previous_memory is None:

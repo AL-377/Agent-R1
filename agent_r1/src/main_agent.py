@@ -21,6 +21,11 @@ from agent_r1.tool.tools import _default_tool
 
 import os
 
+
+# Ensure Ray doesn't start dashboard agent before raylet initialization.
+os.environ.setdefault("RAY_DISABLE_DASHBOARD", "1")
+os.environ.setdefault("RAY_ENABLE_METRICS_COLLECTION", "0")
+
 import hydra
 import ray
 
@@ -73,6 +78,7 @@ def run_agent(config) -> None:
         ray.init(
             runtime_env={"env_vars": {"TOKENIZERS_PARALLELISM": "true", "NCCL_DEBUG": "WARN", "VLLM_LOGGING_LEVEL": "WARN"}},
             num_cpus=config.ray_init.num_cpus,
+            include_dashboard=False,
         )
 
     runner = TaskRunner.remote()
