@@ -5,7 +5,17 @@ from typing import Dict, List, Optional, Any, Union
 import os
 
 from dotenv import load_dotenv
+import time as _time
+import logging
+
+_logger = logging.getLogger(__name__)
+
 load_dotenv()
+
+MAX_RETRIES = 5
+BACKOFF_BASE = 2        # seconds; actual wait = base * 2^attempt (exponential)
+BACKOFF_MAX = 60         # cap
+
 
 model2api = {
     "DeepSeek-R1": os.getenv("DEEPSEEK_R1_API_KEY"),
@@ -13,7 +23,13 @@ model2api = {
     "o3-2025-04-16": os.getenv("O3_API_KEY"),
     "gpt-5-2025-08-07": os.getenv("GPT_5_API_KEY"),
     "gpt-4o-2024-11-20": os.getenv("GPT_4O_API_KEY"),
-    "gpt-4o-mini-2024-07-18": os.getenv("GPT_4O_MINI_API_KEY")
+    "gpt-4o-mini-2024-07-18": os.getenv("GPT_4O_MINI_API_KEY"),
+    "gpt-5.2-2025-12-11": os.getenv("GPT_5_2_API_KEY"),
+    "gpt-5.2-2025-12-11-300": os.getenv("GPT_5_2_API_KEY_300"),
+}
+# for parallel control
+model_name_mapping = {
+    "gpt-5.2-2025-12-11-300": "gpt-5.2-2025-12-11"
 }
 
 def close_proxy():
@@ -30,20 +46,53 @@ def query_llm(
     model_name: str,
     **kwargs: Any
 ):
-    if model_name in ["gpt-oss-120b","gpt-4o-2024-11-20","gpt-4o-mini-2024-07-18","DeepSeek-R1","o1-mini-2024-09-12"]:
-        if model_name=="DeepSeek-R1":
-            model_name="deepseek-r1"
-        if model_name=="o1-mini-2024-09-12":
-            model_name="o1-mini"
-        return query_llm_outer(
-            model_name=model_name,
-            **kwargs
-        )
-    else:
-        return query_llm_inhouse(
-            model_name=model_name,
-            **kwargs
-        )
+    """
+    Query LLM with automatic retry and exponential backoff on failure.
+    Retries on: rate limit, timeout, connection, server errors.
+    """
+    last_exc = None
+    for attempt in range(MAX_RETRIES + 1):
+        try:
+            if model_name in ["gpt-oss-120b","gpt-4o-2024-11-20","gpt-4o-mini-2024-07-18","DeepSeek-R1","o1-mini-2024-09-12"]:
+                name = model_name
+                if name == "DeepSeek-R1":
+                    name = "deepseek-r1"
+                if name == "o1-mini-2024-09-12":
+                    name = "o1-mini"
+                return query_llm_outer(model_name=name, **kwargs)
+            else:
+                return query_llm_inhouse(model_name=model_name, **kwargs)
+
+        except (openai.RateLimitError,
+                openai.APITimeoutError,
+                openai.APIConnectionError,
+                openai.InternalServerError) as e:
+            last_exc = e
+            if attempt == MAX_RETRIES:
+                break
+            wait = min(BACKOFF_BASE * (2 ** attempt), BACKOFF_MAX)
+            _logger.warning(
+                f"[query_llm] {type(e).__name__} (attempt {attempt+1}/{MAX_RETRIES+1}), "
+                f"retrying in {wait}s..."
+            )
+            print(f"  ⚠ LLM error: {type(e).__name__}, backoff {wait}s "
+                  f"(attempt {attempt+1}/{MAX_RETRIES+1})", flush=True)
+            _time.sleep(wait)
+
+        except Exception as e:
+            last_exc = e
+            if attempt == MAX_RETRIES:
+                break
+            wait = min(BACKOFF_BASE * (2 ** attempt), BACKOFF_MAX)
+            _logger.warning(
+                f"[query_llm] Unexpected {type(e).__name__}: {e} "
+                f"(attempt {attempt+1}/{MAX_RETRIES+1}), retrying in {wait}s..."
+            )
+            print(f"  ⚠ LLM error: {type(e).__name__}: {str(e)[:80]}, backoff {wait}s "
+                  f"(attempt {attempt+1}/{MAX_RETRIES+1})", flush=True)
+            _time.sleep(wait)
+
+    raise last_exc
 
 def query_llm_outer(
     model_name: str,
@@ -129,6 +178,7 @@ def query_llm_inhouse(
     **kwargs: Any
 ) -> Dict[str, Optional[str]]:
     global model2api
+    global model_name_mapping
     
     close_proxy()
     # 处理 messages：如果是字符串，自动包装
@@ -151,7 +201,7 @@ def query_llm_inhouse(
     }
     if model_name in ["DeepSeek-R1"]:
         response = client.chat.completions.create(
-            model=model_name,
+            model=model_name_mapping.get(model_name,model_name),
             messages=messages,
             max_tokens=max_tokens,
             extra_headers={
@@ -161,7 +211,7 @@ def query_llm_inhouse(
         )
     else:
         response = client.chat.completions.create(
-            model=model_name,
+            model=model_name_mapping.get(model_name,model_name),
             messages=messages,
             max_tokens=max_tokens,
             extra_headers={

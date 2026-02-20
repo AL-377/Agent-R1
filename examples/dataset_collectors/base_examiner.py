@@ -27,11 +27,12 @@ import uuid
 import time
 import random
 import hashlib
+import threading
 import traceback
 from typing import Dict, List, Any, Optional, Tuple
 from dataclasses import dataclass, asdict
 from pathlib import Path
-from concurrent.futures import ProcessPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from copy import deepcopy
 
 # ── project imports ──────────────────────────────────────────────────
@@ -1132,6 +1133,7 @@ def process_single_dialogue(
     model: str = DEFAULT_MODEL,
     language: str = "zh",
     consultation_separator: str = "---诊疗分割线---",
+    progress_bar=None,
 ) -> Dict[str, Any]:
     """
     Process a single dialogue through the full two-stage pipeline.
@@ -1139,10 +1141,10 @@ def process_single_dialogue(
     Args:
         dialogue_id: unique identifier
         messages: list of {"role": "doctor"/"patient", "content": "..."}
-                  (normalized format)
         model: LLM model name
         language: "zh" or "en"
         consultation_separator: separator between consultations (if any)
+        progress_bar: optional tqdm bar to update (for parallel display)
 
     Returns:
         Patient-level dict matching the CareCall output format.
@@ -1153,6 +1155,10 @@ def process_single_dialogue(
 
     total_msgs = len(messages)
     session_idx = 0
+
+    if progress_bar is not None:
+        progress_bar.reset(total=total_msgs)
+        progress_bar.set_description(f"P:{dialogue_id[:8]}")
 
     for msg_idx, msg in enumerate(messages):
         role = msg.get("role", "user")
@@ -1172,20 +1178,17 @@ def process_single_dialogue(
                 }
             })
             dialogue_history.append(f"{'Doctor' if role in ('doctor', 'assistant') else 'Patient'}: {content}")
-            pct = (msg_idx + 1) * 100 // total_msgs
-            print(f"\r    [{pct:3d}%] msg {msg_idx+1}/{total_msgs} "
-                  f"| session {session_idx+1} | ── separator ──",
-                  end="", flush=True)
+            if progress_bar is not None:
+                progress_bar.update(1)
+                progress_bar.set_postfix_str(f"s{session_idx+1} sep")
             continue
 
         out_role = "assistant" if role in ("doctor", "assistant") else "user"
-        role_label = "doctor" if out_role == "assistant" else "patient"
+        role_label = "D" if out_role == "assistant" else "P"
 
-        pct = (msg_idx + 1) * 100 // total_msgs
-        snippet = content[:30].replace('\n', ' ')
-        print(f"\r    [{pct:3d}%] msg {msg_idx+1}/{total_msgs} "
-              f"| session {session_idx+1} | {role_label}: {snippet}...",
-              end="", flush=True)
+        if progress_bar is not None:
+            snippet = content[:20].replace('\n', ' ')
+            progress_bar.set_postfix_str(f"s{session_idx+1} {role_label}:{snippet}")
 
         # ── Stage 1: Memory Preprocess ──
         to_memory = extract_to_memory(content, role, dialogue_history, model, language)
@@ -1217,7 +1220,12 @@ def process_single_dialogue(
 
         output_messages.append({out_role: entry})
 
-    print()  # newline after progress bar
+        if progress_bar is not None:
+            progress_bar.update(1)
+
+    if progress_bar is not None:
+        progress_bar.set_postfix_str("done")
+
     return {
         "patient_id": str(dialogue_id),
         "messages": output_messages,
@@ -1367,63 +1375,157 @@ class BaseExaminerAgent:
                 })
 
         # Process each patient through the two-stage pipeline
-        results = []
         total_patients = len(patients)
-        cached_count = 0
         pipeline_start = time.time()
 
+        # Separate cached vs to-process
+        cached_results: Dict[str, Dict[str, Any]] = {}
+        to_process = []
+        for patient in patients:
+            pid = str(patient["patient_id"])
+            if pid in cached:
+                cached_results[pid] = cached[pid]
+            else:
+                to_process.append(patient)
+
         print(f"\n{'─'*60}")
-        print(f"Processing {total_patients} patients through 2-stage pipeline")
+        print(f"Processing {len(to_process)} patients through 2-stage pipeline "
+              f"({len(cached_results)} from cache, {self.max_workers} workers)")
         print(f"{'─'*60}")
 
-        for idx, patient in enumerate(patients):
-            pid = patient["patient_id"]
-            if str(pid) in cached:
-                results.append(cached[str(pid)])
-                cached_count += 1
-                continue
+        new_results: Dict[str, Dict[str, Any]] = {}
 
-            n_msgs = len(patient.get("messages", []))
-            scenario = patient.get("scenario", "?")
-            elapsed = time.time() - pipeline_start
-            eta_str = ""
-            processed_so_far = idx - cached_count
-            if processed_so_far > 0:
-                avg_time = elapsed / processed_so_far
-                remaining = (total_patients - idx) * avg_time
-                eta_min = remaining / 60
-                eta_str = f" | ETA {eta_min:.1f}min"
+        try:
+            from tqdm import tqdm
+            _has_tqdm = True
+        except ImportError:
+            _has_tqdm = False
 
-            print(f"\n  ▶ Patient {idx+1}/{total_patients} [{pid}]"
-                  f" | {n_msgs} msgs | scenario={scenario}{eta_str}")
+        if self.max_workers <= 1 or len(to_process) <= 1:
+            # Serial processing with single progress bar
+            overall = tqdm(total=len(to_process), desc="Overall", position=0,
+                           bar_format="{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}]"
+                           ) if _has_tqdm else None
+            msg_bar = tqdm(total=0, desc="Patient", position=1,
+                           bar_format="  {desc}: {bar}| {n_fmt}/{total_fmt} {postfix}",
+                           leave=False) if _has_tqdm else None
+            try:
+                for idx, patient in enumerate(to_process):
+                    pid = str(patient["patient_id"])
+                    try:
+                        patient_data = process_single_dialogue(
+                            dialogue_id=pid,
+                            messages=patient["messages"],
+                            model=self.model,
+                            language=self.language,
+                            consultation_separator=self.consultation_separator,
+                            progress_bar=msg_bar,
+                        )
+                        patient_data["metadata"] = patient.get("metadata", {})
+                        patient_data["metadata"]["scenario"] = patient.get("scenario", "")
+                        new_results[pid] = patient_data
+                        save_cache(cache_dir, pid, patient_data)
+                    except Exception as e:
+                        if overall:
+                            tqdm.write(f"  ✗ Error patient {pid}: {e}")
+                        else:
+                            print(f"  ✗ Error patient {pid}: {e}")
+                        traceback.print_exc()
+                    if overall:
+                        overall.update(1)
+            finally:
+                if msg_bar:
+                    msg_bar.close()
+                if overall:
+                    overall.close()
+        else:
+            # Parallel processing: one progress bar per worker slot + overall bar
+            n_workers = min(self.max_workers, len(to_process))
+
+            if _has_tqdm:
+                overall_bar = tqdm(
+                    total=len(to_process), desc="Overall", position=0,
+                    bar_format="{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}]",
+                )
+                worker_bars = [
+                    tqdm(total=0, desc=f"W{i}", position=i + 1,
+                         bar_format="  {desc}: {bar}| {n_fmt}/{total_fmt} {postfix}",
+                         leave=False)
+                    for i in range(n_workers)
+                ]
+            else:
+                overall_bar = None
+                worker_bars = []
+
+            bar_lock = threading.Lock()
+            bar_slot_queue = list(range(n_workers))
+
+            def _process_one_with_bar(patient: Dict[str, Any]) -> Tuple[str, Optional[Dict[str, Any]]]:
+                pid = str(patient["patient_id"])
+
+                with bar_lock:
+                    slot = bar_slot_queue.pop(0) if bar_slot_queue else None
+                my_bar = worker_bars[slot] if (slot is not None and worker_bars) else None
+
+                try:
+                    patient_data = process_single_dialogue(
+                        dialogue_id=pid,
+                        messages=patient["messages"],
+                        model=self.model,
+                        language=self.language,
+                        consultation_separator=self.consultation_separator,
+                        progress_bar=my_bar,
+                    )
+                    patient_data["metadata"] = patient.get("metadata", {})
+                    patient_data["metadata"]["scenario"] = patient.get("scenario", "")
+                    save_cache(cache_dir, pid, patient_data)
+                    return pid, patient_data
+                except Exception as e:
+                    if overall_bar:
+                        tqdm.write(f"  ✗ Error patient {pid}: {e}")
+                    else:
+                        print(f"  ✗ Error patient {pid}: {e}")
+                    return pid, None
+                finally:
+                    with bar_lock:
+                        if slot is not None:
+                            if my_bar:
+                                my_bar.reset(total=0)
+                                my_bar.set_description(f"W{slot}")
+                                my_bar.set_postfix_str("idle")
+                            bar_slot_queue.append(slot)
 
             try:
-                patient_start = time.time()
-                patient_data = process_single_dialogue(
-                    dialogue_id=pid,
-                    messages=patient["messages"],
-                    model=self.model,
-                    language=self.language,
-                    consultation_separator=self.consultation_separator,
-                )
-                patient_data["metadata"] = patient.get("metadata", {})
-                patient_data["metadata"]["scenario"] = patient.get("scenario", "")
+                with ThreadPoolExecutor(max_workers=n_workers) as executor:
+                    futures = {
+                        executor.submit(_process_one_with_bar, p): p
+                        for p in to_process
+                    }
+                    for future in as_completed(futures):
+                        pid, patient_data = future.result()
+                        if patient_data is not None:
+                            new_results[pid] = patient_data
+                        if overall_bar:
+                            overall_bar.update(1)
+            finally:
+                for bar in worker_bars:
+                    bar.close()
+                if overall_bar:
+                    overall_bar.close()
 
-                results.append(patient_data)
-                save_cache(cache_dir, pid, patient_data)
-                patient_elapsed = time.time() - patient_start
-                out_msgs = len(patient_data.get("messages", []))
-                print(f"    ✓ Done: {out_msgs} output messages in {patient_elapsed:.1f}s")
-
-            except Exception as e:
-                print(f"    ✗ Error processing patient {pid}: {e}")
-                traceback.print_exc()
-                continue
+        # Reassemble results in original patient order
+        results = []
+        for patient in patients:
+            pid = str(patient["patient_id"])
+            if pid in cached_results:
+                results.append(cached_results[pid])
+            elif pid in new_results:
+                results.append(new_results[pid])
 
         total_elapsed = time.time() - pipeline_start
         print(f"\n{'─'*60}")
         print(f"Pipeline complete: {len(results)}/{total_patients} patients "
-              f"({cached_count} from cache) in {total_elapsed:.1f}s")
+              f"({len(cached_results)} from cache) in {total_elapsed:.1f}s")
         print(f"{'─'*60}")
 
         # Save final output
@@ -1431,3 +1533,4 @@ class BaseExaminerAgent:
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(results, f, ensure_ascii=False, indent=2)
         print(f"\n✓ Saved {len(results)} patients to {output_path}")
+
