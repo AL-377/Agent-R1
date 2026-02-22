@@ -22,10 +22,14 @@ model2api = {
     "o1-mini-2024-09-12": os.getenv("O1_MINI_API_KEY"),
     "o3-2025-04-16": os.getenv("O3_API_KEY"),
     "gpt-5-2025-08-07": os.getenv("GPT_5_API_KEY"),
-    "gpt-4o-2024-11-20": os.getenv("GPT_4O_API_KEY"),
+    "gpt-4o-2024-05-13": os.getenv("GPT_4O_API_KEY"),
     "gpt-4o-mini-2024-07-18": os.getenv("GPT_4O_MINI_API_KEY"),
     "gpt-5.2-2025-12-11": os.getenv("GPT_5_2_API_KEY"),
     "gpt-5.2-2025-12-11-300": os.getenv("GPT_5_2_API_KEY_300"),
+    "gpt-oss-120b": os.getenv("GPT_OSS_120B_API_KEY"),
+    "gemini-2.5-pro-preview-05-06": os.getenv("GEMINI_2_5_PRO_PREVIEW_05_06_API_KEY"),
+    "openai_qwen3-14b": os.getenv("QWEN3_API_KEY"),
+    "openai_qwen3-32b": os.getenv("QWEN3_API_KEY")
 }
 # for parallel control
 model_name_mapping = {
@@ -39,8 +43,8 @@ def close_proxy():
 
 def open_proxy():
     os.environ["no_proxy"]=""
-    os.environ["http_proxy"]="http://seed_gui_osworld_proxy:2Gj6QEgYtInSL5Xx@id3473.http-sg-idc-idc-sg-flow.forward-proxy.byted.org:8080"
-    os.environ["https_proxy"]="http://seed_gui_osworld_proxy:2Gj6QEgYtInSL5Xx@id3473.http-sg-idc-idc-sg-flow.forward-proxy.byted.org:8080"
+    os.environ["http_proxy"]="http://sys-proxy-rd-relay.byted.org:8118"
+    os.environ["https_proxy"]="http://sys-proxy-rd-relay.byted.org:8118"
 
 def query_llm(
     model_name: str,
@@ -53,13 +57,16 @@ def query_llm(
     last_exc = None
     for attempt in range(MAX_RETRIES + 1):
         try:
-            if model_name in ["gpt-oss-120b","gpt-4o-2024-11-20","gpt-4o-mini-2024-07-18","DeepSeek-R1","o1-mini-2024-09-12"]:
+            if model_name in ["qwen3-8b","qwen3-14b","gpt-4o-2024-08-06","DeepSeek-R1","o1-mini-2024-09-12"]:
                 name = model_name
                 if name == "DeepSeek-R1":
                     name = "deepseek-r1"
                 if name == "o1-mini-2024-09-12":
                     name = "o1-mini"
-                return query_llm_outer(model_name=name, **kwargs)
+                max_tokens = kwargs.get("max_tokens",16384)
+                if "max_tokens" in kwargs:
+                    del kwargs["max_tokens"]
+                return query_llm_outer(model_name=name, max_tokens=max_tokens,**kwargs)
             else:
                 return query_llm_inhouse(model_name=model_name, **kwargs)
 
@@ -72,7 +79,8 @@ def query_llm(
                 break
             wait = min(BACKOFF_BASE * (2 ** attempt), BACKOFF_MAX)
             _logger.warning(
-                f"[query_llm] {type(e).__name__} (attempt {attempt+1}/{MAX_RETRIES+1}), "
+                f"[error info] {str(e)}"
+                f"[query_llm] {model_name} {type(e).__name__} (attempt {attempt+1}/{MAX_RETRIES+1}), "
                 f"retrying in {wait}s..."
             )
             print(f"  ⚠ LLM error: {type(e).__name__}, backoff {wait}s "
@@ -85,7 +93,8 @@ def query_llm(
                 break
             wait = min(BACKOFF_BASE * (2 ** attempt), BACKOFF_MAX)
             _logger.warning(
-                f"[query_llm] Unexpected {type(e).__name__}: {e} "
+                f"[error info] {str(e)}"
+                f"[query_llm] {model_name} Unexpected {type(e).__name__}: {e} "
                 f"(attempt {attempt+1}/{MAX_RETRIES+1}), retrying in {wait}s..."
             )
             print(f"  ⚠ LLM error: {type(e).__name__}: {str(e)[:80]}, backoff {wait}s "
@@ -122,7 +131,7 @@ def query_llm_outer(
     Returns:
         包含 'reasoning_content' 和 'response' 的字典
     """
-    close_proxy()
+    open_proxy()
     # 处理 messages：如果是字符串，自动包装
     if isinstance(messages, str):
         messages = [{"role": "user", "content": messages}]
@@ -144,13 +153,12 @@ def query_llm_outer(
         # "top_p": top_p,
         **kwargs
     }
-    
     # 如果提供了 max_tokens，添加到参数中
     if max_tokens is not None:
         api_params["max_tokens"] = max_tokens
-    
+    # if "max_tokens" in api_params:
+    #     del api_params["max_tokens"]
     chat_completion = client.chat.completions.create(**api_params)
-    
     message = chat_completion.choices[0].message
     
     # 提取 reasoning_content（如果存在）
@@ -162,7 +170,7 @@ def query_llm_outer(
     
     # 提取 response
     response = message.content if message.content else ""
-    open_proxy()
+    close_proxy()
     return {
         'reasoning_content': reasoning_content,
         'response': response
@@ -209,6 +217,23 @@ def query_llm_inhouse(
             },
             **extra_args
         )
+    # elif "qwen" in model_name:
+    #     client = openai.AzureOpenAI(
+    #         azure_endpoint="https://search.bytedance.net/gpt/openapi/online/v2/crawl/openai/deployments/gpt_openapi",
+    #         api_version="2024-03-01-preview",
+    #         api_key=model2api[model_name]
+    #     )
+    #     extra_args["enable_thinking"] = False
+    #     response = client.chat.completions.create(
+    #         model=model_name_mapping.get(model_name,model_name),
+    #         messages=messages,
+    #         max_tokens=max_tokens,
+    #         stream=True,
+    #         extra_headers={
+    #             "X-TT-LOGID": "${your_logid}"
+    #         },
+    #         **extra_args
+    #     )
     else:
         response = client.chat.completions.create(
             model=model_name_mapping.get(model_name,model_name),

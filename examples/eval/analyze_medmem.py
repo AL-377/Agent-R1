@@ -66,12 +66,23 @@ def analyze(df: pd.DataFrame):
     ).reset_index()
     print(agg.to_string(index=False))
 
-    # ---- Compression ratio (pure_summary, correct only) ----
-    cr_valid = valid[(valid["split"] == "pure_summary") & (valid["correct"] == 1.0)]
+    # ---- layers_summary format validity ----
+    layers = valid[valid["split"] == "layers_summary"]
+    if not layers.empty and "format_valid" in layers.columns:
+        print_section("layers_summary: Format Validity (model)")
+        fmt_agg = layers.groupby("model").agg(
+            count=("format_valid", "size"),
+            valid_count=("format_valid", "sum"),
+            valid_rate=("format_valid", "mean"),
+        ).reset_index()
+        print(fmt_agg.to_string(index=False))
+
+    # ---- Compression ratio (pure_summary / layers_summary, correct only) ----
+    cr_valid = valid[(valid["split"].isin(["pure_summary", "layers_summary"])) & (valid["correct"] == 1.0)]
     cr_valid = cr_valid.dropna(subset=["compression_ratio"])
     if not cr_valid.empty:
-        print_section("Compression Ratio (pure_summary, correct only): model")
-        cr_agg = cr_valid.groupby("model").agg(
+        print_section("Compression Ratio (correct only): model x split")
+        cr_agg = cr_valid.groupby(["model", "split"]).agg(
             count=("compression_ratio", "size"),
             mean_cr=("compression_ratio", "mean"),
             median_cr=("compression_ratio", "median"),

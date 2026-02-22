@@ -1,13 +1,17 @@
 """
-Evaluation script for MedMem pure_summary and no_summary splits.
+Evaluation script for MedMem pure_summary, layers_summary, and no_summary splits.
 
 For each sample:
   1. Call the target model with the sample's prompt to get a response.
-  2. (pure_summary only) Use a judge model to answer the memory_query
-     based on the model's summary, then judge consistency with ground truth.
-  3. (no_summary only) Directly judge the model's answer against ground truth.
-  4. (pure_summary + correct) Compute compression ratio:
-       len(summary) / len(content(supposed_new_memory_things))
+
+  2. (pure_summary) Use judge to answer memory_query based on model's summary,
+     then judge consistency with ground truth. If correct, compute compression ratio.
+
+  3. (layers_summary) Parse memory operations from model output, execute them on
+     previous_memory, use judge to answer memory_query based on updated memory,
+     then judge consistency with ground truth.
+
+  4. (no_summary) Directly judge model's answer against ground truth.
 
 Results are saved per-instance as JSON and aggregated into a DataFrame parquet.
 
@@ -20,17 +24,23 @@ Usage:
         --max_samples 10
 
     python examples/eval/eval_medmem.py \
+        --input datasets/cmtmedqa/cmtmedqa_layers_summary.parquet \
+        --output_dir eval_results/cmtmedqa_layers_summary \
+        --model gpt-4o-2024-11-20
+
+    python examples/eval/eval_medmem.py \
         --input datasets/cmtmedqa/cmtmedqa_no_summary.parquet \
         --output_dir eval_results/cmtmedqa_no_summary \
-        --model gpt-4o-2024-11-20 \
-        --judge_model gpt-4o-2024-11-20
+        --model gpt-4o-2024-11-20
 """
 
 import argparse
 import json
 import os
 import sys
+import time
 import traceback
+import uuid
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Any, Dict, List, Optional
 
@@ -39,6 +49,162 @@ from tqdm import tqdm
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 from agent_r1.utils.llm import query_llm
+
+
+ALLOWED_MEMORY_LAYERS = {"working", "identity", "history", "experience"}
+
+
+# ---------------------------------------------------------------------------
+# Memory operation parsing & execution (mirrors task.py logic)
+# ---------------------------------------------------------------------------
+
+def _strip_code_fences(text: str) -> str:
+    """Remove markdown code fences like ```json ... ``` from text."""
+    import re
+    text = re.sub(r"```(?:json|JSON)?\s*\n?", "", text)
+    text = re.sub(r"\n?```", "", text)
+    return text.strip()
+
+
+def extract_memory_operations(solution_str: str) -> List[Dict[str, Any]]:
+    """Parse memory operations from model output: <think>...</think> then JSON."""
+    ops: List[Dict[str, Any]] = []
+    if not solution_str:
+        return ops
+
+    end_tag = "</think>"
+    tag_pos = solution_str.find(end_tag)
+    json_part = (
+        solution_str[tag_pos + len(end_tag):].strip() if tag_pos != -1
+        else solution_str.strip()
+    )
+    json_part = _strip_code_fences(json_part)
+    if not json_part:
+        return ops
+
+    # Models sometimes echo double-braces from prompt templates
+    if "{{" in json_part and "}}" in json_part:
+        json_part = json_part.replace("{{", "{").replace("}}", "}")
+
+    def _collect(parsed):
+        if isinstance(parsed, dict) and str(parsed.get("name", "")).startswith("memory_"):
+            ops.append({
+                "action": parsed["name"],
+                "arguments": parsed.get("arguments", {}),
+            })
+        elif isinstance(parsed, list):
+            for item in parsed:
+                if isinstance(item, dict) and str(item.get("name", "")).startswith("memory_"):
+                    ops.append({
+                        "action": item["name"],
+                        "arguments": item.get("arguments", {}),
+                    })
+
+    try:
+        _collect(json.loads(json_part))
+    except json.JSONDecodeError:
+        for i, ch in enumerate(json_part):
+            if ch in ("{", "["):
+                try:
+                    _collect(json.loads(json_part[i:]))
+                except json.JSONDecodeError:
+                    pass
+                break
+    return ops
+
+
+def validate_memory_operations(operations: List[Dict[str, Any]]) -> bool:
+    if not operations:
+        return False
+    if all(op.get("action") == "memory_wait" for op in operations):
+        return True
+    for op in operations:
+        action = op.get("action")
+        args = op.get("arguments", {})
+        if action == "memory_insert":
+            if args.get("layer") not in ALLOWED_MEMORY_LAYERS or not args.get("content"):
+                return False
+        elif action == "memory_update":
+            if (args.get("layer") not in ALLOWED_MEMORY_LAYERS
+                    or not args.get("memory_id") or not args.get("content")):
+                return False
+        elif action == "memory_delete":
+            if args.get("layer") not in ALLOWED_MEMORY_LAYERS or not args.get("memory_id"):
+                return False
+        elif action == "memory_wait":
+            continue
+        else:
+            return False
+    return True
+
+
+def execute_memory_operations(
+    previous_memory: Dict[str, Any],
+    operations: List[Dict[str, Any]],
+) -> Dict[str, Any]:
+    mem = json.loads(json.dumps(previous_memory, ensure_ascii=False))
+    for op in operations:
+        action = op.get("action")
+        args = op.get("arguments", {})
+        try:
+            if action == "memory_insert":
+                layer = args.get("layer")
+                content = str(args.get("content", "")).strip()
+                if layer in ALLOWED_MEMORY_LAYERS and content:
+                    mem.setdefault(layer, []).append({
+                        "id": str(uuid.uuid4()),
+                        "content": content,
+                        "timestamp": time.time(),
+                        "metadata": args.get("metadata") or {},
+                    })
+            elif action == "memory_update":
+                layer, mid = args.get("layer"), args.get("memory_id")
+                new_content = str(args.get("content", "")).strip()
+                if layer in ALLOWED_MEMORY_LAYERS and mid and new_content:
+                    for item in mem.get(layer, []):
+                        if isinstance(item, dict) and item.get("id") == mid:
+                            item["content"] = new_content
+                            break
+            elif action == "memory_delete":
+                layer, mid = args.get("layer"), args.get("memory_id")
+                if layer in ALLOWED_MEMORY_LAYERS and mid:
+                    mem[layer] = [
+                        it for it in mem.get(layer, [])
+                        if not (isinstance(it, dict) and it.get("id") == mid)
+                    ]
+        except Exception:
+            continue
+    return mem
+
+
+def answer_query_with_memory(
+    judge_model: str,
+    memory_state: Dict[str, Any],
+    memory_query: Dict[str, Any],
+) -> str:
+    """Use judge model to answer memory_query based on a memory state dict."""
+    question = memory_query.get("question", "")
+    lines: List[str] = []
+    for layer, items in memory_state.items():
+        if items:
+            lines.append(f"\n{layer.upper()} MEMORY:")
+            for item in items:
+                if isinstance(item, dict):
+                    lines.append(f"  - {item.get('content', '')}")
+    memory_text = "\n".join(lines) if lines else "No memories stored yet."
+    prompt = (
+        "Based on the following patient memory information, answer the question.\n\n"
+        f"Memory Information:\n{memory_text}\n\n"
+        f"Question: {question}\n\nAnswer:"
+    )
+    result = query_llm(
+        model_name=judge_model,
+        messages=[{"role": "user", "content": prompt}],
+        system="You are a medical assistant. Answer questions based on the "
+               "provided patient memory information.",
+        temperature=0.0,
+    )
+    return result.get("response", "")
 
 
 # ---------------------------------------------------------------------------
@@ -194,6 +360,45 @@ def evaluate_instance(
                 result["summary_length"] = len(model_output)
                 result["snt_content_length"] = None
 
+        elif split == "layers_summary":
+            memory_state_str = custom_data.get("memory_state", "{}")
+            previous_memory = (
+                json.loads(memory_state_str)
+                if isinstance(memory_state_str, str)
+                else memory_state_str
+            )
+            operations = extract_memory_operations(model_output)
+            format_ok = validate_memory_operations(operations)
+            result["format_valid"] = format_ok
+            result["num_operations"] = len(operations)
+
+            if format_ok:
+                after_memory = execute_memory_operations(previous_memory, operations)
+                chat_answer = answer_query_with_memory(
+                    judge_model, after_memory, memory_query
+                )
+                result["chat_answer"] = chat_answer
+                score = call_judge(judge_model, chat_answer, ground_truth)
+                result["correct"] = score
+
+                if score == 1.0:
+                    snt_content = get_supposed_new_content(supposed_new, oracle_memory_base)
+                    if snt_content:
+                        result["compression_ratio"] = len(model_output) / max(len(snt_content), 1)
+                    else:
+                        result["compression_ratio"] = None
+                    result["summary_length"] = len(model_output)
+                    result["snt_content_length"] = len(snt_content) if snt_content else 0
+                else:
+                    result["compression_ratio"] = None
+                    result["summary_length"] = len(model_output)
+                    result["snt_content_length"] = None
+            else:
+                result["correct"] = 0.0
+                result["compression_ratio"] = None
+                result["summary_length"] = len(model_output)
+                result["snt_content_length"] = None
+
         elif split == "no_summary":
             score = call_judge(judge_model, model_output, ground_truth)
             result["correct"] = score
@@ -224,7 +429,7 @@ def evaluate_instance(
 # ---------------------------------------------------------------------------
 
 def main():
-    parser = argparse.ArgumentParser(description="Evaluate MedMem pure_summary / no_summary")
+    parser = argparse.ArgumentParser(description="Evaluate MedMem pure_summary / layers_summary / no_summary")
     parser.add_argument("--input", type=str, required=True, help="Input parquet file")
     parser.add_argument("--output_dir", type=str, required=True, help="Output directory for results")
     parser.add_argument("--model", type=str, required=True, help="Target model name for generation")
@@ -249,11 +454,17 @@ def main():
     if args.max_samples:
         records = records[:args.max_samples]
 
-    # Skip already-evaluated instances
+    # Skip already-evaluated instances (only those without errors)
     done_ids = set()
     for fn in os.listdir(traces_dir):
         if fn.endswith(".json"):
-            done_ids.add(fn[:-5])
+            try:
+                with open(os.path.join(traces_dir, fn), "r", encoding="utf-8") as f:
+                    trace = json.load(f)
+                if "error" not in trace:
+                    done_ids.add(fn[:-5])
+            except Exception:
+                pass
     records = [r for r in records if r["extra_info"]["instance_id"] not in done_ids]
 
     print(f"Evaluating {len(records)} samples with model={args.model}, "
