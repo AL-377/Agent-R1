@@ -63,7 +63,7 @@ def query_llm(
                     name = "deepseek-r1"
                 if name == "o1-mini-2024-09-12":
                     name = "o1-mini"
-                max_tokens = kwargs.get("max_tokens",16384)
+                max_tokens = kwargs.get("max_tokens",8192)
                 if "max_tokens" in kwargs:
                     del kwargs["max_tokens"]
                 return query_llm_outer(model_name=name, max_tokens=max_tokens,**kwargs)
@@ -109,7 +109,7 @@ def query_llm_outer(
     api_key: str=os.getenv("YUNWU_API_KEY"),
     base_url: str = "https://yunwu.ai/v1/",
     system: Optional[str] = None,
-    max_tokens: Optional[int] = 16384,
+    max_tokens: Optional[int] = 8192,
     temperature: float = 1.0,
     top_p: float = 0.7,
     **kwargs: Any
@@ -180,7 +180,7 @@ def query_llm_inhouse(
     model_name: str,
     messages: Union[List[Dict[str, str]], str],
     system: Optional[str] = None,
-    max_tokens: Optional[int] = 16384,
+    max_tokens: Optional[int] = 8192,
     temperature: float = 1.0,
     top_p: float = 0.7,
     **kwargs: Any

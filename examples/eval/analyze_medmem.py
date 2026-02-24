@@ -16,15 +16,17 @@ Usage:
                       eval_results/cmtmedqa_ps_deepseek \
                       eval_results/cmtmedqa_ns_gpt4o
 
-    # Export to CSV:
+    # Export raw data + aggregated statistics:
     python examples/eval/analyze_medmem.py \
         --result_dirs eval_results/cmtmedqa_ps_gpt4o \
-        --export_csv analysis_output.csv
+        --export_csv analysis_output.csv \
+        --export_tables analysis_tables.xlsx
 """
 
 import argparse
 import os
-from typing import List
+from collections import OrderedDict
+from typing import Dict, List
 
 import pandas as pd
 
@@ -49,11 +51,14 @@ def print_section(title: str):
     print(f"{'='*60}")
 
 
-def analyze(df: pd.DataFrame):
+def analyze(df: pd.DataFrame) -> Dict[str, pd.DataFrame]:
+    """Run all analyses. Returns an OrderedDict of {table_name: DataFrame}."""
+    tables: Dict[str, pd.DataFrame] = OrderedDict()
+
     valid = df[df["correct"] >= 0].copy()
     if valid.empty:
         print("No valid results to analyze.")
-        return
+        return tables
 
     print(f"\nTotal samples: {len(df)}, Valid (correct >= 0): {len(valid)}")
 
@@ -65,6 +70,7 @@ def analyze(df: pd.DataFrame):
         accuracy=("correct", "mean"),
     ).reset_index()
     print(agg.to_string(index=False))
+    tables["accuracy_model_split"] = agg
 
     # ---- layers_summary format validity ----
     layers = valid[valid["split"] == "layers_summary"]
@@ -76,6 +82,7 @@ def analyze(df: pd.DataFrame):
             valid_rate=("format_valid", "mean"),
         ).reset_index()
         print(fmt_agg.to_string(index=False))
+        tables["format_validity"] = fmt_agg
 
     # ---- Compression ratio (pure_summary / layers_summary, correct only) ----
     cr_valid = valid[(valid["split"].isin(["pure_summary", "layers_summary"])) & (valid["correct"] == 1.0)]
@@ -90,6 +97,7 @@ def analyze(df: pd.DataFrame):
             max_cr=("compression_ratio", "max"),
         ).reset_index()
         print(cr_agg.to_string(index=False))
+        tables["compress_ratio_model_split"] = cr_agg
 
     # ---- Per scenario ----
     if valid["scenario"].notna().any() and (valid["scenario"] != "").any():
@@ -99,6 +107,7 @@ def analyze(df: pd.DataFrame):
             accuracy=("correct", "mean"),
         ).reset_index()
         print(sc_agg.to_string(index=False))
+        tables["accuracy_scenario"] = sc_agg
 
         if not cr_valid.empty:
             print_section("Compression Ratio by scenario (correct only)")
@@ -107,6 +116,7 @@ def analyze(df: pd.DataFrame):
                 mean_cr=("compression_ratio", "mean"),
             ).reset_index()
             print(sc_cr.to_string(index=False))
+            tables["compress_ratio_scenario"] = sc_cr
 
     # ---- Per query type ----
     if valid["query_type"].notna().any() and (valid["query_type"] != "").any():
@@ -116,6 +126,7 @@ def analyze(df: pd.DataFrame):
             accuracy=("correct", "mean"),
         ).reset_index()
         print(qt_agg.to_string(index=False))
+        tables["accuracy_query_type"] = qt_agg
 
         if not cr_valid.empty:
             print_section("Compression Ratio by query_type (correct only)")
@@ -124,6 +135,7 @@ def analyze(df: pd.DataFrame):
                 mean_cr=("compression_ratio", "mean"),
             ).reset_index()
             print(qt_cr.to_string(index=False))
+            tables["compress_ratio_query_type"] = qt_cr
 
     # ---- Per difficulty ----
     if valid["difficulty"].notna().any() and (valid["difficulty"] != "").any():
@@ -133,6 +145,26 @@ def analyze(df: pd.DataFrame):
             accuracy=("correct", "mean"),
         ).reset_index()
         print(diff_agg.to_string(index=False))
+        tables["accuracy_difficulty"] = diff_agg
+
+    return tables
+
+
+def export_tables(tables: Dict[str, pd.DataFrame], path: str):
+    """Export all aggregated tables. Supports .xlsx (multi-sheet) and .csv (concatenated)."""
+    if path.endswith(".xlsx"):
+        with pd.ExcelWriter(path, engine="openpyxl") as writer:
+            for name, tbl in tables.items():
+                sheet = name[:31]  # Excel sheet name limit
+                tbl.to_excel(writer, sheet_name=sheet, index=False)
+        print(f"\nExported {len(tables)} tables to {path}")
+    else:
+        with open(path, "w") as f:
+            for name, tbl in tables.items():
+                f.write(f"# {name}\n")
+                tbl.to_csv(f, index=False)
+                f.write("\n")
+        print(f"\nExported {len(tables)} tables to {path}")
 
 
 def main():
@@ -143,25 +175,31 @@ def main():
     )
     parser.add_argument(
         "--export_csv", type=str, default=None,
-        help="Export the merged DataFrame to CSV",
+        help="Export the merged raw DataFrame to CSV",
     )
     parser.add_argument(
         "--export_parquet", type=str, default=None,
-        help="Export the merged DataFrame to parquet",
+        help="Export the merged raw DataFrame to parquet",
+    )
+    parser.add_argument(
+        "--export_tables", type=str, default=None,
+        help="Export aggregated statistics tables (.xlsx for multi-sheet, or .csv)",
     )
     args = parser.parse_args()
 
     print("Loading results...")
     df = load_results(args.result_dirs)
 
-    analyze(df)
+    tables = analyze(df)
 
     if args.export_csv:
         df.to_csv(args.export_csv, index=False)
-        print(f"\nExported merged data to {args.export_csv}")
+        print(f"\nExported merged raw data to {args.export_csv}")
     if args.export_parquet:
         df.to_parquet(args.export_parquet, index=False)
-        print(f"\nExported merged data to {args.export_parquet}")
+        print(f"\nExported merged raw data to {args.export_parquet}")
+    if args.export_tables and tables:
+        export_tables(tables, args.export_tables)
 
 
 if __name__ == "__main__":

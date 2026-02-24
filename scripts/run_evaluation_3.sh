@@ -1,3 +1,4 @@
+# finish
 # pure_summary 评测
 python examples/eval/eval_medmem.py \
     --input datasets/cmtmedqa/cmtmedqa_pure_summary.parquet \
