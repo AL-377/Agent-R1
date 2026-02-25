@@ -1,0 +1,2629 @@
+{
+  "patient_id": "e39bab38110f",
+  "messages": [
+    {
+      "user": {
+        "content": "精神分裂症，2002年。",
+        "to_memory": [
+          "history: 2002年诊断为精神分裂症"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你好。因人而异，没有定论。但就算痊愈，大部分还是需要坚持服药的。",
+        "to_memory": [
+          "history: 2002年确诊精神分裂症",
+          "history: 医生建议即使痊愈大部分仍需坚持服药"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "a073f5d3-e716-41db-880d-c43896306db7",
+              "content": "2002年确诊精神分裂症",
+              "timestamp": 1771494470.8394392,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "9639c77b-c065-42ba-88c7-a46a0d722f03",
+              "content": "医生建议：即使痊愈，大部分患者仍需坚持服药",
+              "timestamp": 1771494470.8394477,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者被首次确诊为该精神疾病的年份是哪一年？",
+          "answer": "2002年",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "a073f5d3-e716-41db-880d-c43896306db7"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "a073f5d3-e716-41db-880d-c43896306db7",
+              "content": "2002年确诊精神分裂症",
+              "timestamp": 1771494470.8394392,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "9639c77b-c065-42ba-88c7-a46a0d722f03",
+              "content": "医生建议：即使痊愈，大部分患者仍需坚持服药",
+              "timestamp": 1771494470.8394477,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "精神分裂症，年前结婚的时候没有好好休息几天没有睡觉，出现幻觉，打家里人。就把他送到本地人民4医院就诊了。",
+        "to_memory": [
+          "history: 既往/现病史提示精神分裂症（2002年起）",
+          "working: 近期因结婚前未休息、数日未睡后出现幻觉并攻击家人",
+          "working: 因上述情况送至当地人民第四医院就诊"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e33a538-2bd1-4722-8afa-9adeff45861e",
+              "content": "近期因结婚前未休息、数日未睡后出现幻觉并攻击家人",
+              "timestamp": 1771494476.4383786,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "23c60975-9f42-4b5a-b31d-77afecd7c32f",
+              "content": "因上述情况送至当地人民第四医院就诊",
+              "timestamp": 1771494476.4383872,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "a073f5d3-e716-41db-880d-c43896306db7",
+              "content": "2002年确诊精神分裂症",
+              "timestamp": 1771494470.8394392,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "9639c77b-c065-42ba-88c7-a46a0d722f03",
+              "content": "医生建议：即使痊愈，大部分患者仍需坚持服药",
+              "timestamp": 1771494470.8394477,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者这次症状加重前提到的主要诱因是什么？",
+          "answer": "结婚前没好好休息、几天没睡觉后发作",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "3e33a538-2bd1-4722-8afa-9adeff45861e"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "精神分裂症是高复发率疾病，建议定期到专科医院就诊，需要巩固和维持治疗，以减少复发。",
+        "to_memory": [
+          "history: 2002年起患/诊断精神分裂症（高复发风险）",
+          "history: 医生建议定期到专科医院就诊，进行巩固与维持治疗以减少复发"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e33a538-2bd1-4722-8afa-9adeff45861e",
+              "content": "近期因结婚前未休息、数日未睡后出现幻觉并攻击家人",
+              "timestamp": 1771494476.4383786,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "23c60975-9f42-4b5a-b31d-77afecd7c32f",
+              "content": "因上述情况送至当地人民第四医院就诊",
+              "timestamp": 1771494476.4383872,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "a073f5d3-e716-41db-880d-c43896306db7",
+              "content": "2002年起确诊/患精神分裂症（高复发风险）",
+              "timestamp": 1771494470.8394392,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "9639c77b-c065-42ba-88c7-a46a0d722f03",
+              "content": "医生建议：即使痊愈，大部分患者仍需坚持服药",
+              "timestamp": 1771494470.8394477,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "2cc78f2a-fc8f-474e-a4f4-56369b2d9c52",
+              "content": "医生建议定期到专科医院就诊，进行巩固与维持治疗以减少复发",
+              "timestamp": 1771494482.9627357,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者最早被诊断该病的时间点与本次因结婚前后诱发复发而就诊的这次经历：本次复发前患者在生活作息上出现了什么关键变化，并因此引发了哪些突出行为或症状表现？",
+          "answer": "结婚前未好好休息、连续几天没睡，随后出现幻觉并攻击（打）家人。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "3e33a538-2bd1-4722-8afa-9adeff45861e"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "a073f5d3-e716-41db-880d-c43896306db7"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "朱医生你好。我已经成功加号了，就等就诊前一天的加号凭证短信了。我老公是2008年过年我们结婚的时候几天不睡觉发病的，我想大概跟我看恐怖片有关系，因为到了晚上他就胡思乱想什么有鬼啊什么生化危机到了啊世界上就他一个人了啊我们抓住他，他就以为我们是妖怪，就打我们。晚上就这样，他白天就清醒了，他自己告诉我们的，他很内疚。自己同意要去看医生，谁知道住院非常痛苦的别人都比他严重，又开始怕自己变成别人那样，闹着要回家。14他回家后就是药的副作用要睡觉，说话比较正常了，就怕再回到医院。开始正常吃药后情况一天天好转了，就减药了，富马酸喹硫平片1片和米氮平片1片的时候2010年又是正月初复发了，初一的时候睡眠就不好了初4就想上医院了，因为医生放假，正月初10了还是不睡觉才上医院，看后住院一个月，回家后吃的药有3种，我们会带过去给你看的。现在吃的是奥氮平片 5mg的1颗。为什么就晚上发病啊。",
+        "to_memory": [
+          "history: 患者（丈夫）既往诊断精神分裂症（病史约2002年起）",
+          "history: 2008年春节结婚期间连续多日未睡诱发急性发作，出现夜间幻觉/被害或怪异妄想（以为家人是妖怪）、攻击家人；曾就诊本地人民4医院并住院治疗，出院后药物副作用嗜睡",
+          "history: 2010年正月初复发：先出现睡眠不佳，随后持续不眠后就诊并住院约1个月；出院后曾服用3种药（具体待提供）",
+          "history: 既往用药：富马酸喹硫平片1片 + 米氮平片1片（减药阶段）",
+          "history: 目前用药：奥氮平片 5mg，每日1片（或1颗）",
+          "working: 本次咨询问题：为何症状/发病多在夜间出现；担心再次住院"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e33a538-2bd1-4722-8afa-9adeff45861e",
+              "content": "2008年春节结婚期间连续多日未睡诱发急性发作：夜间幻觉/被害或怪异妄想（以为家人是妖怪）、攻击家人；出院后药物副作用嗜睡",
+              "timestamp": 1771494476.4383786,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "23c60975-9f42-4b5a-b31d-77afecd7c32f",
+              "content": "2008年急性发作期间曾就诊本地人民第四医院并住院治疗",
+              "timestamp": 1771494476.4383872,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "1dfd7797-c8a8-443f-99f1-e1cdf08590e5",
+              "content": "本次咨询问题：为何症状/发病多在夜间出现；担心再次住院",
+              "timestamp": 1771494499.1161156,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "a073f5d3-e716-41db-880d-c43896306db7",
+              "content": "2002年起确诊/患精神分裂症（高复发风险）",
+              "timestamp": 1771494470.8394392,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "9639c77b-c065-42ba-88c7-a46a0d722f03",
+              "content": "医生建议：即使痊愈，大部分患者仍需坚持服药",
+              "timestamp": 1771494470.8394477,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "2cc78f2a-fc8f-474e-a4f4-56369b2d9c52",
+              "content": "医生建议定期到专科医院就诊，进行巩固与维持治疗以减少复发",
+              "timestamp": 1771494482.9627357,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "51e7f540-2d01-4a1b-8cfc-b02fce8e638e",
+              "content": "2010年正月初复发：先睡眠不佳，随后持续不眠后就诊并住院约1个月；出院后曾服用3种药（具体待提供）",
+              "timestamp": 1771494499.1160989,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "445442c3-5a14-4eab-863a-4ca258275a6f",
+              "content": "既往用药（减药阶段）：富马酸喹硫平片1片 + 米氮平片1片",
+              "timestamp": 1771494499.116107,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f5e76f66-8284-4a41-a45c-5cb692eb7f4f",
+              "content": "目前用药：奥氮平片 5mg，每日1片",
+              "timestamp": 1771494499.1161113,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比最开始医生给出的用药相关总体建议与患者这次咨询中提出的主要疑问：医生当时对治疗维持的态度是什么？而患者本次最想弄清楚的是哪一类发作规律问题？",
+          "answer": "医生认为即使痊愈，大多数患者仍需坚持服药；患者本次主要想问为什么症状/发作多在夜间出现（并担心再次住院）。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "9639c77b-c065-42ba-88c7-a46a0d722f03"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "1dfd7797-c8a8-443f-99f1-e1cdf08590e5"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "就诊进行精神检查，根据病情予调整药物。",
+        "to_memory": [
+          "history: 精神分裂症（2002年起，2008年过年结婚期间因多日不眠诱发发作，出现幻觉及攻击行为，曾在本地人民4医院就诊/住院；2010年正月初复发，住院约1个月）",
+          "history: 既往用药：富马酸喹硫平片、米氮平片；复发后曾服用3种药（具体待提供）",
+          "history: 目前用药：奥氮平片 5mg，每日1颗",
+          "identity: 既往发作多在夜间，患者/家属询问“为什么就晚上发病”",
+          "working: 医生计划：就诊时进行精神检查，根据病情调整药物"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3e33a538-2bd1-4722-8afa-9adeff45861e",
+              "content": "2008年春节结婚期间连续多日未睡诱发急性发作：夜间幻觉/被害或怪异妄想（以为家人是妖怪）、攻击家人；出院后药物副作用嗜睡",
+              "timestamp": 1771494476.4383786,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "23c60975-9f42-4b5a-b31d-77afecd7c32f",
+              "content": "2008年急性发作期间曾就诊本地人民第四医院并住院治疗",
+              "timestamp": 1771494476.4383872,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "1dfd7797-c8a8-443f-99f1-e1cdf08590e5",
+              "content": "本次咨询问题：为何症状/发病多在夜间出现；担心再次住院",
+              "timestamp": 1771494499.1161156,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "630f8fcf-c5be-48d2-a9ec-6b0df2e6a60c",
+              "content": "医生计划：就诊时进行精神检查，根据病情调整药物",
+              "timestamp": 1771494509.0831134,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "a073f5d3-e716-41db-880d-c43896306db7",
+              "content": "2002年起确诊/患精神分裂症（高复发风险）",
+              "timestamp": 1771494470.8394392,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "9639c77b-c065-42ba-88c7-a46a0d722f03",
+              "content": "医生建议：即使痊愈，大部分患者仍需坚持服药",
+              "timestamp": 1771494470.8394477,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "2cc78f2a-fc8f-474e-a4f4-56369b2d9c52",
+              "content": "医生建议定期到专科医院就诊，进行巩固与维持治疗以减少复发",
+              "timestamp": 1771494482.9627357,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "51e7f540-2d01-4a1b-8cfc-b02fce8e638e",
+              "content": "2010年正月初复发：先睡眠不佳，随后持续不眠后就诊并住院约1个月；出院后曾服用3种药（具体待提供）",
+              "timestamp": 1771494499.1160989,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "445442c3-5a14-4eab-863a-4ca258275a6f",
+              "content": "既往用药（减药阶段）：富马酸喹硫平片1片 + 米氮平片1片",
+              "timestamp": 1771494499.116107,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f5e76f66-8284-4a41-a45c-5cb692eb7f4f",
+              "content": "目前用药：奥氮平片 5mg，每日1片",
+              "timestamp": 1771494499.1161113,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "医生在早先的回复中，针对复发风险管理给出了怎样的随访与治疗策略建议？",
+          "answer": "建议定期到专科医院就诊，进行巩固和维持治疗，以减少复发。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "2cc78f2a-fc8f-474e-a4f4-56369b2d9c52"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "a073f5d3-e716-41db-880d-c43896306db7",
+              "content": "2002年起确诊/患精神分裂症（高复发风险）",
+              "timestamp": 1771494470.8394392,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "9639c77b-c065-42ba-88c7-a46a0d722f03",
+              "content": "医生建议：即使痊愈，大部分患者仍需坚持服药",
+              "timestamp": 1771494470.8394477,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "2cc78f2a-fc8f-474e-a4f4-56369b2d9c52",
+              "content": "医生建议定期到专科医院就诊，进行巩固与维持治疗以减少复发",
+              "timestamp": 1771494482.9627357,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "51e7f540-2d01-4a1b-8cfc-b02fce8e638e",
+              "content": "2010年正月初复发：先睡眠不佳，随后持续不眠后就诊并住院约1个月；出院后曾服用3种药（具体待提供）",
+              "timestamp": 1771494499.1160989,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "445442c3-5a14-4eab-863a-4ca258275a6f",
+              "content": "既往用药（减药阶段）：富马酸喹硫平片1片 + 米氮平片1片",
+              "timestamp": 1771494499.116107,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f5e76f66-8284-4a41-a45c-5cb692eb7f4f",
+              "content": "目前用药：奥氮平片 5mg，每日1片",
+              "timestamp": 1771494499.1161113,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "躁狂症、抑郁症、精神分裂症，在家人面前胡言乱语，坐立不安，急躁。发病时间将近20年。",
+        "to_memory": [
+          "history: 患者有精神分裂症病史/诊断，病程约近20年",
+          "working: 本次症状：在家人面前胡言乱语、坐立不安、急躁",
+          "history: 患者自述/家属提及：躁狂症、抑郁症、精神分裂症（诊断性质尚未明确）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "991190a4-e103-465b-9a40-d8ddd3dfdd65",
+              "content": "本次症状：在家人面前胡言乱语、坐立不安、急躁",
+              "timestamp": 1771494515.315653,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "a073f5d3-e716-41db-880d-c43896306db7",
+              "content": "2002年起确诊/患精神分裂症，病程约近20年（高复发风险）",
+              "timestamp": 1771494470.8394392,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "9639c77b-c065-42ba-88c7-a46a0d722f03",
+              "content": "医生建议：即使痊愈，大部分患者仍需坚持服药",
+              "timestamp": 1771494470.8394477,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "2cc78f2a-fc8f-474e-a4f4-56369b2d9c52",
+              "content": "医生建议定期到专科医院就诊，进行巩固与维持治疗以减少复发",
+              "timestamp": 1771494482.9627357,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "51e7f540-2d01-4a1b-8cfc-b02fce8e638e",
+              "content": "2010年正月初复发：先睡眠不佳，随后持续不眠后就诊并住院约1个月；出院后曾服用3种药（具体待提供）",
+              "timestamp": 1771494499.1160989,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "445442c3-5a14-4eab-863a-4ca258275a6f",
+              "content": "既往用药（减药阶段）：富马酸喹硫平片1片 + 米氮平片1片",
+              "timestamp": 1771494499.116107,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f5e76f66-8284-4a41-a45c-5cb692eb7f4f",
+              "content": "目前用药：奥氮平片 5mg，每日1片",
+              "timestamp": 1771494499.1161113,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "04b16d09-ce50-4028-b720-ef79dc920b54",
+              "content": "患者自述/家属提及既往可能诊断：躁狂症、抑郁症、精神分裂症；诊断性质尚未明确",
+              "timestamp": 1771494515.3156614,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "目前精神障碍性疾病没有根治的方法，手术也不能根治，只是能改善某些症状，我们这费用在4万左右。",
+        "to_memory": [
+          "history: 医生说明精神障碍性疾病目前无根治方法，手术也不能根治，仅可改善部分症状",
+          "working: 医生提到相关治疗费用约4万元左右"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "991190a4-e103-465b-9a40-d8ddd3dfdd65",
+              "content": "本次症状：在家人面前胡言乱语、坐立不安、急躁",
+              "timestamp": 1771494515.315653,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "b008c912-6ac1-4f22-9c8b-800f0c944927",
+              "content": "医生提到相关治疗费用约4万元左右",
+              "timestamp": 1771494520.4583766,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "a073f5d3-e716-41db-880d-c43896306db7",
+              "content": "2002年起确诊/患精神分裂症，病程约近20年（高复发风险）",
+              "timestamp": 1771494470.8394392,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "9639c77b-c065-42ba-88c7-a46a0d722f03",
+              "content": "医生建议：即使痊愈，大部分患者仍需坚持服药",
+              "timestamp": 1771494470.8394477,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "2cc78f2a-fc8f-474e-a4f4-56369b2d9c52",
+              "content": "医生建议定期到专科医院就诊，进行巩固与维持治疗以减少复发",
+              "timestamp": 1771494482.9627357,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "51e7f540-2d01-4a1b-8cfc-b02fce8e638e",
+              "content": "2010年正月初复发：先睡眠不佳，随后持续不眠后就诊并住院约1个月；出院后曾服用3种药（具体待提供）",
+              "timestamp": 1771494499.1160989,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "445442c3-5a14-4eab-863a-4ca258275a6f",
+              "content": "既往用药（减药阶段）：富马酸喹硫平片1片 + 米氮平片1片",
+              "timestamp": 1771494499.116107,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f5e76f66-8284-4a41-a45c-5cb692eb7f4f",
+              "content": "目前用药：奥氮平片 5mg，每日1片",
+              "timestamp": 1771494499.1161113,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "04b16d09-ce50-4028-b720-ef79dc920b54",
+              "content": "患者自述/家属提及既往可能诊断：躁狂症、抑郁症、精神分裂症；诊断性质尚未明确",
+              "timestamp": 1771494515.3156614,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ac75d9c9-54e6-413b-ad4a-5c3cf7960b3d",
+              "content": "医生说明：精神障碍性疾病目前无根治方法；手术也不能根治，仅可改善部分症状",
+              "timestamp": 1771494520.458368,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "家属描述患者曾主要在夜间出现异常行为，但本次补充的近况表现有不同特征。请指出这次补充描述的具体表现有哪些？这些表现与“仅夜间发作”的说法是否存在需要进一步核对的矛盾点？",
+          "answer": "本次症状为：在家人面前胡言乱语、坐立不安、急躁；与“仅夜间发作”的说法可能存在不一致，需要进一步核对发作时段与日间表现。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "a073f5d3-e716-41db-880d-c43896306db7"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "991190a4-e103-465b-9a40-d8ddd3dfdd65"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            8,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "a073f5d3-e716-41db-880d-c43896306db7",
+              "content": "2002年起确诊/患精神分裂症，病程约近20年（高复发风险）",
+              "timestamp": 1771494470.8394392,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "9639c77b-c065-42ba-88c7-a46a0d722f03",
+              "content": "医生建议：即使痊愈，大部分患者仍需坚持服药",
+              "timestamp": 1771494470.8394477,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "2cc78f2a-fc8f-474e-a4f4-56369b2d9c52",
+              "content": "医生建议定期到专科医院就诊，进行巩固与维持治疗以减少复发",
+              "timestamp": 1771494482.9627357,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "51e7f540-2d01-4a1b-8cfc-b02fce8e638e",
+              "content": "2010年正月初复发：先睡眠不佳，随后持续不眠后就诊并住院约1个月；出院后曾服用3种药（具体待提供）",
+              "timestamp": 1771494499.1160989,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "445442c3-5a14-4eab-863a-4ca258275a6f",
+              "content": "既往用药（减药阶段）：富马酸喹硫平片1片 + 米氮平片1片",
+              "timestamp": 1771494499.116107,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f5e76f66-8284-4a41-a45c-5cb692eb7f4f",
+              "content": "目前用药：奥氮平片 5mg，每日1片",
+              "timestamp": 1771494499.1161113,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "04b16d09-ce50-4028-b720-ef79dc920b54",
+              "content": "患者自述/家属提及既往可能诊断：躁狂症、抑郁症、精神分裂症；诊断性质尚未明确",
+              "timestamp": 1771494515.3156614,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ac75d9c9-54e6-413b-ad4a-5c3cf7960b3d",
+              "content": "医生说明：精神障碍性疾病目前无根治方法；手术也不能根治，仅可改善部分症状",
+              "timestamp": 1771494520.458368,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "正在检查，还不知道是什么病，一岁宝宝偶尔洗澡的时候没有精神，嘴唇发紫，眼睛发青，平时精神头特好，能吃能睡的,身材不胖也不瘦。9，10个月的时候曾经有过几次，做过心脏彩超没查出问题。现在15个月了，又连续三天洗澡出现这种情况了。请大夫帮帮忙!我该怎么办？今天又出现这种情况了！！！平时没事，玩的很开心。9.10个月的时候有过几次，都是洗澡时发生的，但是前今天连续两天又出现这种情况了，第三天没洗澡也出现那种情况了。家里从早到晚天天通风。",
+        "to_memory": [
+          "identity: 患者为15个月婴幼儿（约1岁），体型不胖不瘦，平时精神好、能吃能睡",
+          "history: 9-10个月时曾多次在洗澡时出现类似发作；曾做心脏彩超检查未发现异常",
+          "history: 主诉洗澡时偶尔出现没精神、嘴唇发紫、眼周/眼睛发青；近3天洗澡时连续出现，且第3天未洗澡也出现一次；今日再次出现；平时玩耍正常；家中从早到晚通风；目前正在检查，尚不清楚诊断；咨询应如何处理"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f976fa24-8ce9-4130-9e12-be29fc2adf18",
+              "content": "患者为15个月婴幼儿（约1岁），体型适中，平时精神好、能吃能睡。",
+              "timestamp": 1771494531.5352592,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "a073f5d3-e716-41db-880d-c43896306db7",
+              "content": "2002年起确诊/患精神分裂症，病程约近20年（高复发风险）",
+              "timestamp": 1771494470.8394392,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "9639c77b-c065-42ba-88c7-a46a0d722f03",
+              "content": "医生建议：即使痊愈，大部分患者仍需坚持服药",
+              "timestamp": 1771494470.8394477,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "2cc78f2a-fc8f-474e-a4f4-56369b2d9c52",
+              "content": "医生建议定期到专科医院就诊，进行巩固与维持治疗以减少复发",
+              "timestamp": 1771494482.9627357,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "51e7f540-2d01-4a1b-8cfc-b02fce8e638e",
+              "content": "2010年正月初复发：先睡眠不佳，随后持续不眠后就诊并住院约1个月；出院后曾服用3种药（具体待提供）",
+              "timestamp": 1771494499.1160989,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "445442c3-5a14-4eab-863a-4ca258275a6f",
+              "content": "既往用药（减药阶段）：富马酸喹硫平片1片 + 米氮平片1片",
+              "timestamp": 1771494499.116107,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f5e76f66-8284-4a41-a45c-5cb692eb7f4f",
+              "content": "目前用药：奥氮平片 5mg，每日1片",
+              "timestamp": 1771494499.1161113,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "04b16d09-ce50-4028-b720-ef79dc920b54",
+              "content": "患者自述/家属提及既往可能诊断：躁狂症、抑郁症、精神分裂症；诊断性质尚未明确",
+              "timestamp": 1771494515.3156614,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ac75d9c9-54e6-413b-ad4a-5c3cf7960b3d",
+              "content": "医生说明：精神障碍性疾病目前无根治方法；手术也不能根治，仅可改善部分症状",
+              "timestamp": 1771494520.458368,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b4179ba0-d134-4ccc-9f6c-605d9332169e",
+              "content": "主诉：洗澡时偶尔出现没精神、嘴唇发紫、眼周/眼睛发青；近3天洗澡时连续出现，第3天未洗澡也出现一次，今日再次出现；平时玩耍正常；家中从早到晚通风；目前正在检查，尚不清楚诊断，咨询应如何处理。",
+              "timestamp": 1771494531.535268,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9ff85ebc-3e95-494b-a768-01a2946aa8ab",
+              "content": "既往史：9-10个月时曾多次在洗澡时出现类似发作；曾做心脏彩超检查未发现异常。",
+              "timestamp": 1771494531.5352738,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "病历中曾记录过患者处于减药阶段时的具体用药方案。请指出该用药方案的药物名称及各自剂量（以“每次/每日几片”表述），并说明把这一方案用于当前这位就诊者时需要重点核对的安全点是什么。",
+          "answer": "减药阶段用药：富马酸喹硫平片1片 + 米氮平片1片；需重点核对安全点：当前就诊者为15个月婴幼儿（约1岁），该成人精神科用药记录与其年龄/人群不匹配，存在用药安全风险。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "445442c3-5a14-4eab-863a-4ca258275a6f"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "f976fa24-8ce9-4130-9e12-be29fc2adf18"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可能当时有缺氧，小儿都比较敏感，以后多观察看。",
+        "to_memory": [
+          "working: 15个月宝宝反复发作：多在洗澡时出现精神差、嘴唇发紫、眼周发青；9-10个月时曾发作数次；近日连续3天洗澡时出现，且第3天未洗澡也出现一次；平时精神好、能吃能睡",
+          "history: 9-10个月时因类似发作做过心脏彩超，未查出问题",
+          "working: 医生认为发作时可能存在缺氧，建议后续加强观察"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "671796e8-6b66-4e4a-8aa4-adf9e438d0de",
+              "content": "医生判断发作时可能存在缺氧，建议后续加强观察（如再次发作注意记录诱因/持续时间/伴随症状）。",
+              "timestamp": 1771494539.8993342,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "identity": [
+            {
+              "id": "f976fa24-8ce9-4130-9e12-be29fc2adf18",
+              "content": "患者为15个月婴幼儿（约1岁），体型适中，平时精神好、能吃能睡。",
+              "timestamp": 1771494531.5352592,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "a073f5d3-e716-41db-880d-c43896306db7",
+              "content": "2002年起确诊/患精神分裂症，病程约近20年（高复发风险）",
+              "timestamp": 1771494470.8394392,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "9639c77b-c065-42ba-88c7-a46a0d722f03",
+              "content": "医生建议：即使痊愈，大部分患者仍需坚持服药",
+              "timestamp": 1771494470.8394477,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "2cc78f2a-fc8f-474e-a4f4-56369b2d9c52",
+              "content": "医生建议定期到专科医院就诊，进行巩固与维持治疗以减少复发",
+              "timestamp": 1771494482.9627357,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "51e7f540-2d01-4a1b-8cfc-b02fce8e638e",
+              "content": "2010年正月初复发：先睡眠不佳，随后持续不眠后就诊并住院约1个月；出院后曾服用3种药（具体待提供）",
+              "timestamp": 1771494499.1160989,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "445442c3-5a14-4eab-863a-4ca258275a6f",
+              "content": "既往用药（减药阶段）：富马酸喹硫平片1片 + 米氮平片1片",
+              "timestamp": 1771494499.116107,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f5e76f66-8284-4a41-a45c-5cb692eb7f4f",
+              "content": "目前用药：奥氮平片 5mg，每日1片",
+              "timestamp": 1771494499.1161113,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "04b16d09-ce50-4028-b720-ef79dc920b54",
+              "content": "患者自述/家属提及既往可能诊断：躁狂症、抑郁症、精神分裂症；诊断性质尚未明确",
+              "timestamp": 1771494515.3156614,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ac75d9c9-54e6-413b-ad4a-5c3cf7960b3d",
+              "content": "医生说明：精神障碍性疾病目前无根治方法；手术也不能根治，仅可改善部分症状",
+              "timestamp": 1771494520.458368,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b4179ba0-d134-4ccc-9f6c-605d9332169e",
+              "content": "主诉：洗澡时偶尔出现没精神、嘴唇发紫、眼周/眼睛发青；近3天洗澡时连续出现，第3天未洗澡也出现一次，今日再次出现；平时玩耍正常；家中从早到晚通风；目前正在检查，尚不清楚诊断，咨询应如何处理。",
+              "timestamp": 1771494531.535268,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9ff85ebc-3e95-494b-a768-01a2946aa8ab",
+              "content": "既往史：9-10个月时曾多次在洗澡时出现类似发作；曾做心脏彩超检查未发现异常。",
+              "timestamp": 1771494531.5352738,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在这段对话里，医生的答复可能与患者所描述的就诊对象或既往病程信息存在不匹配的安全风险。请指出需要首先核对的关键患者背景信息是什么，并说明为什么这一核对很重要。",
+          "answer": "需要先核对当前咨询的患者其实是约15个月大的婴幼儿（约1岁），而非成人精神障碍患者；因为不同患者/年龄段会导致建议对象错误，存在明显安全风险。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "a073f5d3-e716-41db-880d-c43896306db7"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "f976fa24-8ce9-4130-9e12-be29fc2adf18"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            11,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "昨晚又发生了。",
+        "to_memory": [
+          "working: 患者称“昨晚又发生了”，提示此前所述发作/症状昨晚再次出现，具体表现未补充"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "671796e8-6b66-4e4a-8aa4-adf9e438d0de",
+              "content": "医生判断发作时可能存在缺氧，建议后续加强观察（如再次发作注意记录诱因/持续时间/伴随症状）。",
+              "timestamp": 1771494539.8993342,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f84b1a94-b3db-48b9-be19-6153360086f2",
+              "content": "患者称“昨晚又发生了”，提示此前所述发作/症状昨晚再次出现，具体表现未补充。",
+              "timestamp": 1771494548.340342,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "identity": [
+            {
+              "id": "f976fa24-8ce9-4130-9e12-be29fc2adf18",
+              "content": "患者为15个月婴幼儿（约1岁），体型适中，平时精神好、能吃能睡。",
+              "timestamp": 1771494531.5352592,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "a073f5d3-e716-41db-880d-c43896306db7",
+              "content": "2002年起确诊/患精神分裂症，病程约近20年（高复发风险）",
+              "timestamp": 1771494470.8394392,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "9639c77b-c065-42ba-88c7-a46a0d722f03",
+              "content": "医生建议：即使痊愈，大部分患者仍需坚持服药",
+              "timestamp": 1771494470.8394477,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "2cc78f2a-fc8f-474e-a4f4-56369b2d9c52",
+              "content": "医生建议定期到专科医院就诊，进行巩固与维持治疗以减少复发",
+              "timestamp": 1771494482.9627357,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "51e7f540-2d01-4a1b-8cfc-b02fce8e638e",
+              "content": "2010年正月初复发：先睡眠不佳，随后持续不眠后就诊并住院约1个月；出院后曾服用3种药（具体待提供）",
+              "timestamp": 1771494499.1160989,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "445442c3-5a14-4eab-863a-4ca258275a6f",
+              "content": "既往用药（减药阶段）：富马酸喹硫平片1片 + 米氮平片1片",
+              "timestamp": 1771494499.116107,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f5e76f66-8284-4a41-a45c-5cb692eb7f4f",
+              "content": "目前用药：奥氮平片 5mg，每日1片",
+              "timestamp": 1771494499.1161113,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "04b16d09-ce50-4028-b720-ef79dc920b54",
+              "content": "患者自述/家属提及既往可能诊断：躁狂症、抑郁症、精神分裂症；诊断性质尚未明确",
+              "timestamp": 1771494515.3156614,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ac75d9c9-54e6-413b-ad4a-5c3cf7960b3d",
+              "content": "医生说明：精神障碍性疾病目前无根治方法；手术也不能根治，仅可改善部分症状",
+              "timestamp": 1771494520.458368,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b4179ba0-d134-4ccc-9f6c-605d9332169e",
+              "content": "主诉：洗澡时偶尔出现没精神、嘴唇发紫、眼周/眼睛发青；近3天洗澡时连续出现，第3天未洗澡也出现一次，今日再次出现；平时玩耍正常；家中从早到晚通风；目前正在检查，尚不清楚诊断，咨询应如何处理。",
+              "timestamp": 1771494531.535268,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9ff85ebc-3e95-494b-a768-01a2946aa8ab",
+              "content": "既往史：9-10个月时曾多次在洗澡时出现类似发作；曾做心脏彩超检查未发现异常。",
+              "timestamp": 1771494531.5352738,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在这段对话中出现了两位不同患者的病史信息。请指出其中一条会引发重大安全或病历归属冲突的关键信息，并说明它分别对应哪一位患者。",
+          "answer": "对话中同时出现了“近20年的精神分裂症等精神障碍病史（约2002年起）”与“15个月左右婴幼儿的发作情况”两套不可能属于同一人的信息；前者对应精神障碍患者，后者对应15个月婴幼儿。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "a073f5d3-e716-41db-880d-c43896306db7"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "f976fa24-8ce9-4130-9e12-be29fc2adf18"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            12,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "那就要查心肺方面的问题，必要时复查心脏超声。",
+        "to_memory": [
+          "history: 医生建议查心肺方面问题，必要时复查心脏超声（心脏彩超）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "671796e8-6b66-4e4a-8aa4-adf9e438d0de",
+              "content": "医生判断发作时可能存在缺氧，建议后续加强观察（如再次发作注意记录诱因/持续时间/伴随症状）。",
+              "timestamp": 1771494539.8993342,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f84b1a94-b3db-48b9-be19-6153360086f2",
+              "content": "患者称“昨晚又发生了”，提示此前所述发作/症状昨晚再次出现，具体表现未补充。",
+              "timestamp": 1771494548.340342,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "6f501500-6ef0-4a5f-a297-100bc0601d58",
+              "content": "医生建议进一步排查心肺方面问题，必要时复查心脏超声（心脏彩超）。",
+              "timestamp": 1771494554.2745566,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [
+            {
+              "id": "f976fa24-8ce9-4130-9e12-be29fc2adf18",
+              "content": "患者为15个月婴幼儿（约1岁），体型适中，平时精神好、能吃能睡。",
+              "timestamp": 1771494531.5352592,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "a073f5d3-e716-41db-880d-c43896306db7",
+              "content": "2002年起确诊/患精神分裂症，病程约近20年（高复发风险）",
+              "timestamp": 1771494470.8394392,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "9639c77b-c065-42ba-88c7-a46a0d722f03",
+              "content": "医生建议：即使痊愈，大部分患者仍需坚持服药",
+              "timestamp": 1771494470.8394477,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "2cc78f2a-fc8f-474e-a4f4-56369b2d9c52",
+              "content": "医生建议定期到专科医院就诊，进行巩固与维持治疗以减少复发",
+              "timestamp": 1771494482.9627357,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "51e7f540-2d01-4a1b-8cfc-b02fce8e638e",
+              "content": "2010年正月初复发：先睡眠不佳，随后持续不眠后就诊并住院约1个月；出院后曾服用3种药（具体待提供）",
+              "timestamp": 1771494499.1160989,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "445442c3-5a14-4eab-863a-4ca258275a6f",
+              "content": "既往用药（减药阶段）：富马酸喹硫平片1片 + 米氮平片1片",
+              "timestamp": 1771494499.116107,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f5e76f66-8284-4a41-a45c-5cb692eb7f4f",
+              "content": "目前用药：奥氮平片 5mg，每日1片",
+              "timestamp": 1771494499.1161113,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "04b16d09-ce50-4028-b720-ef79dc920b54",
+              "content": "患者自述/家属提及既往可能诊断：躁狂症、抑郁症、精神分裂症；诊断性质尚未明确",
+              "timestamp": 1771494515.3156614,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ac75d9c9-54e6-413b-ad4a-5c3cf7960b3d",
+              "content": "医生说明：精神障碍性疾病目前无根治方法；手术也不能根治，仅可改善部分症状",
+              "timestamp": 1771494520.458368,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b4179ba0-d134-4ccc-9f6c-605d9332169e",
+              "content": "主诉：洗澡时偶尔出现没精神、嘴唇发紫、眼周/眼睛发青；近3天洗澡时连续出现，第3天未洗澡也出现一次，今日再次出现；平时玩耍正常；家中从早到晚通风；目前正在检查，尚不清楚诊断，咨询应如何处理。",
+              "timestamp": 1771494531.535268,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9ff85ebc-3e95-494b-a768-01a2946aa8ab",
+              "content": "既往史：9-10个月时曾多次在洗澡时出现类似发作；曾做心脏彩超检查未发现异常。",
+              "timestamp": 1771494531.5352738,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f976fa24-8ce9-4130-9e12-be29fc2adf18",
+              "content": "患者为15个月婴幼儿（约1岁），体型适中，平时精神好、能吃能睡。",
+              "timestamp": 1771494531.5352592,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "a073f5d3-e716-41db-880d-c43896306db7",
+              "content": "2002年起确诊/患精神分裂症，病程约近20年（高复发风险）",
+              "timestamp": 1771494470.8394392,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "9639c77b-c065-42ba-88c7-a46a0d722f03",
+              "content": "医生建议：即使痊愈，大部分患者仍需坚持服药",
+              "timestamp": 1771494470.8394477,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "2cc78f2a-fc8f-474e-a4f4-56369b2d9c52",
+              "content": "医生建议定期到专科医院就诊，进行巩固与维持治疗以减少复发",
+              "timestamp": 1771494482.9627357,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "51e7f540-2d01-4a1b-8cfc-b02fce8e638e",
+              "content": "2010年正月初复发：先睡眠不佳，随后持续不眠后就诊并住院约1个月；出院后曾服用3种药（具体待提供）",
+              "timestamp": 1771494499.1160989,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "445442c3-5a14-4eab-863a-4ca258275a6f",
+              "content": "既往用药（减药阶段）：富马酸喹硫平片1片 + 米氮平片1片",
+              "timestamp": 1771494499.116107,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f5e76f66-8284-4a41-a45c-5cb692eb7f4f",
+              "content": "目前用药：奥氮平片 5mg，每日1片",
+              "timestamp": 1771494499.1161113,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "04b16d09-ce50-4028-b720-ef79dc920b54",
+              "content": "患者自述/家属提及既往可能诊断：躁狂症、抑郁症、精神分裂症；诊断性质尚未明确",
+              "timestamp": 1771494515.3156614,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ac75d9c9-54e6-413b-ad4a-5c3cf7960b3d",
+              "content": "医生说明：精神障碍性疾病目前无根治方法；手术也不能根治，仅可改善部分症状",
+              "timestamp": 1771494520.458368,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b4179ba0-d134-4ccc-9f6c-605d9332169e",
+              "content": "主诉：洗澡时偶尔出现没精神、嘴唇发紫、眼周/眼睛发青；近3天洗澡时连续出现，第3天未洗澡也出现一次，今日再次出现；平时玩耍正常；家中从早到晚通风；目前正在检查，尚不清楚诊断，咨询应如何处理。",
+              "timestamp": 1771494531.535268,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9ff85ebc-3e95-494b-a768-01a2946aa8ab",
+              "content": "既往史：9-10个月时曾多次在洗澡时出现类似发作；曾做心脏彩超检查未发现异常。",
+              "timestamp": 1771494531.5352738,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "不知道，我是在09年8月份,白天出了很多的汗,晚上睡觉突然醒来,看房子天晕地转,过了大约也就一分钟的样子,就不转了.但头向左转动就又转,左边头皮还发麻.第二天起来,人没有精神,过了段时间.病情时轻时重,好像是躺在床上向右人就一上晕了.但时间不长.有一天开了一天的车,晚上先是有点头晕,走路不稳,上床休息,但突然后脑根部特别疼,到了第二天也不疼了.到现在也没有疼过.现在就是躺下和起床特别晕(头向右和头向上或向下),走路不稳.特别是站久了,就要倒了感觉.另外平常,脑袋感觉昏沉沉的,有时眼睛看东西跟不上速度,要晕的,晕的时候是脑袋里跟一片去飘过的。",
+        "to_memory": [
+          "working: 2009年8月起反复发作性眩晕/头晕，最初夜间醒来感天旋地转约1分钟缓解；头部向左转可诱发复发，伴左侧头皮发麻；症状时轻时重",
+          "working: 现主要表现为躺下及起床时眩晕明显（头向右、向上或向下转动诱发），伴走路不稳、站久有要倒的感觉",
+          "identity: 既往一次开车一天后出现头晕走路不稳，休息时突发枕后（后脑根部）剧痛，次日缓解，此后未再痛",
+          "working: 平时头部昏沉感；有时视物跟不上速度并伴将要眩晕感；描述眩晕时有“脑袋里像一片飘过”的感觉"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f976fa24-8ce9-4130-9e12-be29fc2adf18",
+              "content": "患者为15个月婴幼儿（约1岁），体型适中，平时精神好、能吃能睡。",
+              "timestamp": 1771494531.5352592,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "a073f5d3-e716-41db-880d-c43896306db7",
+              "content": "2002年起确诊/患精神分裂症，病程约近20年（高复发风险）",
+              "timestamp": 1771494470.8394392,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "9639c77b-c065-42ba-88c7-a46a0d722f03",
+              "content": "医生建议：即使痊愈，大部分患者仍需坚持服药",
+              "timestamp": 1771494470.8394477,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "2cc78f2a-fc8f-474e-a4f4-56369b2d9c52",
+              "content": "医生建议定期到专科医院就诊，进行巩固与维持治疗以减少复发",
+              "timestamp": 1771494482.9627357,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "51e7f540-2d01-4a1b-8cfc-b02fce8e638e",
+              "content": "2010年正月初复发：先睡眠不佳，随后持续不眠后就诊并住院约1个月；出院后曾服用3种药（具体待提供）",
+              "timestamp": 1771494499.1160989,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "445442c3-5a14-4eab-863a-4ca258275a6f",
+              "content": "既往用药（减药阶段）：富马酸喹硫平片1片 + 米氮平片1片",
+              "timestamp": 1771494499.116107,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f5e76f66-8284-4a41-a45c-5cb692eb7f4f",
+              "content": "目前用药：奥氮平片 5mg，每日1片",
+              "timestamp": 1771494499.1161113,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "04b16d09-ce50-4028-b720-ef79dc920b54",
+              "content": "患者自述/家属提及既往可能诊断：躁狂症、抑郁症、精神分裂症；诊断性质尚未明确",
+              "timestamp": 1771494515.3156614,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ac75d9c9-54e6-413b-ad4a-5c3cf7960b3d",
+              "content": "医生说明：精神障碍性疾病目前无根治方法；手术也不能根治，仅可改善部分症状",
+              "timestamp": 1771494520.458368,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b4179ba0-d134-4ccc-9f6c-605d9332169e",
+              "content": "主诉：洗澡时偶尔出现没精神、嘴唇发紫、眼周/眼睛发青；近3天洗澡时连续出现，第3天未洗澡也出现一次，今日再次出现；平时玩耍正常；家中从早到晚通风；目前正在检查，尚不清楚诊断，咨询应如何处理。",
+              "timestamp": 1771494531.535268,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9ff85ebc-3e95-494b-a768-01a2946aa8ab",
+              "content": "既往史：9-10个月时曾多次在洗澡时出现类似发作；曾做心脏彩超检查未发现异常。",
+              "timestamp": 1771494531.5352738,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "cd1e4a9f-a7c2-49da-ac25-0b6ddfaeda1a",
+              "content": "2009年8月起反复发作性眩晕/头晕：最初夜间醒来感天旋地转约1分钟缓解；头部向左转可诱发复发，伴左侧头皮发麻；症状时轻时重。现主要表现为躺下及起床时眩晕明显（头向右、向上或向下转动诱发），伴走路不稳、站久有要倒的感觉；平时头部昏沉感；有时视物跟不上速度并伴将要眩晕感，眩晕时描述“脑袋里像一片飘过”的感觉。",
+              "timestamp": 1771494561.7814493,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "e42d41fc-3e9c-41e5-91aa-359c65bb82bc",
+              "content": "既往一次开车一天后出现头晕、走路不稳，休息时突发枕后（后脑根部）剧痛，次日缓解，此后未再痛。",
+              "timestamp": 1771494561.7814581,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者既往曾出现过一次需要特别警惕、可能提示严重问题的短暂症状组合（发生在某次特定活动之后并在休息时出现）。请指出那次“特定活动”是什么，以及当时最突出的伴随症状是什么？",
+          "answer": "曾经开车开了一整天；休息时突发后脑根部（枕后）剧痛（并伴头晕、走路不稳），次日缓解，此后未再痛。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "9639c77b-c065-42ba-88c7-a46a0d722f03",
+                "e42d41fc-3e9c-41e5-91aa-359c65bb82bc"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            15,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你得的是颈椎间盘突出，可以先做保守治疗。",
+        "to_memory": [
+          "history: 医生判断/诊断为颈椎间盘突出，建议先行保守治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f976fa24-8ce9-4130-9e12-be29fc2adf18",
+              "content": "患者为15个月婴幼儿（约1岁），体型适中，平时精神好、能吃能睡。",
+              "timestamp": 1771494531.5352592,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "a073f5d3-e716-41db-880d-c43896306db7",
+              "content": "2002年起确诊/患精神分裂症，病程约近20年（高复发风险）",
+              "timestamp": 1771494470.8394392,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "9639c77b-c065-42ba-88c7-a46a0d722f03",
+              "content": "医生建议：即使痊愈，大部分患者仍需坚持服药",
+              "timestamp": 1771494470.8394477,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "2cc78f2a-fc8f-474e-a4f4-56369b2d9c52",
+              "content": "医生建议定期到专科医院就诊，进行巩固与维持治疗以减少复发",
+              "timestamp": 1771494482.9627357,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "51e7f540-2d01-4a1b-8cfc-b02fce8e638e",
+              "content": "2010年正月初复发：先睡眠不佳，随后持续不眠后就诊并住院约1个月；出院后曾服用3种药（具体待提供）",
+              "timestamp": 1771494499.1160989,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "445442c3-5a14-4eab-863a-4ca258275a6f",
+              "content": "既往用药（减药阶段）：富马酸喹硫平片1片 + 米氮平片1片",
+              "timestamp": 1771494499.116107,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f5e76f66-8284-4a41-a45c-5cb692eb7f4f",
+              "content": "目前用药：奥氮平片 5mg，每日1片",
+              "timestamp": 1771494499.1161113,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "04b16d09-ce50-4028-b720-ef79dc920b54",
+              "content": "患者自述/家属提及既往可能诊断：躁狂症、抑郁症、精神分裂症；诊断性质尚未明确",
+              "timestamp": 1771494515.3156614,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ac75d9c9-54e6-413b-ad4a-5c3cf7960b3d",
+              "content": "医生说明：精神障碍性疾病目前无根治方法；手术也不能根治，仅可改善部分症状",
+              "timestamp": 1771494520.458368,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b4179ba0-d134-4ccc-9f6c-605d9332169e",
+              "content": "主诉：洗澡时偶尔出现没精神、嘴唇发紫、眼周/眼睛发青；近3天洗澡时连续出现，第3天未洗澡也出现一次，今日再次出现；平时玩耍正常；家中从早到晚通风；目前正在检查，尚不清楚诊断，咨询应如何处理。",
+              "timestamp": 1771494531.535268,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9ff85ebc-3e95-494b-a768-01a2946aa8ab",
+              "content": "既往史：9-10个月时曾多次在洗澡时出现类似发作；曾做心脏彩超检查未发现异常。",
+              "timestamp": 1771494531.5352738,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "cd1e4a9f-a7c2-49da-ac25-0b6ddfaeda1a",
+              "content": "2009年8月起反复发作性眩晕/头晕：最初夜间醒来感天旋地转约1分钟缓解；头部向左转可诱发复发，伴左侧头皮发麻；症状时轻时重。现主要表现为躺下及起床时眩晕明显（头向右、向上或向下转动诱发），伴走路不稳、站久有要倒的感觉；平时头部昏沉感；有时视物跟不上速度并伴将要眩晕感，眩晕时描述“脑袋里像一片飘过”的感觉。",
+              "timestamp": 1771494561.7814493,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "e42d41fc-3e9c-41e5-91aa-359c65bb82bc",
+              "content": "既往一次开车一天后出现头晕、走路不稳，休息时突发枕后（后脑根部）剧痛，次日缓解，此后未再痛。",
+              "timestamp": 1771494561.7814581,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "900b4cc7-9ea8-4fc7-97eb-e50c691e46da",
+              "content": "医生判断/诊断为颈椎间盘突出，建议先行保守治疗。",
+              "timestamp": 1771494568.250267,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者既往在减药阶段正在服用的精神科药物有哪些？如本次需新增或调整用药，是否需要先核对这些既往用药以避免潜在相互作用或重复用药风险？",
+          "answer": "富马酸喹硫平片1片 + 米氮平片1片",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "445442c3-5a14-4eab-863a-4ca258275a6f",
+                "e42d41fc-3e9c-41e5-91aa-359c65bb82bc"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            12,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "但，很多医生看了片子，说是张口位片枢椎似乎有些旋转移位 ，不知有没有啊。",
+        "to_memory": [
+          "working: 患者反馈多位医生阅片认为张口位片提示枢椎似乎存在旋转移位，患者询问是否确有该情况"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b4e43294-9835-48b2-b25f-0695b97c20ee",
+              "content": "患者反馈多位医生阅片认为张口位片提示枢椎似乎存在旋转移位，患者询问是否确有该情况。",
+              "timestamp": 1771494573.7366514,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "identity": [
+            {
+              "id": "f976fa24-8ce9-4130-9e12-be29fc2adf18",
+              "content": "患者为15个月婴幼儿（约1岁），体型适中，平时精神好、能吃能睡。",
+              "timestamp": 1771494531.5352592,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "a073f5d3-e716-41db-880d-c43896306db7",
+              "content": "2002年起确诊/患精神分裂症，病程约近20年（高复发风险）",
+              "timestamp": 1771494470.8394392,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "9639c77b-c065-42ba-88c7-a46a0d722f03",
+              "content": "医生建议：即使痊愈，大部分患者仍需坚持服药",
+              "timestamp": 1771494470.8394477,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "2cc78f2a-fc8f-474e-a4f4-56369b2d9c52",
+              "content": "医生建议定期到专科医院就诊，进行巩固与维持治疗以减少复发",
+              "timestamp": 1771494482.9627357,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "51e7f540-2d01-4a1b-8cfc-b02fce8e638e",
+              "content": "2010年正月初复发：先睡眠不佳，随后持续不眠后就诊并住院约1个月；出院后曾服用3种药（具体待提供）",
+              "timestamp": 1771494499.1160989,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "445442c3-5a14-4eab-863a-4ca258275a6f",
+              "content": "既往用药（减药阶段）：富马酸喹硫平片1片 + 米氮平片1片",
+              "timestamp": 1771494499.116107,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f5e76f66-8284-4a41-a45c-5cb692eb7f4f",
+              "content": "目前用药：奥氮平片 5mg，每日1片",
+              "timestamp": 1771494499.1161113,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "04b16d09-ce50-4028-b720-ef79dc920b54",
+              "content": "患者自述/家属提及既往可能诊断：躁狂症、抑郁症、精神分裂症；诊断性质尚未明确",
+              "timestamp": 1771494515.3156614,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ac75d9c9-54e6-413b-ad4a-5c3cf7960b3d",
+              "content": "医生说明：精神障碍性疾病目前无根治方法；手术也不能根治，仅可改善部分症状",
+              "timestamp": 1771494520.458368,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b4179ba0-d134-4ccc-9f6c-605d9332169e",
+              "content": "主诉：洗澡时偶尔出现没精神、嘴唇发紫、眼周/眼睛发青；近3天洗澡时连续出现，第3天未洗澡也出现一次，今日再次出现；平时玩耍正常；家中从早到晚通风；目前正在检查，尚不清楚诊断，咨询应如何处理。",
+              "timestamp": 1771494531.535268,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9ff85ebc-3e95-494b-a768-01a2946aa8ab",
+              "content": "既往史：9-10个月时曾多次在洗澡时出现类似发作；曾做心脏彩超检查未发现异常。",
+              "timestamp": 1771494531.5352738,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "cd1e4a9f-a7c2-49da-ac25-0b6ddfaeda1a",
+              "content": "2009年8月起反复发作性眩晕/头晕：最初夜间醒来感天旋地转约1分钟缓解；头部向左转可诱发复发，伴左侧头皮发麻；症状时轻时重。现主要表现为躺下及起床时眩晕明显（头向右、向上或向下转动诱发），伴走路不稳、站久有要倒的感觉；平时头部昏沉感；有时视物跟不上速度并伴将要眩晕感，眩晕时描述“脑袋里像一片飘过”的感觉。",
+              "timestamp": 1771494561.7814493,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "e42d41fc-3e9c-41e5-91aa-359c65bb82bc",
+              "content": "既往一次开车一天后出现头晕、走路不稳，休息时突发枕后（后脑根部）剧痛，次日缓解，此后未再痛。",
+              "timestamp": 1771494561.7814581,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "900b4cc7-9ea8-4fc7-97eb-e50c691e46da",
+              "content": "医生判断/诊断为颈椎间盘突出，建议先行保守治疗。",
+              "timestamp": 1771494568.250267,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "枢椎旋转移位不太可能，你的片子不是很清楚。请咨询我院骨科。",
+        "to_memory": [
+          "history: 9-10个月时曾因洗澡时出现精神差、口唇发紫、眼周发青等情况做过心脏彩超，未查出问题",
+          "history: 医生建议查心肺方面问题，必要时复查心脏超声",
+          "working: 15个月宝宝近期连续多天洗澡时出现精神差、口唇发紫、眼周发青，第三天未洗澡也出现，平时精神饮食睡眠正常",
+          "working: 患者自述2009年8月起反复眩晕（体位/转头诱发）、走路不稳，曾有一次枕后部疼痛；伴左侧头皮麻木、头昏沉、视物跟不上",
+          "working: 片子提示“张口位片枢椎似乎有旋转移位”但未确定；医生认为枢椎旋转移位不太可能且片子不清楚，建议咨询骨科",
+          "history: 医生曾判断为颈椎间盘突出，建议先做保守治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b4e43294-9835-48b2-b25f-0695b97c20ee",
+              "content": "患者反馈多位医生阅片认为张口位片提示枢椎似乎存在旋转移位，患者询问是否确有该情况。",
+              "timestamp": 1771494573.7366514,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "ab839862-1d1e-455d-9cb2-54b0171a271d",
+              "content": "影像提示“张口位片枢椎似乎有旋转移位”但未能确定；医生认为枢椎旋转移位可能性不大且片子不清楚，建议咨询骨科进一步评估。",
+              "timestamp": 1771494583.245388,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "identity": [
+            {
+              "id": "f976fa24-8ce9-4130-9e12-be29fc2adf18",
+              "content": "患者为15个月婴幼儿（约1岁），体型适中，平时精神好、能吃能睡。",
+              "timestamp": 1771494531.5352592,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "a073f5d3-e716-41db-880d-c43896306db7",
+              "content": "2002年起确诊/患精神分裂症，病程约近20年（高复发风险）",
+              "timestamp": 1771494470.8394392,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "9639c77b-c065-42ba-88c7-a46a0d722f03",
+              "content": "医生建议：即使痊愈，大部分患者仍需坚持服药",
+              "timestamp": 1771494470.8394477,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "2cc78f2a-fc8f-474e-a4f4-56369b2d9c52",
+              "content": "医生建议定期到专科医院就诊，进行巩固与维持治疗以减少复发",
+              "timestamp": 1771494482.9627357,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "51e7f540-2d01-4a1b-8cfc-b02fce8e638e",
+              "content": "2010年正月初复发：先睡眠不佳，随后持续不眠后就诊并住院约1个月；出院后曾服用3种药（具体待提供）",
+              "timestamp": 1771494499.1160989,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "445442c3-5a14-4eab-863a-4ca258275a6f",
+              "content": "既往用药（减药阶段）：富马酸喹硫平片1片 + 米氮平片1片",
+              "timestamp": 1771494499.116107,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f5e76f66-8284-4a41-a45c-5cb692eb7f4f",
+              "content": "目前用药：奥氮平片 5mg，每日1片",
+              "timestamp": 1771494499.1161113,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "04b16d09-ce50-4028-b720-ef79dc920b54",
+              "content": "患者自述/家属提及既往可能诊断：躁狂症、抑郁症、精神分裂症；诊断性质尚未明确",
+              "timestamp": 1771494515.3156614,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ac75d9c9-54e6-413b-ad4a-5c3cf7960b3d",
+              "content": "医生说明：精神障碍性疾病目前无根治方法；手术也不能根治，仅可改善部分症状",
+              "timestamp": 1771494520.458368,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b4179ba0-d134-4ccc-9f6c-605d9332169e",
+              "content": "主诉：洗澡时偶尔出现没精神、嘴唇发紫、眼周/眼睛发青；近3天洗澡时连续出现，第3天未洗澡也出现一次，今日再次出现；平时玩耍正常；家中从早到晚通风；目前正在检查，尚不清楚诊断，咨询应如何处理。",
+              "timestamp": 1771494531.535268,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9ff85ebc-3e95-494b-a768-01a2946aa8ab",
+              "content": "既往史：9-10个月时曾多次在洗澡时出现类似发作；曾做心脏彩超检查未发现异常。",
+              "timestamp": 1771494531.5352738,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "cd1e4a9f-a7c2-49da-ac25-0b6ddfaeda1a",
+              "content": "2009年8月起反复发作性眩晕/头晕：最初夜间醒来感天旋地转约1分钟缓解；头部向左转可诱发复发，伴左侧头皮发麻；症状时轻时重。现主要表现为躺下及起床时眩晕明显（头向右、向上或向下转动诱发），伴走路不稳、站久有要倒的感觉；平时头部昏沉感；有时视物跟不上速度并伴将要眩晕感，眩晕时描述“脑袋里像一片飘过”的感觉。",
+              "timestamp": 1771494561.7814493,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "e42d41fc-3e9c-41e5-91aa-359c65bb82bc",
+              "content": "既往一次开车一天后出现头晕、走路不稳，休息时突发枕后（后脑根部）剧痛，次日缓解，此后未再痛。",
+              "timestamp": 1771494561.7814581,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "900b4cc7-9ea8-4fc7-97eb-e50c691e46da",
+              "content": "医生判断/诊断为颈椎间盘突出，建议先行保守治疗。",
+              "timestamp": 1771494568.250267,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "0b66b3d5-1ebc-49c4-af8d-94c2caa1399d",
+              "content": "医生建议进一步检查心肺方面问题，必要时复查心脏超声（心脏彩超）。",
+              "timestamp": 1771494583.245379,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者目前正在规律服用的精神科用药名称、单次剂量和每日服用频次分别是什么？",
+          "answer": "奥氮平片 5mg，每日1片",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "f5e76f66-8284-4a41-a45c-5cb692eb7f4f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            14
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "好的，谢谢大夫，祝您新春愉快。",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b4e43294-9835-48b2-b25f-0695b97c20ee",
+              "content": "患者反馈多位医生阅片认为张口位片提示枢椎似乎存在旋转移位，患者询问是否确有该情况。",
+              "timestamp": 1771494573.7366514,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "ab839862-1d1e-455d-9cb2-54b0171a271d",
+              "content": "影像提示“张口位片枢椎似乎有旋转移位”但未能确定；医生认为枢椎旋转移位可能性不大且片子不清楚，建议咨询骨科进一步评估。",
+              "timestamp": 1771494583.245388,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "identity": [
+            {
+              "id": "f976fa24-8ce9-4130-9e12-be29fc2adf18",
+              "content": "患者为15个月婴幼儿（约1岁），体型适中，平时精神好、能吃能睡。",
+              "timestamp": 1771494531.5352592,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "a073f5d3-e716-41db-880d-c43896306db7",
+              "content": "2002年起确诊/患精神分裂症，病程约近20年（高复发风险）",
+              "timestamp": 1771494470.8394392,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "9639c77b-c065-42ba-88c7-a46a0d722f03",
+              "content": "医生建议：即使痊愈，大部分患者仍需坚持服药",
+              "timestamp": 1771494470.8394477,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "2cc78f2a-fc8f-474e-a4f4-56369b2d9c52",
+              "content": "医生建议定期到专科医院就诊，进行巩固与维持治疗以减少复发",
+              "timestamp": 1771494482.9627357,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "51e7f540-2d01-4a1b-8cfc-b02fce8e638e",
+              "content": "2010年正月初复发：先睡眠不佳，随后持续不眠后就诊并住院约1个月；出院后曾服用3种药（具体待提供）",
+              "timestamp": 1771494499.1160989,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "445442c3-5a14-4eab-863a-4ca258275a6f",
+              "content": "既往用药（减药阶段）：富马酸喹硫平片1片 + 米氮平片1片",
+              "timestamp": 1771494499.116107,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f5e76f66-8284-4a41-a45c-5cb692eb7f4f",
+              "content": "目前用药：奥氮平片 5mg，每日1片",
+              "timestamp": 1771494499.1161113,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "04b16d09-ce50-4028-b720-ef79dc920b54",
+              "content": "患者自述/家属提及既往可能诊断：躁狂症、抑郁症、精神分裂症；诊断性质尚未明确",
+              "timestamp": 1771494515.3156614,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ac75d9c9-54e6-413b-ad4a-5c3cf7960b3d",
+              "content": "医生说明：精神障碍性疾病目前无根治方法；手术也不能根治，仅可改善部分症状",
+              "timestamp": 1771494520.458368,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b4179ba0-d134-4ccc-9f6c-605d9332169e",
+              "content": "主诉：洗澡时偶尔出现没精神、嘴唇发紫、眼周/眼睛发青；近3天洗澡时连续出现，第3天未洗澡也出现一次，今日再次出现；平时玩耍正常；家中从早到晚通风；目前正在检查，尚不清楚诊断，咨询应如何处理。",
+              "timestamp": 1771494531.535268,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9ff85ebc-3e95-494b-a768-01a2946aa8ab",
+              "content": "既往史：9-10个月时曾多次在洗澡时出现类似发作；曾做心脏彩超检查未发现异常。",
+              "timestamp": 1771494531.5352738,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "cd1e4a9f-a7c2-49da-ac25-0b6ddfaeda1a",
+              "content": "2009年8月起反复发作性眩晕/头晕：最初夜间醒来感天旋地转约1分钟缓解；头部向左转可诱发复发，伴左侧头皮发麻；症状时轻时重。现主要表现为躺下及起床时眩晕明显（头向右、向上或向下转动诱发），伴走路不稳、站久有要倒的感觉；平时头部昏沉感；有时视物跟不上速度并伴将要眩晕感，眩晕时描述“脑袋里像一片飘过”的感觉。",
+              "timestamp": 1771494561.7814493,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "e42d41fc-3e9c-41e5-91aa-359c65bb82bc",
+              "content": "既往一次开车一天后出现头晕、走路不稳，休息时突发枕后（后脑根部）剧痛，次日缓解，此后未再痛。",
+              "timestamp": 1771494561.7814581,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "900b4cc7-9ea8-4fc7-97eb-e50c691e46da",
+              "content": "医生判断/诊断为颈椎间盘突出，建议先行保守治疗。",
+              "timestamp": 1771494568.250267,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "0b66b3d5-1ebc-49c4-af8d-94c2caa1399d",
+              "content": "医生建议进一步检查心肺方面问题，必要时复查心脏超声（心脏彩超）。",
+              "timestamp": 1771494583.245379,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "不客气！",
+        "to_memory": [
+          "history: 婴幼儿患者（约15个月）曾多次洗澡时出现精神差、口唇发紫/眼周发青，9-10个月时做过心脏彩超未见异常；医生建议查心肺问题、必要时复查心脏超声",
+          "history: 另一就诊者（成人，性别年龄未述）2009年8月起反复眩晕（体位改变诱发、走路不稳、头皮麻木、曾短暂后枕部疼痛），医生诊断为颈椎间盘突出并建议保守治疗；枢椎旋转移位可能性小（片子不清），建议咨询骨科"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b4e43294-9835-48b2-b25f-0695b97c20ee",
+              "content": "患者反馈多位医生阅片认为张口位片提示枢椎似乎存在旋转移位，患者询问是否确有该情况。",
+              "timestamp": 1771494573.7366514,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "ab839862-1d1e-455d-9cb2-54b0171a271d",
+              "content": "影像提示“张口位片枢椎似乎有旋转移位”但未能确定；医生认为枢椎旋转移位可能性不大且片子不清楚，建议咨询骨科进一步评估。",
+              "timestamp": 1771494583.245388,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "identity": [
+            {
+              "id": "f976fa24-8ce9-4130-9e12-be29fc2adf18",
+              "content": "患者为15个月婴幼儿（约1岁），体型适中，平时精神好、能吃能睡。",
+              "timestamp": 1771494531.5352592,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "a073f5d3-e716-41db-880d-c43896306db7",
+              "content": "2002年起确诊/患精神分裂症，病程约近20年（高复发风险）",
+              "timestamp": 1771494470.8394392,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "9639c77b-c065-42ba-88c7-a46a0d722f03",
+              "content": "医生建议：即使痊愈，大部分患者仍需坚持服药",
+              "timestamp": 1771494470.8394477,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "2cc78f2a-fc8f-474e-a4f4-56369b2d9c52",
+              "content": "医生建议定期到专科医院就诊，进行巩固与维持治疗以减少复发",
+              "timestamp": 1771494482.9627357,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "51e7f540-2d01-4a1b-8cfc-b02fce8e638e",
+              "content": "2010年正月初复发：先睡眠不佳，随后持续不眠后就诊并住院约1个月；出院后曾服用3种药（具体待提供）",
+              "timestamp": 1771494499.1160989,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "445442c3-5a14-4eab-863a-4ca258275a6f",
+              "content": "既往用药（减药阶段）：富马酸喹硫平片1片 + 米氮平片1片",
+              "timestamp": 1771494499.116107,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f5e76f66-8284-4a41-a45c-5cb692eb7f4f",
+              "content": "目前用药：奥氮平片 5mg，每日1片",
+              "timestamp": 1771494499.1161113,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "04b16d09-ce50-4028-b720-ef79dc920b54",
+              "content": "患者自述/家属提及既往可能诊断：躁狂症、抑郁症、精神分裂症；诊断性质尚未明确",
+              "timestamp": 1771494515.3156614,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ac75d9c9-54e6-413b-ad4a-5c3cf7960b3d",
+              "content": "医生说明：精神障碍性疾病目前无根治方法；手术也不能根治，仅可改善部分症状",
+              "timestamp": 1771494520.458368,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b4179ba0-d134-4ccc-9f6c-605d9332169e",
+              "content": "主诉：洗澡时偶尔出现没精神、嘴唇发紫、眼周/眼睛发青；近3天洗澡时连续出现，第3天未洗澡也出现一次，今日再次出现；平时玩耍正常；家中从早到晚通风；目前正在检查，尚不清楚诊断，咨询应如何处理。",
+              "timestamp": 1771494531.535268,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9ff85ebc-3e95-494b-a768-01a2946aa8ab",
+              "content": "既往史：9-10个月时曾多次在洗澡时出现类似发作；曾做心脏彩超检查未发现异常。",
+              "timestamp": 1771494531.5352738,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "cd1e4a9f-a7c2-49da-ac25-0b6ddfaeda1a",
+              "content": "2009年8月起反复发作性眩晕/头晕：最初夜间醒来感天旋地转约1分钟缓解；头部向左转可诱发复发，伴左侧头皮发麻；症状时轻时重。现主要表现为躺下及起床时眩晕明显（头向右、向上或向下转动诱发），伴走路不稳、站久有要倒的感觉；平时头部昏沉感；有时视物跟不上速度并伴将要眩晕感，眩晕时描述“脑袋里像一片飘过”的感觉。",
+              "timestamp": 1771494561.7814493,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "e42d41fc-3e9c-41e5-91aa-359c65bb82bc",
+              "content": "既往一次开车一天后出现头晕、走路不稳，休息时突发枕后（后脑根部）剧痛，次日缓解，此后未再痛。",
+              "timestamp": 1771494561.7814581,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "900b4cc7-9ea8-4fc7-97eb-e50c691e46da",
+              "content": "医生判断/诊断为颈椎间盘突出，建议先行保守治疗。",
+              "timestamp": 1771494568.250267,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "0b66b3d5-1ebc-49c4-af8d-94c2caa1399d",
+              "content": "医生建议进一步检查心肺方面问题，必要时复查心脏超声（心脏彩超）。",
+              "timestamp": 1771494583.245379,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者早前一次就诊时自述的长期用药情况与本次对“片子所见”的追问：他当时正在服用的具体药名、剂量以及每日服用频次分别是什么？",
+          "answer": "奥氮平片 5mg，每日1片",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "f5e76f66-8284-4a41-a45c-5cb692eb7f4f"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "b4e43294-9835-48b2-b25f-0695b97c20ee"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            16,
+            3
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "rare_disease_ddx",
+    "scenario_name": "罕见病鉴别诊断",
+    "session_count": 5,
+    "group_key": "精神"
+  }
+}

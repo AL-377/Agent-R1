@@ -1,0 +1,2266 @@
+{
+  "patient_id": "680e43526892",
+  "messages": [
+    {
+      "user": {
+        "content": "鱼鳞病，26岁，生来就有，全身都有鳞状皮屑，四肢脖颈最为严重。",
+        "to_memory": [
+          "identity: 患者26岁",
+          "history: 生来就有鱼鳞病（先天性/自出生起）",
+          "working: 全身鳞状皮屑，四肢和脖颈最为严重"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "0ad4dd11-cc28-4021-86f7-a3c19096ea18",
+              "content": "全身鳞状皮屑，四肢和脖颈最为严重",
+              "timestamp": 1771465276.516202,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [
+            {
+              "id": "ddea2c04-792e-496f-9f15-ca5b363717c0",
+              "content": "患者26岁",
+              "timestamp": 1771465276.5161848,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "a37e4041-2a62-463b-84a6-a1dc9452ca6c",
+              "content": "生来就有鱼鳞病（先天性/自出生起）",
+              "timestamp": 1771465276.516196,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "为避免病情记录出现前后不一致，请回忆患者在本次描述中指出“受累最严重”的具体部位有哪些？",
+          "answer": "四肢和脖颈最为严重",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "0ad4dd11-cc28-4021-86f7-a3c19096ea18"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "ddea2c04-792e-496f-9f15-ca5b363717c0"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "鱼鳞病目前的治疗手段都是缓解症状，无根除之法。大多数症状不太重的患者到一定年龄也可以自行缓解。",
+        "to_memory": [
+          "identity: 患者26岁",
+          "history: 诊断为鱼鳞病（先天性，生来就有）",
+          "working: 全身鳞状皮屑，四肢与脖颈最严重",
+          "history: 医生说明鱼鳞病目前治疗以缓解症状为主，尚无根除方法；多数症状较轻者随年龄可能自行缓解"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "0ad4dd11-cc28-4021-86f7-a3c19096ea18",
+              "content": "全身鳞状皮屑，四肢和脖颈最为严重",
+              "timestamp": 1771465276.516202,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [
+            {
+              "id": "ddea2c04-792e-496f-9f15-ca5b363717c0",
+              "content": "患者26岁",
+              "timestamp": 1771465276.5161848,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "a37e4041-2a62-463b-84a6-a1dc9452ca6c",
+              "content": "生来就有鱼鳞病（先天性/自出生起）",
+              "timestamp": 1771465276.516196,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "27e542d9-5d85-4a70-91b6-940cdfff3fad",
+              "content": "医生说明鱼鳞病目前治疗以缓解症状为主，尚无根除方法；多数症状较轻者随年龄可能自行缓解",
+              "timestamp": 1771465281.476694,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者最初描述的皮肤受累分布与医生随后对该病程走向的说明：患者当时主要哪些部位更严重？医生又如何概括现阶段治疗目标及未来可能的变化？",
+          "answer": "患者全身有鳞状皮屑，四肢和脖颈最严重；医生称目前治疗以缓解症状为主，尚无根除方法，多数症状较轻者随年龄可能自行缓解。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "27e542d9-5d85-4a70-91b6-940cdfff3fad"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "0ad4dd11-cc28-4021-86f7-a3c19096ea18"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "谢谢您的回复，现在进入夏天了，症状也消除了，我已经停药，关于维A的药，听说含有激素，也不敢长期使用。",
+        "to_memory": [
+          "identity: 患者26岁",
+          "history: 既往诊断/情况：鱼鳞病（先天性/生来就有），全身鳞状皮屑，四肢与颈部最严重",
+          "history: 用药史：曾使用维A类药物；目前因症状缓解已自行停药",
+          "working: 目前进入夏季症状明显缓解/基本消退",
+          "working: 患者担心维A类药物含激素，不敢长期使用"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "0ad4dd11-cc28-4021-86f7-a3c19096ea18",
+              "content": "全身鳞状皮屑，四肢和脖颈最为严重",
+              "timestamp": 1771465276.516202,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ad757050-013e-4729-8409-8c2f620465d5",
+              "content": "目前进入夏季症状明显缓解/基本消退",
+              "timestamp": 1771465288.519565,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "0ed89fef-69a8-4158-b913-c18fc2eae606",
+              "content": "患者担心维A类药物含激素，不敢长期使用",
+              "timestamp": 1771465288.51957,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "identity": [
+            {
+              "id": "ddea2c04-792e-496f-9f15-ca5b363717c0",
+              "content": "患者26岁",
+              "timestamp": 1771465276.5161848,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "a37e4041-2a62-463b-84a6-a1dc9452ca6c",
+              "content": "生来就有鱼鳞病（先天性/自出生起）",
+              "timestamp": 1771465276.516196,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "27e542d9-5d85-4a70-91b6-940cdfff3fad",
+              "content": "医生说明鱼鳞病目前治疗以缓解症状为主，尚无根除方法；多数症状较轻者随年龄可能自行缓解",
+              "timestamp": 1771465281.476694,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "caf7e543-fb88-4934-8d02-a15ea7f709fc",
+              "content": "用药史：曾使用维A类药物；目前因症状缓解已自行停药",
+              "timestamp": 1771465288.5195577,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者最初描述病情时与本次交流时的情况，患者自述皮肤表现目前发生了怎样的变化？",
+          "answer": "进入夏天后症状明显缓解/基本消退。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "ad757050-013e-4729-8409-8c2f620465d5"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "27e542d9-5d85-4a70-91b6-940cdfff3fad"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "维甲（A）酸类药物不是激素，激素治疗鱼鳞病基本无效。",
+        "to_memory": [
+          "history: 医生说明维甲酸类药物不是激素；激素治疗鱼鳞病基本无效"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "0ad4dd11-cc28-4021-86f7-a3c19096ea18",
+              "content": "全身鳞状皮屑，四肢和脖颈最为严重",
+              "timestamp": 1771465276.516202,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ad757050-013e-4729-8409-8c2f620465d5",
+              "content": "目前进入夏季症状明显缓解/基本消退",
+              "timestamp": 1771465288.519565,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "0ed89fef-69a8-4158-b913-c18fc2eae606",
+              "content": "患者担心维A类药物含激素，不敢长期使用",
+              "timestamp": 1771465288.51957,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "identity": [
+            {
+              "id": "ddea2c04-792e-496f-9f15-ca5b363717c0",
+              "content": "患者26岁",
+              "timestamp": 1771465276.5161848,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "a37e4041-2a62-463b-84a6-a1dc9452ca6c",
+              "content": "生来就有鱼鳞病（先天性/自出生起）",
+              "timestamp": 1771465276.516196,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "27e542d9-5d85-4a70-91b6-940cdfff3fad",
+              "content": "医生说明鱼鳞病目前治疗以缓解症状为主，尚无根除方法；多数症状较轻者随年龄可能自行缓解",
+              "timestamp": 1771465281.476694,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "caf7e543-fb88-4934-8d02-a15ea7f709fc",
+              "content": "用药史：曾使用维A类药物；目前因症状缓解已自行停药",
+              "timestamp": 1771465288.5195577,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "9b9b2af0-c293-4de1-963f-b5c68d4cf8e4",
+              "content": "医生说明维甲酸/维A酸类药物不是激素；激素治疗鱼鳞病基本无效",
+              "timestamp": 1771465293.6450257,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者自述这种皮肤问题最早从什么时候开始出现的？",
+          "answer": "自出生起（先天性）",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "a37e4041-2a62-463b-84a6-a1dc9452ca6c"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "ddea2c04-792e-496f-9f15-ca5b363717c0",
+              "content": "患者26岁",
+              "timestamp": 1771465276.5161848,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "a37e4041-2a62-463b-84a6-a1dc9452ca6c",
+              "content": "生来就有鱼鳞病（先天性/自出生起）",
+              "timestamp": 1771465276.516196,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "27e542d9-5d85-4a70-91b6-940cdfff3fad",
+              "content": "医生说明鱼鳞病目前治疗以缓解症状为主，尚无根除方法；多数症状较轻者随年龄可能自行缓解",
+              "timestamp": 1771465281.476694,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "caf7e543-fb88-4934-8d02-a15ea7f709fc",
+              "content": "用药史：曾使用维A类药物；目前因症状缓解已自行停药",
+              "timestamp": 1771465288.5195577,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "9b9b2af0-c293-4de1-963f-b5c68d4cf8e4",
+              "content": "医生说明维甲酸/维A酸类药物不是激素；激素治疗鱼鳞病基本无效",
+              "timestamp": 1771465293.6450257,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "颈椎暴力性骨折第七关节，颈椎暴力性骨折第七关节受伤，下半身无任何知觉，去年。",
+        "to_memory": [
+          "history: 去年发生第7颈椎暴力性骨折（颈椎第七节段受伤）",
+          "history: 颈椎外伤后出现下半身无任何知觉（提示截瘫/感觉运动功能丧失）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "ddea2c04-792e-496f-9f15-ca5b363717c0",
+              "content": "患者26岁",
+              "timestamp": 1771465276.5161848,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "a37e4041-2a62-463b-84a6-a1dc9452ca6c",
+              "content": "生来就有鱼鳞病（先天性/自出生起）",
+              "timestamp": 1771465276.516196,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "27e542d9-5d85-4a70-91b6-940cdfff3fad",
+              "content": "医生说明鱼鳞病目前治疗以缓解症状为主，尚无根除方法；多数症状较轻者随年龄可能自行缓解",
+              "timestamp": 1771465281.476694,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "caf7e543-fb88-4934-8d02-a15ea7f709fc",
+              "content": "用药史：曾使用维A类药物；目前因症状缓解已自行停药",
+              "timestamp": 1771465288.5195577,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "9b9b2af0-c293-4de1-963f-b5c68d4cf8e4",
+              "content": "医生说明维甲酸/维A酸类药物不是激素；激素治疗鱼鳞病基本无效",
+              "timestamp": 1771465293.6450257,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9120a93b-3c74-44a7-8b3d-fcd9555d94fd",
+              "content": "去年发生第7颈椎暴力性骨折（C7颈椎骨折/颈椎第七节段外伤）",
+              "timestamp": 1771465302.8004074,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "b9691766-262d-47fa-8453-ff7556b0538c",
+              "content": "颈椎外伤后出现下半身无任何知觉，提示截瘫/下肢感觉运动功能丧失",
+              "timestamp": 1771465302.8004158,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者曾对某类用于皮肤问题的口服药物产生过误解并因此担心长期使用。医生当时如何澄清该药物的性质，以及医生对另一类常见药物用于该病的疗效态度是什么？",
+          "answer": "医生说明维A/维甲酸类药物不是激素；并指出激素治疗鱼鳞病基本无效。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "ddea2c04-792e-496f-9f15-ca5b363717c0"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "9b9b2af0-c293-4de1-963f-b5c68d4cf8e4"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            5,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "建议咨询脊柱外科医生。",
+        "to_memory": [
+          "history: 既往/去年发生颈椎第7节段暴力性骨折（外伤），目前下半身无知觉（疑脊髓损伤）",
+          "history: 医生建议咨询脊柱外科医生"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "ddea2c04-792e-496f-9f15-ca5b363717c0",
+              "content": "患者26岁",
+              "timestamp": 1771465276.5161848,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "a37e4041-2a62-463b-84a6-a1dc9452ca6c",
+              "content": "生来就有鱼鳞病（先天性/自出生起）",
+              "timestamp": 1771465276.516196,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "27e542d9-5d85-4a70-91b6-940cdfff3fad",
+              "content": "医生说明鱼鳞病目前治疗以缓解症状为主，尚无根除方法；多数症状较轻者随年龄可能自行缓解",
+              "timestamp": 1771465281.476694,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "caf7e543-fb88-4934-8d02-a15ea7f709fc",
+              "content": "用药史：曾使用维A类药物；目前因症状缓解已自行停药",
+              "timestamp": 1771465288.5195577,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "9b9b2af0-c293-4de1-963f-b5c68d4cf8e4",
+              "content": "医生说明维甲酸/维A酸类药物不是激素；激素治疗鱼鳞病基本无效",
+              "timestamp": 1771465293.6450257,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9120a93b-3c74-44a7-8b3d-fcd9555d94fd",
+              "content": "去年发生第7颈椎暴力性骨折（C7颈椎骨折/颈椎第七节段外伤）",
+              "timestamp": 1771465302.8004074,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "b9691766-262d-47fa-8453-ff7556b0538c",
+              "content": "颈椎外伤后出现下半身无任何知觉，提示截瘫/下肢感觉运动功能丧失",
+              "timestamp": 1771465302.8004158,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "3cca2ffe-2248-40bc-9771-14a20317b155",
+              "content": "医生建议咨询脊柱外科医生（针对C7颈椎暴力性骨折及疑脊髓损伤/截瘫情况）",
+              "timestamp": 1771465308.6269457,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "ddea2c04-792e-496f-9f15-ca5b363717c0",
+              "content": "患者26岁",
+              "timestamp": 1771465276.5161848,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "a37e4041-2a62-463b-84a6-a1dc9452ca6c",
+              "content": "生来就有鱼鳞病（先天性/自出生起）",
+              "timestamp": 1771465276.516196,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "27e542d9-5d85-4a70-91b6-940cdfff3fad",
+              "content": "医生说明鱼鳞病目前治疗以缓解症状为主，尚无根除方法；多数症状较轻者随年龄可能自行缓解",
+              "timestamp": 1771465281.476694,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "caf7e543-fb88-4934-8d02-a15ea7f709fc",
+              "content": "用药史：曾使用维A类药物；目前因症状缓解已自行停药",
+              "timestamp": 1771465288.5195577,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "9b9b2af0-c293-4de1-963f-b5c68d4cf8e4",
+              "content": "医生说明维甲酸/维A酸类药物不是激素；激素治疗鱼鳞病基本无效",
+              "timestamp": 1771465293.6450257,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9120a93b-3c74-44a7-8b3d-fcd9555d94fd",
+              "content": "去年发生第7颈椎暴力性骨折（C7颈椎骨折/颈椎第七节段外伤）",
+              "timestamp": 1771465302.8004074,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "b9691766-262d-47fa-8453-ff7556b0538c",
+              "content": "颈椎外伤后出现下半身无任何知觉，提示截瘫/下肢感觉运动功能丧失",
+              "timestamp": 1771465302.8004158,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "3cca2ffe-2248-40bc-9771-14a20317b155",
+              "content": "医生建议咨询脊柱外科医生（针对C7颈椎暴力性骨折及疑脊髓损伤/截瘫情况）",
+              "timestamp": 1771465308.6269457,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "心脏房缺损2mm，三个月大检查心脏房缺损2.2mm，现在34个月大复查房缺损2mm，在嘉兴市妇保医院查的。",
+        "to_memory": [
+          "history: 心脏房间隔缺损（房缺）约2mm；3个月大超声检查房缺2.2mm；34个月大复查房缺2mm",
+          "history: 上述房缺检查于嘉兴市妇保医院完成"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "ddea2c04-792e-496f-9f15-ca5b363717c0",
+              "content": "患者26岁",
+              "timestamp": 1771465276.5161848,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "a37e4041-2a62-463b-84a6-a1dc9452ca6c",
+              "content": "生来就有鱼鳞病（先天性/自出生起）",
+              "timestamp": 1771465276.516196,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "27e542d9-5d85-4a70-91b6-940cdfff3fad",
+              "content": "医生说明鱼鳞病目前治疗以缓解症状为主，尚无根除方法；多数症状较轻者随年龄可能自行缓解",
+              "timestamp": 1771465281.476694,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "caf7e543-fb88-4934-8d02-a15ea7f709fc",
+              "content": "用药史：曾使用维A类药物；目前因症状缓解已自行停药",
+              "timestamp": 1771465288.5195577,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "9b9b2af0-c293-4de1-963f-b5c68d4cf8e4",
+              "content": "医生说明维甲酸/维A酸类药物不是激素；激素治疗鱼鳞病基本无效",
+              "timestamp": 1771465293.6450257,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9120a93b-3c74-44a7-8b3d-fcd9555d94fd",
+              "content": "去年发生第7颈椎暴力性骨折（C7颈椎骨折/颈椎第七节段外伤）",
+              "timestamp": 1771465302.8004074,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "b9691766-262d-47fa-8453-ff7556b0538c",
+              "content": "颈椎外伤后出现下半身无任何知觉，提示截瘫/下肢感觉运动功能丧失",
+              "timestamp": 1771465302.8004158,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "3cca2ffe-2248-40bc-9771-14a20317b155",
+              "content": "医生建议咨询脊柱外科医生（针对C7颈椎暴力性骨折及疑脊髓损伤/截瘫情况）",
+              "timestamp": 1771465308.6269457,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "10e447ba-94af-42f3-9744-969822186fd1",
+              "content": "既往史：房间隔缺损（房缺）约2mm；3个月大超声示房缺2.2mm；34个月大复查房缺2mm",
+              "timestamp": 1771465312.2044046,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "66ec0bdf-11e0-4fd3-b719-4d12801640be",
+              "content": "房间隔缺损相关检查于嘉兴市妇保医院完成",
+              "timestamp": 1771465312.2044127,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者既往病史中记录过一种自出生起就存在的皮肤疾病。若后续有人将其描述为“近期才出现/后天才得”的情况，这是否与既往记录冲突？请指出应以哪种起病时间为准。",
+          "answer": "不一致；应以“自出生起/先天性鱼鳞病”为准。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "a37e4041-2a62-463b-84a6-a1dc9452ca6c",
+                "9120a93b-3c74-44a7-8b3d-fcd9555d94fd"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            8,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "超过3岁不愈合，可能性已很低。不愈合即需要手术，也可介入治疗。",
+        "to_memory": [
+          "history: 医生建议：房间隔缺损超过3岁仍未愈合，自行愈合可能性已很低；若不愈合则需考虑手术治疗，也可选择介入治疗。"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "ddea2c04-792e-496f-9f15-ca5b363717c0",
+              "content": "患者26岁",
+              "timestamp": 1771465276.5161848,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "a37e4041-2a62-463b-84a6-a1dc9452ca6c",
+              "content": "生来就有鱼鳞病（先天性/自出生起）",
+              "timestamp": 1771465276.516196,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "27e542d9-5d85-4a70-91b6-940cdfff3fad",
+              "content": "医生说明鱼鳞病目前治疗以缓解症状为主，尚无根除方法；多数症状较轻者随年龄可能自行缓解",
+              "timestamp": 1771465281.476694,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "caf7e543-fb88-4934-8d02-a15ea7f709fc",
+              "content": "用药史：曾使用维A类药物；目前因症状缓解已自行停药",
+              "timestamp": 1771465288.5195577,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "9b9b2af0-c293-4de1-963f-b5c68d4cf8e4",
+              "content": "医生说明维甲酸/维A酸类药物不是激素；激素治疗鱼鳞病基本无效",
+              "timestamp": 1771465293.6450257,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9120a93b-3c74-44a7-8b3d-fcd9555d94fd",
+              "content": "去年发生第7颈椎暴力性骨折（C7颈椎骨折/颈椎第七节段外伤）",
+              "timestamp": 1771465302.8004074,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "b9691766-262d-47fa-8453-ff7556b0538c",
+              "content": "颈椎外伤后出现下半身无任何知觉，提示截瘫/下肢感觉运动功能丧失",
+              "timestamp": 1771465302.8004158,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "3cca2ffe-2248-40bc-9771-14a20317b155",
+              "content": "医生建议咨询脊柱外科医生（针对C7颈椎暴力性骨折及疑脊髓损伤/截瘫情况）",
+              "timestamp": 1771465308.6269457,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "10e447ba-94af-42f3-9744-969822186fd1",
+              "content": "既往史：房间隔缺损（房缺）约2mm；3个月大超声示房缺2.2mm；34个月大复查房缺2mm",
+              "timestamp": 1771465312.2044046,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "66ec0bdf-11e0-4fd3-b719-4d12801640be",
+              "content": "房间隔缺损相关检查于嘉兴市妇保医院完成",
+              "timestamp": 1771465312.2044127,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "a3bc0c76-2321-44d4-b54d-c73d7336c56c",
+              "content": "医生建议：房间隔缺损若超过3岁仍未自行愈合，则自行愈合可能性已很低；若不愈合需考虑手术治疗，也可选择介入治疗。",
+              "timestamp": 1771465320.659105,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "在患者描述去年那次颈部外伤并出现下肢感觉/运动异常后，医生当时建议患者下一步应去咨询哪个专科？",
+          "answer": "咨询脊柱外科医生。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "3cca2ffe-2248-40bc-9771-14a20317b155",
+                "b9691766-262d-47fa-8453-ff7556b0538c"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            3,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "它不是越来越小了吗？过几年会长好吗？",
+        "to_memory": [
+          "identity: 患者26岁（鱼鳞病患者）",
+          "history: 先天性鱼鳞病（出生即有），全身鳞状皮屑，四肢及颈部最重；夏季症状缓解已停药；曾咨询维A酸类药物（非激素）",
+          "history: 去年发生颈椎第7节段暴力性骨折致伤，下半身无知觉；曾被建议咨询脊柱外科",
+          "history: 患儿（同一对话中提及）房间隔缺损：3月龄2.2mm，34月龄复查2.0mm（嘉兴市妇保医院）；医生建议>3岁不愈合可能性低，不愈合可手术或介入治疗",
+          "working: 询问房缺是否会继续变小、过几年能否自行愈合"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "4eb368ff-1578-4b39-8264-fe01dfe24840",
+              "content": "询问：患儿房间隔缺损（约2mm）是否会继续变小、过几年能否自行愈合",
+              "timestamp": 1771465330.492689,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "identity": [
+            {
+              "id": "ddea2c04-792e-496f-9f15-ca5b363717c0",
+              "content": "患者26岁",
+              "timestamp": 1771465276.5161848,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "a37e4041-2a62-463b-84a6-a1dc9452ca6c",
+              "content": "生来就有鱼鳞病（先天性/自出生起）",
+              "timestamp": 1771465276.516196,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "27e542d9-5d85-4a70-91b6-940cdfff3fad",
+              "content": "医生说明鱼鳞病目前治疗以缓解症状为主，尚无根除方法；多数症状较轻者随年龄可能自行缓解",
+              "timestamp": 1771465281.476694,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "caf7e543-fb88-4934-8d02-a15ea7f709fc",
+              "content": "用药史：曾使用维A类药物；目前因症状缓解已自行停药",
+              "timestamp": 1771465288.5195577,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "9b9b2af0-c293-4de1-963f-b5c68d4cf8e4",
+              "content": "医生说明维甲酸/维A酸类药物不是激素；激素治疗鱼鳞病基本无效",
+              "timestamp": 1771465293.6450257,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9120a93b-3c74-44a7-8b3d-fcd9555d94fd",
+              "content": "去年发生第7颈椎暴力性骨折（C7颈椎骨折/颈椎第七节段外伤）",
+              "timestamp": 1771465302.8004074,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "b9691766-262d-47fa-8453-ff7556b0538c",
+              "content": "颈椎外伤后出现下半身无任何知觉，提示截瘫/下肢感觉运动功能丧失",
+              "timestamp": 1771465302.8004158,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "3cca2ffe-2248-40bc-9771-14a20317b155",
+              "content": "医生建议咨询脊柱外科医生（针对C7颈椎暴力性骨折及疑脊髓损伤/截瘫情况）",
+              "timestamp": 1771465308.6269457,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "10e447ba-94af-42f3-9744-969822186fd1",
+              "content": "既往史：房间隔缺损（房缺）约2mm；3个月大超声示房缺2.2mm；34个月大复查房缺2mm",
+              "timestamp": 1771465312.2044046,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "66ec0bdf-11e0-4fd3-b719-4d12801640be",
+              "content": "房间隔缺损相关检查于嘉兴市妇保医院完成",
+              "timestamp": 1771465312.2044127,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "a3bc0c76-2321-44d4-b54d-c73d7336c56c",
+              "content": "医生建议：房间隔缺损若超过3岁仍未自行愈合，则自行愈合可能性已很低；若不愈合需考虑手术治疗，也可选择介入治疗。",
+              "timestamp": 1771465320.659105,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "这次咨询中，患者家属提到孩子目前复查的情况后，具体想确认疾病后续会不会发生哪种变化、以及未来是否可能自行好转？请概括其核心疑问。",
+          "answer": "询问患儿房间隔缺损（约2mm）是否会继续变小、过几年能否自行愈合",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "caf7e543-fb88-4934-8d02-a15ea7f709fc"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "4eb368ff-1578-4b39-8264-fe01dfe24840"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            8,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "超过一定年龄，就不会再生长愈合了。",
+        "to_memory": [
+          "history: 医生说明：房间隔缺损超过一定年龄后一般不会再生长愈合"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "4eb368ff-1578-4b39-8264-fe01dfe24840",
+              "content": "询问：患儿房间隔缺损（约2mm）是否会继续变小、过几年能否自行愈合",
+              "timestamp": 1771465330.492689,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "identity": [
+            {
+              "id": "ddea2c04-792e-496f-9f15-ca5b363717c0",
+              "content": "患者26岁",
+              "timestamp": 1771465276.5161848,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "a37e4041-2a62-463b-84a6-a1dc9452ca6c",
+              "content": "生来就有鱼鳞病（先天性/自出生起）",
+              "timestamp": 1771465276.516196,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "27e542d9-5d85-4a70-91b6-940cdfff3fad",
+              "content": "医生说明鱼鳞病目前治疗以缓解症状为主，尚无根除方法；多数症状较轻者随年龄可能自行缓解",
+              "timestamp": 1771465281.476694,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "caf7e543-fb88-4934-8d02-a15ea7f709fc",
+              "content": "用药史：曾使用维A类药物；目前因症状缓解已自行停药",
+              "timestamp": 1771465288.5195577,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "9b9b2af0-c293-4de1-963f-b5c68d4cf8e4",
+              "content": "医生说明维甲酸/维A酸类药物不是激素；激素治疗鱼鳞病基本无效",
+              "timestamp": 1771465293.6450257,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9120a93b-3c74-44a7-8b3d-fcd9555d94fd",
+              "content": "去年发生第7颈椎暴力性骨折（C7颈椎骨折/颈椎第七节段外伤）",
+              "timestamp": 1771465302.8004074,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "b9691766-262d-47fa-8453-ff7556b0538c",
+              "content": "颈椎外伤后出现下半身无任何知觉，提示截瘫/下肢感觉运动功能丧失",
+              "timestamp": 1771465302.8004158,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "3cca2ffe-2248-40bc-9771-14a20317b155",
+              "content": "医生建议咨询脊柱外科医生（针对C7颈椎暴力性骨折及疑脊髓损伤/截瘫情况）",
+              "timestamp": 1771465308.6269457,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "10e447ba-94af-42f3-9744-969822186fd1",
+              "content": "既往史：房间隔缺损（房缺）约2mm；3个月大超声示房缺2.2mm；34个月大复查房缺2mm",
+              "timestamp": 1771465312.2044046,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "66ec0bdf-11e0-4fd3-b719-4d12801640be",
+              "content": "房间隔缺损相关检查于嘉兴市妇保医院完成",
+              "timestamp": 1771465312.2044127,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "a3bc0c76-2321-44d4-b54d-c73d7336c56c",
+              "content": "医生建议：房间隔缺损若超过3岁仍未自行愈合，则自行愈合可能性已很低；若不愈合需考虑手术治疗，也可选择介入治疗。",
+              "timestamp": 1771465320.659105,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "f110eaaa-a8f8-4a2c-8285-a53fa3cb75d8",
+              "content": "医生说明：房间隔缺损超过一定年龄后一般不会再生长愈合",
+              "timestamp": 1771465338.0631444,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在这次关于患儿心脏问题的咨询中，家属提出了对病情未来变化的一个具体担忧或疑问。这个疑问是什么？请概括说明。",
+          "answer": "家属询问患儿的房间隔缺损是否会继续变小、过几年能否自行愈合。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "27e542d9-5d85-4a70-91b6-940cdfff3fad"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "4eb368ff-1578-4b39-8264-fe01dfe24840"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            10,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "ddea2c04-792e-496f-9f15-ca5b363717c0",
+              "content": "患者26岁",
+              "timestamp": 1771465276.5161848,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "a37e4041-2a62-463b-84a6-a1dc9452ca6c",
+              "content": "生来就有鱼鳞病（先天性/自出生起）",
+              "timestamp": 1771465276.516196,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "27e542d9-5d85-4a70-91b6-940cdfff3fad",
+              "content": "医生说明鱼鳞病目前治疗以缓解症状为主，尚无根除方法；多数症状较轻者随年龄可能自行缓解",
+              "timestamp": 1771465281.476694,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "caf7e543-fb88-4934-8d02-a15ea7f709fc",
+              "content": "用药史：曾使用维A类药物；目前因症状缓解已自行停药",
+              "timestamp": 1771465288.5195577,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "9b9b2af0-c293-4de1-963f-b5c68d4cf8e4",
+              "content": "医生说明维甲酸/维A酸类药物不是激素；激素治疗鱼鳞病基本无效",
+              "timestamp": 1771465293.6450257,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9120a93b-3c74-44a7-8b3d-fcd9555d94fd",
+              "content": "去年发生第7颈椎暴力性骨折（C7颈椎骨折/颈椎第七节段外伤）",
+              "timestamp": 1771465302.8004074,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "b9691766-262d-47fa-8453-ff7556b0538c",
+              "content": "颈椎外伤后出现下半身无任何知觉，提示截瘫/下肢感觉运动功能丧失",
+              "timestamp": 1771465302.8004158,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "3cca2ffe-2248-40bc-9771-14a20317b155",
+              "content": "医生建议咨询脊柱外科医生（针对C7颈椎暴力性骨折及疑脊髓损伤/截瘫情况）",
+              "timestamp": 1771465308.6269457,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "10e447ba-94af-42f3-9744-969822186fd1",
+              "content": "既往史：房间隔缺损（房缺）约2mm；3个月大超声示房缺2.2mm；34个月大复查房缺2mm",
+              "timestamp": 1771465312.2044046,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "66ec0bdf-11e0-4fd3-b719-4d12801640be",
+              "content": "房间隔缺损相关检查于嘉兴市妇保医院完成",
+              "timestamp": 1771465312.2044127,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "a3bc0c76-2321-44d4-b54d-c73d7336c56c",
+              "content": "医生建议：房间隔缺损若超过3岁仍未自行愈合，则自行愈合可能性已很低；若不愈合需考虑手术治疗，也可选择介入治疗。",
+              "timestamp": 1771465320.659105,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "f110eaaa-a8f8-4a2c-8285-a53fa3cb75d8",
+              "content": "医生说明：房间隔缺损超过一定年龄后一般不会再生长愈合",
+              "timestamp": 1771465338.0631444,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "小脑梗塞，脑出血，患者于2010年1月10日晨起8：00左右出现头晕，伴恶心、呕吐，无视物双影，无面部麻木，无耳鸣、听力下降，无肢体力弱，无意识障碍，",
+        "to_memory": [
+          "history: 2010-01-10 08:00左右发病，小脑梗塞、脑出血",
+          "working: 头晕，伴恶心、呕吐；无视物双影、无面部麻木、无耳鸣及听力下降、无肢体力弱、无意识障碍"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "69e1e2de-582d-4ddb-b52b-2bf0591365a4",
+              "content": "现病情况：头晕，伴恶心、呕吐；无视物双影、无面部麻木、无耳鸣及听力下降、无肢体力弱、无意识障碍",
+              "timestamp": 1771465343.440083,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "identity": [
+            {
+              "id": "ddea2c04-792e-496f-9f15-ca5b363717c0",
+              "content": "患者26岁",
+              "timestamp": 1771465276.5161848,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "a37e4041-2a62-463b-84a6-a1dc9452ca6c",
+              "content": "生来就有鱼鳞病（先天性/自出生起）",
+              "timestamp": 1771465276.516196,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "27e542d9-5d85-4a70-91b6-940cdfff3fad",
+              "content": "医生说明鱼鳞病目前治疗以缓解症状为主，尚无根除方法；多数症状较轻者随年龄可能自行缓解",
+              "timestamp": 1771465281.476694,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "caf7e543-fb88-4934-8d02-a15ea7f709fc",
+              "content": "用药史：曾使用维A类药物；目前因症状缓解已自行停药",
+              "timestamp": 1771465288.5195577,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "9b9b2af0-c293-4de1-963f-b5c68d4cf8e4",
+              "content": "医生说明维甲酸/维A酸类药物不是激素；激素治疗鱼鳞病基本无效",
+              "timestamp": 1771465293.6450257,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9120a93b-3c74-44a7-8b3d-fcd9555d94fd",
+              "content": "去年发生第7颈椎暴力性骨折（C7颈椎骨折/颈椎第七节段外伤）",
+              "timestamp": 1771465302.8004074,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "b9691766-262d-47fa-8453-ff7556b0538c",
+              "content": "颈椎外伤后出现下半身无任何知觉，提示截瘫/下肢感觉运动功能丧失",
+              "timestamp": 1771465302.8004158,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "3cca2ffe-2248-40bc-9771-14a20317b155",
+              "content": "医生建议咨询脊柱外科医生（针对C7颈椎暴力性骨折及疑脊髓损伤/截瘫情况）",
+              "timestamp": 1771465308.6269457,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "10e447ba-94af-42f3-9744-969822186fd1",
+              "content": "既往史：房间隔缺损（房缺）约2mm；3个月大超声示房缺2.2mm；34个月大复查房缺2mm",
+              "timestamp": 1771465312.2044046,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "66ec0bdf-11e0-4fd3-b719-4d12801640be",
+              "content": "房间隔缺损相关检查于嘉兴市妇保医院完成",
+              "timestamp": 1771465312.2044127,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "a3bc0c76-2321-44d4-b54d-c73d7336c56c",
+              "content": "医生建议：房间隔缺损若超过3岁仍未自行愈合，则自行愈合可能性已很低；若不愈合需考虑手术治疗，也可选择介入治疗。",
+              "timestamp": 1771465320.659105,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "f110eaaa-a8f8-4a2c-8285-a53fa3cb75d8",
+              "content": "医生说明：房间隔缺损超过一定年龄后一般不会再生长愈合",
+              "timestamp": 1771465338.0631444,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a2043d11-838c-4c5e-9551-22c68094b25a",
+              "content": "既往史：2010-01-10 08:00左右发病，小脑梗塞、脑出血",
+              "timestamp": 1771465343.4400752,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "非常抱歉，血管疾病介入治疗不是我的专业。天坛医院的姜卫剑教授是这方面的知名专家，您可以找他就诊。",
+        "to_memory": [
+          "history: 颈椎第7节段暴力性骨折（去年），下半身无任何知觉；曾被建议咨询脊柱外科医生",
+          "history: 心脏房间隔缺损（房缺）随访：3个月大2.2mm，34个月大复查2mm；检查医院：嘉兴市妇保医院；医生建议：超过3岁自愈可能性低，不愈合需手术或介入治疗",
+          "history: 2010-01-10 08:00左右发病：小脑梗塞、脑出血；症状：头晕伴恶心呕吐；否认视物双影、面部麻木、耳鸣/听力下降、肢体无力、意识障碍",
+          "history: 血管疾病介入治疗非当前医生专业；建议就诊天坛医院姜卫剑教授（介入治疗专家）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "69e1e2de-582d-4ddb-b52b-2bf0591365a4",
+              "content": "现病情况：头晕，伴恶心、呕吐；无视物双影、无面部麻木、无耳鸣及听力下降、无肢体力弱、无意识障碍",
+              "timestamp": 1771465343.440083,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "identity": [
+            {
+              "id": "ddea2c04-792e-496f-9f15-ca5b363717c0",
+              "content": "患者26岁",
+              "timestamp": 1771465276.5161848,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "a37e4041-2a62-463b-84a6-a1dc9452ca6c",
+              "content": "生来就有鱼鳞病（先天性/自出生起）",
+              "timestamp": 1771465276.516196,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "27e542d9-5d85-4a70-91b6-940cdfff3fad",
+              "content": "医生说明鱼鳞病目前治疗以缓解症状为主，尚无根除方法；多数症状较轻者随年龄可能自行缓解",
+              "timestamp": 1771465281.476694,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "caf7e543-fb88-4934-8d02-a15ea7f709fc",
+              "content": "用药史：曾使用维A类药物；目前因症状缓解已自行停药",
+              "timestamp": 1771465288.5195577,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "9b9b2af0-c293-4de1-963f-b5c68d4cf8e4",
+              "content": "医生说明维甲酸/维A酸类药物不是激素；激素治疗鱼鳞病基本无效",
+              "timestamp": 1771465293.6450257,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9120a93b-3c74-44a7-8b3d-fcd9555d94fd",
+              "content": "去年发生第7颈椎暴力性骨折（C7颈椎骨折/颈椎第七节段外伤）",
+              "timestamp": 1771465302.8004074,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "b9691766-262d-47fa-8453-ff7556b0538c",
+              "content": "颈椎外伤后出现下半身无任何知觉，提示截瘫/下肢感觉运动功能丧失",
+              "timestamp": 1771465302.8004158,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "3cca2ffe-2248-40bc-9771-14a20317b155",
+              "content": "医生建议咨询脊柱外科医生（针对C7颈椎暴力性骨折及疑脊髓损伤/截瘫情况）",
+              "timestamp": 1771465308.6269457,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "10e447ba-94af-42f3-9744-969822186fd1",
+              "content": "既往史：房间隔缺损（房缺）约2mm；3个月大超声示房缺2.2mm；34个月大复查房缺2mm",
+              "timestamp": 1771465312.2044046,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "66ec0bdf-11e0-4fd3-b719-4d12801640be",
+              "content": "房间隔缺损相关检查于嘉兴市妇保医院完成",
+              "timestamp": 1771465312.2044127,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "a3bc0c76-2321-44d4-b54d-c73d7336c56c",
+              "content": "医生建议：房间隔缺损若超过3岁仍未自行愈合，则自行愈合可能性已很低；若不愈合需考虑手术治疗，也可选择介入治疗。",
+              "timestamp": 1771465320.659105,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "f110eaaa-a8f8-4a2c-8285-a53fa3cb75d8",
+              "content": "医生说明：房间隔缺损超过一定年龄后一般不会再生长愈合",
+              "timestamp": 1771465338.0631444,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a2043d11-838c-4c5e-9551-22c68094b25a",
+              "content": "既往史：2010-01-10 08:00左右发病，小脑梗塞、脑出血",
+              "timestamp": 1771465343.4400752,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "2284f8f1-de08-4291-9369-86c530cebbd8",
+              "content": "既往史：2010-01-10 08:00左右发病，小脑梗塞、脑出血；症状：头晕伴恶心呕吐；否认视物双影、面部麻木、耳鸣/听力下降、肢体无力、意识障碍",
+              "timestamp": 1771465348.8980746,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "dd209667-bd62-4a41-8fd7-1b80753794d5",
+              "content": "就诊建议：血管疾病介入治疗非当前医生专业；建议就诊天坛医院姜卫剑教授（介入治疗专家）",
+              "timestamp": 1771465348.8980873,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "ddea2c04-792e-496f-9f15-ca5b363717c0",
+              "content": "患者26岁",
+              "timestamp": 1771465276.5161848,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "a37e4041-2a62-463b-84a6-a1dc9452ca6c",
+              "content": "生来就有鱼鳞病（先天性/自出生起）",
+              "timestamp": 1771465276.516196,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "27e542d9-5d85-4a70-91b6-940cdfff3fad",
+              "content": "医生说明鱼鳞病目前治疗以缓解症状为主，尚无根除方法；多数症状较轻者随年龄可能自行缓解",
+              "timestamp": 1771465281.476694,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "caf7e543-fb88-4934-8d02-a15ea7f709fc",
+              "content": "用药史：曾使用维A类药物；目前因症状缓解已自行停药",
+              "timestamp": 1771465288.5195577,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "9b9b2af0-c293-4de1-963f-b5c68d4cf8e4",
+              "content": "医生说明维甲酸/维A酸类药物不是激素；激素治疗鱼鳞病基本无效",
+              "timestamp": 1771465293.6450257,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9120a93b-3c74-44a7-8b3d-fcd9555d94fd",
+              "content": "去年发生第7颈椎暴力性骨折（C7颈椎骨折/颈椎第七节段外伤）",
+              "timestamp": 1771465302.8004074,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "b9691766-262d-47fa-8453-ff7556b0538c",
+              "content": "颈椎外伤后出现下半身无任何知觉，提示截瘫/下肢感觉运动功能丧失",
+              "timestamp": 1771465302.8004158,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "3cca2ffe-2248-40bc-9771-14a20317b155",
+              "content": "医生建议咨询脊柱外科医生（针对C7颈椎暴力性骨折及疑脊髓损伤/截瘫情况）",
+              "timestamp": 1771465308.6269457,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "10e447ba-94af-42f3-9744-969822186fd1",
+              "content": "既往史：房间隔缺损（房缺）约2mm；3个月大超声示房缺2.2mm；34个月大复查房缺2mm",
+              "timestamp": 1771465312.2044046,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "66ec0bdf-11e0-4fd3-b719-4d12801640be",
+              "content": "房间隔缺损相关检查于嘉兴市妇保医院完成",
+              "timestamp": 1771465312.2044127,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "a3bc0c76-2321-44d4-b54d-c73d7336c56c",
+              "content": "医生建议：房间隔缺损若超过3岁仍未自行愈合，则自行愈合可能性已很低；若不愈合需考虑手术治疗，也可选择介入治疗。",
+              "timestamp": 1771465320.659105,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "f110eaaa-a8f8-4a2c-8285-a53fa3cb75d8",
+              "content": "医生说明：房间隔缺损超过一定年龄后一般不会再生长愈合",
+              "timestamp": 1771465338.0631444,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a2043d11-838c-4c5e-9551-22c68094b25a",
+              "content": "既往史：2010-01-10 08:00左右发病，小脑梗塞、脑出血",
+              "timestamp": 1771465343.4400752,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "2284f8f1-de08-4291-9369-86c530cebbd8",
+              "content": "既往史：2010-01-10 08:00左右发病，小脑梗塞、脑出血；症状：头晕伴恶心呕吐；否认视物双影、面部麻木、耳鸣/听力下降、肢体无力、意识障碍",
+              "timestamp": 1771465348.8980746,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "dd209667-bd62-4a41-8fd7-1b80753794d5",
+              "content": "就诊建议：血管疾病介入治疗非当前医生专业；建议就诊天坛医院姜卫剑教授（介入治疗专家）",
+              "timestamp": 1771465348.8980873,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "断奶快一年，怎么还会有奶水呢，患者女。28岁2009年2月16号剖腹产。到了10月份断奶，怎么现在挤一下还有奶水呢？",
+        "to_memory": [
+          "identity: 患者女，28岁",
+          "history: 2009-02-16行剖腹产；2009-10断奶",
+          "working: 断奶近一年，仍可挤出乳汁，咨询原因"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "69d0b6db-cc85-4043-ac2b-55be50e18a7e",
+              "content": "断奶近一年仍可挤出乳汁，咨询原因",
+              "timestamp": 1771465353.8059728,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "identity": [
+            {
+              "id": "ddea2c04-792e-496f-9f15-ca5b363717c0",
+              "content": "患者女，28岁",
+              "timestamp": 1771465276.5161848,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "a37e4041-2a62-463b-84a6-a1dc9452ca6c",
+              "content": "生来就有鱼鳞病（先天性/自出生起）",
+              "timestamp": 1771465276.516196,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "27e542d9-5d85-4a70-91b6-940cdfff3fad",
+              "content": "医生说明鱼鳞病目前治疗以缓解症状为主，尚无根除方法；多数症状较轻者随年龄可能自行缓解",
+              "timestamp": 1771465281.476694,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "caf7e543-fb88-4934-8d02-a15ea7f709fc",
+              "content": "用药史：曾使用维A类药物；目前因症状缓解已自行停药",
+              "timestamp": 1771465288.5195577,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "9b9b2af0-c293-4de1-963f-b5c68d4cf8e4",
+              "content": "医生说明维甲酸/维A酸类药物不是激素；激素治疗鱼鳞病基本无效",
+              "timestamp": 1771465293.6450257,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9120a93b-3c74-44a7-8b3d-fcd9555d94fd",
+              "content": "去年发生第7颈椎暴力性骨折（C7颈椎骨折/颈椎第七节段外伤）",
+              "timestamp": 1771465302.8004074,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "b9691766-262d-47fa-8453-ff7556b0538c",
+              "content": "颈椎外伤后出现下半身无任何知觉，提示截瘫/下肢感觉运动功能丧失",
+              "timestamp": 1771465302.8004158,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "3cca2ffe-2248-40bc-9771-14a20317b155",
+              "content": "医生建议咨询脊柱外科医生（针对C7颈椎暴力性骨折及疑脊髓损伤/截瘫情况）",
+              "timestamp": 1771465308.6269457,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "10e447ba-94af-42f3-9744-969822186fd1",
+              "content": "既往史：房间隔缺损（房缺）约2mm；3个月大超声示房缺2.2mm；34个月大复查房缺2mm",
+              "timestamp": 1771465312.2044046,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "66ec0bdf-11e0-4fd3-b719-4d12801640be",
+              "content": "房间隔缺损相关检查于嘉兴市妇保医院完成",
+              "timestamp": 1771465312.2044127,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "a3bc0c76-2321-44d4-b54d-c73d7336c56c",
+              "content": "医生建议：房间隔缺损若超过3岁仍未自行愈合，则自行愈合可能性已很低；若不愈合需考虑手术治疗，也可选择介入治疗。",
+              "timestamp": 1771465320.659105,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "f110eaaa-a8f8-4a2c-8285-a53fa3cb75d8",
+              "content": "医生说明：房间隔缺损超过一定年龄后一般不会再生长愈合",
+              "timestamp": 1771465338.0631444,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a2043d11-838c-4c5e-9551-22c68094b25a",
+              "content": "既往史：2010-01-10 08:00左右发病，小脑梗塞、脑出血",
+              "timestamp": 1771465343.4400752,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "2284f8f1-de08-4291-9369-86c530cebbd8",
+              "content": "既往史：2010-01-10 08:00左右发病，小脑梗塞、脑出血；症状：头晕伴恶心呕吐；否认视物双影、面部麻木、耳鸣/听力下降、肢体无力、意识障碍",
+              "timestamp": 1771465348.8980746,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "dd209667-bd62-4a41-8fd7-1b80753794d5",
+              "content": "就诊建议：血管疾病介入治疗非当前医生专业；建议就诊天坛医院姜卫剑教授（介入治疗专家）",
+              "timestamp": 1771465348.8980873,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "3ba7081c-07cc-4bad-bf4a-46f919d55948",
+              "content": "2009-02-16行剖腹产",
+              "timestamp": 1771465353.8059602,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "93bef1c3-0d33-4c24-aa09-845d922585b9",
+              "content": "2009-10断奶",
+              "timestamp": 1771465353.805968,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "请检查泌乳素。",
+        "to_memory": [
+          "identity: 患者女，28岁；2009-02-16剖腹产",
+          "working: 断奶近一年（2009年10月断奶）仍可挤出奶水（溢乳）",
+          "history: 医嘱/建议检查泌乳素（PRL）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "69d0b6db-cc85-4043-ac2b-55be50e18a7e",
+              "content": "断奶近一年仍可挤出乳汁，咨询原因",
+              "timestamp": 1771465353.8059728,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "identity": [
+            {
+              "id": "ddea2c04-792e-496f-9f15-ca5b363717c0",
+              "content": "患者女，28岁",
+              "timestamp": 1771465276.5161848,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "a37e4041-2a62-463b-84a6-a1dc9452ca6c",
+              "content": "生来就有鱼鳞病（先天性/自出生起）",
+              "timestamp": 1771465276.516196,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "27e542d9-5d85-4a70-91b6-940cdfff3fad",
+              "content": "医生说明鱼鳞病目前治疗以缓解症状为主，尚无根除方法；多数症状较轻者随年龄可能自行缓解",
+              "timestamp": 1771465281.476694,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "caf7e543-fb88-4934-8d02-a15ea7f709fc",
+              "content": "用药史：曾使用维A类药物；目前因症状缓解已自行停药",
+              "timestamp": 1771465288.5195577,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "9b9b2af0-c293-4de1-963f-b5c68d4cf8e4",
+              "content": "医生说明维甲酸/维A酸类药物不是激素；激素治疗鱼鳞病基本无效",
+              "timestamp": 1771465293.6450257,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9120a93b-3c74-44a7-8b3d-fcd9555d94fd",
+              "content": "去年发生第7颈椎暴力性骨折（C7颈椎骨折/颈椎第七节段外伤）",
+              "timestamp": 1771465302.8004074,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "b9691766-262d-47fa-8453-ff7556b0538c",
+              "content": "颈椎外伤后出现下半身无任何知觉，提示截瘫/下肢感觉运动功能丧失",
+              "timestamp": 1771465302.8004158,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "3cca2ffe-2248-40bc-9771-14a20317b155",
+              "content": "医生建议咨询脊柱外科医生（针对C7颈椎暴力性骨折及疑脊髓损伤/截瘫情况）",
+              "timestamp": 1771465308.6269457,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "10e447ba-94af-42f3-9744-969822186fd1",
+              "content": "既往史：房间隔缺损（房缺）约2mm；3个月大超声示房缺2.2mm；34个月大复查房缺2mm",
+              "timestamp": 1771465312.2044046,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "66ec0bdf-11e0-4fd3-b719-4d12801640be",
+              "content": "房间隔缺损相关检查于嘉兴市妇保医院完成",
+              "timestamp": 1771465312.2044127,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "a3bc0c76-2321-44d4-b54d-c73d7336c56c",
+              "content": "医生建议：房间隔缺损若超过3岁仍未自行愈合，则自行愈合可能性已很低；若不愈合需考虑手术治疗，也可选择介入治疗。",
+              "timestamp": 1771465320.659105,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "f110eaaa-a8f8-4a2c-8285-a53fa3cb75d8",
+              "content": "医生说明：房间隔缺损超过一定年龄后一般不会再生长愈合",
+              "timestamp": 1771465338.0631444,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a2043d11-838c-4c5e-9551-22c68094b25a",
+              "content": "既往史：2010-01-10 08:00左右发病，小脑梗塞、脑出血",
+              "timestamp": 1771465343.4400752,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "2284f8f1-de08-4291-9369-86c530cebbd8",
+              "content": "既往史：2010-01-10 08:00左右发病，小脑梗塞、脑出血；症状：头晕伴恶心呕吐；否认视物双影、面部麻木、耳鸣/听力下降、肢体无力、意识障碍",
+              "timestamp": 1771465348.8980746,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "dd209667-bd62-4a41-8fd7-1b80753794d5",
+              "content": "就诊建议：血管疾病介入治疗非当前医生专业；建议就诊天坛医院姜卫剑教授（介入治疗专家）",
+              "timestamp": 1771465348.8980873,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "3ba7081c-07cc-4bad-bf4a-46f919d55948",
+              "content": "2009-02-16行剖腹产",
+              "timestamp": 1771465353.8059602,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "93bef1c3-0d33-4c24-aa09-845d922585b9",
+              "content": "2009-10断奶",
+              "timestamp": 1771465353.805968,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "b228b13c-44a4-4527-a986-9baee7d03b61",
+              "content": "医嘱/建议检查泌乳素（PRL）以评估溢乳原因",
+              "timestamp": 1771465357.423363,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者此前关于皮肤病用药性质的咨询与这次产后相关咨询：医生在较早那次就诊时明确否定了哪一类药物属性，并指出哪一种治疗方式对该皮肤病基本无效？",
+          "answer": "医生说明维甲酸/维A酸类药物不是激素；激素治疗鱼鳞病基本无效。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "9b9b2af0-c293-4de1-963f-b5c68d4cf8e4"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "69d0b6db-cc85-4043-ac2b-55be50e18a7e"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            14,
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "postop_rehab",
+    "scenario_name": "术后康复管理",
+    "session_count": 5,
+    "group_key": "综合科"
+  }
+}

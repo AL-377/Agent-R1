@@ -1,0 +1,2543 @@
+{
+  "patient_id": "094d0b427097",
+  "messages": [
+    {
+      "user": {
+        "content": "走路时间长左大腿外侧发麻~，无。",
+        "to_memory": [
+          "working: 走路时间长时左大腿外侧发麻"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "688e4faa-6736-4c61-a842-777ebf97b31b",
+              "content": "走路时间长时左大腿外侧发麻",
+              "timestamp": 1771466413.2236412,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者在本次对话中主要描述的症状是什么？",
+          "answer": "走路时间长时左大腿外侧发麻",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "688e4faa-6736-4c61-a842-777ebf97b31b"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "查一下腰椎磁共振看看。",
+        "to_memory": [
+          "working: 主诉走路时间长左大腿外侧发麻",
+          "history: 医生建议检查腰椎磁共振（MRI）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "688e4faa-6736-4c61-a842-777ebf97b31b",
+              "content": "走路时间长时左大腿外侧发麻",
+              "timestamp": 1771466413.2236412,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "扭伤？，我儿子两岁十个月，在餐厅到厨房处滑到，起来后站不稳，后来左脚走路有点跛，但活动不影响，也不疼不肿，现在八天了，还是不好。",
+        "to_memory": [
+          "identity: 患者儿子，2岁10个月（幼儿）",
+          "working: 8天前在餐厅到厨房处滑倒疑似扭伤；起身后站不稳；随后左脚走路有点跛；活动不受影响；无疼痛、无肿胀；至今8天仍未好转"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5f88c759-e8c9-42f7-a511-db7f1e88f91a",
+              "content": "8天前在餐厅到厨房处滑倒疑似扭伤；起身后站不稳；随后左脚走路有点跛；活动不受影响；无疼痛、无肿胀；至今8天仍未好转",
+              "timestamp": 1771466421.7305312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在这段对话中，医生曾建议进行的检查项目，与后续患者描述的就诊对象（本人/他人）之间是否存在潜在不匹配需要澄清？请指出该检查项目及需要澄清的就诊对象是谁。",
+          "answer": "检查项目是腰椎磁共振；需要澄清的就诊对象为患者的儿子（2岁10个月）。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "5b27c24b-70f4-4377-80a8-b08d6a68108e"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            2,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "疼痛处X线片，打石膏固定。",
+        "to_memory": [
+          "history: 医生建议对疼痛部位拍X线片检查并打石膏固定"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5f88c759-e8c9-42f7-a511-db7f1e88f91a",
+              "content": "8天前在餐厅到厨房处滑倒疑似扭伤；起身后站不稳；随后左脚走路有点跛；活动不受影响；无疼痛、无肿胀；至今8天仍未好转",
+              "timestamp": 1771466421.7305312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "黄褐斑，吴大夫，您好！我脸上有黄褐斑一年有余，能否治疗？",
+        "to_memory": [
+          "working: 面部黄褐斑病史约1年余，咨询是否可治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "968bd161-1570-45fa-bd82-7a1161425381",
+              "content": "面部黄褐斑病史约1年余，咨询是否可治疗",
+              "timestamp": 1771466428.751859,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "您好！能去除，但复发的也较多，需要多方面的治疗和保护主要有避光，防晒，护肤，皮肤要保湿，脱色，精神调节，休息好，注意营养，少吃光敏的素菜，尽量避免食含有植雌激素的食物和滋补品，生活饮食习惯纠正，休息等。关键是要用药合适。必要时光子或激光治疗。",
+        "to_memory": [
+          "history: 医生建议黄褐斑治疗需综合管理：避光防晒、护肤保湿、脱色治疗、精神调节与充足休息、注意营养、少吃光敏性蔬菜、尽量避免含植物雌激素食物及滋补品、纠正生活饮食习惯；关键是用药合适；必要时可行光子或激光治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "968bd161-1570-45fa-bd82-7a1161425381",
+              "content": "面部黄褐斑病史约1年余，咨询是否可治疗",
+              "timestamp": 1771466428.751859,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4692daed-510b-4e70-98f9-a68e81196c69",
+              "content": "黄褐斑治疗建议：综合管理（避光防晒、护肤保湿、脱色治疗、精神调节与充足休息、注意营养、少吃光敏性蔬菜、尽量避免含植物雌激素食物及滋补品、纠正生活饮食习惯）；关键是用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771466433.78636,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在关于皮肤问题的那次咨询里，医生提到饮食/补品方面有一类需要尽量避免的成分；如果患者仍在经常食用或服用，这是否与医生建议存在冲突？请指出需要避免的那一类成分是什么。",
+          "answer": "尽量避免含植物雌激素的食物和滋补品（植雌激素）。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "5b27c24b-70f4-4377-80a8-b08d6a68108e"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "4692daed-510b-4e70-98f9-a68e81196c69"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4692daed-510b-4e70-98f9-a68e81196c69",
+              "content": "黄褐斑治疗建议：综合管理（避光防晒、护肤保湿、脱色治疗、精神调节与充足休息、注意营养、少吃光敏性蔬菜、尽量避免含植物雌激素食物及滋补品、纠正生活饮食习惯）；关键是用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771466433.78636,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "不清楚，一星期钱，坐着时间长了，早上一起床，四肢酸疼。",
+        "to_memory": [
+          "working: 约1周前起久坐后出现症状；今早起床四肢酸痛"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "f6e2991e-7576-4a66-a4c7-2fece278cf2f",
+              "content": "约1周前起久坐后出现症状；今早起床四肢酸痛",
+              "timestamp": 1771466439.2151191,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4692daed-510b-4e70-98f9-a68e81196c69",
+              "content": "黄褐斑治疗建议：综合管理（避光防晒、护肤保湿、脱色治疗、精神调节与充足休息、注意营养、少吃光敏性蔬菜、尽量避免含植物雌激素食物及滋补品、纠正生活饮食习惯）；关键是用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771466433.78636,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "回顾最早那次因孩子下肢行走异常来咨询时，医生当时提出了哪两项主要的检查/处理措施？并对比本次患者描述的近期全身不适，这次有没有提到相同的检查或处理？",
+          "answer": "对疼痛处拍X线片检查，并打石膏固定；本次未提到相同的检查或处理。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "d2e3de29-044c-4de5-ac94-7a3c4b40b931"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "f6e2991e-7576-4a66-a4c7-2fece278cf2f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            5,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "到大医院看看。",
+        "to_memory": [
+          "working: 近1周久坐后起床出现四肢酸痛（病因不清）",
+          "history: 医嘱建议到大医院就诊评估"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "f6e2991e-7576-4a66-a4c7-2fece278cf2f",
+              "content": "近1周久坐后起床出现四肢酸痛，病因不清",
+              "timestamp": 1771466439.2151191,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4692daed-510b-4e70-98f9-a68e81196c69",
+              "content": "黄褐斑治疗建议：综合管理（避光防晒、护肤保湿、脱色治疗、精神调节与充足休息、注意营养、少吃光敏性蔬菜、尽量避免含植物雌激素食物及滋补品、纠正生活饮食习惯）；关键是用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771466433.78636,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7f060fec-67b0-46ff-bb36-1f7c53345168",
+              "content": "医嘱建议到大医院就诊评估",
+              "timestamp": 1771466446.2043884,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "医生当时针对患者的疼痛部位，提出了哪些具体的检查与处理措施？",
+          "answer": "对疼痛部位拍X线片检查，并打石膏固定。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "d2e3de29-044c-4de5-ac94-7a3c4b40b931"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4692daed-510b-4e70-98f9-a68e81196c69",
+              "content": "黄褐斑治疗建议：综合管理（避光防晒、护肤保湿、脱色治疗、精神调节与充足休息、注意营养、少吃光敏性蔬菜、尽量避免含植物雌激素食物及滋补品、纠正生活饮食习惯）；关键是用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771466433.78636,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7f060fec-67b0-46ff-bb36-1f7c53345168",
+              "content": "医嘱建议到大医院就诊评估",
+              "timestamp": 1771466446.2043884,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "牙龈疼痛，牙龈疼已经有4天了。是最里边的小智牙周围痛。“人工牛黄甲硝唑胶囊”吃了药好像不怎么管用，今天早上起来半边脸都肿起来了。",
+        "to_memory": [
+          "history: 近4天因智齿周围牙龈疼痛自行服用“人工牛黄甲硝唑胶囊”，自觉效果不佳",
+          "working: 本次主诉牙龈疼痛4天，位于最里侧智齿周围；今晨出现半边脸肿胀"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "80d30769-6e1a-44a1-b3a0-973bf64861c6",
+              "content": "本次主诉牙龈疼痛4天，位于最里侧智齿周围；今晨出现半边脸肿胀",
+              "timestamp": 1771466454.448063,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4692daed-510b-4e70-98f9-a68e81196c69",
+              "content": "黄褐斑治疗建议：综合管理（避光防晒、护肤保湿、脱色治疗、精神调节与充足休息、注意营养、少吃光敏性蔬菜、尽量避免含植物雌激素食物及滋补品、纠正生活饮食习惯）；关键是用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771466433.78636,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7f060fec-67b0-46ff-bb36-1f7c53345168",
+              "content": "医嘱建议到大医院就诊评估",
+              "timestamp": 1771466446.2043884,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "47eee092-2f86-4699-b708-4443828788e1",
+              "content": "近4天因智齿周围牙龈疼痛自行服用“人工牛黄甲硝唑胶囊”，自觉效果不佳",
+              "timestamp": 1771466454.4480507,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "消炎后应该拔除。",
+        "to_memory": [
+          "history: 针对智齿周围牙龈炎症，医生建议先消炎处理，消炎后应拔除智齿"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "80d30769-6e1a-44a1-b3a0-973bf64861c6",
+              "content": "本次主诉牙龈疼痛4天，位于最里侧智齿周围；今晨出现半边脸肿胀",
+              "timestamp": 1771466454.448063,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4692daed-510b-4e70-98f9-a68e81196c69",
+              "content": "黄褐斑治疗建议：综合管理（避光防晒、护肤保湿、脱色治疗、精神调节与充足休息、注意营养、少吃光敏性蔬菜、尽量避免含植物雌激素食物及滋补品、纠正生活饮食习惯）；关键是用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771466433.78636,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7f060fec-67b0-46ff-bb36-1f7c53345168",
+              "content": "医嘱建议到大医院就诊评估",
+              "timestamp": 1771466446.2043884,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "47eee092-2f86-4699-b708-4443828788e1",
+              "content": "近4天因智齿周围牙龈疼痛自行服用“人工牛黄甲硝唑胶囊”，自觉效果不佳",
+              "timestamp": 1771466454.4480507,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4891842b-f412-4f0e-99db-27cb75b22728",
+              "content": "针对智齿周围牙龈炎症，医生建议先消炎处理，消炎后应拔除智齿",
+              "timestamp": 1771466457.2004788,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4692daed-510b-4e70-98f9-a68e81196c69",
+              "content": "黄褐斑治疗建议：综合管理（避光防晒、护肤保湿、脱色治疗、精神调节与充足休息、注意营养、少吃光敏性蔬菜、尽量避免含植物雌激素食物及滋补品、纠正生活饮食习惯）；关键是用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771466433.78636,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7f060fec-67b0-46ff-bb36-1f7c53345168",
+              "content": "医嘱建议到大医院就诊评估",
+              "timestamp": 1771466446.2043884,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "47eee092-2f86-4699-b708-4443828788e1",
+              "content": "近4天因智齿周围牙龈疼痛自行服用“人工牛黄甲硝唑胶囊”，自觉效果不佳",
+              "timestamp": 1771466454.4480507,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4891842b-f412-4f0e-99db-27cb75b22728",
+              "content": "针对智齿周围牙龈炎症，医生建议先消炎处理，消炎后应拔除智齿",
+              "timestamp": 1771466457.2004788,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "宫外孕，5月份检查时异位妊娠，后来就自然吸收了，现在又时小肚子疼右边疼。",
+        "to_memory": [
+          "history: 2026年5月检查提示异位妊娠/宫外孕，后来自然吸收",
+          "working: 目前出现小肚子疼，右侧腹痛"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "74699531-23df-44c8-a67b-d82ea4eda598",
+              "content": "目前出现小肚子疼，右侧腹痛",
+              "timestamp": 1771466461.8843439,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4692daed-510b-4e70-98f9-a68e81196c69",
+              "content": "黄褐斑治疗建议：综合管理（避光防晒、护肤保湿、脱色治疗、精神调节与充足休息、注意营养、少吃光敏性蔬菜、尽量避免含植物雌激素食物及滋补品、纠正生活饮食习惯）；关键是用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771466433.78636,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7f060fec-67b0-46ff-bb36-1f7c53345168",
+              "content": "医嘱建议到大医院就诊评估",
+              "timestamp": 1771466446.2043884,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "47eee092-2f86-4699-b708-4443828788e1",
+              "content": "近4天因智齿周围牙龈疼痛自行服用“人工牛黄甲硝唑胶囊”，自觉效果不佳",
+              "timestamp": 1771466454.4480507,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4891842b-f412-4f0e-99db-27cb75b22728",
+              "content": "针对智齿周围牙龈炎症，医生建议先消炎处理，消炎后应拔除智齿",
+              "timestamp": 1771466457.2004788,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "78abec0f-5c88-4d49-8ecb-edcbd63fa8bd",
+              "content": "2026年5月检查提示异位妊娠/宫外孕，后来自然吸收",
+              "timestamp": 1771466461.8843346,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "结合患者既往一次就诊时医生提出的检查建议，与患者这次主要不适部位是否存在不一致从而可能导致检查方向偏离？请指出不一致点分别是什么。",
+          "answer": "存在不一致：既往医生建议做腰椎MRI检查；本次患者主要为小肚子疼、右侧腹痛。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "74699531-23df-44c8-a67b-d82ea4eda598"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            14,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "先做输卵管造影，根据情况决定下一步措施。我每周四出诊。",
+        "to_memory": [
+          "history: 医生建议先做输卵管造影检查，再根据结果决定下一步措施"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "74699531-23df-44c8-a67b-d82ea4eda598",
+              "content": "目前出现小肚子疼，右侧腹痛",
+              "timestamp": 1771466461.8843439,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4692daed-510b-4e70-98f9-a68e81196c69",
+              "content": "黄褐斑治疗建议：综合管理（避光防晒、护肤保湿、脱色治疗、精神调节与充足休息、注意营养、少吃光敏性蔬菜、尽量避免含植物雌激素食物及滋补品、纠正生活饮食习惯）；关键是用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771466433.78636,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7f060fec-67b0-46ff-bb36-1f7c53345168",
+              "content": "医嘱建议到大医院就诊评估",
+              "timestamp": 1771466446.2043884,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "47eee092-2f86-4699-b708-4443828788e1",
+              "content": "近4天因智齿周围牙龈疼痛自行服用“人工牛黄甲硝唑胶囊”，自觉效果不佳",
+              "timestamp": 1771466454.4480507,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4891842b-f412-4f0e-99db-27cb75b22728",
+              "content": "针对智齿周围牙龈炎症，医生建议先消炎处理，消炎后应拔除智齿",
+              "timestamp": 1771466457.2004788,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "78abec0f-5c88-4d49-8ecb-edcbd63fa8bd",
+              "content": "2026年5月检查提示异位妊娠/宫外孕，后来自然吸收",
+              "timestamp": 1771466461.8843346,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "5a6bc9c6-9f07-4f41-ac4f-fee19eac5042",
+              "content": "医生建议先做输卵管造影检查，再根据结果决定下一步措施",
+              "timestamp": 1771466466.5442379,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者这次咨询中提到目前有哪些不适症状？",
+          "answer": "小肚子疼，右侧腹痛",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "74699531-23df-44c8-a67b-d82ea4eda598"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4692daed-510b-4e70-98f9-a68e81196c69",
+              "content": "黄褐斑治疗建议：综合管理（避光防晒、护肤保湿、脱色治疗、精神调节与充足休息、注意营养、少吃光敏性蔬菜、尽量避免含植物雌激素食物及滋补品、纠正生活饮食习惯）；关键是用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771466433.78636,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7f060fec-67b0-46ff-bb36-1f7c53345168",
+              "content": "医嘱建议到大医院就诊评估",
+              "timestamp": 1771466446.2043884,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "47eee092-2f86-4699-b708-4443828788e1",
+              "content": "近4天因智齿周围牙龈疼痛自行服用“人工牛黄甲硝唑胶囊”，自觉效果不佳",
+              "timestamp": 1771466454.4480507,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4891842b-f412-4f0e-99db-27cb75b22728",
+              "content": "针对智齿周围牙龈炎症，医生建议先消炎处理，消炎后应拔除智齿",
+              "timestamp": 1771466457.2004788,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "78abec0f-5c88-4d49-8ecb-edcbd63fa8bd",
+              "content": "2026年5月检查提示异位妊娠/宫外孕，后来自然吸收",
+              "timestamp": 1771466461.8843346,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "5a6bc9c6-9f07-4f41-ac4f-fee19eac5042",
+              "content": "医生建议先做输卵管造影检查，再根据结果决定下一步措施",
+              "timestamp": 1771466466.5442379,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "癫痫，2009年五月份脑袋痛睡觉抽咬牙吉林省长春市吉林医大一院。",
+        "to_memory": [
+          "identity: 既往基础疾病/慢性病：癫痫",
+          "history: 2009年5月出现脑袋痛、睡觉时抽搐/咬牙；曾在吉林省长春市吉林医大一院就诊"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "8b005bab-15ef-42ef-859a-205e0e3c3c35",
+              "content": "既往基础疾病/慢性病：癫痫",
+              "timestamp": 1771466471.651345,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4692daed-510b-4e70-98f9-a68e81196c69",
+              "content": "黄褐斑治疗建议：综合管理（避光防晒、护肤保湿、脱色治疗、精神调节与充足休息、注意营养、少吃光敏性蔬菜、尽量避免含植物雌激素食物及滋补品、纠正生活饮食习惯）；关键是用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771466433.78636,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7f060fec-67b0-46ff-bb36-1f7c53345168",
+              "content": "医嘱建议到大医院就诊评估",
+              "timestamp": 1771466446.2043884,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "47eee092-2f86-4699-b708-4443828788e1",
+              "content": "近4天因智齿周围牙龈疼痛自行服用“人工牛黄甲硝唑胶囊”，自觉效果不佳",
+              "timestamp": 1771466454.4480507,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4891842b-f412-4f0e-99db-27cb75b22728",
+              "content": "针对智齿周围牙龈炎症，医生建议先消炎处理，消炎后应拔除智齿",
+              "timestamp": 1771466457.2004788,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "78abec0f-5c88-4d49-8ecb-edcbd63fa8bd",
+              "content": "2026年5月检查提示异位妊娠/宫外孕，后来自然吸收",
+              "timestamp": 1771466461.8843346,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "5a6bc9c6-9f07-4f41-ac4f-fee19eac5042",
+              "content": "医生建议先做输卵管造影检查，再根据结果决定下一步措施",
+              "timestamp": 1771466466.5442379,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "4c7d7739-6f7b-4514-b1e5-f1f024e7f472",
+              "content": "2009年5月出现头痛、睡觉时抽搐/咬牙；曾在吉林省长春市吉林医大一院就诊",
+              "timestamp": 1771466471.6513546,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你提供信息过于简单。",
+        "to_memory": [
+          "history: 2009年5月出现头痛、睡眠中抽搐伴咬牙，在吉林省长春市吉林大学第一医院就诊；患者自述癫痫病史",
+          "history: 2026年5月检查提示异位妊娠（宫外孕），后自然吸收；医生建议先做输卵管造影再决定下一步措施",
+          "history: 牙龈/智齿周围疼痛4天，曾服用“人工牛黄甲硝唑胶囊”效果不佳，出现半边脸肿；医生建议消炎后拔除",
+          "working: 近一周久坐后、晨起四肢酸痛",
+          "identity: 目前小腹右侧疼痛（既往宫外孕史后复发）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "9cac5da5-bb1e-4825-9db1-be0aba80c782",
+              "content": "近一周久坐后、晨起四肢酸痛",
+              "timestamp": 1771466477.3380065,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "8b005bab-15ef-42ef-859a-205e0e3c3c35",
+              "content": "既往基础疾病/慢性病：癫痫",
+              "timestamp": 1771466471.651345,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "a448741a-171e-456f-87a7-56641233b689",
+              "content": "目前小腹右侧疼痛（既往宫外孕史后复发）",
+              "timestamp": 1771466477.3380144,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4692daed-510b-4e70-98f9-a68e81196c69",
+              "content": "黄褐斑治疗建议：综合管理（避光防晒、护肤保湿、脱色治疗、精神调节与充足休息、注意营养、少吃光敏性蔬菜、尽量避免含植物雌激素食物及滋补品、纠正生活饮食习惯）；关键是用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771466433.78636,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7f060fec-67b0-46ff-bb36-1f7c53345168",
+              "content": "医嘱建议到大医院就诊评估",
+              "timestamp": 1771466446.2043884,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "47eee092-2f86-4699-b708-4443828788e1",
+              "content": "牙龈/智齿周围疼痛4天，曾服用“人工牛黄甲硝唑胶囊”效果不佳，出现半边脸肿",
+              "timestamp": 1771466454.4480507,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4891842b-f412-4f0e-99db-27cb75b22728",
+              "content": "针对智齿周围牙龈炎症，医生建议先消炎处理，消炎后应拔除智齿",
+              "timestamp": 1771466457.2004788,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "78abec0f-5c88-4d49-8ecb-edcbd63fa8bd",
+              "content": "2026年5月检查提示异位妊娠/宫外孕，后来自然吸收",
+              "timestamp": 1771466461.8843346,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "5a6bc9c6-9f07-4f41-ac4f-fee19eac5042",
+              "content": "医生建议先做输卵管造影检查，再根据结果决定下一步措施",
+              "timestamp": 1771466466.5442379,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "4c7d7739-6f7b-4514-b1e5-f1f024e7f472",
+              "content": "2009年5月出现头痛、睡眠中抽搐伴咬牙；曾在吉林省长春市吉林大学第一医院就诊；患者自述癫痫病史",
+              "timestamp": 1771466471.6513546,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "回忆患者在较早一次就诊时，医生为当时的受累部位提出的检查与处理措施是什么？并说明这与患者近一周出现的不适在诱因或表现上有何不同？",
+          "answer": "医生建议对疼痛部位拍X线片检查并打石膏固定；近一周的不适为久坐后、晨起四肢酸痛。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "d2e3de29-044c-4de5-ac94-7a3c4b40b931"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "9cac5da5-bb1e-4825-9db1-be0aba80c782"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            15,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "8b005bab-15ef-42ef-859a-205e0e3c3c35",
+              "content": "既往基础疾病/慢性病：癫痫",
+              "timestamp": 1771466471.651345,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "a448741a-171e-456f-87a7-56641233b689",
+              "content": "目前小腹右侧疼痛（既往宫外孕史后复发）",
+              "timestamp": 1771466477.3380144,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4692daed-510b-4e70-98f9-a68e81196c69",
+              "content": "黄褐斑治疗建议：综合管理（避光防晒、护肤保湿、脱色治疗、精神调节与充足休息、注意营养、少吃光敏性蔬菜、尽量避免含植物雌激素食物及滋补品、纠正生活饮食习惯）；关键是用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771466433.78636,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7f060fec-67b0-46ff-bb36-1f7c53345168",
+              "content": "医嘱建议到大医院就诊评估",
+              "timestamp": 1771466446.2043884,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "47eee092-2f86-4699-b708-4443828788e1",
+              "content": "牙龈/智齿周围疼痛4天，曾服用“人工牛黄甲硝唑胶囊”效果不佳，出现半边脸肿",
+              "timestamp": 1771466454.4480507,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4891842b-f412-4f0e-99db-27cb75b22728",
+              "content": "针对智齿周围牙龈炎症，医生建议先消炎处理，消炎后应拔除智齿",
+              "timestamp": 1771466457.2004788,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "78abec0f-5c88-4d49-8ecb-edcbd63fa8bd",
+              "content": "2026年5月检查提示异位妊娠/宫外孕，后来自然吸收",
+              "timestamp": 1771466461.8843346,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "5a6bc9c6-9f07-4f41-ac4f-fee19eac5042",
+              "content": "医生建议先做输卵管造影检查，再根据结果决定下一步措施",
+              "timestamp": 1771466466.5442379,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "4c7d7739-6f7b-4514-b1e5-f1f024e7f472",
+              "content": "2009年5月出现头痛、睡眠中抽搐伴咬牙；曾在吉林省长春市吉林大学第一医院就诊；患者自述癫痫病史",
+              "timestamp": 1771466471.6513546,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "小儿隐睾，做过几次彩超，发育良好。",
+        "to_memory": [
+          "history: 小儿隐睾，已做过多次彩超检查，提示发育良好"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "8b005bab-15ef-42ef-859a-205e0e3c3c35",
+              "content": "既往基础疾病/慢性病：癫痫",
+              "timestamp": 1771466471.651345,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "a448741a-171e-456f-87a7-56641233b689",
+              "content": "目前小腹右侧疼痛（既往宫外孕史后复发）",
+              "timestamp": 1771466477.3380144,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4692daed-510b-4e70-98f9-a68e81196c69",
+              "content": "黄褐斑治疗建议：综合管理（避光防晒、护肤保湿、脱色治疗、精神调节与充足休息、注意营养、少吃光敏性蔬菜、尽量避免含植物雌激素食物及滋补品、纠正生活饮食习惯）；关键是用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771466433.78636,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7f060fec-67b0-46ff-bb36-1f7c53345168",
+              "content": "医嘱建议到大医院就诊评估",
+              "timestamp": 1771466446.2043884,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "47eee092-2f86-4699-b708-4443828788e1",
+              "content": "牙龈/智齿周围疼痛4天，曾服用“人工牛黄甲硝唑胶囊”效果不佳，出现半边脸肿",
+              "timestamp": 1771466454.4480507,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4891842b-f412-4f0e-99db-27cb75b22728",
+              "content": "针对智齿周围牙龈炎症，医生建议先消炎处理，消炎后应拔除智齿",
+              "timestamp": 1771466457.2004788,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "78abec0f-5c88-4d49-8ecb-edcbd63fa8bd",
+              "content": "2026年5月检查提示异位妊娠/宫外孕，后来自然吸收",
+              "timestamp": 1771466461.8843346,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "5a6bc9c6-9f07-4f41-ac4f-fee19eac5042",
+              "content": "医生建议先做输卵管造影检查，再根据结果决定下一步措施",
+              "timestamp": 1771466466.5442379,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "4c7d7739-6f7b-4514-b1e5-f1f024e7f472",
+              "content": "2009年5月出现头痛、睡眠中抽搐伴咬牙；曾在吉林省长春市吉林大学第一医院就诊；患者自述癫痫病史",
+              "timestamp": 1771466471.6513546,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "6ed984d5-6433-4715-8ade-dd347c353ba0",
+              "content": "既往史：小儿隐睾；已做过多次彩超检查，提示发育良好。",
+              "timestamp": 1771466484.4097626,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者既往报告过一种需要长期管理的基础疾病；在制定本次任何治疗或用药方案前，医生最需要重点核对哪一项既往病史以避免安全风险或相互影响？",
+          "answer": "癫痫",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "4692daed-510b-4e70-98f9-a68e81196c69"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "8b005bab-15ef-42ef-859a-205e0e3c3c35"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            14,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "隐睾，一岁半还没有降下来的话，要及时做手术。",
+        "to_memory": [
+          "history: 医生建议：小儿隐睾若到1岁半仍未下降，应及时手术治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "8b005bab-15ef-42ef-859a-205e0e3c3c35",
+              "content": "既往基础疾病/慢性病：癫痫",
+              "timestamp": 1771466471.651345,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "a448741a-171e-456f-87a7-56641233b689",
+              "content": "目前小腹右侧疼痛（既往宫外孕史后复发）",
+              "timestamp": 1771466477.3380144,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4692daed-510b-4e70-98f9-a68e81196c69",
+              "content": "黄褐斑治疗建议：综合管理（避光防晒、护肤保湿、脱色治疗、精神调节与充足休息、注意营养、少吃光敏性蔬菜、尽量避免含植物雌激素食物及滋补品、纠正生活饮食习惯）；关键是用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771466433.78636,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7f060fec-67b0-46ff-bb36-1f7c53345168",
+              "content": "医嘱建议到大医院就诊评估",
+              "timestamp": 1771466446.2043884,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "47eee092-2f86-4699-b708-4443828788e1",
+              "content": "牙龈/智齿周围疼痛4天，曾服用“人工牛黄甲硝唑胶囊”效果不佳，出现半边脸肿",
+              "timestamp": 1771466454.4480507,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4891842b-f412-4f0e-99db-27cb75b22728",
+              "content": "针对智齿周围牙龈炎症，医生建议先消炎处理，消炎后应拔除智齿",
+              "timestamp": 1771466457.2004788,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "78abec0f-5c88-4d49-8ecb-edcbd63fa8bd",
+              "content": "2026年5月检查提示异位妊娠/宫外孕，后来自然吸收",
+              "timestamp": 1771466461.8843346,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "5a6bc9c6-9f07-4f41-ac4f-fee19eac5042",
+              "content": "医生建议先做输卵管造影检查，再根据结果决定下一步措施",
+              "timestamp": 1771466466.5442379,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "4c7d7739-6f7b-4514-b1e5-f1f024e7f472",
+              "content": "2009年5月出现头痛、睡眠中抽搐伴咬牙；曾在吉林省长春市吉林大学第一医院就诊；患者自述癫痫病史",
+              "timestamp": 1771466471.6513546,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "6ed984d5-6433-4715-8ade-dd347c353ba0",
+              "content": "既往史：小儿隐睾；已做过多次彩超检查，提示发育良好。",
+              "timestamp": 1771466484.4097626,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "0a39d91e-0ad5-4c89-b5ee-b29c0ea6f089",
+              "content": "医生建议：小儿隐睾若到1岁半仍未下降，应及时手术治疗",
+              "timestamp": 1771466489.8678415,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "8b005bab-15ef-42ef-859a-205e0e3c3c35",
+              "content": "既往基础疾病/慢性病：癫痫",
+              "timestamp": 1771466471.651345,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "a448741a-171e-456f-87a7-56641233b689",
+              "content": "目前小腹右侧疼痛（既往宫外孕史后复发）",
+              "timestamp": 1771466477.3380144,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4692daed-510b-4e70-98f9-a68e81196c69",
+              "content": "黄褐斑治疗建议：综合管理（避光防晒、护肤保湿、脱色治疗、精神调节与充足休息、注意营养、少吃光敏性蔬菜、尽量避免含植物雌激素食物及滋补品、纠正生活饮食习惯）；关键是用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771466433.78636,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7f060fec-67b0-46ff-bb36-1f7c53345168",
+              "content": "医嘱建议到大医院就诊评估",
+              "timestamp": 1771466446.2043884,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "47eee092-2f86-4699-b708-4443828788e1",
+              "content": "牙龈/智齿周围疼痛4天，曾服用“人工牛黄甲硝唑胶囊”效果不佳，出现半边脸肿",
+              "timestamp": 1771466454.4480507,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4891842b-f412-4f0e-99db-27cb75b22728",
+              "content": "针对智齿周围牙龈炎症，医生建议先消炎处理，消炎后应拔除智齿",
+              "timestamp": 1771466457.2004788,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "78abec0f-5c88-4d49-8ecb-edcbd63fa8bd",
+              "content": "2026年5月检查提示异位妊娠/宫外孕，后来自然吸收",
+              "timestamp": 1771466461.8843346,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "5a6bc9c6-9f07-4f41-ac4f-fee19eac5042",
+              "content": "医生建议先做输卵管造影检查，再根据结果决定下一步措施",
+              "timestamp": 1771466466.5442379,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "4c7d7739-6f7b-4514-b1e5-f1f024e7f472",
+              "content": "2009年5月出现头痛、睡眠中抽搐伴咬牙；曾在吉林省长春市吉林大学第一医院就诊；患者自述癫痫病史",
+              "timestamp": 1771466471.6513546,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "6ed984d5-6433-4715-8ade-dd347c353ba0",
+              "content": "既往史：小儿隐睾；已做过多次彩超检查，提示发育良好。",
+              "timestamp": 1771466484.4097626,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "0a39d91e-0ad5-4c89-b5ee-b29c0ea6f089",
+              "content": "医生建议：小儿隐睾若到1岁半仍未下降，应及时手术治疗",
+              "timestamp": 1771466489.8678415,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "肺癌，患者男，72岁，以前身体良好，这次查出肺癌，乏力，有点咳血丝，气短。",
+        "to_memory": [
+          "identity: 患者男，72岁",
+          "history: 既往身体良好；本次检查查出/诊断为肺癌",
+          "working: 目前乏力、轻度咳血丝、气短"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "73abbf0f-1c2c-4fab-ad31-12d8c48d50ca",
+              "content": "目前症状：乏力、轻度咳血丝、气短",
+              "timestamp": 1771466493.4556656,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            }
+          ],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "8b005bab-15ef-42ef-859a-205e0e3c3c35",
+              "content": "既往基础疾病/慢性病：癫痫",
+              "timestamp": 1771466471.651345,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "a448741a-171e-456f-87a7-56641233b689",
+              "content": "目前小腹右侧疼痛（既往宫外孕史后复发）",
+              "timestamp": 1771466477.3380144,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "46de9af2-f213-4f31-a42b-09510bbe8bc9",
+              "content": "患者：男，72岁",
+              "timestamp": 1771466493.455652,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4692daed-510b-4e70-98f9-a68e81196c69",
+              "content": "黄褐斑治疗建议：综合管理（避光防晒、护肤保湿、脱色治疗、精神调节与充足休息、注意营养、少吃光敏性蔬菜、尽量避免含植物雌激素食物及滋补品、纠正生活饮食习惯）；关键是用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771466433.78636,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7f060fec-67b0-46ff-bb36-1f7c53345168",
+              "content": "医嘱建议到大医院就诊评估",
+              "timestamp": 1771466446.2043884,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "47eee092-2f86-4699-b708-4443828788e1",
+              "content": "牙龈/智齿周围疼痛4天，曾服用“人工牛黄甲硝唑胶囊”效果不佳，出现半边脸肿",
+              "timestamp": 1771466454.4480507,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4891842b-f412-4f0e-99db-27cb75b22728",
+              "content": "针对智齿周围牙龈炎症，医生建议先消炎处理，消炎后应拔除智齿",
+              "timestamp": 1771466457.2004788,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "78abec0f-5c88-4d49-8ecb-edcbd63fa8bd",
+              "content": "2026年5月检查提示异位妊娠/宫外孕，后来自然吸收",
+              "timestamp": 1771466461.8843346,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "5a6bc9c6-9f07-4f41-ac4f-fee19eac5042",
+              "content": "医生建议先做输卵管造影检查，再根据结果决定下一步措施",
+              "timestamp": 1771466466.5442379,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "4c7d7739-6f7b-4514-b1e5-f1f024e7f472",
+              "content": "2009年5月出现头痛、睡眠中抽搐伴咬牙；曾在吉林省长春市吉林大学第一医院就诊；患者自述癫痫病史",
+              "timestamp": 1771466471.6513546,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "6ed984d5-6433-4715-8ade-dd347c353ba0",
+              "content": "既往史：小儿隐睾；已做过多次彩超检查，提示发育良好。",
+              "timestamp": 1771466484.4097626,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "0a39d91e-0ad5-4c89-b5ee-b29c0ea6f089",
+              "content": "医生建议：小儿隐睾若到1岁半仍未下降，应及时手术治疗",
+              "timestamp": 1771466489.8678415,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "8be76e2d-b759-4715-9d53-8879fc8369a5",
+              "content": "既往身体良好；本次检查诊断为肺癌",
+              "timestamp": 1771466493.4556613,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者这次就诊时提到目前主要有哪些不适表现？",
+          "answer": "乏力、咳血丝、气短",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "73abbf0f-1c2c-4fab-ad31-12d8c48d50ca"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "打算用中药治好肺癌的概率不大，建议做无创的检查，比如痰细胞学，先明确病例类型，如果是非小细胞肺癌，可以尝试靶向药物。",
+        "to_memory": [
+          "identity: 患者男，72岁",
+          "history: 既往/当前诊断：肺癌",
+          "history: 医嘱：中药治愈肺癌概率不大；建议先做无创检查（如痰细胞学）明确病理类型；若为非小细胞肺癌可尝试靶向药物",
+          "working: 当前症状：乏力、咳血丝、气短"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "73abbf0f-1c2c-4fab-ad31-12d8c48d50ca",
+              "content": "目前症状：乏力、轻度咳血丝、气短",
+              "timestamp": 1771466493.4556656,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            }
+          ],
+          "identity": [
+            {
+              "id": "5b27c24b-70f4-4377-80a8-b08d6a68108e",
+              "content": "患者儿子，2岁10个月（幼儿）",
+              "timestamp": 1771466421.7305162,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "8b005bab-15ef-42ef-859a-205e0e3c3c35",
+              "content": "既往基础疾病/慢性病：癫痫",
+              "timestamp": 1771466471.651345,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "a448741a-171e-456f-87a7-56641233b689",
+              "content": "目前小腹右侧疼痛（既往宫外孕史后复发）",
+              "timestamp": 1771466477.3380144,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "46de9af2-f213-4f31-a42b-09510bbe8bc9",
+              "content": "患者：男，72岁",
+              "timestamp": 1771466493.455652,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            }
+          ],
+          "history": [
+            {
+              "id": "5353e8f5-f9fc-4eba-8eaa-97cbe5f717d6",
+              "content": "医生建议检查腰椎磁共振（MRI）",
+              "timestamp": 1771466418.3495238,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "d2e3de29-044c-4de5-ac94-7a3c4b40b931",
+              "content": "医生建议对疼痛部位拍X线片检查并打石膏固定",
+              "timestamp": 1771466426.5976303,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4692daed-510b-4e70-98f9-a68e81196c69",
+              "content": "黄褐斑治疗建议：综合管理（避光防晒、护肤保湿、脱色治疗、精神调节与充足休息、注意营养、少吃光敏性蔬菜、尽量避免含植物雌激素食物及滋补品、纠正生活饮食习惯）；关键是用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771466433.78636,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7f060fec-67b0-46ff-bb36-1f7c53345168",
+              "content": "医嘱建议到大医院就诊评估",
+              "timestamp": 1771466446.2043884,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "47eee092-2f86-4699-b708-4443828788e1",
+              "content": "牙龈/智齿周围疼痛4天，曾服用“人工牛黄甲硝唑胶囊”效果不佳，出现半边脸肿",
+              "timestamp": 1771466454.4480507,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4891842b-f412-4f0e-99db-27cb75b22728",
+              "content": "针对智齿周围牙龈炎症，医生建议先消炎处理，消炎后应拔除智齿",
+              "timestamp": 1771466457.2004788,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "78abec0f-5c88-4d49-8ecb-edcbd63fa8bd",
+              "content": "2026年5月检查提示异位妊娠/宫外孕，后来自然吸收",
+              "timestamp": 1771466461.8843346,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "5a6bc9c6-9f07-4f41-ac4f-fee19eac5042",
+              "content": "医生建议先做输卵管造影检查，再根据结果决定下一步措施",
+              "timestamp": 1771466466.5442379,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "4c7d7739-6f7b-4514-b1e5-f1f024e7f472",
+              "content": "2009年5月出现头痛、睡眠中抽搐伴咬牙；曾在吉林省长春市吉林大学第一医院就诊；患者自述癫痫病史",
+              "timestamp": 1771466471.6513546,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "6ed984d5-6433-4715-8ade-dd347c353ba0",
+              "content": "既往史：小儿隐睾；已做过多次彩超检查，提示发育良好。",
+              "timestamp": 1771466484.4097626,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "0a39d91e-0ad5-4c89-b5ee-b29c0ea6f089",
+              "content": "医生建议：小儿隐睾若到1岁半仍未下降，应及时手术治疗",
+              "timestamp": 1771466489.8678415,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "8be76e2d-b759-4715-9d53-8879fc8369a5",
+              "content": "既往身体良好；本次检查诊断为肺癌",
+              "timestamp": 1771466493.4556613,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "35cd0e4a-b810-414f-82eb-9040d5b2f2b8",
+              "content": "既往/当前诊断：肺癌",
+              "timestamp": 1771466498.491609,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            },
+            {
+              "id": "8243a0ca-10c4-4436-b4e6-6bf27bea9b12",
+              "content": "医嘱：中药治愈肺癌概率不大；建议先做无创检查（如痰细胞学）明确病理类型；若为非小细胞肺癌可尝试靶向药物",
+              "timestamp": 1771466498.4916189,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者本次就诊中提到的当前不适表现有哪些？这些信息在后续制定检查或用药方案时需要重点核对以避免遗漏。请逐条列出。",
+          "answer": "乏力、轻度咳血丝、气短",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "4891842b-f412-4f0e-99db-27cb75b22728"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "73abbf0f-1c2c-4fab-ad31-12d8c48d50ca"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            12,
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "postop_rehab",
+    "scenario_name": "术后康复管理",
+    "session_count": 9,
+    "group_key": "综合科"
+  }
+}

@@ -1,0 +1,2700 @@
+{
+  "patient_id": "a62b34e41a28",
+  "messages": [
+    {
+      "user": {
+        "content": "输卵管堵塞，做照影后得到的结果是已畅通。",
+        "to_memory": [
+          "history: 既往有输卵管堵塞史；行输卵管造影检查后结果提示输卵管已畅通"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "造影当月不能。最安全是3个月后，但时间短些可能怀孕率会高些。因此，如何取舍视各人具体情况而定。",
+        "to_memory": [
+          "history: 既往因输卵管堵塞行输卵管造影检查，造影结果提示输卵管已畅通",
+          "history: 医嘱：造影当月不建议备孕/怀孕，最安全建议为造影后3个月再备孕；具体时间取舍需结合个人情况"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "38d6a2c3-61d1-4b0e-8781-67ee9aa0dcfe",
+              "content": "既往因输卵管堵塞行输卵管造影检查，造影结果提示输卵管已畅通。",
+              "timestamp": 1771493742.9940543,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "dd62a693-adc2-446e-8875-d3e58bbe14c2",
+              "content": "医嘱：造影当月不建议备孕/怀孕；较安全建议为造影后3个月再备孕，具体时间需结合个人情况取舍。",
+              "timestamp": 1771493742.9940634,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "面部激素慢性皮炎，08年七.八月份发病.其主要症状是;面部多处出现干皮.有时发痒.在挠的过程中有红肿现象.2010年元月份也曾在您那里看过.",
+        "to_memory": [
+          "history: 既往诊断/病史：面部激素慢性皮炎，2008年7-8月发病",
+          "history: 既往就诊史：2010年1月曾在当前医生处就诊",
+          "working: 当前症状：面部多处干皮，间歇瘙痒，搔抓后出现红肿"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "fc176b79-275d-47cb-86d5-d689137af397",
+              "content": "当前症状：面部多处干皮，间歇瘙痒，搔抓后出现红肿",
+              "timestamp": 1771493747.8451188,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "11a19125-ab41-4e2a-86eb-4a884cf4a617",
+              "content": "既往诊断/病史：面部激素慢性皮炎，2008年7-8月发病",
+              "timestamp": 1771493747.8451042,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "56b7644c-3704-460d-bbe1-c53d38fd218a",
+              "content": "既往就诊史：2010年1月曾在当前医生处就诊",
+              "timestamp": 1771493747.8451145,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在本次交流中提到曾在某个具体时间点到同一位医生处就诊过。请指出这个就诊时间，并说明这一既往就诊史在评估本次情况时需要做哪些信息一致性/安全性核对？",
+          "answer": "2010年1月曾在当前医生处就诊；需核对当时诊断与用药史是否与本次症状描述一致，避免漏掉既往治疗或反应相关的安全风险。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "56b7644c-3704-460d-bbe1-c53d38fd218a"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "fc176b79-275d-47cb-86d5-d689137af397"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你再来看看吧，我不知道你是不是想做生物共振检测和治疗？不知道[症状皮肤]与[正常皮肤]对比的化验,指的是什么。",
+        "to_memory": [
+          "history: 既往输卵管堵塞，造影检查结果提示已畅通",
+          "history: 既往面部激素慢性皮炎（2008年7-8月发病），2010年1月曾就诊",
+          "history: 医生建议患者再来复诊；讨论患者是否想做生物共振检测与治疗；医生不清楚患者提到的“症状皮肤与正常皮肤对比的化验”具体指什么"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "fc176b79-275d-47cb-86d5-d689137af397",
+              "content": "当前症状：面部多处干皮，间歇瘙痒，搔抓后出现红肿",
+              "timestamp": 1771493747.8451188,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "61c81806-d753-4eef-98b1-e96b48499fb5",
+              "content": "医生建议患者复诊；拟讨论是否进行生物共振检测与治疗；医生暂不明确患者所指“症状皮肤与正常皮肤对比的化验”具体项目",
+              "timestamp": 1771493758.293393,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "11a19125-ab41-4e2a-86eb-4a884cf4a617",
+              "content": "既往诊断/病史：面部激素慢性皮炎，2008年7-8月发病",
+              "timestamp": 1771493747.8451042,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "56b7644c-3704-460d-bbe1-c53d38fd218a",
+              "content": "既往就诊史：2010年1月曾在当前医生处就诊",
+              "timestamp": 1771493747.8451145,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "72b2fe58-c08c-452e-b6d2-66a8fc8c0ef4",
+              "content": "既往诊断/病史：输卵管堵塞史，后行造影检查提示已畅通",
+              "timestamp": 1771493758.2933846,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "在患者这次为皮肤问题咨询时，医生对“接下来需要做什么/怎么安排下一步”给出了哪些明确的处理意见？请概括与检查或复诊相关的要点。",
+          "answer": "医生建议患者再来复诊看看；并提到不确定患者是否想做生物共振检测与治疗，同时也不清楚患者所说“症状皮肤与正常皮肤对比的化验”具体指什么项目。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "61c81806-d753-4eef-98b1-e96b48499fb5"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "11a19125-ab41-4e2a-86eb-4a884cf4a617"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "马大夫您好;我说的正常和症状皮肤也就是说能不能在皮肤上直接取样做对比化验,找出病菌所在.然后再对症下药.如果能这样做,需要多长时才能出结果.",
+        "to_memory": [
+          "history: 既往输卵管堵塞，造影检查结果提示已通畅；医生建议造影当月不宜备孕，最安全为3个月后（可根据个人情况权衡）",
+          "history: 既往面部激素慢性皮炎，2008年7-8月发病；2010年1月曾就诊",
+          "history: 目前咨询是否可直接从正常皮肤与症状皮肤取样做对比化验以寻找病菌并对症用药；询问化验出结果所需时间"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "fc176b79-275d-47cb-86d5-d689137af397",
+              "content": "当前症状：面部多处干皮，间歇瘙痒，搔抓后出现红肿",
+              "timestamp": 1771493747.8451188,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "61c81806-d753-4eef-98b1-e96b48499fb5",
+              "content": "医生建议患者复诊；拟讨论是否进行生物共振检测与治疗；医生暂不明确患者所指“症状皮肤与正常皮肤对比的化验”具体项目",
+              "timestamp": 1771493758.293393,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "e83f04ce-2d80-40ce-b36e-f07a750997c7",
+              "content": "患者询问：是否可从正常皮肤与症状皮肤分别取样对比化验以寻找病菌并对症用药；并询问化验结果需要多长时间。",
+              "timestamp": 1771493770.0215487,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "11a19125-ab41-4e2a-86eb-4a884cf4a617",
+              "content": "既往诊断/病史：面部激素慢性皮炎，2008年7-8月发病",
+              "timestamp": 1771493747.8451042,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "56b7644c-3704-460d-bbe1-c53d38fd218a",
+              "content": "既往就诊史：2010年1月曾在当前医生处就诊",
+              "timestamp": 1771493747.8451145,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "72b2fe58-c08c-452e-b6d2-66a8fc8c0ef4",
+              "content": "既往诊断/病史：输卵管堵塞史，后行造影检查提示已畅通",
+              "timestamp": 1771493758.2933846,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "856b197f-1642-426f-b580-325e935af690",
+              "content": "输卵管造影后备孕建议：造影当月不宜备孕；更安全为3个月后再备孕（可根据个人情况权衡）。",
+              "timestamp": 1771493770.0215387,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "皮肤活检检查，一般一周出结果。",
+        "to_memory": [
+          "history: 医生告知：皮肤活检检查一般一周出结果"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "fc176b79-275d-47cb-86d5-d689137af397",
+              "content": "当前症状：面部多处干皮，间歇瘙痒，搔抓后出现红肿",
+              "timestamp": 1771493747.8451188,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "61c81806-d753-4eef-98b1-e96b48499fb5",
+              "content": "医生建议患者复诊；拟讨论是否进行生物共振检测与治疗；医生暂不明确患者所指“症状皮肤与正常皮肤对比的化验”具体项目",
+              "timestamp": 1771493758.293393,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "e83f04ce-2d80-40ce-b36e-f07a750997c7",
+              "content": "患者询问：是否可从正常皮肤与症状皮肤分别取样对比化验以寻找病菌并对症用药；并询问化验结果需要多长时间。",
+              "timestamp": 1771493770.0215487,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "7ea7e9de-ee0d-4d33-b7ff-7b1e40db125d",
+              "content": "医生告知：皮肤活检检查一般一周出结果",
+              "timestamp": 1771493773.6517484,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "11a19125-ab41-4e2a-86eb-4a884cf4a617",
+              "content": "既往诊断/病史：面部激素慢性皮炎，2008年7-8月发病",
+              "timestamp": 1771493747.8451042,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "56b7644c-3704-460d-bbe1-c53d38fd218a",
+              "content": "既往就诊史：2010年1月曾在当前医生处就诊",
+              "timestamp": 1771493747.8451145,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "72b2fe58-c08c-452e-b6d2-66a8fc8c0ef4",
+              "content": "既往诊断/病史：输卵管堵塞史，后行造影检查提示已畅通",
+              "timestamp": 1771493758.2933846,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "856b197f-1642-426f-b580-325e935af690",
+              "content": "输卵管造影后备孕建议：造影当月不宜备孕；更安全为3个月后再备孕（可根据个人情况权衡）。",
+              "timestamp": 1771493770.0215387,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者自述这种面部皮肤问题最早是在什么时候开始出现的？（请给出到月份的大致时间）",
+          "answer": "2008年7-8月",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "11a19125-ab41-4e2a-86eb-4a884cf4a617"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "11a19125-ab41-4e2a-86eb-4a884cf4a617",
+              "content": "既往诊断/病史：面部激素慢性皮炎，2008年7-8月发病",
+              "timestamp": 1771493747.8451042,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "56b7644c-3704-460d-bbe1-c53d38fd218a",
+              "content": "既往就诊史：2010年1月曾在当前医生处就诊",
+              "timestamp": 1771493747.8451145,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "72b2fe58-c08c-452e-b6d2-66a8fc8c0ef4",
+              "content": "既往诊断/病史：输卵管堵塞史，后行造影检查提示已畅通",
+              "timestamp": 1771493758.2933846,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "856b197f-1642-426f-b580-325e935af690",
+              "content": "输卵管造影后备孕建议：造影当月不宜备孕；更安全为3个月后再备孕（可根据个人情况权衡）。",
+              "timestamp": 1771493770.0215387,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "乳腺癌，我２００５年乳腺癌根治手术后，服用三苯氧氨至今，已经有四年零五个月，近一年来，复查肝功能，谷丙转氨酶等到了200多，医生说是肝损伤。请问：三苯氧氨要服用五年，象我这样的情况，能停药吗？急盼答复？",
+        "to_memory": [
+          "history: 2005年行乳腺癌根治手术",
+          "history: 术后长期服用三苯氧胺（他莫昔芬）至今，已用药约4年5个月",
+          "history: 近1年复查肝功能异常，ALT（谷丙转氨酶）约200多U/L，医生提示肝损伤",
+          "history: 询问在肝损伤情况下三苯氧胺原计划服用5年是否可以停药"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "11a19125-ab41-4e2a-86eb-4a884cf4a617",
+              "content": "既往诊断/病史：面部激素慢性皮炎，2008年7-8月发病",
+              "timestamp": 1771493747.8451042,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "56b7644c-3704-460d-bbe1-c53d38fd218a",
+              "content": "既往就诊史：2010年1月曾在当前医生处就诊",
+              "timestamp": 1771493747.8451145,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "72b2fe58-c08c-452e-b6d2-66a8fc8c0ef4",
+              "content": "既往诊断/病史：输卵管堵塞史，后行造影检查提示已畅通",
+              "timestamp": 1771493758.2933846,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "856b197f-1642-426f-b580-325e935af690",
+              "content": "输卵管造影后备孕建议：造影当月不宜备孕；更安全为3个月后再备孕（可根据个人情况权衡）。",
+              "timestamp": 1771493770.0215387,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "62989329-90cf-4bc8-b14e-3fd83ee15f49",
+              "content": "既往病史：2005年行乳腺癌根治手术。",
+              "timestamp": 1771493785.7625933,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "93d8aef1-88cb-422d-94d1-95f806f44ace",
+              "content": "用药史：乳腺癌术后长期口服三苯氧胺/他莫昔芬，已用药约4年5个月（原计划5年）。",
+              "timestamp": 1771493785.7626038,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "99c03b43-8092-4ae8-9994-161e97c8d453",
+              "content": "近1年复查肝功能异常：ALT约200+ U/L，医生提示肝损伤。",
+              "timestamp": 1771493785.7626078,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "65d5d9c7-4938-462e-90c2-9af11ed31bd2",
+              "content": "就诊关注点：在肝损伤情况下，咨询他莫昔芬原计划服用5年是否可提前停药。",
+              "timestamp": 1771493785.7626114,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者既往被诊断的皮肤问题是什么？该病最早大约在什么时候开始发病？",
+          "answer": "面部激素慢性皮炎，2008年7-8月发病",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "11a19125-ab41-4e2a-86eb-4a884cf4a617"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            5
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "换用法乐通，同时保肝治疗，如果肝功能还不好转可以暂时停药一段时间，最好吃够5年。不知道你的病理情况，必要时可以换用双德治疗（诺雷德和瑞宁德），这样会对肝功能影响小一些。",
+        "to_memory": [
+          "history: 2005年行乳腺癌根治术",
+          "history: 术后长期服用三苯氧氨（他莫昔芬）约4年5个月",
+          "history: 近一年复查肝功能异常，ALT/谷丙转氨酶约200+，考虑药物性肝损伤",
+          "history: 医嘱可换用法乐通并进行保肝治疗；若肝功能仍不改善可暂时停药一段时间；建议尽量完成内分泌治疗满5年",
+          "history: 病理情况不详时，必要可改为“诺雷德+瑞宁德”（双德）方案，提示对肝功能影响可能更小"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "11a19125-ab41-4e2a-86eb-4a884cf4a617",
+              "content": "既往诊断/病史：面部激素慢性皮炎，2008年7-8月发病",
+              "timestamp": 1771493747.8451042,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "56b7644c-3704-460d-bbe1-c53d38fd218a",
+              "content": "既往就诊史：2010年1月曾在当前医生处就诊",
+              "timestamp": 1771493747.8451145,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "72b2fe58-c08c-452e-b6d2-66a8fc8c0ef4",
+              "content": "既往诊断/病史：输卵管堵塞史，后行造影检查提示已畅通",
+              "timestamp": 1771493758.2933846,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "856b197f-1642-426f-b580-325e935af690",
+              "content": "输卵管造影后备孕建议：造影当月不宜备孕；更安全为3个月后再备孕（可根据个人情况权衡）。",
+              "timestamp": 1771493770.0215387,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "62989329-90cf-4bc8-b14e-3fd83ee15f49",
+              "content": "既往病史：2005年行乳腺癌根治手术。",
+              "timestamp": 1771493785.7625933,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "93d8aef1-88cb-422d-94d1-95f806f44ace",
+              "content": "用药史：乳腺癌术后长期口服三苯氧胺/他莫昔芬，已用药约4年5个月（原计划5年）。",
+              "timestamp": 1771493785.7626038,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "99c03b43-8092-4ae8-9994-161e97c8d453",
+              "content": "近1年复查肝功能异常：ALT约200+ U/L，医生提示肝损伤。",
+              "timestamp": 1771493785.7626078,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "65d5d9c7-4938-462e-90c2-9af11ed31bd2",
+              "content": "就诊关注点：在肝损伤情况下，咨询他莫昔芬原计划服用5年是否可提前停药。",
+              "timestamp": 1771493785.7626114,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "bffea5e6-8ecb-46d4-ab47-13950bec533f",
+              "content": "医嘱：可将他莫昔芬改用法乐通并进行保肝治疗；若肝功能仍不改善可暂时停药一段时间；建议尽量完成内分泌治疗满5年。",
+              "timestamp": 1771493796.4411235,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "9270d558-b51d-4f88-91b2-eb639bf14105",
+              "content": "医嘱：病理情况不详时，必要可改为“诺雷德+瑞宁德”（双德）方案，提示对肝功能影响可能更小。",
+              "timestamp": 1771493796.4411325,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者既往曾做过一项影响备孕时机的妇科影像检查；如果她计划尽快怀孕，医生当时对“检查后多久开始备孕更安全”给出的建议是什么？这与她若在检查当月就备孕是否存在安全冲突？",
+          "answer": "造影当月不宜备孕；更安全为3个月后再备孕（可根据个人情况权衡）。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "856b197f-1642-426f-b580-325e935af690",
+                "62989329-90cf-4bc8-b14e-3fd83ee15f49"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "11a19125-ab41-4e2a-86eb-4a884cf4a617",
+              "content": "既往诊断/病史：面部激素慢性皮炎，2008年7-8月发病",
+              "timestamp": 1771493747.8451042,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "56b7644c-3704-460d-bbe1-c53d38fd218a",
+              "content": "既往就诊史：2010年1月曾在当前医生处就诊",
+              "timestamp": 1771493747.8451145,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "72b2fe58-c08c-452e-b6d2-66a8fc8c0ef4",
+              "content": "既往诊断/病史：输卵管堵塞史，后行造影检查提示已畅通",
+              "timestamp": 1771493758.2933846,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "856b197f-1642-426f-b580-325e935af690",
+              "content": "输卵管造影后备孕建议：造影当月不宜备孕；更安全为3个月后再备孕（可根据个人情况权衡）。",
+              "timestamp": 1771493770.0215387,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "62989329-90cf-4bc8-b14e-3fd83ee15f49",
+              "content": "既往病史：2005年行乳腺癌根治手术。",
+              "timestamp": 1771493785.7625933,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "93d8aef1-88cb-422d-94d1-95f806f44ace",
+              "content": "用药史：乳腺癌术后长期口服三苯氧胺/他莫昔芬，已用药约4年5个月（原计划5年）。",
+              "timestamp": 1771493785.7626038,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "99c03b43-8092-4ae8-9994-161e97c8d453",
+              "content": "近1年复查肝功能异常：ALT约200+ U/L，医生提示肝损伤。",
+              "timestamp": 1771493785.7626078,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "65d5d9c7-4938-462e-90c2-9af11ed31bd2",
+              "content": "就诊关注点：在肝损伤情况下，咨询他莫昔芬原计划服用5年是否可提前停药。",
+              "timestamp": 1771493785.7626114,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "bffea5e6-8ecb-46d4-ab47-13950bec533f",
+              "content": "医嘱：可将他莫昔芬改用法乐通并进行保肝治疗；若肝功能仍不改善可暂时停药一段时间；建议尽量完成内分泌治疗满5年。",
+              "timestamp": 1771493796.4411235,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "9270d558-b51d-4f88-91b2-eb639bf14105",
+              "content": "医嘱：病理情况不详时，必要可改为“诺雷德+瑞宁德”（双德）方案，提示对肝功能影响可能更小。",
+              "timestamp": 1771493796.4411325,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "左股骨头缺血性坏死，2009.10。1膝盖疼，胯骨疼，腿向左屈伸不利。走路彼。积水潭医院，北京中医医院。",
+        "to_memory": [
+          "history: 2005年行乳腺癌根治术后，口服三苯氧氨（他莫昔芬）已4年5个月；近1年复查肝功能提示肝损伤，ALT/谷丙转氨酶200+；医生建议可换用法乐通并保肝，必要时可暂时停药，尽量完成5年疗程，亦可考虑诺雷德+瑞宁德方案以减小对肝功能影响",
+          "history: 诊断：面部激素慢性皮炎（2008年7-8月发病），症状包括面部干皮、瘙痒、抓挠后红肿；2010年1月曾就诊；医生说明皮肤活检一般约1周出结果",
+          "history: 诊断：左股骨头缺血性坏死（2009.10）",
+          "working: 当前症状：左膝疼、胯骨疼，左腿屈伸不利，走路跛行",
+          "working: 就诊/检查地点提及：北京积水潭医院、北京中医医院"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b30d8e4a-4439-46b8-8087-fcceca70b346",
+              "content": "当前症状：左膝疼、胯骨疼，左腿屈伸不利，走路跛行",
+              "timestamp": 1771493808.4319618,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "ba10694e-b68c-4258-b7ad-8bb349843913",
+              "content": "就诊/检查地点提及：北京积水潭医院、北京中医医院",
+              "timestamp": 1771493808.4319663,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "11a19125-ab41-4e2a-86eb-4a884cf4a617",
+              "content": "既往诊断/病史：面部激素慢性皮炎，2008年7-8月发病",
+              "timestamp": 1771493747.8451042,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "56b7644c-3704-460d-bbe1-c53d38fd218a",
+              "content": "既往就诊史：2010年1月曾在当前医生处就诊",
+              "timestamp": 1771493747.8451145,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "72b2fe58-c08c-452e-b6d2-66a8fc8c0ef4",
+              "content": "既往诊断/病史：输卵管堵塞史，后行造影检查提示已畅通",
+              "timestamp": 1771493758.2933846,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "856b197f-1642-426f-b580-325e935af690",
+              "content": "输卵管造影后备孕建议：造影当月不宜备孕；更安全为3个月后再备孕（可根据个人情况权衡）。",
+              "timestamp": 1771493770.0215387,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "62989329-90cf-4bc8-b14e-3fd83ee15f49",
+              "content": "既往病史：2005年行乳腺癌根治手术。",
+              "timestamp": 1771493785.7625933,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "93d8aef1-88cb-422d-94d1-95f806f44ace",
+              "content": "用药史：乳腺癌术后长期口服三苯氧胺/他莫昔芬，已用药约4年5个月（原计划5年）。",
+              "timestamp": 1771493785.7626038,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "99c03b43-8092-4ae8-9994-161e97c8d453",
+              "content": "近1年复查肝功能异常：ALT约200+ U/L，医生提示肝损伤。",
+              "timestamp": 1771493785.7626078,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "65d5d9c7-4938-462e-90c2-9af11ed31bd2",
+              "content": "就诊关注点：在肝损伤情况下，咨询他莫昔芬原计划服用5年是否可提前停药。",
+              "timestamp": 1771493785.7626114,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "bffea5e6-8ecb-46d4-ab47-13950bec533f",
+              "content": "医嘱：可将他莫昔芬改用法乐通并进行保肝治疗；若肝功能仍不改善可暂时停药一段时间；建议尽量完成内分泌治疗满5年。",
+              "timestamp": 1771493796.4411235,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "9270d558-b51d-4f88-91b2-eb639bf14105",
+              "content": "医嘱：病理情况不详时，必要可改为“诺雷德+瑞宁德”（双德）方案，提示对肝功能影响可能更小。",
+              "timestamp": 1771493796.4411325,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b316c034-3504-470c-8c06-9c0d38d9dd35",
+              "content": "既往诊断/病史：左股骨头缺血性坏死（2009年10月）",
+              "timestamp": 1771493808.431953,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "c03613be-0e98-42eb-b78e-34220fa9ba62",
+              "content": "医生说明：皮肤活检一般约1周出结果",
+              "timestamp": 1771493808.4319704,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在描述下肢关节/髋部问题时提到曾就诊过两家医院。为了核对转诊与检查资料的连续性，请问这两家医院分别是哪两家？",
+          "answer": "北京积水潭医院、北京中医医院",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "856b197f-1642-426f-b580-325e935af690"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "ba10694e-b68c-4258-b7ad-8bb349843913"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "如果不做置换，只能靠药物减轻疼痛。如果关节软骨有破碎，可以进行关节清理手术，但是功能会有影响。",
+        "to_memory": [
+          "history: 左股骨头缺血性坏死（2009-10起），症状包括膝盖痛、胯骨痛、腿向左屈伸不利、走路跛行；曾就诊积水潭医院、北京中医医院",
+          "history: 乳腺癌，2005年行乳腺癌根治术；术后长期服用三苯氧氨（约4年5个月）；近一年肝功能异常，ALT/谷丙转氨酶约200+，考虑药物性肝损伤；医生建议可换用法乐通并保肝治疗，必要时可短暂停药，尽量完成5年内分泌治疗；亦可考虑诺雷德+瑞宁德方案以减轻对肝功能影响",
+          "history: 面部激素慢性皮炎（2008年7-8月发病），表现为面部多处干皮、瘙痒、抓挠后红肿；2010年1月曾就诊；医生提及皮肤活检约1周出结果",
+          "history: 针对股骨头坏死的当前讨论：若不做关节置换，仅能用药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b30d8e4a-4439-46b8-8087-fcceca70b346",
+              "content": "当前症状：左膝疼、胯骨疼，左腿屈伸不利，走路跛行",
+              "timestamp": 1771493808.4319618,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "ba10694e-b68c-4258-b7ad-8bb349843913",
+              "content": "就诊/检查地点提及：北京积水潭医院、北京中医医院",
+              "timestamp": 1771493808.4319663,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "11a19125-ab41-4e2a-86eb-4a884cf4a617",
+              "content": "既往诊断/病史：面部激素慢性皮炎（2008年7-8月发病），表现为面部多处干皮、瘙痒、抓挠后红肿",
+              "timestamp": 1771493747.8451042,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "56b7644c-3704-460d-bbe1-c53d38fd218a",
+              "content": "既往就诊史：2010年1月曾在当前医生处就诊",
+              "timestamp": 1771493747.8451145,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "72b2fe58-c08c-452e-b6d2-66a8fc8c0ef4",
+              "content": "既往诊断/病史：输卵管堵塞史，后行造影检查提示已畅通",
+              "timestamp": 1771493758.2933846,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "856b197f-1642-426f-b580-325e935af690",
+              "content": "输卵管造影后备孕建议：造影当月不宜备孕；更安全为3个月后再备孕（可根据个人情况权衡）。",
+              "timestamp": 1771493770.0215387,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "62989329-90cf-4bc8-b14e-3fd83ee15f49",
+              "content": "既往病史：2005年行乳腺癌根治手术。",
+              "timestamp": 1771493785.7625933,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "93d8aef1-88cb-422d-94d1-95f806f44ace",
+              "content": "用药史：乳腺癌术后长期口服三苯氧胺/他莫昔芬，已用药约4年5个月（原计划5年）。",
+              "timestamp": 1771493785.7626038,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "99c03b43-8092-4ae8-9994-161e97c8d453",
+              "content": "近1年复查肝功能异常：ALT约200+ U/L，医生提示肝损伤。",
+              "timestamp": 1771493785.7626078,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "65d5d9c7-4938-462e-90c2-9af11ed31bd2",
+              "content": "就诊关注点：在肝损伤情况下，咨询他莫昔芬原计划服用5年是否可提前停药。",
+              "timestamp": 1771493785.7626114,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "bffea5e6-8ecb-46d4-ab47-13950bec533f",
+              "content": "医嘱：可将他莫昔芬改用法乐通并进行保肝治疗；若肝功能仍不改善可暂时停药一段时间；建议尽量完成内分泌治疗满5年。",
+              "timestamp": 1771493796.4411235,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "9270d558-b51d-4f88-91b2-eb639bf14105",
+              "content": "医嘱：病理情况不详时，必要可改为“诺雷德+瑞宁德”（双德）方案，提示对肝功能影响可能更小。",
+              "timestamp": 1771493796.4411325,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b316c034-3504-470c-8c06-9c0d38d9dd35",
+              "content": "既往诊断/病史：左股骨头缺血性坏死（2009年10月起），症状包括左膝痛、胯骨痛、左腿屈伸不利、走路跛行；曾就诊北京积水潭医院、北京中医医院",
+              "timestamp": 1771493808.431953,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "c03613be-0e98-42eb-b78e-34220fa9ba62",
+              "content": "医生说明：皮肤活检一般约1周出结果",
+              "timestamp": 1771493808.4319704,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2ec3c2c4-c9b3-49c7-853b-e252bbabe2b5",
+              "content": "股骨头坏死相关治疗讨论：若不做关节置换，多为药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771493825.4132974,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "医生提出调整内分泌治疗方案前，需要核对患者当前正在长期服用的那种术后维持用药是什么？请写出药名。",
+          "answer": "三苯氧胺（他莫昔芬）",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "93d8aef1-88cb-422d-94d1-95f806f44ace"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "ba10694e-b68c-4258-b7ad-8bb349843913"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "11a19125-ab41-4e2a-86eb-4a884cf4a617",
+              "content": "既往诊断/病史：面部激素慢性皮炎（2008年7-8月发病），表现为面部多处干皮、瘙痒、抓挠后红肿",
+              "timestamp": 1771493747.8451042,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "56b7644c-3704-460d-bbe1-c53d38fd218a",
+              "content": "既往就诊史：2010年1月曾在当前医生处就诊",
+              "timestamp": 1771493747.8451145,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "72b2fe58-c08c-452e-b6d2-66a8fc8c0ef4",
+              "content": "既往诊断/病史：输卵管堵塞史，后行造影检查提示已畅通",
+              "timestamp": 1771493758.2933846,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "856b197f-1642-426f-b580-325e935af690",
+              "content": "输卵管造影后备孕建议：造影当月不宜备孕；更安全为3个月后再备孕（可根据个人情况权衡）。",
+              "timestamp": 1771493770.0215387,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "62989329-90cf-4bc8-b14e-3fd83ee15f49",
+              "content": "既往病史：2005年行乳腺癌根治手术。",
+              "timestamp": 1771493785.7625933,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "93d8aef1-88cb-422d-94d1-95f806f44ace",
+              "content": "用药史：乳腺癌术后长期口服三苯氧胺/他莫昔芬，已用药约4年5个月（原计划5年）。",
+              "timestamp": 1771493785.7626038,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "99c03b43-8092-4ae8-9994-161e97c8d453",
+              "content": "近1年复查肝功能异常：ALT约200+ U/L，医生提示肝损伤。",
+              "timestamp": 1771493785.7626078,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "65d5d9c7-4938-462e-90c2-9af11ed31bd2",
+              "content": "就诊关注点：在肝损伤情况下，咨询他莫昔芬原计划服用5年是否可提前停药。",
+              "timestamp": 1771493785.7626114,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "bffea5e6-8ecb-46d4-ab47-13950bec533f",
+              "content": "医嘱：可将他莫昔芬改用法乐通并进行保肝治疗；若肝功能仍不改善可暂时停药一段时间；建议尽量完成内分泌治疗满5年。",
+              "timestamp": 1771493796.4411235,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "9270d558-b51d-4f88-91b2-eb639bf14105",
+              "content": "医嘱：病理情况不详时，必要可改为“诺雷德+瑞宁德”（双德）方案，提示对肝功能影响可能更小。",
+              "timestamp": 1771493796.4411325,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b316c034-3504-470c-8c06-9c0d38d9dd35",
+              "content": "既往诊断/病史：左股骨头缺血性坏死（2009年10月起），症状包括左膝痛、胯骨痛、左腿屈伸不利、走路跛行；曾就诊北京积水潭医院、北京中医医院",
+              "timestamp": 1771493808.431953,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "c03613be-0e98-42eb-b78e-34220fa9ba62",
+              "content": "医生说明：皮肤活检一般约1周出结果",
+              "timestamp": 1771493808.4319704,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2ec3c2c4-c9b3-49c7-853b-e252bbabe2b5",
+              "content": "股骨头坏死相关治疗讨论：若不做关节置换，多为药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771493825.4132974,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "肩周炎，颈椎炎，，",
+        "to_memory": [
+          "working: 患者提及肩周炎、颈椎炎（疑为本次主诉/现病问题）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "dd4043ee-604d-4d76-ab53-534ef704e299",
+              "content": "患者提及肩周炎、颈椎炎（疑为本次主诉/现病问题）",
+              "timestamp": 1771493831.763517,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "11a19125-ab41-4e2a-86eb-4a884cf4a617",
+              "content": "既往诊断/病史：面部激素慢性皮炎（2008年7-8月发病），表现为面部多处干皮、瘙痒、抓挠后红肿",
+              "timestamp": 1771493747.8451042,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "56b7644c-3704-460d-bbe1-c53d38fd218a",
+              "content": "既往就诊史：2010年1月曾在当前医生处就诊",
+              "timestamp": 1771493747.8451145,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "72b2fe58-c08c-452e-b6d2-66a8fc8c0ef4",
+              "content": "既往诊断/病史：输卵管堵塞史，后行造影检查提示已畅通",
+              "timestamp": 1771493758.2933846,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "856b197f-1642-426f-b580-325e935af690",
+              "content": "输卵管造影后备孕建议：造影当月不宜备孕；更安全为3个月后再备孕（可根据个人情况权衡）。",
+              "timestamp": 1771493770.0215387,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "62989329-90cf-4bc8-b14e-3fd83ee15f49",
+              "content": "既往病史：2005年行乳腺癌根治手术。",
+              "timestamp": 1771493785.7625933,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "93d8aef1-88cb-422d-94d1-95f806f44ace",
+              "content": "用药史：乳腺癌术后长期口服三苯氧胺/他莫昔芬，已用药约4年5个月（原计划5年）。",
+              "timestamp": 1771493785.7626038,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "99c03b43-8092-4ae8-9994-161e97c8d453",
+              "content": "近1年复查肝功能异常：ALT约200+ U/L，医生提示肝损伤。",
+              "timestamp": 1771493785.7626078,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "65d5d9c7-4938-462e-90c2-9af11ed31bd2",
+              "content": "就诊关注点：在肝损伤情况下，咨询他莫昔芬原计划服用5年是否可提前停药。",
+              "timestamp": 1771493785.7626114,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "bffea5e6-8ecb-46d4-ab47-13950bec533f",
+              "content": "医嘱：可将他莫昔芬改用法乐通并进行保肝治疗；若肝功能仍不改善可暂时停药一段时间；建议尽量完成内分泌治疗满5年。",
+              "timestamp": 1771493796.4411235,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "9270d558-b51d-4f88-91b2-eb639bf14105",
+              "content": "医嘱：病理情况不详时，必要可改为“诺雷德+瑞宁德”（双德）方案，提示对肝功能影响可能更小。",
+              "timestamp": 1771493796.4411325,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b316c034-3504-470c-8c06-9c0d38d9dd35",
+              "content": "既往诊断/病史：左股骨头缺血性坏死（2009年10月起），症状包括左膝痛、胯骨痛、左腿屈伸不利、走路跛行；曾就诊北京积水潭医院、北京中医医院",
+              "timestamp": 1771493808.431953,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "c03613be-0e98-42eb-b78e-34220fa9ba62",
+              "content": "医生说明：皮肤活检一般约1周出结果",
+              "timestamp": 1771493808.4319704,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2ec3c2c4-c9b3-49c7-853b-e252bbabe2b5",
+              "content": "股骨头坏死相关治疗讨论：若不做关节置换，多为药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771493825.4132974,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "医生在讨论更换或继续某种长期口服用药并提出用药年限时，这与患者既往的肿瘤术后长期用药史是否存在需要核对的冲突或安全点？请指出需要重点核对的既往用药名称及其已使用时长。",
+          "answer": "既往用药为三苯氧胺/他莫昔芬，已口服约4年5个月（原计划5年）。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "93d8aef1-88cb-422d-94d1-95f806f44ace"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "dd4043ee-604d-4d76-ab53-534ef704e299"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你好，你妈妈的病情讲述不明确。在哪种情况下可以缓解或加重？如何治疗过？效果如何？",
+        "to_memory": [
+          "history: 皮肤活检检查一般约1周出结果",
+          "history: 2005年行乳腺癌根治术；术后长期服用三苯氧胺（已约4年5个月）；近1年复查肝功能异常（ALT/谷丙转氨酶约200+），被提示肝损伤；医生建议可换用法乐通并保肝，必要时可短暂停药，尽量完成5年疗程；另提及可考虑诺雷德+瑞宁德方案以减轻对肝功能影响",
+          "history: 2009-10诊断左股骨头缺血性坏死；症状包括膝盖痛、胯骨痛、左腿屈伸不利、走路跛；就诊过积水潭医院、北京中医医院；医生建议不置换则以药物镇痛为主，若软骨破碎可行关节清理手术但功能受影响",
+          "history: 既往提及肩周炎、颈椎炎",
+          "identity: 医生询问（关于“妈妈”的病情）何种情况缓解或加重、既往治疗及疗效，当前病情描述不明确"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "dd4043ee-604d-4d76-ab53-534ef704e299",
+              "content": "患者提及肩周炎、颈椎炎（疑为本次主诉/现病问题）",
+              "timestamp": 1771493831.763517,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "1f9c6243-a539-4acc-ac2a-fdc402488548",
+              "content": "医生询问（关于“妈妈”的病情）：何种情况缓解或加重、既往治疗及疗效；当前病情描述不明确，需补充现病史细节。",
+              "timestamp": 1771493846.9475725,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "11a19125-ab41-4e2a-86eb-4a884cf4a617",
+              "content": "既往诊断/病史：面部激素慢性皮炎（2008年7-8月发病），表现为面部多处干皮、瘙痒、抓挠后红肿",
+              "timestamp": 1771493747.8451042,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "56b7644c-3704-460d-bbe1-c53d38fd218a",
+              "content": "既往就诊史：2010年1月曾在当前医生处就诊",
+              "timestamp": 1771493747.8451145,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "72b2fe58-c08c-452e-b6d2-66a8fc8c0ef4",
+              "content": "既往诊断/病史：输卵管堵塞史，后行造影检查提示已畅通",
+              "timestamp": 1771493758.2933846,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "856b197f-1642-426f-b580-325e935af690",
+              "content": "输卵管造影后备孕建议：造影当月不宜备孕；更安全为3个月后再备孕（可根据个人情况权衡）。",
+              "timestamp": 1771493770.0215387,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "62989329-90cf-4bc8-b14e-3fd83ee15f49",
+              "content": "既往病史：2005年行乳腺癌根治手术。",
+              "timestamp": 1771493785.7625933,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "93d8aef1-88cb-422d-94d1-95f806f44ace",
+              "content": "用药史：乳腺癌术后长期口服三苯氧胺/他莫昔芬，已用药约4年5个月（原计划5年）。",
+              "timestamp": 1771493785.7626038,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "99c03b43-8092-4ae8-9994-161e97c8d453",
+              "content": "近1年复查肝功能异常：ALT约200+ U/L，医生提示肝损伤。",
+              "timestamp": 1771493785.7626078,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "65d5d9c7-4938-462e-90c2-9af11ed31bd2",
+              "content": "就诊关注点：在肝损伤情况下，咨询他莫昔芬原计划服用5年是否可提前停药。",
+              "timestamp": 1771493785.7626114,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "bffea5e6-8ecb-46d4-ab47-13950bec533f",
+              "content": "医嘱：可将他莫昔芬改用法乐通并进行保肝治疗；若肝功能仍不改善可暂时停药一段时间；建议尽量完成内分泌治疗满5年。",
+              "timestamp": 1771493796.4411235,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "9270d558-b51d-4f88-91b2-eb639bf14105",
+              "content": "医嘱：病理情况不详时，必要可改为“诺雷德+瑞宁德”（双德）方案，提示对肝功能影响可能更小。",
+              "timestamp": 1771493796.4411325,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b316c034-3504-470c-8c06-9c0d38d9dd35",
+              "content": "既往诊断/病史：左股骨头缺血性坏死（2009年10月起），症状包括左膝痛、胯骨痛、左腿屈伸不利、走路跛行；曾就诊北京积水潭医院、北京中医医院",
+              "timestamp": 1771493808.431953,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "c03613be-0e98-42eb-b78e-34220fa9ba62",
+              "content": "医生说明：皮肤活检一般约1周出结果",
+              "timestamp": 1771493808.4319704,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2ec3c2c4-c9b3-49c7-853b-e252bbabe2b5",
+              "content": "股骨头坏死相关治疗讨论：若不做关节置换，多为药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771493825.4132974,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "11a19125-ab41-4e2a-86eb-4a884cf4a617",
+              "content": "既往诊断/病史：面部激素慢性皮炎（2008年7-8月发病），表现为面部多处干皮、瘙痒、抓挠后红肿",
+              "timestamp": 1771493747.8451042,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "56b7644c-3704-460d-bbe1-c53d38fd218a",
+              "content": "既往就诊史：2010年1月曾在当前医生处就诊",
+              "timestamp": 1771493747.8451145,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "72b2fe58-c08c-452e-b6d2-66a8fc8c0ef4",
+              "content": "既往诊断/病史：输卵管堵塞史，后行造影检查提示已畅通",
+              "timestamp": 1771493758.2933846,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "856b197f-1642-426f-b580-325e935af690",
+              "content": "输卵管造影后备孕建议：造影当月不宜备孕；更安全为3个月后再备孕（可根据个人情况权衡）。",
+              "timestamp": 1771493770.0215387,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "62989329-90cf-4bc8-b14e-3fd83ee15f49",
+              "content": "既往病史：2005年行乳腺癌根治手术。",
+              "timestamp": 1771493785.7625933,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "93d8aef1-88cb-422d-94d1-95f806f44ace",
+              "content": "用药史：乳腺癌术后长期口服三苯氧胺/他莫昔芬，已用药约4年5个月（原计划5年）。",
+              "timestamp": 1771493785.7626038,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "99c03b43-8092-4ae8-9994-161e97c8d453",
+              "content": "近1年复查肝功能异常：ALT约200+ U/L，医生提示肝损伤。",
+              "timestamp": 1771493785.7626078,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "65d5d9c7-4938-462e-90c2-9af11ed31bd2",
+              "content": "就诊关注点：在肝损伤情况下，咨询他莫昔芬原计划服用5年是否可提前停药。",
+              "timestamp": 1771493785.7626114,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "bffea5e6-8ecb-46d4-ab47-13950bec533f",
+              "content": "医嘱：可将他莫昔芬改用法乐通并进行保肝治疗；若肝功能仍不改善可暂时停药一段时间；建议尽量完成内分泌治疗满5年。",
+              "timestamp": 1771493796.4411235,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "9270d558-b51d-4f88-91b2-eb639bf14105",
+              "content": "医嘱：病理情况不详时，必要可改为“诺雷德+瑞宁德”（双德）方案，提示对肝功能影响可能更小。",
+              "timestamp": 1771493796.4411325,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b316c034-3504-470c-8c06-9c0d38d9dd35",
+              "content": "既往诊断/病史：左股骨头缺血性坏死（2009年10月起），症状包括左膝痛、胯骨痛、左腿屈伸不利、走路跛行；曾就诊北京积水潭医院、北京中医医院",
+              "timestamp": 1771493808.431953,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "c03613be-0e98-42eb-b78e-34220fa9ba62",
+              "content": "医生说明：皮肤活检一般约1周出结果",
+              "timestamp": 1771493808.4319704,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2ec3c2c4-c9b3-49c7-853b-e252bbabe2b5",
+              "content": "股骨头坏死相关治疗讨论：若不做关节置换，多为药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771493825.4132974,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "甲减（桥本氏），PPD强阳性，甲减半年用药优甲乐半片，甲功4指标正常，需坚持半片优甲乐，本月查PPD实验强阳性，省胸科医院给与异烟肼、利福平、悦康，看利福平说明可抵消优甲乐作用，请问如何安排上述4种药物效果好？",
+        "to_memory": [
+          "identity: 患者有慢性病/基础疾病：甲状腺功能减退（桥本氏甲状腺炎）",
+          "history: 甲减已用药约半年，长期服用优甲乐半片；甲功4项指标目前正常",
+          "history: 本月PPD试验强阳性；省胸科医院给予抗结核/预防用药：异烟肼、利福平、悦康（具体成分未明）",
+          "history: 患者担心利福平可能降低/抵消优甲乐疗效，咨询上述4种药物如何安排服用以保证效果"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "732488a5-d56d-427b-8eae-6b5aad26e95b",
+              "content": "基础疾病：甲状腺功能减退（桥本氏甲状腺炎）",
+              "timestamp": 1771493855.7117033,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "history": [
+            {
+              "id": "11a19125-ab41-4e2a-86eb-4a884cf4a617",
+              "content": "既往诊断/病史：面部激素慢性皮炎（2008年7-8月发病），表现为面部多处干皮、瘙痒、抓挠后红肿",
+              "timestamp": 1771493747.8451042,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "56b7644c-3704-460d-bbe1-c53d38fd218a",
+              "content": "既往就诊史：2010年1月曾在当前医生处就诊",
+              "timestamp": 1771493747.8451145,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "72b2fe58-c08c-452e-b6d2-66a8fc8c0ef4",
+              "content": "既往诊断/病史：输卵管堵塞史，后行造影检查提示已畅通",
+              "timestamp": 1771493758.2933846,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "856b197f-1642-426f-b580-325e935af690",
+              "content": "输卵管造影后备孕建议：造影当月不宜备孕；更安全为3个月后再备孕（可根据个人情况权衡）。",
+              "timestamp": 1771493770.0215387,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "62989329-90cf-4bc8-b14e-3fd83ee15f49",
+              "content": "既往病史：2005年行乳腺癌根治手术。",
+              "timestamp": 1771493785.7625933,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "93d8aef1-88cb-422d-94d1-95f806f44ace",
+              "content": "用药史：乳腺癌术后长期口服三苯氧胺/他莫昔芬，已用药约4年5个月（原计划5年）。",
+              "timestamp": 1771493785.7626038,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "99c03b43-8092-4ae8-9994-161e97c8d453",
+              "content": "近1年复查肝功能异常：ALT约200+ U/L，医生提示肝损伤。",
+              "timestamp": 1771493785.7626078,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "65d5d9c7-4938-462e-90c2-9af11ed31bd2",
+              "content": "就诊关注点：在肝损伤情况下，咨询他莫昔芬原计划服用5年是否可提前停药。",
+              "timestamp": 1771493785.7626114,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "bffea5e6-8ecb-46d4-ab47-13950bec533f",
+              "content": "医嘱：可将他莫昔芬改用法乐通并进行保肝治疗；若肝功能仍不改善可暂时停药一段时间；建议尽量完成内分泌治疗满5年。",
+              "timestamp": 1771493796.4411235,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "9270d558-b51d-4f88-91b2-eb639bf14105",
+              "content": "医嘱：病理情况不详时，必要可改为“诺雷德+瑞宁德”（双德）方案，提示对肝功能影响可能更小。",
+              "timestamp": 1771493796.4411325,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b316c034-3504-470c-8c06-9c0d38d9dd35",
+              "content": "既往诊断/病史：左股骨头缺血性坏死（2009年10月起），症状包括左膝痛、胯骨痛、左腿屈伸不利、走路跛行；曾就诊北京积水潭医院、北京中医医院",
+              "timestamp": 1771493808.431953,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "c03613be-0e98-42eb-b78e-34220fa9ba62",
+              "content": "医生说明：皮肤活检一般约1周出结果",
+              "timestamp": 1771493808.4319704,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2ec3c2c4-c9b3-49c7-853b-e252bbabe2b5",
+              "content": "股骨头坏死相关治疗讨论：若不做关节置换，多为药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771493825.4132974,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f254cf29-8911-4d57-9191-ebe6872854f1",
+              "content": "甲减治疗史：已用药约半年，长期服用优甲乐半片；目前甲功4项指标正常",
+              "timestamp": 1771493855.7117133,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "e52f8adc-94f2-4aa2-ad37-417f3ab89021",
+              "content": "本月PPD试验强阳性；省胸科医院给予抗结核/预防用药：异烟肼、利福平、悦康（具体成分未明）",
+              "timestamp": 1771493855.711718,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "8b0ca6d7-aa69-44b2-a95e-59ad531167a9",
+              "content": "用药咨询：担心利福平可能降低/抵消优甲乐疗效，询问上述药物如何安排服用以保证效果",
+              "timestamp": 1771493855.711722,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者既往检查中是否提示过需要在使用当前这些药物前后重点监测的器官功能异常？若有，具体是哪一项异常及大致到什么程度？",
+          "answer": "近1年复查肝功能异常，ALT约200+ U/L，医生提示肝损伤。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "99c03b43-8092-4ae8-9994-161e97c8d453"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "732488a5-d56d-427b-8eae-6b5aad26e95b"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            9,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "您好！没影响，优甲乐每天空腹服。其它是饭后服药。或周一。六看我核医学专家门诊！",
+        "to_memory": [
+          "history: 诊断甲状腺功能减退（桥本氏甲状腺炎），已用优甲乐半片/日约半年，甲功4项正常，需继续维持半片优甲乐",
+          "history: PPD试验强阳性；省胸科医院已开具异烟肼、利福平、悦康（抗结核相关用药）",
+          "history: 医嘱用药安排：优甲乐每日空腹服用；其余药物饭后服用；利福平不影响优甲乐",
+          "working: 患者咨询利福平说明书提示可能抵消优甲乐作用，如何安排上述药物以保证疗效"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "732488a5-d56d-427b-8eae-6b5aad26e95b",
+              "content": "基础疾病：甲状腺功能减退（桥本氏甲状腺炎）",
+              "timestamp": 1771493855.7117033,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "history": [
+            {
+              "id": "11a19125-ab41-4e2a-86eb-4a884cf4a617",
+              "content": "既往诊断/病史：面部激素慢性皮炎（2008年7-8月发病），表现为面部多处干皮、瘙痒、抓挠后红肿",
+              "timestamp": 1771493747.8451042,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "56b7644c-3704-460d-bbe1-c53d38fd218a",
+              "content": "既往就诊史：2010年1月曾在当前医生处就诊",
+              "timestamp": 1771493747.8451145,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "72b2fe58-c08c-452e-b6d2-66a8fc8c0ef4",
+              "content": "既往诊断/病史：输卵管堵塞史，后行造影检查提示已畅通",
+              "timestamp": 1771493758.2933846,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "856b197f-1642-426f-b580-325e935af690",
+              "content": "输卵管造影后备孕建议：造影当月不宜备孕；更安全为3个月后再备孕（可根据个人情况权衡）。",
+              "timestamp": 1771493770.0215387,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "62989329-90cf-4bc8-b14e-3fd83ee15f49",
+              "content": "既往病史：2005年行乳腺癌根治手术。",
+              "timestamp": 1771493785.7625933,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "93d8aef1-88cb-422d-94d1-95f806f44ace",
+              "content": "用药史：乳腺癌术后长期口服三苯氧胺/他莫昔芬，已用药约4年5个月（原计划5年）。",
+              "timestamp": 1771493785.7626038,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "99c03b43-8092-4ae8-9994-161e97c8d453",
+              "content": "近1年复查肝功能异常：ALT约200+ U/L，医生提示肝损伤。",
+              "timestamp": 1771493785.7626078,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "65d5d9c7-4938-462e-90c2-9af11ed31bd2",
+              "content": "就诊关注点：在肝损伤情况下，咨询他莫昔芬原计划服用5年是否可提前停药。",
+              "timestamp": 1771493785.7626114,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "bffea5e6-8ecb-46d4-ab47-13950bec533f",
+              "content": "医嘱：可将他莫昔芬改用法乐通并进行保肝治疗；若肝功能仍不改善可暂时停药一段时间；建议尽量完成内分泌治疗满5年。",
+              "timestamp": 1771493796.4411235,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "9270d558-b51d-4f88-91b2-eb639bf14105",
+              "content": "医嘱：病理情况不详时，必要可改为“诺雷德+瑞宁德”（双德）方案，提示对肝功能影响可能更小。",
+              "timestamp": 1771493796.4411325,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b316c034-3504-470c-8c06-9c0d38d9dd35",
+              "content": "既往诊断/病史：左股骨头缺血性坏死（2009年10月起），症状包括左膝痛、胯骨痛、左腿屈伸不利、走路跛行；曾就诊北京积水潭医院、北京中医医院",
+              "timestamp": 1771493808.431953,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "c03613be-0e98-42eb-b78e-34220fa9ba62",
+              "content": "医生说明：皮肤活检一般约1周出结果",
+              "timestamp": 1771493808.4319704,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2ec3c2c4-c9b3-49c7-853b-e252bbabe2b5",
+              "content": "股骨头坏死相关治疗讨论：若不做关节置换，多为药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771493825.4132974,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f254cf29-8911-4d57-9191-ebe6872854f1",
+              "content": "甲减治疗史：已用药约半年，长期服用优甲乐半片；目前甲功4项指标正常",
+              "timestamp": 1771493855.7117133,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "e52f8adc-94f2-4aa2-ad37-417f3ab89021",
+              "content": "本月PPD试验强阳性；省胸科医院给予抗结核/预防用药：异烟肼、利福平、悦康（具体成分未明）",
+              "timestamp": 1771493855.711718,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "8b0ca6d7-aa69-44b2-a95e-59ad531167a9",
+              "content": "用药咨询：担心利福平可能降低/抵消优甲乐疗效，询问上述药物如何安排服用以保证效果",
+              "timestamp": 1771493855.711722,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "在最早一次关于髋部问题的咨询里，医生分别提出了两种可能的处理方向：一种是在不进行某项大手术的前提下，另一种是在出现特定关节内部情况时。请对比这两种情境下医生各自建议的处理方式是什么，并说明医生对第二种方式可能带来的结局有什么提醒？",
+          "answer": "不做关节置换则主要靠药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但可能影响功能。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "72b2fe58-c08c-452e-b6d2-66a8fc8c0ef4",
+                "2ec3c2c4-c9b3-49c7-853b-e252bbabe2b5"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            14,
+            6
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "732488a5-d56d-427b-8eae-6b5aad26e95b",
+              "content": "基础疾病：甲状腺功能减退（桥本氏甲状腺炎）",
+              "timestamp": 1771493855.7117033,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "history": [
+            {
+              "id": "11a19125-ab41-4e2a-86eb-4a884cf4a617",
+              "content": "既往诊断/病史：面部激素慢性皮炎（2008年7-8月发病），表现为面部多处干皮、瘙痒、抓挠后红肿",
+              "timestamp": 1771493747.8451042,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "56b7644c-3704-460d-bbe1-c53d38fd218a",
+              "content": "既往就诊史：2010年1月曾在当前医生处就诊",
+              "timestamp": 1771493747.8451145,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "72b2fe58-c08c-452e-b6d2-66a8fc8c0ef4",
+              "content": "既往诊断/病史：输卵管堵塞史，后行造影检查提示已畅通",
+              "timestamp": 1771493758.2933846,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "856b197f-1642-426f-b580-325e935af690",
+              "content": "输卵管造影后备孕建议：造影当月不宜备孕；更安全为3个月后再备孕（可根据个人情况权衡）。",
+              "timestamp": 1771493770.0215387,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "62989329-90cf-4bc8-b14e-3fd83ee15f49",
+              "content": "既往病史：2005年行乳腺癌根治手术。",
+              "timestamp": 1771493785.7625933,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "93d8aef1-88cb-422d-94d1-95f806f44ace",
+              "content": "用药史：乳腺癌术后长期口服三苯氧胺/他莫昔芬，已用药约4年5个月（原计划5年）。",
+              "timestamp": 1771493785.7626038,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "99c03b43-8092-4ae8-9994-161e97c8d453",
+              "content": "近1年复查肝功能异常：ALT约200+ U/L，医生提示肝损伤。",
+              "timestamp": 1771493785.7626078,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "65d5d9c7-4938-462e-90c2-9af11ed31bd2",
+              "content": "就诊关注点：在肝损伤情况下，咨询他莫昔芬原计划服用5年是否可提前停药。",
+              "timestamp": 1771493785.7626114,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "bffea5e6-8ecb-46d4-ab47-13950bec533f",
+              "content": "医嘱：可将他莫昔芬改用法乐通并进行保肝治疗；若肝功能仍不改善可暂时停药一段时间；建议尽量完成内分泌治疗满5年。",
+              "timestamp": 1771493796.4411235,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "9270d558-b51d-4f88-91b2-eb639bf14105",
+              "content": "医嘱：病理情况不详时，必要可改为“诺雷德+瑞宁德”（双德）方案，提示对肝功能影响可能更小。",
+              "timestamp": 1771493796.4411325,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b316c034-3504-470c-8c06-9c0d38d9dd35",
+              "content": "既往诊断/病史：左股骨头缺血性坏死（2009年10月起），症状包括左膝痛、胯骨痛、左腿屈伸不利、走路跛行；曾就诊北京积水潭医院、北京中医医院",
+              "timestamp": 1771493808.431953,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "c03613be-0e98-42eb-b78e-34220fa9ba62",
+              "content": "医生说明：皮肤活检一般约1周出结果",
+              "timestamp": 1771493808.4319704,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2ec3c2c4-c9b3-49c7-853b-e252bbabe2b5",
+              "content": "股骨头坏死相关治疗讨论：若不做关节置换，多为药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771493825.4132974,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f254cf29-8911-4d57-9191-ebe6872854f1",
+              "content": "甲减治疗史：已用药约半年，长期服用优甲乐半片；目前甲功4项指标正常",
+              "timestamp": 1771493855.7117133,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "e52f8adc-94f2-4aa2-ad37-417f3ab89021",
+              "content": "本月PPD试验强阳性；省胸科医院给予抗结核/预防用药：异烟肼、利福平、悦康（具体成分未明）",
+              "timestamp": 1771493855.711718,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "8b0ca6d7-aa69-44b2-a95e-59ad531167a9",
+              "content": "用药咨询：担心利福平可能降低/抵消优甲乐疗效，询问上述药物如何安排服用以保证效果",
+              "timestamp": 1771493855.711722,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "包茎长，包茎长。",
+        "to_memory": [
+          "working: 主诉包茎（描述为“包茎长”），需进一步明确是否为包皮过长/包茎及伴随症状"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "c7f4406f-4da4-4949-8fc6-748652248b70",
+              "content": "主诉“包茎长”：需进一步明确是包皮过长或包茎，并询问/记录伴随症状（如排尿困难、反复炎症、疼痛、龟头外露困难等）",
+              "timestamp": 1771493871.1291254,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "identity": [
+            {
+              "id": "732488a5-d56d-427b-8eae-6b5aad26e95b",
+              "content": "基础疾病：甲状腺功能减退（桥本氏甲状腺炎）",
+              "timestamp": 1771493855.7117033,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "history": [
+            {
+              "id": "11a19125-ab41-4e2a-86eb-4a884cf4a617",
+              "content": "既往诊断/病史：面部激素慢性皮炎（2008年7-8月发病），表现为面部多处干皮、瘙痒、抓挠后红肿",
+              "timestamp": 1771493747.8451042,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "56b7644c-3704-460d-bbe1-c53d38fd218a",
+              "content": "既往就诊史：2010年1月曾在当前医生处就诊",
+              "timestamp": 1771493747.8451145,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "72b2fe58-c08c-452e-b6d2-66a8fc8c0ef4",
+              "content": "既往诊断/病史：输卵管堵塞史，后行造影检查提示已畅通",
+              "timestamp": 1771493758.2933846,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "856b197f-1642-426f-b580-325e935af690",
+              "content": "输卵管造影后备孕建议：造影当月不宜备孕；更安全为3个月后再备孕（可根据个人情况权衡）。",
+              "timestamp": 1771493770.0215387,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "62989329-90cf-4bc8-b14e-3fd83ee15f49",
+              "content": "既往病史：2005年行乳腺癌根治手术。",
+              "timestamp": 1771493785.7625933,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "93d8aef1-88cb-422d-94d1-95f806f44ace",
+              "content": "用药史：乳腺癌术后长期口服三苯氧胺/他莫昔芬，已用药约4年5个月（原计划5年）。",
+              "timestamp": 1771493785.7626038,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "99c03b43-8092-4ae8-9994-161e97c8d453",
+              "content": "近1年复查肝功能异常：ALT约200+ U/L，医生提示肝损伤。",
+              "timestamp": 1771493785.7626078,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "65d5d9c7-4938-462e-90c2-9af11ed31bd2",
+              "content": "就诊关注点：在肝损伤情况下，咨询他莫昔芬原计划服用5年是否可提前停药。",
+              "timestamp": 1771493785.7626114,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "bffea5e6-8ecb-46d4-ab47-13950bec533f",
+              "content": "医嘱：可将他莫昔芬改用法乐通并进行保肝治疗；若肝功能仍不改善可暂时停药一段时间；建议尽量完成内分泌治疗满5年。",
+              "timestamp": 1771493796.4411235,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "9270d558-b51d-4f88-91b2-eb639bf14105",
+              "content": "医嘱：病理情况不详时，必要可改为“诺雷德+瑞宁德”（双德）方案，提示对肝功能影响可能更小。",
+              "timestamp": 1771493796.4411325,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b316c034-3504-470c-8c06-9c0d38d9dd35",
+              "content": "既往诊断/病史：左股骨头缺血性坏死（2009年10月起），症状包括左膝痛、胯骨痛、左腿屈伸不利、走路跛行；曾就诊北京积水潭医院、北京中医医院",
+              "timestamp": 1771493808.431953,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "c03613be-0e98-42eb-b78e-34220fa9ba62",
+              "content": "医生说明：皮肤活检一般约1周出结果",
+              "timestamp": 1771493808.4319704,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2ec3c2c4-c9b3-49c7-853b-e252bbabe2b5",
+              "content": "股骨头坏死相关治疗讨论：若不做关节置换，多为药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771493825.4132974,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f254cf29-8911-4d57-9191-ebe6872854f1",
+              "content": "甲减治疗史：已用药约半年，长期服用优甲乐半片；目前甲功4项指标正常",
+              "timestamp": 1771493855.7117133,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "e52f8adc-94f2-4aa2-ad37-417f3ab89021",
+              "content": "本月PPD试验强阳性；省胸科医院给予抗结核/预防用药：异烟肼、利福平、悦康（具体成分未明）",
+              "timestamp": 1771493855.711718,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "8b0ca6d7-aa69-44b2-a95e-59ad531167a9",
+              "content": "用药咨询：担心利福平可能降低/抵消优甲乐疗效，询问上述药物如何安排服用以保证效果",
+              "timestamp": 1771493855.711722,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "包皮过长和包茎是两个病，治疗方法也不完全相同，包皮过长可以不做手术，手术也可以做阴茎根部皮肤切除术，包茎是需要做手术矫治的。",
+        "to_memory": [
+          "history: 既往诊断：左股骨头缺血性坏死（2009.10），伴膝盖痛、髋部痛、左腿屈伸不利、走路受限；曾就诊于积水潭医院、北京中医医院",
+          "history: 既往问题/诊断：肩周炎、颈椎炎",
+          "history: 既往诊断：甲减（桥本氏）；甲减用药：优甲乐半片/日已用半年；甲功4项正常；医生建议继续半片优甲乐",
+          "history: 检查结果：PPD实验强阳性；省胸科医院给予异烟肼、利福平、悦康等治疗；医生建议优甲乐每日空腹服，其它药物饭后服",
+          "working: 本次就诊主诉/问题：包皮过长/包茎",
+          "history: 医生建议：包皮过长可不手术或可行阴茎根部皮肤切除术；包茎需手术矫治"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "c7f4406f-4da4-4949-8fc6-748652248b70",
+              "content": "本次就诊主诉：包皮过长/包茎；需进一步明确具体为包皮过长或包茎，并询问/记录伴随症状（如排尿困难、反复炎症、疼痛、龟头外露困难等）；医生建议：包皮过长可不手术或可行阴茎根部皮肤切除术；包茎需手术矫治。",
+              "timestamp": 1771493871.1291254,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "identity": [
+            {
+              "id": "732488a5-d56d-427b-8eae-6b5aad26e95b",
+              "content": "基础疾病：甲状腺功能减退（桥本氏甲状腺炎）",
+              "timestamp": 1771493855.7117033,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "history": [
+            {
+              "id": "11a19125-ab41-4e2a-86eb-4a884cf4a617",
+              "content": "既往诊断/病史：面部激素慢性皮炎（2008年7-8月发病），表现为面部多处干皮、瘙痒、抓挠后红肿",
+              "timestamp": 1771493747.8451042,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "56b7644c-3704-460d-bbe1-c53d38fd218a",
+              "content": "既往就诊史：2010年1月曾在当前医生处就诊",
+              "timestamp": 1771493747.8451145,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "72b2fe58-c08c-452e-b6d2-66a8fc8c0ef4",
+              "content": "既往诊断/病史：输卵管堵塞史，后行造影检查提示已畅通",
+              "timestamp": 1771493758.2933846,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "856b197f-1642-426f-b580-325e935af690",
+              "content": "输卵管造影后备孕建议：造影当月不宜备孕；更安全为3个月后再备孕（可根据个人情况权衡）。",
+              "timestamp": 1771493770.0215387,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "62989329-90cf-4bc8-b14e-3fd83ee15f49",
+              "content": "既往病史：2005年行乳腺癌根治手术。",
+              "timestamp": 1771493785.7625933,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "93d8aef1-88cb-422d-94d1-95f806f44ace",
+              "content": "用药史：乳腺癌术后长期口服三苯氧胺/他莫昔芬，已用药约4年5个月（原计划5年）。",
+              "timestamp": 1771493785.7626038,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "99c03b43-8092-4ae8-9994-161e97c8d453",
+              "content": "近1年复查肝功能异常：ALT约200+ U/L，医生提示肝损伤。",
+              "timestamp": 1771493785.7626078,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "65d5d9c7-4938-462e-90c2-9af11ed31bd2",
+              "content": "就诊关注点：在肝损伤情况下，咨询他莫昔芬原计划服用5年是否可提前停药。",
+              "timestamp": 1771493785.7626114,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "bffea5e6-8ecb-46d4-ab47-13950bec533f",
+              "content": "医嘱：可将他莫昔芬改用法乐通并进行保肝治疗；若肝功能仍不改善可暂时停药一段时间；建议尽量完成内分泌治疗满5年。",
+              "timestamp": 1771493796.4411235,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "9270d558-b51d-4f88-91b2-eb639bf14105",
+              "content": "医嘱：病理情况不详时，必要可改为“诺雷德+瑞宁德”（双德）方案，提示对肝功能影响可能更小。",
+              "timestamp": 1771493796.4411325,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b316c034-3504-470c-8c06-9c0d38d9dd35",
+              "content": "既往诊断/病史：左股骨头缺血性坏死（2009年10月起），症状包括左膝痛、胯骨痛、左腿屈伸不利、走路跛行；曾就诊北京积水潭医院、北京中医医院",
+              "timestamp": 1771493808.431953,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "c03613be-0e98-42eb-b78e-34220fa9ba62",
+              "content": "医生说明：皮肤活检一般约1周出结果",
+              "timestamp": 1771493808.4319704,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2ec3c2c4-c9b3-49c7-853b-e252bbabe2b5",
+              "content": "股骨头坏死相关治疗讨论：若不做关节置换，多为药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771493825.4132974,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f254cf29-8911-4d57-9191-ebe6872854f1",
+              "content": "甲减治疗史：已用药约半年，长期服用优甲乐半片；目前甲功4项指标正常",
+              "timestamp": 1771493855.7117133,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "e52f8adc-94f2-4aa2-ad37-417f3ab89021",
+              "content": "本月PPD试验强阳性；省胸科医院给予抗结核/预防用药：异烟肼、利福平、悦康（具体成分未明）",
+              "timestamp": 1771493855.711718,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "8b0ca6d7-aa69-44b2-a95e-59ad531167a9",
+              "content": "用药咨询：担心利福平可能降低/抵消优甲乐疗效，询问上述药物如何安排服用以保证效果",
+              "timestamp": 1771493855.711722,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "897ce246-f003-448b-a6f9-645f4fc93c8e",
+              "content": "既往问题/诊断：肩周炎、颈椎炎。",
+              "timestamp": 1771493880.0673864,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "3a6e4293-edeb-4cfc-8f1a-d9141dddf5bb",
+              "content": "用药/医嘱：优甲乐建议每日空腹服用；其它药物饭后服用（与抗结核/预防用药同服时的服药时间安排建议）。",
+              "timestamp": 1771493880.0673962,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者既往曾被明确诊断过一种需要重点关注的骨关节疾病；请问该既往诊断与起病时间是什么？这对当前就诊时的风险评估是否需要特别留意？",
+          "answer": "左股骨头缺血性坏死，起于2009年10月；需要在风险评估中留意。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b316c034-3504-470c-8c06-9c0d38d9dd35"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "c7f4406f-4da4-4949-8fc6-748652248b70"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            10,
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "rare_disease_ddx",
+    "scenario_name": "罕见病鉴别诊断",
+    "session_count": 7,
+    "group_key": "综合科"
+  }
+}

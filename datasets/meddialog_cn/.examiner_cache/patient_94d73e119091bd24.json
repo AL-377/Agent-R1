@@ -1,0 +1,5355 @@
+{
+  "patient_id": "ca0239ecaede",
+  "messages": [
+    {
+      "user": {
+        "content": "小儿房间隔损缺，患者女，2岁身体还好，去年农历4月22日在妇女儿童医院出生时就检查出有心脏病问题，几天前再去检查发现还没有自己复原，",
+        "to_memory": [
+          "identity: 患者女，2岁",
+          "history: 出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+          "history: 几天前复查提示房间隔缺损尚未自行闭合",
+          "working: 目前身体状况总体良好"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b49ba5b8-92bd-4502-a634-be87d177ba5e",
+              "content": "目前身体状况总体良好",
+              "timestamp": 1771465601.3537867,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，2岁",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "几天前复查提示房间隔缺损尚未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "家属描述孩子“目前状态还可以”，但最近一次复查对原先发现的问题给出了新的结论。请指出这两类信息之间需要重点核对的安全点是什么？",
+          "answer": "几天前复查提示房间隔缺损尚未自行闭合",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "b49ba5b8-92bd-4502-a634-be87d177ba5e"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "95a3d507-91d2-4007-a9a0-aa3f350e745a"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你好！请提供心脏超声资料，或带小孩来我门诊具体看一下。",
+        "to_memory": [
+          "history: 小儿先天性心脏病：房间隔缺损（出生时检查发现），目前2岁复查仍未自行闭合",
+          "working: 医生要求提供心脏超声资料或带孩子到门诊进一步评估"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b49ba5b8-92bd-4502-a634-be87d177ba5e",
+              "content": "目前身体状况总体良好",
+              "timestamp": 1771465601.3537867,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "016cf3c1-34a9-4d79-aafe-bf77daadc55f",
+              "content": "医生要求提供心脏超声资料或带孩子到门诊进一步评估",
+              "timestamp": 1771465607.75939,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，2岁",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "把患儿刚出生时首次发现问题的那次检查与这次复查相比，两次分别是在什么场景/机构下发现或确认相关情况的？请分别说明。",
+          "answer": "出生时在妇女儿童医院检查发现先天性心脏病/房间隔缺损；本次是几天前复查发现仍未自行复原。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "14974008-21cc-4815-984d-f90a2d449f17"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "016cf3c1-34a9-4d79-aafe-bf77daadc55f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，2岁",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "右侧卵巢囊肿，患者女，31岁，去年体检一切良好，今年闵行中心医院体检B超查出右侧卵巢囊肿67*52*63mm，月经结束5天后到国际妇婴保健院复查。B超结果如下：附件：左卵巢大小29*28*16mm；右卵巢大小28*24*19mm；右侧卵巢旁紧贴一无回声，81*71*63mm，边界尚清晰，内壁见一小突起，未见明显血流信号。超声提示：右卵巢旁液性占位。3。本人新婚，由于还没有生育，请问手术后多久才可以怀孕，都需要注意些什么？",
+        "to_memory": [
+          "identity: 患者女，31岁，新婚，未生育",
+          "history: 今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+          "history: 咨询卵巢旁囊性占位手术后多久可以怀孕及术后注意事项"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在这次关于妇科占位的咨询中，最关心的术后哪一项生育相关的安全问题需要医生重点确认并给出建议？",
+          "answer": "她在询问卵巢旁囊性占位手术后多久可以怀孕以及术后需要注意什么。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "7fa667fc-fe78-4448-8a4a-62b244221bf9"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "6972ab9a-1112-44e8-b300-f223d21dc6a6"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            3,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "术后三个月即可怀孕。",
+        "to_memory": [
+          "history: 医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "1。是否可以不手术治疗？",
+        "to_memory": [
+          "identity: 患者女，31岁，新婚，未生育",
+          "history: 体检及复查超声提示右侧卵巢旁液性占位/囊肿：闵行中心医院B超右侧卵巢囊肿约67×52×63mm；国际妇婴保健院复查：左卵巢29×28×16mm，右卵巢28×24×19mm，右侧卵巢旁无回声区81×71×63mm，边界清晰，内壁小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+          "history: 医生建议术后三个月可怀孕",
+          "history: 患者询问右侧卵巢旁囊性占位是否可以不手术治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "明天你可以来吗？我尽量安排你。",
+        "to_memory": [
+          "working: 医生询问患者明天是否方便来就诊，并表示会尽量安排"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5cfdcc82-71de-40b7-8500-f735337bfa2f",
+              "content": "医生询问患者明天是否方便来就诊，并表示会尽量安排。",
+              "timestamp": 1771465628.2073402,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "在患者询问能否不手术治疗后，医生对下一步就诊安排提出了什么建议？",
+          "answer": "医生问患者明天是否可以来，并表示会尽量安排。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "5cfdcc82-71de-40b7-8500-f735337bfa2f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "谢谢邱大夫的及时反馈， 明天我没法请假， 不知周五早上过去请您再就诊是否可以？不知道还要不要再B超一次呢？",
+        "to_memory": [
+          "working: 患者表示明天无法请假就诊，询问周五早上是否可到邱大夫门诊复诊",
+          "history: 患者询问是否需要再做一次B超复查"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5cfdcc82-71de-40b7-8500-f735337bfa2f",
+              "content": "患者表示明天无法请假就诊，询问周五早上是否可到邱大夫门诊复诊；医生此前询问明天是否方便来就诊，并表示会尽量安排。",
+              "timestamp": 1771465628.2073402,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "在关于卵巢旁占位的那次咨询里，医生给出的“手术完成后到可以开始备孕”的时间建议是多久？请结合患者后来提出无法按医生建议的次日就诊、改问周五复诊的情况来回答。",
+          "answer": "术后三个月即可怀孕。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "06d4922c-10d3-4274-a8b7-5c06975efd84"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "5cfdcc82-71de-40b7-8500-f735337bfa2f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            3,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "周五我外出开会，你周四来吧。",
+        "to_memory": [
+          "working: 医生告知周五外出开会，建议患者改为周四来就诊"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5cfdcc82-71de-40b7-8500-f735337bfa2f",
+              "content": "患者表示明天无法请假就诊，询问周五早上是否可到邱大夫门诊复诊；医生告知周五外出开会，建议患者改为周四来就诊。",
+              "timestamp": 1771465628.2073402,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者提出的复诊时间与医生当天的出诊安排是否存在冲突？若有，医生最终建议患者改到哪一天来就诊？",
+          "answer": "有冲突；医生建议患者周四来就诊。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "6972ab9a-1112-44e8-b300-f223d21dc6a6"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "5cfdcc82-71de-40b7-8500-f735337bfa2f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            5,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "邱医生，上周二请您看了化验报告，谢谢您的解释，同时您让我周五到入院处办理入院，不过入院处没有办理，说是让我继续等通知，有通知了才缴费。",
+        "to_memory": [
+          "history: 上周二医生已查看患者化验报告并作解释；医生曾建议患者周五到入院处办理入院",
+          "working: 患者按医嘱去入院处未能办理入院，入院处要求继续等待通知后再缴费/办理"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5cfdcc82-71de-40b7-8500-f735337bfa2f",
+              "content": "患者表示明天无法请假就诊，询问周五早上是否可到邱大夫门诊复诊；医生告知周五外出开会，建议患者改为周四来就诊。",
+              "timestamp": 1771465628.2073402,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "ce238051-8a46-4cb0-a63b-a7eb97950ac2",
+              "content": "患者按医嘱去入院处未能办理入院，入院处要求继续等待通知后再缴费/办理。",
+              "timestamp": 1771465646.984754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你周二来找我一次，我给你先挂进来。",
+        "to_memory": [
+          "working: 医生建议患者于周二来门诊找医生，医生可先为其安排/加号挂入院流程"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5cfdcc82-71de-40b7-8500-f735337bfa2f",
+              "content": "患者表示明天无法请假就诊，询问周五早上是否可到邱大夫门诊复诊；医生告知周五外出开会，建议患者改为周四来就诊。",
+              "timestamp": 1771465628.2073402,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "ce238051-8a46-4cb0-a63b-a7eb97950ac2",
+              "content": "患者按医嘱去入院处未能办理入院，入院处要求继续等待通知后再缴费/办理。",
+              "timestamp": 1771465646.984754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "016eaf17-2d3d-45c0-be7f-ddcec40a6929",
+              "content": "医生建议患者于周二来门诊找医生，医生可先为其安排/加号挂入院流程。",
+              "timestamp": 1771465651.0686924,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在按医生安排前往相关窗口办理后，现场工作人员对其后续流程（何时再去、是否需要先缴费等）给出了什么具体要求？这与医生先前的安排是否存在需要协调的冲突？",
+          "answer": "入院处未能办理入院，要求继续等待通知后再缴费/办理。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "14974008-21cc-4815-984d-f90a2d449f17"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "ce238051-8a46-4cb0-a63b-a7eb97950ac2"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            10,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "真情寄语：。谢谢邱医生的关照，在邱医生的高超技术下今天我已经出院了，目前在家里休养。非常感谢邱医生多次的回复，也深感于邱医生每天那么早就辛苦的工作，希望邱医生身体健康，也希望下周的病理报告一切都好。",
+        "to_memory": [
+          "history: 患者已完成右侧卵巢旁囊性占位相关手术治疗并于今日出院，在家休养中",
+          "history: 下周将出病理报告，患者希望结果良好"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5cfdcc82-71de-40b7-8500-f735337bfa2f",
+              "content": "患者表示明天无法请假就诊，询问周五早上是否可到邱大夫门诊复诊；医生告知周五外出开会，建议患者改为周四来就诊。",
+              "timestamp": 1771465628.2073402,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "ce238051-8a46-4cb0-a63b-a7eb97950ac2",
+              "content": "患者按医嘱去入院处未能办理入院，入院处要求继续等待通知后再缴费/办理。",
+              "timestamp": 1771465646.984754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "016eaf17-2d3d-45c0-be7f-ddcec40a6929",
+              "content": "医生建议患者于周二来门诊找医生，医生可先为其安排/加号挂入院流程。",
+              "timestamp": 1771465651.0686924,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "87abf7bc-c74d-4bea-ba9c-8bf71ddcb21d",
+              "content": "下周将出病理报告，患者希望结果良好。",
+              "timestamp": 1771465656.9303088,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "会这样的，喝点麻油就好了。是的，是内瘢痕。",
+        "to_memory": [
+          "history: 医生解释目前情况属于内瘢痕（内疤痕）",
+          "history: 医生建议喝点麻油即可缓解/处理"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5cfdcc82-71de-40b7-8500-f735337bfa2f",
+              "content": "患者表示明天无法请假就诊，询问周五早上是否可到邱大夫门诊复诊；医生告知周五外出开会，建议患者改为周四来就诊。",
+              "timestamp": 1771465628.2073402,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "ce238051-8a46-4cb0-a63b-a7eb97950ac2",
+              "content": "患者按医嘱去入院处未能办理入院，入院处要求继续等待通知后再缴费/办理。",
+              "timestamp": 1771465646.984754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "016eaf17-2d3d-45c0-be7f-ddcec40a6929",
+              "content": "医生建议患者于周二来门诊找医生，医生可先为其安排/加号挂入院流程。",
+              "timestamp": 1771465651.0686924,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "87abf7bc-c74d-4bea-ba9c-8bf71ddcb21d",
+              "content": "下周将出病理报告，患者希望结果良好。",
+              "timestamp": 1771465656.9303088,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1e3a6ddd-32ec-4581-b2a3-46860ec57fc2",
+              "content": "医生解释患者目前情况属于内瘢痕（内疤痕）。",
+              "timestamp": 1771465661.953054,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "53a38dd2-090b-4df7-9619-7287baac709b",
+              "content": "医生建议可喝点麻油以缓解/处理相关不适。",
+              "timestamp": 1771465661.9530635,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "邱医生，您好。",
+        "to_memory": [
+          "identity: 患者女，31岁，新婚，未生育",
+          "history: 体检及复查B超提示右侧卵巢旁液性占位/右侧卵巢囊肿；尺寸：闵行中心医院体检B超约67×52×63mm；国际妇婴保健院复查：右侧卵巢旁无回声81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；左卵巢29×28×16mm，右卵巢28×24×19mm",
+          "history: 已入院并完成相关手术治疗，现已出院在家休养；医生曾建议术后约3个月可怀孕",
+          "history: 预计/等待术后病理报告；医生反馈“是内瘢痕”"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5cfdcc82-71de-40b7-8500-f735337bfa2f",
+              "content": "患者表示明天无法请假就诊，询问周五早上是否可到邱大夫门诊复诊；医生告知周五外出开会，建议患者改为周四来就诊。",
+              "timestamp": 1771465628.2073402,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "ce238051-8a46-4cb0-a63b-a7eb97950ac2",
+              "content": "患者按医嘱去入院处未能办理入院，入院处要求继续等待通知后再缴费/办理。",
+              "timestamp": 1771465646.984754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "016eaf17-2d3d-45c0-be7f-ddcec40a6929",
+              "content": "医生建议患者于周二来门诊找医生，医生可先为其安排/加号挂入院流程。",
+              "timestamp": 1771465651.0686924,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "87abf7bc-c74d-4bea-ba9c-8bf71ddcb21d",
+              "content": "下周将出病理报告，患者希望结果良好。",
+              "timestamp": 1771465656.9303088,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1e3a6ddd-32ec-4581-b2a3-46860ec57fc2",
+              "content": "医生解释患者目前情况属于内瘢痕（内疤痕）。",
+              "timestamp": 1771465661.953054,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "53a38dd2-090b-4df7-9619-7287baac709b",
+              "content": "医生建议可喝点麻油以缓解/处理相关不适。",
+              "timestamp": 1771465661.9530635,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "结合患者既往重要病史，医生在安排其走入院/加号流程前需要重点核对的那项基础疾病是什么？这是否会影响相关流程的安全性评估？",
+          "answer": "出生时检查发现先天性心脏病：房间隔缺损（ASD）。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "14974008-21cc-4815-984d-f90a2d449f17"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "016eaf17-2d3d-45c0-be7f-ddcec40a6929"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            13,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "专家门诊。",
+        "to_memory": [
+          "working: 医生提示“专家门诊”"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5cfdcc82-71de-40b7-8500-f735337bfa2f",
+              "content": "患者表示明天无法请假就诊，询问周五早上是否可到邱大夫门诊复诊；医生告知周五外出开会，建议患者改为周四来就诊。",
+              "timestamp": 1771465628.2073402,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "ce238051-8a46-4cb0-a63b-a7eb97950ac2",
+              "content": "患者按医嘱去入院处未能办理入院，入院处要求继续等待通知后再缴费/办理。",
+              "timestamp": 1771465646.984754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "016eaf17-2d3d-45c0-be7f-ddcec40a6929",
+              "content": "医生建议患者于周二来门诊找医生，医生可先为其安排/加号挂入院流程。",
+              "timestamp": 1771465651.0686924,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "87abf7bc-c74d-4bea-ba9c-8bf71ddcb21d",
+              "content": "下周将出病理报告，患者希望结果良好。",
+              "timestamp": 1771465656.9303088,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "8b705911-99e3-4c4f-bf97-a768c169a0b2",
+              "content": "医生提示患者可挂“专家门诊”。",
+              "timestamp": 1771465673.1662238,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1e3a6ddd-32ec-4581-b2a3-46860ec57fc2",
+              "content": "医生解释患者目前情况属于内瘢痕（内疤痕）。",
+              "timestamp": 1771465661.953054,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "53a38dd2-090b-4df7-9619-7287baac709b",
+              "content": "医生建议可喝点麻油以缓解/处理相关不适。",
+              "timestamp": 1771465661.9530635,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1e3a6ddd-32ec-4581-b2a3-46860ec57fc2",
+              "content": "医生解释患者目前情况属于内瘢痕（内疤痕）。",
+              "timestamp": 1771465661.953054,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "53a38dd2-090b-4df7-9619-7287baac709b",
+              "content": "医生建议可喝点麻油以缓解/处理相关不适。",
+              "timestamp": 1771465661.9530635,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "支气管哮喘，她2年前开始吸布地奈德吸入剂。她的症状是遇天气变化或感冒容易引起发作，她是过敏体。我请问能否治愈。怎么给她控制，在此十分感谢！！！",
+        "to_memory": [
+          "identity: 过敏体质",
+          "history: 诊断为支气管哮喘",
+          "history: 2年前开始吸入布地奈德吸入剂治疗",
+          "working: 症状在天气变化或感冒时容易诱发哮喘发作",
+          "working: 询问哮喘能否治愈及如何控制"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "157d142d-52c0-48f7-9894-1323306850c4",
+              "content": "症状在天气变化或感冒时容易诱发哮喘发作",
+              "timestamp": 1771465678.3572063,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "4e86acf0-b8ee-43ec-b872-c306201e0829",
+              "content": "患者询问哮喘能否治愈及如何控制",
+              "timestamp": 1771465678.357211,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8326c10c-0cb1-40d8-9977-24fcc1e0adbd",
+              "content": "患者为过敏体质",
+              "timestamp": 1771465678.3571885,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1e3a6ddd-32ec-4581-b2a3-46860ec57fc2",
+              "content": "医生解释患者目前情况属于内瘢痕（内疤痕）。",
+              "timestamp": 1771465661.953054,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "53a38dd2-090b-4df7-9619-7287baac709b",
+              "content": "医生建议可喝点麻油以缓解/处理相关不适。",
+              "timestamp": 1771465661.9530635,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c9c3e78f-0b91-415d-afd7-d2b4c0ef7709",
+              "content": "既往诊断为支气管哮喘",
+              "timestamp": 1771465678.3571973,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bd0d2f6f-9a19-4736-8d81-22a84939fb94",
+              "content": "2年前开始吸入布地奈德吸入剂治疗",
+              "timestamp": 1771465678.3572018,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者描述她的哮喘发作通常在什么情况下更容易被诱发？",
+          "answer": "天气变化或感冒时更容易诱发发作",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "157d142d-52c0-48f7-9894-1323306850c4"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可以试用中药进行调理，联合西药治疗。",
+        "to_memory": [
+          "identity: 患者（或其家属描述的患者）有支气管哮喘，过敏体质",
+          "history: 2年前开始使用布地奈德吸入剂治疗哮喘",
+          "working: 症状在天气变化或感冒时容易诱发哮喘发作；咨询能否治愈及如何控制",
+          "history: 医生建议可试用中药调理，联合西药治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "157d142d-52c0-48f7-9894-1323306850c4",
+              "content": "症状在天气变化或感冒时容易诱发哮喘发作",
+              "timestamp": 1771465678.3572063,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "4e86acf0-b8ee-43ec-b872-c306201e0829",
+              "content": "患者询问哮喘能否治愈及如何控制",
+              "timestamp": 1771465678.357211,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8326c10c-0cb1-40d8-9977-24fcc1e0adbd",
+              "content": "患者为过敏体质",
+              "timestamp": 1771465678.3571885,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1e3a6ddd-32ec-4581-b2a3-46860ec57fc2",
+              "content": "医生解释患者目前情况属于内瘢痕（内疤痕）。",
+              "timestamp": 1771465661.953054,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "53a38dd2-090b-4df7-9619-7287baac709b",
+              "content": "医生建议可喝点麻油以缓解/处理相关不适。",
+              "timestamp": 1771465661.9530635,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c9c3e78f-0b91-415d-afd7-d2b4c0ef7709",
+              "content": "既往诊断为支气管哮喘",
+              "timestamp": 1771465678.3571973,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bd0d2f6f-9a19-4736-8d81-22a84939fb94",
+              "content": "2年前开始吸入布地奈德吸入剂治疗",
+              "timestamp": 1771465678.3572018,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "b77cde3e-5553-49f7-bcdd-5befc945f77e",
+              "content": "医生建议可试用中药调理，联合西药治疗哮喘",
+              "timestamp": 1771465684.428474,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "在闵行中心医院体检的B超中，提示的卵巢囊肿位于哪一侧，大小是多少？",
+          "answer": "右侧卵巢囊肿，约67×52×63mm",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "dbb53ca5-f707-4bec-934c-7a4729a177eb"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            14
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8326c10c-0cb1-40d8-9977-24fcc1e0adbd",
+              "content": "患者为过敏体质",
+              "timestamp": 1771465678.3571885,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1e3a6ddd-32ec-4581-b2a3-46860ec57fc2",
+              "content": "医生解释患者目前情况属于内瘢痕（内疤痕）。",
+              "timestamp": 1771465661.953054,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "53a38dd2-090b-4df7-9619-7287baac709b",
+              "content": "医生建议可喝点麻油以缓解/处理相关不适。",
+              "timestamp": 1771465661.9530635,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c9c3e78f-0b91-415d-afd7-d2b4c0ef7709",
+              "content": "既往诊断为支气管哮喘",
+              "timestamp": 1771465678.3571973,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bd0d2f6f-9a19-4736-8d81-22a84939fb94",
+              "content": "2年前开始吸入布地奈德吸入剂治疗",
+              "timestamp": 1771465678.3572018,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "b77cde3e-5553-49f7-bcdd-5befc945f77e",
+              "content": "医生建议可试用中药调理，联合西药治疗哮喘",
+              "timestamp": 1771465684.428474,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "支气管炎，主要是咳嗽，鼻塞，无发烧，喉咙有痰。每天早上吐奶。",
+        "to_memory": [
+          "working: 本次主诉支气管炎相关不适：主要咳嗽、鼻塞，无发烧，喉咙有痰；每天早上吐奶"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "1910792c-835c-44b1-9aa0-92c183e2aa38",
+              "content": "本次主诉支气管炎相关不适：主要咳嗽、鼻塞，无发烧，喉咙有痰；每天早上吐奶",
+              "timestamp": 1771465690.8513193,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8326c10c-0cb1-40d8-9977-24fcc1e0adbd",
+              "content": "患者为过敏体质",
+              "timestamp": 1771465678.3571885,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1e3a6ddd-32ec-4581-b2a3-46860ec57fc2",
+              "content": "医生解释患者目前情况属于内瘢痕（内疤痕）。",
+              "timestamp": 1771465661.953054,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "53a38dd2-090b-4df7-9619-7287baac709b",
+              "content": "医生建议可喝点麻油以缓解/处理相关不适。",
+              "timestamp": 1771465661.9530635,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c9c3e78f-0b91-415d-afd7-d2b4c0ef7709",
+              "content": "既往诊断为支气管哮喘",
+              "timestamp": 1771465678.3571973,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bd0d2f6f-9a19-4736-8d81-22a84939fb94",
+              "content": "2年前开始吸入布地奈德吸入剂治疗",
+              "timestamp": 1771465678.3572018,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "b77cde3e-5553-49f7-bcdd-5befc945f77e",
+              "content": "医生建议可试用中药调理，联合西药治疗哮喘",
+              "timestamp": 1771465684.428474,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者自述有某种体质相关的既往情况。结合医生后续可能提出的用药或治疗方案，在安全性方面需要重点核对患者哪一项既往信息以避免不良反应？",
+          "answer": "患者为过敏体质",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "a57ed719-6d88-4fd2-9210-28f5338efe55"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "8326c10c-0cb1-40d8-9977-24fcc1e0adbd"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            10,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可以用易坦净。",
+        "to_memory": [
+          "history: 医生建议/可用药：易坦净（用于当前呼吸道症状对症治疗）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "1910792c-835c-44b1-9aa0-92c183e2aa38",
+              "content": "本次主诉支气管炎相关不适：主要咳嗽、鼻塞，无发烧，喉咙有痰；每天早上吐奶",
+              "timestamp": 1771465690.8513193,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8326c10c-0cb1-40d8-9977-24fcc1e0adbd",
+              "content": "患者为过敏体质",
+              "timestamp": 1771465678.3571885,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1e3a6ddd-32ec-4581-b2a3-46860ec57fc2",
+              "content": "医生解释患者目前情况属于内瘢痕（内疤痕）。",
+              "timestamp": 1771465661.953054,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "53a38dd2-090b-4df7-9619-7287baac709b",
+              "content": "医生建议可喝点麻油以缓解/处理相关不适。",
+              "timestamp": 1771465661.9530635,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c9c3e78f-0b91-415d-afd7-d2b4c0ef7709",
+              "content": "既往诊断为支气管哮喘",
+              "timestamp": 1771465678.3571973,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bd0d2f6f-9a19-4736-8d81-22a84939fb94",
+              "content": "2年前开始吸入布地奈德吸入剂治疗",
+              "timestamp": 1771465678.3572018,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "b77cde3e-5553-49f7-bcdd-5befc945f77e",
+              "content": "医生建议可试用中药调理，联合西药治疗哮喘",
+              "timestamp": 1771465684.428474,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "449bca60-9151-4471-aad0-4a977a2c4e58",
+              "content": "医生建议/可用药：易坦净（用于当前呼吸道症状对症治疗）",
+              "timestamp": 1771465696.0439255,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者在之前的一次咨询中主要想了解哪类术后问题？",
+          "answer": "卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "6972ab9a-1112-44e8-b300-f223d21dc6a6"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            17
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8326c10c-0cb1-40d8-9977-24fcc1e0adbd",
+              "content": "患者为过敏体质",
+              "timestamp": 1771465678.3571885,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1e3a6ddd-32ec-4581-b2a3-46860ec57fc2",
+              "content": "医生解释患者目前情况属于内瘢痕（内疤痕）。",
+              "timestamp": 1771465661.953054,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "53a38dd2-090b-4df7-9619-7287baac709b",
+              "content": "医生建议可喝点麻油以缓解/处理相关不适。",
+              "timestamp": 1771465661.9530635,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c9c3e78f-0b91-415d-afd7-d2b4c0ef7709",
+              "content": "既往诊断为支气管哮喘",
+              "timestamp": 1771465678.3571973,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bd0d2f6f-9a19-4736-8d81-22a84939fb94",
+              "content": "2年前开始吸入布地奈德吸入剂治疗",
+              "timestamp": 1771465678.3572018,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "b77cde3e-5553-49f7-bcdd-5befc945f77e",
+              "content": "医生建议可试用中药调理，联合西药治疗哮喘",
+              "timestamp": 1771465684.428474,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "449bca60-9151-4471-aad0-4a977a2c4e58",
+              "content": "医生建议/可用药：易坦净（用于当前呼吸道症状对症治疗）",
+              "timestamp": 1771465696.0439255,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "支气管哮喘，三个月，开始感冒。后晚上发憋，咳，有哮鸣后经过本地治疗，主要是晚上发憋。不能平躺！",
+        "to_memory": [
+          "history: 既往诊断支气管哮喘；2年前开始使用布地奈德吸入剂",
+          "working: 本次哮喘发作病程约3个月，起病与感冒相关",
+          "working: 主要症状为夜间发憋、咳嗽、哮鸣；夜间更明显",
+          "working: 不能平躺（疑端坐呼吸/平卧加重）",
+          "working: 曾在本地接受治疗（具体方案不详）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e680f6d7-7425-4537-b146-85177f1f242d",
+              "content": "本次哮喘发作病程约3个月，起病与感冒相关",
+              "timestamp": 1771465710.4570868,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "f674330b-41a5-409f-9cd1-13175218714f",
+              "content": "主要症状：夜间发憋、咳嗽、哮鸣；夜间更明显",
+              "timestamp": 1771465710.457095,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "56ad7112-aa64-4e88-826c-8d8ea27b5e5d",
+              "content": "不能平躺（疑端坐呼吸/平卧加重）",
+              "timestamp": 1771465710.4570987,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "85ce8c8b-0eef-471e-bbc0-134cba171f59",
+              "content": "曾在本地接受治疗（具体方案不详）",
+              "timestamp": 1771465710.4571025,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            }
+          ],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8326c10c-0cb1-40d8-9977-24fcc1e0adbd",
+              "content": "患者为过敏体质",
+              "timestamp": 1771465678.3571885,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1e3a6ddd-32ec-4581-b2a3-46860ec57fc2",
+              "content": "医生解释患者目前情况属于内瘢痕（内疤痕）。",
+              "timestamp": 1771465661.953054,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "53a38dd2-090b-4df7-9619-7287baac709b",
+              "content": "医生建议可喝点麻油以缓解/处理相关不适。",
+              "timestamp": 1771465661.9530635,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c9c3e78f-0b91-415d-afd7-d2b4c0ef7709",
+              "content": "既往诊断为支气管哮喘",
+              "timestamp": 1771465678.3571973,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bd0d2f6f-9a19-4736-8d81-22a84939fb94",
+              "content": "2年前开始吸入布地奈德吸入剂治疗",
+              "timestamp": 1771465678.3572018,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "b77cde3e-5553-49f7-bcdd-5befc945f77e",
+              "content": "医生建议可试用中药调理，联合西药治疗哮喘",
+              "timestamp": 1771465684.428474,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "449bca60-9151-4471-aad0-4a977a2c4e58",
+              "content": "医生建议/可用药：易坦净（用于当前呼吸道症状对症治疗）",
+              "timestamp": 1771465696.0439255,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "回顾上一次医生查看并解读检查资料后的安排，与本次患者再次来咨询时描述的不适表现相比：上次医生当时对后续就诊流程做了什么具体建议？",
+          "answer": "医生上周二已查看化验报告并作解释，并建议患者周五到入院处办理入院。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "a57ed719-6d88-4fd2-9210-28f5338efe55"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "f674330b-41a5-409f-9cd1-13175218714f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            13,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "请详细补充。认真读我网站文章。",
+        "to_memory": [
+          "history: 既往诊断/病史：支气管哮喘（约2年前起），过敏体质；支气管炎病史",
+          "history: 既往用药：布地奈德吸入剂（已使用约2年）；医生曾建议可用易坦净；医生曾建议中药调理联合西药治疗",
+          "working: 当前主诉/症状：疑支气管哮喘发作相关，病程约3个月；起于感冒后，夜间发憋、咳嗽、哮鸣，主要夜间发作；不能平躺",
+          "identity: 既往/伴随症状补充：咳嗽、鼻塞、无发烧、喉咙有痰；每天早上吐奶；遇天气变化或感冒易诱发"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e680f6d7-7425-4537-b146-85177f1f242d",
+              "content": "本次哮喘发作病程约3个月，起病与感冒相关",
+              "timestamp": 1771465710.4570868,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "f674330b-41a5-409f-9cd1-13175218714f",
+              "content": "主要症状：夜间发憋、咳嗽、哮鸣；夜间更明显",
+              "timestamp": 1771465710.457095,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "56ad7112-aa64-4e88-826c-8d8ea27b5e5d",
+              "content": "不能平躺（疑端坐呼吸/平卧加重）",
+              "timestamp": 1771465710.4570987,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "85ce8c8b-0eef-471e-bbc0-134cba171f59",
+              "content": "曾在本地接受治疗（具体方案不详）",
+              "timestamp": 1771465710.4571025,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "44d394eb-96a9-4a76-9ddb-1130e18fddb5",
+              "content": "伴随症状：鼻塞、无发烧、喉咙有痰",
+              "timestamp": 1771465719.5095885,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "3c12a354-b658-4045-8223-d106a74c4ce3",
+              "content": "症状补充：每天早上吐奶",
+              "timestamp": 1771465719.5095932,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "5cd347d5-425b-42b5-91df-b322eff46fdc",
+              "content": "诱发因素：遇天气变化或感冒易诱发哮喘样症状/发作",
+              "timestamp": 1771465719.5095978,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8326c10c-0cb1-40d8-9977-24fcc1e0adbd",
+              "content": "患者为过敏体质",
+              "timestamp": 1771465678.3571885,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1e3a6ddd-32ec-4581-b2a3-46860ec57fc2",
+              "content": "医生解释患者目前情况属于内瘢痕（内疤痕）。",
+              "timestamp": 1771465661.953054,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "53a38dd2-090b-4df7-9619-7287baac709b",
+              "content": "医生建议可喝点麻油以缓解/处理相关不适。",
+              "timestamp": 1771465661.9530635,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c9c3e78f-0b91-415d-afd7-d2b4c0ef7709",
+              "content": "既往诊断为支气管哮喘",
+              "timestamp": 1771465678.3571973,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bd0d2f6f-9a19-4736-8d81-22a84939fb94",
+              "content": "2年前开始吸入布地奈德吸入剂治疗",
+              "timestamp": 1771465678.3572018,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "b77cde3e-5553-49f7-bcdd-5befc945f77e",
+              "content": "医生建议可试用中药调理，联合西药治疗哮喘",
+              "timestamp": 1771465684.428474,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "449bca60-9151-4471-aad0-4a977a2c4e58",
+              "content": "医生建议/可用药：易坦净（用于当前呼吸道症状对症治疗）",
+              "timestamp": 1771465696.0439255,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "eee0c490-89ef-4264-9fcc-0addbc527fd2",
+              "content": "既往病史：支气管炎病史",
+              "timestamp": 1771465719.5095804,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者在“夜间出现憋喘、不能平躺”的那次就诊与更早一次检查发现盆腔占位的复查结果：复查时影像学所指向的病变位置/性质与最初提示的是否发生了改变？如果有改变，具体从哪里变成了哪里？",
+          "answer": "有改变：最初体检B超提示右侧卵巢囊肿；复查B超显示双侧卵巢大小基本正常，但右卵巢旁见液性占位（无回声区），超声提示右卵巢旁液性占位。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "dbb53ca5-f707-4bec-934c-7a4729a177eb"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "56ad7112-aa64-4e88-826c-8d8ea27b5e5d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            20,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8326c10c-0cb1-40d8-9977-24fcc1e0adbd",
+              "content": "患者为过敏体质",
+              "timestamp": 1771465678.3571885,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1e3a6ddd-32ec-4581-b2a3-46860ec57fc2",
+              "content": "医生解释患者目前情况属于内瘢痕（内疤痕）。",
+              "timestamp": 1771465661.953054,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "53a38dd2-090b-4df7-9619-7287baac709b",
+              "content": "医生建议可喝点麻油以缓解/处理相关不适。",
+              "timestamp": 1771465661.9530635,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c9c3e78f-0b91-415d-afd7-d2b4c0ef7709",
+              "content": "既往诊断为支气管哮喘",
+              "timestamp": 1771465678.3571973,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bd0d2f6f-9a19-4736-8d81-22a84939fb94",
+              "content": "2年前开始吸入布地奈德吸入剂治疗",
+              "timestamp": 1771465678.3572018,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "b77cde3e-5553-49f7-bcdd-5befc945f77e",
+              "content": "医生建议可试用中药调理，联合西药治疗哮喘",
+              "timestamp": 1771465684.428474,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "449bca60-9151-4471-aad0-4a977a2c4e58",
+              "content": "医生建议/可用药：易坦净（用于当前呼吸道症状对症治疗）",
+              "timestamp": 1771465696.0439255,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "eee0c490-89ef-4264-9fcc-0addbc527fd2",
+              "content": "既往病史：支气管炎病史",
+              "timestamp": 1771465719.5095804,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "膀胱癌患者，",
+        "to_memory": [
+          "history: 患者为膀胱癌患者"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8326c10c-0cb1-40d8-9977-24fcc1e0adbd",
+              "content": "患者为过敏体质",
+              "timestamp": 1771465678.3571885,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1e3a6ddd-32ec-4581-b2a3-46860ec57fc2",
+              "content": "医生解释患者目前情况属于内瘢痕（内疤痕）。",
+              "timestamp": 1771465661.953054,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "53a38dd2-090b-4df7-9619-7287baac709b",
+              "content": "医生建议可喝点麻油以缓解/处理相关不适。",
+              "timestamp": 1771465661.9530635,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c9c3e78f-0b91-415d-afd7-d2b4c0ef7709",
+              "content": "既往诊断为支气管哮喘",
+              "timestamp": 1771465678.3571973,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bd0d2f6f-9a19-4736-8d81-22a84939fb94",
+              "content": "2年前开始吸入布地奈德吸入剂治疗",
+              "timestamp": 1771465678.3572018,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "b77cde3e-5553-49f7-bcdd-5befc945f77e",
+              "content": "医生建议可试用中药调理，联合西药治疗哮喘",
+              "timestamp": 1771465684.428474,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "449bca60-9151-4471-aad0-4a977a2c4e58",
+              "content": "医生建议/可用药：易坦净（用于当前呼吸道症状对症治疗）",
+              "timestamp": 1771465696.0439255,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "eee0c490-89ef-4264-9fcc-0addbc527fd2",
+              "content": "既往病史：支气管炎病史",
+              "timestamp": 1771465719.5095804,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "7ea6a828-4e50-49cc-aede-a063f72c6e7a",
+              "content": "患者为膀胱癌患者",
+              "timestamp": 1771465726.3319538,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者两年前开始的长期呼吸道用药方案与本次咨询中医生提出的用药建议：患者两年前开始吸入使用的具体药物是什么？",
+          "answer": "布地奈德吸入剂",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+                "bd0d2f6f-9a19-4736-8d81-22a84939fb94"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            25,
+            9
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你的帖子太简单了，但既然你是膀胱癌患者,还是建议你到总医院做详细检查，因为我院没有外科。",
+        "to_memory": [
+          "history: 患者为膀胱癌患者（既往诊断）",
+          "history: 医生建议到总医院做详细检查（因本院无外科）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8326c10c-0cb1-40d8-9977-24fcc1e0adbd",
+              "content": "患者为过敏体质",
+              "timestamp": 1771465678.3571885,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1e3a6ddd-32ec-4581-b2a3-46860ec57fc2",
+              "content": "医生解释患者目前情况属于内瘢痕（内疤痕）。",
+              "timestamp": 1771465661.953054,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "53a38dd2-090b-4df7-9619-7287baac709b",
+              "content": "医生建议可喝点麻油以缓解/处理相关不适。",
+              "timestamp": 1771465661.9530635,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c9c3e78f-0b91-415d-afd7-d2b4c0ef7709",
+              "content": "既往诊断为支气管哮喘",
+              "timestamp": 1771465678.3571973,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bd0d2f6f-9a19-4736-8d81-22a84939fb94",
+              "content": "2年前开始吸入布地奈德吸入剂治疗",
+              "timestamp": 1771465678.3572018,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "b77cde3e-5553-49f7-bcdd-5befc945f77e",
+              "content": "医生建议可试用中药调理，联合西药治疗哮喘",
+              "timestamp": 1771465684.428474,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "449bca60-9151-4471-aad0-4a977a2c4e58",
+              "content": "医生建议/可用药：易坦净（用于当前呼吸道症状对症治疗）",
+              "timestamp": 1771465696.0439255,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "eee0c490-89ef-4264-9fcc-0addbc527fd2",
+              "content": "既往病史：支气管炎病史",
+              "timestamp": 1771465719.5095804,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "7ea6a828-4e50-49cc-aede-a063f72c6e7a",
+              "content": "患者为膀胱癌患者",
+              "timestamp": 1771465726.3319538,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            },
+            {
+              "id": "32076b0e-fdfd-4a99-a417-23aa78188e6b",
+              "content": "医生建议患者到总医院做详细检查（因本院无外科）",
+              "timestamp": 1771465732.4211338,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8326c10c-0cb1-40d8-9977-24fcc1e0adbd",
+              "content": "患者为过敏体质",
+              "timestamp": 1771465678.3571885,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1e3a6ddd-32ec-4581-b2a3-46860ec57fc2",
+              "content": "医生解释患者目前情况属于内瘢痕（内疤痕）。",
+              "timestamp": 1771465661.953054,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "53a38dd2-090b-4df7-9619-7287baac709b",
+              "content": "医生建议可喝点麻油以缓解/处理相关不适。",
+              "timestamp": 1771465661.9530635,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c9c3e78f-0b91-415d-afd7-d2b4c0ef7709",
+              "content": "既往诊断为支气管哮喘",
+              "timestamp": 1771465678.3571973,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bd0d2f6f-9a19-4736-8d81-22a84939fb94",
+              "content": "2年前开始吸入布地奈德吸入剂治疗",
+              "timestamp": 1771465678.3572018,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "b77cde3e-5553-49f7-bcdd-5befc945f77e",
+              "content": "医生建议可试用中药调理，联合西药治疗哮喘",
+              "timestamp": 1771465684.428474,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "449bca60-9151-4471-aad0-4a977a2c4e58",
+              "content": "医生建议/可用药：易坦净（用于当前呼吸道症状对症治疗）",
+              "timestamp": 1771465696.0439255,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "eee0c490-89ef-4264-9fcc-0addbc527fd2",
+              "content": "既往病史：支气管炎病史",
+              "timestamp": 1771465719.5095804,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "7ea6a828-4e50-49cc-aede-a063f72c6e7a",
+              "content": "患者为膀胱癌患者",
+              "timestamp": 1771465726.3319538,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            },
+            {
+              "id": "32076b0e-fdfd-4a99-a417-23aa78188e6b",
+              "content": "医生建议患者到总医院做详细检查（因本院无外科）",
+              "timestamp": 1771465732.4211338,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "病毒性感冒，3天前得的病毒性感冒，发烧，流鼻涕，打喷嚏，咳嗽，",
+        "to_memory": [
+          "history: 既往提及支气管炎（以咳嗽、鼻塞、无发热、喉咙有痰为主），早晨吐奶",
+          "history: 既往医生建议可用易坦净",
+          "history: 既往提及支气管哮喘（病程约3个月），夜间发憋、咳嗽、哮鸣，不能平躺，曾在本地治疗",
+          "history: 既往提及膀胱癌患者；医生建议到总医院做详细检查（因其院无外科）",
+          "working: 本次主诉病毒性感冒3天：发烧、流鼻涕、打喷嚏、咳嗽"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "6bd04094-4ef3-4e42-98e2-e48fe5732304",
+              "content": "本次主诉：病毒性感冒3天，表现为发烧、流鼻涕、打喷嚏、咳嗽",
+              "timestamp": 1771465736.5256917,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            }
+          ],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8326c10c-0cb1-40d8-9977-24fcc1e0adbd",
+              "content": "患者为过敏体质",
+              "timestamp": 1771465678.3571885,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1e3a6ddd-32ec-4581-b2a3-46860ec57fc2",
+              "content": "医生解释患者目前情况属于内瘢痕（内疤痕）。",
+              "timestamp": 1771465661.953054,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "53a38dd2-090b-4df7-9619-7287baac709b",
+              "content": "医生建议可喝点麻油以缓解/处理相关不适。",
+              "timestamp": 1771465661.9530635,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c9c3e78f-0b91-415d-afd7-d2b4c0ef7709",
+              "content": "既往诊断为支气管哮喘",
+              "timestamp": 1771465678.3571973,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bd0d2f6f-9a19-4736-8d81-22a84939fb94",
+              "content": "2年前开始吸入布地奈德吸入剂治疗",
+              "timestamp": 1771465678.3572018,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "b77cde3e-5553-49f7-bcdd-5befc945f77e",
+              "content": "医生建议可试用中药调理，联合西药治疗哮喘",
+              "timestamp": 1771465684.428474,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "449bca60-9151-4471-aad0-4a977a2c4e58",
+              "content": "医生建议/可用药：易坦净（用于当前呼吸道症状对症治疗）",
+              "timestamp": 1771465696.0439255,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "eee0c490-89ef-4264-9fcc-0addbc527fd2",
+              "content": "既往病史：支气管炎病史",
+              "timestamp": 1771465719.5095804,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "7ea6a828-4e50-49cc-aede-a063f72c6e7a",
+              "content": "患者为膀胱癌患者",
+              "timestamp": 1771465726.3319538,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            },
+            {
+              "id": "32076b0e-fdfd-4a99-a417-23aa78188e6b",
+              "content": "医生建议患者到总医院做详细检查（因本院无外科）",
+              "timestamp": 1771465732.4211338,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者之前曾就某次手术后的生育时间安排和术后注意事项进行过咨询；那次手术涉及的具体部位/病变是什么？",
+          "answer": "卵巢旁囊性占位",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "6972ab9a-1112-44e8-b300-f223d21dc6a6"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            25
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "现在怎么样。",
+        "to_memory": [
+          "history: 曾提及支气管炎（咳嗽、鼻塞、无发烧、喉咙有痰、早上吐奶），医生建议可用易坦净",
+          "history: 曾提及支气管哮喘（约3个月，感冒后夜间发憋、咳嗽、哮鸣，主要夜间发憋，不能平躺）",
+          "history: 曾提及为膀胱癌患者，医生建议到总医院做详细检查（因我院无外科）",
+          "working: 本次就诊主诉/现病史：3天前病毒性感冒，出现发烧、流鼻涕、打喷嚏、咳嗽"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "6bd04094-4ef3-4e42-98e2-e48fe5732304",
+              "content": "本次主诉：病毒性感冒3天，表现为发烧、流鼻涕、打喷嚏、咳嗽",
+              "timestamp": 1771465736.5256917,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            }
+          ],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8326c10c-0cb1-40d8-9977-24fcc1e0adbd",
+              "content": "患者为过敏体质",
+              "timestamp": 1771465678.3571885,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1e3a6ddd-32ec-4581-b2a3-46860ec57fc2",
+              "content": "医生解释患者目前情况属于内瘢痕（内疤痕）。",
+              "timestamp": 1771465661.953054,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "53a38dd2-090b-4df7-9619-7287baac709b",
+              "content": "医生建议可喝点麻油以缓解/处理相关不适。",
+              "timestamp": 1771465661.9530635,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c9c3e78f-0b91-415d-afd7-d2b4c0ef7709",
+              "content": "既往诊断为支气管哮喘",
+              "timestamp": 1771465678.3571973,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bd0d2f6f-9a19-4736-8d81-22a84939fb94",
+              "content": "2年前开始吸入布地奈德吸入剂治疗",
+              "timestamp": 1771465678.3572018,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "b77cde3e-5553-49f7-bcdd-5befc945f77e",
+              "content": "医生建议可试用中药调理，联合西药治疗哮喘",
+              "timestamp": 1771465684.428474,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "449bca60-9151-4471-aad0-4a977a2c4e58",
+              "content": "医生建议/可用药：易坦净（用于当前呼吸道症状对症治疗）",
+              "timestamp": 1771465696.0439255,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "eee0c490-89ef-4264-9fcc-0addbc527fd2",
+              "content": "既往病史：支气管炎病史",
+              "timestamp": 1771465719.5095804,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "7ea6a828-4e50-49cc-aede-a063f72c6e7a",
+              "content": "患者为膀胱癌患者",
+              "timestamp": 1771465726.3319538,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            },
+            {
+              "id": "32076b0e-fdfd-4a99-a417-23aa78188e6b",
+              "content": "医生建议患者到总医院做详细检查（因本院无外科）",
+              "timestamp": 1771465732.4211338,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8326c10c-0cb1-40d8-9977-24fcc1e0adbd",
+              "content": "患者为过敏体质",
+              "timestamp": 1771465678.3571885,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1e3a6ddd-32ec-4581-b2a3-46860ec57fc2",
+              "content": "医生解释患者目前情况属于内瘢痕（内疤痕）。",
+              "timestamp": 1771465661.953054,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "53a38dd2-090b-4df7-9619-7287baac709b",
+              "content": "医生建议可喝点麻油以缓解/处理相关不适。",
+              "timestamp": 1771465661.9530635,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c9c3e78f-0b91-415d-afd7-d2b4c0ef7709",
+              "content": "既往诊断为支气管哮喘",
+              "timestamp": 1771465678.3571973,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bd0d2f6f-9a19-4736-8d81-22a84939fb94",
+              "content": "2年前开始吸入布地奈德吸入剂治疗",
+              "timestamp": 1771465678.3572018,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "b77cde3e-5553-49f7-bcdd-5befc945f77e",
+              "content": "医生建议可试用中药调理，联合西药治疗哮喘",
+              "timestamp": 1771465684.428474,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "449bca60-9151-4471-aad0-4a977a2c4e58",
+              "content": "医生建议/可用药：易坦净（用于当前呼吸道症状对症治疗）",
+              "timestamp": 1771465696.0439255,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "eee0c490-89ef-4264-9fcc-0addbc527fd2",
+              "content": "既往病史：支气管炎病史",
+              "timestamp": 1771465719.5095804,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "7ea6a828-4e50-49cc-aede-a063f72c6e7a",
+              "content": "患者为膀胱癌患者",
+              "timestamp": 1771465726.3319538,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            },
+            {
+              "id": "32076b0e-fdfd-4a99-a417-23aa78188e6b",
+              "content": "医生建议患者到总医院做详细检查（因本院无外科）",
+              "timestamp": 1771465732.4211338,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "早泄，结婚5年，性交时间短，1分钟左右，有手淫史，带避孕套时间也很短。",
+        "to_memory": [
+          "working: 主诉早泄；婚后5年，性交时间约1分钟；有手淫史；戴避孕套后性交时间仍很短"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d3fcc0b0-6c07-4b80-83e1-ca6f63f0cdf4",
+              "content": "主诉早泄；婚后5年，性交时间约1分钟；有手淫史；戴避孕套后性交时间仍很短",
+              "timestamp": 1771465747.4995599,
+              "metadata": {
+                "turn_idx": 31
+              },
+              "turn_idx": 31
+            }
+          ],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8326c10c-0cb1-40d8-9977-24fcc1e0adbd",
+              "content": "患者为过敏体质",
+              "timestamp": 1771465678.3571885,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1e3a6ddd-32ec-4581-b2a3-46860ec57fc2",
+              "content": "医生解释患者目前情况属于内瘢痕（内疤痕）。",
+              "timestamp": 1771465661.953054,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "53a38dd2-090b-4df7-9619-7287baac709b",
+              "content": "医生建议可喝点麻油以缓解/处理相关不适。",
+              "timestamp": 1771465661.9530635,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c9c3e78f-0b91-415d-afd7-d2b4c0ef7709",
+              "content": "既往诊断为支气管哮喘",
+              "timestamp": 1771465678.3571973,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bd0d2f6f-9a19-4736-8d81-22a84939fb94",
+              "content": "2年前开始吸入布地奈德吸入剂治疗",
+              "timestamp": 1771465678.3572018,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "b77cde3e-5553-49f7-bcdd-5befc945f77e",
+              "content": "医生建议可试用中药调理，联合西药治疗哮喘",
+              "timestamp": 1771465684.428474,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "449bca60-9151-4471-aad0-4a977a2c4e58",
+              "content": "医生建议/可用药：易坦净（用于当前呼吸道症状对症治疗）",
+              "timestamp": 1771465696.0439255,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "eee0c490-89ef-4264-9fcc-0addbc527fd2",
+              "content": "既往病史：支气管炎病史",
+              "timestamp": 1771465719.5095804,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "7ea6a828-4e50-49cc-aede-a063f72c6e7a",
+              "content": "患者为膀胱癌患者",
+              "timestamp": 1771465726.3319538,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            },
+            {
+              "id": "32076b0e-fdfd-4a99-a417-23aa78188e6b",
+              "content": "医生建议患者到总医院做详细检查（因本院无外科）",
+              "timestamp": 1771465732.4211338,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "针对患者当前咨询的性功能问题，在进行用药或进一步处置前，需要核对其近期是否经历过可能影响安全性的重大治疗或出院事件？请说明具体是什么。",
+          "answer": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "165973f3-db81-463f-9f7d-7b2348f57476"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "d3fcc0b0-6c07-4b80-83e1-ca6f63f0cdf4"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            20,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "宜详细检查治疗，不要轻易去手术。",
+        "to_memory": [
+          "history: 医生建议进行详细检查和治疗，避免轻易手术"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d3fcc0b0-6c07-4b80-83e1-ca6f63f0cdf4",
+              "content": "主诉早泄；婚后5年，性交时间约1分钟；有手淫史；戴避孕套后性交时间仍很短",
+              "timestamp": 1771465747.4995599,
+              "metadata": {
+                "turn_idx": 31
+              },
+              "turn_idx": 31
+            }
+          ],
+          "identity": [
+            {
+              "id": "7fa667fc-fe78-4448-8a4a-62b244221bf9",
+              "content": "患者女，31岁，新婚，未生育",
+              "timestamp": 1771465601.3537698,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8326c10c-0cb1-40d8-9977-24fcc1e0adbd",
+              "content": "患者为过敏体质",
+              "timestamp": 1771465678.3571885,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "history": [
+            {
+              "id": "14974008-21cc-4815-984d-f90a2d449f17",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病/房间隔缺损（ASD）",
+              "timestamp": 1771465601.3537781,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "95a3d507-91d2-4007-a9a0-aa3f350e745a",
+              "content": "2岁复查提示房间隔缺损（ASD）仍未自行闭合",
+              "timestamp": 1771465601.3537824,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "dbb53ca5-f707-4bec-934c-7a4729a177eb",
+              "content": "今年闵行中心医院体检B超提示右侧卵巢囊肿约67×52×63mm；月经结束后5天于国际妇婴保健院复查B超：左卵巢29×28×16mm，右卵巢28×24×19mm；右侧卵巢旁紧贴无回声区81×71×63mm，边界尚清，内壁见小突起，未见明显血流信号；超声提示右卵巢旁液性占位",
+              "timestamp": 1771465615.7009985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6972ab9a-1112-44e8-b300-f223d21dc6a6",
+              "content": "咨询：卵巢旁囊性占位手术后多久可以怀孕及术后注意事项",
+              "timestamp": 1771465615.701014,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "06d4922c-10d3-4274-a8b7-5c06975efd84",
+              "content": "医生建议：右侧卵巢旁囊性占位手术后约3个月即可怀孕",
+              "timestamp": 1771465620.3308392,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c7e3d058-c67d-426c-bb49-5217e959d3fb",
+              "content": "患者询问：右侧卵巢旁囊性占位/囊肿是否可以不手术治疗（保守观察或药物治疗可能性）",
+              "timestamp": 1771465625.7019815,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0252b950-d230-4c28-95b6-b17d88460212",
+              "content": "患者询问是否需要再做一次B超复查。",
+              "timestamp": 1771465634.3763402,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a57ed719-6d88-4fd2-9210-28f5338efe55",
+              "content": "上周二医生已查看患者化验报告并作解释；并曾建议患者周五到入院处办理入院。",
+              "timestamp": 1771465646.9847457,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "165973f3-db81-463f-9f7d-7b2348f57476",
+              "content": "患者已完成右侧卵巢旁囊性占位相关手术治疗，今日出院，目前在家休养中。",
+              "timestamp": 1771465656.9302986,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1e3a6ddd-32ec-4581-b2a3-46860ec57fc2",
+              "content": "医生解释患者目前情况属于内瘢痕（内疤痕）。",
+              "timestamp": 1771465661.953054,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "53a38dd2-090b-4df7-9619-7287baac709b",
+              "content": "医生建议可喝点麻油以缓解/处理相关不适。",
+              "timestamp": 1771465661.9530635,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c9c3e78f-0b91-415d-afd7-d2b4c0ef7709",
+              "content": "既往诊断为支气管哮喘",
+              "timestamp": 1771465678.3571973,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bd0d2f6f-9a19-4736-8d81-22a84939fb94",
+              "content": "2年前开始吸入布地奈德吸入剂治疗",
+              "timestamp": 1771465678.3572018,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "b77cde3e-5553-49f7-bcdd-5befc945f77e",
+              "content": "医生建议可试用中药调理，联合西药治疗哮喘",
+              "timestamp": 1771465684.428474,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "449bca60-9151-4471-aad0-4a977a2c4e58",
+              "content": "医生建议/可用药：易坦净（用于当前呼吸道症状对症治疗）",
+              "timestamp": 1771465696.0439255,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "eee0c490-89ef-4264-9fcc-0addbc527fd2",
+              "content": "既往病史：支气管炎病史",
+              "timestamp": 1771465719.5095804,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "7ea6a828-4e50-49cc-aede-a063f72c6e7a",
+              "content": "患者为膀胱癌患者",
+              "timestamp": 1771465726.3319538,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            },
+            {
+              "id": "32076b0e-fdfd-4a99-a417-23aa78188e6b",
+              "content": "医生建议患者到总医院做详细检查（因本院无外科）",
+              "timestamp": 1771465732.4211338,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "6506f8e0-d0d9-498c-b2b7-776d378d94a2",
+              "content": "医生建议进行详细检查和治疗，避免轻易手术",
+              "timestamp": 1771465753.5829117,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "本次咨询中，医生提出过一种可由患者自行尝试的日常饮食/食用方式来帮助处理不适。结合患者当前主诉，这条建议是否存在潜在不安全或不适配之处？请指出该建议是什么，并简述为何需要做安全性检查。",
+          "answer": "医生建议可喝点麻油以缓解/处理相关不适；需要评估其与患者当前情况是否适配及是否存在不安全风险。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "53a38dd2-090b-4df7-9619-7287baac709b"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "d3fcc0b0-6c07-4b80-83e1-ca6f63f0cdf4"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            20,
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "chronic_followup",
+    "scenario_name": "慢性病随访管理",
+    "session_count": 8,
+    "group_key": "综合科"
+  }
+}

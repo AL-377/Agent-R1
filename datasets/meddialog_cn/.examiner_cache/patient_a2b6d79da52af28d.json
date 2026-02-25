@@ -1,0 +1,1581 @@
+{
+  "patient_id": "257e4c42ced6",
+  "messages": [
+    {
+      "user": {
+        "content": "多囊卵巢，",
+        "to_memory": [
+          "history: 既往诊断/病史提示多囊卵巢综合征（PCOS）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "一般首选药物治疗。",
+        "to_memory": [
+          "history: 既往/目前诊断为多囊卵巢（PCOS）",
+          "history: 医生建议一般首选药物治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "f3834191-d520-4dce-9a35-a520da856a36",
+              "content": "既往/目前诊断为多囊卵巢综合征（PCOS）",
+              "timestamp": 1771493268.0480971,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "92e465f3-e93c-419d-8c6e-253dcb27c702",
+              "content": "医生建议一般首选药物治疗",
+              "timestamp": 1771493268.048107,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "医生在本次对话中提到患者当前的具体诊断是什么？该诊断是否需要在后续用药评估中作为安全检查的前提信息？",
+          "answer": "患者既往/目前诊断为多囊卵巢综合征（PCOS）。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "f3834191-d520-4dce-9a35-a520da856a36",
+                "f3834191-d520-4dce-9a35-a520da856a36"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "超声诊断：可能二尖瓣前叶裂，没明显症状，就是气有些压，做了个心彩超，结果报告二尖瓣前叶可能，我很害怕，该咋办？",
+        "to_memory": [
+          "history: 既往提及多囊卵巢（PCOS）",
+          "history: 心脏彩超/超声诊断提示：可能二尖瓣前叶裂（未明确）",
+          "history: 主诉因心脏彩超报告提示二尖瓣前叶可能裂而担心、害怕",
+          "working: 当前症状：无明显症状，仅自觉“气有些压/胸口发闷感”"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "bd05569c-1fed-49cd-8e53-32646e7e413d",
+              "content": "因心脏彩超报告提示二尖瓣前叶可能裂而担心、害怕",
+              "timestamp": 1771493278.562066,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "23de82e8-bf3d-4dbe-9cbe-66465969c29d",
+              "content": "当前症状：无明显症状，仅自觉气有些压/胸口发闷感",
+              "timestamp": 1771493278.5620701,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b4ecff1f-a549-4eed-aeb4-4e1b0c72648d",
+              "content": "既往提及多囊卵巢综合征（PCOS）",
+              "timestamp": 1771493278.5620542,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5803c4c-4da8-47cc-9053-03edac3c18a2",
+              "content": "心脏彩超/超声诊断提示：可能二尖瓣前叶裂（尚未明确诊断）",
+              "timestamp": 1771493278.5620618,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "本次对话里，患者对近期一项检查结果表现出明显的情绪反应。该情绪反应的具体内容是什么？这在后续沟通中需要做哪些安全性关注点（如心理安抚或风险评估）？",
+          "answer": "患者因检查报告提示异常而感到害怕、担心。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "bd05569c-1fed-49cd-8e53-32646e7e413d"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "b4ecff1f-a549-4eed-aeb4-4e1b0c72648d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "要超声评估一下返流的程度，如果不是很重可以不治疗。",
+        "to_memory": [
+          "history: 既往提及多囊卵巢（PCOS）",
+          "history: 心脏彩超提示二尖瓣前叶可能裂（超声诊断：可能二尖瓣前叶裂）",
+          "history: 目前无明显症状，仅感气压/胸闷样不适，因检查结果感到害怕",
+          "history: 医嘱/建议：需超声评估二尖瓣返流程度；若返流不重可不治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "bd05569c-1fed-49cd-8e53-32646e7e413d",
+              "content": "因心脏彩超报告提示二尖瓣前叶可能裂而担心、害怕",
+              "timestamp": 1771493278.562066,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "23de82e8-bf3d-4dbe-9cbe-66465969c29d",
+              "content": "当前症状：无明显症状，仅自觉气有些压/胸口发闷感",
+              "timestamp": 1771493278.5620701,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "fae14264-6f7d-41b2-8487-346f3ebca4dd",
+              "content": "医嘱/建议：需进一步超声评估二尖瓣返流程度；若返流不重可不治疗/暂不需治疗",
+              "timestamp": 1771493288.7048714,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b4ecff1f-a549-4eed-aeb4-4e1b0c72648d",
+              "content": "既往提及多囊卵巢综合征（PCOS）",
+              "timestamp": 1771493278.5620542,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5803c4c-4da8-47cc-9053-03edac3c18a2",
+              "content": "心脏彩超/超声诊断提示：可能二尖瓣前叶裂（尚未明确诊断）",
+              "timestamp": 1771493278.5620618,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在本次咨询中，患者为心脏超声报告而就诊时自述的主要不适是什么？这与其描述的总体症状情况是否一致（例如是否存在“无症状”却又诉不适的记录冲突）？请说明。",
+          "answer": "患者自述总体无明显症状，但感觉“气有些压/胸口发闷”。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "23de82e8-bf3d-4dbe-9cbe-66465969c29d"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "b4ecff1f-a549-4eed-aeb4-4e1b0c72648d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "b4ecff1f-a549-4eed-aeb4-4e1b0c72648d",
+              "content": "既往提及多囊卵巢综合征（PCOS）",
+              "timestamp": 1771493278.5620542,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5803c4c-4da8-47cc-9053-03edac3c18a2",
+              "content": "心脏彩超/超声诊断提示：可能二尖瓣前叶裂（尚未明确诊断）",
+              "timestamp": 1771493278.5620618,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "大夫说是汗泡性湿疹，2008年9月左右手指出现脱皮，此后越发严重，现在手掌和脚掌也出现脱皮，脱皮之前皮下出现凸出的血斑点或皮肤发黄，有时手掌血色成暗黑色，然后手脚遇水皮肤就裂开脱落，同时伴有针刺感。已经一年多了，在云南中山医院、四川省凉山州第一、第二医院，州中西医结合就诊过，不知到擦和吃了多少药（西药、中药），但是都没有明显的好转。",
+        "to_memory": [
+          "history: 既往诊断：多囊卵巢综合征（PCOS）",
+          "history: 超声诊断提示：可能二尖瓣前叶裂（无明显症状）；医生建议评估二尖瓣返流程度，若不重可不治疗",
+          "history: 既往诊断：汗疱性湿疹（由医生诊断）",
+          "history: 就诊史：曾在云南中山医院、四川省凉山州第一/第二医院及州中西医结合就诊；曾外用/口服多种西药与中药，疗效不明显",
+          "working: 皮肤症状自2008年9月左右开始：手指出现脱皮，逐渐加重，现累及手掌和脚掌；脱皮前皮下凸出血斑点或皮肤发黄，偶手掌呈暗黑色；手脚遇水后皮肤裂开脱落；伴针刺感；病程已一年多"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "15681506-ce38-4d23-8b95-45d32146e66f",
+              "content": "皮肤症状自2008年9月左右开始：手指出现脱皮，逐渐加重，现累及手掌和脚掌；脱皮前皮下凸出血斑点或皮肤发黄，偶手掌呈暗黑色；手脚遇水后皮肤裂开脱落；伴针刺感；病程已一年多",
+              "timestamp": 1771493305.715688,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b4ecff1f-a549-4eed-aeb4-4e1b0c72648d",
+              "content": "既往提及多囊卵巢综合征（PCOS）",
+              "timestamp": 1771493278.5620542,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5803c4c-4da8-47cc-9053-03edac3c18a2",
+              "content": "心脏超声提示：可能二尖瓣前叶裂（无明显症状）；医生建议评估二尖瓣返流程度，若不重可不治疗",
+              "timestamp": 1771493278.5620618,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "e5b70baf-4b47-410e-a437-fe51c29eefa4",
+              "content": "既往诊断：汗疱性湿疹（由医生诊断）",
+              "timestamp": 1771493305.7156742,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "047f4992-c87d-4846-8d48-2c8188296278",
+              "content": "就诊史：曾在云南中山医院、四川省凉山州第一/第二医院及州中西医结合就诊；曾外用/口服多种西药与中药，疗效不明显",
+              "timestamp": 1771493305.7156832,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "在提到心脏彩超结果那次咨询中，医生让患者接下来重点去评估哪一项超声相关指标，并说明在什么情况下可以暂时不处理？",
+          "answer": "评估二尖瓣返流程度；若返流不重可不治疗/暂不处理。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b5803c4c-4da8-47cc-9053-03edac3c18a2"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "15681506-ce38-4d23-8b95-45d32146e66f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            3,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "弟一次最好到医院来，才能准确下药，直接来保证就医。",
+        "to_memory": [
+          "history: 既往/当前提及多囊卵巢综合征（PCOS）",
+          "history: 心脏超声提示可能二尖瓣前叶裂（需评估二尖瓣返流程度）",
+          "history: 皮肤科诊断为汗疱性湿疹；2008年9月起手指出现脱皮，逐渐加重至手掌脚掌",
+          "history: 曾在云南中山医院、四川省凉山州第一/第二医院、州中西医结合就诊，使用过多种中西药治疗但效果不佳",
+          "working: 当前症状：手足脱皮前皮下凸出血斑点或皮肤发黄，手掌可呈暗黑色；遇水皮肤裂开脱落，伴针刺感；自述气有些压但无明显心脏症状",
+          "history: 当前医生建议首次最好到医院面诊后再准确用药"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "15681506-ce38-4d23-8b95-45d32146e66f",
+              "content": "皮肤症状自2008年9月左右开始：手指出现脱皮，逐渐加重，现累及手掌和脚掌；脱皮前皮下凸出血斑点或皮肤发黄，偶手掌呈暗黑色；手脚遇水后皮肤裂开脱落；伴针刺感；自述有些胸闷/气压感但无明显心脏症状；病程已一年多",
+              "timestamp": 1771493305.715688,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b4ecff1f-a549-4eed-aeb4-4e1b0c72648d",
+              "content": "既往提及多囊卵巢综合征（PCOS）",
+              "timestamp": 1771493278.5620542,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5803c4c-4da8-47cc-9053-03edac3c18a2",
+              "content": "心脏超声提示：可能二尖瓣前叶裂（无明显症状）；医生建议评估二尖瓣返流程度，若不重可不治疗",
+              "timestamp": 1771493278.5620618,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "e5b70baf-4b47-410e-a437-fe51c29eefa4",
+              "content": "既往诊断：汗疱性湿疹（由医生诊断）",
+              "timestamp": 1771493305.7156742,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "047f4992-c87d-4846-8d48-2c8188296278",
+              "content": "就诊史：曾在云南中山医院、四川省凉山州第一/第二医院及州中西医结合就诊；曾外用/口服多种西药与中药，疗效不明显",
+              "timestamp": 1771493305.7156832,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f83e90d1-2818-4b05-9997-fe6f5eabaf2c",
+              "content": "当前医生建议：首次最好到医院面诊后再准确用药",
+              "timestamp": 1771493318.8303292,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "b4ecff1f-a549-4eed-aeb4-4e1b0c72648d",
+              "content": "既往提及多囊卵巢综合征（PCOS）",
+              "timestamp": 1771493278.5620542,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5803c4c-4da8-47cc-9053-03edac3c18a2",
+              "content": "心脏超声提示：可能二尖瓣前叶裂（无明显症状）；医生建议评估二尖瓣返流程度，若不重可不治疗",
+              "timestamp": 1771493278.5620618,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "e5b70baf-4b47-410e-a437-fe51c29eefa4",
+              "content": "既往诊断：汗疱性湿疹（由医生诊断）",
+              "timestamp": 1771493305.7156742,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "047f4992-c87d-4846-8d48-2c8188296278",
+              "content": "就诊史：曾在云南中山医院、四川省凉山州第一/第二医院及州中西医结合就诊；曾外用/口服多种西药与中药，疗效不明显",
+              "timestamp": 1771493305.7156832,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f83e90d1-2818-4b05-9997-fe6f5eabaf2c",
+              "content": "当前医生建议：首次最好到医院面诊后再准确用药",
+              "timestamp": 1771493318.8303292,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "斑脱，8岁男孩一年多前出现一小处斑脱，没有治疗，后来自己长出来了，可今年起其他地方出现了2块，经过治疗原来的地方长出细细的了，可其他地方又出现，而且头顶稀疏了！才8岁呀！",
+        "to_memory": [
+          "identity: 患者为8岁男孩",
+          "working: 主诉斑秃/脱发：一年多前出现一小处斑秃未治疗后自行长出；今年起其他部位再出现2块；治疗后原来部位长出细细毛发，但其他部位继续出现新斑脱，且头顶部头发稀疏加重"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "412381f4-68bb-45a8-9dcc-f051a36626dd",
+              "content": "主诉斑秃/脱发：一年多前出现一小处斑秃未治疗后自行长出；今年起其他部位再出现2块；治疗后原来部位长出细细毛发，但其他部位继续出现新斑脱，且头顶部头发稀疏加重",
+              "timestamp": 1771493325.0065968,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "e9d9492a-684d-481b-8698-b47ca0381bea",
+              "content": "患者为8岁男孩",
+              "timestamp": 1771493325.0065882,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "b4ecff1f-a549-4eed-aeb4-4e1b0c72648d",
+              "content": "既往提及多囊卵巢综合征（PCOS）",
+              "timestamp": 1771493278.5620542,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5803c4c-4da8-47cc-9053-03edac3c18a2",
+              "content": "心脏超声提示：可能二尖瓣前叶裂（无明显症状）；医生建议评估二尖瓣返流程度，若不重可不治疗",
+              "timestamp": 1771493278.5620618,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "e5b70baf-4b47-410e-a437-fe51c29eefa4",
+              "content": "既往诊断：汗疱性湿疹（由医生诊断）",
+              "timestamp": 1771493305.7156742,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "047f4992-c87d-4846-8d48-2c8188296278",
+              "content": "就诊史：曾在云南中山医院、四川省凉山州第一/第二医院及州中西医结合就诊；曾外用/口服多种西药与中药，疗效不明显",
+              "timestamp": 1771493305.7156832,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f83e90d1-2818-4b05-9997-fe6f5eabaf2c",
+              "content": "当前医生建议：首次最好到医院面诊后再准确用药",
+              "timestamp": 1771493318.8303292,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "您好，首先要问孩子有没有精神紧张，学习压力大，受到什么刺激没有，晚上睡眠好不好等，尽量找出病因，去除病因，可给他注射一段时间的卡介菌素或胎盘组织注射液。",
+        "to_memory": [
+          "history: 既往诊断多囊卵巢综合征（PCOS）",
+          "history: 超声提示可能二尖瓣前叶裂；医生建议评估二尖瓣返流程度，若不重可不治疗",
+          "history: 既往被诊断为汗泡性湿疹（2008年9月起手指脱皮逐渐加重，累及手掌/脚掌；多地就诊用过多种中西药疗效不佳）",
+          "identity: 患者/家属：8岁男孩（斑秃患者）",
+          "working: 斑秃：一年多前出现一小处后自愈；今年再发多处（约2块），头顶稀疏；治疗后原部位长出细毛但有新发",
+          "working: 医生询问是否有精神紧张/学习压力/刺激史及睡眠情况以寻找诱因",
+          "history: 医生建议可注射一段时间卡介菌素或胎盘组织注射液治疗斑秃"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "412381f4-68bb-45a8-9dcc-f051a36626dd",
+              "content": "主诉斑秃/脱发：一年多前出现一小处斑秃未治疗后自行长出；今年起其他部位再出现2块；治疗后原来部位长出细细毛发，但其他部位继续出现新斑脱，且头顶部头发稀疏加重",
+              "timestamp": 1771493325.0065968,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0ee79d22-3b48-46f6-9323-a478e81c9171",
+              "content": "医生询问是否存在精神紧张/学习压力/刺激史及睡眠情况，以寻找斑秃诱因",
+              "timestamp": 1771493335.798576,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "identity": [
+            {
+              "id": "e9d9492a-684d-481b-8698-b47ca0381bea",
+              "content": "患者为8岁男孩",
+              "timestamp": 1771493325.0065882,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "b4ecff1f-a549-4eed-aeb4-4e1b0c72648d",
+              "content": "既往提及多囊卵巢综合征（PCOS）",
+              "timestamp": 1771493278.5620542,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5803c4c-4da8-47cc-9053-03edac3c18a2",
+              "content": "心脏超声提示：可能二尖瓣前叶裂（无明显症状）；医生建议评估二尖瓣返流程度，若不重可不治疗",
+              "timestamp": 1771493278.5620618,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "e5b70baf-4b47-410e-a437-fe51c29eefa4",
+              "content": "既往诊断：汗疱性湿疹（由医生诊断）",
+              "timestamp": 1771493305.7156742,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "047f4992-c87d-4846-8d48-2c8188296278",
+              "content": "就诊史：曾在云南中山医院、四川省凉山州第一/第二医院及州中西医结合就诊；曾外用/口服多种西药与中药，疗效不明显",
+              "timestamp": 1771493305.7156832,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f83e90d1-2818-4b05-9997-fe6f5eabaf2c",
+              "content": "当前医生建议：首次最好到医院面诊后再准确用药",
+              "timestamp": 1771493318.8303292,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "66f6fb18-71cf-4247-bc4f-e186b7ebe58d",
+              "content": "斑秃治疗建议：可注射一段时间卡介菌素或胎盘组织注射液",
+              "timestamp": 1771493335.7985868,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比孩子一年多前首次出现头皮问题时的处理经过与今年复发后接受治疗时的反应，这两次在“是否自行恢复/治疗后毛发生长情况”上分别是怎样的？",
+          "answer": "一年多前首次出现时未治疗且后来自己长出来了；今年复发后经治疗，原来部位长出了细细的毛发。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b5803c4c-4da8-47cc-9053-03edac3c18a2"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "412381f4-68bb-45a8-9dcc-f051a36626dd"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            7,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "e9d9492a-684d-481b-8698-b47ca0381bea",
+              "content": "患者为8岁男孩",
+              "timestamp": 1771493325.0065882,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "b4ecff1f-a549-4eed-aeb4-4e1b0c72648d",
+              "content": "既往提及多囊卵巢综合征（PCOS）",
+              "timestamp": 1771493278.5620542,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5803c4c-4da8-47cc-9053-03edac3c18a2",
+              "content": "心脏超声提示：可能二尖瓣前叶裂（无明显症状）；医生建议评估二尖瓣返流程度，若不重可不治疗",
+              "timestamp": 1771493278.5620618,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "e5b70baf-4b47-410e-a437-fe51c29eefa4",
+              "content": "既往诊断：汗疱性湿疹（由医生诊断）",
+              "timestamp": 1771493305.7156742,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "047f4992-c87d-4846-8d48-2c8188296278",
+              "content": "就诊史：曾在云南中山医院、四川省凉山州第一/第二医院及州中西医结合就诊；曾外用/口服多种西药与中药，疗效不明显",
+              "timestamp": 1771493305.7156832,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f83e90d1-2818-4b05-9997-fe6f5eabaf2c",
+              "content": "当前医生建议：首次最好到医院面诊后再准确用药",
+              "timestamp": 1771493318.8303292,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "66f6fb18-71cf-4247-bc4f-e186b7ebe58d",
+              "content": "斑秃治疗建议：可注射一段时间卡介菌素或胎盘组织注射液",
+              "timestamp": 1771493335.7985868,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "颈后有肿块，有二十多年了吧，以前一直认为是颈椎的问题，突出低头时间长久很痛，在蚌埠第人们医院看的。B超检查讲里面有脂肪瘤。医生讲不需要做手术，",
+        "to_memory": [
+          "history: 颈后肿块病史约20余年，在蚌埠市第一人民医院就诊；B超检查提示为脂肪瘤；医生建议不需要手术",
+          "working: 颈后肿块，低头时间长会疼痛，患者此前一直认为与颈椎问题相关"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "835efc75-47b2-4712-9948-cb15ab5684ef",
+              "content": "当前情况：颈后肿块，低头时间长会疼痛；患者此前一直认为与颈椎问题相关",
+              "timestamp": 1771493348.2020824,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "identity": [
+            {
+              "id": "e9d9492a-684d-481b-8698-b47ca0381bea",
+              "content": "患者为8岁男孩",
+              "timestamp": 1771493325.0065882,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "b4ecff1f-a549-4eed-aeb4-4e1b0c72648d",
+              "content": "既往提及多囊卵巢综合征（PCOS）",
+              "timestamp": 1771493278.5620542,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5803c4c-4da8-47cc-9053-03edac3c18a2",
+              "content": "心脏超声提示：可能二尖瓣前叶裂（无明显症状）；医生建议评估二尖瓣返流程度，若不重可不治疗",
+              "timestamp": 1771493278.5620618,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "e5b70baf-4b47-410e-a437-fe51c29eefa4",
+              "content": "既往诊断：汗疱性湿疹（由医生诊断）",
+              "timestamp": 1771493305.7156742,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "047f4992-c87d-4846-8d48-2c8188296278",
+              "content": "就诊史：曾在云南中山医院、四川省凉山州第一/第二医院及州中西医结合就诊；曾外用/口服多种西药与中药，疗效不明显",
+              "timestamp": 1771493305.7156832,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f83e90d1-2818-4b05-9997-fe6f5eabaf2c",
+              "content": "当前医生建议：首次最好到医院面诊后再准确用药",
+              "timestamp": 1771493318.8303292,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "66f6fb18-71cf-4247-bc4f-e186b7ebe58d",
+              "content": "斑秃治疗建议：可注射一段时间卡介菌素或胎盘组织注射液",
+              "timestamp": 1771493335.7985868,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "3bd13e9e-6d45-475f-a5fe-70a60f4e189d",
+              "content": "颈后肿块病史约20余年；曾在蚌埠市第一人民医院就诊，B超提示脂肪瘤；医生建议不需手术",
+              "timestamp": 1771493348.2020738,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在当前就诊记录中，患者（或家属）曾提到的既往就诊医院/就诊经历，与本次咨询对象的基本情况之间是否存在需要核对的潜在矛盾或安全风险？请指出需要重点核对的那项既往就诊信息。",
+          "answer": "既往曾在云南中山医院、四川省凉山州第一/第二医院及州中西医结合就诊；曾外用/口服多种西药与中药，疗效不明显",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "047f4992-c87d-4846-8d48-2c8188296278"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "e9d9492a-684d-481b-8698-b47ca0381bea"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "做磁共振就清楚了。",
+        "to_memory": [
+          "history: 颈后肿块病史约20多年；B超提示脂肪瘤；既往医生认为可不手术",
+          "working: 医生建议做磁共振检查以明确情况"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "835efc75-47b2-4712-9948-cb15ab5684ef",
+              "content": "当前情况：颈后肿块，低头时间长会疼痛；患者此前一直认为与颈椎问题相关",
+              "timestamp": 1771493348.2020824,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "0245fb02-30e5-4efc-a14b-7915f9f3e58d",
+              "content": "医生建议进行磁共振（MRI）检查以进一步明确颈后肿块情况",
+              "timestamp": 1771493359.502607,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "identity": [
+            {
+              "id": "e9d9492a-684d-481b-8698-b47ca0381bea",
+              "content": "患者为8岁男孩",
+              "timestamp": 1771493325.0065882,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "b4ecff1f-a549-4eed-aeb4-4e1b0c72648d",
+              "content": "既往提及多囊卵巢综合征（PCOS）",
+              "timestamp": 1771493278.5620542,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5803c4c-4da8-47cc-9053-03edac3c18a2",
+              "content": "心脏超声提示：可能二尖瓣前叶裂（无明显症状）；医生建议评估二尖瓣返流程度，若不重可不治疗",
+              "timestamp": 1771493278.5620618,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "e5b70baf-4b47-410e-a437-fe51c29eefa4",
+              "content": "既往诊断：汗疱性湿疹（由医生诊断）",
+              "timestamp": 1771493305.7156742,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "047f4992-c87d-4846-8d48-2c8188296278",
+              "content": "就诊史：曾在云南中山医院、四川省凉山州第一/第二医院及州中西医结合就诊；曾外用/口服多种西药与中药，疗效不明显",
+              "timestamp": 1771493305.7156832,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f83e90d1-2818-4b05-9997-fe6f5eabaf2c",
+              "content": "当前医生建议：首次最好到医院面诊后再准确用药",
+              "timestamp": 1771493318.8303292,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "66f6fb18-71cf-4247-bc4f-e186b7ebe58d",
+              "content": "斑秃治疗建议：可注射一段时间卡介菌素或胎盘组织注射液",
+              "timestamp": 1771493335.7985868,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "3bd13e9e-6d45-475f-a5fe-70a60f4e189d",
+              "content": "颈后肿块病史约20余年；曾在蚌埠市第一人民医院就诊，B超提示脂肪瘤；医生建议不需手术",
+              "timestamp": 1771493348.2020738,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "针对患者描述的颈后肿块及既往就诊结论，为避免遗漏风险，医生当时建议追加做哪一种影像学检查来进一步明确情况？这与之前“无需处理”的结论是否可能存在需要核对的地方？",
+          "answer": "医生建议进行磁共振（MRI）检查以进一步明确颈后肿块情况。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "e5b70baf-4b47-410e-a437-fe51c29eefa4"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "0245fb02-30e5-4efc-a14b-7915f9f3e58d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            7,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "e9d9492a-684d-481b-8698-b47ca0381bea",
+              "content": "患者为8岁男孩",
+              "timestamp": 1771493325.0065882,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "b4ecff1f-a549-4eed-aeb4-4e1b0c72648d",
+              "content": "既往提及多囊卵巢综合征（PCOS）",
+              "timestamp": 1771493278.5620542,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5803c4c-4da8-47cc-9053-03edac3c18a2",
+              "content": "心脏超声提示：可能二尖瓣前叶裂（无明显症状）；医生建议评估二尖瓣返流程度，若不重可不治疗",
+              "timestamp": 1771493278.5620618,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "e5b70baf-4b47-410e-a437-fe51c29eefa4",
+              "content": "既往诊断：汗疱性湿疹（由医生诊断）",
+              "timestamp": 1771493305.7156742,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "047f4992-c87d-4846-8d48-2c8188296278",
+              "content": "就诊史：曾在云南中山医院、四川省凉山州第一/第二医院及州中西医结合就诊；曾外用/口服多种西药与中药，疗效不明显",
+              "timestamp": 1771493305.7156832,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f83e90d1-2818-4b05-9997-fe6f5eabaf2c",
+              "content": "当前医生建议：首次最好到医院面诊后再准确用药",
+              "timestamp": 1771493318.8303292,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "66f6fb18-71cf-4247-bc4f-e186b7ebe58d",
+              "content": "斑秃治疗建议：可注射一段时间卡介菌素或胎盘组织注射液",
+              "timestamp": 1771493335.7985868,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "3bd13e9e-6d45-475f-a5fe-70a60f4e189d",
+              "content": "颈后肿块病史约20余年；曾在蚌埠市第一人民医院就诊，B超提示脂肪瘤；医生建议不需手术",
+              "timestamp": 1771493348.2020738,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "没有，",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "e9d9492a-684d-481b-8698-b47ca0381bea",
+              "content": "患者为8岁男孩",
+              "timestamp": 1771493325.0065882,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "b4ecff1f-a549-4eed-aeb4-4e1b0c72648d",
+              "content": "既往提及多囊卵巢综合征（PCOS）",
+              "timestamp": 1771493278.5620542,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5803c4c-4da8-47cc-9053-03edac3c18a2",
+              "content": "心脏超声提示：可能二尖瓣前叶裂（无明显症状）；医生建议评估二尖瓣返流程度，若不重可不治疗",
+              "timestamp": 1771493278.5620618,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "e5b70baf-4b47-410e-a437-fe51c29eefa4",
+              "content": "既往诊断：汗疱性湿疹（由医生诊断）",
+              "timestamp": 1771493305.7156742,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "047f4992-c87d-4846-8d48-2c8188296278",
+              "content": "就诊史：曾在云南中山医院、四川省凉山州第一/第二医院及州中西医结合就诊；曾外用/口服多种西药与中药，疗效不明显",
+              "timestamp": 1771493305.7156832,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f83e90d1-2818-4b05-9997-fe6f5eabaf2c",
+              "content": "当前医生建议：首次最好到医院面诊后再准确用药",
+              "timestamp": 1771493318.8303292,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "66f6fb18-71cf-4247-bc4f-e186b7ebe58d",
+              "content": "斑秃治疗建议：可注射一段时间卡介菌素或胎盘组织注射液",
+              "timestamp": 1771493335.7985868,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "3bd13e9e-6d45-475f-a5fe-70a60f4e189d",
+              "content": "颈后肿块病史约20余年；曾在蚌埠市第一人民医院就诊，B超提示脂肪瘤；医生建议不需手术",
+              "timestamp": 1771493348.2020738,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "回顾孩子就“头皮局部脱发”问题咨询时：医生当时给出的治疗方案里，提到需要连续进行一段时间的注射治疗。请写出这两种被提到的注射制剂名称，并说明它们对应的是哪次咨询提出的。",
+          "answer": "斑秃治疗建议：可注射一段时间卡介菌素或胎盘组织注射液（记录于第10轮）。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b5803c4c-4da8-47cc-9053-03edac3c18a2",
+                "66f6fb18-71cf-4247-bc4f-e186b7ebe58d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            12,
+            5
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "祛疤的方法有很多，这样回答非常困难，应知道瘢痕的大小、形状、部位等才能较为准确的回答。如是刚手术或外伤后不久的瘢痕可应用疤痕敌或康瑞保等，如超过半年请方便时前来就诊或照片或描述准确后再给予答复。",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "e9d9492a-684d-481b-8698-b47ca0381bea",
+              "content": "患者为8岁男孩",
+              "timestamp": 1771493325.0065882,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "b4ecff1f-a549-4eed-aeb4-4e1b0c72648d",
+              "content": "既往提及多囊卵巢综合征（PCOS）",
+              "timestamp": 1771493278.5620542,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5803c4c-4da8-47cc-9053-03edac3c18a2",
+              "content": "心脏超声提示：可能二尖瓣前叶裂（无明显症状）；医生建议评估二尖瓣返流程度，若不重可不治疗",
+              "timestamp": 1771493278.5620618,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "e5b70baf-4b47-410e-a437-fe51c29eefa4",
+              "content": "既往诊断：汗疱性湿疹（由医生诊断）",
+              "timestamp": 1771493305.7156742,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "047f4992-c87d-4846-8d48-2c8188296278",
+              "content": "就诊史：曾在云南中山医院、四川省凉山州第一/第二医院及州中西医结合就诊；曾外用/口服多种西药与中药，疗效不明显",
+              "timestamp": 1771493305.7156832,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f83e90d1-2818-4b05-9997-fe6f5eabaf2c",
+              "content": "当前医生建议：首次最好到医院面诊后再准确用药",
+              "timestamp": 1771493318.8303292,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "66f6fb18-71cf-4247-bc4f-e186b7ebe58d",
+              "content": "斑秃治疗建议：可注射一段时间卡介菌素或胎盘组织注射液",
+              "timestamp": 1771493335.7985868,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "3bd13e9e-6d45-475f-a5fe-70a60f4e189d",
+              "content": "颈后肿块病史约20余年；曾在蚌埠市第一人民医院就诊，B超提示脂肪瘤；医生建议不需手术",
+              "timestamp": 1771493348.2020738,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "在既往病史中，患者曾被提及患有什么内分泌/妇科相关的综合征？",
+          "answer": "多囊卵巢综合征（PCOS）",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b4ecff1f-a549-4eed-aeb4-4e1b0c72648d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            13
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "您好  谢谢您   我发张相片  麻烦你看看   需要多少钱。王大夫 你好 缝针后红色的疤印还能去掉吗？有20多年了。需要花多少钱？",
+        "to_memory": [
+          "history: 颈后肿块病史20多年；曾在蚌埠市人民医院就诊；B超提示脂肪瘤，医生曾建议不需手术；医生曾建议做磁共振明确",
+          "working: 主诉缝针后红色疤印（瘢痕）已20多年，咨询能否去除及大概费用，计划发送照片供评估"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "9135a39f-c029-4e03-a86c-0698c1c086d8",
+              "content": "主诉缝针后红色疤印（瘢痕）已20多年，咨询能否去除及大概费用，计划发送照片供评估",
+              "timestamp": 1771493376.6027298,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "identity": [
+            {
+              "id": "e9d9492a-684d-481b-8698-b47ca0381bea",
+              "content": "患者为8岁男孩",
+              "timestamp": 1771493325.0065882,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "b4ecff1f-a549-4eed-aeb4-4e1b0c72648d",
+              "content": "既往提及多囊卵巢综合征（PCOS）",
+              "timestamp": 1771493278.5620542,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5803c4c-4da8-47cc-9053-03edac3c18a2",
+              "content": "心脏超声提示：可能二尖瓣前叶裂（无明显症状）；医生建议评估二尖瓣返流程度，若不重可不治疗",
+              "timestamp": 1771493278.5620618,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "e5b70baf-4b47-410e-a437-fe51c29eefa4",
+              "content": "既往诊断：汗疱性湿疹（由医生诊断）",
+              "timestamp": 1771493305.7156742,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "047f4992-c87d-4846-8d48-2c8188296278",
+              "content": "就诊史：曾在云南中山医院、四川省凉山州第一/第二医院及州中西医结合就诊；曾外用/口服多种西药与中药，疗效不明显",
+              "timestamp": 1771493305.7156832,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f83e90d1-2818-4b05-9997-fe6f5eabaf2c",
+              "content": "当前医生建议：首次最好到医院面诊后再准确用药",
+              "timestamp": 1771493318.8303292,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "66f6fb18-71cf-4247-bc4f-e186b7ebe58d",
+              "content": "斑秃治疗建议：可注射一段时间卡介菌素或胎盘组织注射液",
+              "timestamp": 1771493335.7985868,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "3bd13e9e-6d45-475f-a5fe-70a60f4e189d",
+              "content": "颈后肿块病史20多年；曾在蚌埠市人民医院就诊；B超提示脂肪瘤，医生曾建议不需手术；医生曾建议做磁共振进一步明确",
+              "timestamp": 1771493348.2020738,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "结合患者更早之前多次就医的经历与本次就诊的诉求相比：患者这次主要是为了解决哪一种既往处理后仍存在的问题，并希望医生下一步如何进行评估？",
+          "answer": "主诉缝针后红色疤印（瘢痕）已20多年，咨询能否去除及大概费用，计划发送照片供评估",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "047f4992-c87d-4846-8d48-2c8188296278"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "9135a39f-c029-4e03-a86c-0698c1c086d8"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            11,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "这个只能减轻，减轻程度与做的次数多少有关。。可做点阵激光。一次约300左右，具体看后才能确定。",
+        "to_memory": [
+          "history: 医生评估：20多年缝针后红色疤印只能减轻，减轻程度与治疗次数相关；可考虑点阵激光治疗",
+          "history: 费用信息：点阵激光约300元/次，具体需面诊后确定"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "9135a39f-c029-4e03-a86c-0698c1c086d8",
+              "content": "主诉缝针后红色疤印（瘢痕）已20多年，咨询能否去除及大概费用，计划发送照片供评估；医生评估：只能减轻，减轻程度与治疗次数相关，可考虑点阵激光治疗；费用：点阵激光约300元/次，具体需面诊后确定",
+              "timestamp": 1771493376.6027298,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "identity": [
+            {
+              "id": "e9d9492a-684d-481b-8698-b47ca0381bea",
+              "content": "患者为8岁男孩",
+              "timestamp": 1771493325.0065882,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "b4ecff1f-a549-4eed-aeb4-4e1b0c72648d",
+              "content": "既往提及多囊卵巢综合征（PCOS）",
+              "timestamp": 1771493278.5620542,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5803c4c-4da8-47cc-9053-03edac3c18a2",
+              "content": "心脏超声提示：可能二尖瓣前叶裂（无明显症状）；医生建议评估二尖瓣返流程度，若不重可不治疗",
+              "timestamp": 1771493278.5620618,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "e5b70baf-4b47-410e-a437-fe51c29eefa4",
+              "content": "既往诊断：汗疱性湿疹（由医生诊断）",
+              "timestamp": 1771493305.7156742,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "047f4992-c87d-4846-8d48-2c8188296278",
+              "content": "就诊史：曾在云南中山医院、四川省凉山州第一/第二医院及州中西医结合就诊；曾外用/口服多种西药与中药，疗效不明显",
+              "timestamp": 1771493305.7156832,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f83e90d1-2818-4b05-9997-fe6f5eabaf2c",
+              "content": "当前医生建议：首次最好到医院面诊后再准确用药",
+              "timestamp": 1771493318.8303292,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "66f6fb18-71cf-4247-bc4f-e186b7ebe58d",
+              "content": "斑秃治疗建议：可注射一段时间卡介菌素或胎盘组织注射液",
+              "timestamp": 1771493335.7985868,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "3bd13e9e-6d45-475f-a5fe-70a60f4e189d",
+              "content": "颈后肿块病史20多年；曾在蚌埠市人民医院就诊；B超提示脂肪瘤，医生曾建议不需手术；医生曾建议做磁共振进一步明确",
+              "timestamp": 1771493348.2020738,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "chronic_followup",
+    "scenario_name": "慢性病随访管理",
+    "session_count": 6,
+    "group_key": "综合科"
+  }
+}

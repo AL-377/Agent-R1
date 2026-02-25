@@ -1,0 +1,1487 @@
+{
+  "patient_id": "45c74ffde1d1",
+  "messages": [
+    {
+      "user": {
+        "content": "下眼睑外起了一个红色的肿包，前一月有过很小，过两天就好了，最近三天红肿地大了，还没有下去，不疼，不痒。",
+        "to_memory": [
+          "working: 下眼睑外侧出现红色肿包；约1个月前曾出现很小的同类肿包，2天自愈；近3天红肿变大且未消退；无疼痛、无瘙痒"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ea1a8a08-f419-4baf-8bb3-685c85c683a9",
+              "content": "下眼睑外侧出现红色肿包；约1个月前曾出现很小的同类肿包，2天自愈；近3天红肿变大且未消退；无疼痛、无瘙痒",
+              "timestamp": 1771494729.787131,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者这次描述的眼部问题出现后，最近持续了多长时间仍未消退？",
+          "answer": "最近三天仍未消退",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "ea1a8a08-f419-4baf-8bb3-685c85c683a9"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "建议就诊。",
+        "to_memory": [
+          "history: 医生建议就诊",
+          "working: 主诉下眼睑外侧红色肿包；约1个月前曾出现很小的类似肿包2天自愈；近3天红肿增大未消退；不疼不痒"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ea1a8a08-f419-4baf-8bb3-685c85c683a9",
+              "content": "下眼睑外侧出现红色肿包；约1个月前曾出现很小的同类肿包，2天自愈；近3天红肿变大且未消退；无疼痛、无瘙痒",
+              "timestamp": 1771494729.787131,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "e5c124f5-6422-4a70-8b17-ee1921005663",
+              "content": "医生建议就诊",
+              "timestamp": 1771494735.3974528,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者这次咨询中描述的主要不适情况是什么？",
+          "answer": "下眼睑外侧出现红色肿包；约1个月前曾出现很小的同类肿包，2天自愈；近3天红肿变大且未消退；无疼痛、无瘙痒",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "ea1a8a08-f419-4baf-8bb3-685c85c683a9"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "e5c124f5-6422-4a70-8b17-ee1921005663",
+              "content": "医生建议就诊",
+              "timestamp": 1771494735.3974528,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "肠痉挛，肚子经常疼，头晕，看不清字。",
+        "to_memory": [
+          "working: 主诉肠痉挛，肚子经常疼",
+          "working: 伴随头晕、看不清字（视物模糊）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "6d0d34d5-9296-4776-b926-8271e9269bd5",
+              "content": "主诉肠痉挛，肚子经常疼",
+              "timestamp": 1771494740.3619206,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "0706aa63-755b-405f-9204-250dabe5f97c",
+              "content": "伴随头晕、看不清字（视物模糊）",
+              "timestamp": 1771494740.361936,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "e5c124f5-6422-4a70-8b17-ee1921005663",
+              "content": "医生建议就诊",
+              "timestamp": 1771494735.3974528,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "医生在患者首次描述眼部情况后给出的首要处理建议是什么？这条建议是否提示需要优先排查潜在风险？请说明。",
+          "answer": "建议就诊。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "6d0d34d5-9296-4776-b926-8271e9269bd5"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "e5c124f5-6422-4a70-8b17-ee1921005663"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "拍一个腹部立位平片看一下。",
+        "to_memory": [
+          "working: 主诉肠痉挛/腹痛，经常肚子疼，伴头晕、看不清字",
+          "history: 医生建议拍腹部立位平片检查"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "6d0d34d5-9296-4776-b926-8271e9269bd5",
+              "content": "主诉肠痉挛/腹痛，经常肚子疼",
+              "timestamp": 1771494740.3619206,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "0706aa63-755b-405f-9204-250dabe5f97c",
+              "content": "伴随头晕、看不清字（视物模糊）",
+              "timestamp": 1771494740.361936,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "e5c124f5-6422-4a70-8b17-ee1921005663",
+              "content": "医生建议拍腹部立位平片检查",
+              "timestamp": 1771494735.3974528,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "针对患者本次就诊记录中的腹部不适相关主诉，医生当时安排了哪一项影像学检查？这项安排与患者当前描述是否存在需要核对的矛盾或安全隐患？请指出需要核对的点。",
+          "answer": "拍腹部立位平片；患者主诉为肠痉挛/经常腹痛，需要核对该检查安排与主诉是否匹配及是否存在安全隐患。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "6d0d34d5-9296-4776-b926-8271e9269bd5"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "e5c124f5-6422-4a70-8b17-ee1921005663"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "e5c124f5-6422-4a70-8b17-ee1921005663",
+              "content": "医生建议拍腹部立位平片检查",
+              "timestamp": 1771494735.3974528,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "耻骨上下肢骨折，髋臼骨折，髂骨骨折、，2010年5月5日晚上车祸导致右侧耻骨上下肢骨折、髂骨骨折、髋臼骨节、耻骨联合骨折。",
+        "to_memory": [
+          "history: 2010-05-05晚车祸致右侧耻骨上下支骨折、髂骨骨折、髋臼骨折、耻骨联合骨折"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "e5c124f5-6422-4a70-8b17-ee1921005663",
+              "content": "医生建议拍腹部立位平片检查",
+              "timestamp": 1771494735.3974528,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b0cd9da6-5483-4928-8a11-a2fd65b16149",
+              "content": "2010-05-05晚车祸致右侧耻骨上下支骨折、髂骨骨折、髋臼骨折、耻骨联合骨折",
+              "timestamp": 1771494756.3744135,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "针对患者这次提出的腹部不适与头晕视物不清，医生当时建议先做哪一项影像学检查以排查问题？",
+          "answer": "拍腹部立位平片检查。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "e5c124f5-6422-4a70-8b17-ee1921005663",
+                "b0cd9da6-5483-4928-8a11-a2fd65b16149"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            5,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你的情况属于髋臼骨折后的骨不连，需要重新进行手术治疗，否则髋臼的不平整会导致股骨头的磨损，从而会使股骨头出现早期的坏死。",
+        "to_memory": [
+          "history: 2010-05-05车祸致右侧耻骨上下肢骨折、髂骨骨折、髋臼骨折、耻骨联合骨折",
+          "history: 医生判断为髋臼骨折后骨不连，建议重新手术治疗；否则髋臼不平整可致股骨头磨损并可能出现早期坏死"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "e5c124f5-6422-4a70-8b17-ee1921005663",
+              "content": "医生建议拍腹部立位平片检查",
+              "timestamp": 1771494735.3974528,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b0cd9da6-5483-4928-8a11-a2fd65b16149",
+              "content": "2010-05-05晚车祸致右侧耻骨上下支骨折、髂骨骨折、髋臼骨折、耻骨联合骨折",
+              "timestamp": 1771494756.3744135,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d8cc29c5-44bf-4a3f-951a-63009830317d",
+              "content": "医生判断为髋臼骨折后骨不连，建议重新手术治疗；否则髋臼不平整可致股骨头磨损并可能出现早期坏死",
+              "timestamp": 1771494762.10125,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "医生在对话开始时让患者去做的影像学检查具体是什么？",
+          "answer": "腹部立位平片",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "e5c124f5-6422-4a70-8b17-ee1921005663"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "目前CT检查的结果是髋臼有裂缝，两端已经硬化，这里的医生说裂缝不在完全的负重区（不在髋臼顶），可以不用管他，是这样的吗？",
+        "to_memory": [
+          "history: 2010-05-05车祸致右侧耻骨上下肢骨折、髂骨骨折、髋臼骨折、耻骨联合骨折",
+          "history: 既往医生意见：考虑髋臼骨折后骨不连，建议重新手术治疗，否则可能导致髋臼不平整、股骨头磨损及早期坏死风险",
+          "history: 目前CT结果：髋臼存在裂缝，裂缝两端已硬化；裂缝不在完全负重区（不在髋臼顶）",
+          "working: 患者询问：髋臼裂缝不在完全负重区是否可以不处理/不用管"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "76d77995-aa29-4648-bfb9-99bc08196203",
+              "content": "患者询问：髋臼裂缝不在完全负重区是否可以不处理/不用管",
+              "timestamp": 1771494771.4906049,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "e5c124f5-6422-4a70-8b17-ee1921005663",
+              "content": "医生建议拍腹部立位平片检查",
+              "timestamp": 1771494735.3974528,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b0cd9da6-5483-4928-8a11-a2fd65b16149",
+              "content": "2010-05-05晚车祸致右侧耻骨上下支骨折、髂骨骨折、髋臼骨折、耻骨联合骨折",
+              "timestamp": 1771494756.3744135,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d8cc29c5-44bf-4a3f-951a-63009830317d",
+              "content": "医生判断为髋臼骨折后骨不连，建议重新手术治疗；否则髋臼不平整可致股骨头磨损并可能出现早期坏死",
+              "timestamp": 1771494762.10125,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "bfe9bd97-7635-4b35-aa91-a6809b951445",
+              "content": "目前CT结果：髋臼存在裂缝，裂缝两端已硬化；裂缝不在完全负重区（不在髋臼顶）",
+              "timestamp": 1771494771.4905958,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "我建议还是手术治疗为好，否则后期会导致股骨头的无菌性坏死。",
+        "to_memory": [
+          "history: 2010-05-05车祸致右侧耻骨上下肢骨折、髂骨骨折、髋臼骨折、耻骨联合骨折；目前考虑髋臼骨折后骨不连，CT示髋臼裂缝两端硬化；医生建议手术治疗以免后期股骨头磨损并发生无菌性坏死",
+          "working: 患者疑问：髋臼裂缝不在完全负重区（不在髋臼顶）是否可以不处理"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "76d77995-aa29-4648-bfb9-99bc08196203",
+              "content": "患者询问：髋臼裂缝不在完全负重区是否可以不处理/不用管",
+              "timestamp": 1771494771.4906049,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "e5c124f5-6422-4a70-8b17-ee1921005663",
+              "content": "医生建议拍腹部立位平片检查",
+              "timestamp": 1771494735.3974528,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b0cd9da6-5483-4928-8a11-a2fd65b16149",
+              "content": "2010-05-05晚车祸致右侧耻骨上下支骨折、髂骨骨折、髋臼骨折、耻骨联合骨折",
+              "timestamp": 1771494756.3744135,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d8cc29c5-44bf-4a3f-951a-63009830317d",
+              "content": "医生判断为髋臼骨折后骨不连，建议重新手术治疗；否则髋臼不平整可致股骨头磨损并可能出现早期坏死",
+              "timestamp": 1771494762.10125,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "bfe9bd97-7635-4b35-aa91-a6809b951445",
+              "content": "目前CT结果：髋臼存在裂缝，裂缝两端已硬化；裂缝不在完全负重区（不在髋臼顶）",
+              "timestamp": 1771494771.4905958,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在本次对话中，患者曾提到当地医生对某项影像检查结果给出了“可能不需要处理”的意见；患者具体是在询问哪一种“是否可以不用处理”的情况？",
+          "answer": "患者询问：髋臼裂缝不在完全负重区（不在髋臼顶）是否可以不用管/不处理。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "e5c124f5-6422-4a70-8b17-ee1921005663"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "76d77995-aa29-4648-bfb9-99bc08196203"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            8,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "e5c124f5-6422-4a70-8b17-ee1921005663",
+              "content": "医生建议拍腹部立位平片检查",
+              "timestamp": 1771494735.3974528,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b0cd9da6-5483-4928-8a11-a2fd65b16149",
+              "content": "2010-05-05晚车祸致右侧耻骨上下支骨折、髂骨骨折、髋臼骨折、耻骨联合骨折",
+              "timestamp": 1771494756.3744135,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d8cc29c5-44bf-4a3f-951a-63009830317d",
+              "content": "医生判断为髋臼骨折后骨不连，建议重新手术治疗；否则髋臼不平整可致股骨头磨损并可能出现早期坏死",
+              "timestamp": 1771494762.10125,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "bfe9bd97-7635-4b35-aa91-a6809b951445",
+              "content": "目前CT结果：髋臼存在裂缝，裂缝两端已硬化；裂缝不在完全负重区（不在髋臼顶）",
+              "timestamp": 1771494771.4905958,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "脂肪肝，男，35岁，体重偏胖，偶尔喝酒，酒后感觉肝部不舒服，一年前为中度脂肪肝，谷丙转氨酶104，现为中度偏重脂肪肝，服用护肝片一年后谷丙转氨酶降至70，常感觉口干，未在医院治疗过。",
+        "to_memory": [
+          "identity: 患者男，35岁，体重偏胖，偶尔饮酒",
+          "history: 1年前诊断中度脂肪肝，ALT(谷丙转氨酶)104U/L；目前为中度偏重脂肪肝；口服护肝片约1年后ALT降至70U/L；未在医院系统治疗过",
+          "working: 酒后感觉肝部不舒服；常感觉口干"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "65470a5a-5e7f-4da1-a44f-c21f61957e87",
+              "content": "酒后感觉肝部不舒服；常感觉口干",
+              "timestamp": 1771494783.2022598,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "identity": [
+            {
+              "id": "9c086ba2-cab4-4b20-b218-869cfc7ebc4a",
+              "content": "患者男，35岁，体重偏胖，偶尔饮酒",
+              "timestamp": 1771494783.2022452,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "e5c124f5-6422-4a70-8b17-ee1921005663",
+              "content": "医生建议拍腹部立位平片检查",
+              "timestamp": 1771494735.3974528,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b0cd9da6-5483-4928-8a11-a2fd65b16149",
+              "content": "2010-05-05晚车祸致右侧耻骨上下支骨折、髂骨骨折、髋臼骨折、耻骨联合骨折",
+              "timestamp": 1771494756.3744135,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d8cc29c5-44bf-4a3f-951a-63009830317d",
+              "content": "医生判断为髋臼骨折后骨不连，建议重新手术治疗；否则髋臼不平整可致股骨头磨损并可能出现早期坏死",
+              "timestamp": 1771494762.10125,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "bfe9bd97-7635-4b35-aa91-a6809b951445",
+              "content": "目前CT结果：髋臼存在裂缝，裂缝两端已硬化；裂缝不在完全负重区（不在髋臼顶）",
+              "timestamp": 1771494771.4905958,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "9b617bf9-00e8-4f9d-b726-a78051c5ceaa",
+              "content": "1年前诊断中度脂肪肝，ALT(谷丙转氨酶)104U/L；目前为中度偏重脂肪肝；口服护肝片约1年后ALT降至70U/L；未在医院系统治疗过",
+              "timestamp": 1771494783.2022548,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "禁酒保肝,营养平恒.",
+        "to_memory": [
+          "history: 医生建议禁酒、保肝治疗，注意营养均衡"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "65470a5a-5e7f-4da1-a44f-c21f61957e87",
+              "content": "酒后感觉肝部不舒服；常感觉口干",
+              "timestamp": 1771494783.2022598,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "identity": [
+            {
+              "id": "9c086ba2-cab4-4b20-b218-869cfc7ebc4a",
+              "content": "患者男，35岁，体重偏胖，偶尔饮酒",
+              "timestamp": 1771494783.2022452,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "e5c124f5-6422-4a70-8b17-ee1921005663",
+              "content": "医生建议拍腹部立位平片检查",
+              "timestamp": 1771494735.3974528,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b0cd9da6-5483-4928-8a11-a2fd65b16149",
+              "content": "2010-05-05晚车祸致右侧耻骨上下支骨折、髂骨骨折、髋臼骨折、耻骨联合骨折",
+              "timestamp": 1771494756.3744135,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d8cc29c5-44bf-4a3f-951a-63009830317d",
+              "content": "医生判断为髋臼骨折后骨不连，建议重新手术治疗；否则髋臼不平整可致股骨头磨损并可能出现早期坏死",
+              "timestamp": 1771494762.10125,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "bfe9bd97-7635-4b35-aa91-a6809b951445",
+              "content": "目前CT结果：髋臼存在裂缝，裂缝两端已硬化；裂缝不在完全负重区（不在髋臼顶）",
+              "timestamp": 1771494771.4905958,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "9b617bf9-00e8-4f9d-b726-a78051c5ceaa",
+              "content": "1年前诊断中度脂肪肝，ALT(谷丙转氨酶)104U/L；目前为中度偏重脂肪肝；口服护肝片约1年后ALT降至70U/L；未在医院系统治疗过",
+              "timestamp": 1771494783.2022548,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc0c88ed-bf80-448c-a58e-a4f9489cb4ca",
+              "content": "医生建议禁酒、保肝治疗，并注意营养均衡",
+              "timestamp": 1771494787.134087,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "医生在这次交流中建议患者去做哪一项影像学检查来进一步评估腹部情况？",
+          "answer": "拍腹部立位平片检查",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "e5c124f5-6422-4a70-8b17-ee1921005663"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            11
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "郭大夫：谢谢！因工作关系，长期驻外，完全禁酒不可能，目前已尽量少喝酒，短期内也不能前去就诊，吃什么药有利于保肝，中药或保健茶能否给推荐一下，以稳定病情。",
+        "to_memory": [
+          "identity: 男，35岁，体重偏胖，偶尔饮酒（因工作长期驻外，短期内无法完全禁酒，仅能尽量少喝）",
+          "history: 诊断为中度脂肪肝进展至中度偏重脂肪肝；一年前谷丙转氨酶（ALT）104，服用护肝片一年后ALT降至70；曾用护肝片1年；医生建议禁酒保肝、营养平衡",
+          "working: 目前无法短期就诊，咨询吃什么药有利于保肝；询问是否可推荐中药或保健茶以稳定病情"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "65470a5a-5e7f-4da1-a44f-c21f61957e87",
+              "content": "酒后感觉肝部不舒服；常感觉口干",
+              "timestamp": 1771494783.2022598,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "54fc7b3f-3a67-4976-9c8f-c1802158a1ca",
+              "content": "目前无法短期就诊，咨询吃什么药有利于保肝；询问是否可推荐中药或保健茶以稳定病情",
+              "timestamp": 1771494795.989131,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "identity": [
+            {
+              "id": "9c086ba2-cab4-4b20-b218-869cfc7ebc4a",
+              "content": "患者男，35岁，体重偏胖；偶尔饮酒（因工作长期驻外，短期内无法完全禁酒，仅能尽量少喝）",
+              "timestamp": 1771494783.2022452,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "e5c124f5-6422-4a70-8b17-ee1921005663",
+              "content": "医生建议拍腹部立位平片检查",
+              "timestamp": 1771494735.3974528,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b0cd9da6-5483-4928-8a11-a2fd65b16149",
+              "content": "2010-05-05晚车祸致右侧耻骨上下支骨折、髂骨骨折、髋臼骨折、耻骨联合骨折",
+              "timestamp": 1771494756.3744135,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d8cc29c5-44bf-4a3f-951a-63009830317d",
+              "content": "医生判断为髋臼骨折后骨不连，建议重新手术治疗；否则髋臼不平整可致股骨头磨损并可能出现早期坏死",
+              "timestamp": 1771494762.10125,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "bfe9bd97-7635-4b35-aa91-a6809b951445",
+              "content": "目前CT结果：髋臼存在裂缝，裂缝两端已硬化；裂缝不在完全负重区（不在髋臼顶）",
+              "timestamp": 1771494771.4905958,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "9b617bf9-00e8-4f9d-b726-a78051c5ceaa",
+              "content": "诊断为中度脂肪肝进展至中度偏重脂肪肝；一年前ALT 104U/L，口服护肝片约1年后ALT降至70U/L；曾用护肝片1年；未在医院系统治疗过",
+              "timestamp": 1771494783.2022548,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc0c88ed-bf80-448c-a58e-a4f9489cb4ca",
+              "content": "医生建议禁酒保肝、注意营养均衡",
+              "timestamp": 1771494787.134087,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "医生对患者既往某处骨折恢复情况作出了什么具体诊断，并针对该问题提出了哪项处理建议？",
+          "answer": "判断为髋臼骨折后骨不连，建议重新手术治疗",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "d8cc29c5-44bf-4a3f-951a-63009830317d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "水飞蓟宾胶囊或片剂.肝得健都可以,选一种.",
+        "to_memory": [
+          "history: 医生建议保肝治疗可选用水飞蓟宾胶囊/片剂或肝得健，二选一"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "65470a5a-5e7f-4da1-a44f-c21f61957e87",
+              "content": "酒后感觉肝部不舒服；常感觉口干",
+              "timestamp": 1771494783.2022598,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "54fc7b3f-3a67-4976-9c8f-c1802158a1ca",
+              "content": "目前无法短期就诊，咨询吃什么药有利于保肝；询问是否可推荐中药或保健茶以稳定病情",
+              "timestamp": 1771494795.989131,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "identity": [
+            {
+              "id": "9c086ba2-cab4-4b20-b218-869cfc7ebc4a",
+              "content": "患者男，35岁，体重偏胖；偶尔饮酒（因工作长期驻外，短期内无法完全禁酒，仅能尽量少喝）",
+              "timestamp": 1771494783.2022452,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "e5c124f5-6422-4a70-8b17-ee1921005663",
+              "content": "医生建议拍腹部立位平片检查",
+              "timestamp": 1771494735.3974528,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b0cd9da6-5483-4928-8a11-a2fd65b16149",
+              "content": "2010-05-05晚车祸致右侧耻骨上下支骨折、髂骨骨折、髋臼骨折、耻骨联合骨折",
+              "timestamp": 1771494756.3744135,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d8cc29c5-44bf-4a3f-951a-63009830317d",
+              "content": "医生判断为髋臼骨折后骨不连，建议重新手术治疗；否则髋臼不平整可致股骨头磨损并可能出现早期坏死",
+              "timestamp": 1771494762.10125,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "bfe9bd97-7635-4b35-aa91-a6809b951445",
+              "content": "目前CT结果：髋臼存在裂缝，裂缝两端已硬化；裂缝不在完全负重区（不在髋臼顶）",
+              "timestamp": 1771494771.4905958,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "9b617bf9-00e8-4f9d-b726-a78051c5ceaa",
+              "content": "诊断为中度脂肪肝进展至中度偏重脂肪肝；一年前ALT 104U/L，口服护肝片约1年后ALT降至70U/L；曾用护肝片1年；未在医院系统治疗过",
+              "timestamp": 1771494783.2022548,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc0c88ed-bf80-448c-a58e-a4f9489cb4ca",
+              "content": "医生建议禁酒保肝、注意营养均衡",
+              "timestamp": 1771494787.134087,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "e9433e8c-fec8-4bbe-9ef8-759d26b0dc90",
+              "content": "医生建议保肝治疗可选用水飞蓟宾胶囊/片剂或肝得健，二选一",
+              "timestamp": 1771494802.8231542,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "回顾第一段就诊与后面关于肝脏问题的咨询：在早期那次就诊中，医生曾建议患者做哪一项影像学检查？而在后一次咨询里，患者因何种就诊限制而改为线上询问用药与调理？",
+          "answer": "第一段就诊医生建议拍腹部立位平片检查；后一次咨询患者表示短期内无法前去就诊（长期驻外），因此线上询问保肝用药及中药/保健茶。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "e5c124f5-6422-4a70-8b17-ee1921005663"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "54fc7b3f-3a67-4976-9c8f-c1802158a1ca"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            13,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "9c086ba2-cab4-4b20-b218-869cfc7ebc4a",
+              "content": "患者男，35岁，体重偏胖；偶尔饮酒（因工作长期驻外，短期内无法完全禁酒，仅能尽量少喝）",
+              "timestamp": 1771494783.2022452,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "e5c124f5-6422-4a70-8b17-ee1921005663",
+              "content": "医生建议拍腹部立位平片检查",
+              "timestamp": 1771494735.3974528,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b0cd9da6-5483-4928-8a11-a2fd65b16149",
+              "content": "2010-05-05晚车祸致右侧耻骨上下支骨折、髂骨骨折、髋臼骨折、耻骨联合骨折",
+              "timestamp": 1771494756.3744135,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d8cc29c5-44bf-4a3f-951a-63009830317d",
+              "content": "医生判断为髋臼骨折后骨不连，建议重新手术治疗；否则髋臼不平整可致股骨头磨损并可能出现早期坏死",
+              "timestamp": 1771494762.10125,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "bfe9bd97-7635-4b35-aa91-a6809b951445",
+              "content": "目前CT结果：髋臼存在裂缝，裂缝两端已硬化；裂缝不在完全负重区（不在髋臼顶）",
+              "timestamp": 1771494771.4905958,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "9b617bf9-00e8-4f9d-b726-a78051c5ceaa",
+              "content": "诊断为中度脂肪肝进展至中度偏重脂肪肝；一年前ALT 104U/L，口服护肝片约1年后ALT降至70U/L；曾用护肝片1年；未在医院系统治疗过",
+              "timestamp": 1771494783.2022548,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc0c88ed-bf80-448c-a58e-a4f9489cb4ca",
+              "content": "医生建议禁酒保肝、注意营养均衡",
+              "timestamp": 1771494787.134087,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "e9433e8c-fec8-4bbe-9ef8-759d26b0dc90",
+              "content": "医生建议保肝治疗可选用水飞蓟宾胶囊/片剂或肝得健，二选一",
+              "timestamp": 1771494802.8231542,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "颈椎增生，颈椎左侧疼痛，且左肩肿胀疼痛，右半身接触性刺痛，双手拇指与食指肿胀感，有时发麻，四肢乏力，右脚发凉。另，右腿腿肚有静脉曲张。",
+        "to_memory": [
+          "history: 既往诊断/情况：颈椎增生",
+          "history: 既往诊断/情况：右腿腿肚静脉曲张",
+          "working: 本次主诉/症状：颈椎左侧疼痛，左肩肿胀疼痛",
+          "working: 本次主诉/症状：右半身接触性刺痛",
+          "working: 本次主诉/症状：双手拇指与食指肿胀感，有时发麻",
+          "working: 本次主诉/症状：四肢乏力，右脚发凉"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "430379da-bd9f-46cb-b344-a871597eda04",
+              "content": "本次主诉/症状：颈椎左侧疼痛，左肩肿胀疼痛",
+              "timestamp": 1771494812.077352,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "4a8a725a-e9cf-4256-b619-71d05a9eb8d5",
+              "content": "本次主诉/症状：右半身接触性刺痛",
+              "timestamp": 1771494812.0773568,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "ef675288-cb94-4ea3-8642-9589c7e75d0e",
+              "content": "本次主诉/症状：双手拇指与食指肿胀感，有时发麻",
+              "timestamp": 1771494812.077361,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "c0c26619-e138-4841-9ad6-65417c678799",
+              "content": "本次主诉/症状：四肢乏力，右脚发凉",
+              "timestamp": 1771494812.077365,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "identity": [
+            {
+              "id": "9c086ba2-cab4-4b20-b218-869cfc7ebc4a",
+              "content": "患者男，35岁，体重偏胖；偶尔饮酒（因工作长期驻外，短期内无法完全禁酒，仅能尽量少喝）",
+              "timestamp": 1771494783.2022452,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "e5c124f5-6422-4a70-8b17-ee1921005663",
+              "content": "医生建议拍腹部立位平片检查",
+              "timestamp": 1771494735.3974528,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b0cd9da6-5483-4928-8a11-a2fd65b16149",
+              "content": "2010-05-05晚车祸致右侧耻骨上下支骨折、髂骨骨折、髋臼骨折、耻骨联合骨折",
+              "timestamp": 1771494756.3744135,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d8cc29c5-44bf-4a3f-951a-63009830317d",
+              "content": "医生判断为髋臼骨折后骨不连，建议重新手术治疗；否则髋臼不平整可致股骨头磨损并可能出现早期坏死",
+              "timestamp": 1771494762.10125,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "bfe9bd97-7635-4b35-aa91-a6809b951445",
+              "content": "目前CT结果：髋臼存在裂缝，裂缝两端已硬化；裂缝不在完全负重区（不在髋臼顶）",
+              "timestamp": 1771494771.4905958,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "9b617bf9-00e8-4f9d-b726-a78051c5ceaa",
+              "content": "诊断为中度脂肪肝进展至中度偏重脂肪肝；一年前ALT 104U/L，口服护肝片约1年后ALT降至70U/L；曾用护肝片1年；未在医院系统治疗过",
+              "timestamp": 1771494783.2022548,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc0c88ed-bf80-448c-a58e-a4f9489cb4ca",
+              "content": "医生建议禁酒保肝、注意营养均衡",
+              "timestamp": 1771494787.134087,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "e9433e8c-fec8-4bbe-9ef8-759d26b0dc90",
+              "content": "医生建议保肝治疗可选用水飞蓟宾胶囊/片剂或肝得健，二选一",
+              "timestamp": 1771494802.8231542,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "41179a50-4edb-4d0c-b09b-afe968cd9177",
+              "content": "既往诊断/情况：颈椎增生",
+              "timestamp": 1771494812.0773373,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "2a671957-5ff0-45e9-b281-73f6f0b50499",
+              "content": "既往诊断/情况：右腿腿肚静脉曲张",
+              "timestamp": 1771494812.0773468,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比医生在最早一次就诊时提出的检查安排与患者本次就诊的主要不适部位：医生当时建议做的影像学检查名称是什么？",
+          "answer": "腹部立位平片检查",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "e5c124f5-6422-4a70-8b17-ee1921005663"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "430379da-bd9f-46cb-b344-a871597eda04"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            15,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你好！就你所介绍的病情情况是较典型的颈肩综合症（可能是急性期），建议你做一下CT检查，再查查血常规和血沉，排除有没有炎症的存在。如果疼痛症状较严重且影响睡眠，那需要打点滴了。症状不是那么严重的话可做做牵引、推拿、理疗、针灸，外敷膏药，内服消炎、止痛、通筋活血的药。注意事项：不宜低头过久（上网、麻将时间不能过长），勿受凉。建议：适当运动，做做颈椎操、打打羽毛球、放风筝，抬头数星星。个人意见仅供参考，祝你早日康复！",
+        "to_memory": [
+          "identity: 男，35岁；体重偏胖；偶尔饮酒（因工作长期驻外，难以完全禁酒）",
+          "history: 脂肪肝（1年前中度脂肪肝，现中度偏重）；谷丙转氨酶ALT曾104，服用护肝片1年后降至70；未在医院系统治疗过",
+          "history: 颈椎增生；右腿小腿静脉曲张",
+          "history: 医嘱/用药建议：禁酒、保肝、营养均衡；可选水飞蓟宾胶囊/片剂或肝得健（选一种）",
+          "working: 现主诉/症状：颈椎左侧疼痛、左肩肿胀疼痛；右半身接触性刺痛；双手拇指与食指肿胀感/有时发麻；四肢乏力；右脚发凉；常感觉口干；酒后肝部不适",
+          "history: 本次医生判断为较典型颈肩综合征（可能急性期）；建议检查：颈部CT、血常规、血沉以排除炎症；治疗建议：疼痛严重影响睡眠可静滴治疗；否则可牵引、推拿、理疗、针灸、外敷膏药，内服消炎止痛/通筋活血药；注意避免久低头、避免受凉；适当运动（颈椎操等）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "430379da-bd9f-46cb-b344-a871597eda04",
+              "content": "本次主诉/症状：颈椎左侧疼痛，左肩肿胀疼痛",
+              "timestamp": 1771494812.077352,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "4a8a725a-e9cf-4256-b619-71d05a9eb8d5",
+              "content": "本次主诉/症状：右半身接触性刺痛",
+              "timestamp": 1771494812.0773568,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "ef675288-cb94-4ea3-8642-9589c7e75d0e",
+              "content": "本次主诉/症状：双手拇指与食指肿胀感，有时发麻",
+              "timestamp": 1771494812.077361,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "c0c26619-e138-4841-9ad6-65417c678799",
+              "content": "本次主诉/症状：四肢乏力，右脚发凉",
+              "timestamp": 1771494812.077365,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "8d94a1b3-d891-4547-9f39-f0b23a2e02c2",
+              "content": "本次主诉/症状：常感觉口干；酒后肝部不适",
+              "timestamp": 1771494825.8251197,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "identity": [
+            {
+              "id": "9c086ba2-cab4-4b20-b218-869cfc7ebc4a",
+              "content": "患者男，35岁，体重偏胖；偶尔饮酒（因工作长期驻外，短期内无法完全禁酒，仅能尽量少喝）",
+              "timestamp": 1771494783.2022452,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "e5c124f5-6422-4a70-8b17-ee1921005663",
+              "content": "医生建议拍腹部立位平片检查",
+              "timestamp": 1771494735.3974528,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b0cd9da6-5483-4928-8a11-a2fd65b16149",
+              "content": "2010-05-05晚车祸致右侧耻骨上下支骨折、髂骨骨折、髋臼骨折、耻骨联合骨折",
+              "timestamp": 1771494756.3744135,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d8cc29c5-44bf-4a3f-951a-63009830317d",
+              "content": "医生判断为髋臼骨折后骨不连，建议重新手术治疗；否则髋臼不平整可致股骨头磨损并可能出现早期坏死",
+              "timestamp": 1771494762.10125,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "bfe9bd97-7635-4b35-aa91-a6809b951445",
+              "content": "目前CT结果：髋臼存在裂缝，裂缝两端已硬化；裂缝不在完全负重区（不在髋臼顶）",
+              "timestamp": 1771494771.4905958,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "9b617bf9-00e8-4f9d-b726-a78051c5ceaa",
+              "content": "诊断为中度脂肪肝进展至中度偏重脂肪肝；一年前ALT 104U/L，口服护肝片约1年后ALT降至70U/L；曾用护肝片1年；未在医院系统治疗过",
+              "timestamp": 1771494783.2022548,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc0c88ed-bf80-448c-a58e-a4f9489cb4ca",
+              "content": "医生建议禁酒保肝、注意营养均衡",
+              "timestamp": 1771494787.134087,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "e9433e8c-fec8-4bbe-9ef8-759d26b0dc90",
+              "content": "医生建议保肝治疗可选用水飞蓟宾胶囊/片剂或肝得健，二选一",
+              "timestamp": 1771494802.8231542,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "41179a50-4edb-4d0c-b09b-afe968cd9177",
+              "content": "既往诊断/情况：颈椎增生",
+              "timestamp": 1771494812.0773373,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "2a671957-5ff0-45e9-b281-73f6f0b50499",
+              "content": "既往诊断/情况：右腿腿肚静脉曲张",
+              "timestamp": 1771494812.0773468,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "4c7fdb45-654b-4134-9cb5-c26c2ad5eb16",
+              "content": "本次医生判断为较典型颈肩综合征（可能急性期）；建议检查：颈部CT、血常规、血沉以排除炎症；治疗建议：疼痛严重影响睡眠可静滴治疗；否则可牵引、推拿、理疗、针灸、外敷膏药，内服消炎止痛/通筋活血药；注意避免久低头、避免受凉；适当运动（颈椎操等）",
+              "timestamp": 1771494825.8251297,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在本次主诉中提到的某两项全身状态相关不适，可能与其既往一次严重外伤史存在需要核对的安全隐患。请指出这两项不适分别是什么，并简述需要优先排查哪类风险？",
+          "answer": "四肢乏力；右脚发凉",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b0cd9da6-5483-4928-8a11-a2fd65b16149"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "c0c26619-e138-4841-9ad6-65417c678799"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            11,
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "comorbidity_management",
+    "scenario_name": "多疾病共病管理",
+    "session_count": 5,
+    "group_key": "综合科"
+  }
+}

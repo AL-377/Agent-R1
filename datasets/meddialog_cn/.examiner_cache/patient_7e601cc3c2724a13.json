@@ -1,0 +1,3857 @@
+{
+  "patient_id": "86e997d0409f",
+  "messages": [
+    {
+      "user": {
+        "content": "痤疮，我的脸上和背上都长了痤疮，从04年开始到现在多多少少一直都有，一直都没有好过。",
+        "to_memory": [
+          "working: 面部及背部痤疮（痘痘）反复发作，自2004年开始至今持续存在，未曾完全好转"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d326e952-cc23-4b6b-9b97-01b232cdd585",
+              "content": "面部及背部痤疮（痘痘）反复发作，自2004年开始至今持续存在，未曾完全好转",
+              "timestamp": 1771466188.277614,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "用中西药物内服外用，控制饮食。",
+        "to_memory": [
+          "history: 医生建议中西药物内服外用治疗痤疮，并控制饮食"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d326e952-cc23-4b6b-9b97-01b232cdd585",
+              "content": "面部及背部痤疮（痘痘）反复发作，自2004年开始至今持续存在，未曾完全好转",
+              "timestamp": 1771466188.277614,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "184ecc0c-5550-4a3e-8c0b-24980e55c1ef",
+              "content": "医生建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466190.7145407,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "医生给出的治疗/管理建议中，有哪一项需要先核对患者既往病程的起始时间与持续情况，避免与患者自述记录不一致？请说明需要核对的病程要点。",
+          "answer": "患者自述面部及背部皮损自2004年开始反复至今，持续存在，未曾完全好转。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "d326e952-cc23-4b6b-9b97-01b232cdd585",
+                "d326e952-cc23-4b6b-9b97-01b232cdd585"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "治疗肥胖，治疗肥胖。",
+        "to_memory": [
+          "working: 本次主诉为治疗肥胖（减重需求）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "9ec8c374-b0bd-4e53-8285-5c874996977e",
+              "content": "本次主诉为治疗肥胖（减重需求）",
+              "timestamp": 1771466195.424658,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "在诊疗分割线之后，患者这次主要想解决的就诊诉求是什么？",
+          "answer": "治疗肥胖（减重需求）",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "9ec8c374-b0bd-4e53-8285-5c874996977e"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可以的。",
+        "to_memory": [
+          "history: 2004年至今面部及背部反复痤疮，未完全好转",
+          "history: 医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+          "working: 本次就诊诉求为治疗肥胖"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "9ec8c374-b0bd-4e53-8285-5c874996977e",
+              "content": "本次主诉为治疗肥胖（减重需求）",
+              "timestamp": 1771466195.424658,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "徐世芬大夫你好:我是吴小姐.我11月6日星期六早上过来埋线减肥可以吗？谢谢。对不起，徐医生.我是你的病人吴**.上星期六我身体不适.为此没来.这星期六早上.13日过来埋线减肥好吗？谢谢。",
+        "to_memory": [
+          "identity: 患者为吴小姐（吴**）",
+          "history: 2004年至今反复痤疮（面部及背部），一直未痊愈",
+          "history: 就诊需求为治疗肥胖，拟进行埋线减肥",
+          "working: 计划11月13日（周六）上午来院进行埋线减肥；上周六因身体不适未能前来"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "9ec8c374-b0bd-4e53-8285-5c874996977e",
+              "content": "本次主诉为治疗肥胖（减重需求）",
+              "timestamp": 1771466195.424658,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "713e92e7-646f-462a-b551-6db33618f83f",
+              "content": "计划11月13日（周六）上午来院进行埋线减肥；上周六因身体不适未能前来",
+              "timestamp": 1771466203.741043,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在最近一次预约治疗时提到上一次未能按原计划前来就诊的原因是什么？这次计划在什么时候来进行该项治疗？",
+          "answer": "上周六因身体不适未能前来；计划11月13日（周六）上午来院进行埋线减肥。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "713e92e7-646f-462a-b551-6db33618f83f"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可以。",
+        "to_memory": [
+          "identity: 患者为吴小姐（吴**）",
+          "history: 2004年至今面部及背部反复痤疮未愈；医生曾建议中西药物内服外用并控制饮食",
+          "history: 就诊目的为埋线减肥/治疗肥胖；患者曾因身体不适未按计划前来",
+          "working: 患者拟于11月13日周六早上来院进行埋线减肥，医生已同意"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "9ec8c374-b0bd-4e53-8285-5c874996977e",
+              "content": "本次主诉为治疗肥胖（减重需求）",
+              "timestamp": 1771466195.424658,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "713e92e7-646f-462a-b551-6db33618f83f",
+              "content": "计划11月13日（周六）上午来院进行埋线减肥；此前曾因身体不适未按计划前来；医生已同意",
+              "timestamp": 1771466203.741043,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者本次咨询的主要诉求与医生在更早一轮给出的治疗方案是否存在诊疗方向不一致的潜在问题？请指出需要核对的那条既往治疗建议是什么。",
+          "answer": "医生曾建议中西药物内服外用，并控制饮食。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "86a09946-6c6f-4044-9fb2-2efa16b92dce"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "59efafaf-806e-4f17-b1ed-7bdcd04dc791"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            2,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "不知道是湿疹还是汗疱疹，我妈这个长水泡已经有半个月了，以前也曾经发过擦了皮炎平之类的药就好了但没有这次严重，这次手上先是红肿然后长水泡很痒，一抓破水疱就流出黄水然后就疼然后就开始脱皮，一双手的手心手背手指缝中都是这种水疱，而且现在已经发展到了脸部和颈部都是红色的疹子。",
+        "to_memory": [
+          "history: 既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+          "working: 本次为患者母亲皮肤问题咨询：双手先红肿后起水疱，病程约半个月，瘙痒明显；抓破后流黄水并疼痛，随后脱皮；累及手心/手背/手指缝，现已扩散至面部和颈部出现红色疹子；患者疑为湿疹或汗疱疹"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "048727af-d548-4f89-9537-2e34a5b63b0e",
+              "content": "本次为患者母亲皮肤问题咨询：双手先红肿后起水疱，病程约半个月，瘙痒明显；抓破后流黄水并疼痛，随后脱皮；累及手心/手背/手指缝，现已扩散至面部和颈部出现红色疹子；患者疑为湿疹或汗疱疹",
+              "timestamp": 1771466224.0126145,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者既往为自身皮肤问题就诊时主要受累的部位与本次代家属咨询时皮疹受累的部位，本次主要涉及哪些部位？",
+          "answer": "本次主要累及双手（手心、手背、手指缝），并已扩散到面部和颈部。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "048727af-d548-4f89-9537-2e34a5b63b0e"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "湿疹的可能性大，中西医各有优点，何况现在很少有单纯的中医治疗，很多是中西医结合。",
+        "to_memory": [
+          "history: 医生判断目前皮疹更可能为湿疹（倾向性诊断）",
+          "working: 讨论治疗可考虑中西医结合，中西医各有优点"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "048727af-d548-4f89-9537-2e34a5b63b0e",
+              "content": "本次为患者母亲皮肤问题咨询：双手先红肿后起水疱，病程约半个月，瘙痒明显；抓破后流黄水并疼痛，随后脱皮；累及手心/手背/手指缝，现已扩散至面部和颈部出现红色疹子；患者疑为湿疹或汗疱疹；医生倾向诊断为湿疹；讨论治疗可考虑中西医结合，中西医各有优点",
+              "timestamp": 1771466224.0126145,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "颅脑损伤，2010年3月6日。",
+        "to_memory": [
+          "history: 既往颅脑损伤（发生日期：2010-03-06）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在本次咨询前是否曾因类似皮肤症状自行外用过某种药膏并出现过缓解？这会不会与当前病情评估或后续用药安全存在需要核对的点？请说明。",
+          "answer": "是。既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+                "4f0d6181-c963-497f-8472-a34d381930eb"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            7,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "如果可能最好带到医院再看看。",
+        "to_memory": [
+          "history: 既往颅脑损伤，发生于2010-03-06",
+          "history: 医生建议如条件允许最好带患者到医院再复查/再看看"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2e6142b5-69f2-4675-ada0-d6c8a6f7c980",
+              "content": "医生建议如条件允许最好带患者到医院再复查/再看看",
+              "timestamp": 1771466237.5563517,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者家属描述“以前出现类似皮肤问题时”的处理方式与本次咨询中医生针对另一项既往病史给出的就诊建议：以前在家主要采取了什么处理，本次医生建议接下来应如何进一步处理？",
+          "answer": "以前类似情况外用皮炎平等药物可缓解；本次医生建议如条件允许最好带到医院再看看。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "4f0d6181-c963-497f-8472-a34d381930eb",
+                "2e6142b5-69f2-4675-ada0-d6c8a6f7c980"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2e6142b5-69f2-4675-ada0-d6c8a6f7c980",
+              "content": "医生建议如条件允许最好带患者到医院再复查/再看看",
+              "timestamp": 1771466237.5563517,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "类风湿，08年末开始。",
+        "to_memory": [
+          "identity: 患者有类风湿（类风湿关节炎）病史，起病于2008年末"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2e6142b5-69f2-4675-ada0-d6c8a6f7c980",
+              "content": "医生建议如条件允许最好带患者到医院再复查/再看看",
+              "timestamp": 1771466237.5563517,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "26a7af41-bca8-4b1d-933d-1c49e04c214b",
+              "content": "患者有类风湿（类风湿关节炎）病史，起病于2008年末",
+              "timestamp": 1771466243.3913782,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "类风湿一般不会仅出现膝盖小肿的表现，请正规就诊，检查确诊清楚后，再有效安全治疗。",
+        "to_memory": [
+          "history: 目前讨论类风湿相关情况：仅出现膝盖轻微肿胀，医生提示类风湿一般不只表现为膝盖小肿，建议正规就诊检查明确诊断后再治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2e6142b5-69f2-4675-ada0-d6c8a6f7c980",
+              "content": "医生建议如条件允许最好带患者到医院再复查/再看看",
+              "timestamp": 1771466237.5563517,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "26a7af41-bca8-4b1d-933d-1c49e04c214b",
+              "content": "患者有类风湿（类风湿关节炎）病史，起病于2008年末",
+              "timestamp": 1771466243.3913782,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ed9d3576-6c81-4771-a26a-13581e41c0ec",
+              "content": "近期讨论类风湿相关：目前仅膝盖轻微肿胀；医生提示类风湿一般不只表现为膝盖小肿，建议正规就诊检查明确诊断后再治疗",
+              "timestamp": 1771466246.60692,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在这次交流里，患者提到过一项需要在后续用药或治疗选择时特别进行安全核对的既往慢性疾病史。请问这项疾病史是什么？最早大约从什么时候开始？",
+          "answer": "类风湿（类风湿关节炎）病史，起病于2008年末。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "4f0d6181-c963-497f-8472-a34d381930eb",
+                "26a7af41-bca8-4b1d-933d-1c49e04c214b"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            7,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2e6142b5-69f2-4675-ada0-d6c8a6f7c980",
+              "content": "医生建议如条件允许最好带患者到医院再复查/再看看",
+              "timestamp": 1771466237.5563517,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "26a7af41-bca8-4b1d-933d-1c49e04c214b",
+              "content": "患者有类风湿（类风湿关节炎）病史，起病于2008年末",
+              "timestamp": 1771466243.3913782,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ed9d3576-6c81-4771-a26a-13581e41c0ec",
+              "content": "近期讨论类风湿相关：目前仅膝盖轻微肿胀；医生提示类风湿一般不只表现为膝盖小肿，建议正规就诊检查明确诊断后再治疗",
+              "timestamp": 1771466246.60692,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "陈旧性骨折，我母亲84年右小腿距离脚踝关节5Cm开放性骨折，经治疗后伤口植皮愈合，10天前开始感觉伤口骨内钻心疼痛，请教应该看北京哪个医院的啥科室，最好能告诉专家名字，谢谢！",
+        "to_memory": [
+          "history: 1984年患者母亲右小腿距踝关节约5cm处开放性骨折，治疗后伤口植皮并愈合",
+          "identity: 10天前开始在既往伤口部位感觉骨内钻心疼痛",
+          "working: 咨询在北京应就诊的医院与科室及专家"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "72a41c5b-ce9f-457c-91ff-6083b321e051",
+              "content": "咨询在北京应就诊的医院与科室及专家",
+              "timestamp": 1771466253.0547018,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "ca274c04-f706-4d97-93ae-cfd2cf1b0aca",
+              "content": "10天前开始在既往伤口部位感觉骨内钻心疼痛",
+              "timestamp": 1771466253.054697,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2e6142b5-69f2-4675-ada0-d6c8a6f7c980",
+              "content": "医生建议如条件允许最好带患者到医院再复查/再看看",
+              "timestamp": 1771466237.5563517,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "26a7af41-bca8-4b1d-933d-1c49e04c214b",
+              "content": "患者有类风湿（类风湿关节炎）病史，起病于2008年末",
+              "timestamp": 1771466243.3913782,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ed9d3576-6c81-4771-a26a-13581e41c0ec",
+              "content": "近期讨论类风湿相关：目前仅膝盖轻微肿胀；医生提示类风湿一般不只表现为膝盖小肿，建议正规就诊检查明确诊断后再治疗",
+              "timestamp": 1771466246.60692,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6db27ad6-a186-4a75-a188-e9ccbac0f92e",
+              "content": "1984年患者母亲右小腿距踝关节约5cm处开放性骨折，治疗后伤口植皮并愈合",
+              "timestamp": 1771466253.054688,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "306医院骨科白克文主任。",
+        "to_memory": [
+          "history: 医生推荐就诊医院与科室/专家：306医院骨科，白克文主任"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "72a41c5b-ce9f-457c-91ff-6083b321e051",
+              "content": "咨询在北京应就诊的医院与科室及专家",
+              "timestamp": 1771466253.0547018,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "ca274c04-f706-4d97-93ae-cfd2cf1b0aca",
+              "content": "10天前开始在既往伤口部位感觉骨内钻心疼痛",
+              "timestamp": 1771466253.054697,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2e6142b5-69f2-4675-ada0-d6c8a6f7c980",
+              "content": "医生建议如条件允许最好带患者到医院再复查/再看看",
+              "timestamp": 1771466237.5563517,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "26a7af41-bca8-4b1d-933d-1c49e04c214b",
+              "content": "患者有类风湿（类风湿关节炎）病史，起病于2008年末",
+              "timestamp": 1771466243.3913782,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ed9d3576-6c81-4771-a26a-13581e41c0ec",
+              "content": "近期讨论类风湿相关：目前仅膝盖轻微肿胀；医生提示类风湿一般不只表现为膝盖小肿，建议正规就诊检查明确诊断后再治疗",
+              "timestamp": 1771466246.60692,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6db27ad6-a186-4a75-a188-e9ccbac0f92e",
+              "content": "1984年患者母亲右小腿距踝关节约5cm处开放性骨折，治疗后伤口植皮并愈合",
+              "timestamp": 1771466253.054688,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "36d2c3f8-eea4-4563-b7a4-a6562f174c9c",
+              "content": "医生推荐就诊医院与科室/专家：306医院骨科，白克文主任",
+              "timestamp": 1771466256.734869,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者把当前问题归因于一种既往明确诊断，但医生提示这一诊断与其目前描述的主要表现并不匹配。请问患者提到的这个既往诊断是什么？",
+          "answer": "类风湿（类风湿关节炎），起病于2008年末",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "26a7af41-bca8-4b1d-933d-1c49e04c214b"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "72a41c5b-ce9f-457c-91ff-6083b321e051"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "ca274c04-f706-4d97-93ae-cfd2cf1b0aca",
+              "content": "10天前开始在既往伤口部位感觉骨内钻心疼痛",
+              "timestamp": 1771466253.054697,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2e6142b5-69f2-4675-ada0-d6c8a6f7c980",
+              "content": "医生建议如条件允许最好带患者到医院再复查/再看看",
+              "timestamp": 1771466237.5563517,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "26a7af41-bca8-4b1d-933d-1c49e04c214b",
+              "content": "患者有类风湿（类风湿关节炎）病史，起病于2008年末",
+              "timestamp": 1771466243.3913782,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ed9d3576-6c81-4771-a26a-13581e41c0ec",
+              "content": "近期讨论类风湿相关：目前仅膝盖轻微肿胀；医生提示类风湿一般不只表现为膝盖小肿，建议正规就诊检查明确诊断后再治疗",
+              "timestamp": 1771466246.60692,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6db27ad6-a186-4a75-a188-e9ccbac0f92e",
+              "content": "1984年患者母亲右小腿距踝关节约5cm处开放性骨折，治疗后伤口植皮并愈合",
+              "timestamp": 1771466253.054688,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "36d2c3f8-eea4-4563-b7a4-a6562f174c9c",
+              "content": "医生推荐就诊医院与科室/专家：306医院骨科，白克文主任",
+              "timestamp": 1771466256.734869,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "哮喘，过敏性体质，早上起来打喷嚏流鼻子、鼻子不通、有时候有点压气、有痰（特别是早上痰是黄色，像豆腐渣一样，）白天还好，晚上一躺下鼻子就不同。平时打扫卫生就打喷嚏、流鼻子。",
+        "to_memory": [
+          "identity: 患者有哮喘（慢性病），过敏性体质",
+          "working: 本次主诉打喷嚏、流鼻子、鼻塞；晨起明显，平躺后鼻塞加重；打扫卫生时诱发喷嚏流涕",
+          "working: 伴有时胸闷/气短感（\"压气\"），有痰，晨起黄色、豆腐渣样痰"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "4b6f4835-4b66-4cbf-825f-6007d0215029",
+              "content": "本次主诉：打喷嚏、流鼻子、鼻塞；晨起明显，平躺后鼻塞加重；打扫卫生时诱发喷嚏流涕",
+              "timestamp": 1771466265.9377928,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "48067c2a-982c-4a97-9d91-c45d3cb9a9fd",
+              "content": "伴有时胸闷/气短感（“压气”），有痰；晨起黄色、豆腐渣样痰",
+              "timestamp": 1771466265.937797,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "ca274c04-f706-4d97-93ae-cfd2cf1b0aca",
+              "content": "10天前开始在既往伤口部位感觉骨内钻心疼痛",
+              "timestamp": 1771466253.054697,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "a41b369b-1b0a-490f-b91a-4ac2876fcea1",
+              "content": "患者有哮喘（慢性病），过敏性体质",
+              "timestamp": 1771466265.9377837,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2e6142b5-69f2-4675-ada0-d6c8a6f7c980",
+              "content": "医生建议如条件允许最好带患者到医院再复查/再看看",
+              "timestamp": 1771466237.5563517,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "26a7af41-bca8-4b1d-933d-1c49e04c214b",
+              "content": "患者有类风湿（类风湿关节炎）病史，起病于2008年末",
+              "timestamp": 1771466243.3913782,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ed9d3576-6c81-4771-a26a-13581e41c0ec",
+              "content": "近期讨论类风湿相关：目前仅膝盖轻微肿胀；医生提示类风湿一般不只表现为膝盖小肿，建议正规就诊检查明确诊断后再治疗",
+              "timestamp": 1771466246.60692,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6db27ad6-a186-4a75-a188-e9ccbac0f92e",
+              "content": "1984年患者母亲右小腿距踝关节约5cm处开放性骨折，治疗后伤口植皮并愈合",
+              "timestamp": 1771466253.054688,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "36d2c3f8-eea4-4563-b7a4-a6562f174c9c",
+              "content": "医生推荐就诊医院与科室/专家：306医院骨科，白克文主任",
+              "timestamp": 1771466256.734869,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者本次就诊主要在描述哪些不适表现？",
+          "answer": "打喷嚏、流鼻子、鼻塞（晨起明显，平躺后加重，打扫卫生时易诱发）。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "4b6f4835-4b66-4cbf-825f-6007d0215029"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "第。第。",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "4b6f4835-4b66-4cbf-825f-6007d0215029",
+              "content": "本次主诉：打喷嚏、流鼻子、鼻塞；晨起明显，平躺后鼻塞加重；打扫卫生时诱发喷嚏流涕",
+              "timestamp": 1771466265.9377928,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "48067c2a-982c-4a97-9d91-c45d3cb9a9fd",
+              "content": "伴有时胸闷/气短感（“压气”），有痰；晨起黄色、豆腐渣样痰",
+              "timestamp": 1771466265.937797,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "ca274c04-f706-4d97-93ae-cfd2cf1b0aca",
+              "content": "10天前开始在既往伤口部位感觉骨内钻心疼痛",
+              "timestamp": 1771466253.054697,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "a41b369b-1b0a-490f-b91a-4ac2876fcea1",
+              "content": "患者有哮喘（慢性病），过敏性体质",
+              "timestamp": 1771466265.9377837,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2e6142b5-69f2-4675-ada0-d6c8a6f7c980",
+              "content": "医生建议如条件允许最好带患者到医院再复查/再看看",
+              "timestamp": 1771466237.5563517,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "26a7af41-bca8-4b1d-933d-1c49e04c214b",
+              "content": "患者有类风湿（类风湿关节炎）病史，起病于2008年末",
+              "timestamp": 1771466243.3913782,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ed9d3576-6c81-4771-a26a-13581e41c0ec",
+              "content": "近期讨论类风湿相关：目前仅膝盖轻微肿胀；医生提示类风湿一般不只表现为膝盖小肿，建议正规就诊检查明确诊断后再治疗",
+              "timestamp": 1771466246.60692,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6db27ad6-a186-4a75-a188-e9ccbac0f92e",
+              "content": "1984年患者母亲右小腿距踝关节约5cm处开放性骨折，治疗后伤口植皮并愈合",
+              "timestamp": 1771466253.054688,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "36d2c3f8-eea4-4563-b7a4-a6562f174c9c",
+              "content": "医生推荐就诊医院与科室/专家：306医院骨科，白克文主任",
+              "timestamp": 1771466256.734869,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "在关于呼吸道不适的这次描述中，患者除了鼻部相关症状外，还补充提到哪些下呼吸道方面的伴随表现（请概括两点，并说明其中一项在一天中更容易出现的时段）？",
+          "answer": "伴有时胸闷/气短感（“压气”），并且有痰；痰在晨起更明显且为黄色、豆腐渣样。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "86a09946-6c6f-4044-9fb2-2efa16b92dce"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "48067c2a-982c-4a97-9d91-c45d3cb9a9fd"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            17,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "请问我家不在北京，在洛阳，想治疗有没有对口医院可以治疗，十分感谢。",
+        "to_memory": [
+          "working: 患者居住地不在北京，在洛阳；询问在洛阳是否有对口医院可治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "4b6f4835-4b66-4cbf-825f-6007d0215029",
+              "content": "本次主诉：打喷嚏、流鼻子、鼻塞；晨起明显，平躺后鼻塞加重；打扫卫生时诱发喷嚏流涕",
+              "timestamp": 1771466265.9377928,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "48067c2a-982c-4a97-9d91-c45d3cb9a9fd",
+              "content": "伴有时胸闷/气短感（“压气”），有痰；晨起黄色、豆腐渣样痰",
+              "timestamp": 1771466265.937797,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "e002f463-d459-46a8-892e-35020cc9521b",
+              "content": "患者居住地不在北京，在洛阳；询问在洛阳是否有对口医院可治疗",
+              "timestamp": 1771466274.4149508,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            }
+          ],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "ca274c04-f706-4d97-93ae-cfd2cf1b0aca",
+              "content": "10天前开始在既往伤口部位感觉骨内钻心疼痛",
+              "timestamp": 1771466253.054697,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "a41b369b-1b0a-490f-b91a-4ac2876fcea1",
+              "content": "患者有哮喘（慢性病），过敏性体质",
+              "timestamp": 1771466265.9377837,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2e6142b5-69f2-4675-ada0-d6c8a6f7c980",
+              "content": "医生建议如条件允许最好带患者到医院再复查/再看看",
+              "timestamp": 1771466237.5563517,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "26a7af41-bca8-4b1d-933d-1c49e04c214b",
+              "content": "患者有类风湿（类风湿关节炎）病史，起病于2008年末",
+              "timestamp": 1771466243.3913782,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ed9d3576-6c81-4771-a26a-13581e41c0ec",
+              "content": "近期讨论类风湿相关：目前仅膝盖轻微肿胀；医生提示类风湿一般不只表现为膝盖小肿，建议正规就诊检查明确诊断后再治疗",
+              "timestamp": 1771466246.60692,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6db27ad6-a186-4a75-a188-e9ccbac0f92e",
+              "content": "1984年患者母亲右小腿距踝关节约5cm处开放性骨折，治疗后伤口植皮并愈合",
+              "timestamp": 1771466253.054688,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "36d2c3f8-eea4-4563-b7a4-a6562f174c9c",
+              "content": "医生推荐就诊医院与科室/专家：306医院骨科，白克文主任",
+              "timestamp": 1771466256.734869,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "医生之前针对患者的皮肤问题提出过哪些治疗方式和生活饮食方面的建议？",
+          "answer": "建议中西药物内服外用治疗痤疮，并控制饮食",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "86a09946-6c6f-4044-9fb2-2efa16b92dce"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            18
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "第。",
+        "to_memory": [
+          "identity: 患者有哮喘史，过敏性体质",
+          "working: 近期症状：晨起打喷嚏、流鼻子、鼻塞；偶有胸闷/压气感、有痰（晨起黄色豆腐渣样）；白天较好，夜间平躺后鼻塞加重；打扫卫生诱发打喷嚏流鼻子；患者在洛阳，咨询当地对口医院治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "4b6f4835-4b66-4cbf-825f-6007d0215029",
+              "content": "本次主诉：打喷嚏、流鼻子、鼻塞；晨起明显，平躺后鼻塞加重；打扫卫生时诱发喷嚏流涕",
+              "timestamp": 1771466265.9377928,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "48067c2a-982c-4a97-9d91-c45d3cb9a9fd",
+              "content": "伴有时胸闷/气短感（“压气”），有痰；晨起黄色、豆腐渣样痰",
+              "timestamp": 1771466265.937797,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "e002f463-d459-46a8-892e-35020cc9521b",
+              "content": "患者居住地不在北京，在洛阳；询问在洛阳是否有对口医院可治疗",
+              "timestamp": 1771466274.4149508,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            }
+          ],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "ca274c04-f706-4d97-93ae-cfd2cf1b0aca",
+              "content": "10天前开始在既往伤口部位感觉骨内钻心疼痛",
+              "timestamp": 1771466253.054697,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "a41b369b-1b0a-490f-b91a-4ac2876fcea1",
+              "content": "患者有哮喘（慢性病），过敏性体质",
+              "timestamp": 1771466265.9377837,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2e6142b5-69f2-4675-ada0-d6c8a6f7c980",
+              "content": "医生建议如条件允许最好带患者到医院再复查/再看看",
+              "timestamp": 1771466237.5563517,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "26a7af41-bca8-4b1d-933d-1c49e04c214b",
+              "content": "患者有类风湿（类风湿关节炎）病史，起病于2008年末",
+              "timestamp": 1771466243.3913782,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ed9d3576-6c81-4771-a26a-13581e41c0ec",
+              "content": "近期讨论类风湿相关：目前仅膝盖轻微肿胀；医生提示类风湿一般不只表现为膝盖小肿，建议正规就诊检查明确诊断后再治疗",
+              "timestamp": 1771466246.60692,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6db27ad6-a186-4a75-a188-e9ccbac0f92e",
+              "content": "1984年患者母亲右小腿距踝关节约5cm处开放性骨折，治疗后伤口植皮并愈合",
+              "timestamp": 1771466253.054688,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "36d2c3f8-eea4-4563-b7a4-a6562f174c9c",
+              "content": "医生推荐就诊医院与科室/专家：306医院骨科，白克文主任",
+              "timestamp": 1771466256.734869,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者以往那次皮肤问题就诊时的处理方式与本次因呼吸道/鼻部不适来咨询时的主要表现：患者过去那次主要用了什么处理或药物后症状能缓解？而这次她描述的主要不适有哪些、在什么情况下更明显或更容易被诱发？",
+          "answer": "既往类似皮疹/水疱外用皮炎平等药物可缓解；本次主诉打喷嚏、流鼻子、鼻塞，晨起明显，平躺后鼻塞加重，打扫卫生时诱发喷嚏流涕。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "4f0d6181-c963-497f-8472-a34d381930eb"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "4b6f4835-4b66-4cbf-825f-6007d0215029"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            15,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "ca274c04-f706-4d97-93ae-cfd2cf1b0aca",
+              "content": "10天前开始在既往伤口部位感觉骨内钻心疼痛",
+              "timestamp": 1771466253.054697,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "a41b369b-1b0a-490f-b91a-4ac2876fcea1",
+              "content": "患者有哮喘（慢性病），过敏性体质",
+              "timestamp": 1771466265.9377837,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2e6142b5-69f2-4675-ada0-d6c8a6f7c980",
+              "content": "医生建议如条件允许最好带患者到医院再复查/再看看",
+              "timestamp": 1771466237.5563517,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "26a7af41-bca8-4b1d-933d-1c49e04c214b",
+              "content": "患者有类风湿（类风湿关节炎）病史，起病于2008年末",
+              "timestamp": 1771466243.3913782,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ed9d3576-6c81-4771-a26a-13581e41c0ec",
+              "content": "近期讨论类风湿相关：目前仅膝盖轻微肿胀；医生提示类风湿一般不只表现为膝盖小肿，建议正规就诊检查明确诊断后再治疗",
+              "timestamp": 1771466246.60692,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6db27ad6-a186-4a75-a188-e9ccbac0f92e",
+              "content": "1984年患者母亲右小腿距踝关节约5cm处开放性骨折，治疗后伤口植皮并愈合",
+              "timestamp": 1771466253.054688,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "36d2c3f8-eea4-4563-b7a4-a6562f174c9c",
+              "content": "医生推荐就诊医院与科室/专家：306医院骨科，白克文主任",
+              "timestamp": 1771466256.734869,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "输卵管不通，女23岁结婚两年多没有孩子。",
+        "to_memory": [
+          "identity: 患者女，23岁，已婚（结婚两年多）",
+          "working: 主诉不孕（结婚两年多未怀孕），自述输卵管不通"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "c64705e4-66f1-4b96-adc4-4402d9e6c53d",
+              "content": "主诉不孕（结婚两年多未怀孕），自述输卵管不通",
+              "timestamp": 1771466286.7415004,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            }
+          ],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "ca274c04-f706-4d97-93ae-cfd2cf1b0aca",
+              "content": "10天前开始在既往伤口部位感觉骨内钻心疼痛",
+              "timestamp": 1771466253.054697,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "a41b369b-1b0a-490f-b91a-4ac2876fcea1",
+              "content": "患者有哮喘（慢性病），过敏性体质",
+              "timestamp": 1771466265.9377837,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "4b96f4f0-ef77-419c-87e8-4f778ac8c9f9",
+              "content": "患者女，23岁，已婚（结婚两年多）",
+              "timestamp": 1771466286.7414923,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2e6142b5-69f2-4675-ada0-d6c8a6f7c980",
+              "content": "医生建议如条件允许最好带患者到医院再复查/再看看",
+              "timestamp": 1771466237.5563517,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "26a7af41-bca8-4b1d-933d-1c49e04c214b",
+              "content": "患者有类风湿（类风湿关节炎）病史，起病于2008年末",
+              "timestamp": 1771466243.3913782,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ed9d3576-6c81-4771-a26a-13581e41c0ec",
+              "content": "近期讨论类风湿相关：目前仅膝盖轻微肿胀；医生提示类风湿一般不只表现为膝盖小肿，建议正规就诊检查明确诊断后再治疗",
+              "timestamp": 1771466246.60692,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6db27ad6-a186-4a75-a188-e9ccbac0f92e",
+              "content": "1984年患者母亲右小腿距踝关节约5cm处开放性骨折，治疗后伤口植皮并愈合",
+              "timestamp": 1771466253.054688,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "36d2c3f8-eea4-4563-b7a4-a6562f174c9c",
+              "content": "医生推荐就诊医院与科室/专家：306医院骨科，白克文主任",
+              "timestamp": 1771466256.734869,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "输卵管不通治疗是慢的，不可能一治疗就好，也不是每个医生都会治疗的，所以如果你经过一年的治疗还没有任何效果，可以换位医生看看。",
+        "to_memory": [
+          "history: 曾被描述为输卵管不通（女，23岁，已婚两年多未孕）",
+          "working: 讨论输卵管不通治疗进展慢，若治疗满1年仍无效果可考虑更换医生"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "c64705e4-66f1-4b96-adc4-4402d9e6c53d",
+              "content": "主诉不孕（结婚两年多未怀孕），自述输卵管不通",
+              "timestamp": 1771466286.7415004,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            },
+            {
+              "id": "081fedb5-8bbc-42a5-8742-67b4173cd861",
+              "content": "讨论输卵管不通治疗进展慢；若治疗满1年仍无效果可考虑更换医生",
+              "timestamp": 1771466292.2472868,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "ca274c04-f706-4d97-93ae-cfd2cf1b0aca",
+              "content": "10天前开始在既往伤口部位感觉骨内钻心疼痛",
+              "timestamp": 1771466253.054697,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "a41b369b-1b0a-490f-b91a-4ac2876fcea1",
+              "content": "患者有哮喘（慢性病），过敏性体质",
+              "timestamp": 1771466265.9377837,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "4b96f4f0-ef77-419c-87e8-4f778ac8c9f9",
+              "content": "患者女，23岁，已婚（结婚两年多）",
+              "timestamp": 1771466286.7414923,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2e6142b5-69f2-4675-ada0-d6c8a6f7c980",
+              "content": "医生建议如条件允许最好带患者到医院再复查/再看看",
+              "timestamp": 1771466237.5563517,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "26a7af41-bca8-4b1d-933d-1c49e04c214b",
+              "content": "患者有类风湿（类风湿关节炎）病史，起病于2008年末",
+              "timestamp": 1771466243.3913782,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ed9d3576-6c81-4771-a26a-13581e41c0ec",
+              "content": "近期讨论类风湿相关：目前仅膝盖轻微肿胀；医生提示类风湿一般不只表现为膝盖小肿，建议正规就诊检查明确诊断后再治疗",
+              "timestamp": 1771466246.60692,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6db27ad6-a186-4a75-a188-e9ccbac0f92e",
+              "content": "1984年患者母亲右小腿距踝关节约5cm处开放性骨折，治疗后伤口植皮并愈合",
+              "timestamp": 1771466253.054688,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "36d2c3f8-eea4-4563-b7a4-a6562f174c9c",
+              "content": "医生推荐就诊医院与科室/专家：306医院骨科，白克文主任",
+              "timestamp": 1771466256.734869,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "a3c6bd46-dfdd-494f-ac8c-db6c1f7d376e",
+              "content": "曾被描述/诊断为输卵管不通（与不孕相关）",
+              "timestamp": 1771466292.247277,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者在本次咨询中主要因为什么生育相关问题前来求助？",
+          "answer": "结婚两年多未怀孕（不孕）。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "c64705e4-66f1-4b96-adc4-4402d9e6c53d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "ca274c04-f706-4d97-93ae-cfd2cf1b0aca",
+              "content": "10天前开始在既往伤口部位感觉骨内钻心疼痛",
+              "timestamp": 1771466253.054697,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "a41b369b-1b0a-490f-b91a-4ac2876fcea1",
+              "content": "患者有哮喘（慢性病），过敏性体质",
+              "timestamp": 1771466265.9377837,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "4b96f4f0-ef77-419c-87e8-4f778ac8c9f9",
+              "content": "患者女，23岁，已婚（结婚两年多）",
+              "timestamp": 1771466286.7414923,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2e6142b5-69f2-4675-ada0-d6c8a6f7c980",
+              "content": "医生建议如条件允许最好带患者到医院再复查/再看看",
+              "timestamp": 1771466237.5563517,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "26a7af41-bca8-4b1d-933d-1c49e04c214b",
+              "content": "患者有类风湿（类风湿关节炎）病史，起病于2008年末",
+              "timestamp": 1771466243.3913782,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ed9d3576-6c81-4771-a26a-13581e41c0ec",
+              "content": "近期讨论类风湿相关：目前仅膝盖轻微肿胀；医生提示类风湿一般不只表现为膝盖小肿，建议正规就诊检查明确诊断后再治疗",
+              "timestamp": 1771466246.60692,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6db27ad6-a186-4a75-a188-e9ccbac0f92e",
+              "content": "1984年患者母亲右小腿距踝关节约5cm处开放性骨折，治疗后伤口植皮并愈合",
+              "timestamp": 1771466253.054688,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "36d2c3f8-eea4-4563-b7a4-a6562f174c9c",
+              "content": "医生推荐就诊医院与科室/专家：306医院骨科，白克文主任",
+              "timestamp": 1771466256.734869,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "a3c6bd46-dfdd-494f-ac8c-db6c1f7d376e",
+              "content": "曾被描述/诊断为输卵管不通（与不孕相关）",
+              "timestamp": 1771466292.247277,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "不排卵，不排卵用药物可以顺利排卵也不知道为什么老不怀孕我们做了2次人工都没有受孕请问做试管希望多少前期准备什么请指点谢谢\n。在吗。",
+        "to_memory": [
+          "identity: 患者女，23岁",
+          "history: 诊断/情况：输卵管不通",
+          "history: 病史：结婚两年多未孕/不孕",
+          "history: 诊断/情况：不排卵（排卵障碍）",
+          "history: 治疗史：曾用促排卵药物后可排卵",
+          "history: 治疗史：已做2次人工授精未受孕",
+          "working: 询问：做试管婴儿成功率/希望多大及前期准备事项"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "9b879e6a-6dc0-4ff0-84b8-1e3f06e74455",
+              "content": "询问：做试管婴儿成功率/希望多大及前期准备事项",
+              "timestamp": 1771466300.964146,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            }
+          ],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "ca274c04-f706-4d97-93ae-cfd2cf1b0aca",
+              "content": "10天前开始在既往伤口部位感觉骨内钻心疼痛",
+              "timestamp": 1771466253.054697,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "a41b369b-1b0a-490f-b91a-4ac2876fcea1",
+              "content": "患者有哮喘（慢性病），过敏性体质",
+              "timestamp": 1771466265.9377837,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "4b96f4f0-ef77-419c-87e8-4f778ac8c9f9",
+              "content": "患者女，23岁，已婚（结婚两年多）",
+              "timestamp": 1771466286.7414923,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2e6142b5-69f2-4675-ada0-d6c8a6f7c980",
+              "content": "医生建议如条件允许最好带患者到医院再复查/再看看",
+              "timestamp": 1771466237.5563517,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "26a7af41-bca8-4b1d-933d-1c49e04c214b",
+              "content": "患者有类风湿（类风湿关节炎）病史，起病于2008年末",
+              "timestamp": 1771466243.3913782,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ed9d3576-6c81-4771-a26a-13581e41c0ec",
+              "content": "近期讨论类风湿相关：目前仅膝盖轻微肿胀；医生提示类风湿一般不只表现为膝盖小肿，建议正规就诊检查明确诊断后再治疗",
+              "timestamp": 1771466246.60692,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6db27ad6-a186-4a75-a188-e9ccbac0f92e",
+              "content": "1984年患者母亲右小腿距踝关节约5cm处开放性骨折，治疗后伤口植皮并愈合",
+              "timestamp": 1771466253.054688,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "36d2c3f8-eea4-4563-b7a4-a6562f174c9c",
+              "content": "医生推荐就诊医院与科室/专家：306医院骨科，白克文主任",
+              "timestamp": 1771466256.734869,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "a3c6bd46-dfdd-494f-ac8c-db6c1f7d376e",
+              "content": "曾被描述/诊断为输卵管不通（与不孕相关）",
+              "timestamp": 1771466292.247277,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "6fac08a2-1c24-4970-ad65-c9e4af1b6bbe",
+              "content": "病史：结婚两年多未孕/不孕",
+              "timestamp": 1771466300.964122,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            },
+            {
+              "id": "e504fdac-5f0c-4a7f-b2e4-a2d4c7021ece",
+              "content": "诊断/情况：不排卵（排卵障碍）",
+              "timestamp": 1771466300.9641328,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            },
+            {
+              "id": "f987265d-4036-41b3-b765-c9a1eef53a53",
+              "content": "治疗史：曾用促排卵药物后可排卵",
+              "timestamp": 1771466300.9641378,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            },
+            {
+              "id": "f23fc3cb-edf4-4bd7-a716-9dbf9026ca36",
+              "content": "治疗史：已做2次人工授精未受孕",
+              "timestamp": 1771466300.9641418,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者在本次咨询中提出的生育相关诉求，与其更早一次病史记录中家属发生过的那次外伤事件：那次外伤发生的年份是什么？",
+          "answer": "1984年",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "6db27ad6-a186-4a75-a188-e9ccbac0f92e"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "9b879e6a-6dc0-4ff0-84b8-1e3f06e74455"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            11,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "很抱歉，建议您到生殖中心就诊。",
+        "to_memory": [
+          "identity: 患者23岁",
+          "history: 输卵管不通（既往诊断）",
+          "history: 不排卵，曾用药物促排卵仍未怀孕（既往情况）",
+          "history: 已行2次人工授精未受孕",
+          "history: 医生建议到生殖中心就诊"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "9b879e6a-6dc0-4ff0-84b8-1e3f06e74455",
+              "content": "询问：做试管婴儿成功率/希望多大及前期准备事项",
+              "timestamp": 1771466300.964146,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            }
+          ],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "ca274c04-f706-4d97-93ae-cfd2cf1b0aca",
+              "content": "10天前开始在既往伤口部位感觉骨内钻心疼痛",
+              "timestamp": 1771466253.054697,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "a41b369b-1b0a-490f-b91a-4ac2876fcea1",
+              "content": "患者有哮喘（慢性病），过敏性体质",
+              "timestamp": 1771466265.9377837,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "4b96f4f0-ef77-419c-87e8-4f778ac8c9f9",
+              "content": "患者女，23岁，已婚（结婚两年多）",
+              "timestamp": 1771466286.7414923,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2e6142b5-69f2-4675-ada0-d6c8a6f7c980",
+              "content": "医生建议如条件允许最好带患者到医院再复查/再看看",
+              "timestamp": 1771466237.5563517,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "26a7af41-bca8-4b1d-933d-1c49e04c214b",
+              "content": "患者有类风湿（类风湿关节炎）病史，起病于2008年末",
+              "timestamp": 1771466243.3913782,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ed9d3576-6c81-4771-a26a-13581e41c0ec",
+              "content": "近期讨论类风湿相关：目前仅膝盖轻微肿胀；医生提示类风湿一般不只表现为膝盖小肿，建议正规就诊检查明确诊断后再治疗",
+              "timestamp": 1771466246.60692,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6db27ad6-a186-4a75-a188-e9ccbac0f92e",
+              "content": "1984年患者母亲右小腿距踝关节约5cm处开放性骨折，治疗后伤口植皮并愈合",
+              "timestamp": 1771466253.054688,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "36d2c3f8-eea4-4563-b7a4-a6562f174c9c",
+              "content": "医生推荐就诊医院与科室/专家：306医院骨科，白克文主任",
+              "timestamp": 1771466256.734869,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "a3c6bd46-dfdd-494f-ac8c-db6c1f7d376e",
+              "content": "曾被描述/诊断为输卵管不通（与不孕相关）",
+              "timestamp": 1771466292.247277,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "6fac08a2-1c24-4970-ad65-c9e4af1b6bbe",
+              "content": "病史：结婚两年多未孕/不孕",
+              "timestamp": 1771466300.964122,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            },
+            {
+              "id": "e504fdac-5f0c-4a7f-b2e4-a2d4c7021ece",
+              "content": "诊断/情况：不排卵（排卵障碍）",
+              "timestamp": 1771466300.9641328,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            },
+            {
+              "id": "f987265d-4036-41b3-b765-c9a1eef53a53",
+              "content": "治疗史：曾用促排卵药物促排仍未怀孕",
+              "timestamp": 1771466300.9641378,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            },
+            {
+              "id": "f23fc3cb-edf4-4bd7-a716-9dbf9026ca36",
+              "content": "治疗史：已做2次人工授精未受孕",
+              "timestamp": 1771466300.9641418,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            },
+            {
+              "id": "241b6ac8-f677-4e82-aae8-74b8c3827e84",
+              "content": "医生建议到生殖中心就诊",
+              "timestamp": 1771466309.3473682,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在咨询中提出想进一步进行某项辅助生殖技术时，主要关注的两个问题点分别是什么？（提示：涉及“结果预期”和“就诊前的准备”两类信息）",
+          "answer": "询问试管婴儿成功率/希望多大，以及前期需要做哪些准备。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "4f0d6181-c963-497f-8472-a34d381930eb"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "9b879e6a-6dc0-4ff0-84b8-1e3f06e74455"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            21,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "ca274c04-f706-4d97-93ae-cfd2cf1b0aca",
+              "content": "10天前开始在既往伤口部位感觉骨内钻心疼痛",
+              "timestamp": 1771466253.054697,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "a41b369b-1b0a-490f-b91a-4ac2876fcea1",
+              "content": "患者有哮喘（慢性病），过敏性体质",
+              "timestamp": 1771466265.9377837,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "4b96f4f0-ef77-419c-87e8-4f778ac8c9f9",
+              "content": "患者女，23岁，已婚（结婚两年多）",
+              "timestamp": 1771466286.7414923,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2e6142b5-69f2-4675-ada0-d6c8a6f7c980",
+              "content": "医生建议如条件允许最好带患者到医院再复查/再看看",
+              "timestamp": 1771466237.5563517,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "26a7af41-bca8-4b1d-933d-1c49e04c214b",
+              "content": "患者有类风湿（类风湿关节炎）病史，起病于2008年末",
+              "timestamp": 1771466243.3913782,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ed9d3576-6c81-4771-a26a-13581e41c0ec",
+              "content": "近期讨论类风湿相关：目前仅膝盖轻微肿胀；医生提示类风湿一般不只表现为膝盖小肿，建议正规就诊检查明确诊断后再治疗",
+              "timestamp": 1771466246.60692,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6db27ad6-a186-4a75-a188-e9ccbac0f92e",
+              "content": "1984年患者母亲右小腿距踝关节约5cm处开放性骨折，治疗后伤口植皮并愈合",
+              "timestamp": 1771466253.054688,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "36d2c3f8-eea4-4563-b7a4-a6562f174c9c",
+              "content": "医生推荐就诊医院与科室/专家：306医院骨科，白克文主任",
+              "timestamp": 1771466256.734869,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "a3c6bd46-dfdd-494f-ac8c-db6c1f7d376e",
+              "content": "曾被描述/诊断为输卵管不通（与不孕相关）",
+              "timestamp": 1771466292.247277,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "6fac08a2-1c24-4970-ad65-c9e4af1b6bbe",
+              "content": "病史：结婚两年多未孕/不孕",
+              "timestamp": 1771466300.964122,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            },
+            {
+              "id": "e504fdac-5f0c-4a7f-b2e4-a2d4c7021ece",
+              "content": "诊断/情况：不排卵（排卵障碍）",
+              "timestamp": 1771466300.9641328,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            },
+            {
+              "id": "f987265d-4036-41b3-b765-c9a1eef53a53",
+              "content": "治疗史：曾用促排卵药物促排仍未怀孕",
+              "timestamp": 1771466300.9641378,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            },
+            {
+              "id": "f23fc3cb-edf4-4bd7-a716-9dbf9026ca36",
+              "content": "治疗史：已做2次人工授精未受孕",
+              "timestamp": 1771466300.9641418,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            },
+            {
+              "id": "241b6ac8-f677-4e82-aae8-74b8c3827e84",
+              "content": "医生建议到生殖中心就诊",
+              "timestamp": 1771466309.3473682,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "听力有点问题，满月测听力没通过，要第三个月才过。入托测听力再次没通过，怕听力有点问题。但平时生活上不觉得她听力有问题的，请问有测听力的吗？精确度高吗？上周日去了贵医院检查，可是周日没有听力测试，白跑了一趟。打算下星期再去，请问做听力测试总共需要多长时间？要是小孩不太安静，是否一定要吃麻药，这对小孩的健康有影响吗？",
+        "to_memory": [
+          "working: 患儿听力筛查多次未通过：满月测听力未通过，第三个月才通过；入托测听力再次未通过，家长担心存在听力问题但日常表现不明显",
+          "working: 家长咨询听力测试是否有、精确度如何、检查总时长；担心孩子不安静是否需要麻醉及麻醉对健康影响",
+          "working: 上周日曾到贵院就诊但因周日无听力测试未完成检查，计划下周再来做听力测试"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "603526a9-22a8-464e-9599-fe09338d48fc",
+              "content": "患儿听力筛查多次未通过：满月测听力未通过，第三个月才通过；入托测听力再次未通过。家长担心存在听力问题但日常表现不明显。",
+              "timestamp": 1771466318.2310662,
+              "metadata": {
+                "turn_idx": 31
+              },
+              "turn_idx": 31
+            },
+            {
+              "id": "b96200cc-236f-45a3-96c7-f96d919b0b50",
+              "content": "家长咨询听力测试项目是否有、精确度如何、检查总时长；担心孩子不安静是否需要麻醉及麻醉对健康影响。",
+              "timestamp": 1771466318.231075,
+              "metadata": {
+                "turn_idx": 31
+              },
+              "turn_idx": 31
+            },
+            {
+              "id": "64531ec7-bdfc-4fae-9bb0-273cac23b3be",
+              "content": "上周日曾到贵院就诊但因周日无听力测试未完成检查，计划下周再来做听力测试。",
+              "timestamp": 1771466318.231079,
+              "metadata": {
+                "turn_idx": 31
+              },
+              "turn_idx": 31
+            }
+          ],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "ca274c04-f706-4d97-93ae-cfd2cf1b0aca",
+              "content": "10天前开始在既往伤口部位感觉骨内钻心疼痛",
+              "timestamp": 1771466253.054697,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "a41b369b-1b0a-490f-b91a-4ac2876fcea1",
+              "content": "患者有哮喘（慢性病），过敏性体质",
+              "timestamp": 1771466265.9377837,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "4b96f4f0-ef77-419c-87e8-4f778ac8c9f9",
+              "content": "患者女，23岁，已婚（结婚两年多）",
+              "timestamp": 1771466286.7414923,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2e6142b5-69f2-4675-ada0-d6c8a6f7c980",
+              "content": "医生建议如条件允许最好带患者到医院再复查/再看看",
+              "timestamp": 1771466237.5563517,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "26a7af41-bca8-4b1d-933d-1c49e04c214b",
+              "content": "患者有类风湿（类风湿关节炎）病史，起病于2008年末",
+              "timestamp": 1771466243.3913782,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ed9d3576-6c81-4771-a26a-13581e41c0ec",
+              "content": "近期讨论类风湿相关：目前仅膝盖轻微肿胀；医生提示类风湿一般不只表现为膝盖小肿，建议正规就诊检查明确诊断后再治疗",
+              "timestamp": 1771466246.60692,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6db27ad6-a186-4a75-a188-e9ccbac0f92e",
+              "content": "1984年患者母亲右小腿距踝关节约5cm处开放性骨折，治疗后伤口植皮并愈合",
+              "timestamp": 1771466253.054688,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "36d2c3f8-eea4-4563-b7a4-a6562f174c9c",
+              "content": "医生推荐就诊医院与科室/专家：306医院骨科，白克文主任",
+              "timestamp": 1771466256.734869,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "a3c6bd46-dfdd-494f-ac8c-db6c1f7d376e",
+              "content": "曾被描述/诊断为输卵管不通（与不孕相关）",
+              "timestamp": 1771466292.247277,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "6fac08a2-1c24-4970-ad65-c9e4af1b6bbe",
+              "content": "病史：结婚两年多未孕/不孕",
+              "timestamp": 1771466300.964122,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            },
+            {
+              "id": "e504fdac-5f0c-4a7f-b2e4-a2d4c7021ece",
+              "content": "诊断/情况：不排卵（排卵障碍）",
+              "timestamp": 1771466300.9641328,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            },
+            {
+              "id": "f987265d-4036-41b3-b765-c9a1eef53a53",
+              "content": "治疗史：曾用促排卵药物促排仍未怀孕",
+              "timestamp": 1771466300.9641378,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            },
+            {
+              "id": "f23fc3cb-edf4-4bd7-a716-9dbf9026ca36",
+              "content": "治疗史：已做2次人工授精未受孕",
+              "timestamp": 1771466300.9641418,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            },
+            {
+              "id": "241b6ac8-f677-4e82-aae8-74b8c3827e84",
+              "content": "医生建议到生殖中心就诊",
+              "timestamp": 1771466309.3473682,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "吃药肯定有危险，但不吃药可能做不了检查。如果顺利可能半个小时左右。",
+        "to_memory": [
+          "history: 医生告知为进行听力检查可能需要用药/镇静，不用药可能无法完成检查；用药存在风险",
+          "history: 医生告知若检查顺利，听力检查耗时约30分钟"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "603526a9-22a8-464e-9599-fe09338d48fc",
+              "content": "患儿听力筛查多次未通过：满月测听力未通过，第三个月才通过；入托测听力再次未通过。家长担心存在听力问题但日常表现不明显。",
+              "timestamp": 1771466318.2310662,
+              "metadata": {
+                "turn_idx": 31
+              },
+              "turn_idx": 31
+            },
+            {
+              "id": "b96200cc-236f-45a3-96c7-f96d919b0b50",
+              "content": "家长咨询听力测试项目是否有、精确度如何、检查总时长；担心孩子不安静是否需要用药/镇静及其健康风险。医生告知为完成听力检查可能需要用药/镇静，不用药可能无法完成检查；用药存在风险；若检查顺利，听力检查耗时约30分钟。",
+              "timestamp": 1771466318.231075,
+              "metadata": {
+                "turn_idx": 31
+              },
+              "turn_idx": 31
+            },
+            {
+              "id": "64531ec7-bdfc-4fae-9bb0-273cac23b3be",
+              "content": "上周日曾到贵院就诊但因周日无听力测试未完成检查，计划下周再来做听力测试。",
+              "timestamp": 1771466318.231079,
+              "metadata": {
+                "turn_idx": 31
+              },
+              "turn_idx": 31
+            }
+          ],
+          "identity": [
+            {
+              "id": "59efafaf-806e-4f17-b1ed-7bdcd04dc791",
+              "content": "患者为吴小姐（吴**）",
+              "timestamp": 1771466203.7410333,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "ca274c04-f706-4d97-93ae-cfd2cf1b0aca",
+              "content": "10天前开始在既往伤口部位感觉骨内钻心疼痛",
+              "timestamp": 1771466253.054697,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "a41b369b-1b0a-490f-b91a-4ac2876fcea1",
+              "content": "患者有哮喘（慢性病），过敏性体质",
+              "timestamp": 1771466265.9377837,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "4b96f4f0-ef77-419c-87e8-4f778ac8c9f9",
+              "content": "患者女，23岁，已婚（结婚两年多）",
+              "timestamp": 1771466286.7414923,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            }
+          ],
+          "history": [
+            {
+              "id": "1d2b0a7c-08dd-452a-9c81-1b39d3b89f1a",
+              "content": "2004年至今面部及背部反复痤疮，未完全好转",
+              "timestamp": 1771466199.7515912,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "86a09946-6c6f-4044-9fb2-2efa16b92dce",
+              "content": "医生曾建议中西药物内服外用治疗痤疮，并控制饮食",
+              "timestamp": 1771466199.7516003,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f0d6181-c963-497f-8472-a34d381930eb",
+              "content": "既往曾出现类似皮疹/水疱，外用皮炎平等药物后可缓解",
+              "timestamp": 1771466224.0126054,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "f71432f1-50cb-4ac6-9444-40ae1065b789",
+              "content": "既往颅脑损伤（发生日期：2010-03-06）",
+              "timestamp": 1771466232.3156068,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "2e6142b5-69f2-4675-ada0-d6c8a6f7c980",
+              "content": "医生建议如条件允许最好带患者到医院再复查/再看看",
+              "timestamp": 1771466237.5563517,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "26a7af41-bca8-4b1d-933d-1c49e04c214b",
+              "content": "患者有类风湿（类风湿关节炎）病史，起病于2008年末",
+              "timestamp": 1771466243.3913782,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ed9d3576-6c81-4771-a26a-13581e41c0ec",
+              "content": "近期讨论类风湿相关：目前仅膝盖轻微肿胀；医生提示类风湿一般不只表现为膝盖小肿，建议正规就诊检查明确诊断后再治疗",
+              "timestamp": 1771466246.60692,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6db27ad6-a186-4a75-a188-e9ccbac0f92e",
+              "content": "1984年患者母亲右小腿距踝关节约5cm处开放性骨折，治疗后伤口植皮并愈合",
+              "timestamp": 1771466253.054688,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "36d2c3f8-eea4-4563-b7a4-a6562f174c9c",
+              "content": "医生推荐就诊医院与科室/专家：306医院骨科，白克文主任",
+              "timestamp": 1771466256.734869,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "a3c6bd46-dfdd-494f-ac8c-db6c1f7d376e",
+              "content": "曾被描述/诊断为输卵管不通（与不孕相关）",
+              "timestamp": 1771466292.247277,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "6fac08a2-1c24-4970-ad65-c9e4af1b6bbe",
+              "content": "病史：结婚两年多未孕/不孕",
+              "timestamp": 1771466300.964122,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            },
+            {
+              "id": "e504fdac-5f0c-4a7f-b2e4-a2d4c7021ece",
+              "content": "诊断/情况：不排卵（排卵障碍）",
+              "timestamp": 1771466300.9641328,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            },
+            {
+              "id": "f987265d-4036-41b3-b765-c9a1eef53a53",
+              "content": "治疗史：曾用促排卵药物促排仍未怀孕",
+              "timestamp": 1771466300.9641378,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            },
+            {
+              "id": "f23fc3cb-edf4-4bd7-a716-9dbf9026ca36",
+              "content": "治疗史：已做2次人工授精未受孕",
+              "timestamp": 1771466300.9641418,
+              "metadata": {
+                "turn_idx": 28
+              },
+              "turn_idx": 28
+            },
+            {
+              "id": "241b6ac8-f677-4e82-aae8-74b8c3827e84",
+              "content": "医生建议到生殖中心就诊",
+              "timestamp": 1771466309.3473682,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "针对本次为完成患儿检查可能需要用药镇静的情况，结合患者既往个人健康史/体质特点，是否存在需要特别告知并评估的用药安全隐患？请指出具体是哪一项既往情况。",
+          "answer": "患者有哮喘（慢性病），过敏性体质。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "a41b369b-1b0a-490f-b91a-4ac2876fcea1"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "603526a9-22a8-464e-9599-fe09338d48fc"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            12,
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "complex_treatment",
+    "scenario_name": "复杂疾病诊疗",
+    "session_count": 10,
+    "group_key": "综合科"
+  }
+}

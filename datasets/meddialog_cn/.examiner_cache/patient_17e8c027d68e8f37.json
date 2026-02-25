@@ -1,0 +1,1418 @@
+{
+  "patient_id": "5d4f85a40ccf",
+  "messages": [
+    {
+      "user": {
+        "content": "尿道感染，尿道感染尿频尿道疼痛灼热分泌物无。您给开的3盒莫西沙星 吃了 5天了 症状 减轻了  如果9天的药吃完   请问还要再去买几盒   这个药需要吃多长时间     长时间吃对身体影响大吗。",
+        "to_memory": [
+          "history: 曾因尿道感染用药莫西沙星（医生开具3盒），已服用5天，症状减轻",
+          "history: 本次主诉/问题：尿道感染；尿频、尿道疼痛灼热；无分泌物；询问9天疗程吃完是否需继续购买、需服用多久及长期服用影响"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "0d3bba14-50ec-498d-9d96-64894b321965",
+              "content": "本次主诉：尿道感染；表现为尿频、尿道疼痛/灼热；无分泌物；咨询莫西沙星9天疗程是否需继续购买、需服用多久及长期服用影响。",
+              "timestamp": 1771465337.5413716,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fdb6d21b-4dd0-4164-a9bb-bcc86d16e1ee",
+              "content": "既往/本次用药史：曾因尿道感染由医生开具莫西沙星3盒；已服用5天，症状减轻。",
+              "timestamp": 1771465337.5413811,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者提到目前已经服用了医生之前开具的药物多长时间了？",
+          "answer": "已服用5天。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "fdb6d21b-4dd0-4164-a9bb-bcc86d16e1ee"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "一般来说，前列腺炎需要抗菌时间较长，否则容易变成慢性，如果有效你需要继续治疗。",
+        "to_memory": [
+          "history: 医生提示可能为前列腺炎，需较长时间抗菌治疗，否则易转为慢性；若治疗有效需继续治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "0d3bba14-50ec-498d-9d96-64894b321965",
+              "content": "本次主诉：尿道感染；表现为尿频、尿道疼痛/灼热；无分泌物；咨询莫西沙星9天疗程是否需继续购买、需服用多久及长期服用影响。",
+              "timestamp": 1771465337.5413716,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fdb6d21b-4dd0-4164-a9bb-bcc86d16e1ee",
+              "content": "既往/本次用药史：曾因尿道感染由医生开具莫西沙星3盒；已服用5天，症状减轻。",
+              "timestamp": 1771465337.5413811,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "83db2ef4-3e85-4ce0-b6b5-8cc92dadaf84",
+              "content": "医生提示可能为前列腺炎，需较长时间抗菌治疗，否则易转为慢性；若治疗有效需继续治疗。",
+              "timestamp": 1771465342.2440019,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "医生在回复中提到患者可能存在需要更长疗程处理的另一种疾病；这与患者自述的“本次就诊的主要问题/诊断”是否一致？如不一致，具体是哪两者不一致？",
+          "answer": "不一致：患者自述为尿道感染；医生提示可能为前列腺炎，需较长时间抗菌治疗且有效需继续治疗。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "fdb6d21b-4dd0-4164-a9bb-bcc86d16e1ee",
+                "83db2ef4-3e85-4ce0-b6b5-8cc92dadaf84"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "郑大夫 您好  今天下午  尿道又开始疼了   跟以前一样   隔个两三天就疼一下    同时左侧睾丸也发热   疼痛     请问这个症状在服药期间正常吗    我是照常服药  还是再去您那看一下。是持续的疼    同时左侧睾丸也发热 疼痛  ，   跟以前一样 ， 疼个3  、 4个小时就轻多了   然后两三天尿道有不适 感 ，发酸 接着 就又开始疼 了   左侧睾丸 跟着一起疼  就这样反复发作，   我以前就有前列腺炎  很长时间了三四年了   但是症状很轻就没管它（坐时间长了会阴处发涨）    就是不知道尿道疼是否跟它有关        或者只是尿道感染    还有就是我的尿常规一直都正常 （从尿道发痒时到现在）    按理说尿道感染 尿常规应该不正常啊  我就不知道该怎么办了 还有您给开的药还有两天就吃够9天了   用再买几天的或者还是去您那在看一下。",
+        "to_memory": [
+          "history: 既往有前列腺炎病史约3-4年，症状较轻（久坐会阴胀）未系统治疗",
+          "history: 因尿道感染/尿道症状曾开具莫西沙星共3盒，已服用5天症状减轻，计划疗程9天，目前剩余约2天",
+          "history: 尿常规多次/一直正常（自尿道发痒至今）",
+          "working: 服药期间出现尿道疼痛复发，表现为隔2-3天发作一次，持续约3-4小时后缓解；随后2-3天尿道不适、发酸，再次疼痛，反复发作",
+          "working: 发作时伴左侧睾丸发热、疼痛，与尿道痛同步反复",
+          "history: 患者询问上述症状在服药期间是否正常、是否继续原方案用药或需要复诊，以及是否需要在9天疗程后继续购药",
+          "working: 患者疑问尿道疼是否与前列腺炎相关或单纯尿道感染相关，并对“尿道感染但尿常规正常”表示困惑"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "0d3bba14-50ec-498d-9d96-64894b321965",
+              "content": "本次主诉：尿道感染/尿道症状；尿道疼痛/灼热，服药后减轻但出现反复：隔2-3天发作一次、持续3-4小时后缓解，随后2-3天尿道不适/发酸再复发；发作时伴左侧睾丸发热、疼痛，与尿道痛同步；无分泌物；咨询莫西沙星9天疗程是否需继续/是否需复诊及9天后是否继续购药；疑问尿道疼与前列腺炎或尿道感染相关性，以及“尿常规正常但尿道感染”的原因。",
+              "timestamp": 1771465337.5413716,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fdb6d21b-4dd0-4164-a9bb-bcc86d16e1ee",
+              "content": "既往/本次用药史：因尿道感染/尿道症状曾开具莫西沙星共3盒；已服用5天症状减轻；计划疗程9天，目前剩余约2天。",
+              "timestamp": 1771465337.5413811,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "83db2ef4-3e85-4ce0-b6b5-8cc92dadaf84",
+              "content": "医生提示可能为前列腺炎，需较长时间抗菌治疗，否则易转为慢性；若治疗有效需继续治疗。",
+              "timestamp": 1771465342.2440019,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "832aad31-feb4-43a6-8a44-751f8963ad92",
+              "content": "检查/化验：自出现尿道发痒至今，尿常规多次/一直正常。",
+              "timestamp": 1771465357.05612,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "08ee353f-05c6-4a28-93e1-a889df12175f",
+              "content": "既往史：前列腺炎病史约3-4年，症状较轻（久坐会阴胀），未系统治疗。",
+              "timestamp": 1771465357.056129,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你还是来门诊看一下吧。",
+        "to_memory": [
+          "history: 既往有前列腺炎病史约3-4年（久坐会阴部发胀，症状曾较轻未系统处理）",
+          "history: 本次曾使用莫西沙星抗菌治疗（共开3盒，已服用5天，计划疗程9天）",
+          "history: 尿常规检查一直正常（从出现尿道发痒至今）",
+          "history: 医生建议：前列腺炎抗菌治疗时间通常较长，若有效需继续治疗；建议来门诊复诊评估",
+          "working: 本次主诉尿道疼痛/灼热、尿频反复发作（每隔2-3天发作一次，持续3-4小时后缓解）",
+          "working: 伴左侧睾丸发热及疼痛，随尿道疼痛反复出现",
+          "history: 患者无尿道分泌物，担心症状与前列腺炎或尿道感染相关，并询问是否需延长用药或复诊"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "0d3bba14-50ec-498d-9d96-64894b321965",
+              "content": "本次主诉：尿道感染/尿道症状；尿道疼痛/灼热，服药后减轻但出现反复：隔2-3天发作一次、持续3-4小时后缓解，随后2-3天尿道不适/发酸再复发；发作时伴左侧睾丸发热、疼痛，与尿道痛同步；无分泌物；咨询莫西沙星9天疗程是否需继续/是否需复诊及9天后是否继续购药；疑问尿道疼与前列腺炎或尿道感染相关性，以及“尿常规正常但尿道感染”的原因。",
+              "timestamp": 1771465337.5413716,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fdb6d21b-4dd0-4164-a9bb-bcc86d16e1ee",
+              "content": "既往/本次用药史：因尿道感染/尿道症状曾开具莫西沙星共3盒；已服用5天症状减轻；计划疗程9天，目前剩余约2天。",
+              "timestamp": 1771465337.5413811,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "83db2ef4-3e85-4ce0-b6b5-8cc92dadaf84",
+              "content": "医生提示可能为前列腺炎，需较长时间抗菌治疗，否则易转为慢性；若治疗有效需继续治疗。",
+              "timestamp": 1771465342.2440019,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "832aad31-feb4-43a6-8a44-751f8963ad92",
+              "content": "检查/化验：自出现尿道发痒至今，尿常规多次/一直正常。",
+              "timestamp": 1771465357.05612,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "08ee353f-05c6-4a28-93e1-a889df12175f",
+              "content": "既往史：前列腺炎病史约3-4年，症状较轻（久坐会阴胀），未系统治疗。",
+              "timestamp": 1771465357.056129,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "乙肝，没有发病症状，肝功能一直正常，今年30岁。您的回复我已经看到，非常感谢您在百忙中的关注！",
+        "to_memory": [
+          "identity: 患者30岁，乙肝（慢性乙型肝炎/乙肝携带状态）",
+          "history: 自述肝功能一直正常",
+          "working: 目前无乙肝相关发病症状"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a3c35f64-d29d-40c1-a198-f13c16b92e94",
+              "content": "目前无乙肝相关发病症状",
+              "timestamp": 1771465368.415685,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "identity": [
+            {
+              "id": "96d55bef-4622-4a55-95b7-1dad4c88e4a8",
+              "content": "患者30岁，乙肝（慢性乙型肝炎/乙肝携带状态）",
+              "timestamp": 1771465368.4156713,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "history": [
+            {
+              "id": "1eb76c89-8cab-4ccc-86c5-e0f20bd97ea8",
+              "content": "自述肝功能一直正常",
+              "timestamp": 1771465368.41568,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在对话后半段补充了一个既往慢性疾病信息。结合这一信息，若后续需要继续或调整抗菌用药方案，医生在安全性评估时最需要优先核对患者既往的哪一项实验室检查长期状态？",
+          "answer": "肝功能一直正常",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "96d55bef-4622-4a55-95b7-1dad4c88e4a8"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "1eb76c89-8cab-4ccc-86c5-e0f20bd97ea8"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可以在我门诊时间直接到窗口挂号，不需要预约。但我不是妇产科医生，可能帮助不大。",
+        "to_memory": [
+          "identity: 患者30岁",
+          "history: 乙肝，未发病症状；既往/目前肝功能一直正常"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a3c35f64-d29d-40c1-a198-f13c16b92e94",
+              "content": "目前无乙肝相关发病症状",
+              "timestamp": 1771465368.415685,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "identity": [
+            {
+              "id": "96d55bef-4622-4a55-95b7-1dad4c88e4a8",
+              "content": "患者30岁，乙肝（慢性乙型肝炎/乙肝携带状态）",
+              "timestamp": 1771465368.4156713,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "history": [
+            {
+              "id": "1eb76c89-8cab-4ccc-86c5-e0f20bd97ea8",
+              "content": "自述肝功能一直正常",
+              "timestamp": 1771465368.41568,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "医生在评估该患者是否需要进一步检查或用药调整时，需要核对其既往明确提到的一项慢性传染病史及其当前是否有相关发作表现。请问：患者报告的这项病史是什么？目前是否出现相关发作症状？",
+          "answer": "乙肝；目前无相关发病症状。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "a3c35f64-d29d-40c1-a198-f13c16b92e94"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "96d55bef-4622-4a55-95b7-1dad4c88e4a8"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "96d55bef-4622-4a55-95b7-1dad4c88e4a8",
+              "content": "患者30岁，乙肝（慢性乙型肝炎/乙肝携带状态）",
+              "timestamp": 1771465368.4156713,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "history": [
+            {
+              "id": "1eb76c89-8cab-4ccc-86c5-e0f20bd97ea8",
+              "content": "自述肝功能一直正常",
+              "timestamp": 1771465368.41568,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "经查是胆囊炎，胆结石，开始以为是胃炎，一直吃胃药，可是疼痛越来越厉害就到平顶山152医院检查，说是胆囊管狭窄，就做了胃镜微创手术。为什么医院查不出来是什么原因哪？照片。",
+        "to_memory": [
+          "identity: 30岁；乙肝携带/慢性乙肝史，自述无发病症状，肝功能一直正常",
+          "history: 既往前列腺炎病史约3-4年（久坐会阴胀）",
+          "history: 泌尿系症状相关：尿常规多次正常（自述）",
+          "history: 曾因尿道感染/疑前列腺炎使用莫西沙星共9天疗程（3盒，已服5天时症状减轻）",
+          "history: 本次外院检查诊断：胆囊炎、胆结石；提示胆囊管狭窄；在平顶山152医院行胃镜下微创手术（具体术式未明）",
+          "history: 本次主诉为腹痛，起初误以为胃炎长期服用胃药但疼痛加重；询问为何医院难以查明原因，并提供照片待解读"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "96d55bef-4622-4a55-95b7-1dad4c88e4a8",
+              "content": "患者30岁；乙肝携带/慢性乙肝史，自述无发病症状",
+              "timestamp": 1771465368.4156713,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "history": [
+            {
+              "id": "1eb76c89-8cab-4ccc-86c5-e0f20bd97ea8",
+              "content": "自述肝功能一直正常",
+              "timestamp": 1771465368.41568,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "523d6f73-a314-4ed5-9932-4b33dbc09f12",
+              "content": "既往前列腺炎病史约3-4年，久坐可出现会阴胀",
+              "timestamp": 1771465384.994372,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ad166738-6327-49b8-9add-e7a3fb31218e",
+              "content": "泌尿系症状相关：尿常规多次正常（自述）",
+              "timestamp": 1771465384.9943793,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "84d9d2c9-cc73-4a42-8b7f-b70af79d3834",
+              "content": "曾因尿道感染/疑前列腺炎使用莫西沙星共9天疗程（3盒），服用5天时症状减轻",
+              "timestamp": 1771465384.9943845,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "d0d89859-a930-4cf8-be03-798d5bd4ec75",
+              "content": "本次外院检查诊断：胆囊炎、胆结石；提示胆囊管狭窄；在平顶山152医院行胃镜下微创手术（具体术式未明）",
+              "timestamp": 1771465384.9943886,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "bc51e0ca-7828-4c79-b298-c6025c58209a",
+              "content": "本次主诉腹痛：起初误以为胃炎长期服用胃药但疼痛加重；询问为何医院难以查明原因，并提供照片待解读",
+              "timestamp": 1771465384.9943926,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在这段对话里，患者自述有一种长期慢性病史且目前没有明显发作表现。若后续医生计划为其开具或建议可能影响该类疾病的用药/检查时，首先需要核对患者既往的哪项病史信息以避免安全风险？",
+          "answer": "患者30岁；自述乙肝（携带/慢性乙肝史），目前无发病症状且肝功能一直正常。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "523d6f73-a314-4ed5-9932-4b33dbc09f12"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "96d55bef-4622-4a55-95b7-1dad4c88e4a8"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "不知道疼痛的部位、性质、与进食或排便有无关系、大便情况等。",
+        "to_memory": [
+          "history: 30岁；乙肝携带/乙肝史，无发病症状，肝功能一直正常",
+          "history: 既往前列腺炎史约3-4年（久坐会阴胀）",
+          "history: 诊断：胆囊炎、胆结石；检查提示胆囊管狭窄；在平顶山152医院行胃镜微创手术（具体术式未述）",
+          "history: 尿常规一直正常（从尿道发痒至今）",
+          "history: 曾用药：莫西沙星共3盒，已服用5天，计划疗程9天",
+          "history: 目前症状反复：尿道疼痛/灼热、尿频；无分泌物；每2-3天发作一次，持续约3-4小时缓解；伴左侧睾丸发热疼痛；尿道发酸不适；担心与尿道感染或前列腺炎相关，询问是否需继续用药或复诊",
+          "working: 医生要求补充疼痛部位、性质、与进食/排便关系及大便情况等信息",
+          "history: 医生建议：来门诊就诊复查"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5b9dc857-838d-4165-9e96-5d336ac0c02d",
+              "content": "医生要求补充：疼痛具体部位与性质、与进食/排便关系以及大便情况。",
+              "timestamp": 1771465403.887672,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "61dcb812-df23-439f-bda6-ed74c04ebc28",
+              "content": "医生建议：来门诊就诊复查。",
+              "timestamp": 1771465403.8876772,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "96d55bef-4622-4a55-95b7-1dad4c88e4a8",
+              "content": "患者30岁；乙肝携带/慢性乙肝史，自述无发病症状",
+              "timestamp": 1771465368.4156713,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "history": [
+            {
+              "id": "1eb76c89-8cab-4ccc-86c5-e0f20bd97ea8",
+              "content": "自述肝功能一直正常",
+              "timestamp": 1771465368.41568,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "523d6f73-a314-4ed5-9932-4b33dbc09f12",
+              "content": "既往前列腺炎病史约3-4年，久坐可出现会阴胀",
+              "timestamp": 1771465384.994372,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ad166738-6327-49b8-9add-e7a3fb31218e",
+              "content": "泌尿系症状相关：尿常规多次正常（自述）",
+              "timestamp": 1771465384.9943793,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "84d9d2c9-cc73-4a42-8b7f-b70af79d3834",
+              "content": "曾因尿道感染/疑前列腺炎使用莫西沙星共9天疗程（3盒），服用5天时症状减轻",
+              "timestamp": 1771465384.9943845,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "d0d89859-a930-4cf8-be03-798d5bd4ec75",
+              "content": "本次外院检查诊断：胆囊炎、胆结石；提示胆囊管狭窄；在平顶山152医院行胃镜下微创手术（具体术式未明）",
+              "timestamp": 1771465384.9943886,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "bc51e0ca-7828-4c79-b298-c6025c58209a",
+              "content": "本次主诉腹痛：起初误以为胃炎长期服用胃药但疼痛加重；询问为何医院难以查明原因，并提供照片待解读",
+              "timestamp": 1771465384.9943926,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "486c1969-cef5-446e-8feb-229685e7bd1f",
+              "content": "目前泌尿系症状反复：尿道疼痛/灼热、尿频，无分泌物；每2-3天发作一次，持续约3-4小时后缓解；伴左侧睾丸发热疼痛、尿道发酸不适；担心与尿道感染或前列腺炎相关。",
+              "timestamp": 1771465403.887663,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者这次在消息里描述的处理方式与医生在先前一次回复中给出的下一步安排：医生当时建议患者接下来应该怎么做？",
+          "answer": "来门诊看一下（门诊复查/就诊）。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "bc51e0ca-7828-4c79-b298-c6025c58209a"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "61dcb812-df23-439f-bda6-ed74c04ebc28"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "96d55bef-4622-4a55-95b7-1dad4c88e4a8",
+              "content": "患者30岁；乙肝携带/慢性乙肝史，自述无发病症状",
+              "timestamp": 1771465368.4156713,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "history": [
+            {
+              "id": "1eb76c89-8cab-4ccc-86c5-e0f20bd97ea8",
+              "content": "自述肝功能一直正常",
+              "timestamp": 1771465368.41568,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "523d6f73-a314-4ed5-9932-4b33dbc09f12",
+              "content": "既往前列腺炎病史约3-4年，久坐可出现会阴胀",
+              "timestamp": 1771465384.994372,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ad166738-6327-49b8-9add-e7a3fb31218e",
+              "content": "泌尿系症状相关：尿常规多次正常（自述）",
+              "timestamp": 1771465384.9943793,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "84d9d2c9-cc73-4a42-8b7f-b70af79d3834",
+              "content": "曾因尿道感染/疑前列腺炎使用莫西沙星共9天疗程（3盒），服用5天时症状减轻",
+              "timestamp": 1771465384.9943845,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "d0d89859-a930-4cf8-be03-798d5bd4ec75",
+              "content": "本次外院检查诊断：胆囊炎、胆结石；提示胆囊管狭窄；在平顶山152医院行胃镜下微创手术（具体术式未明）",
+              "timestamp": 1771465384.9943886,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "bc51e0ca-7828-4c79-b298-c6025c58209a",
+              "content": "本次主诉腹痛：起初误以为胃炎长期服用胃药但疼痛加重；询问为何医院难以查明原因，并提供照片待解读",
+              "timestamp": 1771465384.9943926,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "486c1969-cef5-446e-8feb-229685e7bd1f",
+              "content": "目前泌尿系症状反复：尿道疼痛/灼热、尿频，无分泌物；每2-3天发作一次，持续约3-4小时后缓解；伴左侧睾丸发热疼痛、尿道发酸不适；担心与尿道感染或前列腺炎相关。",
+              "timestamp": 1771465403.887663,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "先心病（室间隔缺损），",
+        "to_memory": [
+          "identity: 先天性心脏病（室间隔缺损，VSD）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "96d55bef-4622-4a55-95b7-1dad4c88e4a8",
+              "content": "患者30岁；乙肝携带/慢性乙肝史，自述无发病症状",
+              "timestamp": 1771465368.4156713,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c8f62455-4df7-4d89-a3d3-02bd9349f582",
+              "content": "先天性心脏病：室间隔缺损（VSD）",
+              "timestamp": 1771465409.387836,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "1eb76c89-8cab-4ccc-86c5-e0f20bd97ea8",
+              "content": "自述肝功能一直正常",
+              "timestamp": 1771465368.41568,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "523d6f73-a314-4ed5-9932-4b33dbc09f12",
+              "content": "既往前列腺炎病史约3-4年，久坐可出现会阴胀",
+              "timestamp": 1771465384.994372,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ad166738-6327-49b8-9add-e7a3fb31218e",
+              "content": "泌尿系症状相关：尿常规多次正常（自述）",
+              "timestamp": 1771465384.9943793,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "84d9d2c9-cc73-4a42-8b7f-b70af79d3834",
+              "content": "曾因尿道感染/疑前列腺炎使用莫西沙星共9天疗程（3盒），服用5天时症状减轻",
+              "timestamp": 1771465384.9943845,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "d0d89859-a930-4cf8-be03-798d5bd4ec75",
+              "content": "本次外院检查诊断：胆囊炎、胆结石；提示胆囊管狭窄；在平顶山152医院行胃镜下微创手术（具体术式未明）",
+              "timestamp": 1771465384.9943886,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "bc51e0ca-7828-4c79-b298-c6025c58209a",
+              "content": "本次主诉腹痛：起初误以为胃炎长期服用胃药但疼痛加重；询问为何医院难以查明原因，并提供照片待解读",
+              "timestamp": 1771465384.9943926,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "486c1969-cef5-446e-8feb-229685e7bd1f",
+              "content": "目前泌尿系症状反复：尿道疼痛/灼热、尿频，无分泌物；每2-3天发作一次，持续约3-4小时后缓解；伴左侧睾丸发热疼痛、尿道发酸不适；担心与尿道感染或前列腺炎相关。",
+              "timestamp": 1771465403.887663,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者此前因泌尿系不适接受的抗菌治疗与其随后复发发作的情况：他当时使用的药物及疗程是怎样的，并且在治疗进行到第几天时自觉症状开始明显减轻？",
+          "answer": "曾用莫西沙星治疗共9天疗程（3盒），服用到第5天时症状减轻。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "84d9d2c9-cc73-4a42-8b7f-b70af79d3834",
+                "486c1969-cef5-446e-8feb-229685e7bd1f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            3,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "出现肺动脉高压，建议早点手术。",
+        "to_memory": [
+          "identity: 患者30岁，有乙肝病史（无发病症状，既往肝功能一直正常）",
+          "history: 先天性心脏病：室间隔缺损（VSD）",
+          "history: 目前出现肺动脉高压；医生建议尽早手术"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "96d55bef-4622-4a55-95b7-1dad4c88e4a8",
+              "content": "患者30岁；乙肝携带/慢性乙肝史，自述无发病症状",
+              "timestamp": 1771465368.4156713,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c8f62455-4df7-4d89-a3d3-02bd9349f582",
+              "content": "先天性心脏病：室间隔缺损（VSD）",
+              "timestamp": 1771465409.387836,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "1eb76c89-8cab-4ccc-86c5-e0f20bd97ea8",
+              "content": "自述肝功能一直正常",
+              "timestamp": 1771465368.41568,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "523d6f73-a314-4ed5-9932-4b33dbc09f12",
+              "content": "既往前列腺炎病史约3-4年，久坐可出现会阴胀",
+              "timestamp": 1771465384.994372,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ad166738-6327-49b8-9add-e7a3fb31218e",
+              "content": "泌尿系症状相关：尿常规多次正常（自述）",
+              "timestamp": 1771465384.9943793,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "84d9d2c9-cc73-4a42-8b7f-b70af79d3834",
+              "content": "曾因尿道感染/疑前列腺炎使用莫西沙星共9天疗程（3盒），服用5天时症状减轻",
+              "timestamp": 1771465384.9943845,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "d0d89859-a930-4cf8-be03-798d5bd4ec75",
+              "content": "本次外院检查诊断：胆囊炎、胆结石；提示胆囊管狭窄；在平顶山152医院行胃镜下微创手术（具体术式未明）",
+              "timestamp": 1771465384.9943886,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "bc51e0ca-7828-4c79-b298-c6025c58209a",
+              "content": "本次主诉腹痛：起初误以为胃炎长期服用胃药但疼痛加重；询问为何医院难以查明原因，并提供照片待解读",
+              "timestamp": 1771465384.9943926,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "486c1969-cef5-446e-8feb-229685e7bd1f",
+              "content": "目前泌尿系症状反复：尿道疼痛/灼热、尿频，无分泌物；每2-3天发作一次，持续约3-4小时后缓解；伴左侧睾丸发热疼痛、尿道发酸不适；担心与尿道感染或前列腺炎相关。",
+              "timestamp": 1771465403.887663,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0a3052f4-aea4-4e05-a4f1-08925c231218",
+              "content": "先天性心脏病VSD目前出现肺动脉高压；医生建议尽早手术治疗",
+              "timestamp": 1771465416.434947,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "96d55bef-4622-4a55-95b7-1dad4c88e4a8",
+              "content": "患者30岁；乙肝携带/慢性乙肝史，自述无发病症状",
+              "timestamp": 1771465368.4156713,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c8f62455-4df7-4d89-a3d3-02bd9349f582",
+              "content": "先天性心脏病：室间隔缺损（VSD）",
+              "timestamp": 1771465409.387836,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "1eb76c89-8cab-4ccc-86c5-e0f20bd97ea8",
+              "content": "自述肝功能一直正常",
+              "timestamp": 1771465368.41568,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "523d6f73-a314-4ed5-9932-4b33dbc09f12",
+              "content": "既往前列腺炎病史约3-4年，久坐可出现会阴胀",
+              "timestamp": 1771465384.994372,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ad166738-6327-49b8-9add-e7a3fb31218e",
+              "content": "泌尿系症状相关：尿常规多次正常（自述）",
+              "timestamp": 1771465384.9943793,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "84d9d2c9-cc73-4a42-8b7f-b70af79d3834",
+              "content": "曾因尿道感染/疑前列腺炎使用莫西沙星共9天疗程（3盒），服用5天时症状减轻",
+              "timestamp": 1771465384.9943845,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "d0d89859-a930-4cf8-be03-798d5bd4ec75",
+              "content": "本次外院检查诊断：胆囊炎、胆结石；提示胆囊管狭窄；在平顶山152医院行胃镜下微创手术（具体术式未明）",
+              "timestamp": 1771465384.9943886,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "bc51e0ca-7828-4c79-b298-c6025c58209a",
+              "content": "本次主诉腹痛：起初误以为胃炎长期服用胃药但疼痛加重；询问为何医院难以查明原因，并提供照片待解读",
+              "timestamp": 1771465384.9943926,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "486c1969-cef5-446e-8feb-229685e7bd1f",
+              "content": "目前泌尿系症状反复：尿道疼痛/灼热、尿频，无分泌物；每2-3天发作一次，持续约3-4小时后缓解；伴左侧睾丸发热疼痛、尿道发酸不适；担心与尿道感染或前列腺炎相关。",
+              "timestamp": 1771465403.887663,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0a3052f4-aea4-4e05-a4f1-08925c231218",
+              "content": "先天性心脏病VSD目前出现肺动脉高压；医生建议尽早手术治疗",
+              "timestamp": 1771465416.434947,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "单侧腹股沟疝，患者女婴，13个月，单侧腹股沟不定时的有东西突出，主要是在孩子用力和哭闹的时候。",
+        "to_memory": [
+          "identity: 患者为女婴，13个月",
+          "working: 主诉/症状：单侧腹股沟疝表现，单侧腹股沟不定时有包块/组织突出，多在用力和哭闹时出现"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "8913465c-d2d3-4d42-9dac-dbb8d9372d3f",
+              "content": "主诉/症状：单侧腹股沟疝表现，单侧腹股沟不定时有包块/组织突出，多在用力和哭闹时出现",
+              "timestamp": 1771465419.4072545,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [
+            {
+              "id": "96d55bef-4622-4a55-95b7-1dad4c88e4a8",
+              "content": "患者30岁；乙肝携带/慢性乙肝史，自述无发病症状",
+              "timestamp": 1771465368.4156713,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c8f62455-4df7-4d89-a3d3-02bd9349f582",
+              "content": "先天性心脏病：室间隔缺损（VSD）",
+              "timestamp": 1771465409.387836,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1ee1714b-02b4-4622-97a4-9fada3bebf68",
+              "content": "患者为女婴，13个月",
+              "timestamp": 1771465419.407246,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "history": [
+            {
+              "id": "1eb76c89-8cab-4ccc-86c5-e0f20bd97ea8",
+              "content": "自述肝功能一直正常",
+              "timestamp": 1771465368.41568,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "523d6f73-a314-4ed5-9932-4b33dbc09f12",
+              "content": "既往前列腺炎病史约3-4年，久坐可出现会阴胀",
+              "timestamp": 1771465384.994372,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ad166738-6327-49b8-9add-e7a3fb31218e",
+              "content": "泌尿系症状相关：尿常规多次正常（自述）",
+              "timestamp": 1771465384.9943793,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "84d9d2c9-cc73-4a42-8b7f-b70af79d3834",
+              "content": "曾因尿道感染/疑前列腺炎使用莫西沙星共9天疗程（3盒），服用5天时症状减轻",
+              "timestamp": 1771465384.9943845,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "d0d89859-a930-4cf8-be03-798d5bd4ec75",
+              "content": "本次外院检查诊断：胆囊炎、胆结石；提示胆囊管狭窄；在平顶山152医院行胃镜下微创手术（具体术式未明）",
+              "timestamp": 1771465384.9943886,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "bc51e0ca-7828-4c79-b298-c6025c58209a",
+              "content": "本次主诉腹痛：起初误以为胃炎长期服用胃药但疼痛加重；询问为何医院难以查明原因，并提供照片待解读",
+              "timestamp": 1771465384.9943926,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "486c1969-cef5-446e-8feb-229685e7bd1f",
+              "content": "目前泌尿系症状反复：尿道疼痛/灼热、尿频，无分泌物；每2-3天发作一次，持续约3-4小时后缓解；伴左侧睾丸发热疼痛、尿道发酸不适；担心与尿道感染或前列腺炎相关。",
+              "timestamp": 1771465403.887663,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0a3052f4-aea4-4e05-a4f1-08925c231218",
+              "content": "先天性心脏病VSD目前出现肺动脉高压；医生建议尽早手术治疗",
+              "timestamp": 1771465416.434947,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在为患儿拟定本次处理/手术方案前，需要核对其既往在外院做过的关键检查结论和接受过的微创介入/手术史；请问患者既往外院曾被诊断为哪些疾病，并在哪家医院做过何种内镜下微创操作？这些信息与本次方案是否存在需要特别注意的安全冲突点？",
+          "answer": "外院检查诊断为胆囊炎、胆结石，并提示胆囊管狭窄；曾在平顶山152医院行胃镜下微创手术（具体术式未明）。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "d0d89859-a930-4cf8-be03-798d5bd4ec75"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "8913465c-d2d3-4d42-9dac-dbb8d9372d3f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "您好，随访一下，孩子手术了吗？",
+        "to_memory": [
+          "identity: 患者为女婴，13个月",
+          "history: 诊断为单侧腹股沟疝；表现为哭闹/用力时腹股沟区不定时突出",
+          "history: 医生随访询问孩子是否已手术"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "8913465c-d2d3-4d42-9dac-dbb8d9372d3f",
+              "content": "主诉/症状：单侧腹股沟疝表现，单侧腹股沟不定时有包块/组织突出，多在用力和哭闹时出现",
+              "timestamp": 1771465419.4072545,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [
+            {
+              "id": "96d55bef-4622-4a55-95b7-1dad4c88e4a8",
+              "content": "患者30岁；乙肝携带/慢性乙肝史，自述无发病症状",
+              "timestamp": 1771465368.4156713,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c8f62455-4df7-4d89-a3d3-02bd9349f582",
+              "content": "先天性心脏病：室间隔缺损（VSD）",
+              "timestamp": 1771465409.387836,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "1ee1714b-02b4-4622-97a4-9fada3bebf68",
+              "content": "患者为女婴，13个月",
+              "timestamp": 1771465419.407246,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "history": [
+            {
+              "id": "1eb76c89-8cab-4ccc-86c5-e0f20bd97ea8",
+              "content": "自述肝功能一直正常",
+              "timestamp": 1771465368.41568,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "523d6f73-a314-4ed5-9932-4b33dbc09f12",
+              "content": "既往前列腺炎病史约3-4年，久坐可出现会阴胀",
+              "timestamp": 1771465384.994372,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ad166738-6327-49b8-9add-e7a3fb31218e",
+              "content": "泌尿系症状相关：尿常规多次正常（自述）",
+              "timestamp": 1771465384.9943793,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "84d9d2c9-cc73-4a42-8b7f-b70af79d3834",
+              "content": "曾因尿道感染/疑前列腺炎使用莫西沙星共9天疗程（3盒），服用5天时症状减轻",
+              "timestamp": 1771465384.9943845,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "d0d89859-a930-4cf8-be03-798d5bd4ec75",
+              "content": "本次外院检查诊断：胆囊炎、胆结石；提示胆囊管狭窄；在平顶山152医院行胃镜下微创手术（具体术式未明）",
+              "timestamp": 1771465384.9943886,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "bc51e0ca-7828-4c79-b298-c6025c58209a",
+              "content": "本次主诉腹痛：起初误以为胃炎长期服用胃药但疼痛加重；询问为何医院难以查明原因，并提供照片待解读",
+              "timestamp": 1771465384.9943926,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "486c1969-cef5-446e-8feb-229685e7bd1f",
+              "content": "目前泌尿系症状反复：尿道疼痛/灼热、尿频，无分泌物；每2-3天发作一次，持续约3-4小时后缓解；伴左侧睾丸发热疼痛、尿道发酸不适；担心与尿道感染或前列腺炎相关。",
+              "timestamp": 1771465403.887663,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0a3052f4-aea4-4e05-a4f1-08925c231218",
+              "content": "先天性心脏病VSD目前出现肺动脉高压；医生建议尽早手术治疗",
+              "timestamp": 1771465416.434947,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "0aafce15-20f2-44b5-a398-46ed5a898cf3",
+              "content": "诊断为单侧腹股沟疝；表现为哭闹/用力时腹股沟区不定时突出",
+              "timestamp": 1771465427.1618035,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "ced24d75-ed0b-4d89-bd9d-2f3a2158b071",
+              "content": "医生随访询问孩子是否已手术",
+              "timestamp": 1771465427.1618183,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者这次就诊时描述孩子在腹股沟区域出现的主要情况是什么？",
+          "answer": "单侧腹股沟不定时有东西突出，多在孩子用力和哭闹时出现",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "8913465c-d2d3-4d42-9dac-dbb8d9372d3f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "comorbidity_management",
+    "scenario_name": "多疾病共病管理",
+    "session_count": 5,
+    "group_key": "综合科"
+  }
+}

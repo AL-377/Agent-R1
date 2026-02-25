@@ -1,0 +1,2804 @@
+{
+  "patient_id": "c72f173faa80",
+  "messages": [
+    {
+      "user": {
+        "content": "宫腔粘连还是子宫畸形，半年前因胎儿发育畸形行人工流产术，不净，2周后又刮了一次宫。术后2个月月经量明显减少。宫腔镜检查只看见右侧宫腔，左侧输卵管开口未见。",
+        "to_memory": [
+          "working: 疑问为宫腔粘连或子宫畸形",
+          "history: 半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+          "history: 术后2个月出现月经量明显减少",
+          "history: 宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "103692d7-0629-42b3-8772-433ed4369e9a",
+              "content": "疑问为宫腔粘连或子宫畸形",
+              "timestamp": 1771466060.0315938,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "将患者术后月经量明显减少这一变化与她此前进行的内镜检查结果结合来看：那次检查对宫腔左右侧的观察结论分别是什么？",
+          "answer": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "e0c334d6-f55c-415b-b4e2-67a9f79c5f23"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "103692d7-0629-42b3-8772-433ed4369e9a"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "建议带造影的x线片就诊，可选择做宫腔镜检查并治疗。",
+        "to_memory": [
+          "history: 医生建议携带造影X线片就诊",
+          "history: 可选择行宫腔镜检查并治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "103692d7-0629-42b3-8772-433ed4369e9a",
+              "content": "疑问为宫腔粘连或子宫畸形",
+              "timestamp": 1771466060.0315938,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在评估该患者目前的宫腔情况前，需要重点核对其半年前与妊娠相关的手术经过；请说明当时经历了哪些处理步骤，以及是否存在需要警惕的重复操作风险？",
+          "answer": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后又再次刮宫。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "91889997-5a45-424b-9899-dfb8a1686754"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "103692d7-0629-42b3-8772-433ed4369e9a"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "胎儿肠管扩张，杨医生您好！我的情况是怀孕到现在已经31周了，刚去做过检查发现胎儿有肠管扩张问题，具体情况是，胎位：目前头位，双顶径：85mm,枕额径：104mm,头围：297mm,胸径：78mm,腹径：85mm,腹围：262mm,股骨长：59mm,肱骨长：53mm,胎心：140次/分，心律齐，胎儿肠管扩张最宽26mm.",
+        "to_memory": [
+          "history: 既往妊娠史：半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次清宫/刮宫",
+          "history: 术后2个月月经量明显减少",
+          "history: 宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见（提示宫腔粘连/子宫畸形可能）",
+          "history: 医生建议：携带造影X线片就诊，可选择行宫腔镜检查并治疗",
+          "history: 本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+          "working: 本次就诊主诉：孕31周检查发现胎儿肠管扩张"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "09d25576-4592-43f6-add8-058d1093325b",
+              "content": "本次就诊主诉：孕31周产检发现胎儿肠管扩张",
+              "timestamp": 1771466076.7779355,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "089278f4-3d6a-438c-9237-e9fdb2b12798",
+              "content": "本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+              "timestamp": 1771466076.7779675,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "医生在之前那次就诊时，嘱咐患者就诊时需要随身带上哪一类影像资料？",
+          "answer": "造影的X线片",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "ece66937-aa7a-48cc-a113-fec19b8e2084"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "需要进一步检查，可能有肠闭锁。",
+        "to_memory": [
+          "history: 半年前因胎儿发育畸形行人工流产术；因流产不净2周后再次行清宫/刮宫术；术后2个月月经量明显减少",
+          "history: 宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见（提示可能宫腔粘连或子宫畸形）",
+          "history: 既往医生建议：携带带造影的X线片就诊，可选择宫腔镜检查并治疗",
+          "history: 本次妊娠31周超声/检查数据：头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；HL 53mm；胎心140次/分，心律齐；胎儿肠管扩张最宽26mm",
+          "working: 医生提示需进一步检查，考虑/可能存在胎儿肠闭锁"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "09d25576-4592-43f6-add8-058d1093325b",
+              "content": "本次就诊主诉：孕31周产检发现胎儿肠管扩张",
+              "timestamp": 1771466076.7779355,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "d6890119-9eb9-4fc8-b72b-ee851db8d05a",
+              "content": "医生提示需进一步检查，考虑/可能存在胎儿肠闭锁",
+              "timestamp": 1771466084.4106872,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "089278f4-3d6a-438c-9237-e9fdb2b12798",
+              "content": "本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+              "timestamp": 1771466076.7779675,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "该患者既往一次腔内内镜检查中，医生记录到的可见腔体范围以及未能识别的解剖标志分别是什么？这对后续检查/治疗计划是否需要做安全性核对？请说明需要核对的点。",
+          "answer": "既往宫腔镜检查仅见右侧宫腔，左侧输卵管开口未见；后续检查/治疗需核对是否存在解剖异常或粘连导致的腔体不全显示。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "e0c334d6-f55c-415b-b4e2-67a9f79c5f23"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "09d25576-4592-43f6-add8-058d1093325b"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "那要真的是肠闭锁,也可以治疗吗？请问贵医院有治疗这种病吗？",
+        "to_memory": [
+          "history: 半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次清宫/刮宫；术后2个月月经量明显减少；宫腔镜检查仅见右侧宫腔，左侧输卵管开口未见；既往疑问为宫腔粘连或子宫畸形；医生建议携带造影X线片就诊，可选择宫腔镜检查并治疗",
+          "history: 现孕31周超声：胎位头位；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+          "history: 医生提示需进一步检查，可能为胎儿肠闭锁（尚未确诊）；患者询问若为肠闭锁是否可治疗、医院是否可治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "09d25576-4592-43f6-add8-058d1093325b",
+              "content": "本次就诊主诉：现孕31周产检发现胎儿肠管扩张（最宽约26mm），患者咨询若为肠闭锁是否可治疗、医院是否可治疗",
+              "timestamp": 1771466076.7779355,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "d6890119-9eb9-4fc8-b72b-ee851db8d05a",
+              "content": "医生提示需进一步检查，考虑/可能存在胎儿肠闭锁",
+              "timestamp": 1771466084.4106872,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "089278f4-3d6a-438c-9237-e9fdb2b12798",
+              "content": "本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+              "timestamp": 1771466076.7779675,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可以治疗。可以治疗。",
+        "to_memory": [
+          "history: 医生确认胎儿肠闭锁（如确诊）可治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "09d25576-4592-43f6-add8-058d1093325b",
+              "content": "本次就诊主诉：现孕31周产检发现胎儿肠管扩张（最宽约26mm），患者咨询若为肠闭锁是否可治疗、医院是否可治疗；医生确认胎儿肠闭锁（如确诊）可治疗",
+              "timestamp": 1771466076.7779355,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "d6890119-9eb9-4fc8-b72b-ee851db8d05a",
+              "content": "医生提示需进一步检查，考虑/可能存在胎儿肠闭锁",
+              "timestamp": 1771466084.4106872,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "089278f4-3d6a-438c-9237-e9fdb2b12798",
+              "content": "本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+              "timestamp": 1771466076.7779675,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者在术后多长时间开始出现月经量的明显变化？",
+          "answer": "术后2个月",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b41bf031-698b-4d93-af12-0bbd2209d0bc"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "089278f4-3d6a-438c-9237-e9fdb2b12798",
+              "content": "本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+              "timestamp": 1771466076.7779675,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "斑秃，一年时间拖得光光的，身软乏力。",
+        "to_memory": [
+          "working: 主诉斑秃，病程约1年，脱发逐渐加重至几乎全秃；伴身软乏力"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "eb0a399f-47b3-4347-9918-2d05485a69e1",
+              "content": "主诉斑秃，病程约1年，脱发逐渐加重至几乎全秃；伴身软乏力",
+              "timestamp": 1771466101.0639298,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "089278f4-3d6a-438c-9237-e9fdb2b12798",
+              "content": "本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+              "timestamp": 1771466076.7779675,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者在“术后约2个月”那次反馈的经期相关变化，与本次因头皮问题再次就诊时描述的主要困扰及伴随不适：两次分别提到了哪些症状/问题？",
+          "answer": "术后2个月出现月经量明显减少；本次主诉斑秃约1年、逐渐加重至几乎全秃，伴身软乏力。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b41bf031-698b-4d93-af12-0bbd2209d0bc"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "eb0a399f-47b3-4347-9918-2d05485a69e1"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            8,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "斑秃多数免疫因素导致，与遗传也有一定关系。我们采用中西医结合的综合治疗方案治疗，效果较好，请来就诊治疗。",
+        "to_memory": [
+          "history: 半年前因胎儿发育畸形行人工流产术；术后不净，2周后再次清宫/刮宫",
+          "history: 术后2个月月经量明显减少；宫腔镜检查仅见右侧宫腔，左侧输卵管开口未见（提示可能宫腔粘连/子宫畸形）",
+          "history: 既往医生建议带造影X线片就诊，可选择行宫腔镜检查并治疗",
+          "history: 孕31周超声：胎位头位；BPD 85mm，OFD 104mm，HC 297mm，胸径78mm，腹径85mm，AC 262mm，FL 59mm，HL 53mm；胎心140次/分，心律齐；胎儿肠管扩张最宽26mm",
+          "history: 医生提示可能肠闭锁，需进一步检查；表示可治疗",
+          "working: 斑秃，病程约1年逐渐加重至几乎脱光，伴身软乏力",
+          "working: 医生告知斑秃多与免疫因素相关，亦与遗传有关；建议中西医结合综合治疗，需来院就诊"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "eb0a399f-47b3-4347-9918-2d05485a69e1",
+              "content": "主诉斑秃，病程约1年，脱发逐渐加重至几乎全秃；伴身软乏力",
+              "timestamp": 1771466101.0639298,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "0444f89b-7b0a-4aa2-bfae-738a56073e32",
+              "content": "医生告知斑秃多与免疫因素相关，亦与遗传有关；建议中西医结合综合治疗，需来院就诊",
+              "timestamp": 1771466113.7783182,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "089278f4-3d6a-438c-9237-e9fdb2b12798",
+              "content": "本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+              "timestamp": 1771466076.7779675,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7167ae46-e3db-46ad-9343-855e5d342d2b",
+              "content": "孕31周超声提示胎儿肠管扩张最宽26mm，医生考虑可能肠闭锁，建议进一步检查，表示可治疗",
+              "timestamp": 1771466113.7783084,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "谢谢，你的回复我很满意，",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "eb0a399f-47b3-4347-9918-2d05485a69e1",
+              "content": "主诉斑秃，病程约1年，脱发逐渐加重至几乎全秃；伴身软乏力",
+              "timestamp": 1771466101.0639298,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "0444f89b-7b0a-4aa2-bfae-738a56073e32",
+              "content": "医生告知斑秃多与免疫因素相关，亦与遗传有关；建议中西医结合综合治疗，需来院就诊",
+              "timestamp": 1771466113.7783182,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "089278f4-3d6a-438c-9237-e9fdb2b12798",
+              "content": "本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+              "timestamp": 1771466076.7779675,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7167ae46-e3db-46ad-9343-855e5d342d2b",
+              "content": "孕31周超声提示胎儿肠管扩张最宽26mm，医生考虑可能肠闭锁，建议进一步检查，表示可治疗",
+              "timestamp": 1771466113.7783084,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "不客气！",
+        "to_memory": [
+          "history: 孕31周，超声提示胎儿肠管扩张，最宽26mm；胎位头位；胎心140次/分，心律齐；胎儿测量：BPD 85mm、枕额径104mm、头围297mm、胸径78mm、腹径85mm、腹围262mm、股骨长59mm、肱骨长53mm",
+          "working: 医生提示需进一步检查，可能为胎儿肠闭锁；患者询问肠闭锁是否可治疗及医院是否可治，医生答可治疗",
+          "history: 斑秃病史约1年，描述为“拖得光光的”，伴身软乏力；医生评估斑秃多与免疫因素有关，可能与遗传相关，建议中西医结合就诊治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "eb0a399f-47b3-4347-9918-2d05485a69e1",
+              "content": "主诉斑秃，病程约1年，脱发逐渐加重至几乎全秃；伴身软乏力",
+              "timestamp": 1771466101.0639298,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "0444f89b-7b0a-4aa2-bfae-738a56073e32",
+              "content": "医生告知斑秃多与免疫因素相关，亦与遗传有关；建议中西医结合综合治疗，需来院就诊",
+              "timestamp": 1771466113.7783182,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "089278f4-3d6a-438c-9237-e9fdb2b12798",
+              "content": "本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+              "timestamp": 1771466076.7779675,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7167ae46-e3db-46ad-9343-855e5d342d2b",
+              "content": "孕31周超声提示胎儿肠管扩张最宽26mm，医生考虑可能肠闭锁，建议进一步检查，表示可治疗",
+              "timestamp": 1771466113.7783084,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "回顾患者既往的妇科手术史（最早那次）与本次因脱发问题就诊时医生给出的病因判断/治疗方案，两者分别涉及了哪些关键诊疗信息？请分别概括。",
+          "answer": "既往：半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术；本次：医生认为脱发问题多与免疫因素相关，也与遗传有关，建议中西医结合综合治疗并来院就诊。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "91889997-5a45-424b-9899-dfb8a1686754"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "0444f89b-7b0a-4aa2-bfae-738a56073e32"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            11,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "089278f4-3d6a-438c-9237-e9fdb2b12798",
+              "content": "本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+              "timestamp": 1771466076.7779675,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7167ae46-e3db-46ad-9343-855e5d342d2b",
+              "content": "孕31周超声提示胎儿肠管扩张最宽26mm，医生考虑可能肠闭锁，建议进一步检查，表示可治疗",
+              "timestamp": 1771466113.7783084,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "肩周炎，将近一年，每天主要症状：各种疼、酸、难受。就诊医院：各种大小医院、诊所、偏方。",
+        "to_memory": [
+          "working: 主诉肩周炎近1年",
+          "working: 每日主要症状为多种疼痛、酸胀、难受",
+          "history: 近一年曾就诊于多种大小医院/诊所并尝试偏方治疗（具体诊断与用药未提供）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "20ec987b-06e1-42fe-a764-4086d415ea33",
+              "content": "主诉肩周炎近1年",
+              "timestamp": 1771466127.534629,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "0552bda2-67f9-44f4-9eca-639e777ab9f7",
+              "content": "每日主要症状为多种疼痛、酸胀、难受",
+              "timestamp": 1771466127.5346382,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "089278f4-3d6a-438c-9237-e9fdb2b12798",
+              "content": "本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+              "timestamp": 1771466076.7779675,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7167ae46-e3db-46ad-9343-855e5d342d2b",
+              "content": "孕31周超声提示胎儿肠管扩张最宽26mm，医生考虑可能肠闭锁，建议进一步检查，表示可治疗",
+              "timestamp": 1771466113.7783084,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "3e613380-340a-4947-94f4-5353b015a5f6",
+              "content": "近1年曾就诊于多种大小医院/诊所并尝试偏方治疗（具体诊断与用药未提供）",
+              "timestamp": 1771466127.5346434,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者就肩部问题描述的“每日主要症状”与其既往某次妇科手术相关病史是否存在需要额外核对的安全隐患或时间线矛盾？请指出需要核对的具体点。",
+          "answer": "每日主要症状为多种疼痛、酸胀、难受；既往史为半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "91889997-5a45-424b-9899-dfb8a1686754"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "0552bda2-67f9-44f4-9eca-639e777ab9f7"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            13,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "您好:建议您肩关节拍片检查,除外骨与关节其它疾病.若为肩周炎,病期一般在18个月左右每天坚持肩关节的锻炼.欢迎您来我院就诊,我的门诊时间:周一下午\\周三上午.谢谢!",
+        "to_memory": [
+          "working: 主诉肩周炎近1年，每日肩部疼痛、酸胀不适，曾在多家医院/诊所及尝试偏方就诊",
+          "history: 医生建议肩关节拍片检查以排除骨与关节其他疾病；如为肩周炎，病程一般约18个月，建议每日坚持肩关节锻炼"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "20ec987b-06e1-42fe-a764-4086d415ea33",
+              "content": "主诉肩周炎近1年",
+              "timestamp": 1771466127.534629,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "0552bda2-67f9-44f4-9eca-639e777ab9f7",
+              "content": "每日肩部疼痛、酸胀不适",
+              "timestamp": 1771466127.5346382,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "f3faecdc-96d3-4be6-8381-8abcd3715b05",
+              "content": "近1年曾在多家医院/诊所就诊并尝试偏方治疗（具体诊断与用药未提供）",
+              "timestamp": 1771466134.3526974,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "089278f4-3d6a-438c-9237-e9fdb2b12798",
+              "content": "本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+              "timestamp": 1771466076.7779675,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7167ae46-e3db-46ad-9343-855e5d342d2b",
+              "content": "孕31周超声提示胎儿肠管扩张最宽26mm，医生考虑可能肠闭锁，建议进一步检查，表示可治疗",
+              "timestamp": 1771466113.7783084,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "3e613380-340a-4947-94f4-5353b015a5f6",
+              "content": "近1年曾就诊于多种大小医院/诊所并尝试偏方治疗（具体诊断与用药未提供）",
+              "timestamp": 1771466127.5346434,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "e70dbca7-2040-4422-8dc3-9bdf3823af93",
+              "content": "医生建议肩关节拍片检查以排除骨与关节其他疾病",
+              "timestamp": 1771466134.3527055,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "314654f6-2f35-4e2a-add2-a13120fe3472",
+              "content": "如为肩周炎，病程一般约18个月，建议每日坚持肩关节锻炼",
+              "timestamp": 1771466134.3527107,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者在某次手术后大约过了多久开始出现月经方面的异常变化？",
+          "answer": "术后2个月",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b41bf031-698b-4d93-af12-0bbd2209d0bc"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            14
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "089278f4-3d6a-438c-9237-e9fdb2b12798",
+              "content": "本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+              "timestamp": 1771466076.7779675,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7167ae46-e3db-46ad-9343-855e5d342d2b",
+              "content": "孕31周超声提示胎儿肠管扩张最宽26mm，医生考虑可能肠闭锁，建议进一步检查，表示可治疗",
+              "timestamp": 1771466113.7783084,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "3e613380-340a-4947-94f4-5353b015a5f6",
+              "content": "近1年曾就诊于多种大小医院/诊所并尝试偏方治疗（具体诊断与用药未提供）",
+              "timestamp": 1771466127.5346434,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "e70dbca7-2040-4422-8dc3-9bdf3823af93",
+              "content": "医生建议肩关节拍片检查以排除骨与关节其他疾病",
+              "timestamp": 1771466134.3527055,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "314654f6-2f35-4e2a-add2-a13120fe3472",
+              "content": "如为肩周炎，病程一般约18个月，建议每日坚持肩关节锻炼",
+              "timestamp": 1771466134.3527107,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "隐匿性阴茎，21日在厦门第一医院进行手术。",
+        "to_memory": [
+          "history: 隐匿性阴茎，21日在厦门第一医院进行手术"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "089278f4-3d6a-438c-9237-e9fdb2b12798",
+              "content": "本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+              "timestamp": 1771466076.7779675,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7167ae46-e3db-46ad-9343-855e5d342d2b",
+              "content": "孕31周超声提示胎儿肠管扩张最宽26mm，医生考虑可能肠闭锁，建议进一步检查，表示可治疗",
+              "timestamp": 1771466113.7783084,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "3e613380-340a-4947-94f4-5353b015a5f6",
+              "content": "近1年曾就诊于多种大小医院/诊所并尝试偏方治疗（具体诊断与用药未提供）",
+              "timestamp": 1771466127.5346434,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "e70dbca7-2040-4422-8dc3-9bdf3823af93",
+              "content": "医生建议肩关节拍片检查以排除骨与关节其他疾病",
+              "timestamp": 1771466134.3527055,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "314654f6-2f35-4e2a-add2-a13120fe3472",
+              "content": "如为肩周炎，病程一般约18个月，建议每日坚持肩关节锻炼",
+              "timestamp": 1771466134.3527107,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "5dd13c29-ce02-46c7-85b7-6911ffd3c261",
+              "content": "隐匿性阴茎，21日在厦门第一医院进行手术",
+              "timestamp": 1771466138.557959,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "医生对患者所述疾病的自然病程持续时间有过说明；这一时长与患者当前自述的症状持续时间是否存在不一致或需要额外核对之处？请说明医生提到的病程时长。",
+          "answer": "如为肩周炎，病程一般约18个月。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "91889997-5a45-424b-9899-dfb8a1686754",
+                "314654f6-2f35-4e2a-add2-a13120fe3472"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            16,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "属正常情况。术后炎症水肿期，过一段时间会好。",
+        "to_memory": [
+          "history: 2025-01-21在厦门第一医院行隐匿性阴茎手术",
+          "working: 术后处于炎症水肿期，医生评估为正常情况，预计过一段时间会好转"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "0f542cc9-6a36-4887-90b0-073a3f386748",
+              "content": "隐匿性阴茎术后处于炎症水肿期，医生评估为正常情况，预计过一段时间会好转",
+              "timestamp": 1771466144.648082,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "089278f4-3d6a-438c-9237-e9fdb2b12798",
+              "content": "本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+              "timestamp": 1771466076.7779675,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7167ae46-e3db-46ad-9343-855e5d342d2b",
+              "content": "孕31周超声提示胎儿肠管扩张最宽26mm，医生考虑可能肠闭锁，建议进一步检查，表示可治疗",
+              "timestamp": 1771466113.7783084,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "3e613380-340a-4947-94f4-5353b015a5f6",
+              "content": "近1年曾就诊于多种大小医院/诊所并尝试偏方治疗（具体诊断与用药未提供）",
+              "timestamp": 1771466127.5346434,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "e70dbca7-2040-4422-8dc3-9bdf3823af93",
+              "content": "医生建议肩关节拍片检查以排除骨与关节其他疾病",
+              "timestamp": 1771466134.3527055,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "314654f6-2f35-4e2a-add2-a13120fe3472",
+              "content": "如为肩周炎，病程一般约18个月，建议每日坚持肩关节锻炼",
+              "timestamp": 1771466134.3527107,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "5dd13c29-ce02-46c7-85b7-6911ffd3c261",
+              "content": "2025-01-21在厦门第一医院行隐匿性阴茎手术",
+              "timestamp": 1771466138.557959,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "在本次孕31周产检超声记录中，胎儿肠管扩张的最宽测量值是多少（单位mm）？",
+          "answer": "26mm",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "089278f4-3d6a-438c-9237-e9fdb2b12798"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            14
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "089278f4-3d6a-438c-9237-e9fdb2b12798",
+              "content": "本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+              "timestamp": 1771466076.7779675,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7167ae46-e3db-46ad-9343-855e5d342d2b",
+              "content": "孕31周超声提示胎儿肠管扩张最宽26mm，医生考虑可能肠闭锁，建议进一步检查，表示可治疗",
+              "timestamp": 1771466113.7783084,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "3e613380-340a-4947-94f4-5353b015a5f6",
+              "content": "近1年曾就诊于多种大小医院/诊所并尝试偏方治疗（具体诊断与用药未提供）",
+              "timestamp": 1771466127.5346434,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "e70dbca7-2040-4422-8dc3-9bdf3823af93",
+              "content": "医生建议肩关节拍片检查以排除骨与关节其他疾病",
+              "timestamp": 1771466134.3527055,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "314654f6-2f35-4e2a-add2-a13120fe3472",
+              "content": "如为肩周炎，病程一般约18个月，建议每日坚持肩关节锻炼",
+              "timestamp": 1771466134.3527107,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "5dd13c29-ce02-46c7-85b7-6911ffd3c261",
+              "content": "2025-01-21在厦门第一医院行隐匿性阴茎手术",
+              "timestamp": 1771466138.557959,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "夜惊，刘主任，您好！宝宝现在15个月了，14个月断的奶，自从断奶后就特别恋母，入睡前总是要手放到妈妈脖子里才肯入睡，每天睡到晚上2-3点就要哭醒，抱起后会挺身子，闭着眼睛哼唧。抱着晃上半个小时到一个小时才能睡踏实，放下后过一两个小时又会哭醒，又要抱着晃。孩子白天精神好，睡眠也很踏实。身高81cm,体重22斤。出牙10颗。食欲好，吃饭挺好。每天奶量200ml左右。断断续续在补钙。想咨询刘主任孩子是否微量元素缺乏，如果缺的话，去医院要怎么测呢？是测头发，还是血液？还有孩子患蛲虫病的机会大不大呢，我目测她大便也没有什么虫虫之类的，屁眼里也没发现。\n。",
+        "to_memory": [
+          "identity: 患儿，15个月；身高81cm，体重22斤",
+          "working: 断奶后（14个月断奶）出现夜惊/夜间频繁哭醒：入睡需把手放在妈妈脖子里；夜间2-3点哭醒，抱起后挺身子、闭眼哼唧；需抱晃30-60分钟才睡稳，放下1-2小时又醒；白天精神好、白天睡眠踏实",
+          "working: 生长发育与喂养情况：出牙10颗；食欲好；每日奶量约200ml；断断续续补钙",
+          "working: 家长咨询是否存在微量元素缺乏及检测方式（测头发或血液）",
+          "working: 家长担心蛲虫病；目前目测大便未见虫体、肛周未见虫"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d2c40616-5692-4196-91d6-f06ecaa5d7a5",
+              "content": "14个月断奶后出现夜惊/夜间频繁哭醒：入睡需把手放在妈妈脖子里；夜间2-3点哭醒，抱起后挺身子、闭眼哼唧；需抱晃30-60分钟才睡稳，放下1-2小时又醒；白天精神好，白天睡眠踏实",
+              "timestamp": 1771466153.359691,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "9601e70b-4c9f-4746-a797-d548b7b02efb",
+              "content": "生长发育与喂养情况：出牙10颗；食欲好；每日奶量约200ml；断断续续补钙",
+              "timestamp": 1771466153.3596957,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "db11ecdb-902b-4ce5-a4de-ee599a9c53a4",
+              "content": "家长咨询是否存在微量元素缺乏及检测方式（测头发或血液）",
+              "timestamp": 1771466153.3596997,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "e11585d9-dfae-47ba-8632-272b40fdd628",
+              "content": "家长担心蛲虫病；目前目测大便未见虫体、肛周未见虫",
+              "timestamp": 1771466153.3597035,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "identity": [
+            {
+              "id": "5308887b-1d4e-472e-b8a0-d4a310d0b8cb",
+              "content": "患儿，15个月；身高81cm，体重22斤",
+              "timestamp": 1771466153.3596823,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "089278f4-3d6a-438c-9237-e9fdb2b12798",
+              "content": "本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+              "timestamp": 1771466076.7779675,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7167ae46-e3db-46ad-9343-855e5d342d2b",
+              "content": "孕31周超声提示胎儿肠管扩张最宽26mm，医生考虑可能肠闭锁，建议进一步检查，表示可治疗",
+              "timestamp": 1771466113.7783084,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "3e613380-340a-4947-94f4-5353b015a5f6",
+              "content": "近1年曾就诊于多种大小医院/诊所并尝试偏方治疗（具体诊断与用药未提供）",
+              "timestamp": 1771466127.5346434,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "e70dbca7-2040-4422-8dc3-9bdf3823af93",
+              "content": "医生建议肩关节拍片检查以排除骨与关节其他疾病",
+              "timestamp": 1771466134.3527055,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "314654f6-2f35-4e2a-add2-a13120fe3472",
+              "content": "如为肩周炎，病程一般约18个月，建议每日坚持肩关节锻炼",
+              "timestamp": 1771466134.3527107,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "5dd13c29-ce02-46c7-85b7-6911ffd3c261",
+              "content": "2025-01-21在厦门第一医院行隐匿性阴茎手术",
+              "timestamp": 1771466138.557959,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "家长在咨询中担心孩子可能存在某种寄生虫相关问题；但其自述的家庭观察结果是否与这种担忧存在不一致之处？请指出不一致点是什么。",
+          "answer": "家长担心蛲虫病，但目前目测大便未见虫体、肛周未见虫。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "089278f4-3d6a-438c-9237-e9fdb2b12798"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "e11585d9-dfae-47ba-8632-272b40fdd628"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            16,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "两种情况都可以通过化验确定，微量元素我院通过血液检查。",
+        "to_memory": [
+          "history: 医生说明微量元素缺乏与蛲虫感染均可通过化验确定；微量元素在该院通过血液检查"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d2c40616-5692-4196-91d6-f06ecaa5d7a5",
+              "content": "14个月断奶后出现夜惊/夜间频繁哭醒：入睡需把手放在妈妈脖子里；夜间2-3点哭醒，抱起后挺身子、闭眼哼唧；需抱晃30-60分钟才睡稳，放下1-2小时又醒；白天精神好，白天睡眠踏实",
+              "timestamp": 1771466153.359691,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "9601e70b-4c9f-4746-a797-d548b7b02efb",
+              "content": "生长发育与喂养情况：出牙10颗；食欲好；每日奶量约200ml；断断续续补钙",
+              "timestamp": 1771466153.3596957,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "db11ecdb-902b-4ce5-a4de-ee599a9c53a4",
+              "content": "家长咨询是否存在微量元素缺乏及检测方式（测头发或血液）",
+              "timestamp": 1771466153.3596997,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "e11585d9-dfae-47ba-8632-272b40fdd628",
+              "content": "家长担心蛲虫病；目前目测大便未见虫体、肛周未见虫",
+              "timestamp": 1771466153.3597035,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "ec81bc41-32f5-42ab-8733-3207b91d5882",
+              "content": "医生说明：微量元素缺乏与蛲虫感染均可通过化验确定；该院微量元素检测通过血液检查",
+              "timestamp": 1771466159.0773036,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "identity": [
+            {
+              "id": "5308887b-1d4e-472e-b8a0-d4a310d0b8cb",
+              "content": "患儿，15个月；身高81cm，体重22斤",
+              "timestamp": 1771466153.3596823,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "089278f4-3d6a-438c-9237-e9fdb2b12798",
+              "content": "本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+              "timestamp": 1771466076.7779675,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7167ae46-e3db-46ad-9343-855e5d342d2b",
+              "content": "孕31周超声提示胎儿肠管扩张最宽26mm，医生考虑可能肠闭锁，建议进一步检查，表示可治疗",
+              "timestamp": 1771466113.7783084,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "3e613380-340a-4947-94f4-5353b015a5f6",
+              "content": "近1年曾就诊于多种大小医院/诊所并尝试偏方治疗（具体诊断与用药未提供）",
+              "timestamp": 1771466127.5346434,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "e70dbca7-2040-4422-8dc3-9bdf3823af93",
+              "content": "医生建议肩关节拍片检查以排除骨与关节其他疾病",
+              "timestamp": 1771466134.3527055,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "314654f6-2f35-4e2a-add2-a13120fe3472",
+              "content": "如为肩周炎，病程一般约18个月，建议每日坚持肩关节锻炼",
+              "timestamp": 1771466134.3527107,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "5dd13c29-ce02-46c7-85b7-6911ffd3c261",
+              "content": "2025-01-21在厦门第一医院行隐匿性阴茎手术",
+              "timestamp": 1771466138.557959,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5308887b-1d4e-472e-b8a0-d4a310d0b8cb",
+              "content": "患儿，15个月；身高81cm，体重22斤",
+              "timestamp": 1771466153.3596823,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "089278f4-3d6a-438c-9237-e9fdb2b12798",
+              "content": "本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+              "timestamp": 1771466076.7779675,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7167ae46-e3db-46ad-9343-855e5d342d2b",
+              "content": "孕31周超声提示胎儿肠管扩张最宽26mm，医生考虑可能肠闭锁，建议进一步检查，表示可治疗",
+              "timestamp": 1771466113.7783084,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "3e613380-340a-4947-94f4-5353b015a5f6",
+              "content": "近1年曾就诊于多种大小医院/诊所并尝试偏方治疗（具体诊断与用药未提供）",
+              "timestamp": 1771466127.5346434,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "e70dbca7-2040-4422-8dc3-9bdf3823af93",
+              "content": "医生建议肩关节拍片检查以排除骨与关节其他疾病",
+              "timestamp": 1771466134.3527055,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "314654f6-2f35-4e2a-add2-a13120fe3472",
+              "content": "如为肩周炎，病程一般约18个月，建议每日坚持肩关节锻炼",
+              "timestamp": 1771466134.3527107,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "5dd13c29-ce02-46c7-85b7-6911ffd3c261",
+              "content": "2025-01-21在厦门第一医院行隐匿性阴茎手术",
+              "timestamp": 1771466138.557959,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "脑血管发育畸形，患者女，9岁，以前身体状况良好。此次突然脑出血，至脑干损伤，就诊于济宁附属医院。",
+        "to_memory": [
+          "identity: 患者女，9岁",
+          "history: 诊断/情况：脑血管发育畸形；既往身体状况良好",
+          "working: 本次突发脑出血并致脑干损伤；就诊于济宁附属医院"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3defffdc-40c8-4e1f-9478-391291a8448e",
+              "content": "本次突发脑出血并致脑干损伤；就诊于济宁附属医院",
+              "timestamp": 1771466162.853919,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            }
+          ],
+          "identity": [
+            {
+              "id": "5308887b-1d4e-472e-b8a0-d4a310d0b8cb",
+              "content": "患者女，9岁",
+              "timestamp": 1771466153.3596823,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "089278f4-3d6a-438c-9237-e9fdb2b12798",
+              "content": "本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+              "timestamp": 1771466076.7779675,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7167ae46-e3db-46ad-9343-855e5d342d2b",
+              "content": "孕31周超声提示胎儿肠管扩张最宽26mm，医生考虑可能肠闭锁，建议进一步检查，表示可治疗",
+              "timestamp": 1771466113.7783084,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "3e613380-340a-4947-94f4-5353b015a5f6",
+              "content": "近1年曾就诊于多种大小医院/诊所并尝试偏方治疗（具体诊断与用药未提供）",
+              "timestamp": 1771466127.5346434,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "e70dbca7-2040-4422-8dc3-9bdf3823af93",
+              "content": "医生建议肩关节拍片检查以排除骨与关节其他疾病",
+              "timestamp": 1771466134.3527055,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "314654f6-2f35-4e2a-add2-a13120fe3472",
+              "content": "如为肩周炎，病程一般约18个月，建议每日坚持肩关节锻炼",
+              "timestamp": 1771466134.3527107,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "5dd13c29-ce02-46c7-85b7-6911ffd3c261",
+              "content": "2025-01-21在厦门第一医院行隐匿性阴茎手术",
+              "timestamp": 1771466138.557959,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "f95ea1d1-0188-406a-a9c3-d4ed757604b5",
+              "content": "诊断/情况：脑血管发育畸形；既往身体状况良好",
+              "timestamp": 1771466162.8539114,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "建议增强磁共振检查好做评估。建议增强磁共振检查好做评估。",
+        "to_memory": [
+          "history: 医生建议行增强磁共振（MRI+增强）检查以评估病情"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3defffdc-40c8-4e1f-9478-391291a8448e",
+              "content": "本次突发脑出血并致脑干损伤；就诊于济宁附属医院",
+              "timestamp": 1771466162.853919,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            }
+          ],
+          "identity": [
+            {
+              "id": "5308887b-1d4e-472e-b8a0-d4a310d0b8cb",
+              "content": "患者女，9岁",
+              "timestamp": 1771466153.3596823,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "history": [
+            {
+              "id": "91889997-5a45-424b-9899-dfb8a1686754",
+              "content": "半年前因胎儿发育畸形行人工流产术，术后不净，2周后再次行刮宫术",
+              "timestamp": 1771466060.0316048,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b41bf031-698b-4d93-af12-0bbd2209d0bc",
+              "content": "术后2个月出现月经量明显减少",
+              "timestamp": 1771466060.0316122,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e0c334d6-f55c-415b-b4e2-67a9f79c5f23",
+              "content": "宫腔镜检查：仅见右侧宫腔，左侧输卵管开口未见",
+              "timestamp": 1771466060.0316203,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ece66937-aa7a-48cc-a113-fec19b8e2084",
+              "content": "医生建议携带造影X线片就诊",
+              "timestamp": 1771466066.2726698,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e9cbadc6-ec75-465a-8a93-8c6db35d7217",
+              "content": "可选择行宫腔镜检查并治疗",
+              "timestamp": 1771466066.2726793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "089278f4-3d6a-438c-9237-e9fdb2b12798",
+              "content": "本次孕31周产检超声/测量结果：胎位头位；BPD 85mm；OFD 104mm；HC 297mm；胸径78mm；腹径85mm；AC 262mm；FL 59mm；肱骨长53mm；胎心140次/分、心律齐；胎儿肠管扩张最宽26mm",
+              "timestamp": 1771466076.7779675,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7167ae46-e3db-46ad-9343-855e5d342d2b",
+              "content": "孕31周超声提示胎儿肠管扩张最宽26mm，医生考虑可能肠闭锁，建议进一步检查，表示可治疗",
+              "timestamp": 1771466113.7783084,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "3e613380-340a-4947-94f4-5353b015a5f6",
+              "content": "近1年曾就诊于多种大小医院/诊所并尝试偏方治疗（具体诊断与用药未提供）",
+              "timestamp": 1771466127.5346434,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "e70dbca7-2040-4422-8dc3-9bdf3823af93",
+              "content": "医生建议肩关节拍片检查以排除骨与关节其他疾病",
+              "timestamp": 1771466134.3527055,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "314654f6-2f35-4e2a-add2-a13120fe3472",
+              "content": "如为肩周炎，病程一般约18个月，建议每日坚持肩关节锻炼",
+              "timestamp": 1771466134.3527107,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "5dd13c29-ce02-46c7-85b7-6911ffd3c261",
+              "content": "2025-01-21在厦门第一医院行隐匿性阴茎手术",
+              "timestamp": 1771466138.557959,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "f95ea1d1-0188-406a-a9c3-d4ed757604b5",
+              "content": "诊断/情况：脑血管发育畸形；既往身体状况良好",
+              "timestamp": 1771466162.8539114,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "27aff242-71f8-408c-b0c2-a72e70af9746",
+              "content": "医生建议行增强磁共振（MRI+增强）检查以评估病情",
+              "timestamp": 1771466165.5298686,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者这次突发事件后最初就诊的是哪家医院？",
+          "answer": "济宁附属医院",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "3defffdc-40c8-4e1f-9478-391291a8448e"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "chronic_followup",
+    "scenario_name": "慢性病随访管理",
+    "session_count": 7,
+    "group_key": "综合科"
+  }
+}

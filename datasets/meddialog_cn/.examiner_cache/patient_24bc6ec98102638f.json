@@ -1,0 +1,2084 @@
+{
+  "patient_id": "087b1181525b",
+  "messages": [
+    {
+      "user": {
+        "content": "月经来会头疼想中医治疗，患者女.44..月经来会头疼。",
+        "to_memory": [
+          "identity: 患者女，44岁",
+          "working: 主诉月经来时头疼，想采用中医治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "299a75f1-cb01-475c-8c29-e16dbe8081ed",
+              "content": "主诉月经来时头疼，想采用中医治疗",
+              "timestamp": 1771462266.4255342,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者女，44岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者这次就诊希望采用哪一种治疗方式？",
+          "answer": "中医治疗",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "299a75f1-cb01-475c-8c29-e16dbe8081ed"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "经前头痛需要辨证论治，如果属于虚证可以吃点补中益气丸，实证可以吃震灵丹或者丹栀逍遥丸，最好找中医师给你辨证后服用。",
+        "to_memory": [
+          "identity: 患者女性，44岁",
+          "working: 主诉经期/经前头痛，想寻求中医治疗",
+          "history: 医生建议经前头痛需辨证论治；虚证可考虑补中益气丸，实证可考虑震灵丹或丹栀逍遥丸；最好由中医师辨证后再服用"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "299a75f1-cb01-475c-8c29-e16dbe8081ed",
+              "content": "主诉经期/经前头痛，想寻求中医治疗",
+              "timestamp": 1771462266.4255342,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "2beb97c8-141d-43ed-af88-ddb22525c090",
+              "content": "医生建议经前头痛需辨证论治；虚证可考虑补中益气丸，实证可考虑震灵丹或丹栀逍遥丸；最好由中医师辨证后再服用",
+              "timestamp": 1771462272.334927,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者女，44岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者女，44岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "室间隔缺损，感谢孙医生您百忙之中给我的宝贵的回复！",
+        "to_memory": [
+          "history: 室间隔缺损（既往诊断）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "2d29ccef-a9d0-47cf-a87b-7243b2c16885",
+              "content": "既往诊断：室间隔缺损",
+              "timestamp": 1771462275.019964,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者女，44岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在后续补充的既往病史中提到过一种可能影响用药安全的心脏相关诊断。若其自行按医生建议购买并服用相关中成药，临床上首先需要核对的这项既往诊断是什么？",
+          "answer": "室间隔缺损",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "91e5c3d9-da51-4f87-ab8c-413c73e49ea2"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "2d29ccef-a9d0-47cf-a87b-7243b2c16885"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            3,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "如果是单纯的室间隔缺损，氧饱和度不应该只有90.建议你来看一下。",
+        "to_memory": [
+          "history: 既往诊断为室间隔缺损（VSD）",
+          "history: 氧饱和度约90%（医生认为单纯VSD不应仅90%）",
+          "working: 医生建议到院就诊进一步评估"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "2d29ccef-a9d0-47cf-a87b-7243b2c16885",
+              "content": "既往诊断：室间隔缺损",
+              "timestamp": 1771462275.019964,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "40d35394-9b22-471a-8e41-6cab433e126e",
+              "content": "氧饱和度约90%，医生认为单纯VSD不应仅90%",
+              "timestamp": 1771462281.3573272,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "b4d95734-b41e-4f3b-9b7a-04cb127a09d3",
+              "content": "医生建议到院就诊进一步评估",
+              "timestamp": 1771462281.3573353,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者女，44岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "在患者的档案信息中，记录的患者年龄是多少？",
+          "answer": "44岁",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "91e5c3d9-da51-4f87-ab8c-413c73e49ea2"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "孙医生您好!感谢您的及时回复!因为3月11日检查的时候已经喝过那个好象是起镇静作用的药(好象是水合氯醛),我想过一段时间再去请您帮忙看看,您看可以吗？",
+        "to_memory": [
+          "history: 2026-03-11检查时已服用镇静药，疑为水合氯醛",
+          "working: 患者计划过一段时间再复诊请医生查看，询问是否可以"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "2d29ccef-a9d0-47cf-a87b-7243b2c16885",
+              "content": "既往诊断：室间隔缺损",
+              "timestamp": 1771462275.019964,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "40d35394-9b22-471a-8e41-6cab433e126e",
+              "content": "氧饱和度约90%，医生认为单纯VSD不应仅90%",
+              "timestamp": 1771462281.3573272,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "b4d95734-b41e-4f3b-9b7a-04cb127a09d3",
+              "content": "医生建议到院就诊进一步评估",
+              "timestamp": 1771462281.3573353,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "23a63ae2-fdf1-4610-91c0-a5390cdd57c4",
+              "content": "患者询问是否可以过一段时间再复诊请医生查看",
+              "timestamp": 1771462287.9860225,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0c414ff-b03d-4dd8-93b8-220e5a5a5de1",
+              "content": "2026-03-11检查时已服用镇静药，疑为水合氯醛",
+              "timestamp": 1771462287.9860308,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者女，44岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可以的。",
+        "to_memory": [
+          "identity: 患者女，44岁",
+          "history: 诊断为室间隔缺损；曾检查氧饱和度约90%；3月11日检查时使用过镇静药（水合氯醛）",
+          "history: 月经期出现头痛，想中医治疗；计划过一段时间再去就诊复查，医生表示可以"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "2d29ccef-a9d0-47cf-a87b-7243b2c16885",
+              "content": "既往诊断：室间隔缺损",
+              "timestamp": 1771462275.019964,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "40d35394-9b22-471a-8e41-6cab433e126e",
+              "content": "氧饱和度约90%，医生认为单纯VSD不应仅90%",
+              "timestamp": 1771462281.3573272,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "b4d95734-b41e-4f3b-9b7a-04cb127a09d3",
+              "content": "医生建议到院就诊进一步评估",
+              "timestamp": 1771462281.3573353,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "23a63ae2-fdf1-4610-91c0-a5390cdd57c4",
+              "content": "患者询问是否可以过一段时间再复诊复查，医生表示可以",
+              "timestamp": 1771462287.9860225,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0c414ff-b03d-4dd8-93b8-220e5a5a5de1",
+              "content": "2026-03-11检查时已服用镇静药，疑为水合氯醛",
+              "timestamp": 1771462287.9860308,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0bcf0a83-d6d0-4cce-a547-fd446d773c6e",
+              "content": "患者月经期出现头痛，考虑寻求中医治疗",
+              "timestamp": 1771462292.6062467,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者女，44岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "医生在讨论患者“单纯室间隔缺损”时，指出其一次检查中的某项监测数值与该诊断不太一致、因此建议进一步就诊复核。请问该监测数值大约是多少？",
+          "answer": "约90%（氧饱和度）",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "91e5c3d9-da51-4f87-ab8c-413c73e49ea2"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "40d35394-9b22-471a-8e41-6cab433e126e"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "孙教授，您好！首先感谢您10月12日在新华医院热心仔细的帮我家小孩做的检查，感谢您10月19日在儿童医学中心帮我们开了住院单，但在住院登记的时候，登记的医生告诉我们点名医生手术的话要等一个月以后，因为前面3月11日（在新华医院做的心脏彩超）检查的室间隔缺损6.4MM，而现在的缺损是12.5MM，作为父母心急如焚，恳请孙教授方便的话，能帮忙和我们点名的主刀医生（张海波主任）通融通融，早点帮我家小孩做手术，实在是每天看着这个小孩不长肉心里好痛，还希望心脏早点康复后安排疝气手术，恳请帮忙，万分感激！真情寄语：。非常感谢孙院长，能找到您给我家小孩看病，是我家小孩好命，您就是我家小孩的救星，万分感激！",
+        "to_memory": [
+          "identity: 患者为女性，44岁",
+          "identity: 家属信息：其小孩（性别、年龄未提供）为本次主要就诊对象",
+          "history: 2026-03-11在新华医院心脏彩超提示室间隔缺损（VSD）约6.4mm；当时检查前服用过镇静药（疑为水合氯醛）",
+          "history: 既往医生建议：单纯室间隔缺损者氧饱和度不应仅90%，建议就诊复查；可过一段时间再来复查（医生同意）",
+          "history: 2026-10-12在新华医院由孙教授为患儿做检查；2026-10-19在儿童医学中心开具住院单",
+          "history: 近期评估提示室间隔缺损约12.5mm（较既往增大）",
+          "identity: 家属诉患儿不长肉/体重增长差，焦虑希望尽快安排室间隔缺损手术（点名张海波主任主刀），并计划心脏康复后再行疝气手术"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "2d29ccef-a9d0-47cf-a87b-7243b2c16885",
+              "content": "既往诊断：室间隔缺损",
+              "timestamp": 1771462275.019964,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "40d35394-9b22-471a-8e41-6cab433e126e",
+              "content": "氧饱和度约90%，医生认为单纯VSD不应仅90%",
+              "timestamp": 1771462281.3573272,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "b4d95734-b41e-4f3b-9b7a-04cb127a09d3",
+              "content": "医生建议到院就诊进一步评估",
+              "timestamp": 1771462281.3573353,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "23a63ae2-fdf1-4610-91c0-a5390cdd57c4",
+              "content": "患者询问是否可以过一段时间再复诊复查，医生表示可以",
+              "timestamp": 1771462287.9860225,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0c414ff-b03d-4dd8-93b8-220e5a5a5de1",
+              "content": "2026-03-11检查时已服用镇静药，疑为水合氯醛",
+              "timestamp": 1771462287.9860308,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0bcf0a83-d6d0-4cce-a547-fd446d773c6e",
+              "content": "患者月经期出现头痛，考虑寻求中医治疗",
+              "timestamp": 1771462292.6062467,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "29816fef-af49-4f21-9d9d-03535ce60758",
+              "content": "家属信息：其小孩为本次主要就诊对象（性别、年龄未提供）",
+              "timestamp": 1771462305.3132963,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "266e3773-04b8-40e9-86a3-d93d9c380453",
+              "content": "2026-03-11新华医院心脏彩超提示室间隔缺损（VSD）约6.4mm",
+              "timestamp": 1771462305.3133066,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "da88e361-837e-4ea2-9942-81db4f8308aa",
+              "content": "2026-10-12新华医院孙教授为患儿做检查；2026-10-19儿童医学中心开具住院单",
+              "timestamp": 1771462305.3133125,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "d600b554-02e7-4600-acda-c751e46f89b7",
+              "content": "近期评估提示室间隔缺损约12.5mm（较既往增大）",
+              "timestamp": 1771462305.3133185,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "9aee043c-3362-48ab-8d67-2037d17dc89b",
+              "content": "家属诉患儿体重增长差/不长肉，焦虑希望尽快安排VSD手术（点名张海波主任主刀），并计划心脏康复后再行疝气手术",
+              "timestamp": 1771462305.3133233,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者女，44岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比家属提到的两次心脏彩超结果：一次是在3月11日于新华医院做的，另一次是在之后复查时提到的。前一次检查中记录的缺损大小是多少？",
+          "answer": "3月11日新华医院心脏彩超提示室间隔缺损约6.4mm。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "266e3773-04b8-40e9-86a3-d93d9c380453",
+                "b4d95734-b41e-4f3b-9b7a-04cb127a09d3"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "不客气。还需要一些时间安排。",
+        "to_memory": [
+          "identity: 患者女，44岁",
+          "history: 月经期相关头痛；医生建议中医辨证论治，虚证可用补中益气丸，实证可用震灵丹或丹栀逍遥丸",
+          "history: 家属小孩诊断室间隔缺损；曾检查氧饱和度约90%",
+          "history: 2024-03-11心脏彩超：室间隔缺损约6.4mm；后续检查缺损约12.5mm",
+          "history: 检查前曾服用镇静药（疑为水合氯醛）",
+          "history: 家属希望尽快安排室间隔缺损手术（点名张海波主任），并计划心脏手术后再行疝气手术；医生回复仍需时间安排"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "2d29ccef-a9d0-47cf-a87b-7243b2c16885",
+              "content": "既往诊断：室间隔缺损",
+              "timestamp": 1771462275.019964,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "40d35394-9b22-471a-8e41-6cab433e126e",
+              "content": "氧饱和度约90%，医生认为单纯VSD不应仅90%",
+              "timestamp": 1771462281.3573272,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "b4d95734-b41e-4f3b-9b7a-04cb127a09d3",
+              "content": "医生建议到院就诊进一步评估",
+              "timestamp": 1771462281.3573353,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "23a63ae2-fdf1-4610-91c0-a5390cdd57c4",
+              "content": "患者询问是否可以过一段时间再复诊复查，医生表示可以",
+              "timestamp": 1771462287.9860225,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0c414ff-b03d-4dd8-93b8-220e5a5a5de1",
+              "content": "检查前曾服用镇静药（疑为水合氯醛）",
+              "timestamp": 1771462287.9860308,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0bcf0a83-d6d0-4cce-a547-fd446d773c6e",
+              "content": "患者月经期出现头痛，考虑寻求中医治疗",
+              "timestamp": 1771462292.6062467,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "29816fef-af49-4f21-9d9d-03535ce60758",
+              "content": "家属信息：其小孩为本次主要就诊对象（性别、年龄未提供）",
+              "timestamp": 1771462305.3132963,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "266e3773-04b8-40e9-86a3-d93d9c380453",
+              "content": "2024-03-11心脏彩超提示室间隔缺损（VSD）约6.4mm",
+              "timestamp": 1771462305.3133066,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "da88e361-837e-4ea2-9942-81db4f8308aa",
+              "content": "2026-10-12新华医院孙教授为患儿做检查；2026-10-19儿童医学中心开具住院单",
+              "timestamp": 1771462305.3133125,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "d600b554-02e7-4600-acda-c751e46f89b7",
+              "content": "近期评估提示室间隔缺损约12.5mm（较既往增大）",
+              "timestamp": 1771462305.3133185,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "9aee043c-3362-48ab-8d67-2037d17dc89b",
+              "content": "家属诉患儿体重增长差/不长肉，焦虑希望尽快安排VSD手术（点名张海波主任主刀），并计划心脏康复后再行疝气手术",
+              "timestamp": 1771462305.3133233,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7c7ac2c8-61b8-4fe6-a1fe-e3d02f7e5868",
+              "content": "月经期相关头痛；医生建议中医辨证论治：虚证可用补中益气丸，实证可用震灵丹或丹栀逍遥丸",
+              "timestamp": 1771462315.2071958,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "59dddfd7-db96-456a-b703-780e1e3e111e",
+              "content": "家属希望尽快安排室间隔缺损手术（点名张海波主任），并计划心脏手术后再行疝气手术；医生回复仍需时间安排",
+              "timestamp": 1771462315.2072167,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者女，44岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "家属提到在较早一次检查前，为了配合检查曾给孩子口服过一种起辅助作用的药物。请回忆：那次用的是什么药？",
+          "answer": "疑为水合氯醛（镇静药）",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "29816fef-af49-4f21-9d9d-03535ce60758",
+                "c0c414ff-b03d-4dd8-93b8-220e5a5a5de1"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "谢谢孙院长，谢谢！",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "2d29ccef-a9d0-47cf-a87b-7243b2c16885",
+              "content": "既往诊断：室间隔缺损",
+              "timestamp": 1771462275.019964,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "40d35394-9b22-471a-8e41-6cab433e126e",
+              "content": "氧饱和度约90%，医生认为单纯VSD不应仅90%",
+              "timestamp": 1771462281.3573272,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "b4d95734-b41e-4f3b-9b7a-04cb127a09d3",
+              "content": "医生建议到院就诊进一步评估",
+              "timestamp": 1771462281.3573353,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "23a63ae2-fdf1-4610-91c0-a5390cdd57c4",
+              "content": "患者询问是否可以过一段时间再复诊复查，医生表示可以",
+              "timestamp": 1771462287.9860225,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0c414ff-b03d-4dd8-93b8-220e5a5a5de1",
+              "content": "检查前曾服用镇静药（疑为水合氯醛）",
+              "timestamp": 1771462287.9860308,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0bcf0a83-d6d0-4cce-a547-fd446d773c6e",
+              "content": "患者月经期出现头痛，考虑寻求中医治疗",
+              "timestamp": 1771462292.6062467,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "29816fef-af49-4f21-9d9d-03535ce60758",
+              "content": "家属信息：其小孩为本次主要就诊对象（性别、年龄未提供）",
+              "timestamp": 1771462305.3132963,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "266e3773-04b8-40e9-86a3-d93d9c380453",
+              "content": "2024-03-11心脏彩超提示室间隔缺损（VSD）约6.4mm",
+              "timestamp": 1771462305.3133066,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "da88e361-837e-4ea2-9942-81db4f8308aa",
+              "content": "2026-10-12新华医院孙教授为患儿做检查；2026-10-19儿童医学中心开具住院单",
+              "timestamp": 1771462305.3133125,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "d600b554-02e7-4600-acda-c751e46f89b7",
+              "content": "近期评估提示室间隔缺损约12.5mm（较既往增大）",
+              "timestamp": 1771462305.3133185,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "9aee043c-3362-48ab-8d67-2037d17dc89b",
+              "content": "家属诉患儿体重增长差/不长肉，焦虑希望尽快安排VSD手术（点名张海波主任主刀），并计划心脏康复后再行疝气手术",
+              "timestamp": 1771462305.3133233,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7c7ac2c8-61b8-4fe6-a1fe-e3d02f7e5868",
+              "content": "月经期相关头痛；医生建议中医辨证论治：虚证可用补中益气丸，实证可用震灵丹或丹栀逍遥丸",
+              "timestamp": 1771462315.2071958,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "59dddfd7-db96-456a-b703-780e1e3e111e",
+              "content": "家属希望尽快安排室间隔缺损手术（点名张海波主任），并计划心脏手术后再行疝气手术；医生回复仍需时间安排",
+              "timestamp": 1771462315.2072167,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者女，44岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "不客气。",
+        "to_memory": [
+          "identity: 患者女，44岁",
+          "history: 月经期头痛，考虑中医辨证论治；医生建议虚证可用补中益气丸，实证可用震灵丹或丹栀逍遥丸，最好由中医师辨证后服用",
+          "history: 家属/患儿诊断室间隔缺损；3月11日心脏彩超缺损6.4mm；后续复查缺损12.5mm；氧饱和度约90%；检查时曾服用镇静药疑为水合氯醛；已在新华医院/儿童医学中心就诊并开具住院单，计划手术（拟点名张海波主任），需等待安排；术后拟安排疝气手术"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "2d29ccef-a9d0-47cf-a87b-7243b2c16885",
+              "content": "既往诊断：室间隔缺损",
+              "timestamp": 1771462275.019964,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "40d35394-9b22-471a-8e41-6cab433e126e",
+              "content": "氧饱和度约90%，医生认为单纯VSD不应仅90%",
+              "timestamp": 1771462281.3573272,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "b4d95734-b41e-4f3b-9b7a-04cb127a09d3",
+              "content": "医生建议到院就诊进一步评估",
+              "timestamp": 1771462281.3573353,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "23a63ae2-fdf1-4610-91c0-a5390cdd57c4",
+              "content": "患者询问是否可以过一段时间再复诊复查，医生表示可以",
+              "timestamp": 1771462287.9860225,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0c414ff-b03d-4dd8-93b8-220e5a5a5de1",
+              "content": "检查前曾服用镇静药（疑为水合氯醛）",
+              "timestamp": 1771462287.9860308,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "0bcf0a83-d6d0-4cce-a547-fd446d773c6e",
+              "content": "患者月经期出现头痛，考虑寻求中医治疗",
+              "timestamp": 1771462292.6062467,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "29816fef-af49-4f21-9d9d-03535ce60758",
+              "content": "家属信息：其小孩为本次主要就诊对象（性别、年龄未提供）",
+              "timestamp": 1771462305.3132963,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "266e3773-04b8-40e9-86a3-d93d9c380453",
+              "content": "2024-03-11心脏彩超提示室间隔缺损（VSD）约6.4mm",
+              "timestamp": 1771462305.3133066,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "da88e361-837e-4ea2-9942-81db4f8308aa",
+              "content": "2026-10-12新华医院孙教授为患儿做检查；2026-10-19儿童医学中心开具住院单",
+              "timestamp": 1771462305.3133125,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "d600b554-02e7-4600-acda-c751e46f89b7",
+              "content": "近期评估提示室间隔缺损约12.5mm（较既往增大）",
+              "timestamp": 1771462305.3133185,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "9aee043c-3362-48ab-8d67-2037d17dc89b",
+              "content": "家属诉患儿体重增长差/不长肉，焦虑希望尽快安排VSD手术（点名张海波主任主刀），并计划心脏康复后再行疝气手术",
+              "timestamp": 1771462305.3133233,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7c7ac2c8-61b8-4fe6-a1fe-e3d02f7e5868",
+              "content": "月经期相关头痛；医生建议中医辨证论治：虚证可用补中益气丸，实证可用震灵丹或丹栀逍遥丸",
+              "timestamp": 1771462315.2071958,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "59dddfd7-db96-456a-b703-780e1e3e111e",
+              "content": "家属希望尽快安排室间隔缺损手术（点名张海波主任），并计划心脏手术后再行疝气手术；医生回复仍需时间安排",
+              "timestamp": 1771462315.2072167,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者女，44岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "家属提到孩子在两次不同机构就诊：一次在某家医院完成检查，另一次在另一家医学中心开具住院单。请分别指出这两次就诊各发生在什么日期、对应的机构分别是哪家？",
+          "answer": "10月12日在新华医院做检查；10月19日在儿童医学中心开具住院单。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "7c7ac2c8-61b8-4fe6-a1fe-e3d02f7e5868",
+                "da88e361-837e-4ea2-9942-81db4f8308aa"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            2,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者女，44岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "肺疾病，东台人民医院。",
+        "to_memory": [
+          "working: 本次提及“肺疾病”，就诊/医院为东台人民医院"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "210f669d-e559-4d03-9d20-5966eb639cfa",
+              "content": "本次提及“肺疾病”，就诊/医院为东台人民医院",
+              "timestamp": 1771462330.112875,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者女，44岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者在诊疗分割线后的补充信息中提到的就诊医院是哪一家？",
+          "answer": "东台人民医院",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "210f669d-e559-4d03-9d20-5966eb639cfa"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你没有提供病情的具体情况，我无法帮助你。比如手术切除的肺叶是否做了病理检查，病理检查是否确诊是什么疾病。现在的胸腔积液是否抽出来化验，是什么性质的、什么原因引起的胸水？",
+        "to_memory": [
+          "history: 患者/家属曾提及：患儿室间隔缺损；心脏彩超结果：2024-03-11（新华医院）室间隔缺损6.4mm，后续复查缺损12.5mm；曾于新华医院及儿童医学中心就诊并开具住院单，拟由张海波主任主刀手术，因排期需等待约1个月；患儿体重增长差；计划心脏手术后再行疝气手术。",
+          "history: 患者当前另就诊问题为“肺疾病”（东台人民医院）；医生提示需补充信息：肺叶切除是否做病理及确诊结果；目前胸腔积液是否抽液化验、胸水性质及可能原因。"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "210f669d-e559-4d03-9d20-5966eb639cfa",
+              "content": "本次提及“肺疾病”，就诊/医院为东台人民医院",
+              "timestamp": 1771462330.112875,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "9453ce18-8fd0-418b-9882-529c2b21a189",
+              "content": "患者/家属提及患儿室间隔缺损：心脏彩超2024-03-11（新华医院）缺损6.4mm，后续复查缺损12.5mm；曾在新华医院及儿童医学中心就诊并开具住院单，拟由张海波主任主刀手术，因排期需等待约1个月；患儿体重增长差；计划心脏手术后再行疝气手术。",
+              "timestamp": 1771462337.7867422,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "41d88772-9453-40ec-b627-b124a6ca0fb1",
+              "content": "当前就诊问题为肺疾病（东台人民医院）；需补充：肺叶切除是否送病理及确诊结果；目前胸腔积液是否抽液化验、胸水性质及可能原因。",
+              "timestamp": 1771462337.786751,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者女，44岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "就患者本次咨询中提到的就诊机构信息而言，你需要核对其与既往病历记录是否一致：患者这次说自己是在什么医院就诊的？若与既往记录不一致应如何处理？",
+          "answer": "东台人民医院",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "91e5c3d9-da51-4f87-ab8c-413c73e49ea2"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "210f669d-e559-4d03-9d20-5966eb639cfa"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            13,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者女，44岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "垂体瘤术后出现尿崩症，患者男，41岁，5月7号眼睛模糊，发现垂体瘤，于5月25号经鼻腔开垂体瘤，术后出现尿崩症，在当地松江第一人民医院上海分院就诊。",
+        "to_memory": [
+          "identity: 患者男，41岁",
+          "history: 2026-05-25经鼻腔垂体瘤切除术（垂体瘤术后）",
+          "history: 垂体瘤术后出现尿崩症",
+          "working: 2026-05-07出现眼睛模糊后发现垂体瘤",
+          "working: 术后尿崩症在当地松江第一人民医院上海分院就诊"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "057d760f-1bc3-4024-9c76-2ed45261131f",
+              "content": "2026-05-07出现眼睛模糊后发现垂体瘤",
+              "timestamp": 1771462345.430989,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "3a80dc09-70fd-4ea4-add5-e18deb88054d",
+              "content": "术后尿崩症在当地松江第一人民医院上海分院就诊",
+              "timestamp": 1771462345.430993,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者男，41岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "2f956e2b-fefe-433f-a3aa-4b23327db5e9",
+              "content": "2026-05-25经鼻腔垂体瘤切除术（垂体瘤术后）",
+              "timestamp": 1771462345.4309762,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "a7ffa026-052c-41cd-bf64-3eabcf4c6c42",
+              "content": "垂体瘤术后出现尿崩症",
+              "timestamp": 1771462345.4309843,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "请核对患者首次出现就诊相关症状并据此被发现患病的具体日期；如果后续病历或转述中出现不同日期，应以哪一天为准？",
+          "answer": "2026-05-07",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "91e5c3d9-da51-4f87-ab8c-413c73e49ea2"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "057d760f-1bc3-4024-9c76-2ed45261131f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            15,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "记24小时尿量,如超过3000ml,可以口服弥凝,每日2-3片,如低于3000ml则停药.记24小时尿量,如超过3000ml,可以口服弥凝,每日2-3片,如低于3000ml则停药.",
+        "to_memory": [
+          "history: 医嘱：记录24小时尿量；若>3000ml可口服弥凝（去氨加压素）每日2-3片；若<3000ml则停药。"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "057d760f-1bc3-4024-9c76-2ed45261131f",
+              "content": "2026-05-07出现眼睛模糊后发现垂体瘤",
+              "timestamp": 1771462345.430989,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "3a80dc09-70fd-4ea4-add5-e18deb88054d",
+              "content": "术后尿崩症在当地松江第一人民医院上海分院就诊",
+              "timestamp": 1771462345.430993,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者男，41岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "2f956e2b-fefe-433f-a3aa-4b23327db5e9",
+              "content": "2026-05-25经鼻腔垂体瘤切除术（垂体瘤术后）",
+              "timestamp": 1771462345.4309762,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "a7ffa026-052c-41cd-bf64-3eabcf4c6c42",
+              "content": "垂体瘤术后出现尿崩症",
+              "timestamp": 1771462345.4309843,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "b44b46fd-2075-41be-8e32-8319919e3461",
+              "content": "医嘱：记录24小时尿量；若>3000ml可口服弥凝（去氨加压素）每日2-3片；若<3000ml则停药。",
+              "timestamp": 1771462352.6419117,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "本次咨询中，患者既往接受过的关键手术是什么？该手术后出现的主要并发情况需要在当前用药与随访中重点核对什么？",
+          "answer": "垂体瘤术后出现尿崩症",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "91e5c3d9-da51-4f87-ab8c-413c73e49ea2"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "a7ffa026-052c-41cd-bf64-3eabcf4c6c42"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            16,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者男，41岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "2f956e2b-fefe-433f-a3aa-4b23327db5e9",
+              "content": "2026-05-25经鼻腔垂体瘤切除术（垂体瘤术后）",
+              "timestamp": 1771462345.4309762,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "a7ffa026-052c-41cd-bf64-3eabcf4c6c42",
+              "content": "垂体瘤术后出现尿崩症",
+              "timestamp": 1771462345.4309843,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "b44b46fd-2075-41be-8e32-8319919e3461",
+              "content": "医嘱：记录24小时尿量；若>3000ml可口服弥凝（去氨加压素）每日2-3片；若<3000ml则停药。",
+              "timestamp": 1771462352.6419117,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "黄褐斑，吴大夫，您好！我脸上有黄褐斑一年有余，能否治疗？",
+        "to_memory": [
+          "working: 患者主诉面部黄褐斑，病程一年有余，咨询是否可以治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3a9d1ba9-c6df-4915-b7b5-7864198e0536",
+              "content": "患者主诉面部黄褐斑，病程一年有余，咨询是否可以治疗。",
+              "timestamp": 1771462359.5468535,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者男，41岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "2f956e2b-fefe-433f-a3aa-4b23327db5e9",
+              "content": "2026-05-25经鼻腔垂体瘤切除术（垂体瘤术后）",
+              "timestamp": 1771462345.4309762,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "a7ffa026-052c-41cd-bf64-3eabcf4c6c42",
+              "content": "垂体瘤术后出现尿崩症",
+              "timestamp": 1771462345.4309843,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "b44b46fd-2075-41be-8e32-8319919e3461",
+              "content": "医嘱：记录24小时尿量；若>3000ml可口服弥凝（去氨加压素）每日2-3片；若<3000ml则停药。",
+              "timestamp": 1771462352.6419117,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "您好！能去除，但复发的也较多，需要多方面的治疗和保护主要有避光，防晒，护肤，皮肤要保湿，脱色，精神调节，休息好，注意营养，少吃光敏的素菜，尽量避免食含有植雌激素的食物和滋补品，生活饮食习惯纠正，休息等。关键是要用药合适。必要时光子或激光治疗。",
+        "to_memory": [
+          "history: 医生建议黄褐斑可去除但复发较多，需综合治疗与防护：避光防晒、护肤保湿、脱色治疗、精神调节与休息、注意营养、少吃光敏性蔬菜、尽量避免含植雌激素食物及滋补品、纠正生活饮食习惯；关键为用药合适；必要时可行光子或激光治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3a9d1ba9-c6df-4915-b7b5-7864198e0536",
+              "content": "患者主诉面部黄褐斑，病程一年有余，咨询是否可以治疗。",
+              "timestamp": 1771462359.5468535,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者男，41岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "2f956e2b-fefe-433f-a3aa-4b23327db5e9",
+              "content": "2026-05-25经鼻腔垂体瘤切除术（垂体瘤术后）",
+              "timestamp": 1771462345.4309762,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "a7ffa026-052c-41cd-bf64-3eabcf4c6c42",
+              "content": "垂体瘤术后出现尿崩症",
+              "timestamp": 1771462345.4309843,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "b44b46fd-2075-41be-8e32-8319919e3461",
+              "content": "医嘱：记录24小时尿量；若>3000ml可口服弥凝（去氨加压素）每日2-3片；若<3000ml则停药。",
+              "timestamp": 1771462352.6419117,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "f7def599-9c53-4a12-ae6e-3e04a499b380",
+              "content": "医生建议：黄褐斑可去除但复发较多，需综合治疗与防护：避光防晒、护肤保湿、脱色治疗、精神调节与休息、注意营养、少吃光敏性蔬菜、尽量避免含植雌激素食物及滋补品、纠正生活饮食习惯；关键为用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771462364.0428064,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者男，41岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "2f956e2b-fefe-433f-a3aa-4b23327db5e9",
+              "content": "2026-05-25经鼻腔垂体瘤切除术（垂体瘤术后）",
+              "timestamp": 1771462345.4309762,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "a7ffa026-052c-41cd-bf64-3eabcf4c6c42",
+              "content": "垂体瘤术后出现尿崩症",
+              "timestamp": 1771462345.4309843,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "b44b46fd-2075-41be-8e32-8319919e3461",
+              "content": "医嘱：记录24小时尿量；若>3000ml可口服弥凝（去氨加压素）每日2-3片；若<3000ml则停药。",
+              "timestamp": 1771462352.6419117,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "f7def599-9c53-4a12-ae6e-3e04a499b380",
+              "content": "医生建议：黄褐斑可去除但复发较多，需综合治疗与防护：避光防晒、护肤保湿、脱色治疗、精神调节与休息、注意营养、少吃光敏性蔬菜、尽量避免含植雌激素食物及滋补品、纠正生活饮食习惯；关键为用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771462364.0428064,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "小孩近7个月得了湿疹，要多长时间恢复？，",
+        "to_memory": [
+          "working: 本次咨询为儿童湿疹，病程近7个月，询问恢复所需时间"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "904c3024-793c-475b-97d5-12a118c27c43",
+              "content": "本次咨询为儿童湿疹，病程近7个月，询问恢复所需时间",
+              "timestamp": 1771462367.534057,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            }
+          ],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者男，41岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "2f956e2b-fefe-433f-a3aa-4b23327db5e9",
+              "content": "2026-05-25经鼻腔垂体瘤切除术（垂体瘤术后）",
+              "timestamp": 1771462345.4309762,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "a7ffa026-052c-41cd-bf64-3eabcf4c6c42",
+              "content": "垂体瘤术后出现尿崩症",
+              "timestamp": 1771462345.4309843,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "b44b46fd-2075-41be-8e32-8319919e3461",
+              "content": "医嘱：记录24小时尿量；若>3000ml可口服弥凝（去氨加压素）每日2-3片；若<3000ml则停药。",
+              "timestamp": 1771462352.6419117,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "f7def599-9c53-4a12-ae6e-3e04a499b380",
+              "content": "医生建议：黄褐斑可去除但复发较多，需综合治疗与防护：避光防晒、护肤保湿、脱色治疗、精神调节与休息、注意营养、少吃光敏性蔬菜、尽量避免含植雌激素食物及滋补品、纠正生活饮食习惯；关键为用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771462364.0428064,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你好！可以在医生的指导下外用尤卓尔（不超过一周）、氧化锌、炉甘石洗剂及润肤霜等，如果面积大，较为顽固，也可以加用一些口服药抗过敏。",
+        "to_memory": [
+          "history: 医生建议湿疹可在指导下外用尤卓尔（疗程不超过1周）、氧化锌、炉甘石洗剂及润肤霜；如皮损面积大或顽固可加用口服抗过敏药物",
+          "history: 患儿近7个月患湿疹，咨询恢复时间及治疗方案"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "904c3024-793c-475b-97d5-12a118c27c43",
+              "content": "本次咨询为儿童湿疹，病程近7个月，询问恢复所需时间",
+              "timestamp": 1771462367.534057,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "f7e91db5-d104-4096-8d72-dd877e1481b3",
+              "content": "医生建议：湿疹可在指导下外用尤卓尔（疗程不超过1周）、氧化锌、炉甘石洗剂及润肤霜；如皮损面积大或顽固可加用口服抗过敏药物",
+              "timestamp": 1771462371.568251,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            }
+          ],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者男，41岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "2f956e2b-fefe-433f-a3aa-4b23327db5e9",
+              "content": "2026-05-25经鼻腔垂体瘤切除术（垂体瘤术后）",
+              "timestamp": 1771462345.4309762,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "a7ffa026-052c-41cd-bf64-3eabcf4c6c42",
+              "content": "垂体瘤术后出现尿崩症",
+              "timestamp": 1771462345.4309843,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "b44b46fd-2075-41be-8e32-8319919e3461",
+              "content": "医嘱：记录24小时尿量；若>3000ml可口服弥凝（去氨加压素）每日2-3片；若<3000ml则停药。",
+              "timestamp": 1771462352.6419117,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "f7def599-9c53-4a12-ae6e-3e04a499b380",
+              "content": "医生建议：黄褐斑可去除但复发较多，需综合治疗与防护：避光防晒、护肤保湿、脱色治疗、精神调节与休息、注意营养、少吃光敏性蔬菜、尽量避免含植雌激素食物及滋补品、纠正生活饮食习惯；关键为用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771462364.0428064,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者男，41岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "2f956e2b-fefe-433f-a3aa-4b23327db5e9",
+              "content": "2026-05-25经鼻腔垂体瘤切除术（垂体瘤术后）",
+              "timestamp": 1771462345.4309762,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "a7ffa026-052c-41cd-bf64-3eabcf4c6c42",
+              "content": "垂体瘤术后出现尿崩症",
+              "timestamp": 1771462345.4309843,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "b44b46fd-2075-41be-8e32-8319919e3461",
+              "content": "医嘱：记录24小时尿量；若>3000ml可口服弥凝（去氨加压素）每日2-3片；若<3000ml则停药。",
+              "timestamp": 1771462352.6419117,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "f7def599-9c53-4a12-ae6e-3e04a499b380",
+              "content": "医生建议：黄褐斑可去除但复发较多，需综合治疗与防护：避光防晒、护肤保湿、脱色治疗、精神调节与休息、注意营养、少吃光敏性蔬菜、尽量避免含植雌激素食物及滋补品、纠正生活饮食习惯；关键为用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771462364.0428064,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "小儿房间隔损缺，患者女，2岁身体还好，去年农历4月22日在妇女儿童医院出生时就检查出有心脏病问题，几天前再去检查发现还没有自己复原，",
+        "to_memory": [
+          "identity: 患者女，2岁",
+          "history: 出生时于妇女儿童医院检查发现先天性心脏病：房间隔缺损",
+          "history: 近日复查提示房间隔缺损尚未自行闭合；目前整体身体情况还好"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者女，2岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "2f956e2b-fefe-433f-a3aa-4b23327db5e9",
+              "content": "2026-05-25经鼻腔垂体瘤切除术（垂体瘤术后）",
+              "timestamp": 1771462345.4309762,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "a7ffa026-052c-41cd-bf64-3eabcf4c6c42",
+              "content": "垂体瘤术后出现尿崩症",
+              "timestamp": 1771462345.4309843,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "b44b46fd-2075-41be-8e32-8319919e3461",
+              "content": "医嘱：记录24小时尿量；若>3000ml可口服弥凝（去氨加压素）每日2-3片；若<3000ml则停药。",
+              "timestamp": 1771462352.6419117,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "f7def599-9c53-4a12-ae6e-3e04a499b380",
+              "content": "医生建议：黄褐斑可去除但复发较多，需综合治疗与防护：避光防晒、护肤保湿、脱色治疗、精神调节与休息、注意营养、少吃光敏性蔬菜、尽量避免含植雌激素食物及滋补品、纠正生活饮食习惯；关键为用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771462364.0428064,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "a3ec4ffd-6bad-4c01-8e68-51bb8bff5aa4",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病：房间隔缺损",
+              "timestamp": 1771462375.928492,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "59e2738b-d959-466a-aaa5-cfce65bc37b2",
+              "content": "近日复查提示房间隔缺损尚未自行闭合；目前整体身体情况还好",
+              "timestamp": 1771462375.9285,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在关于面部色素相关问题的那次建议中，医生特别提示患者需要在饮食或滋补品选择上“尽量避免”的具体类别是什么？（请写出该类别；这关系到是否存在生活方式建议落实不到位的安全隐患）",
+          "answer": "尽量避免含有植雌激素的食物和滋补品。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "f7def599-9c53-4a12-ae6e-3e04a499b380",
+                "59e2738b-d959-466a-aaa5-cfce65bc37b2"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            5,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你好！请提供心脏超声资料，或带小孩来我门诊具体看一下。",
+        "to_memory": [
+          "identity: 医生要求提供心脏超声资料，或带2岁女童到门诊进一步面诊评估房间隔缺损情况"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "91e5c3d9-da51-4f87-ab8c-413c73e49ea2",
+              "content": "患者女，2岁",
+              "timestamp": 1771462266.425524,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "2f956e2b-fefe-433f-a3aa-4b23327db5e9",
+              "content": "2026-05-25经鼻腔垂体瘤切除术（垂体瘤术后）",
+              "timestamp": 1771462345.4309762,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "a7ffa026-052c-41cd-bf64-3eabcf4c6c42",
+              "content": "垂体瘤术后出现尿崩症",
+              "timestamp": 1771462345.4309843,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "b44b46fd-2075-41be-8e32-8319919e3461",
+              "content": "医嘱：记录24小时尿量；若>3000ml可口服弥凝（去氨加压素）每日2-3片；若<3000ml则停药。",
+              "timestamp": 1771462352.6419117,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "f7def599-9c53-4a12-ae6e-3e04a499b380",
+              "content": "医生建议：黄褐斑可去除但复发较多，需综合治疗与防护：避光防晒、护肤保湿、脱色治疗、精神调节与休息、注意营养、少吃光敏性蔬菜、尽量避免含植雌激素食物及滋补品、纠正生活饮食习惯；关键为用药合适；必要时可行光子或激光治疗。",
+              "timestamp": 1771462364.0428064,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "a3ec4ffd-6bad-4c01-8e68-51bb8bff5aa4",
+              "content": "出生时于妇女儿童医院检查发现先天性心脏病：房间隔缺损",
+              "timestamp": 1771462375.928492,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "59e2738b-d959-466a-aaa5-cfce65bc37b2",
+              "content": "近日复查提示房间隔缺损尚未自行闭合；目前整体身体情况还好",
+              "timestamp": 1771462375.9285,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "e7abf886-1cfd-4323-a14a-3c769c4e7d88",
+              "content": "医生要求提供心脏超声资料，或带2岁女童到门诊进一步面诊评估房间隔缺损情况",
+              "timestamp": 1771462382.675641,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "关于该患儿这次复查发现问题仍未自行好转的情况，医生提出了哪些下一步核实与进一步评估的要求？这些要求与仅凭口头描述继续线上处理相比，涉及哪些安全性检查点？",
+          "answer": "医生要求提供心脏超声资料，或带2岁女童到门诊进一步面诊评估房间隔缺损情况。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "a7ffa026-052c-41cd-bf64-3eabcf4c6c42",
+                "e7abf886-1cfd-4323-a14a-3c769c4e7d88"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            10,
+            0
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "chronic_followup",
+    "scenario_name": "慢性病随访管理",
+    "session_count": 7,
+    "group_key": "综合科"
+  }
+}

@@ -1,0 +1,3108 @@
+{
+  "patient_id": "b6935c7b0d5f",
+  "messages": [
+    {
+      "user": {
+        "content": "子宫肌瘤，患者女，49岁，发现子宫肌瘤已有3年之久。但最近查血常规发现血色素为93，有贫血现象，为子宫肌瘤压迫宫腔所造成，已做TCT检查，为阴性。",
+        "to_memory": [
+          "identity: 患者女，49岁",
+          "history: 子宫肌瘤，发现已有3年",
+          "history: 血常规提示血色素93 g/L（贫血）",
+          "history: 已做TCT检查，结果阴性",
+          "working: 贫血被认为与子宫肌瘤压迫宫腔有关（病因推测）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7b88fa22-abf4-4a40-9630-c57404fdf089",
+              "content": "贫血被认为与子宫肌瘤压迫宫腔有关（病因推测）",
+              "timestamp": 1771494057.7636926,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [
+            {
+              "id": "88af519a-f53c-444d-a300-c0895afec60e",
+              "content": "患者女，49岁",
+              "timestamp": 1771494057.7636733,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "48b1259f-74b6-47e4-81a0-dbc2be814092",
+              "content": "子宫肌瘤，发现已有3年",
+              "timestamp": 1771494057.7636807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ed78327c-33b3-43d8-8223-3ab45825190f",
+              "content": "血常规：血色素93 g/L，提示贫血",
+              "timestamp": 1771494057.7636852,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "5077db47-2fbb-4d01-87fd-b664aa34d43b",
+              "content": "已做TCT检查，结果阴性",
+              "timestamp": 1771494057.763689,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "医生在本次记录中提到患者已经完成过一项用于排查宫颈相关问题的检查；在评估后续治疗或手术安全性时，这项检查的结果是什么？",
+          "answer": "TCT检查结果为阴性。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "5077db47-2fbb-4d01-87fd-b664aa34d43b"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "7b88fa22-abf4-4a40-9630-c57404fdf089"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "一般情况下，子宫肌瘤致贫血应手术治疗国。",
+        "to_memory": [
+          "history: 医生建议：一般情况下，子宫肌瘤导致贫血应考虑手术治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7b88fa22-abf4-4a40-9630-c57404fdf089",
+              "content": "贫血被认为与子宫肌瘤压迫宫腔有关（病因推测）",
+              "timestamp": 1771494057.7636926,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [
+            {
+              "id": "88af519a-f53c-444d-a300-c0895afec60e",
+              "content": "患者女，49岁",
+              "timestamp": 1771494057.7636733,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "48b1259f-74b6-47e4-81a0-dbc2be814092",
+              "content": "子宫肌瘤，发现已有3年",
+              "timestamp": 1771494057.7636807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ed78327c-33b3-43d8-8223-3ab45825190f",
+              "content": "血常规：血色素93 g/L，提示贫血",
+              "timestamp": 1771494057.7636852,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "5077db47-2fbb-4d01-87fd-b664aa34d43b",
+              "content": "已做TCT检查，结果阴性",
+              "timestamp": 1771494057.763689,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "75edcc12-cecf-4c4a-a294-6cd7d94c37f6",
+              "content": "医生建议：一般情况下，子宫肌瘤导致贫血应考虑手术治疗",
+              "timestamp": 1771494063.1499119,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者最初被发现患有该疾病到现在，大约经过了多长时间？",
+          "answer": "3年",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "48b1259f-74b6-47e4-81a0-dbc2be814092"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "88af519a-f53c-444d-a300-c0895afec60e",
+              "content": "患者女，49岁",
+              "timestamp": 1771494057.7636733,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "48b1259f-74b6-47e4-81a0-dbc2be814092",
+              "content": "子宫肌瘤，发现已有3年",
+              "timestamp": 1771494057.7636807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ed78327c-33b3-43d8-8223-3ab45825190f",
+              "content": "血常规：血色素93 g/L，提示贫血",
+              "timestamp": 1771494057.7636852,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "5077db47-2fbb-4d01-87fd-b664aa34d43b",
+              "content": "已做TCT检查，结果阴性",
+              "timestamp": 1771494057.763689,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "75edcc12-cecf-4c4a-a294-6cd7d94c37f6",
+              "content": "医生建议：一般情况下，子宫肌瘤导致贫血应考虑手术治疗",
+              "timestamp": 1771494063.1499119,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "右膝不能直有疼感，8月六号早上发现我家儿子早上起来就右腿疼得不能直，走路也不得力，医生检查找不到病因，一切检查均正常山西儿童医院，没。",
+        "to_memory": [
+          "working: 患者（家属代述）儿子于8月6日早晨起出现右膝/右腿疼痛，右膝不能伸直，走路不得力",
+          "history: 曾在山西儿童医院就诊，医生检查未找到病因，相关检查均正常"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "36f6adcd-5f5c-4d8f-b151-d2c7698b79d9",
+              "content": "患者家属代述：儿子于8月6日早晨起出现右膝/右腿疼痛，右膝不能伸直，走路不得力。",
+              "timestamp": 1771494073.7790067,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [
+            {
+              "id": "88af519a-f53c-444d-a300-c0895afec60e",
+              "content": "患者女，49岁",
+              "timestamp": 1771494057.7636733,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "48b1259f-74b6-47e4-81a0-dbc2be814092",
+              "content": "子宫肌瘤，发现已有3年",
+              "timestamp": 1771494057.7636807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ed78327c-33b3-43d8-8223-3ab45825190f",
+              "content": "血常规：血色素93 g/L，提示贫血",
+              "timestamp": 1771494057.7636852,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "5077db47-2fbb-4d01-87fd-b664aa34d43b",
+              "content": "已做TCT检查，结果阴性",
+              "timestamp": 1771494057.763689,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "75edcc12-cecf-4c4a-a294-6cd7d94c37f6",
+              "content": "医生建议：一般情况下，子宫肌瘤导致贫血应考虑手术治疗",
+              "timestamp": 1771494063.1499119,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "0891bbfd-6356-43f2-9780-ad55a86d02f8",
+              "content": "曾在山西儿童医院就诊，医生检查未找到病因，相关检查均正常。",
+              "timestamp": 1771494073.779016,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者此前做过一次用于宫颈相关筛查的检查；为避免后续诊疗中误判或重复检查，请问那次检查的结果记录是什么？",
+          "answer": "阴性",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "5077db47-2fbb-4d01-87fd-b664aa34d43b"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "36f6adcd-5f5c-4d8f-b151-d2c7698b79d9"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            3,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "现在你孩子的病情是不是全好了，那很有可能就是一过性的滑膜炎。好了就好了，以后注意，特别是又感冒的时候就很容易复发的。一旦复发一定要注意休息，治疗感冒。一般情况下在3-5天的时间内就会好的。一般不会超过一周。",
+        "to_memory": [
+          "identity: 患儿既往出现右膝/右腿疼痛、不能伸直、走路无力，检查未见明显异常",
+          "working: 医生推测为一过性滑膜炎，现询问是否已痊愈",
+          "history: 医生建议若复发需注意休息并治疗感冒；一般3-5天好转，通常不超过1周",
+          "history: 易在感冒时复发（医生提示）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "36f6adcd-5f5c-4d8f-b151-d2c7698b79d9",
+              "content": "患者家属代述：儿子于8月6日早晨起出现右膝/右腿疼痛，右膝不能伸直，走路不得力。医生推测为一过性滑膜炎，现询问是否已痊愈。",
+              "timestamp": 1771494073.7790067,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [
+            {
+              "id": "88af519a-f53c-444d-a300-c0895afec60e",
+              "content": "患者女，49岁",
+              "timestamp": 1771494057.7636733,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "9ed2f56c-581f-414e-9adc-2d85fb00b632",
+              "content": "患儿既往出现右膝/右腿疼痛、不能伸直、走路无力，检查未见明显异常。",
+              "timestamp": 1771494082.8183706,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "history": [
+            {
+              "id": "48b1259f-74b6-47e4-81a0-dbc2be814092",
+              "content": "子宫肌瘤，发现已有3年",
+              "timestamp": 1771494057.7636807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ed78327c-33b3-43d8-8223-3ab45825190f",
+              "content": "血常规：血色素93 g/L，提示贫血",
+              "timestamp": 1771494057.7636852,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "5077db47-2fbb-4d01-87fd-b664aa34d43b",
+              "content": "已做TCT检查，结果阴性",
+              "timestamp": 1771494057.763689,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "75edcc12-cecf-4c4a-a294-6cd7d94c37f6",
+              "content": "医生建议：一般情况下，子宫肌瘤导致贫血应考虑手术治疗",
+              "timestamp": 1771494063.1499119,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "0891bbfd-6356-43f2-9780-ad55a86d02f8",
+              "content": "曾在山西儿童医院就诊，医生检查未找到病因，相关检查均正常。",
+              "timestamp": 1771494073.779016,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ef3f83b0-ae6d-4e97-a8ca-3143455891d0",
+              "content": "医生建议：若复发需注意休息并治疗感冒；一般3-5天好转，通常不超过1周。",
+              "timestamp": 1771494082.818382,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "479157fd-b088-4b49-b6a4-1036ce9c4606",
+              "content": "医生提示：一过性滑膜炎易在感冒时复发。",
+              "timestamp": 1771494082.8183873,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "医生在病历背景里提到的这位患者属于哪个年龄段（具体到多少岁）？",
+          "answer": "49岁",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "88af519a-f53c-444d-a300-c0895afec60e"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "88af519a-f53c-444d-a300-c0895afec60e",
+              "content": "患者女，49岁",
+              "timestamp": 1771494057.7636733,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "9ed2f56c-581f-414e-9adc-2d85fb00b632",
+              "content": "患儿既往出现右膝/右腿疼痛、不能伸直、走路无力，检查未见明显异常。",
+              "timestamp": 1771494082.8183706,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "history": [
+            {
+              "id": "48b1259f-74b6-47e4-81a0-dbc2be814092",
+              "content": "子宫肌瘤，发现已有3年",
+              "timestamp": 1771494057.7636807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ed78327c-33b3-43d8-8223-3ab45825190f",
+              "content": "血常规：血色素93 g/L，提示贫血",
+              "timestamp": 1771494057.7636852,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "5077db47-2fbb-4d01-87fd-b664aa34d43b",
+              "content": "已做TCT检查，结果阴性",
+              "timestamp": 1771494057.763689,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "75edcc12-cecf-4c4a-a294-6cd7d94c37f6",
+              "content": "医生建议：一般情况下，子宫肌瘤导致贫血应考虑手术治疗",
+              "timestamp": 1771494063.1499119,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "0891bbfd-6356-43f2-9780-ad55a86d02f8",
+              "content": "曾在山西儿童医院就诊，医生检查未找到病因，相关检查均正常。",
+              "timestamp": 1771494073.779016,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ef3f83b0-ae6d-4e97-a8ca-3143455891d0",
+              "content": "医生建议：若复发需注意休息并治疗感冒；一般3-5天好转，通常不超过1周。",
+              "timestamp": 1771494082.818382,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "479157fd-b088-4b49-b6a4-1036ce9c4606",
+              "content": "医生提示：一过性滑膜炎易在感冒时复发。",
+              "timestamp": 1771494082.8183873,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "断奶快一年，怎么还会有奶水呢，患者女。28岁2009年2月16号剖腹产。到了10月份断奶，怎么现在挤一下还有奶水呢？",
+        "to_memory": [
+          "identity: 患者女，28岁",
+          "history: 2009-02-16行剖腹产（剖宫产）",
+          "history: 2009年10月断奶",
+          "working: 断奶近1年后挤压乳房仍可挤出乳汁，咨询原因"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "24f746d3-fd01-4190-8874-cc70cf3269ca",
+              "content": "断奶近1年后挤压乳房仍可挤出乳汁，咨询原因",
+              "timestamp": 1771494090.34883,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "88af519a-f53c-444d-a300-c0895afec60e",
+              "content": "患者女，49岁",
+              "timestamp": 1771494057.7636733,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "9ed2f56c-581f-414e-9adc-2d85fb00b632",
+              "content": "患儿既往出现右膝/右腿疼痛、不能伸直、走路无力，检查未见明显异常。",
+              "timestamp": 1771494082.8183706,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "84932ae0-bd03-455b-9a85-2d5bd2b77627",
+              "content": "患者女，28岁",
+              "timestamp": 1771494090.3488123,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "48b1259f-74b6-47e4-81a0-dbc2be814092",
+              "content": "子宫肌瘤，发现已有3年",
+              "timestamp": 1771494057.7636807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ed78327c-33b3-43d8-8223-3ab45825190f",
+              "content": "血常规：血色素93 g/L，提示贫血",
+              "timestamp": 1771494057.7636852,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "5077db47-2fbb-4d01-87fd-b664aa34d43b",
+              "content": "已做TCT检查，结果阴性",
+              "timestamp": 1771494057.763689,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "75edcc12-cecf-4c4a-a294-6cd7d94c37f6",
+              "content": "医生建议：一般情况下，子宫肌瘤导致贫血应考虑手术治疗",
+              "timestamp": 1771494063.1499119,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "0891bbfd-6356-43f2-9780-ad55a86d02f8",
+              "content": "曾在山西儿童医院就诊，医生检查未找到病因，相关检查均正常。",
+              "timestamp": 1771494073.779016,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ef3f83b0-ae6d-4e97-a8ca-3143455891d0",
+              "content": "医生建议：若复发需注意休息并治疗感冒；一般3-5天好转，通常不超过1周。",
+              "timestamp": 1771494082.818382,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "479157fd-b088-4b49-b6a4-1036ce9c4606",
+              "content": "医生提示：一过性滑膜炎易在感冒时复发。",
+              "timestamp": 1771494082.8183873,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "bf22219d-dd5e-4089-a566-12a0dd4fa6a2",
+              "content": "2009-02-16行剖腹产（剖宫产）",
+              "timestamp": 1771494090.348821,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "440db009-7fe0-4ca4-9b53-b72ad19daacf",
+              "content": "2009年10月断奶",
+              "timestamp": 1771494090.3488257,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者第一次就“妇科问题”咨询时医生提出的主要处理方向，与患者在后续关于“产后相关问题”咨询时所描述的核心困扰分别是什么？请分别概括两点。",
+          "answer": "首次：医生建议子宫肌瘤致贫血一般应考虑手术治疗；后续：断奶近1年后挤压乳房仍可挤出乳汁，咨询原因。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "75edcc12-cecf-4c4a-a294-6cd7d94c37f6"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "24f746d3-fd01-4190-8874-cc70cf3269ca"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            5,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "请检查泌乳素。",
+        "to_memory": [
+          "working: 断奶近1年仍可挤出乳汁，医生建议检查泌乳素（PRL）以评估泌乳原因"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "24f746d3-fd01-4190-8874-cc70cf3269ca",
+              "content": "断奶近1年后挤压乳房仍可挤出乳汁，医生建议检查泌乳素（PRL）以评估泌乳原因",
+              "timestamp": 1771494090.34883,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "88af519a-f53c-444d-a300-c0895afec60e",
+              "content": "患者女，49岁",
+              "timestamp": 1771494057.7636733,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "9ed2f56c-581f-414e-9adc-2d85fb00b632",
+              "content": "患儿既往出现右膝/右腿疼痛、不能伸直、走路无力，检查未见明显异常。",
+              "timestamp": 1771494082.8183706,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "84932ae0-bd03-455b-9a85-2d5bd2b77627",
+              "content": "患者女，28岁",
+              "timestamp": 1771494090.3488123,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "48b1259f-74b6-47e4-81a0-dbc2be814092",
+              "content": "子宫肌瘤，发现已有3年",
+              "timestamp": 1771494057.7636807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ed78327c-33b3-43d8-8223-3ab45825190f",
+              "content": "血常规：血色素93 g/L，提示贫血",
+              "timestamp": 1771494057.7636852,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "5077db47-2fbb-4d01-87fd-b664aa34d43b",
+              "content": "已做TCT检查，结果阴性",
+              "timestamp": 1771494057.763689,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "75edcc12-cecf-4c4a-a294-6cd7d94c37f6",
+              "content": "医生建议：一般情况下，子宫肌瘤导致贫血应考虑手术治疗",
+              "timestamp": 1771494063.1499119,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "0891bbfd-6356-43f2-9780-ad55a86d02f8",
+              "content": "曾在山西儿童医院就诊，医生检查未找到病因，相关检查均正常。",
+              "timestamp": 1771494073.779016,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ef3f83b0-ae6d-4e97-a8ca-3143455891d0",
+              "content": "医生建议：若复发需注意休息并治疗感冒；一般3-5天好转，通常不超过1周。",
+              "timestamp": 1771494082.818382,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "479157fd-b088-4b49-b6a4-1036ce9c4606",
+              "content": "医生提示：一过性滑膜炎易在感冒时复发。",
+              "timestamp": 1771494082.8183873,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "bf22219d-dd5e-4089-a566-12a0dd4fa6a2",
+              "content": "2009-02-16行剖腹产（剖宫产）",
+              "timestamp": 1771494090.348821,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "440db009-7fe0-4ca4-9b53-b72ad19daacf",
+              "content": "2009年10月断奶",
+              "timestamp": 1771494090.3488257,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "在“断奶后仍出现异常分泌物”这次咨询中，医生建议患者做哪一项化验来进一步查明原因？同时，对比患者回忆的断奶时间点，是在当年哪个月份？",
+          "answer": "检查泌乳素（PRL）；2009年10月断奶。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "24f746d3-fd01-4190-8874-cc70cf3269ca"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "440db009-7fe0-4ca4-9b53-b72ad19daacf"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "88af519a-f53c-444d-a300-c0895afec60e",
+              "content": "患者女，49岁",
+              "timestamp": 1771494057.7636733,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "9ed2f56c-581f-414e-9adc-2d85fb00b632",
+              "content": "患儿既往出现右膝/右腿疼痛、不能伸直、走路无力，检查未见明显异常。",
+              "timestamp": 1771494082.8183706,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "84932ae0-bd03-455b-9a85-2d5bd2b77627",
+              "content": "患者女，28岁",
+              "timestamp": 1771494090.3488123,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "48b1259f-74b6-47e4-81a0-dbc2be814092",
+              "content": "子宫肌瘤，发现已有3年",
+              "timestamp": 1771494057.7636807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ed78327c-33b3-43d8-8223-3ab45825190f",
+              "content": "血常规：血色素93 g/L，提示贫血",
+              "timestamp": 1771494057.7636852,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "5077db47-2fbb-4d01-87fd-b664aa34d43b",
+              "content": "已做TCT检查，结果阴性",
+              "timestamp": 1771494057.763689,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "75edcc12-cecf-4c4a-a294-6cd7d94c37f6",
+              "content": "医生建议：一般情况下，子宫肌瘤导致贫血应考虑手术治疗",
+              "timestamp": 1771494063.1499119,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "0891bbfd-6356-43f2-9780-ad55a86d02f8",
+              "content": "曾在山西儿童医院就诊，医生检查未找到病因，相关检查均正常。",
+              "timestamp": 1771494073.779016,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ef3f83b0-ae6d-4e97-a8ca-3143455891d0",
+              "content": "医生建议：若复发需注意休息并治疗感冒；一般3-5天好转，通常不超过1周。",
+              "timestamp": 1771494082.818382,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "479157fd-b088-4b49-b6a4-1036ce9c4606",
+              "content": "医生提示：一过性滑膜炎易在感冒时复发。",
+              "timestamp": 1771494082.8183873,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "bf22219d-dd5e-4089-a566-12a0dd4fa6a2",
+              "content": "2009-02-16行剖腹产（剖宫产）",
+              "timestamp": 1771494090.348821,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "440db009-7fe0-4ca4-9b53-b72ad19daacf",
+              "content": "2009年10月断奶",
+              "timestamp": 1771494090.3488257,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "慢性B淋巴细胞白血病，患者，女，47岁，以前身体状况较好，7月下旬体检时发现并确准，现无症状。目前病情：1：白细胞数29.92,淋巴细胞82.5%，中性粒细胞8.2；2：双侧腋窝及颈部淋巴结部分肿大，谢谢崔大夫的回复！",
+        "to_memory": [
+          "identity: 患者女，47岁",
+          "history: 2026年7月下旬体检发现并确诊慢性B淋巴细胞白血病（CLL）",
+          "history: 血常规：白细胞29.92；淋巴细胞82.5%；中性粒细胞8.2%",
+          "history: 体检/查体提示双侧腋窝及颈部淋巴结部分肿大",
+          "working: 目前无明显症状"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "363c7d8b-09ed-4f0a-95db-185f5b88fb20",
+              "content": "目前无明显症状",
+              "timestamp": 1771494105.2023792,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "88af519a-f53c-444d-a300-c0895afec60e",
+              "content": "患者女，47岁",
+              "timestamp": 1771494057.7636733,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "9ed2f56c-581f-414e-9adc-2d85fb00b632",
+              "content": "患儿既往出现右膝/右腿疼痛、不能伸直、走路无力，检查未见明显异常。",
+              "timestamp": 1771494082.8183706,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "84932ae0-bd03-455b-9a85-2d5bd2b77627",
+              "content": "患者女，28岁",
+              "timestamp": 1771494090.3488123,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "48b1259f-74b6-47e4-81a0-dbc2be814092",
+              "content": "子宫肌瘤，发现已有3年",
+              "timestamp": 1771494057.7636807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ed78327c-33b3-43d8-8223-3ab45825190f",
+              "content": "血常规：血色素93 g/L，提示贫血",
+              "timestamp": 1771494057.7636852,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "5077db47-2fbb-4d01-87fd-b664aa34d43b",
+              "content": "已做TCT检查，结果阴性",
+              "timestamp": 1771494057.763689,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "75edcc12-cecf-4c4a-a294-6cd7d94c37f6",
+              "content": "医生建议：一般情况下，子宫肌瘤导致贫血应考虑手术治疗",
+              "timestamp": 1771494063.1499119,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "0891bbfd-6356-43f2-9780-ad55a86d02f8",
+              "content": "曾在山西儿童医院就诊，医生检查未找到病因，相关检查均正常。",
+              "timestamp": 1771494073.779016,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ef3f83b0-ae6d-4e97-a8ca-3143455891d0",
+              "content": "医生建议：若复发需注意休息并治疗感冒；一般3-5天好转，通常不超过1周。",
+              "timestamp": 1771494082.818382,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "479157fd-b088-4b49-b6a4-1036ce9c4606",
+              "content": "医生提示：一过性滑膜炎易在感冒时复发。",
+              "timestamp": 1771494082.8183873,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "bf22219d-dd5e-4089-a566-12a0dd4fa6a2",
+              "content": "2009-02-16行剖腹产（剖宫产）",
+              "timestamp": 1771494090.348821,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "440db009-7fe0-4ca4-9b53-b72ad19daacf",
+              "content": "2009年10月断奶",
+              "timestamp": 1771494090.3488257,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "6788c25d-06fa-4290-9180-a69ba06ac609",
+              "content": "2026年7月下旬体检发现并确诊慢性B淋巴细胞白血病（CLL）",
+              "timestamp": 1771494105.2023628,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "dac3d650-9404-4839-a332-4d5d6f26c501",
+              "content": "血常规：白细胞29.92；淋巴细胞82.5%；中性粒细胞8.2%",
+              "timestamp": 1771494105.2023714,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ceb4524d-6229-46bb-8d0e-9d943643a866",
+              "content": "体检/查体提示双侧腋窝及颈部淋巴结部分肿大",
+              "timestamp": 1771494105.2023754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "在该患者既往的血常规检查中，血色素（Hb）记录的具体数值是多少？",
+          "answer": "93 g/L",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "ed78327c-33b3-43d8-8223-3ab45825190f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            9
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "有问题再联系。",
+        "to_memory": [
+          "history: 慢性B淋巴细胞白血病（CLL），女，47岁，2024年7月下旬体检发现并确诊，目前无症状；化验：白细胞29.92、淋巴细胞82.5%、中性粒细胞8.2；体征/检查：双侧腋窝及颈部淋巴结部分肿大"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "363c7d8b-09ed-4f0a-95db-185f5b88fb20",
+              "content": "目前无明显症状",
+              "timestamp": 1771494105.2023792,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "88af519a-f53c-444d-a300-c0895afec60e",
+              "content": "患者女，47岁",
+              "timestamp": 1771494057.7636733,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "9ed2f56c-581f-414e-9adc-2d85fb00b632",
+              "content": "患儿既往出现右膝/右腿疼痛、不能伸直、走路无力，检查未见明显异常。",
+              "timestamp": 1771494082.8183706,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "84932ae0-bd03-455b-9a85-2d5bd2b77627",
+              "content": "患者女，28岁",
+              "timestamp": 1771494090.3488123,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "48b1259f-74b6-47e4-81a0-dbc2be814092",
+              "content": "子宫肌瘤，发现已有3年",
+              "timestamp": 1771494057.7636807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ed78327c-33b3-43d8-8223-3ab45825190f",
+              "content": "血常规：血色素93 g/L，提示贫血",
+              "timestamp": 1771494057.7636852,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "5077db47-2fbb-4d01-87fd-b664aa34d43b",
+              "content": "已做TCT检查，结果阴性",
+              "timestamp": 1771494057.763689,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "75edcc12-cecf-4c4a-a294-6cd7d94c37f6",
+              "content": "医生建议：一般情况下，子宫肌瘤导致贫血应考虑手术治疗",
+              "timestamp": 1771494063.1499119,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "0891bbfd-6356-43f2-9780-ad55a86d02f8",
+              "content": "曾在山西儿童医院就诊，医生检查未找到病因，相关检查均正常。",
+              "timestamp": 1771494073.779016,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ef3f83b0-ae6d-4e97-a8ca-3143455891d0",
+              "content": "医生建议：若复发需注意休息并治疗感冒；一般3-5天好转，通常不超过1周。",
+              "timestamp": 1771494082.818382,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "479157fd-b088-4b49-b6a4-1036ce9c4606",
+              "content": "医生提示：一过性滑膜炎易在感冒时复发。",
+              "timestamp": 1771494082.8183873,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "bf22219d-dd5e-4089-a566-12a0dd4fa6a2",
+              "content": "2009-02-16行剖腹产（剖宫产）",
+              "timestamp": 1771494090.348821,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "440db009-7fe0-4ca4-9b53-b72ad19daacf",
+              "content": "2009年10月断奶",
+              "timestamp": 1771494090.3488257,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "6788c25d-06fa-4290-9180-a69ba06ac609",
+              "content": "2024年7月下旬体检发现并确诊慢性B淋巴细胞白血病（CLL）",
+              "timestamp": 1771494105.2023628,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "dac3d650-9404-4839-a332-4d5d6f26c501",
+              "content": "血常规：白细胞29.92；淋巴细胞82.5%；中性粒细胞8.2%",
+              "timestamp": 1771494105.2023714,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ceb4524d-6229-46bb-8d0e-9d943643a866",
+              "content": "体检/查体提示双侧腋窝及颈部淋巴结部分肿大",
+              "timestamp": 1771494105.2023754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "第二段病史中患者虽然提到一个明确的血液系统诊断，但同时又描述自己当前状态较轻。请问：她在该段病史里对自己“目前是否有症状”的表述是什么？这与所述诊断在随访沟通上需要做哪些安全核对？",
+          "answer": "目前无明显症状",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "440db009-7fe0-4ca4-9b53-b72ad19daacf"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "363c7d8b-09ed-4f0a-95db-185f5b88fb20"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "88af519a-f53c-444d-a300-c0895afec60e",
+              "content": "患者女，47岁",
+              "timestamp": 1771494057.7636733,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "9ed2f56c-581f-414e-9adc-2d85fb00b632",
+              "content": "患儿既往出现右膝/右腿疼痛、不能伸直、走路无力，检查未见明显异常。",
+              "timestamp": 1771494082.8183706,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "84932ae0-bd03-455b-9a85-2d5bd2b77627",
+              "content": "患者女，28岁",
+              "timestamp": 1771494090.3488123,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "48b1259f-74b6-47e4-81a0-dbc2be814092",
+              "content": "子宫肌瘤，发现已有3年",
+              "timestamp": 1771494057.7636807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ed78327c-33b3-43d8-8223-3ab45825190f",
+              "content": "血常规：血色素93 g/L，提示贫血",
+              "timestamp": 1771494057.7636852,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "5077db47-2fbb-4d01-87fd-b664aa34d43b",
+              "content": "已做TCT检查，结果阴性",
+              "timestamp": 1771494057.763689,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "75edcc12-cecf-4c4a-a294-6cd7d94c37f6",
+              "content": "医生建议：一般情况下，子宫肌瘤导致贫血应考虑手术治疗",
+              "timestamp": 1771494063.1499119,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "0891bbfd-6356-43f2-9780-ad55a86d02f8",
+              "content": "曾在山西儿童医院就诊，医生检查未找到病因，相关检查均正常。",
+              "timestamp": 1771494073.779016,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ef3f83b0-ae6d-4e97-a8ca-3143455891d0",
+              "content": "医生建议：若复发需注意休息并治疗感冒；一般3-5天好转，通常不超过1周。",
+              "timestamp": 1771494082.818382,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "479157fd-b088-4b49-b6a4-1036ce9c4606",
+              "content": "医生提示：一过性滑膜炎易在感冒时复发。",
+              "timestamp": 1771494082.8183873,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "bf22219d-dd5e-4089-a566-12a0dd4fa6a2",
+              "content": "2009-02-16行剖腹产（剖宫产）",
+              "timestamp": 1771494090.348821,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "440db009-7fe0-4ca4-9b53-b72ad19daacf",
+              "content": "2009年10月断奶",
+              "timestamp": 1771494090.3488257,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "6788c25d-06fa-4290-9180-a69ba06ac609",
+              "content": "2024年7月下旬体检发现并确诊慢性B淋巴细胞白血病（CLL）",
+              "timestamp": 1771494105.2023628,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "dac3d650-9404-4839-a332-4d5d6f26c501",
+              "content": "血常规：白细胞29.92；淋巴细胞82.5%；中性粒细胞8.2%",
+              "timestamp": 1771494105.2023714,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ceb4524d-6229-46bb-8d0e-9d943643a866",
+              "content": "体检/查体提示双侧腋窝及颈部淋巴结部分肿大",
+              "timestamp": 1771494105.2023754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "胃炎，食管炎？，饭后半小时饱胀，晚饭后加重，嗝气时拌食物反流至咽喉并偶有烧心，大便长期干结。左肩胛骨背心处隐痛半年。胃，食管钡餐。常大夫，首先感谢你万忙之中的回复！你精辟的诊断我很满意。由于病了半年多没有治好，心里有一定的压力。1米7的个子本就才55公斤的身体，半年下来就剩不到50公斤的体重。病理活检是磷状上皮增生，慢性炎，难道不支持Barrett食管的诊断和治疗吗？希望您能在工作之于再帮确诊。在此，万分的感谢。祝你工作顺利，平平安安。谢谢你，是我误解了你的解释。好的，我会按你说的，放松压力。继续治疗。同时也祝你快快乐乐，开开心心。您好！非常感谢您的回复，我会按照你的嘱咐找外科医生检查。有了结果再向你咨询！因为我相信你不但医术高超，而且有可贵的医德。",
+        "to_memory": [
+          "identity: 患者体型信息：身高约1.70米，体重由55kg降至不足50kg（半年内明显体重下降）",
+          "history: 胃/食管钡餐检查（已做/提及）",
+          "history: 病理活检结果：鳞状上皮增生，慢性炎",
+          "working: 本次主诉/症状：饭后半小时饱胀（晚饭后加重），嗝气时伴食物反流至咽喉，偶有烧心",
+          "working: 伴随症状：大便长期干结（便秘）；左肩胛骨背心处隐痛约半年",
+          "history: 疑问/未确诊问题：怀疑胃炎、食管炎；咨询是否支持Barrett食管的诊断与治疗",
+          "working: 心理/状态：因病程半年多未愈有压力与焦虑",
+          "working: 计划/建议（未给出具体结果）：将按医嘱继续治疗并放松压力；拟找外科医生进一步检查，待结果再咨询"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a6b47b98-e18d-450c-b5c3-4964e123741d",
+              "content": "主诉/症状：饭后约半小时饱胀（晚饭后加重），嗝气时伴食物反流至咽喉，偶有烧心",
+              "timestamp": 1771494124.4956396,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "6af4f111-27c2-412f-b600-2422641caab6",
+              "content": "伴随症状：大便长期干结（便秘）；左肩胛骨背心处隐痛约半年",
+              "timestamp": 1771494124.4956436,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7a33f45c-0e5e-4359-8a11-3d5b05e6e58d",
+              "content": "心理/状态：病程半年多未愈，存在压力与焦虑",
+              "timestamp": 1771494124.495651,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c703a18c-b60d-445d-9860-9db998d0fb22",
+              "content": "计划/建议：按医嘱继续治疗并放松压力；拟找外科医生进一步检查，待结果再咨询",
+              "timestamp": 1771494124.4956548,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "identity": [
+            {
+              "id": "88af519a-f53c-444d-a300-c0895afec60e",
+              "content": "患者女，47岁",
+              "timestamp": 1771494057.7636733,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "9ed2f56c-581f-414e-9adc-2d85fb00b632",
+              "content": "患儿既往出现右膝/右腿疼痛、不能伸直、走路无力，检查未见明显异常。",
+              "timestamp": 1771494082.8183706,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "84932ae0-bd03-455b-9a85-2d5bd2b77627",
+              "content": "患者女，28岁",
+              "timestamp": 1771494090.3488123,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "89b62643-482b-4950-aeb5-f0adac1ffadc",
+              "content": "患者体型：身高约1.70米；体重由55kg降至不足50kg（半年内明显体重下降）",
+              "timestamp": 1771494124.4956195,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "history": [
+            {
+              "id": "48b1259f-74b6-47e4-81a0-dbc2be814092",
+              "content": "子宫肌瘤，发现已有3年",
+              "timestamp": 1771494057.7636807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ed78327c-33b3-43d8-8223-3ab45825190f",
+              "content": "血常规：血色素93 g/L，提示贫血",
+              "timestamp": 1771494057.7636852,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "5077db47-2fbb-4d01-87fd-b664aa34d43b",
+              "content": "已做TCT检查，结果阴性",
+              "timestamp": 1771494057.763689,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "75edcc12-cecf-4c4a-a294-6cd7d94c37f6",
+              "content": "医生建议：一般情况下，子宫肌瘤导致贫血应考虑手术治疗",
+              "timestamp": 1771494063.1499119,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "0891bbfd-6356-43f2-9780-ad55a86d02f8",
+              "content": "曾在山西儿童医院就诊，医生检查未找到病因，相关检查均正常。",
+              "timestamp": 1771494073.779016,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ef3f83b0-ae6d-4e97-a8ca-3143455891d0",
+              "content": "医生建议：若复发需注意休息并治疗感冒；一般3-5天好转，通常不超过1周。",
+              "timestamp": 1771494082.818382,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "479157fd-b088-4b49-b6a4-1036ce9c4606",
+              "content": "医生提示：一过性滑膜炎易在感冒时复发。",
+              "timestamp": 1771494082.8183873,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "bf22219d-dd5e-4089-a566-12a0dd4fa6a2",
+              "content": "2009-02-16行剖腹产（剖宫产）",
+              "timestamp": 1771494090.348821,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "440db009-7fe0-4ca4-9b53-b72ad19daacf",
+              "content": "2009年10月断奶",
+              "timestamp": 1771494090.3488257,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "6788c25d-06fa-4290-9180-a69ba06ac609",
+              "content": "2024年7月下旬体检发现并确诊慢性B淋巴细胞白血病（CLL）",
+              "timestamp": 1771494105.2023628,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "dac3d650-9404-4839-a332-4d5d6f26c501",
+              "content": "血常规：白细胞29.92；淋巴细胞82.5%；中性粒细胞8.2%",
+              "timestamp": 1771494105.2023714,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ceb4524d-6229-46bb-8d0e-9d943643a866",
+              "content": "体检/查体提示双侧腋窝及颈部淋巴结部分肿大",
+              "timestamp": 1771494105.2023754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "daabc355-aee8-4a75-ba4d-eb298925e11c",
+              "content": "已做/提及胃/食管钡餐检查",
+              "timestamp": 1771494124.4956288,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "fe6c6d53-2efc-4257-b700-8e0051baf80a",
+              "content": "病理活检结果：鳞状上皮增生，慢性炎",
+              "timestamp": 1771494124.4956355,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "5d4ad0cd-128f-4137-8081-2eb6e39dd354",
+              "content": "疑问/未确诊：怀疑胃炎、食管炎；咨询是否支持Barrett食管的诊断与治疗",
+              "timestamp": 1771494124.4956474,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "谢谢您，江西朋友。希望您尽早诊断，及时有效治疗。也等待您好转的好消息！祝您快乐！",
+        "to_memory": [
+          "identity: 患者女，28岁（2009-02-16剖腹产；2010年左右断奶后仍可挤出少量乳汁）",
+          "identity: 患者女，47岁，慢性B淋巴细胞白血病（体检确诊，现无症状）",
+          "identity: 身高约1.70m，体重由55kg降至<50kg",
+          "history: 2009-02-16行剖腹产；2009-10断奶",
+          "history: 断奶近一年仍有乳汁分泌，医生建议检查泌乳素（PRL）",
+          "history: 202x年7月下旬体检确诊慢性B淋巴细胞白血病；化验：WBC 29.92，淋巴细胞82.5%，中性粒细胞8.2%；体征：双侧腋窝及颈部淋巴结部分肿大",
+          "history: 胃/食管症状检查：胃、食管钡餐；病理活检提示鳞状上皮增生、慢性炎",
+          "working: 胃炎/食管炎疑似：饭后半小时饱胀（晚饭后加重）、嗝气伴食物反流至咽喉、偶有烧心、长期大便干结、左肩胛骨背心处隐痛半年；担心Barrett食管，计划按医嘱继续治疗并找外科医生检查"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a6b47b98-e18d-450c-b5c3-4964e123741d",
+              "content": "主诉/症状：饭后约半小时饱胀（晚饭后加重），嗝气时伴食物反流至咽喉，偶有烧心",
+              "timestamp": 1771494124.4956396,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "6af4f111-27c2-412f-b600-2422641caab6",
+              "content": "伴随症状：大便长期干结（便秘）；左肩胛骨背心处隐痛约半年",
+              "timestamp": 1771494124.4956436,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7a33f45c-0e5e-4359-8a11-3d5b05e6e58d",
+              "content": "心理/状态：病程半年多未愈，存在压力与焦虑",
+              "timestamp": 1771494124.495651,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c703a18c-b60d-445d-9860-9db998d0fb22",
+              "content": "计划/建议：按医嘱继续治疗并放松压力；拟找外科医生进一步检查，待结果再咨询",
+              "timestamp": 1771494124.4956548,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "identity": [
+            {
+              "id": "88af519a-f53c-444d-a300-c0895afec60e",
+              "content": "患者女，47岁",
+              "timestamp": 1771494057.7636733,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "9ed2f56c-581f-414e-9adc-2d85fb00b632",
+              "content": "患儿既往出现右膝/右腿疼痛、不能伸直、走路无力，检查未见明显异常。",
+              "timestamp": 1771494082.8183706,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "84932ae0-bd03-455b-9a85-2d5bd2b77627",
+              "content": "患者女，28岁",
+              "timestamp": 1771494090.3488123,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "89b62643-482b-4950-aeb5-f0adac1ffadc",
+              "content": "患者体型：身高约1.70米；体重由55kg降至不足50kg（半年内明显体重下降）",
+              "timestamp": 1771494124.4956195,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "history": [
+            {
+              "id": "48b1259f-74b6-47e4-81a0-dbc2be814092",
+              "content": "子宫肌瘤，发现已有3年",
+              "timestamp": 1771494057.7636807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ed78327c-33b3-43d8-8223-3ab45825190f",
+              "content": "血常规：血色素93 g/L，提示贫血",
+              "timestamp": 1771494057.7636852,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "5077db47-2fbb-4d01-87fd-b664aa34d43b",
+              "content": "已做TCT检查，结果阴性",
+              "timestamp": 1771494057.763689,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "75edcc12-cecf-4c4a-a294-6cd7d94c37f6",
+              "content": "医生建议：一般情况下，子宫肌瘤导致贫血应考虑手术治疗",
+              "timestamp": 1771494063.1499119,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "0891bbfd-6356-43f2-9780-ad55a86d02f8",
+              "content": "曾在山西儿童医院就诊，医生检查未找到病因，相关检查均正常。",
+              "timestamp": 1771494073.779016,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ef3f83b0-ae6d-4e97-a8ca-3143455891d0",
+              "content": "医生建议：若复发需注意休息并治疗感冒；一般3-5天好转，通常不超过1周。",
+              "timestamp": 1771494082.818382,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "479157fd-b088-4b49-b6a4-1036ce9c4606",
+              "content": "医生提示：一过性滑膜炎易在感冒时复发。",
+              "timestamp": 1771494082.8183873,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "bf22219d-dd5e-4089-a566-12a0dd4fa6a2",
+              "content": "2009-02-16行剖腹产（剖宫产）",
+              "timestamp": 1771494090.348821,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "440db009-7fe0-4ca4-9b53-b72ad19daacf",
+              "content": "2009年10月断奶",
+              "timestamp": 1771494090.3488257,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "6788c25d-06fa-4290-9180-a69ba06ac609",
+              "content": "2024年7月下旬体检发现并确诊慢性B淋巴细胞白血病（CLL）",
+              "timestamp": 1771494105.2023628,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "dac3d650-9404-4839-a332-4d5d6f26c501",
+              "content": "血常规：白细胞29.92；淋巴细胞82.5%；中性粒细胞8.2%",
+              "timestamp": 1771494105.2023714,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ceb4524d-6229-46bb-8d0e-9d943643a866",
+              "content": "体检/查体提示双侧腋窝及颈部淋巴结部分肿大",
+              "timestamp": 1771494105.2023754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "daabc355-aee8-4a75-ba4d-eb298925e11c",
+              "content": "已做/提及胃/食管钡餐检查",
+              "timestamp": 1771494124.4956288,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "fe6c6d53-2efc-4257-b700-8e0051baf80a",
+              "content": "病理活检结果：鳞状上皮增生，慢性炎",
+              "timestamp": 1771494124.4956355,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "5d4ad0cd-128f-4137-8081-2eb6e39dd354",
+              "content": "疑问/未确诊：怀疑胃炎、食管炎；咨询是否支持Barrett食管的诊断与治疗",
+              "timestamp": 1771494124.4956474,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "e0648fb7-3cb5-4fe4-8d11-10147bcf8862",
+              "content": "断奶近一年仍有乳汁分泌，医生建议检查泌乳素（PRL）",
+              "timestamp": 1771494133.2797832,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者在描述自己这段时间的病程时，提到自己的心理状态有什么变化或感受？",
+          "answer": "病了半年多没治好，心里有压力与焦虑。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "7a33f45c-0e5e-4359-8a11-3d5b05e6e58d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "您好！常大夫，在您的建议下，今天特意做了X光颈椎检查。请您在空于时间帮看看，下一步该怎么治疗？",
+        "to_memory": [
+          "history: 今日按建议完成颈椎X光检查（结果未提供）",
+          "history: 询问医生查看颈椎X光并指导下一步治疗方案"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a6b47b98-e18d-450c-b5c3-4964e123741d",
+              "content": "主诉/症状：饭后约半小时饱胀（晚饭后加重），嗝气时伴食物反流至咽喉，偶有烧心",
+              "timestamp": 1771494124.4956396,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "6af4f111-27c2-412f-b600-2422641caab6",
+              "content": "伴随症状：大便长期干结（便秘）；左肩胛骨背心处隐痛约半年",
+              "timestamp": 1771494124.4956436,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7a33f45c-0e5e-4359-8a11-3d5b05e6e58d",
+              "content": "心理/状态：病程半年多未愈，存在压力与焦虑",
+              "timestamp": 1771494124.495651,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c703a18c-b60d-445d-9860-9db998d0fb22",
+              "content": "计划/建议：按医嘱继续治疗并放松压力；拟找外科医生进一步检查，待结果再咨询",
+              "timestamp": 1771494124.4956548,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "10236198-1c55-4dd0-b0f6-d5e2d2d3808e",
+              "content": "计划/随访：希望医生查看颈椎X光并指导下一步治疗方案",
+              "timestamp": 1771494138.0099804,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [
+            {
+              "id": "88af519a-f53c-444d-a300-c0895afec60e",
+              "content": "患者女，47岁",
+              "timestamp": 1771494057.7636733,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "9ed2f56c-581f-414e-9adc-2d85fb00b632",
+              "content": "患儿既往出现右膝/右腿疼痛、不能伸直、走路无力，检查未见明显异常。",
+              "timestamp": 1771494082.8183706,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "84932ae0-bd03-455b-9a85-2d5bd2b77627",
+              "content": "患者女，28岁",
+              "timestamp": 1771494090.3488123,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "89b62643-482b-4950-aeb5-f0adac1ffadc",
+              "content": "患者体型：身高约1.70米；体重由55kg降至不足50kg（半年内明显体重下降）",
+              "timestamp": 1771494124.4956195,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "history": [
+            {
+              "id": "48b1259f-74b6-47e4-81a0-dbc2be814092",
+              "content": "子宫肌瘤，发现已有3年",
+              "timestamp": 1771494057.7636807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ed78327c-33b3-43d8-8223-3ab45825190f",
+              "content": "血常规：血色素93 g/L，提示贫血",
+              "timestamp": 1771494057.7636852,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "5077db47-2fbb-4d01-87fd-b664aa34d43b",
+              "content": "已做TCT检查，结果阴性",
+              "timestamp": 1771494057.763689,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "75edcc12-cecf-4c4a-a294-6cd7d94c37f6",
+              "content": "医生建议：一般情况下，子宫肌瘤导致贫血应考虑手术治疗",
+              "timestamp": 1771494063.1499119,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "0891bbfd-6356-43f2-9780-ad55a86d02f8",
+              "content": "曾在山西儿童医院就诊，医生检查未找到病因，相关检查均正常。",
+              "timestamp": 1771494073.779016,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ef3f83b0-ae6d-4e97-a8ca-3143455891d0",
+              "content": "医生建议：若复发需注意休息并治疗感冒；一般3-5天好转，通常不超过1周。",
+              "timestamp": 1771494082.818382,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "479157fd-b088-4b49-b6a4-1036ce9c4606",
+              "content": "医生提示：一过性滑膜炎易在感冒时复发。",
+              "timestamp": 1771494082.8183873,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "bf22219d-dd5e-4089-a566-12a0dd4fa6a2",
+              "content": "2009-02-16行剖腹产（剖宫产）",
+              "timestamp": 1771494090.348821,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "440db009-7fe0-4ca4-9b53-b72ad19daacf",
+              "content": "2009年10月断奶",
+              "timestamp": 1771494090.3488257,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "6788c25d-06fa-4290-9180-a69ba06ac609",
+              "content": "2024年7月下旬体检发现并确诊慢性B淋巴细胞白血病（CLL）",
+              "timestamp": 1771494105.2023628,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "dac3d650-9404-4839-a332-4d5d6f26c501",
+              "content": "血常规：白细胞29.92；淋巴细胞82.5%；中性粒细胞8.2%",
+              "timestamp": 1771494105.2023714,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ceb4524d-6229-46bb-8d0e-9d943643a866",
+              "content": "体检/查体提示双侧腋窝及颈部淋巴结部分肿大",
+              "timestamp": 1771494105.2023754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "daabc355-aee8-4a75-ba4d-eb298925e11c",
+              "content": "已做/提及胃/食管钡餐检查",
+              "timestamp": 1771494124.4956288,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "fe6c6d53-2efc-4257-b700-8e0051baf80a",
+              "content": "病理活检结果：鳞状上皮增生，慢性炎",
+              "timestamp": 1771494124.4956355,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "5d4ad0cd-128f-4137-8081-2eb6e39dd354",
+              "content": "疑问/未确诊：怀疑胃炎、食管炎；咨询是否支持Barrett食管的诊断与治疗",
+              "timestamp": 1771494124.4956474,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "e0648fb7-3cb5-4fe4-8d11-10147bcf8862",
+              "content": "断奶近一年仍有乳汁分泌，医生建议检查泌乳素（PRL）",
+              "timestamp": 1771494133.2797832,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "0254b4a6-535f-4e77-9f19-a430cc000d0e",
+              "content": "今日按建议完成颈椎X光检查（结果未提供）",
+              "timestamp": 1771494138.0099719,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者在更早一次外院就诊（医生未能明确原因的那次）与本次围绕消化道不适来咨询时的情况：本次患者额外提到并持续存在的、需要一并评估的非消化道相关不适是什么？持续了大约多久？",
+          "answer": "左肩胛骨背心处隐痛，约半年",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "0891bbfd-6356-43f2-9780-ad55a86d02f8"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "6af4f111-27c2-412f-b600-2422641caab6"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            11,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "建议到当地正规医院理疗科或中医骨科去看看，可以做些理疗或牵引治疗。",
+        "to_memory": [
+          "history: 医生建议至当地正规医院理疗科或中医骨科就诊，可进行理疗或牵引治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a6b47b98-e18d-450c-b5c3-4964e123741d",
+              "content": "主诉/症状：饭后约半小时饱胀（晚饭后加重），嗝气时伴食物反流至咽喉，偶有烧心",
+              "timestamp": 1771494124.4956396,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "6af4f111-27c2-412f-b600-2422641caab6",
+              "content": "伴随症状：大便长期干结（便秘）；左肩胛骨背心处隐痛约半年",
+              "timestamp": 1771494124.4956436,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7a33f45c-0e5e-4359-8a11-3d5b05e6e58d",
+              "content": "心理/状态：病程半年多未愈，存在压力与焦虑",
+              "timestamp": 1771494124.495651,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c703a18c-b60d-445d-9860-9db998d0fb22",
+              "content": "计划/建议：按医嘱继续治疗并放松压力；拟找外科医生进一步检查，待结果再咨询",
+              "timestamp": 1771494124.4956548,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "10236198-1c55-4dd0-b0f6-d5e2d2d3808e",
+              "content": "计划/随访：希望医生查看颈椎X光并指导下一步治疗方案",
+              "timestamp": 1771494138.0099804,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [
+            {
+              "id": "88af519a-f53c-444d-a300-c0895afec60e",
+              "content": "患者女，47岁",
+              "timestamp": 1771494057.7636733,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "9ed2f56c-581f-414e-9adc-2d85fb00b632",
+              "content": "患儿既往出现右膝/右腿疼痛、不能伸直、走路无力，检查未见明显异常。",
+              "timestamp": 1771494082.8183706,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "84932ae0-bd03-455b-9a85-2d5bd2b77627",
+              "content": "患者女，28岁",
+              "timestamp": 1771494090.3488123,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "89b62643-482b-4950-aeb5-f0adac1ffadc",
+              "content": "患者体型：身高约1.70米；体重由55kg降至不足50kg（半年内明显体重下降）",
+              "timestamp": 1771494124.4956195,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "history": [
+            {
+              "id": "48b1259f-74b6-47e4-81a0-dbc2be814092",
+              "content": "子宫肌瘤，发现已有3年",
+              "timestamp": 1771494057.7636807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ed78327c-33b3-43d8-8223-3ab45825190f",
+              "content": "血常规：血色素93 g/L，提示贫血",
+              "timestamp": 1771494057.7636852,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "5077db47-2fbb-4d01-87fd-b664aa34d43b",
+              "content": "已做TCT检查，结果阴性",
+              "timestamp": 1771494057.763689,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "75edcc12-cecf-4c4a-a294-6cd7d94c37f6",
+              "content": "医生建议：一般情况下，子宫肌瘤导致贫血应考虑手术治疗",
+              "timestamp": 1771494063.1499119,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "0891bbfd-6356-43f2-9780-ad55a86d02f8",
+              "content": "曾在山西儿童医院就诊，医生检查未找到病因，相关检查均正常。",
+              "timestamp": 1771494073.779016,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ef3f83b0-ae6d-4e97-a8ca-3143455891d0",
+              "content": "医生建议：若复发需注意休息并治疗感冒；一般3-5天好转，通常不超过1周。",
+              "timestamp": 1771494082.818382,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "479157fd-b088-4b49-b6a4-1036ce9c4606",
+              "content": "医生提示：一过性滑膜炎易在感冒时复发。",
+              "timestamp": 1771494082.8183873,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "bf22219d-dd5e-4089-a566-12a0dd4fa6a2",
+              "content": "2009-02-16行剖腹产（剖宫产）",
+              "timestamp": 1771494090.348821,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "440db009-7fe0-4ca4-9b53-b72ad19daacf",
+              "content": "2009年10月断奶",
+              "timestamp": 1771494090.3488257,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "6788c25d-06fa-4290-9180-a69ba06ac609",
+              "content": "2024年7月下旬体检发现并确诊慢性B淋巴细胞白血病（CLL）",
+              "timestamp": 1771494105.2023628,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "dac3d650-9404-4839-a332-4d5d6f26c501",
+              "content": "血常规：白细胞29.92；淋巴细胞82.5%；中性粒细胞8.2%",
+              "timestamp": 1771494105.2023714,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ceb4524d-6229-46bb-8d0e-9d943643a866",
+              "content": "体检/查体提示双侧腋窝及颈部淋巴结部分肿大",
+              "timestamp": 1771494105.2023754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "daabc355-aee8-4a75-ba4d-eb298925e11c",
+              "content": "已做/提及胃/食管钡餐检查",
+              "timestamp": 1771494124.4956288,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "fe6c6d53-2efc-4257-b700-8e0051baf80a",
+              "content": "病理活检结果：鳞状上皮增生，慢性炎",
+              "timestamp": 1771494124.4956355,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "5d4ad0cd-128f-4137-8081-2eb6e39dd354",
+              "content": "疑问/未确诊：怀疑胃炎、食管炎；咨询是否支持Barrett食管的诊断与治疗",
+              "timestamp": 1771494124.4956474,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "e0648fb7-3cb5-4fe4-8d11-10147bcf8862",
+              "content": "断奶近一年仍有乳汁分泌，医生建议检查泌乳素（PRL）",
+              "timestamp": 1771494133.2797832,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "0254b4a6-535f-4e77-9f19-a430cc000d0e",
+              "content": "今日按建议完成颈椎X光检查（结果未提供）",
+              "timestamp": 1771494138.0099719,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "1634a977-2c51-4242-8ef7-ec5a965ae04b",
+              "content": "医生建议至当地正规医院理疗科或中医骨科就诊，可进行理疗或牵引治疗",
+              "timestamp": 1771494143.309007,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在这段就诊记录中曾提到自己近期体重变化较大。请核对：患者自述的身高以及体重从起初到当前的大致变化范围分别是什么？若后续治疗方案需要依据体重计算或评估营养风险，是否存在因未更新体重信息而带来的安全隐患？",
+          "answer": "身高约1.70米；体重由55kg降至不足50kg（半年内明显体重下降）。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "440db009-7fe0-4ca4-9b53-b72ad19daacf"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "89b62643-482b-4950-aeb5-f0adac1ffadc"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            9,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "好的，常大夫谢谢您万忙之中及时的回复！我会按你的建议继续治疗，再次感谢您一直以来对一个陌生患者提供的无私关心和帮助。祝愿您好人一生平安，家庭幸福美满。",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a6b47b98-e18d-450c-b5c3-4964e123741d",
+              "content": "主诉/症状：饭后约半小时饱胀（晚饭后加重），嗝气时伴食物反流至咽喉，偶有烧心",
+              "timestamp": 1771494124.4956396,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "6af4f111-27c2-412f-b600-2422641caab6",
+              "content": "伴随症状：大便长期干结（便秘）；左肩胛骨背心处隐痛约半年",
+              "timestamp": 1771494124.4956436,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7a33f45c-0e5e-4359-8a11-3d5b05e6e58d",
+              "content": "心理/状态：病程半年多未愈，存在压力与焦虑",
+              "timestamp": 1771494124.495651,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c703a18c-b60d-445d-9860-9db998d0fb22",
+              "content": "计划/建议：按医嘱继续治疗并放松压力；拟找外科医生进一步检查，待结果再咨询",
+              "timestamp": 1771494124.4956548,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "10236198-1c55-4dd0-b0f6-d5e2d2d3808e",
+              "content": "计划/随访：希望医生查看颈椎X光并指导下一步治疗方案",
+              "timestamp": 1771494138.0099804,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [
+            {
+              "id": "88af519a-f53c-444d-a300-c0895afec60e",
+              "content": "患者女，47岁",
+              "timestamp": 1771494057.7636733,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "9ed2f56c-581f-414e-9adc-2d85fb00b632",
+              "content": "患儿既往出现右膝/右腿疼痛、不能伸直、走路无力，检查未见明显异常。",
+              "timestamp": 1771494082.8183706,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "84932ae0-bd03-455b-9a85-2d5bd2b77627",
+              "content": "患者女，28岁",
+              "timestamp": 1771494090.3488123,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "89b62643-482b-4950-aeb5-f0adac1ffadc",
+              "content": "患者体型：身高约1.70米；体重由55kg降至不足50kg（半年内明显体重下降）",
+              "timestamp": 1771494124.4956195,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "history": [
+            {
+              "id": "48b1259f-74b6-47e4-81a0-dbc2be814092",
+              "content": "子宫肌瘤，发现已有3年",
+              "timestamp": 1771494057.7636807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ed78327c-33b3-43d8-8223-3ab45825190f",
+              "content": "血常规：血色素93 g/L，提示贫血",
+              "timestamp": 1771494057.7636852,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "5077db47-2fbb-4d01-87fd-b664aa34d43b",
+              "content": "已做TCT检查，结果阴性",
+              "timestamp": 1771494057.763689,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "75edcc12-cecf-4c4a-a294-6cd7d94c37f6",
+              "content": "医生建议：一般情况下，子宫肌瘤导致贫血应考虑手术治疗",
+              "timestamp": 1771494063.1499119,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "0891bbfd-6356-43f2-9780-ad55a86d02f8",
+              "content": "曾在山西儿童医院就诊，医生检查未找到病因，相关检查均正常。",
+              "timestamp": 1771494073.779016,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ef3f83b0-ae6d-4e97-a8ca-3143455891d0",
+              "content": "医生建议：若复发需注意休息并治疗感冒；一般3-5天好转，通常不超过1周。",
+              "timestamp": 1771494082.818382,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "479157fd-b088-4b49-b6a4-1036ce9c4606",
+              "content": "医生提示：一过性滑膜炎易在感冒时复发。",
+              "timestamp": 1771494082.8183873,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "bf22219d-dd5e-4089-a566-12a0dd4fa6a2",
+              "content": "2009-02-16行剖腹产（剖宫产）",
+              "timestamp": 1771494090.348821,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "440db009-7fe0-4ca4-9b53-b72ad19daacf",
+              "content": "2009年10月断奶",
+              "timestamp": 1771494090.3488257,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "6788c25d-06fa-4290-9180-a69ba06ac609",
+              "content": "2024年7月下旬体检发现并确诊慢性B淋巴细胞白血病（CLL）",
+              "timestamp": 1771494105.2023628,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "dac3d650-9404-4839-a332-4d5d6f26c501",
+              "content": "血常规：白细胞29.92；淋巴细胞82.5%；中性粒细胞8.2%",
+              "timestamp": 1771494105.2023714,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ceb4524d-6229-46bb-8d0e-9d943643a866",
+              "content": "体检/查体提示双侧腋窝及颈部淋巴结部分肿大",
+              "timestamp": 1771494105.2023754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "daabc355-aee8-4a75-ba4d-eb298925e11c",
+              "content": "已做/提及胃/食管钡餐检查",
+              "timestamp": 1771494124.4956288,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "fe6c6d53-2efc-4257-b700-8e0051baf80a",
+              "content": "病理活检结果：鳞状上皮增生，慢性炎",
+              "timestamp": 1771494124.4956355,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "5d4ad0cd-128f-4137-8081-2eb6e39dd354",
+              "content": "疑问/未确诊：怀疑胃炎、食管炎；咨询是否支持Barrett食管的诊断与治疗",
+              "timestamp": 1771494124.4956474,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "e0648fb7-3cb5-4fe4-8d11-10147bcf8862",
+              "content": "断奶近一年仍有乳汁分泌，医生建议检查泌乳素（PRL）",
+              "timestamp": 1771494133.2797832,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "0254b4a6-535f-4e77-9f19-a430cc000d0e",
+              "content": "今日按建议完成颈椎X光检查（结果未提供）",
+              "timestamp": 1771494138.0099719,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "1634a977-2c51-4242-8ef7-ec5a965ae04b",
+              "content": "医生建议至当地正规医院理疗科或中医骨科就诊，可进行理疗或牵引治疗",
+              "timestamp": 1771494143.309007,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "谢谢您。也祝您平安快乐、康健幸福！",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a6b47b98-e18d-450c-b5c3-4964e123741d",
+              "content": "主诉/症状：饭后约半小时饱胀（晚饭后加重），嗝气时伴食物反流至咽喉，偶有烧心",
+              "timestamp": 1771494124.4956396,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "6af4f111-27c2-412f-b600-2422641caab6",
+              "content": "伴随症状：大便长期干结（便秘）；左肩胛骨背心处隐痛约半年",
+              "timestamp": 1771494124.4956436,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7a33f45c-0e5e-4359-8a11-3d5b05e6e58d",
+              "content": "心理/状态：病程半年多未愈，存在压力与焦虑",
+              "timestamp": 1771494124.495651,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c703a18c-b60d-445d-9860-9db998d0fb22",
+              "content": "计划/建议：按医嘱继续治疗并放松压力；拟找外科医生进一步检查，待结果再咨询",
+              "timestamp": 1771494124.4956548,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "10236198-1c55-4dd0-b0f6-d5e2d2d3808e",
+              "content": "计划/随访：希望医生查看颈椎X光并指导下一步治疗方案",
+              "timestamp": 1771494138.0099804,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [
+            {
+              "id": "88af519a-f53c-444d-a300-c0895afec60e",
+              "content": "患者女，47岁",
+              "timestamp": 1771494057.7636733,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "9ed2f56c-581f-414e-9adc-2d85fb00b632",
+              "content": "患儿既往出现右膝/右腿疼痛、不能伸直、走路无力，检查未见明显异常。",
+              "timestamp": 1771494082.8183706,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "84932ae0-bd03-455b-9a85-2d5bd2b77627",
+              "content": "患者女，28岁",
+              "timestamp": 1771494090.3488123,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "89b62643-482b-4950-aeb5-f0adac1ffadc",
+              "content": "患者体型：身高约1.70米；体重由55kg降至不足50kg（半年内明显体重下降）",
+              "timestamp": 1771494124.4956195,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "history": [
+            {
+              "id": "48b1259f-74b6-47e4-81a0-dbc2be814092",
+              "content": "子宫肌瘤，发现已有3年",
+              "timestamp": 1771494057.7636807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ed78327c-33b3-43d8-8223-3ab45825190f",
+              "content": "血常规：血色素93 g/L，提示贫血",
+              "timestamp": 1771494057.7636852,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "5077db47-2fbb-4d01-87fd-b664aa34d43b",
+              "content": "已做TCT检查，结果阴性",
+              "timestamp": 1771494057.763689,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "75edcc12-cecf-4c4a-a294-6cd7d94c37f6",
+              "content": "医生建议：一般情况下，子宫肌瘤导致贫血应考虑手术治疗",
+              "timestamp": 1771494063.1499119,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "0891bbfd-6356-43f2-9780-ad55a86d02f8",
+              "content": "曾在山西儿童医院就诊，医生检查未找到病因，相关检查均正常。",
+              "timestamp": 1771494073.779016,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ef3f83b0-ae6d-4e97-a8ca-3143455891d0",
+              "content": "医生建议：若复发需注意休息并治疗感冒；一般3-5天好转，通常不超过1周。",
+              "timestamp": 1771494082.818382,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "479157fd-b088-4b49-b6a4-1036ce9c4606",
+              "content": "医生提示：一过性滑膜炎易在感冒时复发。",
+              "timestamp": 1771494082.8183873,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "bf22219d-dd5e-4089-a566-12a0dd4fa6a2",
+              "content": "2009-02-16行剖腹产（剖宫产）",
+              "timestamp": 1771494090.348821,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "440db009-7fe0-4ca4-9b53-b72ad19daacf",
+              "content": "2009年10月断奶",
+              "timestamp": 1771494090.3488257,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "6788c25d-06fa-4290-9180-a69ba06ac609",
+              "content": "2024年7月下旬体检发现并确诊慢性B淋巴细胞白血病（CLL）",
+              "timestamp": 1771494105.2023628,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "dac3d650-9404-4839-a332-4d5d6f26c501",
+              "content": "血常规：白细胞29.92；淋巴细胞82.5%；中性粒细胞8.2%",
+              "timestamp": 1771494105.2023714,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ceb4524d-6229-46bb-8d0e-9d943643a866",
+              "content": "体检/查体提示双侧腋窝及颈部淋巴结部分肿大",
+              "timestamp": 1771494105.2023754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "daabc355-aee8-4a75-ba4d-eb298925e11c",
+              "content": "已做/提及胃/食管钡餐检查",
+              "timestamp": 1771494124.4956288,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "fe6c6d53-2efc-4257-b700-8e0051baf80a",
+              "content": "病理活检结果：鳞状上皮增生，慢性炎",
+              "timestamp": 1771494124.4956355,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "5d4ad0cd-128f-4137-8081-2eb6e39dd354",
+              "content": "疑问/未确诊：怀疑胃炎、食管炎；咨询是否支持Barrett食管的诊断与治疗",
+              "timestamp": 1771494124.4956474,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "e0648fb7-3cb5-4fe4-8d11-10147bcf8862",
+              "content": "断奶近一年仍有乳汁分泌，医生建议检查泌乳素（PRL）",
+              "timestamp": 1771494133.2797832,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "0254b4a6-535f-4e77-9f19-a430cc000d0e",
+              "content": "今日按建议完成颈椎X光检查（结果未提供）",
+              "timestamp": 1771494138.0099719,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "1634a977-2c51-4242-8ef7-ec5a965ae04b",
+              "content": "医生建议至当地正规医院理疗科或中医骨科就诊，可进行理疗或牵引治疗",
+              "timestamp": 1771494143.309007,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "postop_rehab",
+    "scenario_name": "术后康复管理",
+    "session_count": 5,
+    "group_key": "综合科"
+  }
+}

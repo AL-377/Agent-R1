@@ -1,0 +1,1242 @@
+{
+  "patient_id": "bb983f14579f",
+  "messages": [
+    {
+      "user": {
+        "content": "左膝关节痛，开车时间长了就痛休息几天有好点。",
+        "to_memory": [
+          "working: 主诉左膝关节痛；长时间开车后加重，休息几天可缓解"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "129f7e77-47bd-436e-a7cc-a142e5e33bc5",
+              "content": "主诉左膝关节痛；长时间开车后加重，休息几天可缓解",
+              "timestamp": 1771465276.4111993,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者这次就诊主要不适的部位和症状是什么？",
+          "answer": "左膝关节痛",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "129f7e77-47bd-436e-a7cc-a142e5e33bc5"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你好，可以适当休息，同时外用膏药治疗，口服消炎镇痛药物就可以的。",
+        "to_memory": [
+          "history: 医生建议适当休息，外用膏药治疗，口服消炎镇痛药物",
+          "working: 主诉左膝关节痛，开车时间长后加重，休息几天可缓解"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "129f7e77-47bd-436e-a7cc-a142e5e33bc5",
+              "content": "主诉左膝关节痛；长时间开车后加重，休息几天可缓解",
+              "timestamp": 1771465276.4111993,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "f633bca0-48ef-4f26-abd0-413099230c14",
+              "content": "医生建议适当休息，外用膏药治疗，口服消炎镇痛药物",
+              "timestamp": 1771465280.8678792,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者最初出现不适时与休息几天之后的情况：哪些诱因会让症状加重，休息后症状有什么变化？",
+          "answer": "长时间开车后加重；休息几天后有所缓解/好转。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "129f7e77-47bd-436e-a7cc-a142e5e33bc5",
+                "129f7e77-47bd-436e-a7cc-a142e5e33bc5"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "喉癌，大概一个月前，脖子的右边长了个大疙瘩。医生初步诊断是喉癌。",
+        "to_memory": [
+          "working: 约1个月前发现右侧颈部出现较大肿块（“大疙瘩”）",
+          "history: 医生初步诊断考虑喉癌（尚未确诊）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "752f9864-8e4e-4240-93e2-6e7d3001c6c6",
+              "content": "约1个月前发现右侧颈部出现较大肿块（“大疙瘩”）",
+              "timestamp": 1771465285.8026838,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "dfacca60-1c08-4f0f-bb17-316757ab2d7c",
+              "content": "医生初步诊断考虑喉癌（尚未确诊）",
+              "timestamp": 1771465285.802692,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者描述颈部右侧出现肿块后，医生当时给出的初步诊断考虑是什么疾病？",
+          "answer": "喉癌（初步诊断，尚未确诊）",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "dfacca60-1c08-4f0f-bb17-316757ab2d7c"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "要先做手术，肿瘤切除加淋巴清扫。术后要进行放射治疗或者同步放化疗。经过综合治疗，应该是可以治愈的。",
+        "to_memory": [
+          "history: 医生建议喉癌先行手术治疗（肿瘤切除+颈部淋巴清扫），术后行放射治疗或同步放化疗；综合治疗后预计可治愈"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "752f9864-8e4e-4240-93e2-6e7d3001c6c6",
+              "content": "约1个月前发现右侧颈部出现较大肿块（“大疙瘩”）",
+              "timestamp": 1771465285.8026838,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "dfacca60-1c08-4f0f-bb17-316757ab2d7c",
+              "content": "医生初步诊断考虑喉癌（尚未确诊）",
+              "timestamp": 1771465285.802692,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "270cc6ac-0881-4440-b70c-a2b0ca863b2f",
+              "content": "医生建议喉癌先行手术治疗（肿瘤切除+颈部淋巴清扫），术后行放射治疗或同步放化疗；综合治疗后预计可治愈",
+              "timestamp": 1771465290.557575,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在本次对话中自述颈部出现异常肿块的具体部位在身体哪一侧？该信息与后续就诊决策相关，需核对是否记录一致。",
+          "answer": "右侧颈部（脖子右边）。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "dfacca60-1c08-4f0f-bb17-316757ab2d7c"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "752f9864-8e4e-4240-93e2-6e7d3001c6c6"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "dfacca60-1c08-4f0f-bb17-316757ab2d7c",
+              "content": "医生初步诊断考虑喉癌（尚未确诊）",
+              "timestamp": 1771465285.802692,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "270cc6ac-0881-4440-b70c-a2b0ca863b2f",
+              "content": "医生建议喉癌先行手术治疗（肿瘤切除+颈部淋巴清扫），术后行放射治疗或同步放化疗；综合治疗后预计可治愈",
+              "timestamp": 1771465290.557575,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "髋关节脱位，先天性髋关节半脱位，18个月，女儿，路不会走/。",
+        "to_memory": [
+          "identity: 患者为女性，18个月（女儿）",
+          "history: 先天性髋关节半脱位/髋关节脱位",
+          "working: 目前不会走路"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d95afdfd-7a08-45e6-a699-1496335e37cf",
+              "content": "目前不会走路",
+              "timestamp": 1771465295.3780994,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "f942334c-9d92-4692-a3a4-c2839ea8474e",
+              "content": "患者为女性，18个月（女儿）",
+              "timestamp": 1771465295.3780847,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "dfacca60-1c08-4f0f-bb17-316757ab2d7c",
+              "content": "医生初步诊断考虑喉癌（尚未确诊）",
+              "timestamp": 1771465285.802692,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "270cc6ac-0881-4440-b70c-a2b0ca863b2f",
+              "content": "医生建议喉癌先行手术治疗（肿瘤切除+颈部淋巴清扫），术后行放射治疗或同步放化疗；综合治疗后预计可治愈",
+              "timestamp": 1771465290.557575,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "747121db-1db6-4525-8bfe-c297361b29de",
+              "content": "先天性髋关节半脱位/髋关节脱位",
+              "timestamp": 1771465295.3780947,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "关于最后一次提到的那位小患者：其当前功能发育情况与该诊断通常需要重点评估的运动能力是否存在需要警惕的不一致？请指出患者当时具体提到的功能表现。",
+          "answer": "患者目前不会走路。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "f942334c-9d92-4692-a3a4-c2839ea8474e"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "d95afdfd-7a08-45e6-a699-1496335e37cf"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可以保守治疗。",
+        "to_memory": [
+          "history: 医生建议（针对18个月女童先天性髋关节半脱位/脱位）：可以保守治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d95afdfd-7a08-45e6-a699-1496335e37cf",
+              "content": "目前不会走路",
+              "timestamp": 1771465295.3780994,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "f942334c-9d92-4692-a3a4-c2839ea8474e",
+              "content": "患者为女性，18个月（女儿）",
+              "timestamp": 1771465295.3780847,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "dfacca60-1c08-4f0f-bb17-316757ab2d7c",
+              "content": "医生初步诊断考虑喉癌（尚未确诊）",
+              "timestamp": 1771465285.802692,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "270cc6ac-0881-4440-b70c-a2b0ca863b2f",
+              "content": "医生建议喉癌先行手术治疗（肿瘤切除+颈部淋巴清扫），术后行放射治疗或同步放化疗；综合治疗后预计可治愈",
+              "timestamp": 1771465290.557575,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "747121db-1db6-4525-8bfe-c297361b29de",
+              "content": "先天性髋关节半脱位/髋关节脱位",
+              "timestamp": 1771465295.3780947,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d6eed472-6e73-4c9f-8dc1-fcd7b8430d1b",
+              "content": "医生建议：针对18个月女童先天性髋关节半脱位/脱位，可考虑保守治疗",
+              "timestamp": 1771465300.9690342,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者就诊时提到孩子的主要骨科问题是什么？",
+          "answer": "先天性髋关节半脱位/髋关节脱位",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "747121db-1db6-4525-8bfe-c297361b29de"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f942334c-9d92-4692-a3a4-c2839ea8474e",
+              "content": "患者为女性，18个月（女儿）",
+              "timestamp": 1771465295.3780847,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "dfacca60-1c08-4f0f-bb17-316757ab2d7c",
+              "content": "医生初步诊断考虑喉癌（尚未确诊）",
+              "timestamp": 1771465285.802692,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "270cc6ac-0881-4440-b70c-a2b0ca863b2f",
+              "content": "医生建议喉癌先行手术治疗（肿瘤切除+颈部淋巴清扫），术后行放射治疗或同步放化疗；综合治疗后预计可治愈",
+              "timestamp": 1771465290.557575,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "747121db-1db6-4525-8bfe-c297361b29de",
+              "content": "先天性髋关节半脱位/髋关节脱位",
+              "timestamp": 1771465295.3780947,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d6eed472-6e73-4c9f-8dc1-fcd7b8430d1b",
+              "content": "医生建议：针对18个月女童先天性髋关节半脱位/脱位，可考虑保守治疗",
+              "timestamp": 1771465300.9690342,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "耳聋，4岁男孩，先天性耳聋。",
+        "to_memory": [
+          "identity: 患者男，4岁",
+          "history: 先天性耳聋"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f942334c-9d92-4692-a3a4-c2839ea8474e",
+              "content": "患者男，4岁",
+              "timestamp": 1771465295.3780847,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "dfacca60-1c08-4f0f-bb17-316757ab2d7c",
+              "content": "医生初步诊断考虑喉癌（尚未确诊）",
+              "timestamp": 1771465285.802692,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "270cc6ac-0881-4440-b70c-a2b0ca863b2f",
+              "content": "医生建议喉癌先行手术治疗（肿瘤切除+颈部淋巴清扫），术后行放射治疗或同步放化疗；综合治疗后预计可治愈",
+              "timestamp": 1771465290.557575,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "747121db-1db6-4525-8bfe-c297361b29de",
+              "content": "先天性髋关节半脱位/髋关节脱位",
+              "timestamp": 1771465295.3780947,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d6eed472-6e73-4c9f-8dc1-fcd7b8430d1b",
+              "content": "医生建议：针对18个月女童先天性髋关节半脱位/脱位，可考虑保守治疗",
+              "timestamp": 1771465300.9690342,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a7a5ecd1-37df-4b9d-95a9-5c429c4b3839",
+              "content": "先天性耳聋",
+              "timestamp": 1771465305.1736152,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者最初因颈部肿块就诊时与后续被提及的另一位听力问题患儿：医生当时提出的后续治疗路径中，除了先进行的关键处置外，还计划在之后追加哪类治疗手段？",
+          "answer": "术后进行放射治疗或同步放化疗（综合治疗后预计可治愈）。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "270cc6ac-0881-4440-b70c-a2b0ca863b2f",
+                "a7a5ecd1-37df-4b9d-95a9-5c429c4b3839"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            5,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "希望我的咨询能给你提供一些帮助和便利！因为网上咨询互相沟通有限，建议来诊！温馨提示：可以看看我的科普文章，有利于您及家人更好地理解疾病及治疗！",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f942334c-9d92-4692-a3a4-c2839ea8474e",
+              "content": "患者男，4岁",
+              "timestamp": 1771465295.3780847,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "dfacca60-1c08-4f0f-bb17-316757ab2d7c",
+              "content": "医生初步诊断考虑喉癌（尚未确诊）",
+              "timestamp": 1771465285.802692,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "270cc6ac-0881-4440-b70c-a2b0ca863b2f",
+              "content": "医生建议喉癌先行手术治疗（肿瘤切除+颈部淋巴清扫），术后行放射治疗或同步放化疗；综合治疗后预计可治愈",
+              "timestamp": 1771465290.557575,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "747121db-1db6-4525-8bfe-c297361b29de",
+              "content": "先天性髋关节半脱位/髋关节脱位",
+              "timestamp": 1771465295.3780947,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d6eed472-6e73-4c9f-8dc1-fcd7b8430d1b",
+              "content": "医生建议：针对18个月女童先天性髋关节半脱位/脱位，可考虑保守治疗",
+              "timestamp": 1771465300.9690342,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a7a5ecd1-37df-4b9d-95a9-5c429c4b3839",
+              "content": "先天性耳聋",
+              "timestamp": 1771465305.1736152,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在这次对话里，先后出现了两位不同孩子的病例信息。请指出其中一位孩子被家长提到过的“出生时就存在的主要诊断”是什么，并说明把两位病例混为同一患者会带来什么信息冲突风险？",
+          "answer": "先天性耳聋",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "747121db-1db6-4525-8bfe-c297361b29de",
+                "a7a5ecd1-37df-4b9d-95a9-5c429c4b3839"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f942334c-9d92-4692-a3a4-c2839ea8474e",
+              "content": "患者男，4岁",
+              "timestamp": 1771465295.3780847,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "dfacca60-1c08-4f0f-bb17-316757ab2d7c",
+              "content": "医生初步诊断考虑喉癌（尚未确诊）",
+              "timestamp": 1771465285.802692,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "270cc6ac-0881-4440-b70c-a2b0ca863b2f",
+              "content": "医生建议喉癌先行手术治疗（肿瘤切除+颈部淋巴清扫），术后行放射治疗或同步放化疗；综合治疗后预计可治愈",
+              "timestamp": 1771465290.557575,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "747121db-1db6-4525-8bfe-c297361b29de",
+              "content": "先天性髋关节半脱位/髋关节脱位",
+              "timestamp": 1771465295.3780947,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d6eed472-6e73-4c9f-8dc1-fcd7b8430d1b",
+              "content": "医生建议：针对18个月女童先天性髋关节半脱位/脱位，可考虑保守治疗",
+              "timestamp": 1771465300.9690342,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a7a5ecd1-37df-4b9d-95a9-5c429c4b3839",
+              "content": "先天性耳聋",
+              "timestamp": 1771465305.1736152,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "个子不高，4年未长。",
+        "to_memory": [
+          "identity: 个子不高，4年未长（身高增长停滞）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f942334c-9d92-4692-a3a4-c2839ea8474e",
+              "content": "患者男，4岁",
+              "timestamp": 1771465295.3780847,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "dfacca60-1c08-4f0f-bb17-316757ab2d7c",
+              "content": "医生初步诊断考虑喉癌（尚未确诊）",
+              "timestamp": 1771465285.802692,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "270cc6ac-0881-4440-b70c-a2b0ca863b2f",
+              "content": "医生建议喉癌先行手术治疗（肿瘤切除+颈部淋巴清扫），术后行放射治疗或同步放化疗；综合治疗后预计可治愈",
+              "timestamp": 1771465290.557575,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "747121db-1db6-4525-8bfe-c297361b29de",
+              "content": "先天性髋关节半脱位/髋关节脱位",
+              "timestamp": 1771465295.3780947,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d6eed472-6e73-4c9f-8dc1-fcd7b8430d1b",
+              "content": "医生建议：针对18个月女童先天性髋关节半脱位/脱位，可考虑保守治疗",
+              "timestamp": 1771465300.9690342,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a7a5ecd1-37df-4b9d-95a9-5c429c4b3839",
+              "content": "先天性耳聋",
+              "timestamp": 1771465305.1736152,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "8e524666-7d74-4afa-8bae-82d5db188f69",
+              "content": "身高偏矮，近4年身高增长停滞（4年未长高）",
+              "timestamp": 1771465314.0842316,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "医生在之前的初步诊断中主要考虑的疾病是什么？",
+          "answer": "喉癌（初步考虑，尚未确诊）",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "dfacca60-1c08-4f0f-bb17-316757ab2d7c"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            9
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可以先测个骨龄，看骨骺线是否闭合。如果闭合，生长激素也是无效的。",
+        "to_memory": [
+          "history: 医生建议先测骨龄评估骨骺线是否闭合；若骨骺线已闭合，则生长激素治疗无效"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f942334c-9d92-4692-a3a4-c2839ea8474e",
+              "content": "患者男，4岁",
+              "timestamp": 1771465295.3780847,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "dfacca60-1c08-4f0f-bb17-316757ab2d7c",
+              "content": "医生初步诊断考虑喉癌（尚未确诊）",
+              "timestamp": 1771465285.802692,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "270cc6ac-0881-4440-b70c-a2b0ca863b2f",
+              "content": "医生建议喉癌先行手术治疗（肿瘤切除+颈部淋巴清扫），术后行放射治疗或同步放化疗；综合治疗后预计可治愈",
+              "timestamp": 1771465290.557575,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "747121db-1db6-4525-8bfe-c297361b29de",
+              "content": "先天性髋关节半脱位/髋关节脱位",
+              "timestamp": 1771465295.3780947,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d6eed472-6e73-4c9f-8dc1-fcd7b8430d1b",
+              "content": "医生建议：针对18个月女童先天性髋关节半脱位/脱位，可考虑保守治疗",
+              "timestamp": 1771465300.9690342,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a7a5ecd1-37df-4b9d-95a9-5c429c4b3839",
+              "content": "先天性耳聋",
+              "timestamp": 1771465305.1736152,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "8e524666-7d74-4afa-8bae-82d5db188f69",
+              "content": "身高偏矮，近4年身高增长停滞（4年未长高）",
+              "timestamp": 1771465314.0842316,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "8bd66512-8427-4ef4-b541-afcb639c780e",
+              "content": "医生建议先测骨龄评估骨骺线是否闭合；若骨骺线已闭合，则生长激素治疗无效",
+              "timestamp": 1771465319.374122,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者家长在本次咨询中描述“4年未长”时，患者当时的年龄是多少？",
+          "answer": "4岁",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "f942334c-9d92-4692-a3a4-c2839ea8474e"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            7
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f942334c-9d92-4692-a3a4-c2839ea8474e",
+              "content": "患者男，4岁",
+              "timestamp": 1771465295.3780847,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "dfacca60-1c08-4f0f-bb17-316757ab2d7c",
+              "content": "医生初步诊断考虑喉癌（尚未确诊）",
+              "timestamp": 1771465285.802692,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "270cc6ac-0881-4440-b70c-a2b0ca863b2f",
+              "content": "医生建议喉癌先行手术治疗（肿瘤切除+颈部淋巴清扫），术后行放射治疗或同步放化疗；综合治疗后预计可治愈",
+              "timestamp": 1771465290.557575,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "747121db-1db6-4525-8bfe-c297361b29de",
+              "content": "先天性髋关节半脱位/髋关节脱位",
+              "timestamp": 1771465295.3780947,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d6eed472-6e73-4c9f-8dc1-fcd7b8430d1b",
+              "content": "医生建议：针对18个月女童先天性髋关节半脱位/脱位，可考虑保守治疗",
+              "timestamp": 1771465300.9690342,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a7a5ecd1-37df-4b9d-95a9-5c429c4b3839",
+              "content": "先天性耳聋",
+              "timestamp": 1771465305.1736152,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "8e524666-7d74-4afa-8bae-82d5db188f69",
+              "content": "身高偏矮，近4年身高增长停滞（4年未长高）",
+              "timestamp": 1771465314.0842316,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "8bd66512-8427-4ef4-b541-afcb639c780e",
+              "content": "医生建议先测骨龄评估骨骺线是否闭合；若骨骺线已闭合，则生长激素治疗无效",
+              "timestamp": 1771465319.374122,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "本人的手在医院被玻璃药瓶划伤了，手在医院被玻璃药瓶划伤了，当时出血很多止不住，医生说是血管破了，经过一番处理还是止血了。",
+        "to_memory": [
+          "working: 手在医院被玻璃药瓶划伤，出血多且一度止不住，医生称血管破裂，处理后已止血"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a315ecaf-75ff-481b-9960-f167a7180500",
+              "content": "手在医院被玻璃药瓶划伤，出血多且一度止不住；医生称血管破裂，处理后已止血",
+              "timestamp": 1771465325.2950344,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "identity": [
+            {
+              "id": "f942334c-9d92-4692-a3a4-c2839ea8474e",
+              "content": "患者男，4岁",
+              "timestamp": 1771465295.3780847,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "dfacca60-1c08-4f0f-bb17-316757ab2d7c",
+              "content": "医生初步诊断考虑喉癌（尚未确诊）",
+              "timestamp": 1771465285.802692,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "270cc6ac-0881-4440-b70c-a2b0ca863b2f",
+              "content": "医生建议喉癌先行手术治疗（肿瘤切除+颈部淋巴清扫），术后行放射治疗或同步放化疗；综合治疗后预计可治愈",
+              "timestamp": 1771465290.557575,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "747121db-1db6-4525-8bfe-c297361b29de",
+              "content": "先天性髋关节半脱位/髋关节脱位",
+              "timestamp": 1771465295.3780947,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d6eed472-6e73-4c9f-8dc1-fcd7b8430d1b",
+              "content": "医生建议：针对18个月女童先天性髋关节半脱位/脱位，可考虑保守治疗",
+              "timestamp": 1771465300.9690342,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a7a5ecd1-37df-4b9d-95a9-5c429c4b3839",
+              "content": "先天性耳聋",
+              "timestamp": 1771465305.1736152,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "8e524666-7d74-4afa-8bae-82d5db188f69",
+              "content": "身高偏矮，近4年身高增长停滞（4年未长高）",
+              "timestamp": 1771465314.0842316,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "8bd66512-8427-4ef4-b541-afcb639c780e",
+              "content": "医生建议先测骨龄评估骨骺线是否闭合；若骨骺线已闭合，则生长激素治疗无效",
+              "timestamp": 1771465319.374122,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "如果有玻璃在里面的话可能会导致伤口愈合慢或者炎症.",
+        "to_memory": [
+          "working: 医生提示若伤口内有玻璃异物，可能导致伤口愈合慢或引发炎症"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a315ecaf-75ff-481b-9960-f167a7180500",
+              "content": "手在医院被玻璃药瓶划伤，出血多且一度止不住；医生称血管破裂，处理后已止血。医生提示若伤口内有玻璃异物，可能导致伤口愈合慢或引发炎症",
+              "timestamp": 1771465325.2950344,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "identity": [
+            {
+              "id": "f942334c-9d92-4692-a3a4-c2839ea8474e",
+              "content": "患者男，4岁",
+              "timestamp": 1771465295.3780847,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "dfacca60-1c08-4f0f-bb17-316757ab2d7c",
+              "content": "医生初步诊断考虑喉癌（尚未确诊）",
+              "timestamp": 1771465285.802692,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "270cc6ac-0881-4440-b70c-a2b0ca863b2f",
+              "content": "医生建议喉癌先行手术治疗（肿瘤切除+颈部淋巴清扫），术后行放射治疗或同步放化疗；综合治疗后预计可治愈",
+              "timestamp": 1771465290.557575,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "747121db-1db6-4525-8bfe-c297361b29de",
+              "content": "先天性髋关节半脱位/髋关节脱位",
+              "timestamp": 1771465295.3780947,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d6eed472-6e73-4c9f-8dc1-fcd7b8430d1b",
+              "content": "医生建议：针对18个月女童先天性髋关节半脱位/脱位，可考虑保守治疗",
+              "timestamp": 1771465300.9690342,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "a7a5ecd1-37df-4b9d-95a9-5c429c4b3839",
+              "content": "先天性耳聋",
+              "timestamp": 1771465305.1736152,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "8e524666-7d74-4afa-8bae-82d5db188f69",
+              "content": "身高偏矮，近4年身高增长停滞（4年未长高）",
+              "timestamp": 1771465314.0842316,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "8bd66512-8427-4ef4-b541-afcb639c780e",
+              "content": "医生建议先测骨龄评估骨骺线是否闭合；若骨骺线已闭合，则生长激素治疗无效",
+              "timestamp": 1771465319.374122,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "complex_treatment",
+    "scenario_name": "复杂疾病诊疗",
+    "session_count": 6,
+    "group_key": "综合科"
+  }
+}

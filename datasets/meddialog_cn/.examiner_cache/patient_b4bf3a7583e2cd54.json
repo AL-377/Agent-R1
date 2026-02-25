@@ -1,0 +1,4396 @@
+{
+  "patient_id": "cfb49495b2cd",
+  "messages": [
+    {
+      "user": {
+        "content": "多汗，宝宝多汗，小脚丫冰凉，多汗。",
+        "to_memory": [
+          "working: 主诉/症状：宝宝多汗，伴小脚丫冰凉（反复描述多汗）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "25638c9a-c291-4b6f-9c9c-c7cbc2895146",
+              "content": "主诉/症状：宝宝多汗，伴小脚丫冰凉（反复描述多汗）",
+              "timestamp": 1771461602.5723858,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者这次咨询中主要提到的症状有哪些？",
+          "answer": "宝宝多汗，伴小脚丫冰凉。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "25638c9a-c291-4b6f-9c9c-c7cbc2895146"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "是气虚，可中药治疗。",
+        "to_memory": [
+          "history: 医生判断为气虚，建议可用中药治疗",
+          "working: 患者（宝宝）主诉多汗，小脚丫冰凉"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "25638c9a-c291-4b6f-9c9c-c7cbc2895146",
+              "content": "主诉/症状：宝宝多汗，伴小脚丫冰凉（反复描述多汗）",
+              "timestamp": 1771461602.5723858,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者这次带孩子来咨询时，主要提到的症状有哪些？",
+          "answer": "宝宝多汗，伴小脚丫冰凉",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "25638c9a-c291-4b6f-9c9c-c7cbc2895146"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "有药店可以直接买到的中药吗，宝宝马上5个月了可以每次打一个苹果兑水给他喝汁可以吗。",
+        "to_memory": [
+          "identity: 患者为婴儿，年龄将满5个月",
+          "working: 咨询是否有药店可直接购买的中药用于宝宝多汗/气虚相关问题",
+          "working: 询问婴儿是否可以每次打一个苹果兑水给他喝苹果汁"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "25638c9a-c291-4b6f-9c9c-c7cbc2895146",
+              "content": "主诉/症状：宝宝多汗，伴小脚丫冰凉（反复描述多汗）",
+              "timestamp": 1771461602.5723858,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "803f9af0-2df2-49df-a6a9-4df4ed2c1be0",
+              "content": "家长咨询是否有药店可直接购买的中药用于宝宝多汗/气虚相关问题",
+              "timestamp": 1771461615.1587093,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "8c1cecb6-069a-47ef-8081-aabb85425a12",
+              "content": "家长询问婴儿是否可以每次打一个苹果兑水给他喝苹果汁",
+              "timestamp": 1771461615.1587136,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者为婴儿，年龄将满5个月",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "结合患者在对话中提到的家庭处理方式与其年龄阶段，医生在安全性上最需要重点核对的风险点是什么？",
+          "answer": "患者为婴儿，年龄将满5个月；家长询问给宝宝打苹果兑水喝汁的做法需做婴儿喂养安全性核对。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "25638c9a-c291-4b6f-9c9c-c7cbc2895146"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "3f50856f-4c0f-4d80-a2fe-e3511ae4af64"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            2,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "药店只能买中成药，如黄芪颗粒，玉屏风冲剂。",
+        "to_memory": [
+          "history: 医生建议药店可购买中成药：黄芪颗粒、玉屏风冲剂"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "25638c9a-c291-4b6f-9c9c-c7cbc2895146",
+              "content": "主诉/症状：宝宝多汗，伴小脚丫冰凉（反复描述多汗）",
+              "timestamp": 1771461602.5723858,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "803f9af0-2df2-49df-a6a9-4df4ed2c1be0",
+              "content": "家长咨询是否有药店可直接购买的中药用于宝宝多汗/气虚相关问题",
+              "timestamp": 1771461615.1587093,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "8c1cecb6-069a-47ef-8081-aabb85425a12",
+              "content": "家长询问婴儿是否可以每次打一个苹果兑水给他喝苹果汁",
+              "timestamp": 1771461615.1587136,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者为婴儿，年龄将满5个月",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+              "content": "医生建议药店可购买的中成药：黄芪颗粒、玉屏风冲剂",
+              "timestamp": 1771461620.6826038,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "本次咨询中，家长描述宝宝主要有哪些不适表现？",
+          "answer": "多汗，伴小脚丫冰凉",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "25638c9a-c291-4b6f-9c9c-c7cbc2895146"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者为婴儿，年龄将满5个月",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+              "content": "医生建议药店可购买的中成药：黄芪颗粒、玉屏风冲剂",
+              "timestamp": 1771461620.6826038,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "风湿抗“O”500，到最近去上海医院看之前我已经疼痛近8个月，靠近尾骨偏左，打喷嚏咳嗽都会疼，早期的时候稍微弯下腰也会疼，不能用力做事，做了下盆骨的CT，磁共振，拍了片，都正常，后来验了血，血沉半年前13算正常，这次是26稍微高了些，正常是20，然后抗“O”有500，正常是0~200，然后王锋医生说是风湿，开了祖师麻片和阿莫西林克拉维酸钾片，做了皮试，能用青霉素，但是因为我是外地的，配了药后就回来了，早上吃了早饭吃了药之后，胃难受了一天，我想问下汪医生，是不是吃过几次后，胃难受的这种不良反应会消失呢，我该继续吃吗？\n。",
+        "to_memory": [
+          "history: 近8个月尾骨左侧附近疼痛，咳嗽/打喷嚏及早期弯腰可诱发加重，影响用力做事；盆骨CT、磁共振及X片检查结果均正常",
+          "history: 化验结果：血沉半年前13mm/h（正常），本次26mm/h（略高，参考正常≤20）；风湿抗“O”(ASO) 500（参考正常0-200）",
+          "history: 上海就诊医生（王锋）判断为风湿；开具祖师麻片、阿莫西林克拉维酸钾片；已做青霉素皮试，可用青霉素",
+          "history: 服药后（早饭后）出现胃部不适持续一天；咨询该不良反应是否会随服用次数减少、是否应继续用药"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者为成人（存在近8个月尾骨附近疼痛并在上海就诊），非将满5个月婴儿；具体年龄性别未提供",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+              "content": "医生建议药店可购买的中成药：黄芪颗粒、玉屏风冲剂",
+              "timestamp": 1771461620.6826038,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c0e327c2-3c89-44fa-a013-e0fe89920ea8",
+              "content": "近8个月尾骨左侧附近疼痛，咳嗽/打喷嚏及早期弯腰可诱发加重，影响用力做事；盆骨CT、磁共振及X片检查均正常",
+              "timestamp": 1771461631.8309386,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f07e9ee1-4ff7-44dc-bb1f-4fa82d3ef4f8",
+              "content": "化验：血沉ESR半年前13mm/h（正常），本次26mm/h（略高，参考≤20）；风湿抗O（ASO）500（参考0-200）",
+              "timestamp": 1771461631.8309517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "60812587-2606-4706-921c-13c8cf26ae5c",
+              "content": "上海就诊医生王锋判断为风湿；开具祖师麻片、阿莫西林克拉维酸钾片；已做青霉素皮试可用青霉素",
+              "timestamp": 1771461631.8309565,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "108eae68-9ed1-48f6-b506-953c97cb220f",
+              "content": "服药后（早饭后）出现胃部不适持续一天；咨询该不良反应是否会随服用次数减少、是否应继续用药",
+              "timestamp": 1771461631.830961,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "在关于宝宝多汗的那次咨询里，医生提到药店能买到的两种中成药分别是什么？",
+          "answer": "黄芪颗粒、玉屏风冲剂",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+                "108eae68-9ed1-48f6-b506-953c97cb220f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            2,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "从你的描述看，目前的诊断并不清楚。最好做一次肌腱端超声和HLAB7检查，以排外是否有强直性脊柱炎。如有空可来我门诊看看。",
+        "to_memory": [
+          "history: 医生建议做肌腱端超声检查和HLAB7检查，以排除强直性脊柱炎（诊断尚不明确）",
+          "history: 当前诊断不清楚，需进一步检查；医生建议如有空可到门诊就诊"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者为成人（存在近8个月尾骨附近疼痛并在上海就诊），非将满5个月婴儿；具体年龄性别未提供",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+              "content": "医生建议药店可购买的中成药：黄芪颗粒、玉屏风冲剂",
+              "timestamp": 1771461620.6826038,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c0e327c2-3c89-44fa-a013-e0fe89920ea8",
+              "content": "近8个月尾骨左侧附近疼痛，咳嗽/打喷嚏及早期弯腰可诱发加重，影响用力做事；盆骨CT、磁共振及X片检查均正常",
+              "timestamp": 1771461631.8309386,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f07e9ee1-4ff7-44dc-bb1f-4fa82d3ef4f8",
+              "content": "化验：血沉ESR半年前13mm/h（正常），本次26mm/h（略高，参考≤20）；风湿抗O（ASO）500（参考0-200）",
+              "timestamp": 1771461631.8309517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "60812587-2606-4706-921c-13c8cf26ae5c",
+              "content": "上海就诊医生王锋判断为风湿；开具祖师麻片、阿莫西林克拉维酸钾片；已做青霉素皮试可用青霉素",
+              "timestamp": 1771461631.8309565,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "108eae68-9ed1-48f6-b506-953c97cb220f",
+              "content": "服药后（早饭后）出现胃部不适持续一天；咨询该不良反应是否会随服用次数减少、是否应继续用药",
+              "timestamp": 1771461631.830961,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "19a17e75-3fca-45a3-972d-4546823aa1a4",
+              "content": "医生建议做肌腱端超声检查和HLAB7检查，以排除强直性脊柱炎（目前诊断尚不明确）",
+              "timestamp": 1771461639.2361605,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "38fd3e6b-5b20-468f-8a77-75d9a796d7ae",
+              "content": "当前诊断不清楚，需进一步检查；医生建议如有空可到门诊就诊",
+              "timestamp": 1771461639.236169,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者半年前那次化验与本次化验，哪一项炎症相关指标出现了升高？两次的结果分别是多少？",
+          "answer": "血沉（ESR）升高：半年前13mm/h，本次26mm/h（参考≤20）。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "f07e9ee1-4ff7-44dc-bb1f-4fa82d3ef4f8",
+                "108eae68-9ed1-48f6-b506-953c97cb220f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者为成人（存在近8个月尾骨附近疼痛并在上海就诊），非将满5个月婴儿；具体年龄性别未提供",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+              "content": "医生建议药店可购买的中成药：黄芪颗粒、玉屏风冲剂",
+              "timestamp": 1771461620.6826038,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c0e327c2-3c89-44fa-a013-e0fe89920ea8",
+              "content": "近8个月尾骨左侧附近疼痛，咳嗽/打喷嚏及早期弯腰可诱发加重，影响用力做事；盆骨CT、磁共振及X片检查均正常",
+              "timestamp": 1771461631.8309386,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f07e9ee1-4ff7-44dc-bb1f-4fa82d3ef4f8",
+              "content": "化验：血沉ESR半年前13mm/h（正常），本次26mm/h（略高，参考≤20）；风湿抗O（ASO）500（参考0-200）",
+              "timestamp": 1771461631.8309517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "60812587-2606-4706-921c-13c8cf26ae5c",
+              "content": "上海就诊医生王锋判断为风湿；开具祖师麻片、阿莫西林克拉维酸钾片；已做青霉素皮试可用青霉素",
+              "timestamp": 1771461631.8309565,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "108eae68-9ed1-48f6-b506-953c97cb220f",
+              "content": "服药后（早饭后）出现胃部不适持续一天；咨询该不良反应是否会随服用次数减少、是否应继续用药",
+              "timestamp": 1771461631.830961,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "19a17e75-3fca-45a3-972d-4546823aa1a4",
+              "content": "医生建议做肌腱端超声检查和HLAB7检查，以排除强直性脊柱炎（目前诊断尚不明确）",
+              "timestamp": 1771461639.2361605,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "38fd3e6b-5b20-468f-8a77-75d9a796d7ae",
+              "content": "当前诊断不清楚，需进一步检查；医生建议如有空可到门诊就诊",
+              "timestamp": 1771461639.236169,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "心肌梗死，患者男34岁5天前患急性心梗住院治疗缓解后出院今天早上经化验结果：LDH:266HBDH:296AST:52CK:492CK-MD:40自觉症状不适胸闷乏力出冷汗等请问专家应怎样治疗？\n。",
+        "to_memory": [
+          "identity: 患者男，34岁",
+          "history: 5天前急性心肌梗死住院治疗，缓解后出院",
+          "history: 今日化验：LDH 266；HBDH 296；AST 52；CK 492；CK-MB 40",
+          "working: 出院后今天出现不适：胸闷、乏力、出冷汗；咨询应如何治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d739de34-71f6-4486-ad51-b03f802bbe28",
+              "content": "出院后今天出现胸闷、乏力、出冷汗等不适，咨询应如何治疗",
+              "timestamp": 1771461646.5512857,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者男，34岁（成人）",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+              "content": "医生建议药店可购买的中成药：黄芪颗粒、玉屏风冲剂",
+              "timestamp": 1771461620.6826038,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c0e327c2-3c89-44fa-a013-e0fe89920ea8",
+              "content": "近8个月尾骨左侧附近疼痛，咳嗽/打喷嚏及早期弯腰可诱发加重，影响用力做事；盆骨CT、磁共振及X片检查均正常",
+              "timestamp": 1771461631.8309386,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f07e9ee1-4ff7-44dc-bb1f-4fa82d3ef4f8",
+              "content": "化验：血沉ESR半年前13mm/h（正常），本次26mm/h（略高，参考≤20）；风湿抗O（ASO）500（参考0-200）",
+              "timestamp": 1771461631.8309517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "60812587-2606-4706-921c-13c8cf26ae5c",
+              "content": "上海就诊医生王锋判断为风湿；开具祖师麻片、阿莫西林克拉维酸钾片；已做青霉素皮试可用青霉素",
+              "timestamp": 1771461631.8309565,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "108eae68-9ed1-48f6-b506-953c97cb220f",
+              "content": "服药后（早饭后）出现胃部不适持续一天；咨询该不良反应是否会随服用次数减少、是否应继续用药",
+              "timestamp": 1771461631.830961,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "19a17e75-3fca-45a3-972d-4546823aa1a4",
+              "content": "医生建议做肌腱端超声检查和HLAB7检查，以排除强直性脊柱炎（目前诊断尚不明确）",
+              "timestamp": 1771461639.2361605,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "38fd3e6b-5b20-468f-8a77-75d9a796d7ae",
+              "content": "当前诊断不清楚，需进一步检查；医生建议如有空可到门诊就诊",
+              "timestamp": 1771461639.236169,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d4c3c586-0d62-4a2e-bacc-36a365dbbd32",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771461646.5512729,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ba349351-aab7-4a1d-9c86-e6c7cb1a7ff2",
+              "content": "今日化验：LDH 266；HBDH 296；AST 52；CK 492；CK-MB 40",
+              "timestamp": 1771461646.551282,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你好！心肌酶谱还很高！当时的心肌酶谱是什么情况，能吃上了吗？现在吃的什么药？血压血糖血脂正常吗？",
+        "to_memory": [
+          "history: 医生提示心肌酶谱仍偏高，追问急性心梗住院时心肌酶谱情况、目前是否能进食、正在服用的药物，以及血压/血糖/血脂是否正常"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d739de34-71f6-4486-ad51-b03f802bbe28",
+              "content": "出院后今天出现胸闷、乏力、出冷汗等不适，咨询应如何治疗",
+              "timestamp": 1771461646.5512857,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者男，34岁（成人）",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+              "content": "医生建议药店可购买的中成药：黄芪颗粒、玉屏风冲剂",
+              "timestamp": 1771461620.6826038,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c0e327c2-3c89-44fa-a013-e0fe89920ea8",
+              "content": "近8个月尾骨左侧附近疼痛，咳嗽/打喷嚏及早期弯腰可诱发加重，影响用力做事；盆骨CT、磁共振及X片检查均正常",
+              "timestamp": 1771461631.8309386,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f07e9ee1-4ff7-44dc-bb1f-4fa82d3ef4f8",
+              "content": "化验：血沉ESR半年前13mm/h（正常），本次26mm/h（略高，参考≤20）；风湿抗O（ASO）500（参考0-200）",
+              "timestamp": 1771461631.8309517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "60812587-2606-4706-921c-13c8cf26ae5c",
+              "content": "上海就诊医生王锋判断为风湿；开具祖师麻片、阿莫西林克拉维酸钾片；已做青霉素皮试可用青霉素",
+              "timestamp": 1771461631.8309565,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "108eae68-9ed1-48f6-b506-953c97cb220f",
+              "content": "服药后（早饭后）出现胃部不适持续一天；咨询该不良反应是否会随服用次数减少、是否应继续用药",
+              "timestamp": 1771461631.830961,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "19a17e75-3fca-45a3-972d-4546823aa1a4",
+              "content": "医生建议做肌腱端超声检查和HLAB7检查，以排除强直性脊柱炎（目前诊断尚不明确）",
+              "timestamp": 1771461639.2361605,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "38fd3e6b-5b20-468f-8a77-75d9a796d7ae",
+              "content": "当前诊断不清楚，需进一步检查；医生建议如有空可到门诊就诊",
+              "timestamp": 1771461639.236169,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d4c3c586-0d62-4a2e-bacc-36a365dbbd32",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771461646.5512729,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ba349351-aab7-4a1d-9c86-e6c7cb1a7ff2",
+              "content": "今日化验：LDH 266；HBDH 296；AST 52；CK 492；CK-MB 40",
+              "timestamp": 1771461646.551282,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "887213be-f748-405d-b130-59e46f4fe9b9",
+              "content": "医生提示心肌酶谱仍偏高，建议追问：急性心梗住院时心肌酶谱情况、目前是否能进食、正在服用的药物，以及血压/血糖/血脂是否正常",
+              "timestamp": 1771461651.823885,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "发病时心肌酶谱虽高但比现在低，使用丹参注射液，马来酸注射液，口服硝酸甘油和丹参滴丸发病时血压低血糖正常血脂高。",
+        "to_memory": [
+          "identity: 患者男，34岁；血脂高（高脂血症）",
+          "history: 5天前急性心肌梗死住院治疗后出院；发病时血压低、血糖正常；本次化验提示心肌酶谱较高且较发病时更高；用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+          "working: 目前自述胸闷、乏力、出冷汗；询问当前应如何治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d739de34-71f6-4486-ad51-b03f802bbe28",
+              "content": "出院后今天出现胸闷、乏力、出冷汗等不适，咨询应如何治疗",
+              "timestamp": 1771461646.5512857,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者男，34岁（成人）",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "1d209464-a337-4a3f-8b6e-0714ff7de096",
+              "content": "患者有高脂血症（血脂高）",
+              "timestamp": 1771461658.537717,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+              "content": "医生建议药店可购买的中成药：黄芪颗粒、玉屏风冲剂",
+              "timestamp": 1771461620.6826038,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c0e327c2-3c89-44fa-a013-e0fe89920ea8",
+              "content": "近8个月尾骨左侧附近疼痛，咳嗽/打喷嚏及早期弯腰可诱发加重，影响用力做事；盆骨CT、磁共振及X片检查均正常",
+              "timestamp": 1771461631.8309386,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f07e9ee1-4ff7-44dc-bb1f-4fa82d3ef4f8",
+              "content": "化验：血沉ESR半年前13mm/h（正常），本次26mm/h（略高，参考≤20）；风湿抗O（ASO）500（参考0-200）",
+              "timestamp": 1771461631.8309517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "60812587-2606-4706-921c-13c8cf26ae5c",
+              "content": "上海就诊医生王锋判断为风湿；开具祖师麻片、阿莫西林克拉维酸钾片；已做青霉素皮试可用青霉素",
+              "timestamp": 1771461631.8309565,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "108eae68-9ed1-48f6-b506-953c97cb220f",
+              "content": "服药后（早饭后）出现胃部不适持续一天；咨询该不良反应是否会随服用次数减少、是否应继续用药",
+              "timestamp": 1771461631.830961,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "19a17e75-3fca-45a3-972d-4546823aa1a4",
+              "content": "医生建议做肌腱端超声检查和HLAB7检查，以排除强直性脊柱炎（目前诊断尚不明确）",
+              "timestamp": 1771461639.2361605,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "38fd3e6b-5b20-468f-8a77-75d9a796d7ae",
+              "content": "当前诊断不清楚，需进一步检查；医生建议如有空可到门诊就诊",
+              "timestamp": 1771461639.236169,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d4c3c586-0d62-4a2e-bacc-36a365dbbd32",
+              "content": "5天前急性心肌梗死住院治疗后出院；发病时血压低、血糖正常",
+              "timestamp": 1771461646.5512729,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ba349351-aab7-4a1d-9c86-e6c7cb1a7ff2",
+              "content": "今日化验：LDH 266；HBDH 296；AST 52；CK 492；CK-MB 40",
+              "timestamp": 1771461646.551282,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "887213be-f748-405d-b130-59e46f4fe9b9",
+              "content": "医生提示心肌酶谱仍偏高，建议追问：急性心梗住院时心肌酶谱情况、目前是否能进食、正在服用的药物，以及血压/血糖/血脂是否正常",
+              "timestamp": 1771461651.823885,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "c0ed1280-8c24-476a-a9c7-6aaca29e6eb5",
+              "content": "本次化验提示心肌酶谱较高，且较发病时更高",
+              "timestamp": 1771461658.5377316,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "fe301da7-4396-4daa-b4ec-34145ac8be82",
+              "content": "用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771461658.5377362,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者急性发作住院期间与出院后今天这次化验复查：心肌相关化验指标的整体变化趋势是什么？另外，出院后今天他出现了哪些不适症状促使其再次咨询？",
+          "answer": "本次化验提示心肌酶谱仍较高，且较发病时更高；出院后今天出现胸闷、乏力、出冷汗等不适。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "c0ed1280-8c24-476a-a9c7-6aaca29e6eb5"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "d739de34-71f6-4486-ad51-b03f802bbe28"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "症状是否也加重了？做了心肌肌钙蛋白定性检查了吗？都用了什么药，详细点告诉我！",
+        "to_memory": [
+          "identity: 患者男，34岁；血脂高；血糖正常；发病时血压低；青霉素皮试可用（无明确青霉素过敏）",
+          "history: 5天前急性心肌梗死住院治疗后缓解出院；今日心肌酶谱：LDH 266、HBDH 296、AST 52、CK 492、CK-MB 40；用药史：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+          "history: 出院后现有不适：胸闷、乏力、出冷汗；目前心肌酶仍高且患者称发病时心肌酶谱虽高但比现在低；医生追问：症状是否加重、是否做心肌肌钙蛋白定性检查、目前详细用药情况"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d739de34-71f6-4486-ad51-b03f802bbe28",
+              "content": "出院后今天出现胸闷、乏力、出冷汗等不适，咨询应如何治疗",
+              "timestamp": 1771461646.5512857,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者男，34岁（成人）",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "1d209464-a337-4a3f-8b6e-0714ff7de096",
+              "content": "患者有高脂血症（血脂高）",
+              "timestamp": 1771461658.537717,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "4c9773f9-99d0-495b-a7ea-2615e345123e",
+              "content": "患者无明确青霉素过敏史；青霉素皮试可用",
+              "timestamp": 1771461666.961683,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+              "content": "医生建议药店可购买的中成药：黄芪颗粒、玉屏风冲剂",
+              "timestamp": 1771461620.6826038,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c0e327c2-3c89-44fa-a013-e0fe89920ea8",
+              "content": "近8个月尾骨左侧附近疼痛，咳嗽/打喷嚏及早期弯腰可诱发加重，影响用力做事；盆骨CT、磁共振及X片检查均正常",
+              "timestamp": 1771461631.8309386,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f07e9ee1-4ff7-44dc-bb1f-4fa82d3ef4f8",
+              "content": "化验：血沉ESR半年前13mm/h（正常），本次26mm/h（略高，参考≤20）；风湿抗O（ASO）500（参考0-200）",
+              "timestamp": 1771461631.8309517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "60812587-2606-4706-921c-13c8cf26ae5c",
+              "content": "上海就诊医生王锋判断为风湿；开具祖师麻片、阿莫西林克拉维酸钾片；已做青霉素皮试可用青霉素",
+              "timestamp": 1771461631.8309565,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "108eae68-9ed1-48f6-b506-953c97cb220f",
+              "content": "服药后（早饭后）出现胃部不适持续一天；咨询该不良反应是否会随服用次数减少、是否应继续用药",
+              "timestamp": 1771461631.830961,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "19a17e75-3fca-45a3-972d-4546823aa1a4",
+              "content": "医生建议做肌腱端超声检查和HLAB7检查，以排除强直性脊柱炎（目前诊断尚不明确）",
+              "timestamp": 1771461639.2361605,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "38fd3e6b-5b20-468f-8a77-75d9a796d7ae",
+              "content": "当前诊断不清楚，需进一步检查；医生建议如有空可到门诊就诊",
+              "timestamp": 1771461639.236169,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d4c3c586-0d62-4a2e-bacc-36a365dbbd32",
+              "content": "5天前急性心肌梗死住院治疗后出院；发病时血压低、血糖正常",
+              "timestamp": 1771461646.5512729,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ba349351-aab7-4a1d-9c86-e6c7cb1a7ff2",
+              "content": "今日化验：LDH 266；HBDH 296；AST 52；CK 492；CK-MB 40",
+              "timestamp": 1771461646.551282,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "887213be-f748-405d-b130-59e46f4fe9b9",
+              "content": "医生提示心肌酶谱仍偏高，建议追问：急性心梗住院时心肌酶谱情况、目前是否能进食、正在服用的药物，以及血压/血糖/血脂是否正常",
+              "timestamp": 1771461651.823885,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "c0ed1280-8c24-476a-a9c7-6aaca29e6eb5",
+              "content": "本次化验提示心肌酶谱较高，且较发病时更高",
+              "timestamp": 1771461658.5377316,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "fe301da7-4396-4daa-b4ec-34145ac8be82",
+              "content": "用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771461658.5377362,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者出院后今天早上自觉有哪些不适表现？",
+          "answer": "胸闷、乏力、出冷汗等不适。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "d739de34-71f6-4486-ad51-b03f802bbe28"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            3
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "症状未见加重现在胸闷出虚汗未做心肌肌钙蛋白定性试验使用上述的药物当时住院时医生建议做心脏血管造影因家境不好未做。问鲜医生应怎样治疗比较好？谢谢！！！",
+        "to_memory": [
+          "identity: 患者男，34岁；血脂高",
+          "history: 5天前急性心肌梗死住院治疗后缓解出院；发病时血压低、血糖正常；今日化验心肌酶谱：LDH 266、HBDH 296、AST 52、CK 492、CK-MB 40；曾用药/正在用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸；住院时医生曾建议行心脏血管造影但未做",
+          "working: 目前症状未见加重，但仍有胸闷、乏力、出虚汗；未做心肌肌钙蛋白定性检查；询问下一步如何治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d739de34-71f6-4486-ad51-b03f802bbe28",
+              "content": "出院后（急性心肌梗死住院治疗后缓解出院）今天仍有胸闷、乏力、出虚汗等不适但未见加重；今日心肌酶谱：LDH 266、HBDH 296、AST 52、CK 492、CK-MB 40；未做心肌肌钙蛋白定性检查；询问下一步如何治疗",
+              "timestamp": 1771461646.5512857,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者男，34岁（成人）",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "1d209464-a337-4a3f-8b6e-0714ff7de096",
+              "content": "患者有高脂血症（血脂高）",
+              "timestamp": 1771461658.537717,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "4c9773f9-99d0-495b-a7ea-2615e345123e",
+              "content": "患者无明确青霉素过敏史；青霉素皮试可用",
+              "timestamp": 1771461666.961683,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+              "content": "医生建议药店可购买的中成药：黄芪颗粒、玉屏风冲剂",
+              "timestamp": 1771461620.6826038,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c0e327c2-3c89-44fa-a013-e0fe89920ea8",
+              "content": "近8个月尾骨左侧附近疼痛，咳嗽/打喷嚏及早期弯腰可诱发加重，影响用力做事；盆骨CT、磁共振及X片检查均正常",
+              "timestamp": 1771461631.8309386,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f07e9ee1-4ff7-44dc-bb1f-4fa82d3ef4f8",
+              "content": "化验：血沉ESR半年前13mm/h（正常），本次26mm/h（略高，参考≤20）；风湿抗O（ASO）500（参考0-200）",
+              "timestamp": 1771461631.8309517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "60812587-2606-4706-921c-13c8cf26ae5c",
+              "content": "上海就诊医生王锋判断为风湿；开具祖师麻片、阿莫西林克拉维酸钾片；已做青霉素皮试可用青霉素",
+              "timestamp": 1771461631.8309565,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "108eae68-9ed1-48f6-b506-953c97cb220f",
+              "content": "服药后（早饭后）出现胃部不适持续一天；咨询该不良反应是否会随服用次数减少、是否应继续用药",
+              "timestamp": 1771461631.830961,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "19a17e75-3fca-45a3-972d-4546823aa1a4",
+              "content": "医生建议做肌腱端超声检查和HLAB7检查，以排除强直性脊柱炎（目前诊断尚不明确）",
+              "timestamp": 1771461639.2361605,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "38fd3e6b-5b20-468f-8a77-75d9a796d7ae",
+              "content": "当前诊断不清楚，需进一步检查；医生建议如有空可到门诊就诊",
+              "timestamp": 1771461639.236169,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d4c3c586-0d62-4a2e-bacc-36a365dbbd32",
+              "content": "5天前急性心肌梗死住院治疗后出院；发病时血压低、血糖正常",
+              "timestamp": 1771461646.5512729,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ba349351-aab7-4a1d-9c86-e6c7cb1a7ff2",
+              "content": "今日化验：LDH 266；HBDH 296；AST 52；CK 492；CK-MB 40",
+              "timestamp": 1771461646.551282,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "887213be-f748-405d-b130-59e46f4fe9b9",
+              "content": "医生提示心肌酶谱仍偏高，建议追问：急性心梗住院时心肌酶谱情况、目前是否能进食、正在服用的药物，以及血压/血糖/血脂是否正常",
+              "timestamp": 1771461651.823885,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "c0ed1280-8c24-476a-a9c7-6aaca29e6eb5",
+              "content": "本次化验提示心肌酶谱较高，且较发病时更高",
+              "timestamp": 1771461658.5377316,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "fe301da7-4396-4daa-b4ec-34145ac8be82",
+              "content": "用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771461658.5377362,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "3c13b69b-83e1-4c00-b6e5-9350adab3ef2",
+              "content": "住院期间医生曾建议行心脏血管造影，但患者未做",
+              "timestamp": 1771461675.8183177,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "66221f87-eec2-451e-817c-bc85bb3fa250",
+              "content": "目前未做心肌肌钙蛋白定性检查",
+              "timestamp": 1771461675.8183272,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者今天有没有做过心肌肌钙蛋白的定性检查？",
+          "answer": "未做心肌肌钙蛋白定性检查。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "d739de34-71f6-4486-ad51-b03f802bbe28"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "必须要抗凝治疗才行，心肌梗塞很明确了，现在怎么用的药？能将心电图传上来吗？",
+        "to_memory": [
+          "identity: 患者男，34岁；血脂高（高脂血症）",
+          "history: 5天前急性心肌梗死住院治疗后缓解出院；今晨心肌酶谱/生化：LDH 266、HBDH 296、AST 52、CK 492、CK-MB 40；发病时血压低、血糖正常；住院医生曾建议行心脏血管造影但未做；用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸；医生意见：需抗凝治疗，并建议上传心电图、补充当前用药情况"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d739de34-71f6-4486-ad51-b03f802bbe28",
+              "content": "出院后（急性心肌梗死住院治疗后缓解出院）今天仍有胸闷、乏力、出虚汗等不适但未见加重；今日心肌酶谱：LDH 266、HBDH 296、AST 52、CK 492、CK-MB 40；未做心肌肌钙蛋白定性检查；询问下一步如何治疗",
+              "timestamp": 1771461646.5512857,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者男，34岁（成人）",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "1d209464-a337-4a3f-8b6e-0714ff7de096",
+              "content": "患者有高脂血症（血脂高）",
+              "timestamp": 1771461658.537717,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "4c9773f9-99d0-495b-a7ea-2615e345123e",
+              "content": "患者无明确青霉素过敏史；青霉素皮试可用",
+              "timestamp": 1771461666.961683,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+              "content": "医生建议药店可购买的中成药：黄芪颗粒、玉屏风冲剂",
+              "timestamp": 1771461620.6826038,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c0e327c2-3c89-44fa-a013-e0fe89920ea8",
+              "content": "近8个月尾骨左侧附近疼痛，咳嗽/打喷嚏及早期弯腰可诱发加重，影响用力做事；盆骨CT、磁共振及X片检查均正常",
+              "timestamp": 1771461631.8309386,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f07e9ee1-4ff7-44dc-bb1f-4fa82d3ef4f8",
+              "content": "化验：血沉ESR半年前13mm/h（正常），本次26mm/h（略高，参考≤20）；风湿抗O（ASO）500（参考0-200）",
+              "timestamp": 1771461631.8309517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "60812587-2606-4706-921c-13c8cf26ae5c",
+              "content": "上海就诊医生王锋判断为风湿；开具祖师麻片、阿莫西林克拉维酸钾片；已做青霉素皮试可用青霉素",
+              "timestamp": 1771461631.8309565,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "108eae68-9ed1-48f6-b506-953c97cb220f",
+              "content": "服药后（早饭后）出现胃部不适持续一天；咨询该不良反应是否会随服用次数减少、是否应继续用药",
+              "timestamp": 1771461631.830961,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "19a17e75-3fca-45a3-972d-4546823aa1a4",
+              "content": "医生建议做肌腱端超声检查和HLAB7检查，以排除强直性脊柱炎（目前诊断尚不明确）",
+              "timestamp": 1771461639.2361605,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "38fd3e6b-5b20-468f-8a77-75d9a796d7ae",
+              "content": "当前诊断不清楚，需进一步检查；医生建议如有空可到门诊就诊",
+              "timestamp": 1771461639.236169,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d4c3c586-0d62-4a2e-bacc-36a365dbbd32",
+              "content": "5天前急性心肌梗死住院治疗后出院；发病时血压低、血糖正常",
+              "timestamp": 1771461646.5512729,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ba349351-aab7-4a1d-9c86-e6c7cb1a7ff2",
+              "content": "今日化验：LDH 266；HBDH 296；AST 52；CK 492；CK-MB 40",
+              "timestamp": 1771461646.551282,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "887213be-f748-405d-b130-59e46f4fe9b9",
+              "content": "医生提示心肌酶谱仍偏高，建议追问：急性心梗住院时心肌酶谱情况、目前是否能进食、正在服用的药物，以及血压/血糖/血脂是否正常",
+              "timestamp": 1771461651.823885,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "c0ed1280-8c24-476a-a9c7-6aaca29e6eb5",
+              "content": "本次化验提示心肌酶谱较高，且较发病时更高",
+              "timestamp": 1771461658.5377316,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "fe301da7-4396-4daa-b4ec-34145ac8be82",
+              "content": "用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771461658.5377362,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "3c13b69b-83e1-4c00-b6e5-9350adab3ef2",
+              "content": "住院期间医生曾建议行心脏血管造影，但患者未做",
+              "timestamp": 1771461675.8183177,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "66221f87-eec2-451e-817c-bc85bb3fa250",
+              "content": "目前未做心肌肌钙蛋白定性检查",
+              "timestamp": 1771461675.8183272,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者既往实验室检查提示的代谢异常，与当前心梗后的用药与二级预防方案是否存在需要额外核对的安全风险点？请指出该代谢异常是什么。",
+          "answer": "血脂高（高脂血症）",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "ba5a6abb-5d12-4d88-8695-27d0fa7fa872"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "1d209464-a337-4a3f-8b6e-0714ff7de096"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            10,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "我是患者的朋友怎么用的药详情不太知道？只是想问现在各项化验指标都高能说明什么问题呢？",
+        "to_memory": [
+          "identity: 患者男，34岁；血脂偏高（高脂血症倾向）",
+          "history: 5天前急性心肌梗死住院治疗后缓解出院；出院后化验心肌酶谱/相关指标：LDH 266↑、HBDH 296↑、AST 52↑、CK 492↑、CK-MB 40↑；发病时血压偏低、血糖正常；未做心肌肌钙蛋白检查；曾建议行心脏血管造影但未做；用药史：丹参注射液、马来酸注射液（具体药名不详）、口服硝酸甘油、丹参滴丸；医生建议需抗凝治疗并要求上传心电图",
+          "history: 当前仍有胸闷、乏力、出冷汗，症状未见加重；提问：目前化验指标都高说明什么、如何处理（提问者为患者朋友，药物详情不清楚）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d739de34-71f6-4486-ad51-b03f802bbe28",
+              "content": "出院后（急性心肌梗死住院治疗后缓解出院）今天仍有胸闷、乏力、出虚汗等不适但未见加重；今日心肌酶谱：LDH 266、HBDH 296、AST 52、CK 492、CK-MB 40；未做心肌肌钙蛋白定性检查；询问下一步如何治疗",
+              "timestamp": 1771461646.5512857,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者男，34岁（成人）",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "1d209464-a337-4a3f-8b6e-0714ff7de096",
+              "content": "患者有高脂血症（血脂高）",
+              "timestamp": 1771461658.537717,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "4c9773f9-99d0-495b-a7ea-2615e345123e",
+              "content": "患者无明确青霉素过敏史；青霉素皮试可用",
+              "timestamp": 1771461666.961683,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+              "content": "医生建议药店可购买的中成药：黄芪颗粒、玉屏风冲剂",
+              "timestamp": 1771461620.6826038,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c0e327c2-3c89-44fa-a013-e0fe89920ea8",
+              "content": "近8个月尾骨左侧附近疼痛，咳嗽/打喷嚏及早期弯腰可诱发加重，影响用力做事；盆骨CT、磁共振及X片检查均正常",
+              "timestamp": 1771461631.8309386,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f07e9ee1-4ff7-44dc-bb1f-4fa82d3ef4f8",
+              "content": "化验：血沉ESR半年前13mm/h（正常），本次26mm/h（略高，参考≤20）；风湿抗O（ASO）500（参考0-200）",
+              "timestamp": 1771461631.8309517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "60812587-2606-4706-921c-13c8cf26ae5c",
+              "content": "上海就诊医生王锋判断为风湿；开具祖师麻片、阿莫西林克拉维酸钾片；已做青霉素皮试可用青霉素",
+              "timestamp": 1771461631.8309565,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "108eae68-9ed1-48f6-b506-953c97cb220f",
+              "content": "服药后（早饭后）出现胃部不适持续一天；咨询该不良反应是否会随服用次数减少、是否应继续用药",
+              "timestamp": 1771461631.830961,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "19a17e75-3fca-45a3-972d-4546823aa1a4",
+              "content": "医生建议做肌腱端超声检查和HLAB7检查，以排除强直性脊柱炎（目前诊断尚不明确）",
+              "timestamp": 1771461639.2361605,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "38fd3e6b-5b20-468f-8a77-75d9a796d7ae",
+              "content": "当前诊断不清楚，需进一步检查；医生建议如有空可到门诊就诊",
+              "timestamp": 1771461639.236169,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d4c3c586-0d62-4a2e-bacc-36a365dbbd32",
+              "content": "5天前急性心肌梗死住院治疗后出院；发病时血压低、血糖正常",
+              "timestamp": 1771461646.5512729,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ba349351-aab7-4a1d-9c86-e6c7cb1a7ff2",
+              "content": "今日化验：LDH 266；HBDH 296；AST 52；CK 492；CK-MB 40",
+              "timestamp": 1771461646.551282,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "887213be-f748-405d-b130-59e46f4fe9b9",
+              "content": "医生提示心肌酶谱仍偏高，建议追问：急性心梗住院时心肌酶谱情况、目前是否能进食、正在服用的药物，以及血压/血糖/血脂是否正常",
+              "timestamp": 1771461651.823885,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "c0ed1280-8c24-476a-a9c7-6aaca29e6eb5",
+              "content": "本次化验提示心肌酶谱较高，且较发病时更高",
+              "timestamp": 1771461658.5377316,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "fe301da7-4396-4daa-b4ec-34145ac8be82",
+              "content": "用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771461658.5377362,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "3c13b69b-83e1-4c00-b6e5-9350adab3ef2",
+              "content": "住院期间医生曾建议行心脏血管造影，但患者未做",
+              "timestamp": 1771461675.8183177,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "66221f87-eec2-451e-817c-bc85bb3fa250",
+              "content": "目前未做心肌肌钙蛋白定性检查",
+              "timestamp": 1771461675.8183272,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "ab3adf08-6d98-47c0-a77a-d63ba5213e55",
+              "content": "出院后患者仍有胸闷、乏力、出冷汗，症状未见加重。",
+              "timestamp": 1771461693.3300846,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "796c1015-d398-4dd5-a1ea-7489f0bed158",
+              "content": "医生建议需抗凝治疗，并要求患者上传心电图。",
+              "timestamp": 1771461693.3300946,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "37cca75a-c6fa-49bc-a85e-d79ff352ce79",
+              "content": "咨询者为患者朋友；目前具体用药信息不清楚（部分药名不详）。",
+              "timestamp": 1771461693.330099,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "在本次对话中，患者（或其朋友）提到目前有哪些不适表现？",
+          "answer": "胸闷、乏力、出虚汗（未见加重）",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "d739de34-71f6-4486-ad51-b03f802bbe28"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "说明有心肌细胞坏死，但这几项指标从心梗发作开始逐渐升高，不能说明现在还有进行性坏死，但能确定患者肯定是心肌梗塞。",
+        "to_memory": [
+          "history: 医生解释当前化验指标（LDH/HBDH/AST/CK/CK-MB升高）提示存在心肌细胞坏死；这些指标自心梗发作后会逐渐升高，不能据此判断目前仍有进行性坏死；但可确定患者为心肌梗死"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d739de34-71f6-4486-ad51-b03f802bbe28",
+              "content": "出院后（急性心肌梗死住院治疗后缓解出院）今天仍有胸闷、乏力、出虚汗等不适但未见加重；今日心肌酶谱：LDH 266、HBDH 296、AST 52、CK 492、CK-MB 40；未做心肌肌钙蛋白定性检查；询问下一步如何治疗",
+              "timestamp": 1771461646.5512857,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者男，34岁（成人）",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "1d209464-a337-4a3f-8b6e-0714ff7de096",
+              "content": "患者有高脂血症（血脂高）",
+              "timestamp": 1771461658.537717,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "4c9773f9-99d0-495b-a7ea-2615e345123e",
+              "content": "患者无明确青霉素过敏史；青霉素皮试可用",
+              "timestamp": 1771461666.961683,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+              "content": "医生建议药店可购买的中成药：黄芪颗粒、玉屏风冲剂",
+              "timestamp": 1771461620.6826038,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c0e327c2-3c89-44fa-a013-e0fe89920ea8",
+              "content": "近8个月尾骨左侧附近疼痛，咳嗽/打喷嚏及早期弯腰可诱发加重，影响用力做事；盆骨CT、磁共振及X片检查均正常",
+              "timestamp": 1771461631.8309386,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f07e9ee1-4ff7-44dc-bb1f-4fa82d3ef4f8",
+              "content": "化验：血沉ESR半年前13mm/h（正常），本次26mm/h（略高，参考≤20）；风湿抗O（ASO）500（参考0-200）",
+              "timestamp": 1771461631.8309517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "60812587-2606-4706-921c-13c8cf26ae5c",
+              "content": "上海就诊医生王锋判断为风湿；开具祖师麻片、阿莫西林克拉维酸钾片；已做青霉素皮试可用青霉素",
+              "timestamp": 1771461631.8309565,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "108eae68-9ed1-48f6-b506-953c97cb220f",
+              "content": "服药后（早饭后）出现胃部不适持续一天；咨询该不良反应是否会随服用次数减少、是否应继续用药",
+              "timestamp": 1771461631.830961,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "19a17e75-3fca-45a3-972d-4546823aa1a4",
+              "content": "医生建议做肌腱端超声检查和HLAB7检查，以排除强直性脊柱炎（目前诊断尚不明确）",
+              "timestamp": 1771461639.2361605,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "38fd3e6b-5b20-468f-8a77-75d9a796d7ae",
+              "content": "当前诊断不清楚，需进一步检查；医生建议如有空可到门诊就诊",
+              "timestamp": 1771461639.236169,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d4c3c586-0d62-4a2e-bacc-36a365dbbd32",
+              "content": "5天前急性心肌梗死住院治疗后出院；发病时血压低、血糖正常",
+              "timestamp": 1771461646.5512729,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ba349351-aab7-4a1d-9c86-e6c7cb1a7ff2",
+              "content": "今日化验：LDH 266；HBDH 296；AST 52；CK 492；CK-MB 40",
+              "timestamp": 1771461646.551282,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "887213be-f748-405d-b130-59e46f4fe9b9",
+              "content": "医生提示心肌酶谱仍偏高，建议追问：急性心梗住院时心肌酶谱情况、目前是否能进食、正在服用的药物，以及血压/血糖/血脂是否正常",
+              "timestamp": 1771461651.823885,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "c0ed1280-8c24-476a-a9c7-6aaca29e6eb5",
+              "content": "本次化验提示心肌酶谱较高，且较发病时更高",
+              "timestamp": 1771461658.5377316,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "fe301da7-4396-4daa-b4ec-34145ac8be82",
+              "content": "用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771461658.5377362,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "3c13b69b-83e1-4c00-b6e5-9350adab3ef2",
+              "content": "住院期间医生曾建议行心脏血管造影，但患者未做",
+              "timestamp": 1771461675.8183177,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "66221f87-eec2-451e-817c-bc85bb3fa250",
+              "content": "目前未做心肌肌钙蛋白定性检查",
+              "timestamp": 1771461675.8183272,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "ab3adf08-6d98-47c0-a77a-d63ba5213e55",
+              "content": "出院后患者仍有胸闷、乏力、出冷汗，症状未见加重。",
+              "timestamp": 1771461693.3300846,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "796c1015-d398-4dd5-a1ea-7489f0bed158",
+              "content": "医生建议需抗凝治疗，并要求患者上传心电图。",
+              "timestamp": 1771461693.3300946,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "37cca75a-c6fa-49bc-a85e-d79ff352ce79",
+              "content": "咨询者为患者朋友；目前具体用药信息不清楚（部分药名不详）。",
+              "timestamp": 1771461693.330099,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "26d216c2-f14e-485c-8176-0804b12a90ef",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示存在心肌细胞坏死；这些指标在心梗发作后会逐渐升高，不能据此判断目前仍有进行性坏死；但可确定患者为心肌梗死。",
+              "timestamp": 1771461699.8019836,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者提到住院时医生曾建议做一项进一步的检查/操作，但由于现实原因没有完成。请回忆：这项被建议但未做的检查/操作是什么？在后续治疗决策上可能带来哪些安全隐患需要重点核对？",
+          "answer": "住院期间医生曾建议行心脏血管造影，但患者未做。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "fe301da7-4396-4daa-b4ec-34145ac8be82",
+                "3c13b69b-83e1-4c00-b6e5-9350adab3ef2"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            5,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "5天时间里做了3次化验这几项指标一次比一次高 暂不能说明进行性坏死的话  问一般正常情况下这几项指标发病几天达高峰呢？",
+        "to_memory": [
+          "identity: 患者男，34岁",
+          "history: 5天前急性心肌梗死住院治疗后缓解出院",
+          "history: 实验室检查（出院后/今晨）：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40；5天内复查3次上述指标呈逐次升高",
+          "history: 合并血脂高；发病时血压低；血糖正常",
+          "history: 用药史：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+          "history: 未做心肌肌钙蛋白定性检查；住院时曾建议行心脏血管造影但未做",
+          "history: 医生建议：需进行抗凝治疗；可上传心电图",
+          "working: 当前症状：胸闷、乏力、出冷汗/虚汗；自觉症状未见加重",
+          "working: 当前提问：心肌酶（LDH/HBDH/AST/CK/CK-MB）一般在心梗发病后几天达到高峰"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d739de34-71f6-4486-ad51-b03f802bbe28",
+              "content": "出院后（急性心肌梗死住院治疗后缓解出院）今天仍有胸闷、乏力、出虚汗/冷汗等不适但未见加重；今晨心肌酶谱：LDH 266、HBDH 296、AST 52、CK 492、CK-MB 40；5天内复查3次上述指标逐次升高；未做心肌肌钙蛋白定性检查；住院时曾建议行冠脉造影但未做；医生建议需抗凝治疗并可上传心电图；当前提问：心肌酶（LDH/HBDH/AST/CK/CK-MB）一般在心梗发病后几天达到高峰",
+              "timestamp": 1771461646.5512857,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者男，34岁（成人）",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "1d209464-a337-4a3f-8b6e-0714ff7de096",
+              "content": "患者有高脂血症（血脂高）",
+              "timestamp": 1771461658.537717,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "4c9773f9-99d0-495b-a7ea-2615e345123e",
+              "content": "患者无明确青霉素过敏史；青霉素皮试可用",
+              "timestamp": 1771461666.961683,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+              "content": "医生建议药店可购买的中成药：黄芪颗粒、玉屏风冲剂",
+              "timestamp": 1771461620.6826038,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c0e327c2-3c89-44fa-a013-e0fe89920ea8",
+              "content": "近8个月尾骨左侧附近疼痛，咳嗽/打喷嚏及早期弯腰可诱发加重，影响用力做事；盆骨CT、磁共振及X片检查均正常",
+              "timestamp": 1771461631.8309386,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f07e9ee1-4ff7-44dc-bb1f-4fa82d3ef4f8",
+              "content": "化验：血沉ESR半年前13mm/h（正常），本次26mm/h（略高，参考≤20）；风湿抗O（ASO）500（参考0-200）",
+              "timestamp": 1771461631.8309517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "60812587-2606-4706-921c-13c8cf26ae5c",
+              "content": "上海就诊医生王锋判断为风湿；开具祖师麻片、阿莫西林克拉维酸钾片；已做青霉素皮试可用青霉素",
+              "timestamp": 1771461631.8309565,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "108eae68-9ed1-48f6-b506-953c97cb220f",
+              "content": "服药后（早饭后）出现胃部不适持续一天；咨询该不良反应是否会随服用次数减少、是否应继续用药",
+              "timestamp": 1771461631.830961,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "19a17e75-3fca-45a3-972d-4546823aa1a4",
+              "content": "医生建议做肌腱端超声检查和HLAB7检查，以排除强直性脊柱炎（目前诊断尚不明确）",
+              "timestamp": 1771461639.2361605,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "38fd3e6b-5b20-468f-8a77-75d9a796d7ae",
+              "content": "当前诊断不清楚，需进一步检查；医生建议如有空可到门诊就诊",
+              "timestamp": 1771461639.236169,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d4c3c586-0d62-4a2e-bacc-36a365dbbd32",
+              "content": "5天前急性心肌梗死住院治疗后出院；发病时血压低、血糖正常",
+              "timestamp": 1771461646.5512729,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ba349351-aab7-4a1d-9c86-e6c7cb1a7ff2",
+              "content": "今日化验：LDH 266；HBDH 296；AST 52；CK 492；CK-MB 40",
+              "timestamp": 1771461646.551282,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "887213be-f748-405d-b130-59e46f4fe9b9",
+              "content": "医生提示心肌酶谱仍偏高，建议追问：急性心梗住院时心肌酶谱情况、目前是否能进食、正在服用的药物，以及血压/血糖/血脂是否正常",
+              "timestamp": 1771461651.823885,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "c0ed1280-8c24-476a-a9c7-6aaca29e6eb5",
+              "content": "本次化验提示心肌酶谱较高，且较发病时更高",
+              "timestamp": 1771461658.5377316,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "fe301da7-4396-4daa-b4ec-34145ac8be82",
+              "content": "用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771461658.5377362,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "3c13b69b-83e1-4c00-b6e5-9350adab3ef2",
+              "content": "住院期间医生曾建议行心脏血管造影，但患者未做",
+              "timestamp": 1771461675.8183177,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "66221f87-eec2-451e-817c-bc85bb3fa250",
+              "content": "目前未做心肌肌钙蛋白定性检查",
+              "timestamp": 1771461675.8183272,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "ab3adf08-6d98-47c0-a77a-d63ba5213e55",
+              "content": "出院后患者仍有胸闷、乏力、出冷汗，症状未见加重。",
+              "timestamp": 1771461693.3300846,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "796c1015-d398-4dd5-a1ea-7489f0bed158",
+              "content": "医生建议需抗凝治疗，并要求患者上传心电图。",
+              "timestamp": 1771461693.3300946,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "37cca75a-c6fa-49bc-a85e-d79ff352ce79",
+              "content": "咨询者为患者朋友；目前具体用药信息不清楚（部分药名不详）。",
+              "timestamp": 1771461693.330099,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "26d216c2-f14e-485c-8176-0804b12a90ef",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示存在心肌细胞坏死；这些指标在心梗发作后会逐渐升高，不能据此判断目前仍有进行性坏死；但可确定患者为心肌梗死。",
+              "timestamp": 1771461699.8019836,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6b87b672-fbe5-444e-8dbf-5a7889ea6520",
+              "content": "出院后5天内复查心肌酶谱3次（LDH/HBDH/AST/CK/CK-MB）呈逐次升高趋势",
+              "timestamp": 1771461710.6051195,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者既往提到的疼痛部位具体在身体的哪里？",
+          "answer": "尾骨左侧附近疼痛",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "c0e327c2-3c89-44fa-a013-e0fe89920ea8"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            11
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "这几项指标对于这个患者而言需要看病人具体是一个什么情况、有没有其他疾病，主管医生应该会告诉你！第五天应是高峰时期！你最好问一下主管医生，主管医生最清楚患者的情况，在这上面，我看不见患者，只能通过你提到的情况分析，会有很大的误差！",
+        "to_memory": [
+          "history: 急性心肌梗死（发病后住院治疗缓解出院，约5天前发病）",
+          "identity: 男，34岁",
+          "history: 化验（出院后/第5天早上）：LDH 266、HBDH 296、AST 52、CK 492、CK-MB 40（均升高）",
+          "history: 发病时血压偏低；血糖正常；血脂偏高",
+          "history: 用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+          "history: 未做心肌肌钙蛋白定性检查；住院医生曾建议行冠状动脉造影但未做",
+          "history: 医生建议：需进行抗凝治疗",
+          "history: 医生说明：上述心肌酶指标升高提示心肌细胞坏死，但单次指标不能证明仍在进行性坏死；第5天通常为（这些指标）高峰期",
+          "working: 当前症状：胸闷、乏力、出冷汗/虚汗；症状未见加重",
+          "history: 目前连续3次复查心肌酶指标一次比一次高，咨询其意义及高峰时间"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d739de34-71f6-4486-ad51-b03f802bbe28",
+              "content": "出院后（急性心肌梗死住院治疗后缓解出院）今天仍有胸闷、乏力、出虚汗/冷汗等不适但未见加重；今晨心肌酶谱：LDH 266、HBDH 296、AST 52、CK 492、CK-MB 40；5天内复查3次上述指标逐次升高；未做心肌肌钙蛋白定性检查；住院时曾建议行冠脉造影但未做；医生建议需抗凝治疗并可上传心电图；当前提问：心肌酶（LDH/HBDH/AST/CK/CK-MB）一般在心梗发病后几天达到高峰",
+              "timestamp": 1771461646.5512857,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者男，34岁（成人）",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "1d209464-a337-4a3f-8b6e-0714ff7de096",
+              "content": "患者有高脂血症（血脂高）",
+              "timestamp": 1771461658.537717,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "4c9773f9-99d0-495b-a7ea-2615e345123e",
+              "content": "患者无明确青霉素过敏史；青霉素皮试可用",
+              "timestamp": 1771461666.961683,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+              "content": "医生建议药店可购买的中成药：黄芪颗粒、玉屏风冲剂",
+              "timestamp": 1771461620.6826038,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c0e327c2-3c89-44fa-a013-e0fe89920ea8",
+              "content": "近8个月尾骨左侧附近疼痛，咳嗽/打喷嚏及早期弯腰可诱发加重，影响用力做事；盆骨CT、磁共振及X片检查均正常",
+              "timestamp": 1771461631.8309386,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f07e9ee1-4ff7-44dc-bb1f-4fa82d3ef4f8",
+              "content": "化验：血沉ESR半年前13mm/h（正常），本次26mm/h（略高，参考≤20）；风湿抗O（ASO）500（参考0-200）",
+              "timestamp": 1771461631.8309517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "60812587-2606-4706-921c-13c8cf26ae5c",
+              "content": "上海就诊医生王锋判断为风湿；开具祖师麻片、阿莫西林克拉维酸钾片；已做青霉素皮试可用青霉素",
+              "timestamp": 1771461631.8309565,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "108eae68-9ed1-48f6-b506-953c97cb220f",
+              "content": "服药后（早饭后）出现胃部不适持续一天；咨询该不良反应是否会随服用次数减少、是否应继续用药",
+              "timestamp": 1771461631.830961,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "19a17e75-3fca-45a3-972d-4546823aa1a4",
+              "content": "医生建议做肌腱端超声检查和HLAB7检查，以排除强直性脊柱炎（目前诊断尚不明确）",
+              "timestamp": 1771461639.2361605,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "38fd3e6b-5b20-468f-8a77-75d9a796d7ae",
+              "content": "当前诊断不清楚，需进一步检查；医生建议如有空可到门诊就诊",
+              "timestamp": 1771461639.236169,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d4c3c586-0d62-4a2e-bacc-36a365dbbd32",
+              "content": "5天前急性心肌梗死住院治疗后出院；发病时血压低、血糖正常",
+              "timestamp": 1771461646.5512729,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ba349351-aab7-4a1d-9c86-e6c7cb1a7ff2",
+              "content": "今日化验：LDH 266；HBDH 296；AST 52；CK 492；CK-MB 40",
+              "timestamp": 1771461646.551282,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "887213be-f748-405d-b130-59e46f4fe9b9",
+              "content": "医生提示心肌酶谱仍偏高，建议追问：急性心梗住院时心肌酶谱情况、目前是否能进食、正在服用的药物，以及血压/血糖/血脂是否正常",
+              "timestamp": 1771461651.823885,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "c0ed1280-8c24-476a-a9c7-6aaca29e6eb5",
+              "content": "本次化验提示心肌酶谱较高，且较发病时更高",
+              "timestamp": 1771461658.5377316,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "fe301da7-4396-4daa-b4ec-34145ac8be82",
+              "content": "用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771461658.5377362,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "3c13b69b-83e1-4c00-b6e5-9350adab3ef2",
+              "content": "住院期间医生曾建议行心脏血管造影，但患者未做",
+              "timestamp": 1771461675.8183177,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "66221f87-eec2-451e-817c-bc85bb3fa250",
+              "content": "目前未做心肌肌钙蛋白定性检查",
+              "timestamp": 1771461675.8183272,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "ab3adf08-6d98-47c0-a77a-d63ba5213e55",
+              "content": "出院后患者仍有胸闷、乏力、出冷汗，症状未见加重。",
+              "timestamp": 1771461693.3300846,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "796c1015-d398-4dd5-a1ea-7489f0bed158",
+              "content": "医生建议需抗凝治疗，并要求患者上传心电图。",
+              "timestamp": 1771461693.3300946,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "37cca75a-c6fa-49bc-a85e-d79ff352ce79",
+              "content": "咨询者为患者朋友；目前具体用药信息不清楚（部分药名不详）。",
+              "timestamp": 1771461693.330099,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "26d216c2-f14e-485c-8176-0804b12a90ef",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示存在心肌细胞坏死；这些指标在心梗发作后会逐渐升高，不能据此判断目前仍有进行性坏死；但可确定患者为心肌梗死。",
+              "timestamp": 1771461699.8019836,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6b87b672-fbe5-444e-8dbf-5a7889ea6520",
+              "content": "出院后5天内复查心肌酶谱3次（LDH/HBDH/AST/CK/CK-MB）呈逐次升高趋势",
+              "timestamp": 1771461710.6051195,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "05c273ff-58ff-4604-8e5b-6a4a32d4d62a",
+              "content": "住院医生说明：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；单次指标不能证明仍在进行性坏死；心梗发病后第5天通常为这些指标的高峰期。",
+              "timestamp": 1771461721.139313,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "今天的化验结果中，CK-MB的数值是多少？",
+          "answer": "40",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "ba349351-aab7-4a1d-9c86-e6c7cb1a7ff2"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            9
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者男，34岁（成人）",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "1d209464-a337-4a3f-8b6e-0714ff7de096",
+              "content": "患者有高脂血症（血脂高）",
+              "timestamp": 1771461658.537717,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "4c9773f9-99d0-495b-a7ea-2615e345123e",
+              "content": "患者无明确青霉素过敏史；青霉素皮试可用",
+              "timestamp": 1771461666.961683,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+              "content": "医生建议药店可购买的中成药：黄芪颗粒、玉屏风冲剂",
+              "timestamp": 1771461620.6826038,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c0e327c2-3c89-44fa-a013-e0fe89920ea8",
+              "content": "近8个月尾骨左侧附近疼痛，咳嗽/打喷嚏及早期弯腰可诱发加重，影响用力做事；盆骨CT、磁共振及X片检查均正常",
+              "timestamp": 1771461631.8309386,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f07e9ee1-4ff7-44dc-bb1f-4fa82d3ef4f8",
+              "content": "化验：血沉ESR半年前13mm/h（正常），本次26mm/h（略高，参考≤20）；风湿抗O（ASO）500（参考0-200）",
+              "timestamp": 1771461631.8309517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "60812587-2606-4706-921c-13c8cf26ae5c",
+              "content": "上海就诊医生王锋判断为风湿；开具祖师麻片、阿莫西林克拉维酸钾片；已做青霉素皮试可用青霉素",
+              "timestamp": 1771461631.8309565,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "108eae68-9ed1-48f6-b506-953c97cb220f",
+              "content": "服药后（早饭后）出现胃部不适持续一天；咨询该不良反应是否会随服用次数减少、是否应继续用药",
+              "timestamp": 1771461631.830961,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "19a17e75-3fca-45a3-972d-4546823aa1a4",
+              "content": "医生建议做肌腱端超声检查和HLAB7检查，以排除强直性脊柱炎（目前诊断尚不明确）",
+              "timestamp": 1771461639.2361605,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "38fd3e6b-5b20-468f-8a77-75d9a796d7ae",
+              "content": "当前诊断不清楚，需进一步检查；医生建议如有空可到门诊就诊",
+              "timestamp": 1771461639.236169,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d4c3c586-0d62-4a2e-bacc-36a365dbbd32",
+              "content": "5天前急性心肌梗死住院治疗后出院；发病时血压低、血糖正常",
+              "timestamp": 1771461646.5512729,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ba349351-aab7-4a1d-9c86-e6c7cb1a7ff2",
+              "content": "今日化验：LDH 266；HBDH 296；AST 52；CK 492；CK-MB 40",
+              "timestamp": 1771461646.551282,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "887213be-f748-405d-b130-59e46f4fe9b9",
+              "content": "医生提示心肌酶谱仍偏高，建议追问：急性心梗住院时心肌酶谱情况、目前是否能进食、正在服用的药物，以及血压/血糖/血脂是否正常",
+              "timestamp": 1771461651.823885,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "c0ed1280-8c24-476a-a9c7-6aaca29e6eb5",
+              "content": "本次化验提示心肌酶谱较高，且较发病时更高",
+              "timestamp": 1771461658.5377316,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "fe301da7-4396-4daa-b4ec-34145ac8be82",
+              "content": "用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771461658.5377362,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "3c13b69b-83e1-4c00-b6e5-9350adab3ef2",
+              "content": "住院期间医生曾建议行心脏血管造影，但患者未做",
+              "timestamp": 1771461675.8183177,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "66221f87-eec2-451e-817c-bc85bb3fa250",
+              "content": "目前未做心肌肌钙蛋白定性检查",
+              "timestamp": 1771461675.8183272,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "ab3adf08-6d98-47c0-a77a-d63ba5213e55",
+              "content": "出院后患者仍有胸闷、乏力、出冷汗，症状未见加重。",
+              "timestamp": 1771461693.3300846,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "796c1015-d398-4dd5-a1ea-7489f0bed158",
+              "content": "医生建议需抗凝治疗，并要求患者上传心电图。",
+              "timestamp": 1771461693.3300946,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "37cca75a-c6fa-49bc-a85e-d79ff352ce79",
+              "content": "咨询者为患者朋友；目前具体用药信息不清楚（部分药名不详）。",
+              "timestamp": 1771461693.330099,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "26d216c2-f14e-485c-8176-0804b12a90ef",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示存在心肌细胞坏死；这些指标在心梗发作后会逐渐升高，不能据此判断目前仍有进行性坏死；但可确定患者为心肌梗死。",
+              "timestamp": 1771461699.8019836,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6b87b672-fbe5-444e-8dbf-5a7889ea6520",
+              "content": "出院后5天内复查心肌酶谱3次（LDH/HBDH/AST/CK/CK-MB）呈逐次升高趋势",
+              "timestamp": 1771461710.6051195,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "05c273ff-58ff-4604-8e5b-6a4a32d4d62a",
+              "content": "住院医生说明：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；单次指标不能证明仍在进行性坏死；心梗发病后第5天通常为这些指标的高峰期。",
+              "timestamp": 1771461721.139313,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "医生说是滑囊炎，右臂中肘又块癣，医生打封闭针皮肤下后期了一个疙瘩。",
+        "to_memory": [
+          "history: 医生诊断为滑囊炎",
+          "history: 右臂（肘部）有块癣",
+          "history: 医生给予封闭针（局部注射）治疗",
+          "working: 封闭针皮下注射后期出现一个疙瘩（局部结节/肿块）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "adb66616-979f-4d8e-bdb8-4ab36e95f3b3",
+              "content": "封闭针皮下注射后期出现一个疙瘩（局部结节/肿块）",
+              "timestamp": 1771461727.1722383,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者男，34岁（成人）",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "1d209464-a337-4a3f-8b6e-0714ff7de096",
+              "content": "患者有高脂血症（血脂高）",
+              "timestamp": 1771461658.537717,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "4c9773f9-99d0-495b-a7ea-2615e345123e",
+              "content": "患者无明确青霉素过敏史；青霉素皮试可用",
+              "timestamp": 1771461666.961683,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+              "content": "医生建议药店可购买的中成药：黄芪颗粒、玉屏风冲剂",
+              "timestamp": 1771461620.6826038,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c0e327c2-3c89-44fa-a013-e0fe89920ea8",
+              "content": "近8个月尾骨左侧附近疼痛，咳嗽/打喷嚏及早期弯腰可诱发加重，影响用力做事；盆骨CT、磁共振及X片检查均正常",
+              "timestamp": 1771461631.8309386,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f07e9ee1-4ff7-44dc-bb1f-4fa82d3ef4f8",
+              "content": "化验：血沉ESR半年前13mm/h（正常），本次26mm/h（略高，参考≤20）；风湿抗O（ASO）500（参考0-200）",
+              "timestamp": 1771461631.8309517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "60812587-2606-4706-921c-13c8cf26ae5c",
+              "content": "上海就诊医生王锋判断为风湿；开具祖师麻片、阿莫西林克拉维酸钾片；已做青霉素皮试可用青霉素",
+              "timestamp": 1771461631.8309565,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "108eae68-9ed1-48f6-b506-953c97cb220f",
+              "content": "服药后（早饭后）出现胃部不适持续一天；咨询该不良反应是否会随服用次数减少、是否应继续用药",
+              "timestamp": 1771461631.830961,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "19a17e75-3fca-45a3-972d-4546823aa1a4",
+              "content": "医生建议做肌腱端超声检查和HLAB7检查，以排除强直性脊柱炎（目前诊断尚不明确）",
+              "timestamp": 1771461639.2361605,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "38fd3e6b-5b20-468f-8a77-75d9a796d7ae",
+              "content": "当前诊断不清楚，需进一步检查；医生建议如有空可到门诊就诊",
+              "timestamp": 1771461639.236169,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d4c3c586-0d62-4a2e-bacc-36a365dbbd32",
+              "content": "5天前急性心肌梗死住院治疗后出院；发病时血压低、血糖正常",
+              "timestamp": 1771461646.5512729,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ba349351-aab7-4a1d-9c86-e6c7cb1a7ff2",
+              "content": "今日化验：LDH 266；HBDH 296；AST 52；CK 492；CK-MB 40",
+              "timestamp": 1771461646.551282,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "887213be-f748-405d-b130-59e46f4fe9b9",
+              "content": "医生提示心肌酶谱仍偏高，建议追问：急性心梗住院时心肌酶谱情况、目前是否能进食、正在服用的药物，以及血压/血糖/血脂是否正常",
+              "timestamp": 1771461651.823885,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "c0ed1280-8c24-476a-a9c7-6aaca29e6eb5",
+              "content": "本次化验提示心肌酶谱较高，且较发病时更高",
+              "timestamp": 1771461658.5377316,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "fe301da7-4396-4daa-b4ec-34145ac8be82",
+              "content": "用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771461658.5377362,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "3c13b69b-83e1-4c00-b6e5-9350adab3ef2",
+              "content": "住院期间医生曾建议行心脏血管造影，但患者未做",
+              "timestamp": 1771461675.8183177,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "66221f87-eec2-451e-817c-bc85bb3fa250",
+              "content": "目前未做心肌肌钙蛋白定性检查",
+              "timestamp": 1771461675.8183272,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "ab3adf08-6d98-47c0-a77a-d63ba5213e55",
+              "content": "出院后患者仍有胸闷、乏力、出冷汗，症状未见加重。",
+              "timestamp": 1771461693.3300846,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "796c1015-d398-4dd5-a1ea-7489f0bed158",
+              "content": "医生建议需抗凝治疗，并要求患者上传心电图。",
+              "timestamp": 1771461693.3300946,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "37cca75a-c6fa-49bc-a85e-d79ff352ce79",
+              "content": "咨询者为患者朋友；目前具体用药信息不清楚（部分药名不详）。",
+              "timestamp": 1771461693.330099,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "26d216c2-f14e-485c-8176-0804b12a90ef",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示存在心肌细胞坏死；这些指标在心梗发作后会逐渐升高，不能据此判断目前仍有进行性坏死；但可确定患者为心肌梗死。",
+              "timestamp": 1771461699.8019836,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6b87b672-fbe5-444e-8dbf-5a7889ea6520",
+              "content": "出院后5天内复查心肌酶谱3次（LDH/HBDH/AST/CK/CK-MB）呈逐次升高趋势",
+              "timestamp": 1771461710.6051195,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "05c273ff-58ff-4604-8e5b-6a4a32d4d62a",
+              "content": "住院医生说明：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；单次指标不能证明仍在进行性坏死；心梗发病后第5天通常为这些指标的高峰期。",
+              "timestamp": 1771461721.139313,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "aa7b3aee-4155-4daf-b66e-b64d78d5220b",
+              "content": "医生诊断为滑囊炎",
+              "timestamp": 1771461727.1722162,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "d5729576-e505-4976-ad99-6a58368318a6",
+              "content": "右臂（肘部）有块癣",
+              "timestamp": 1771461727.1722262,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "677975ce-68d0-4c28-b6cc-69b00663a462",
+              "content": "医生给予封闭针（局部注射）治疗",
+              "timestamp": 1771461727.1722326,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者描述在接受某种注射治疗后，皮肤局部后来出现了什么变化？",
+          "answer": "皮肤下后期起了一个疙瘩（局部结节/肿块）",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "adb66616-979f-4d8e-bdb8-4ab36e95f3b3"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "打封闭针一般不会引起滑囊炎，可能有其他问题。",
+        "to_memory": [
+          "history: 既往被医生判断为心肌梗塞（心肌细胞坏死），建议抗凝治疗；曾建议做心脏血管造影但未做；发病期心肌酶谱升高，5天内3次复查指标逐次升高；血脂高、发病时血压低、血糖正常；用药包括丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+          "history: 医生诊断滑囊炎；右臂中肘有块癣；曾打封闭针后皮下出现疙瘩",
+          "working: 当前讨论：封闭针一般不会引起滑囊炎，可能存在其他问题需进一步评估"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "adb66616-979f-4d8e-bdb8-4ab36e95f3b3",
+              "content": "封闭针皮下注射后出现一个疙瘩（局部结节/肿块）；曾打封闭针后皮下出现疙瘩",
+              "timestamp": 1771461727.1722383,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "dab22b16-afcb-4ffd-9243-43d8773c1882",
+              "content": "当前讨论：封闭针一般不会引起滑囊炎，可能存在其他问题需进一步评估",
+              "timestamp": 1771461735.3398948,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者男，34岁（成人）",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "1d209464-a337-4a3f-8b6e-0714ff7de096",
+              "content": "患者有高脂血症（血脂高）",
+              "timestamp": 1771461658.537717,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "4c9773f9-99d0-495b-a7ea-2615e345123e",
+              "content": "患者无明确青霉素过敏史；青霉素皮试可用",
+              "timestamp": 1771461666.961683,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+              "content": "医生建议药店可购买的中成药：黄芪颗粒、玉屏风冲剂",
+              "timestamp": 1771461620.6826038,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c0e327c2-3c89-44fa-a013-e0fe89920ea8",
+              "content": "近8个月尾骨左侧附近疼痛，咳嗽/打喷嚏及早期弯腰可诱发加重，影响用力做事；盆骨CT、磁共振及X片检查均正常",
+              "timestamp": 1771461631.8309386,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f07e9ee1-4ff7-44dc-bb1f-4fa82d3ef4f8",
+              "content": "化验：血沉ESR半年前13mm/h（正常），本次26mm/h（略高，参考≤20）；风湿抗O（ASO）500（参考0-200）",
+              "timestamp": 1771461631.8309517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "60812587-2606-4706-921c-13c8cf26ae5c",
+              "content": "上海就诊医生王锋判断为风湿；开具祖师麻片、阿莫西林克拉维酸钾片；已做青霉素皮试可用青霉素",
+              "timestamp": 1771461631.8309565,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "108eae68-9ed1-48f6-b506-953c97cb220f",
+              "content": "服药后（早饭后）出现胃部不适持续一天；咨询该不良反应是否会随服用次数减少、是否应继续用药",
+              "timestamp": 1771461631.830961,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "19a17e75-3fca-45a3-972d-4546823aa1a4",
+              "content": "医生建议做肌腱端超声检查和HLAB7检查，以排除强直性脊柱炎（目前诊断尚不明确）",
+              "timestamp": 1771461639.2361605,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "38fd3e6b-5b20-468f-8a77-75d9a796d7ae",
+              "content": "当前诊断不清楚，需进一步检查；医生建议如有空可到门诊就诊",
+              "timestamp": 1771461639.236169,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d4c3c586-0d62-4a2e-bacc-36a365dbbd32",
+              "content": "5天前急性心肌梗死住院治疗后出院；发病时血压低、血糖正常",
+              "timestamp": 1771461646.5512729,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ba349351-aab7-4a1d-9c86-e6c7cb1a7ff2",
+              "content": "今日化验：LDH 266；HBDH 296；AST 52；CK 492；CK-MB 40",
+              "timestamp": 1771461646.551282,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "887213be-f748-405d-b130-59e46f4fe9b9",
+              "content": "医生提示心肌酶谱仍偏高，建议追问：急性心梗住院时心肌酶谱情况、目前是否能进食、正在服用的药物，以及血压/血糖/血脂是否正常",
+              "timestamp": 1771461651.823885,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "c0ed1280-8c24-476a-a9c7-6aaca29e6eb5",
+              "content": "本次化验提示心肌酶谱较高，且较发病时更高",
+              "timestamp": 1771461658.5377316,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "fe301da7-4396-4daa-b4ec-34145ac8be82",
+              "content": "用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771461658.5377362,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "3c13b69b-83e1-4c00-b6e5-9350adab3ef2",
+              "content": "住院期间医生曾建议行心脏血管造影，但患者未做",
+              "timestamp": 1771461675.8183177,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "66221f87-eec2-451e-817c-bc85bb3fa250",
+              "content": "目前未做心肌肌钙蛋白定性检查",
+              "timestamp": 1771461675.8183272,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "ab3adf08-6d98-47c0-a77a-d63ba5213e55",
+              "content": "出院后患者仍有胸闷、乏力、出冷汗，症状未见加重。",
+              "timestamp": 1771461693.3300846,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "796c1015-d398-4dd5-a1ea-7489f0bed158",
+              "content": "医生建议需抗凝治疗，并要求患者上传心电图。",
+              "timestamp": 1771461693.3300946,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "37cca75a-c6fa-49bc-a85e-d79ff352ce79",
+              "content": "咨询者为患者朋友；目前具体用药信息不清楚（部分药名不详）。",
+              "timestamp": 1771461693.330099,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "26d216c2-f14e-485c-8176-0804b12a90ef",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示存在心肌细胞坏死；这些指标在心梗发作后会逐渐升高，不能据此判断目前仍有进行性坏死；但可确定患者为心肌梗死。",
+              "timestamp": 1771461699.8019836,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6b87b672-fbe5-444e-8dbf-5a7889ea6520",
+              "content": "出院后5天内复查心肌酶谱3次（LDH/HBDH/AST/CK/CK-MB）呈逐次升高趋势",
+              "timestamp": 1771461710.6051195,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "05c273ff-58ff-4604-8e5b-6a4a32d4d62a",
+              "content": "住院医生说明：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；单次指标不能证明仍在进行性坏死；心梗发病后第5天通常为这些指标的高峰期。",
+              "timestamp": 1771461721.139313,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "aa7b3aee-4155-4daf-b66e-b64d78d5220b",
+              "content": "医生诊断为滑囊炎",
+              "timestamp": 1771461727.1722162,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "d5729576-e505-4976-ad99-6a58368318a6",
+              "content": "右臂（肘部）有块癣",
+              "timestamp": 1771461727.1722262,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "677975ce-68d0-4c28-b6cc-69b00663a462",
+              "content": "医生给予封闭针（局部注射）治疗",
+              "timestamp": 1771461727.1722326,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者男，34岁（成人）",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "1d209464-a337-4a3f-8b6e-0714ff7de096",
+              "content": "患者有高脂血症（血脂高）",
+              "timestamp": 1771461658.537717,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "4c9773f9-99d0-495b-a7ea-2615e345123e",
+              "content": "患者无明确青霉素过敏史；青霉素皮试可用",
+              "timestamp": 1771461666.961683,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+              "content": "医生建议药店可购买的中成药：黄芪颗粒、玉屏风冲剂",
+              "timestamp": 1771461620.6826038,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c0e327c2-3c89-44fa-a013-e0fe89920ea8",
+              "content": "近8个月尾骨左侧附近疼痛，咳嗽/打喷嚏及早期弯腰可诱发加重，影响用力做事；盆骨CT、磁共振及X片检查均正常",
+              "timestamp": 1771461631.8309386,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f07e9ee1-4ff7-44dc-bb1f-4fa82d3ef4f8",
+              "content": "化验：血沉ESR半年前13mm/h（正常），本次26mm/h（略高，参考≤20）；风湿抗O（ASO）500（参考0-200）",
+              "timestamp": 1771461631.8309517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "60812587-2606-4706-921c-13c8cf26ae5c",
+              "content": "上海就诊医生王锋判断为风湿；开具祖师麻片、阿莫西林克拉维酸钾片；已做青霉素皮试可用青霉素",
+              "timestamp": 1771461631.8309565,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "108eae68-9ed1-48f6-b506-953c97cb220f",
+              "content": "服药后（早饭后）出现胃部不适持续一天；咨询该不良反应是否会随服用次数减少、是否应继续用药",
+              "timestamp": 1771461631.830961,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "19a17e75-3fca-45a3-972d-4546823aa1a4",
+              "content": "医生建议做肌腱端超声检查和HLAB7检查，以排除强直性脊柱炎（目前诊断尚不明确）",
+              "timestamp": 1771461639.2361605,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "38fd3e6b-5b20-468f-8a77-75d9a796d7ae",
+              "content": "当前诊断不清楚，需进一步检查；医生建议如有空可到门诊就诊",
+              "timestamp": 1771461639.236169,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d4c3c586-0d62-4a2e-bacc-36a365dbbd32",
+              "content": "5天前急性心肌梗死住院治疗后出院；发病时血压低、血糖正常",
+              "timestamp": 1771461646.5512729,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ba349351-aab7-4a1d-9c86-e6c7cb1a7ff2",
+              "content": "今日化验：LDH 266；HBDH 296；AST 52；CK 492；CK-MB 40",
+              "timestamp": 1771461646.551282,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "887213be-f748-405d-b130-59e46f4fe9b9",
+              "content": "医生提示心肌酶谱仍偏高，建议追问：急性心梗住院时心肌酶谱情况、目前是否能进食、正在服用的药物，以及血压/血糖/血脂是否正常",
+              "timestamp": 1771461651.823885,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "c0ed1280-8c24-476a-a9c7-6aaca29e6eb5",
+              "content": "本次化验提示心肌酶谱较高，且较发病时更高",
+              "timestamp": 1771461658.5377316,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "fe301da7-4396-4daa-b4ec-34145ac8be82",
+              "content": "用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771461658.5377362,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "3c13b69b-83e1-4c00-b6e5-9350adab3ef2",
+              "content": "住院期间医生曾建议行心脏血管造影，但患者未做",
+              "timestamp": 1771461675.8183177,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "66221f87-eec2-451e-817c-bc85bb3fa250",
+              "content": "目前未做心肌肌钙蛋白定性检查",
+              "timestamp": 1771461675.8183272,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "ab3adf08-6d98-47c0-a77a-d63ba5213e55",
+              "content": "出院后患者仍有胸闷、乏力、出冷汗，症状未见加重。",
+              "timestamp": 1771461693.3300846,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "796c1015-d398-4dd5-a1ea-7489f0bed158",
+              "content": "医生建议需抗凝治疗，并要求患者上传心电图。",
+              "timestamp": 1771461693.3300946,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "37cca75a-c6fa-49bc-a85e-d79ff352ce79",
+              "content": "咨询者为患者朋友；目前具体用药信息不清楚（部分药名不详）。",
+              "timestamp": 1771461693.330099,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "26d216c2-f14e-485c-8176-0804b12a90ef",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示存在心肌细胞坏死；这些指标在心梗发作后会逐渐升高，不能据此判断目前仍有进行性坏死；但可确定患者为心肌梗死。",
+              "timestamp": 1771461699.8019836,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6b87b672-fbe5-444e-8dbf-5a7889ea6520",
+              "content": "出院后5天内复查心肌酶谱3次（LDH/HBDH/AST/CK/CK-MB）呈逐次升高趋势",
+              "timestamp": 1771461710.6051195,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "05c273ff-58ff-4604-8e5b-6a4a32d4d62a",
+              "content": "住院医生说明：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；单次指标不能证明仍在进行性坏死；心梗发病后第5天通常为这些指标的高峰期。",
+              "timestamp": 1771461721.139313,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "aa7b3aee-4155-4daf-b66e-b64d78d5220b",
+              "content": "医生诊断为滑囊炎",
+              "timestamp": 1771461727.1722162,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "d5729576-e505-4976-ad99-6a58368318a6",
+              "content": "右臂（肘部）有块癣",
+              "timestamp": 1771461727.1722262,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "677975ce-68d0-4c28-b6cc-69b00663a462",
+              "content": "医生给予封闭针（局部注射）治疗",
+              "timestamp": 1771461727.1722326,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "先心房缺4.5毫米，出生即听见心脏有轻微杂音出生48天肺炎心率快最高达280检查出房缺超声描述：1.心脏位置及连接正常2.多切面显示房间隔中部连续中断，测大小为4.5毫米。彩色血流示房水平左向右分流。3.室间隔回声连续完整4.右房右室略大，左房左室及大血管内径测值正常5.彩色血流显示三尖瓣，肺动脉瓣少量反流，余各组瓣膜回声纤细，活动自如，启闭良好6.心包腔未见异常7.室壁运动分析各室壁厚度，回声正常，运动幅度未见异常8.左心功能测值正常9.左位主动脉弓先天性心脏病房间隔缺损（中央型）彩色血流显示房水平左向右分流。",
+        "to_memory": [
+          "history: 先天性心脏病：房间隔缺损（中央型）4.5mm；彩超示房水平左向右分流",
+          "history: 出生即听到轻微心脏杂音",
+          "history: 出生48天曾患肺炎，心率增快最高达280次/分",
+          "history: 超声要点：心脏位置及连接正常；房间隔中部连续中断约4.5mm；室间隔完整；右房右室略大；左房左室及大血管内径正常；三尖瓣及肺动脉瓣少量反流；其余瓣膜活动良好；心包腔未见异常；室壁运动正常；左心功能正常；左位主动脉弓"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者男，34岁（成人）",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "1d209464-a337-4a3f-8b6e-0714ff7de096",
+              "content": "患者有高脂血症（血脂高）",
+              "timestamp": 1771461658.537717,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "4c9773f9-99d0-495b-a7ea-2615e345123e",
+              "content": "患者无明确青霉素过敏史；青霉素皮试可用",
+              "timestamp": 1771461666.961683,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+              "content": "医生建议药店可购买的中成药：黄芪颗粒、玉屏风冲剂",
+              "timestamp": 1771461620.6826038,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c0e327c2-3c89-44fa-a013-e0fe89920ea8",
+              "content": "近8个月尾骨左侧附近疼痛，咳嗽/打喷嚏及早期弯腰可诱发加重，影响用力做事；盆骨CT、磁共振及X片检查均正常",
+              "timestamp": 1771461631.8309386,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f07e9ee1-4ff7-44dc-bb1f-4fa82d3ef4f8",
+              "content": "化验：血沉ESR半年前13mm/h（正常），本次26mm/h（略高，参考≤20）；风湿抗O（ASO）500（参考0-200）",
+              "timestamp": 1771461631.8309517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "60812587-2606-4706-921c-13c8cf26ae5c",
+              "content": "上海就诊医生王锋判断为风湿；开具祖师麻片、阿莫西林克拉维酸钾片；已做青霉素皮试可用青霉素",
+              "timestamp": 1771461631.8309565,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "108eae68-9ed1-48f6-b506-953c97cb220f",
+              "content": "服药后（早饭后）出现胃部不适持续一天；咨询该不良反应是否会随服用次数减少、是否应继续用药",
+              "timestamp": 1771461631.830961,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "19a17e75-3fca-45a3-972d-4546823aa1a4",
+              "content": "医生建议做肌腱端超声检查和HLAB7检查，以排除强直性脊柱炎（目前诊断尚不明确）",
+              "timestamp": 1771461639.2361605,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "38fd3e6b-5b20-468f-8a77-75d9a796d7ae",
+              "content": "当前诊断不清楚，需进一步检查；医生建议如有空可到门诊就诊",
+              "timestamp": 1771461639.236169,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d4c3c586-0d62-4a2e-bacc-36a365dbbd32",
+              "content": "5天前急性心肌梗死住院治疗后出院；发病时血压低、血糖正常",
+              "timestamp": 1771461646.5512729,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ba349351-aab7-4a1d-9c86-e6c7cb1a7ff2",
+              "content": "今日化验：LDH 266；HBDH 296；AST 52；CK 492；CK-MB 40",
+              "timestamp": 1771461646.551282,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "887213be-f748-405d-b130-59e46f4fe9b9",
+              "content": "医生提示心肌酶谱仍偏高，建议追问：急性心梗住院时心肌酶谱情况、目前是否能进食、正在服用的药物，以及血压/血糖/血脂是否正常",
+              "timestamp": 1771461651.823885,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "c0ed1280-8c24-476a-a9c7-6aaca29e6eb5",
+              "content": "本次化验提示心肌酶谱较高，且较发病时更高",
+              "timestamp": 1771461658.5377316,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "fe301da7-4396-4daa-b4ec-34145ac8be82",
+              "content": "用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771461658.5377362,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "3c13b69b-83e1-4c00-b6e5-9350adab3ef2",
+              "content": "住院期间医生曾建议行心脏血管造影，但患者未做",
+              "timestamp": 1771461675.8183177,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "66221f87-eec2-451e-817c-bc85bb3fa250",
+              "content": "目前未做心肌肌钙蛋白定性检查",
+              "timestamp": 1771461675.8183272,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "ab3adf08-6d98-47c0-a77a-d63ba5213e55",
+              "content": "出院后患者仍有胸闷、乏力、出冷汗，症状未见加重。",
+              "timestamp": 1771461693.3300846,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "796c1015-d398-4dd5-a1ea-7489f0bed158",
+              "content": "医生建议需抗凝治疗，并要求患者上传心电图。",
+              "timestamp": 1771461693.3300946,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "37cca75a-c6fa-49bc-a85e-d79ff352ce79",
+              "content": "咨询者为患者朋友；目前具体用药信息不清楚（部分药名不详）。",
+              "timestamp": 1771461693.330099,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "26d216c2-f14e-485c-8176-0804b12a90ef",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示存在心肌细胞坏死；这些指标在心梗发作后会逐渐升高，不能据此判断目前仍有进行性坏死；但可确定患者为心肌梗死。",
+              "timestamp": 1771461699.8019836,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6b87b672-fbe5-444e-8dbf-5a7889ea6520",
+              "content": "出院后5天内复查心肌酶谱3次（LDH/HBDH/AST/CK/CK-MB）呈逐次升高趋势",
+              "timestamp": 1771461710.6051195,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "05c273ff-58ff-4604-8e5b-6a4a32d4d62a",
+              "content": "住院医生说明：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；单次指标不能证明仍在进行性坏死；心梗发病后第5天通常为这些指标的高峰期。",
+              "timestamp": 1771461721.139313,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "aa7b3aee-4155-4daf-b66e-b64d78d5220b",
+              "content": "医生诊断为滑囊炎",
+              "timestamp": 1771461727.1722162,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "d5729576-e505-4976-ad99-6a58368318a6",
+              "content": "右臂（肘部）有块癣",
+              "timestamp": 1771461727.1722262,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "677975ce-68d0-4c28-b6cc-69b00663a462",
+              "content": "医生给予封闭针（局部注射）治疗",
+              "timestamp": 1771461727.1722326,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "09fa1a90-3c49-43d4-af4d-2ff6f2d6931d",
+              "content": "先天性心脏病：房间隔缺损（中央型）约4.5mm；彩超示房水平左向右分流。",
+              "timestamp": 1771461744.4566536,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "dc141472-b766-4466-8c2c-682930bde5ae",
+              "content": "出生即听到轻微心脏杂音。",
+              "timestamp": 1771461744.456663,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "c36c2c6e-eefc-4eda-a655-46bcf28c23e6",
+              "content": "出生后48天曾患肺炎，期间心率增快最高达280次/分。",
+              "timestamp": 1771461744.4566677,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "07b24da8-2726-44df-9efd-1be3a6724d62",
+              "content": "心脏超声要点：心脏位置及连接正常；房间隔中部连续中断约4.5mm；室间隔完整；右房右室略大；左房左室及大血管内径正常；三尖瓣及肺动脉瓣少量反流；其余瓣膜活动良好；心包腔未见异常；室壁运动正常；左心功能正常；左位主动脉弓。",
+              "timestamp": 1771461744.4566715,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "本次化验中，哪一类实验室指标被提示为偏高，并且与发病时相比还进一步升高？",
+          "answer": "心肌酶谱较高，且较发病时更高",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "c0ed1280-8c24-476a-a9c7-6aaca29e6eb5"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            12
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "自然闭合的可能性在80%以上，也不会对孩子有什么影响，建议每半年复查一次心脏超声。目前不需要治疗。自然闭合的可能性在80%以上，也不会对孩子有什么影响，建议每半年复查一次心脏超声。目前不需要治疗。",
+        "to_memory": [
+          "history: 先天性心脏病—房间隔缺损（中央型）4.5mm；彩超提示房水平左向右分流，右房右室略大，三尖瓣及肺动脉瓣少量反流，左心功能正常，左位主动脉弓；出生后可闻轻微心杂音；48天时肺炎伴心率快（最高达280）",
+          "history: 医生评估房缺自然闭合可能性>80%，对孩子影响不大；目前不需要治疗；建议每6个月复查一次心脏超声"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "3f50856f-4c0f-4d80-a2fe-e3511ae4af64",
+              "content": "患者男，34岁（成人）",
+              "timestamp": 1771461615.1586998,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "1d209464-a337-4a3f-8b6e-0714ff7de096",
+              "content": "患者有高脂血症（血脂高）",
+              "timestamp": 1771461658.537717,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "4c9773f9-99d0-495b-a7ea-2615e345123e",
+              "content": "患者无明确青霉素过敏史；青霉素皮试可用",
+              "timestamp": 1771461666.961683,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [
+            {
+              "id": "b2c329de-5efc-4c3c-9e1a-45e8f1716392",
+              "content": "医生判断为气虚，建议可用中药治疗",
+              "timestamp": 1771461608.6555166,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "ba5a6abb-5d12-4d88-8695-27d0fa7fa872",
+              "content": "医生建议药店可购买的中成药：黄芪颗粒、玉屏风冲剂",
+              "timestamp": 1771461620.6826038,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c0e327c2-3c89-44fa-a013-e0fe89920ea8",
+              "content": "近8个月尾骨左侧附近疼痛，咳嗽/打喷嚏及早期弯腰可诱发加重，影响用力做事；盆骨CT、磁共振及X片检查均正常",
+              "timestamp": 1771461631.8309386,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "f07e9ee1-4ff7-44dc-bb1f-4fa82d3ef4f8",
+              "content": "化验：血沉ESR半年前13mm/h（正常），本次26mm/h（略高，参考≤20）；风湿抗O（ASO）500（参考0-200）",
+              "timestamp": 1771461631.8309517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "60812587-2606-4706-921c-13c8cf26ae5c",
+              "content": "上海就诊医生王锋判断为风湿；开具祖师麻片、阿莫西林克拉维酸钾片；已做青霉素皮试可用青霉素",
+              "timestamp": 1771461631.8309565,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "108eae68-9ed1-48f6-b506-953c97cb220f",
+              "content": "服药后（早饭后）出现胃部不适持续一天；咨询该不良反应是否会随服用次数减少、是否应继续用药",
+              "timestamp": 1771461631.830961,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "19a17e75-3fca-45a3-972d-4546823aa1a4",
+              "content": "医生建议做肌腱端超声检查和HLAB7检查，以排除强直性脊柱炎（目前诊断尚不明确）",
+              "timestamp": 1771461639.2361605,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "38fd3e6b-5b20-468f-8a77-75d9a796d7ae",
+              "content": "当前诊断不清楚，需进一步检查；医生建议如有空可到门诊就诊",
+              "timestamp": 1771461639.236169,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d4c3c586-0d62-4a2e-bacc-36a365dbbd32",
+              "content": "5天前急性心肌梗死住院治疗后出院；发病时血压低、血糖正常",
+              "timestamp": 1771461646.5512729,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ba349351-aab7-4a1d-9c86-e6c7cb1a7ff2",
+              "content": "今日化验：LDH 266；HBDH 296；AST 52；CK 492；CK-MB 40",
+              "timestamp": 1771461646.551282,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "887213be-f748-405d-b130-59e46f4fe9b9",
+              "content": "医生提示心肌酶谱仍偏高，建议追问：急性心梗住院时心肌酶谱情况、目前是否能进食、正在服用的药物，以及血压/血糖/血脂是否正常",
+              "timestamp": 1771461651.823885,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "c0ed1280-8c24-476a-a9c7-6aaca29e6eb5",
+              "content": "本次化验提示心肌酶谱较高，且较发病时更高",
+              "timestamp": 1771461658.5377316,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "fe301da7-4396-4daa-b4ec-34145ac8be82",
+              "content": "用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771461658.5377362,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "3c13b69b-83e1-4c00-b6e5-9350adab3ef2",
+              "content": "住院期间医生曾建议行心脏血管造影，但患者未做",
+              "timestamp": 1771461675.8183177,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "66221f87-eec2-451e-817c-bc85bb3fa250",
+              "content": "目前未做心肌肌钙蛋白定性检查",
+              "timestamp": 1771461675.8183272,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "ab3adf08-6d98-47c0-a77a-d63ba5213e55",
+              "content": "出院后患者仍有胸闷、乏力、出冷汗，症状未见加重。",
+              "timestamp": 1771461693.3300846,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "796c1015-d398-4dd5-a1ea-7489f0bed158",
+              "content": "医生建议需抗凝治疗，并要求患者上传心电图。",
+              "timestamp": 1771461693.3300946,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "37cca75a-c6fa-49bc-a85e-d79ff352ce79",
+              "content": "咨询者为患者朋友；目前具体用药信息不清楚（部分药名不详）。",
+              "timestamp": 1771461693.330099,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "26d216c2-f14e-485c-8176-0804b12a90ef",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示存在心肌细胞坏死；这些指标在心梗发作后会逐渐升高，不能据此判断目前仍有进行性坏死；但可确定患者为心肌梗死。",
+              "timestamp": 1771461699.8019836,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6b87b672-fbe5-444e-8dbf-5a7889ea6520",
+              "content": "出院后5天内复查心肌酶谱3次（LDH/HBDH/AST/CK/CK-MB）呈逐次升高趋势",
+              "timestamp": 1771461710.6051195,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "05c273ff-58ff-4604-8e5b-6a4a32d4d62a",
+              "content": "住院医生说明：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；单次指标不能证明仍在进行性坏死；心梗发病后第5天通常为这些指标的高峰期。",
+              "timestamp": 1771461721.139313,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "aa7b3aee-4155-4daf-b66e-b64d78d5220b",
+              "content": "医生诊断为滑囊炎",
+              "timestamp": 1771461727.1722162,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "d5729576-e505-4976-ad99-6a58368318a6",
+              "content": "右臂（肘部）有块癣",
+              "timestamp": 1771461727.1722262,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "677975ce-68d0-4c28-b6cc-69b00663a462",
+              "content": "医生给予封闭针（局部注射）治疗",
+              "timestamp": 1771461727.1722326,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "09fa1a90-3c49-43d4-af4d-2ff6f2d6931d",
+              "content": "先天性心脏病：房间隔缺损（中央型）约4.5mm；彩超示房水平左向右分流。",
+              "timestamp": 1771461744.4566536,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "dc141472-b766-4466-8c2c-682930bde5ae",
+              "content": "出生即听到轻微心脏杂音。",
+              "timestamp": 1771461744.456663,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "c36c2c6e-eefc-4eda-a655-46bcf28c23e6",
+              "content": "出生后48天曾患肺炎，期间心率增快最高达280次/分。",
+              "timestamp": 1771461744.4566677,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "07b24da8-2726-44df-9efd-1be3a6724d62",
+              "content": "心脏超声要点：心脏位置及连接正常；房间隔中部连续中断约4.5mm；室间隔完整；右房右室略大；左房左室及大血管内径正常；三尖瓣及肺动脉瓣少量反流；其余瓣膜活动良好；心包腔未见异常；室壁运动正常；左心功能正常；左位主动脉弓。",
+              "timestamp": 1771461744.4566715,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "3d00f755-ba80-4988-a8d8-f4c19631d541",
+              "content": "医生评估：房间隔缺损自然闭合可能性>80%，对孩子影响不大；目前不需要治疗；建议每6个月复查一次心脏超声。",
+              "timestamp": 1771461751.1056032,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者在上海就诊时，医生当时判断的疾病性质是什么？",
+          "answer": "判断为风湿",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "60812587-2606-4706-921c-13c8cf26ae5c"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            18
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "rare_disease_ddx",
+    "scenario_name": "罕见病鉴别诊断",
+    "session_count": 5,
+    "group_key": "综合科"
+  }
+}

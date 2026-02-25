@@ -1,0 +1,3161 @@
+{
+  "patient_id": "0f47549474c5",
+  "messages": [
+    {
+      "user": {
+        "content": "高血压，2008年9月在湖北脑血管医院检查的。左肾有囊肿和左心室肥大。",
+        "to_memory": [
+          "identity: 患者有慢性病高血压",
+          "history: 2008年9月在湖北脑血管医院检查",
+          "history: 检查发现左肾囊肿",
+          "history: 检查发现左心室肥大"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者曾提到既往做过一次与当前慢性病相关的检查：该检查是在什么时间、哪家医院完成的？请核对并说明。",
+          "answer": "2008年9月在湖北脑血管医院检查。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "首先我想确定一下你的左心室肥厚到什么程度？",
+        "to_memory": [
+          "identity: 患者有高血压（慢性病）",
+          "history: 2008年9月在湖北脑血管医院检查提示左肾囊肿、左心室肥大",
+          "working: 医生询问左心室肥厚程度（尚待明确）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "aafacbc1-55fd-4f5e-ba3e-ed362c58ace5",
+              "content": "医生询问左心室肥厚程度（尚待明确）",
+              "timestamp": 1771466176.0485818,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "医生在本次对话里主要想进一步明确患者心脏方面的哪一项具体情况？",
+          "answer": "左心室肥厚到什么程度",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "aafacbc1-55fd-4f5e-ba3e-ed362c58ace5"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "轻度抑郁症，经常有逃避现实的现状，有时怕见人，经常头痛。",
+        "to_memory": [
+          "history: 轻度抑郁症",
+          "working: 经常有逃避现实的想法/状态，有时害怕见人，经常头痛"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "85000444-237f-44e2-878d-8eb6112898c4",
+              "content": "患者经常有逃避现实的想法/状态",
+              "timestamp": 1771466180.4689527,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c85d93a3-8a16-409e-ac3b-481eb2845d06",
+              "content": "患者有时害怕见人",
+              "timestamp": 1771466180.468958,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "0f017a88-d125-4362-86fc-cfa7f4e8be63",
+              "content": "患者经常头痛",
+              "timestamp": 1771466180.4689627,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "019fa5cb-e10c-49d0-bba9-e2216ec7be73",
+              "content": "患者既往史：轻度抑郁症",
+              "timestamp": 1771466180.468944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者提到自己做相关检查的时间和地点分别是什么？",
+          "answer": "2008年9月在湖北脑血管医院检查",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你好！",
+        "to_memory": [
+          "identity: 患者有高血压（慢性病）",
+          "history: 2008年9月在湖北脑血管医院检查提示左肾囊肿、左心室肥大",
+          "history: 既往诊断轻度抑郁症",
+          "working: 目前症状/困扰包括逃避现实、怕见人、经常头痛"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "85000444-237f-44e2-878d-8eb6112898c4",
+              "content": "患者经常有逃避现实的想法/状态",
+              "timestamp": 1771466180.4689527,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c85d93a3-8a16-409e-ac3b-481eb2845d06",
+              "content": "患者有时害怕见人",
+              "timestamp": 1771466180.468958,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "0f017a88-d125-4362-86fc-cfa7f4e8be63",
+              "content": "患者经常头痛",
+              "timestamp": 1771466180.4689627,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "019fa5cb-e10c-49d0-bba9-e2216ec7be73",
+              "content": "患者既往史：轻度抑郁症",
+              "timestamp": 1771466180.468944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "在既往病史记录中，患者被提到患有哪些长期慢性疾病？",
+          "answer": "高血压",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "019fa5cb-e10c-49d0-bba9-e2216ec7be73",
+              "content": "患者既往史：轻度抑郁症",
+              "timestamp": 1771466180.468944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "低烧，以前患过肺结核。",
+        "to_memory": [
+          "working: 目前有低烧",
+          "history: 既往患过肺结核"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "1cc58326-a19b-418b-b69e-d7446245d127",
+              "content": "目前有低烧",
+              "timestamp": 1771466190.4849916,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "019fa5cb-e10c-49d0-bba9-e2216ec7be73",
+              "content": "患者既往史：轻度抑郁症",
+              "timestamp": 1771466180.468944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "39206052-e76c-44de-b579-b8305e0d05e9",
+              "content": "既往患过肺结核",
+              "timestamp": 1771466190.4850001,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "发热待查是临床上最难诊断的疾病，也是对医生的最大的挑战。您的情况需要做彻底的检查。总的说来发热不外乎三类疾病：感染、肿瘤和风湿免疫，您如果选择来我们医院检查诊断的话，我们将从这三个方面为您仔细做一个检查，为您排忧解难。",
+        "to_memory": [
+          "identity: 患者有高血压",
+          "history: 2008年9月在湖北脑血管医院检查提示左肾囊肿、左心室肥大",
+          "history: 既往患过肺结核",
+          "history: 轻度抑郁症",
+          "working: 本次主诉发热/低烧，发热待查，需进一步检查明确原因（感染/肿瘤/风湿免疫等方向）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "1cc58326-a19b-418b-b69e-d7446245d127",
+              "content": "本次主诉发热/低烧，发热待查，需进一步检查明确原因（感染/肿瘤/风湿免疫等方向）",
+              "timestamp": 1771466190.4849916,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "019fa5cb-e10c-49d0-bba9-e2216ec7be73",
+              "content": "患者既往史：轻度抑郁症",
+              "timestamp": 1771466180.468944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "39206052-e76c-44de-b579-b8305e0d05e9",
+              "content": "既往患过肺结核",
+              "timestamp": 1771466190.4850001,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "回顾该患者的既往病史记录：是否存在一种需要在本次进一步检查或用药前特别核对、以避免安全风险的长期基础疾病？请指出具体是什么。",
+          "answer": "高血压",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "1cc58326-a19b-418b-b69e-d7446245d127"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            7,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "019fa5cb-e10c-49d0-bba9-e2216ec7be73",
+              "content": "患者既往史：轻度抑郁症",
+              "timestamp": 1771466180.468944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "39206052-e76c-44de-b579-b8305e0d05e9",
+              "content": "既往患过肺结核",
+              "timestamp": 1771466190.4850001,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "海绵状血管瘤，出世就有红色胎记，会随年龄增加长大，会发烫，偶尔会疼；前几年曾去过福州儿童医院，附属第一医院，医生说要拿去冻掉，福州也没这设备。前几天去宁德人民医院做彩超，医生说是海绵状血管瘤。杨大夫您好！这就是我女儿的彩超报告单。",
+        "to_memory": [
+          "identity: 患者有高血压（2008年9月于湖北脑血管医院检查提示）",
+          "history: 2008年9月检查：左肾囊肿、左心室肥大/肥厚",
+          "history: 既往诊断轻度抑郁症",
+          "history: 既往患过肺结核",
+          "identity: 代诉者为患者女儿；女儿自出生有红色胎记，随年龄增大而长大，局部发烫，偶尔疼痛",
+          "history: 女儿曾就诊福州儿童医院及附属第一医院，曾被建议冷冻治疗（当地称无设备）",
+          "history: 近日宁德人民医院彩超提示：海绵状血管瘤（女儿）",
+          "identity: 患者表示已提供女儿彩超报告单供医生查看"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d341cecf-36c1-4a5b-b2bc-99f3ad1570fb",
+              "content": "代诉者为患者女儿；女儿自出生有红色胎记，随年龄增大而增大，局部发烫，偶尔疼痛",
+              "timestamp": 1771466203.7765276,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0492847b-7697-4afa-9881-2ea6e08bc20a",
+              "content": "患者表示已提供女儿彩超报告单供医生查看",
+              "timestamp": 1771466203.7765422,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "019fa5cb-e10c-49d0-bba9-e2216ec7be73",
+              "content": "患者既往史：轻度抑郁症",
+              "timestamp": 1771466180.468944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "39206052-e76c-44de-b579-b8305e0d05e9",
+              "content": "既往患过肺结核",
+              "timestamp": 1771466190.4850001,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d653543b-1e32-453f-8cda-d3c653828bd9",
+              "content": "2008年9月于湖北脑血管医院检查提示：左心室肥大/肥厚",
+              "timestamp": 1771466203.7765186,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ec95e59a-6bee-400d-be42-338fcb4949a8",
+              "content": "女儿曾就诊福州儿童医院及附属第一医院，曾被建议冷冻治疗（当地称无设备）",
+              "timestamp": 1771466203.7765334,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0b3fe064-8124-4ad4-9673-204b54230d82",
+              "content": "近日宁德人民医院彩超提示：海绵状血管瘤（女儿）",
+              "timestamp": 1771466203.776538,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者既往检查中曾发现过哪一处器官存在囊性病变？",
+          "answer": "左肾囊肿",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "a13fb5af-1e38-46ca-a7b3-6580150c7162"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            9
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "这照片到看不到上面写的字是什么，而且彩超的报告一般都是模凌两可的，主要还是要配合临床表现，最好是传个照片，而不是哪些检查。",
+        "to_memory": [
+          "history: 医生反馈当前上传的彩超照片看不清文字；提示彩超报告可能较模糊需结合临床表现；建议重新上传清晰的报告照片而非其他检查"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d341cecf-36c1-4a5b-b2bc-99f3ad1570fb",
+              "content": "代诉者为患者女儿；女儿自出生有红色胎记，随年龄增大而增大，局部发烫，偶尔疼痛",
+              "timestamp": 1771466203.7765276,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0492847b-7697-4afa-9881-2ea6e08bc20a",
+              "content": "患者表示已提供女儿彩超报告单供医生查看",
+              "timestamp": 1771466203.7765422,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "019fa5cb-e10c-49d0-bba9-e2216ec7be73",
+              "content": "患者既往史：轻度抑郁症",
+              "timestamp": 1771466180.468944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "39206052-e76c-44de-b579-b8305e0d05e9",
+              "content": "既往患过肺结核",
+              "timestamp": 1771466190.4850001,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d653543b-1e32-453f-8cda-d3c653828bd9",
+              "content": "2008年9月于湖北脑血管医院检查提示：左心室肥大/肥厚",
+              "timestamp": 1771466203.7765186,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ec95e59a-6bee-400d-be42-338fcb4949a8",
+              "content": "女儿曾就诊福州儿童医院及附属第一医院，曾被建议冷冻治疗（当地称无设备）",
+              "timestamp": 1771466203.7765334,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0b3fe064-8124-4ad4-9673-204b54230d82",
+              "content": "近日宁德人民医院彩超提示：海绵状血管瘤（女儿）",
+              "timestamp": 1771466203.776538,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "53ae28dd-43e3-4a03-8b46-c027704ccb68",
+              "content": "医生反馈：当前上传的彩超照片文字看不清，报告可能较模糊需结合临床表现；建议重新上传清晰的彩超报告照片（非其他检查）。",
+              "timestamp": 1771466209.218994,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "医生在查看患者/家属提供的影像资料时提到“看不到上面写的字”，这与患者先前声称已提交的资料类型是否存在信息不一致？请指出患者当时表示提交的具体是什么资料。",
+          "answer": "患者表示已提供女儿的彩超报告单供医生查看",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "a13fb5af-1e38-46ca-a7b3-6580150c7162"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "0492847b-7697-4afa-9881-2ea6e08bc20a"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            10,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "杨大夫您好！这就是我女儿彩超。",
+        "to_memory": [
+          "history: 患者女儿曾做彩超检查，医生提示为海绵状血管瘤（伴出生红色胎记，随年龄增大，局部发烫，偶有疼痛）；现患者称发送女儿彩超资料"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d341cecf-36c1-4a5b-b2bc-99f3ad1570fb",
+              "content": "代诉者为患者女儿；女儿自出生有红色胎记，随年龄增大而增大，局部发烫，偶尔疼痛",
+              "timestamp": 1771466203.7765276,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0492847b-7697-4afa-9881-2ea6e08bc20a",
+              "content": "患者称将发送/已发送女儿彩超资料供医生查看",
+              "timestamp": 1771466203.7765422,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "019fa5cb-e10c-49d0-bba9-e2216ec7be73",
+              "content": "患者既往史：轻度抑郁症",
+              "timestamp": 1771466180.468944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "39206052-e76c-44de-b579-b8305e0d05e9",
+              "content": "既往患过肺结核",
+              "timestamp": 1771466190.4850001,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d653543b-1e32-453f-8cda-d3c653828bd9",
+              "content": "2008年9月于湖北脑血管医院检查提示：左心室肥大/肥厚",
+              "timestamp": 1771466203.7765186,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ec95e59a-6bee-400d-be42-338fcb4949a8",
+              "content": "女儿曾就诊福州儿童医院及附属第一医院，曾被建议冷冻治疗（当地称无设备）",
+              "timestamp": 1771466203.7765334,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0b3fe064-8124-4ad4-9673-204b54230d82",
+              "content": "女儿近日在宁德人民医院做彩超检查，医生提示为海绵状血管瘤（伴出生红色胎记，随年龄增大，局部发烫，偶有疼痛）",
+              "timestamp": 1771466203.776538,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "53ae28dd-43e3-4a03-8b46-c027704ccb68",
+              "content": "医生反馈：当前上传的彩超照片文字看不清，报告可能较模糊需结合临床表现；建议重新上传清晰的彩超报告照片（非其他检查）。",
+              "timestamp": 1771466209.218994,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "我说的是局部照片，不是彩超啊，因为彩超只是个帮助诊断的检查，但怎么治疗主要是看实际情况。",
+        "to_memory": [
+          "history: 既往患过肺结核",
+          "identity: 患者/家属描述女儿出生即有红色胎记，随年龄增大而长大，局部发烫，偶尔疼痛；外院彩超提示/医生称为海绵状血管瘤",
+          "history: 曾就诊福州儿童医院及附属第一医院，医生曾建议冷冻治疗但当地称无设备；近日在宁德人民医院做彩超",
+          "history: 医生说明彩超仅为辅助诊断，治疗主要需结合局部实际情况，要求提供局部照片而非彩超报告",
+          "identity: 既往自述轻度抑郁症，常有逃避现实、怕见人；经常头痛",
+          "working: 近期低烧"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ca302580-a7f1-4c8a-bacb-54f8daa77186",
+              "content": "患者经常头痛",
+              "timestamp": 1771466225.0810676,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "bf436c92-26a2-4a58-af8e-495b227da0ad",
+              "content": "近期低烧",
+              "timestamp": 1771466225.0810773,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d341cecf-36c1-4a5b-b2bc-99f3ad1570fb",
+              "content": "代诉者为患者女儿；女儿自出生有红色胎记，随年龄增大而增大，局部发烫，偶尔疼痛；外院彩超/医生称为海绵状血管瘤（或海绵状血管瘤样病变）",
+              "timestamp": 1771466203.7765276,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0492847b-7697-4afa-9881-2ea6e08bc20a",
+              "content": "患者称将发送/已发送女儿彩超资料供医生查看",
+              "timestamp": 1771466203.7765422,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "019fa5cb-e10c-49d0-bba9-e2216ec7be73",
+              "content": "患者既往史：轻度抑郁症，自述常有逃避现实、怕见人",
+              "timestamp": 1771466180.468944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "39206052-e76c-44de-b579-b8305e0d05e9",
+              "content": "既往患过肺结核",
+              "timestamp": 1771466190.4850001,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d653543b-1e32-453f-8cda-d3c653828bd9",
+              "content": "2008年9月于湖北脑血管医院检查提示：左心室肥大/肥厚",
+              "timestamp": 1771466203.7765186,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ec95e59a-6bee-400d-be42-338fcb4949a8",
+              "content": "女儿曾就诊福州儿童医院及附属第一医院，曾被建议冷冻治疗（当地称无设备）",
+              "timestamp": 1771466203.7765334,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0b3fe064-8124-4ad4-9673-204b54230d82",
+              "content": "女儿近日在宁德人民医院做彩超检查，医生提示为海绵状血管瘤（伴出生红色胎记，随年龄增大，局部发烫，偶有疼痛）",
+              "timestamp": 1771466203.776538,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "53ae28dd-43e3-4a03-8b46-c027704ccb68",
+              "content": "医生说明：彩超仅为辅助诊断，治疗需结合局部实际情况；要求提供局部照片（患处外观）而非彩超报告",
+              "timestamp": 1771466209.218994,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者更早一次检查报告中提到的心脏结构方面的发现，与本次咨询里患者近期出现的全身症状，这两项分别是什么？",
+          "answer": "左心室肥大；近期低烧",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "1fcf7193-f4c2-4759-9a1c-70df41495d3b"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "bf436c92-26a2-4a58-af8e-495b227da0ad"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            12,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "杨大夫您好！我想带小孩去找您看看，什么时候能预约到您呢？",
+        "to_memory": [
+          "history: 既往患过肺结核",
+          "history: 女儿疑诊/被告知海绵状血管瘤（先天红色胎记，随年龄增大，局部发烫，偶有疼痛；宁德人民医院彩超提示海绵状血管瘤）",
+          "working: 计划带孩子线下就诊，咨询预约时间"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ca302580-a7f1-4c8a-bacb-54f8daa77186",
+              "content": "患者经常头痛",
+              "timestamp": 1771466225.0810676,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "bf436c92-26a2-4a58-af8e-495b227da0ad",
+              "content": "近期低烧",
+              "timestamp": 1771466225.0810773,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "2d6dadee-b5d0-44f4-b7b4-0831d98156de",
+              "content": "计划带孩子线下就诊，咨询预约时间",
+              "timestamp": 1771466231.1831036,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d341cecf-36c1-4a5b-b2bc-99f3ad1570fb",
+              "content": "代诉者为患者女儿；女儿自出生有红色胎记，随年龄增大而增大，局部发烫，偶尔疼痛；外院彩超/医生称为海绵状血管瘤（或海绵状血管瘤样病变）",
+              "timestamp": 1771466203.7765276,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0492847b-7697-4afa-9881-2ea6e08bc20a",
+              "content": "患者称将发送/已发送女儿彩超资料供医生查看",
+              "timestamp": 1771466203.7765422,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "019fa5cb-e10c-49d0-bba9-e2216ec7be73",
+              "content": "患者既往史：轻度抑郁症，自述常有逃避现实、怕见人",
+              "timestamp": 1771466180.468944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "39206052-e76c-44de-b579-b8305e0d05e9",
+              "content": "既往患过肺结核",
+              "timestamp": 1771466190.4850001,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d653543b-1e32-453f-8cda-d3c653828bd9",
+              "content": "2008年9月于湖北脑血管医院检查提示：左心室肥大/肥厚",
+              "timestamp": 1771466203.7765186,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ec95e59a-6bee-400d-be42-338fcb4949a8",
+              "content": "女儿曾就诊福州儿童医院及附属第一医院，曾被建议冷冻治疗（当地称无设备）",
+              "timestamp": 1771466203.7765334,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0b3fe064-8124-4ad4-9673-204b54230d82",
+              "content": "女儿近日在宁德人民医院做彩超检查，医生提示为海绵状血管瘤（伴出生红色胎记，随年龄增大，局部发烫，偶有疼痛）",
+              "timestamp": 1771466203.776538,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "53ae28dd-43e3-4a03-8b46-c027704ccb68",
+              "content": "医生说明：彩超仅为辅助诊断，治疗需结合局部实际情况；要求提供局部照片（患处外观）而非彩超报告",
+              "timestamp": 1771466209.218994,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者在这次交流中还提到近期出现过哪一种全身状态方面的不适？",
+          "answer": "近期低烧",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "bf436c92-26a2-4a58-af8e-495b227da0ad"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "不好意思，我今年被卫生厅派去基层指导工作，不在医院上班，不过你如果想来我们医院看看，可以直接找我们科的谢义德主任，而且谢主任是省内血管瘤方面的老专家了，找他看肯定比我在这方面更专业，因为我们科分工分得很细，每个人都有自己更擅长的，我虽然也看血管瘤，但事实求是的说，我更擅长的是激光治疗胎记，而他则是更擅长血管瘤的，他是每周五上午看门诊，网上也有他的介绍。",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ca302580-a7f1-4c8a-bacb-54f8daa77186",
+              "content": "患者经常头痛",
+              "timestamp": 1771466225.0810676,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "bf436c92-26a2-4a58-af8e-495b227da0ad",
+              "content": "近期低烧",
+              "timestamp": 1771466225.0810773,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "2d6dadee-b5d0-44f4-b7b4-0831d98156de",
+              "content": "计划带孩子线下就诊，咨询预约时间",
+              "timestamp": 1771466231.1831036,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d341cecf-36c1-4a5b-b2bc-99f3ad1570fb",
+              "content": "代诉者为患者女儿；女儿自出生有红色胎记，随年龄增大而增大，局部发烫，偶尔疼痛；外院彩超/医生称为海绵状血管瘤（或海绵状血管瘤样病变）",
+              "timestamp": 1771466203.7765276,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0492847b-7697-4afa-9881-2ea6e08bc20a",
+              "content": "患者称将发送/已发送女儿彩超资料供医生查看",
+              "timestamp": 1771466203.7765422,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "019fa5cb-e10c-49d0-bba9-e2216ec7be73",
+              "content": "患者既往史：轻度抑郁症，自述常有逃避现实、怕见人",
+              "timestamp": 1771466180.468944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "39206052-e76c-44de-b579-b8305e0d05e9",
+              "content": "既往患过肺结核",
+              "timestamp": 1771466190.4850001,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d653543b-1e32-453f-8cda-d3c653828bd9",
+              "content": "2008年9月于湖北脑血管医院检查提示：左心室肥大/肥厚",
+              "timestamp": 1771466203.7765186,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ec95e59a-6bee-400d-be42-338fcb4949a8",
+              "content": "女儿曾就诊福州儿童医院及附属第一医院，曾被建议冷冻治疗（当地称无设备）",
+              "timestamp": 1771466203.7765334,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0b3fe064-8124-4ad4-9673-204b54230d82",
+              "content": "女儿近日在宁德人民医院做彩超检查，医生提示为海绵状血管瘤（伴出生红色胎记，随年龄增大，局部发烫，偶有疼痛）",
+              "timestamp": 1771466203.776538,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "53ae28dd-43e3-4a03-8b46-c027704ccb68",
+              "content": "医生说明：彩超仅为辅助诊断，治疗需结合局部实际情况；要求提供局部照片（患处外观）而非彩超报告",
+              "timestamp": 1771466209.218994,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "杨大夫您好！在这先谢谢你了。这个就是我女儿的血管瘤的照片了，还得麻烦您给看看。",
+        "to_memory": [
+          "identity: 患者有一名女儿（患儿），先天红色胎记/疑血管瘤",
+          "history: 患儿既往在福州儿童医院、附属第一医院就诊，曾被建议冷冻治疗（当地称无设备）；近期宁德人民医院彩超提示海绵状血管瘤",
+          "identity: 本次提供患儿血管瘤（胎记）局部照片请求医生查看与评估；患儿病灶随年龄增大、局部发烫、偶尔疼痛"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ca302580-a7f1-4c8a-bacb-54f8daa77186",
+              "content": "患者经常头痛",
+              "timestamp": 1771466225.0810676,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "bf436c92-26a2-4a58-af8e-495b227da0ad",
+              "content": "近期低烧",
+              "timestamp": 1771466225.0810773,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "2d6dadee-b5d0-44f4-b7b4-0831d98156de",
+              "content": "计划带孩子线下就诊，咨询预约时间",
+              "timestamp": 1771466231.1831036,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d341cecf-36c1-4a5b-b2bc-99f3ad1570fb",
+              "content": "代诉者为患者女儿；女儿自出生有红色胎记，随年龄增大而增大，局部发烫，偶尔疼痛；外院彩超/医生称为海绵状血管瘤（或海绵状血管瘤样病变）",
+              "timestamp": 1771466203.7765276,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0492847b-7697-4afa-9881-2ea6e08bc20a",
+              "content": "患者称将发送/已发送女儿（患儿）血管瘤/红色胎记的局部外观照片（并可能附彩超资料）供医生查看与评估",
+              "timestamp": 1771466203.7765422,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "019fa5cb-e10c-49d0-bba9-e2216ec7be73",
+              "content": "患者既往史：轻度抑郁症，自述常有逃避现实、怕见人",
+              "timestamp": 1771466180.468944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "39206052-e76c-44de-b579-b8305e0d05e9",
+              "content": "既往患过肺结核",
+              "timestamp": 1771466190.4850001,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d653543b-1e32-453f-8cda-d3c653828bd9",
+              "content": "2008年9月于湖北脑血管医院检查提示：左心室肥大/肥厚",
+              "timestamp": 1771466203.7765186,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ec95e59a-6bee-400d-be42-338fcb4949a8",
+              "content": "女儿曾就诊福州儿童医院及附属第一医院，曾被建议冷冻治疗（当地称无设备）",
+              "timestamp": 1771466203.7765334,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0b3fe064-8124-4ad4-9673-204b54230d82",
+              "content": "女儿近日在宁德人民医院做彩超检查，医生提示为海绵状血管瘤（伴出生红色胎记，随年龄增大，局部发烫，偶有疼痛）",
+              "timestamp": 1771466203.776538,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "53ae28dd-43e3-4a03-8b46-c027704ccb68",
+              "content": "医生说明：彩超仅为辅助诊断，治疗需结合局部实际情况；要求提供局部照片（患处外观）而非彩超报告",
+              "timestamp": 1771466209.218994,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "在这次交流中，患者（家属）还提到孩子近期出现了什么伴随的不适情况？",
+          "answer": "近期低烧",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "bf436c92-26a2-4a58-af8e-495b227da0ad"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "这个照片是草莓状血管瘤，为什么说是海绵状的呢？我就想海绵状到十岁了早该治疗了，所以一直叫你传个照片看看，而且这个也不严重，做激光就可以了，甚至你都十岁了，继续观察也可以，不过我没有看到病人，我也不好随便说，因为你说的儿童医院和附一都是大医院，既然他们都说你这是海绵状的，还要做彩超，还说不好治疗，应该他们说的不会错的，我也被搞不懂了，如果按照片看就是草莓状的，很普通的血管瘤，要么就是我没看到病人，会不会还有什么照片拍不出来的情况，要不你还是去医院找谢主任看看。",
+        "to_memory": [
+          "identity: 患者既往患过肺结核",
+          "identity: 患者（女儿）自出生即有红色胎记/疑血管瘤，随年龄增大而增大，局部发烫，偶有疼痛；目前约10岁",
+          "history: 曾就诊福州儿童医院及附属第一医院，医生曾评估为海绵状血管瘤并建议冷冻治疗（当地称无设备）",
+          "history: 近日在宁德人民医院做彩超，提示海绵状血管瘤",
+          "identity: 现医生根据照片更倾向草莓状血管瘤（与既往“海绵状”诊断不一致），认为不严重，可激光治疗或继续观察；建议到医院找谢义德主任面诊进一步确认"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ca302580-a7f1-4c8a-bacb-54f8daa77186",
+              "content": "患者经常头痛",
+              "timestamp": 1771466225.0810676,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "bf436c92-26a2-4a58-af8e-495b227da0ad",
+              "content": "近期低烧",
+              "timestamp": 1771466225.0810773,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "2d6dadee-b5d0-44f4-b7b4-0831d98156de",
+              "content": "计划带孩子线下就诊，咨询预约时间",
+              "timestamp": 1771466231.1831036,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d341cecf-36c1-4a5b-b2bc-99f3ad1570fb",
+              "content": "代诉者为患者女儿；女儿自出生有红色胎记/疑血管瘤，随年龄增大而增大，局部发烫，偶有疼痛；目前约10岁；外院彩超/医生多称为海绵状血管瘤（或海绵状血管瘤样病变），但现医生根据照片更倾向草莓状血管瘤（与既往诊断不一致），认为不严重，可激光治疗或继续观察",
+              "timestamp": 1771466203.7765276,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0492847b-7697-4afa-9881-2ea6e08bc20a",
+              "content": "患者称将发送/已发送女儿（患儿）血管瘤/红色胎记的局部外观照片（并可能附彩超资料）供医生查看与评估",
+              "timestamp": 1771466203.7765422,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "019fa5cb-e10c-49d0-bba9-e2216ec7be73",
+              "content": "患者既往史：轻度抑郁症，自述常有逃避现实、怕见人",
+              "timestamp": 1771466180.468944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "39206052-e76c-44de-b579-b8305e0d05e9",
+              "content": "既往患过肺结核",
+              "timestamp": 1771466190.4850001,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d653543b-1e32-453f-8cda-d3c653828bd9",
+              "content": "2008年9月于湖北脑血管医院检查提示：左心室肥大/肥厚",
+              "timestamp": 1771466203.7765186,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ec95e59a-6bee-400d-be42-338fcb4949a8",
+              "content": "女儿曾就诊福州儿童医院及附属第一医院，医生评估为海绵状血管瘤并建议冷冻治疗（当地称无设备）",
+              "timestamp": 1771466203.7765334,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0b3fe064-8124-4ad4-9673-204b54230d82",
+              "content": "女儿近日在宁德人民医院做彩超检查，提示海绵状血管瘤",
+              "timestamp": 1771466203.776538,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "53ae28dd-43e3-4a03-8b46-c027704ccb68",
+              "content": "医生说明：彩超仅为辅助诊断，治疗需结合局部实际情况；要求提供局部照片（患处外观）而非彩超报告",
+              "timestamp": 1771466209.218994,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "adb5e255-d4ef-4a06-93d2-60f1fed44b22",
+              "content": "现医生根据照片更倾向草莓状血管瘤（与既往“海绵状”诊断不一致），认为不严重，可激光治疗或继续观察；建议到医院找谢义德主任面诊进一步确认",
+              "timestamp": 1771466247.955293,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d341cecf-36c1-4a5b-b2bc-99f3ad1570fb",
+              "content": "代诉者为患者女儿；女儿自出生有红色胎记/疑血管瘤，随年龄增大而增大，局部发烫，偶有疼痛；目前约10岁；外院彩超/医生多称为海绵状血管瘤（或海绵状血管瘤样病变），但现医生根据照片更倾向草莓状血管瘤（与既往诊断不一致），认为不严重，可激光治疗或继续观察",
+              "timestamp": 1771466203.7765276,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0492847b-7697-4afa-9881-2ea6e08bc20a",
+              "content": "患者称将发送/已发送女儿（患儿）血管瘤/红色胎记的局部外观照片（并可能附彩超资料）供医生查看与评估",
+              "timestamp": 1771466203.7765422,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "019fa5cb-e10c-49d0-bba9-e2216ec7be73",
+              "content": "患者既往史：轻度抑郁症，自述常有逃避现实、怕见人",
+              "timestamp": 1771466180.468944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "39206052-e76c-44de-b579-b8305e0d05e9",
+              "content": "既往患过肺结核",
+              "timestamp": 1771466190.4850001,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d653543b-1e32-453f-8cda-d3c653828bd9",
+              "content": "2008年9月于湖北脑血管医院检查提示：左心室肥大/肥厚",
+              "timestamp": 1771466203.7765186,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ec95e59a-6bee-400d-be42-338fcb4949a8",
+              "content": "女儿曾就诊福州儿童医院及附属第一医院，医生评估为海绵状血管瘤并建议冷冻治疗（当地称无设备）",
+              "timestamp": 1771466203.7765334,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0b3fe064-8124-4ad4-9673-204b54230d82",
+              "content": "女儿近日在宁德人民医院做彩超检查，提示海绵状血管瘤",
+              "timestamp": 1771466203.776538,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "53ae28dd-43e3-4a03-8b46-c027704ccb68",
+              "content": "医生说明：彩超仅为辅助诊断，治疗需结合局部实际情况；要求提供局部照片（患处外观）而非彩超报告",
+              "timestamp": 1771466209.218994,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "adb5e255-d4ef-4a06-93d2-60f1fed44b22",
+              "content": "现医生根据照片更倾向草莓状血管瘤（与既往“海绵状”诊断不一致），认为不严重，可激光治疗或继续观察；建议到医院找谢义德主任面诊进一步确认",
+              "timestamp": 1771466247.955293,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "中场扭转，在孩子出生3天后突然出现一吃奶就吐，呕吐物为绿色的。屡次哭闹。体温为37.5.C。在保定市儿童医院做彩超说是中场扭转。",
+        "to_memory": [
+          "history: 出生后3天在保定市儿童医院做彩超，提示/诊断为中肠扭转",
+          "working: 新生儿一吃奶就吐，呕吐物为绿色；屡次哭闹；体温37.5℃"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "01a17648-8a8b-4037-8f2e-76652346f4d7",
+              "content": "新生儿一吃奶就吐，呕吐物为绿色；屡次哭闹；体温37.5℃",
+              "timestamp": 1771466251.5210629,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d341cecf-36c1-4a5b-b2bc-99f3ad1570fb",
+              "content": "代诉者为患者女儿；女儿自出生有红色胎记/疑血管瘤，随年龄增大而增大，局部发烫，偶有疼痛；目前约10岁；外院彩超/医生多称为海绵状血管瘤（或海绵状血管瘤样病变），但现医生根据照片更倾向草莓状血管瘤（与既往诊断不一致），认为不严重，可激光治疗或继续观察",
+              "timestamp": 1771466203.7765276,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0492847b-7697-4afa-9881-2ea6e08bc20a",
+              "content": "患者称将发送/已发送女儿（患儿）血管瘤/红色胎记的局部外观照片（并可能附彩超资料）供医生查看与评估",
+              "timestamp": 1771466203.7765422,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "019fa5cb-e10c-49d0-bba9-e2216ec7be73",
+              "content": "患者既往史：轻度抑郁症，自述常有逃避现实、怕见人",
+              "timestamp": 1771466180.468944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "39206052-e76c-44de-b579-b8305e0d05e9",
+              "content": "既往患过肺结核",
+              "timestamp": 1771466190.4850001,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d653543b-1e32-453f-8cda-d3c653828bd9",
+              "content": "2008年9月于湖北脑血管医院检查提示：左心室肥大/肥厚",
+              "timestamp": 1771466203.7765186,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ec95e59a-6bee-400d-be42-338fcb4949a8",
+              "content": "女儿曾就诊福州儿童医院及附属第一医院，医生评估为海绵状血管瘤并建议冷冻治疗（当地称无设备）",
+              "timestamp": 1771466203.7765334,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0b3fe064-8124-4ad4-9673-204b54230d82",
+              "content": "女儿近日在宁德人民医院做彩超检查，提示海绵状血管瘤",
+              "timestamp": 1771466203.776538,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "53ae28dd-43e3-4a03-8b46-c027704ccb68",
+              "content": "医生说明：彩超仅为辅助诊断，治疗需结合局部实际情况；要求提供局部照片（患处外观）而非彩超报告",
+              "timestamp": 1771466209.218994,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "adb5e255-d4ef-4a06-93d2-60f1fed44b22",
+              "content": "现医生根据照片更倾向草莓状血管瘤（与既往“海绵状”诊断不一致），认为不严重，可激光治疗或继续观察；建议到医院找谢义德主任面诊进一步确认",
+              "timestamp": 1771466247.955293,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "14c45c28-ac14-49e3-8431-252f227674dc",
+              "content": "出生后3天在保定市儿童医院做彩超，提示/诊断为中肠扭转",
+              "timestamp": 1771466251.5210505,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者当前这次急症描述中，有哪些关键信息提示需要立即进行安全风险评估（如可能存在需要紧急处理的情况）？请列出对话里患者/家属明确提到的具体表现与体征。",
+          "answer": "新生儿一吃奶就吐，呕吐物为绿色；屡次哭闹；体温37.5℃",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "01a17648-8a8b-4037-8f2e-76652346f4d7"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            18,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "尽快手术 否则会有危险。",
+        "to_memory": [
+          "history: 新生儿疑似/彩超提示中肠扭转（出生后第3天出现一吃奶就吐，呕吐物绿色；屡次哭闹；体温37.5℃；保定市儿童医院彩超提示中肠扭转）",
+          "history: 医生建议尽快手术，否则有危险"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "01a17648-8a8b-4037-8f2e-76652346f4d7",
+              "content": "新生儿一吃奶就吐，呕吐物为绿色；屡次哭闹；体温37.5℃",
+              "timestamp": 1771466251.5210629,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d341cecf-36c1-4a5b-b2bc-99f3ad1570fb",
+              "content": "代诉者为患者女儿；女儿自出生有红色胎记/疑血管瘤，随年龄增大而增大，局部发烫，偶有疼痛；目前约10岁；外院彩超/医生多称为海绵状血管瘤（或海绵状血管瘤样病变），但现医生根据照片更倾向草莓状血管瘤（与既往诊断不一致），认为不严重，可激光治疗或继续观察",
+              "timestamp": 1771466203.7765276,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0492847b-7697-4afa-9881-2ea6e08bc20a",
+              "content": "患者称将发送/已发送女儿（患儿）血管瘤/红色胎记的局部外观照片（并可能附彩超资料）供医生查看与评估",
+              "timestamp": 1771466203.7765422,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "019fa5cb-e10c-49d0-bba9-e2216ec7be73",
+              "content": "患者既往史：轻度抑郁症，自述常有逃避现实、怕见人",
+              "timestamp": 1771466180.468944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "39206052-e76c-44de-b579-b8305e0d05e9",
+              "content": "既往患过肺结核",
+              "timestamp": 1771466190.4850001,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d653543b-1e32-453f-8cda-d3c653828bd9",
+              "content": "2008年9月于湖北脑血管医院检查提示：左心室肥大/肥厚",
+              "timestamp": 1771466203.7765186,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ec95e59a-6bee-400d-be42-338fcb4949a8",
+              "content": "女儿曾就诊福州儿童医院及附属第一医院，医生评估为海绵状血管瘤并建议冷冻治疗（当地称无设备）",
+              "timestamp": 1771466203.7765334,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0b3fe064-8124-4ad4-9673-204b54230d82",
+              "content": "女儿近日在宁德人民医院做彩超检查，提示海绵状血管瘤",
+              "timestamp": 1771466203.776538,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "53ae28dd-43e3-4a03-8b46-c027704ccb68",
+              "content": "医生说明：彩超仅为辅助诊断，治疗需结合局部实际情况；要求提供局部照片（患处外观）而非彩超报告",
+              "timestamp": 1771466209.218994,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "adb5e255-d4ef-4a06-93d2-60f1fed44b22",
+              "content": "现医生根据照片更倾向草莓状血管瘤（与既往“海绵状”诊断不一致），认为不严重，可激光治疗或继续观察；建议到医院找谢义德主任面诊进一步确认",
+              "timestamp": 1771466247.955293,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "14c45c28-ac14-49e3-8431-252f227674dc",
+              "content": "出生后3天在保定市儿童医院做彩超，提示/诊断为中肠扭转",
+              "timestamp": 1771466251.5210505,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "f66fc67d-8b74-4630-ac10-2439f30ab009",
+              "content": "新生儿出生后第3天出现一吃奶就吐（呕吐物绿色）、屡次哭闹、体温37.5℃；保定市儿童医院彩超提示/疑似中肠扭转。",
+              "timestamp": 1771466260.0504065,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "9995d9c0-b5dd-4e85-ba6a-7e0d2329c336",
+              "content": "医生建议尽快手术处理中肠扭转，否则有危险。",
+              "timestamp": 1771466260.0504148,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "请核对患者既往影像学检查记录与本次就诊的紧急腹部症状描述：两者是否存在需要优先排除的诊疗安全冲突？如果有，冲突点分别是什么？",
+          "answer": "既往检查发现左肾囊肿；本次描述为新生儿一吃奶就吐、呕吐物为绿色、屡次哭闹、体温37.5℃。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "a13fb5af-1e38-46ca-a7b3-6580150c7162"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "01a17648-8a8b-4037-8f2e-76652346f4d7"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            19,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d341cecf-36c1-4a5b-b2bc-99f3ad1570fb",
+              "content": "代诉者为患者女儿；女儿自出生有红色胎记/疑血管瘤，随年龄增大而增大，局部发烫，偶有疼痛；目前约10岁；外院彩超/医生多称为海绵状血管瘤（或海绵状血管瘤样病变），但现医生根据照片更倾向草莓状血管瘤（与既往诊断不一致），认为不严重，可激光治疗或继续观察",
+              "timestamp": 1771466203.7765276,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0492847b-7697-4afa-9881-2ea6e08bc20a",
+              "content": "患者称将发送/已发送女儿（患儿）血管瘤/红色胎记的局部外观照片（并可能附彩超资料）供医生查看与评估",
+              "timestamp": 1771466203.7765422,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "019fa5cb-e10c-49d0-bba9-e2216ec7be73",
+              "content": "患者既往史：轻度抑郁症，自述常有逃避现实、怕见人",
+              "timestamp": 1771466180.468944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "39206052-e76c-44de-b579-b8305e0d05e9",
+              "content": "既往患过肺结核",
+              "timestamp": 1771466190.4850001,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d653543b-1e32-453f-8cda-d3c653828bd9",
+              "content": "2008年9月于湖北脑血管医院检查提示：左心室肥大/肥厚",
+              "timestamp": 1771466203.7765186,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ec95e59a-6bee-400d-be42-338fcb4949a8",
+              "content": "女儿曾就诊福州儿童医院及附属第一医院，医生评估为海绵状血管瘤并建议冷冻治疗（当地称无设备）",
+              "timestamp": 1771466203.7765334,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0b3fe064-8124-4ad4-9673-204b54230d82",
+              "content": "女儿近日在宁德人民医院做彩超检查，提示海绵状血管瘤",
+              "timestamp": 1771466203.776538,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "53ae28dd-43e3-4a03-8b46-c027704ccb68",
+              "content": "医生说明：彩超仅为辅助诊断，治疗需结合局部实际情况；要求提供局部照片（患处外观）而非彩超报告",
+              "timestamp": 1771466209.218994,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "adb5e255-d4ef-4a06-93d2-60f1fed44b22",
+              "content": "现医生根据照片更倾向草莓状血管瘤（与既往“海绵状”诊断不一致），认为不严重，可激光治疗或继续观察；建议到医院找谢义德主任面诊进一步确认",
+              "timestamp": 1771466247.955293,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "14c45c28-ac14-49e3-8431-252f227674dc",
+              "content": "出生后3天在保定市儿童医院做彩超，提示/诊断为中肠扭转",
+              "timestamp": 1771466251.5210505,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "f66fc67d-8b74-4630-ac10-2439f30ab009",
+              "content": "新生儿出生后第3天出现一吃奶就吐（呕吐物绿色）、屡次哭闹、体温37.5℃；保定市儿童医院彩超提示/疑似中肠扭转。",
+              "timestamp": 1771466260.0504065,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "9995d9c0-b5dd-4e85-ba6a-7e0d2329c336",
+              "content": "医生建议尽快手术处理中肠扭转，否则有危险。",
+              "timestamp": 1771466260.0504148,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "食道癌，患者男，57，3年前得过甲肝！前几天检查出来食道癌，胃镜结果：（1食管多发性隆起及溃疡病变性质待定：ca并腔内转移？2非萎缩性胃炎（充血/渗出型）伴胃窦隆起糜烂）病理组织结果：（食管3粒，各芝麻大，粘膜鳞状上皮异型增生，灶性鳞癌变。）增强CT结果：（符合食道癌，纵隔多个稍肿大淋巴结。）。是需要增强CT的  CT片子吗？  我这里没有数码机！ 别的拍了也不清楚！  要是别的我都可以直接告诉你！",
+        "to_memory": [
+          "identity: 患者男，57岁",
+          "history: 既往史：3年前患过甲型肝炎",
+          "history: 近期检查提示食道癌；胃镜：①食管多发性隆起及溃疡病变，性质待定：ca并腔内转移？②非萎缩性胃炎（充血/渗出型）伴胃窦隆起糜烂",
+          "history: 病理：食管取材3粒（各芝麻大），鳞状上皮异型增生，灶性鳞癌变",
+          "history: 增强CT：符合食道癌，纵隔多个稍肿大淋巴结",
+          "history: 患者询问是否需要提供增强CT的CT片子/影像资料（当前无数码机，担心拍照不清楚）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d341cecf-36c1-4a5b-b2bc-99f3ad1570fb",
+              "content": "代诉者为患者女儿；女儿自出生有红色胎记/疑血管瘤，随年龄增大而增大，局部发烫，偶有疼痛；目前约10岁；外院彩超/医生多称为海绵状血管瘤（或海绵状血管瘤样病变），但现医生根据照片更倾向草莓状血管瘤（与既往诊断不一致），认为不严重，可激光治疗或继续观察",
+              "timestamp": 1771466203.7765276,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0492847b-7697-4afa-9881-2ea6e08bc20a",
+              "content": "患者称将发送/已发送女儿（患儿）血管瘤/红色胎记的局部外观照片（并可能附彩超资料）供医生查看与评估",
+              "timestamp": 1771466203.7765422,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "cb14c7bf-e9e4-4316-9c41-5d54d518cc2b",
+              "content": "患者男，57岁",
+              "timestamp": 1771466268.9390678,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "019fa5cb-e10c-49d0-bba9-e2216ec7be73",
+              "content": "患者既往史：轻度抑郁症，自述常有逃避现实、怕见人",
+              "timestamp": 1771466180.468944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "39206052-e76c-44de-b579-b8305e0d05e9",
+              "content": "既往患过肺结核",
+              "timestamp": 1771466190.4850001,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d653543b-1e32-453f-8cda-d3c653828bd9",
+              "content": "2008年9月于湖北脑血管医院检查提示：左心室肥大/肥厚",
+              "timestamp": 1771466203.7765186,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ec95e59a-6bee-400d-be42-338fcb4949a8",
+              "content": "女儿曾就诊福州儿童医院及附属第一医院，医生评估为海绵状血管瘤并建议冷冻治疗（当地称无设备）",
+              "timestamp": 1771466203.7765334,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0b3fe064-8124-4ad4-9673-204b54230d82",
+              "content": "女儿近日在宁德人民医院做彩超检查，提示海绵状血管瘤",
+              "timestamp": 1771466203.776538,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "53ae28dd-43e3-4a03-8b46-c027704ccb68",
+              "content": "医生说明：彩超仅为辅助诊断，治疗需结合局部实际情况；要求提供局部照片（患处外观）而非彩超报告",
+              "timestamp": 1771466209.218994,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "adb5e255-d4ef-4a06-93d2-60f1fed44b22",
+              "content": "现医生根据照片更倾向草莓状血管瘤（与既往“海绵状”诊断不一致），认为不严重，可激光治疗或继续观察；建议到医院找谢义德主任面诊进一步确认",
+              "timestamp": 1771466247.955293,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "14c45c28-ac14-49e3-8431-252f227674dc",
+              "content": "出生后3天在保定市儿童医院做彩超，提示/诊断为中肠扭转",
+              "timestamp": 1771466251.5210505,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "f66fc67d-8b74-4630-ac10-2439f30ab009",
+              "content": "新生儿出生后第3天出现一吃奶就吐（呕吐物绿色）、屡次哭闹、体温37.5℃；保定市儿童医院彩超提示/疑似中肠扭转。",
+              "timestamp": 1771466260.0504065,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "9995d9c0-b5dd-4e85-ba6a-7e0d2329c336",
+              "content": "医生建议尽快手术处理中肠扭转，否则有危险。",
+              "timestamp": 1771466260.0504148,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "a263ce81-0db3-48ac-921e-33a3214f4c80",
+              "content": "既往史：3年前患过甲型肝炎",
+              "timestamp": 1771466268.939075,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "9800c6b7-1102-4603-93c1-cb500093e95b",
+              "content": "近期检查提示食道癌；胃镜：①食管多发性隆起及溃疡病变，性质待定：ca并腔内转移？②非萎缩性胃炎（充血/渗出型）伴胃窦隆起糜烂",
+              "timestamp": 1771466268.9390795,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "c449940a-faf0-4cd6-ab45-818730d557a3",
+              "content": "病理：食管取材3粒（各芝麻大），鳞状上皮异型增生，灶性鳞癌变",
+              "timestamp": 1771466268.9390833,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "1a6c8ff2-0fb7-46a7-a46b-c0551f2661af",
+              "content": "增强CT：符合食道癌，纵隔多个稍肿大淋巴结",
+              "timestamp": 1771466268.9390867,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "1d018ff9-5a78-49c9-af39-210cb8b7ec20",
+              "content": "患者咨询：是否需要提供增强CT的CT片子/影像资料；当前无数码机，担心拍照不清楚",
+              "timestamp": 1771466268.939091,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "关于这位消化道肿瘤患者：他在描述检查结论时，提到过一次“取材数量与大小”的具体细节。若后续就诊时医生需要核对这项细节以避免病理信息记录错误，这个细节具体是什么？",
+          "answer": "病理取材为食管3粒，且各芝麻大。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "0492847b-7697-4afa-9881-2ea6e08bc20a"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "c449940a-faf0-4cd6-ab45-818730d557a3"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            12,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "胃镜上肿瘤距门齿有多少厘米？建议手术治疗，根据肿瘤位置来决定食管切除范围。可来上海新华医院胸外科手术,祝早日康复。",
+        "to_memory": [
+          "history: 胃镜/增强CT提示食道癌，纵隔多个稍肿大淋巴结；病理示食管鳞状上皮异型增生伴灶性鳞癌变",
+          "history: 医生建议手术治疗；根据胃镜肿瘤距门齿的距离（肿瘤位置）决定食管切除范围；可至上海新华医院胸外科手术",
+          "working: 待补充关键信息：胃镜显示肿瘤距门齿多少厘米"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "18e8652e-c721-4caf-b7aa-087fad1846c3",
+              "content": "待补充关键信息：胃镜显示肿瘤距门齿多少厘米（用于决定食管切除范围）",
+              "timestamp": 1771466275.923666,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            }
+          ],
+          "identity": [
+            {
+              "id": "e9b8a735-6f0e-442f-8c5e-2b69bfdc5e5a",
+              "content": "患者有慢性病：高血压",
+              "timestamp": 1771466170.4580526,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d341cecf-36c1-4a5b-b2bc-99f3ad1570fb",
+              "content": "代诉者为患者女儿；女儿自出生有红色胎记/疑血管瘤，随年龄增大而增大，局部发烫，偶有疼痛；目前约10岁；外院彩超/医生多称为海绵状血管瘤（或海绵状血管瘤样病变），但现医生根据照片更倾向草莓状血管瘤（与既往诊断不一致），认为不严重，可激光治疗或继续观察",
+              "timestamp": 1771466203.7765276,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0492847b-7697-4afa-9881-2ea6e08bc20a",
+              "content": "患者称将发送/已发送女儿（患儿）血管瘤/红色胎记的局部外观照片（并可能附彩超资料）供医生查看与评估",
+              "timestamp": 1771466203.7765422,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "cb14c7bf-e9e4-4316-9c41-5d54d518cc2b",
+              "content": "患者男，57岁",
+              "timestamp": 1771466268.9390678,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            }
+          ],
+          "history": [
+            {
+              "id": "0a2e73c4-5f3a-41de-9493-9a8ad2cda03a",
+              "content": "2008年9月在湖北脑血管医院检查",
+              "timestamp": 1771466170.4580605,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "a13fb5af-1e38-46ca-a7b3-6580150c7162",
+              "content": "检查发现左肾囊肿",
+              "timestamp": 1771466170.4580657,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "1fcf7193-f4c2-4759-9a1c-70df41495d3b",
+              "content": "检查发现左心室肥大",
+              "timestamp": 1771466170.45807,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "019fa5cb-e10c-49d0-bba9-e2216ec7be73",
+              "content": "患者既往史：轻度抑郁症，自述常有逃避现实、怕见人",
+              "timestamp": 1771466180.468944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "39206052-e76c-44de-b579-b8305e0d05e9",
+              "content": "既往患过肺结核",
+              "timestamp": 1771466190.4850001,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d653543b-1e32-453f-8cda-d3c653828bd9",
+              "content": "2008年9月于湖北脑血管医院检查提示：左心室肥大/肥厚",
+              "timestamp": 1771466203.7765186,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ec95e59a-6bee-400d-be42-338fcb4949a8",
+              "content": "女儿曾就诊福州儿童医院及附属第一医院，医生评估为海绵状血管瘤并建议冷冻治疗（当地称无设备）",
+              "timestamp": 1771466203.7765334,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0b3fe064-8124-4ad4-9673-204b54230d82",
+              "content": "女儿近日在宁德人民医院做彩超检查，提示海绵状血管瘤",
+              "timestamp": 1771466203.776538,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "53ae28dd-43e3-4a03-8b46-c027704ccb68",
+              "content": "医生说明：彩超仅为辅助诊断，治疗需结合局部实际情况；要求提供局部照片（患处外观）而非彩超报告",
+              "timestamp": 1771466209.218994,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "adb5e255-d4ef-4a06-93d2-60f1fed44b22",
+              "content": "现医生根据照片更倾向草莓状血管瘤（与既往“海绵状”诊断不一致），认为不严重，可激光治疗或继续观察；建议到医院找谢义德主任面诊进一步确认",
+              "timestamp": 1771466247.955293,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "14c45c28-ac14-49e3-8431-252f227674dc",
+              "content": "出生后3天在保定市儿童医院做彩超，提示/诊断为中肠扭转",
+              "timestamp": 1771466251.5210505,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "f66fc67d-8b74-4630-ac10-2439f30ab009",
+              "content": "新生儿出生后第3天出现一吃奶就吐（呕吐物绿色）、屡次哭闹、体温37.5℃；保定市儿童医院彩超提示/疑似中肠扭转。",
+              "timestamp": 1771466260.0504065,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "9995d9c0-b5dd-4e85-ba6a-7e0d2329c336",
+              "content": "医生建议尽快手术处理中肠扭转，否则有危险。",
+              "timestamp": 1771466260.0504148,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "a263ce81-0db3-48ac-921e-33a3214f4c80",
+              "content": "既往史：3年前患过甲型肝炎",
+              "timestamp": 1771466268.939075,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "9800c6b7-1102-4603-93c1-cb500093e95b",
+              "content": "近期检查提示食道癌；胃镜：①食管多发性隆起及溃疡病变，性质待定：ca并腔内转移？②非萎缩性胃炎（充血/渗出型）伴胃窦隆起糜烂",
+              "timestamp": 1771466268.9390795,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "c449940a-faf0-4cd6-ab45-818730d557a3",
+              "content": "病理：食管取材3粒（各芝麻大），鳞状上皮异型增生，灶性鳞癌变",
+              "timestamp": 1771466268.9390833,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "1a6c8ff2-0fb7-46a7-a46b-c0551f2661af",
+              "content": "增强CT：符合食道癌，纵隔多个稍肿大淋巴结",
+              "timestamp": 1771466268.9390867,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "1d018ff9-5a78-49c9-af39-210cb8b7ec20",
+              "content": "患者咨询：是否需要提供增强CT的CT片子/影像资料；当前无数码机，担心拍照不清楚",
+              "timestamp": 1771466268.939091,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "ec94b70e-4ca2-4f69-8809-6308333d61e1",
+              "content": "医生建议手术治疗；根据胃镜肿瘤距门齿的距离（肿瘤位置）决定食管切除范围；可至上海新华医院胸外科手术",
+              "timestamp": 1771466275.9236574,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "医生在之前的沟通里特别要求患者补充提供哪一种材料（用于判断患处情况），而不是提交某类检查报告？",
+          "answer": "提供局部照片（患处外观），而不是彩超报告",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "53ae28dd-43e3-4a03-8b46-c027704ccb68"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            12
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "complex_treatment",
+    "scenario_name": "复杂疾病诊疗",
+    "session_count": 6,
+    "group_key": "综合科"
+  }
+}

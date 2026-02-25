@@ -1,0 +1,5014 @@
+{
+  "patient_id": "b8a1e9d191cb",
+  "messages": [
+    {
+      "user": {
+        "content": "自然流产，我想知道孕酮，血HCG的正常值？",
+        "to_memory": [
+          "working: 患者自然流产后咨询孕酮与血HCG的正常参考值"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "bf2feabc-0d68-4684-9e25-3482a1e27856",
+              "content": "患者自然流产后咨询孕酮与血HCG的正常参考值",
+              "timestamp": 1771461184.3423276,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者这次咨询主要想了解哪些化验指标的参考范围？",
+          "answer": "孕酮和血HCG的正常值（参考范围）。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "bf2feabc-0d68-4684-9e25-3482a1e27856"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "您好！",
+        "to_memory": [
+          "working: 患者自然流产，咨询孕酮及血HCG正常值范围"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "bf2feabc-0d68-4684-9e25-3482a1e27856",
+              "content": "患者自然流产后咨询孕酮与血HCG的正常参考值",
+              "timestamp": 1771461184.3423276,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者这次咨询想了解哪些化验指标的正常参考范围？",
+          "answer": "孕酮和血HCG的正常值（参考范围）",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "bf2feabc-0d68-4684-9e25-3482a1e27856"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "咳嗽，咳嗽时好时坏，已有一个多月了，听起来有痰去友谊医院和儿研所看说是支气管炎，中间还喝了梨煮百合水，梨蒸川贝。",
+        "to_memory": [
+          "working: 咳嗽反复（时好时坏）已1个多月，咳嗽时听起来有痰",
+          "history: 曾在友谊医院和儿研所就诊，被告知支气管炎",
+          "history: 曾自行饮用梨煮百合水、梨蒸川贝等食疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "41cb3af9-cd17-4fbb-aabe-7fd769606d82",
+              "content": "咳嗽反复（时好时坏）已1个多月，咳嗽时听起来有痰",
+              "timestamp": 1771461193.9389172,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者提到曾在两家医疗机构就诊并被告知一个明确的呼吸系统诊断。请回忆：这个诊断是什么？这一既往诊断与其目前描述的症状持续时间和表现是否存在需要警惕的不一致之处？请说明。",
+          "answer": "既往被告知支气管炎；目前咳嗽时好时坏已1个多月，咳嗽时听起来有痰。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b247ef12-f844-4577-b024-4787b99b0ee7"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "41cb3af9-cd17-4fbb-aabe-7fd769606d82"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "必要时可以查支原体，以上两种药也可以吃，",
+        "to_memory": [
+          "history: 医生建议必要时检查支原体（支原体相关检测）",
+          "history: 医生表示上述两种药物也可以服用"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "41cb3af9-cd17-4fbb-aabe-7fd769606d82",
+              "content": "咳嗽反复（时好时坏）已1个多月，咳嗽时听起来有痰",
+              "timestamp": 1771461193.9389172,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "为避免影响病情判断或与后续用药产生安全隐患，患者在本次就诊前自行尝试过哪些非处方干预/家庭处理方式？请具体列出。",
+          "answer": "曾自行饮用梨煮百合水、梨蒸川贝等食疗。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "6d4bd462-cea2-447f-bfe4-87ea4726a630"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "41cb3af9-cd17-4fbb-aabe-7fd769606d82"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "雀斑，夏医生您好~我激光祛斑结痂后晚上睡觉蹭掉一些留下了一些红印这怎么办啊现在真的很着急！夏医生帮忙解决一下吧万分感谢\n。",
+        "to_memory": [
+          "working: 患者主诉雀斑，激光祛斑结痂后夜间睡觉摩擦蹭掉部分痂皮，遗留红印；患者焦虑、着急求处理方法"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "fd181062-f390-41fd-85fc-2dd037b0c2ed",
+              "content": "患者主诉雀斑，激光祛斑结痂后夜间睡觉摩擦蹭掉部分痂皮，遗留红印；患者焦虑、着急求处理方法",
+              "timestamp": 1771461207.7812955,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你好！可以外用生长因子等产品促进表皮恢复。",
+        "to_memory": [
+          "working: 激光祛斑结痂后睡觉蹭掉部分痂皮，遗留红印，患者着急求处理建议",
+          "history: 医生建议可外用生长因子等产品促进表皮恢复"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "fd181062-f390-41fd-85fc-2dd037b0c2ed",
+              "content": "患者主诉雀斑，激光祛斑结痂后夜间睡觉摩擦蹭掉部分痂皮，遗留红印；患者焦虑、着急求处理方法",
+              "timestamp": 1771461207.7812955,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在本次对话中提到曾自行尝试过某些非处方的处理方式；这些做法与医生给出的处理建议之间是否存在潜在的皮肤安全隐患或相互冲突？请说明涉及的是哪些既往做法与本次建议。",
+          "answer": "患者曾自行饮用梨煮百合水、梨蒸川贝等食疗；医生对皮肤问题建议外用生长因子等产品促进表皮恢复（需注意不要与既往自行处理方式混用导致不当处理）。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "6d4bd462-cea2-447f-bfe4-87ea4726a630"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "fd181062-f390-41fd-85fc-2dd037b0c2ed"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "夏医生您好~",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "fd181062-f390-41fd-85fc-2dd037b0c2ed",
+              "content": "患者主诉雀斑，激光祛斑结痂后夜间睡觉摩擦蹭掉部分痂皮，遗留红印；患者焦虑、着急求处理方法",
+              "timestamp": 1771461207.7812955,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者既往曾在哪些医疗机构就诊，并被告知患有哪种呼吸道疾病？",
+          "answer": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b247ef12-f844-4577-b024-4787b99b0ee7"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            5
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你好!一般医院的美容科都有，比如修复肽等。",
+        "to_memory": [
+          "history: 医生建议激光祛斑结痂蹭掉后可至医院美容科购买/使用修复类产品（如修复肽）促进修复"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "fd181062-f390-41fd-85fc-2dd037b0c2ed",
+              "content": "患者主诉雀斑，激光祛斑结痂后夜间睡觉摩擦蹭掉部分痂皮，遗留红印；患者焦虑、着急求处理方法",
+              "timestamp": 1771461207.7812955,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者这次咨询中最着急想解决的皮肤问题是什么？",
+          "answer": "激光祛斑结痂后睡觉摩擦蹭掉部分痂皮，留下红印，想知道怎么处理。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "fd181062-f390-41fd-85fc-2dd037b0c2ed"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "输卵管不通，05年2月宫外孕，做腹腔镱手术切左侧输卵管，右侧现伞端不通，吃了2个月中药仍未怀孕。",
+        "to_memory": [
+          "history: 2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+          "history: 右侧输卵管伞端不通（输卵管不通）",
+          "history: 曾服用中药治疗2个月仍未怀孕",
+          "working: 本次就诊主诉不孕/备孕未果"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "2d15518f-6136-4c91-8cdb-e1b255cc5d14",
+              "content": "本次就诊主诉不孕/备孕未果",
+              "timestamp": 1771461229.195871,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "在最后一段就诊描述中，患者这次主要是因为什么就医咨询？",
+          "answer": "备孕未果/不孕",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "2d15518f-6136-4c91-8cdb-e1b255cc5d14"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可以考虑试管婴儿助孕治疗，宫腔粘连需要提前做一下宫腔镜检查。",
+        "to_memory": [
+          "history: 2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+          "history: 右侧输卵管伞端不通",
+          "history: 曾服用中药治疗2个月，仍未怀孕",
+          "history: 医生建议可考虑试管婴儿助孕治疗",
+          "history: 医生建议因疑似宫腔粘连，需提前做宫腔镜检查"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "2d15518f-6136-4c91-8cdb-e1b255cc5d14",
+              "content": "本次就诊主诉不孕/备孕未果",
+              "timestamp": 1771461229.195871,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc39a0c0-3a7c-4db9-bb6c-23d1f50782e3",
+              "content": "医生建议可考虑试管婴儿（IVF）助孕治疗",
+              "timestamp": 1771461235.3384237,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "70938111-50c8-418a-b094-b2748ea6dd3e",
+              "content": "医生建议因疑似宫腔粘连，需提前做宫腔镜检查",
+              "timestamp": 1771461235.3384457,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc39a0c0-3a7c-4db9-bb6c-23d1f50782e3",
+              "content": "医生建议可考虑试管婴儿（IVF）助孕治疗",
+              "timestamp": 1771461235.3384237,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "70938111-50c8-418a-b094-b2748ea6dd3e",
+              "content": "医生建议因疑似宫腔粘连，需提前做宫腔镜检查",
+              "timestamp": 1771461235.3384457,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "左股骨头缺血性坏死，2009.10。1膝盖疼，胯骨疼，腿向左屈伸不利。走路彼。积水潭医院，北京中医医院。",
+        "to_memory": [
+          "history: 2009-10 诊断/病史：左股骨头缺血性坏死",
+          "working: 当前症状：膝盖疼、胯骨疼、左腿屈伸不利、走路困难",
+          "history: 就诊医院：积水潭医院、北京中医医院"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b3c79073-d0ca-4129-ad7d-9273012db0c0",
+              "content": "当前症状：膝盖疼、胯骨疼、左腿屈伸不利、走路困难",
+              "timestamp": 1771461239.2610366,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc39a0c0-3a7c-4db9-bb6c-23d1f50782e3",
+              "content": "医生建议可考虑试管婴儿（IVF）助孕治疗",
+              "timestamp": 1771461235.3384237,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "70938111-50c8-418a-b094-b2748ea6dd3e",
+              "content": "医生建议因疑似宫腔粘连，需提前做宫腔镜检查",
+              "timestamp": 1771461235.3384457,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4ad72a63-95ce-4d6f-9ea8-3800e19cb44b",
+              "content": "2009-10 诊断/病史：左股骨头缺血性坏死",
+              "timestamp": 1771461239.2610278,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "75d9bd8d-2834-4429-85a8-83fc9921ca42",
+              "content": "就诊医院：积水潭医院、北京中医医院",
+              "timestamp": 1771461239.261041,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在描述骨关节问题时提到了一组“当前不适/功能受限”的表现。请核对：这些表现与其既往的骨科诊断是否一致？如存在不一致，请指出患者当时具体提到的那组表现是什么。",
+          "answer": "膝盖疼、胯骨疼、左腿屈伸不利、走路困难",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "6d4bd462-cea2-447f-bfe4-87ea4726a630"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "b3c79073-d0ca-4129-ad7d-9273012db0c0"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            11,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "如果不做置换，只能靠药物减轻疼痛。如果关节软骨有破碎，可以进行关节清理手术，但是功能会有影响。",
+        "to_memory": [
+          "history: 2005年2月宫外孕，行腹腔镜手术切除左侧输卵管；右侧输卵管伞端不通；曾服用中药2个月仍未怀孕；医生建议考虑试管婴儿助孕并提前行宫腔镜检查评估宫腔粘连",
+          "history: 2009年10月诊断左股骨头缺血性坏死；就诊医院包括积水潭医院、北京中医医院",
+          "working: 左膝盖疼、胯骨疼，左腿屈伸不利，走路不便",
+          "history: 医生意见：若不做关节置换，仅能靠药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b3c79073-d0ca-4129-ad7d-9273012db0c0",
+              "content": "当前症状：膝盖疼、胯骨疼、左腿屈伸不利、走路困难",
+              "timestamp": 1771461239.2610366,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc39a0c0-3a7c-4db9-bb6c-23d1f50782e3",
+              "content": "医生建议可考虑试管婴儿（IVF）助孕治疗",
+              "timestamp": 1771461235.3384237,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "70938111-50c8-418a-b094-b2748ea6dd3e",
+              "content": "医生建议因疑似宫腔粘连，需提前做宫腔镜检查",
+              "timestamp": 1771461235.3384457,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4ad72a63-95ce-4d6f-9ea8-3800e19cb44b",
+              "content": "2009-10 诊断/病史：左股骨头缺血性坏死",
+              "timestamp": 1771461239.2610278,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "75d9bd8d-2834-4429-85a8-83fc9921ca42",
+              "content": "就诊医院：积水潭医院、北京中医医院",
+              "timestamp": 1771461239.261041,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "d7bd05e0-99ae-4b03-b4cf-71021b62b95e",
+              "content": "医生意见（骨关节/髋部）：若不做关节置换，仅能靠药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771461248.0362468,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者早前一次就诊时医生提出需要完善的检查项目，与本次就诊中患者描述的主要不适表现：医生当时建议补做的那项检查是什么？",
+          "answer": "支原体相关检测（检查支原体）",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "c4845ad2-84aa-4c6b-b2ff-7b226d35e031"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "b3c79073-d0ca-4129-ad7d-9273012db0c0"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            11,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc39a0c0-3a7c-4db9-bb6c-23d1f50782e3",
+              "content": "医生建议可考虑试管婴儿（IVF）助孕治疗",
+              "timestamp": 1771461235.3384237,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "70938111-50c8-418a-b094-b2748ea6dd3e",
+              "content": "医生建议因疑似宫腔粘连，需提前做宫腔镜检查",
+              "timestamp": 1771461235.3384457,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4ad72a63-95ce-4d6f-9ea8-3800e19cb44b",
+              "content": "2009-10 诊断/病史：左股骨头缺血性坏死",
+              "timestamp": 1771461239.2610278,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "75d9bd8d-2834-4429-85a8-83fc9921ca42",
+              "content": "就诊医院：积水潭医院、北京中医医院",
+              "timestamp": 1771461239.261041,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "d7bd05e0-99ae-4b03-b4cf-71021b62b95e",
+              "content": "医生意见（骨关节/髋部）：若不做关节置换，仅能靠药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771461248.0362468,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "颈后有肿块，有二十多年了吧，以前一直认为是颈椎的问题，突出低头时间长久很痛，在蚌埠第人们医院看的。B超检查讲里面有脂肪瘤。医生讲不需要做手术，",
+        "to_memory": [
+          "history: 颈后肿块病史约20多年；在蚌埠第一人民医院就诊；B超提示脂肪瘤；医生评估暂不需要手术",
+          "working: 低头时间长时颈后疼痛明显，曾以为与颈椎问题相关"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "6a8b9906-9602-4e92-8fd1-ec0f3e496ce3",
+              "content": "低头时间长时颈后疼痛明显，曾以为与颈椎问题相关",
+              "timestamp": 1771461255.761527,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc39a0c0-3a7c-4db9-bb6c-23d1f50782e3",
+              "content": "医生建议可考虑试管婴儿（IVF）助孕治疗",
+              "timestamp": 1771461235.3384237,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "70938111-50c8-418a-b094-b2748ea6dd3e",
+              "content": "医生建议因疑似宫腔粘连，需提前做宫腔镜检查",
+              "timestamp": 1771461235.3384457,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4ad72a63-95ce-4d6f-9ea8-3800e19cb44b",
+              "content": "2009-10 诊断/病史：左股骨头缺血性坏死",
+              "timestamp": 1771461239.2610278,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "75d9bd8d-2834-4429-85a8-83fc9921ca42",
+              "content": "就诊医院：积水潭医院、北京中医医院",
+              "timestamp": 1771461239.261041,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "d7bd05e0-99ae-4b03-b4cf-71021b62b95e",
+              "content": "医生意见（骨关节/髋部）：若不做关节置换，仅能靠药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771461248.0362468,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "280dc746-4a2d-44aa-a4a3-cbdb6bf76dfd",
+              "content": "颈后肿块病史约20多年；曾在蚌埠第一人民医院就诊；B超提示脂肪瘤；医生评估暂不需要手术",
+              "timestamp": 1771461255.7615178,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者在既往处理症状时，曾自行尝试过哪些食疗或偏方饮品？请具体说出名称或做法。",
+          "answer": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "6d4bd462-cea2-447f-bfe4-87ea4726a630"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            14
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "做磁共振就清楚了。",
+        "to_memory": [
+          "history: 2005-02宫外孕行腹腔镜手术切除左侧输卵管；右侧输卵管伞端不通，曾服用中药2个月未孕；医生建议考虑试管婴儿助孕，并建议先做宫腔镜检查以评估/处理宫腔粘连",
+          "history: 2009-10左股骨头缺血性坏死；症状包括膝盖痛、髋部痛、左腿屈伸不利、走路不便；就诊于积水潭医院、北京中医医院；医生建议不置换则以药物减痛，若软骨破碎可考虑关节清理手术但功能可能受影响",
+          "history: 颈后肿块存在约20多年，蚌埠市人民医院B超提示脂肪瘤，既往医生认为可不手术",
+          "working: 目前医生建议做磁共振检查以进一步明确颈后肿块情况"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "6a8b9906-9602-4e92-8fd1-ec0f3e496ce3",
+              "content": "低头时间长时颈后疼痛明显，曾以为与颈椎问题相关",
+              "timestamp": 1771461255.761527,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "ca620803-78ee-45ba-aac5-7502e0915b3c",
+              "content": "目前医生建议做颈后肿块的磁共振（MRI）检查，以进一步明确情况",
+              "timestamp": 1771461265.0368931,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc39a0c0-3a7c-4db9-bb6c-23d1f50782e3",
+              "content": "医生建议可考虑试管婴儿（IVF）助孕治疗",
+              "timestamp": 1771461235.3384237,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "70938111-50c8-418a-b094-b2748ea6dd3e",
+              "content": "医生建议因疑似宫腔粘连，需提前做宫腔镜检查",
+              "timestamp": 1771461235.3384457,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4ad72a63-95ce-4d6f-9ea8-3800e19cb44b",
+              "content": "2009-10 诊断/病史：左股骨头缺血性坏死",
+              "timestamp": 1771461239.2610278,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "75d9bd8d-2834-4429-85a8-83fc9921ca42",
+              "content": "就诊医院：积水潭医院、北京中医医院",
+              "timestamp": 1771461239.261041,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "d7bd05e0-99ae-4b03-b4cf-71021b62b95e",
+              "content": "医生意见（骨关节/髋部）：若不做关节置换，仅能靠药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771461248.0362468,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "280dc746-4a2d-44aa-a4a3-cbdb6bf76dfd",
+              "content": "颈后肿块病史约20多年；曾在蚌埠第一人民医院就诊；B超提示脂肪瘤；医生评估暂不需要手术",
+              "timestamp": 1771461255.7615178,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "针对患者提到的颈后肿块（已存在多年且既往做过影像检查并被告知处理意见），本次医生为进一步明确情况建议患者做的下一步检查是什么？这种建议与既往意见是否存在需要注意的潜在冲突点？",
+          "answer": "医生建议做颈后肿块的磁共振（MRI）检查，以进一步明确情况。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "3ea89d41-08b2-44ae-90e7-87b335be0140"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "ca620803-78ee-45ba-aac5-7502e0915b3c"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            14,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc39a0c0-3a7c-4db9-bb6c-23d1f50782e3",
+              "content": "医生建议可考虑试管婴儿（IVF）助孕治疗",
+              "timestamp": 1771461235.3384237,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "70938111-50c8-418a-b094-b2748ea6dd3e",
+              "content": "医生建议因疑似宫腔粘连，需提前做宫腔镜检查",
+              "timestamp": 1771461235.3384457,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4ad72a63-95ce-4d6f-9ea8-3800e19cb44b",
+              "content": "2009-10 诊断/病史：左股骨头缺血性坏死",
+              "timestamp": 1771461239.2610278,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "75d9bd8d-2834-4429-85a8-83fc9921ca42",
+              "content": "就诊医院：积水潭医院、北京中医医院",
+              "timestamp": 1771461239.261041,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "d7bd05e0-99ae-4b03-b4cf-71021b62b95e",
+              "content": "医生意见（骨关节/髋部）：若不做关节置换，仅能靠药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771461248.0362468,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "280dc746-4a2d-44aa-a4a3-cbdb6bf76dfd",
+              "content": "颈后肿块病史约20多年；曾在蚌埠第一人民医院就诊；B超提示脂肪瘤；医生评估暂不需要手术",
+              "timestamp": 1771461255.7615178,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "卵巢早衰，患者女，28岁患卵巢早衰六年了，一直靠吃药维持月经，在省中医就诊两年始终没能怀孕，医生建议做试管婴儿。",
+        "to_memory": [
+          "identity: 患者女，28岁",
+          "history: 卵巢早衰（患病6年）",
+          "history: 长期服药维持月经",
+          "history: 在省中医就诊2年，期间未能怀孕",
+          "history: 医生建议行试管婴儿助孕"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "ca5c4916-96c1-41aa-b6db-55e6ce3d7a48",
+              "content": "患者女，28岁",
+              "timestamp": 1771461271.6362836,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc39a0c0-3a7c-4db9-bb6c-23d1f50782e3",
+              "content": "医生建议可考虑试管婴儿（IVF）助孕治疗",
+              "timestamp": 1771461235.3384237,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "70938111-50c8-418a-b094-b2748ea6dd3e",
+              "content": "医生建议因疑似宫腔粘连，需提前做宫腔镜检查",
+              "timestamp": 1771461235.3384457,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4ad72a63-95ce-4d6f-9ea8-3800e19cb44b",
+              "content": "2009-10 诊断/病史：左股骨头缺血性坏死",
+              "timestamp": 1771461239.2610278,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "75d9bd8d-2834-4429-85a8-83fc9921ca42",
+              "content": "就诊医院：积水潭医院、北京中医医院",
+              "timestamp": 1771461239.261041,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "d7bd05e0-99ae-4b03-b4cf-71021b62b95e",
+              "content": "医生意见（骨关节/髋部）：若不做关节置换，仅能靠药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771461248.0362468,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "280dc746-4a2d-44aa-a4a3-cbdb6bf76dfd",
+              "content": "颈后肿块病史约20多年；曾在蚌埠第一人民医院就诊；B超提示脂肪瘤；医生评估暂不需要手术",
+              "timestamp": 1771461255.7615178,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "503a8d3d-0a93-422c-9008-3398faa250dd",
+              "content": "卵巢早衰，病程约6年",
+              "timestamp": 1771461271.6362934,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "8f2138fd-ecb7-42df-84c4-35d897f558f3",
+              "content": "长期服药维持月经",
+              "timestamp": 1771461271.6362982,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "d1768c87-cd6e-481b-aeae-1346f5fabaaa",
+              "content": "曾在省中医就诊2年，期间未能怀孕",
+              "timestamp": 1771461271.636303,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "需要来就诊面谈。",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "ca5c4916-96c1-41aa-b6db-55e6ce3d7a48",
+              "content": "患者女，28岁",
+              "timestamp": 1771461271.6362836,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc39a0c0-3a7c-4db9-bb6c-23d1f50782e3",
+              "content": "医生建议可考虑试管婴儿（IVF）助孕治疗",
+              "timestamp": 1771461235.3384237,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "70938111-50c8-418a-b094-b2748ea6dd3e",
+              "content": "医生建议因疑似宫腔粘连，需提前做宫腔镜检查",
+              "timestamp": 1771461235.3384457,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4ad72a63-95ce-4d6f-9ea8-3800e19cb44b",
+              "content": "2009-10 诊断/病史：左股骨头缺血性坏死",
+              "timestamp": 1771461239.2610278,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "75d9bd8d-2834-4429-85a8-83fc9921ca42",
+              "content": "就诊医院：积水潭医院、北京中医医院",
+              "timestamp": 1771461239.261041,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "d7bd05e0-99ae-4b03-b4cf-71021b62b95e",
+              "content": "医生意见（骨关节/髋部）：若不做关节置换，仅能靠药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771461248.0362468,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "280dc746-4a2d-44aa-a4a3-cbdb6bf76dfd",
+              "content": "颈后肿块病史约20多年；曾在蚌埠第一人民医院就诊；B超提示脂肪瘤；医生评估暂不需要手术",
+              "timestamp": 1771461255.7615178,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "503a8d3d-0a93-422c-9008-3398faa250dd",
+              "content": "卵巢早衰，病程约6年",
+              "timestamp": 1771461271.6362934,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "8f2138fd-ecb7-42df-84c4-35d897f558f3",
+              "content": "长期服药维持月经",
+              "timestamp": 1771461271.6362982,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "d1768c87-cd6e-481b-aeae-1346f5fabaaa",
+              "content": "曾在省中医就诊2年，期间未能怀孕",
+              "timestamp": 1771461271.636303,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在既往一次与皮肤修复相关的咨询中，曾提到因为一次护理过程中的意外导致局部出现异常印记。针对这种情况，医生当时建议使用的外用促进修复产品/类别是什么？请列出要点，并说明是否需要到院某个科室进一步购买或处理。",
+          "answer": "建议外用生长因子等促进表皮恢复；也可到医院美容科购买/使用修复类产品（如修复肽）促进修复。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "0304a91f-7e84-40f1-8222-7512040b54cf"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "ca5c4916-96c1-41aa-b6db-55e6ce3d7a48"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            14,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "ca5c4916-96c1-41aa-b6db-55e6ce3d7a48",
+              "content": "患者女，28岁",
+              "timestamp": 1771461271.6362836,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc39a0c0-3a7c-4db9-bb6c-23d1f50782e3",
+              "content": "医生建议可考虑试管婴儿（IVF）助孕治疗",
+              "timestamp": 1771461235.3384237,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "70938111-50c8-418a-b094-b2748ea6dd3e",
+              "content": "医生建议因疑似宫腔粘连，需提前做宫腔镜检查",
+              "timestamp": 1771461235.3384457,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4ad72a63-95ce-4d6f-9ea8-3800e19cb44b",
+              "content": "2009-10 诊断/病史：左股骨头缺血性坏死",
+              "timestamp": 1771461239.2610278,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "75d9bd8d-2834-4429-85a8-83fc9921ca42",
+              "content": "就诊医院：积水潭医院、北京中医医院",
+              "timestamp": 1771461239.261041,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "d7bd05e0-99ae-4b03-b4cf-71021b62b95e",
+              "content": "医生意见（骨关节/髋部）：若不做关节置换，仅能靠药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771461248.0362468,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "280dc746-4a2d-44aa-a4a3-cbdb6bf76dfd",
+              "content": "颈后肿块病史约20多年；曾在蚌埠第一人民医院就诊；B超提示脂肪瘤；医生评估暂不需要手术",
+              "timestamp": 1771461255.7615178,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "503a8d3d-0a93-422c-9008-3398faa250dd",
+              "content": "卵巢早衰，病程约6年",
+              "timestamp": 1771461271.6362934,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "8f2138fd-ecb7-42df-84c4-35d897f558f3",
+              "content": "长期服药维持月经",
+              "timestamp": 1771461271.6362982,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "d1768c87-cd6e-481b-aeae-1346f5fabaaa",
+              "content": "曾在省中医就诊2年，期间未能怀孕",
+              "timestamp": 1771461271.636303,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "眼病，两个月前眼睛出现视物模糊眼前有黑色网状影像出现，眼内较发干，畏光。去北京同仁医院。",
+        "to_memory": [
+          "working: 眼科就诊主诉：两个月前出现视物模糊、眼前黑色网状影，伴眼干、畏光",
+          "history: 曾就诊北京同仁医院（眼病）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "895e7677-33c5-4a09-82c2-9f7487666d46",
+              "content": "眼科就诊主诉：两个月前出现视物模糊、眼前黑色网状影，伴眼干、畏光",
+              "timestamp": 1771461280.3426523,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "identity": [
+            {
+              "id": "ca5c4916-96c1-41aa-b6db-55e6ce3d7a48",
+              "content": "患者女，28岁",
+              "timestamp": 1771461271.6362836,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc39a0c0-3a7c-4db9-bb6c-23d1f50782e3",
+              "content": "医生建议可考虑试管婴儿（IVF）助孕治疗",
+              "timestamp": 1771461235.3384237,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "70938111-50c8-418a-b094-b2748ea6dd3e",
+              "content": "医生建议因疑似宫腔粘连，需提前做宫腔镜检查",
+              "timestamp": 1771461235.3384457,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4ad72a63-95ce-4d6f-9ea8-3800e19cb44b",
+              "content": "2009-10 诊断/病史：左股骨头缺血性坏死",
+              "timestamp": 1771461239.2610278,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "75d9bd8d-2834-4429-85a8-83fc9921ca42",
+              "content": "就诊医院：积水潭医院、北京中医医院",
+              "timestamp": 1771461239.261041,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "d7bd05e0-99ae-4b03-b4cf-71021b62b95e",
+              "content": "医生意见（骨关节/髋部）：若不做关节置换，仅能靠药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771461248.0362468,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "280dc746-4a2d-44aa-a4a3-cbdb6bf76dfd",
+              "content": "颈后肿块病史约20多年；曾在蚌埠第一人民医院就诊；B超提示脂肪瘤；医生评估暂不需要手术",
+              "timestamp": 1771461255.7615178,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "503a8d3d-0a93-422c-9008-3398faa250dd",
+              "content": "卵巢早衰，病程约6年",
+              "timestamp": 1771461271.6362934,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "8f2138fd-ecb7-42df-84c4-35d897f558f3",
+              "content": "长期服药维持月经",
+              "timestamp": 1771461271.6362982,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "d1768c87-cd6e-481b-aeae-1346f5fabaaa",
+              "content": "曾在省中医就诊2年，期间未能怀孕",
+              "timestamp": 1771461271.636303,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "317cfbe8-de79-4a3a-85e3-2b1dac218398",
+              "content": "曾就诊北京同仁医院（眼病）",
+              "timestamp": 1771461280.3426614,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者这次因眼科问题就诊时，主要主诉有哪些不适表现？",
+          "answer": "两个月前出现视物模糊、眼前黑色网状影，伴眼干、畏光。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "895e7677-33c5-4a09-82c2-9f7487666d46"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "估计还是玻璃体浑浊导致的，可以服用石斛夜光丸试试。",
+        "to_memory": [
+          "history: 眼部症状估计为玻璃体浑浊（医生判断）",
+          "history: 医生建议可服用石斛夜光丸试试"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "895e7677-33c5-4a09-82c2-9f7487666d46",
+              "content": "眼科就诊主诉：两个月前出现视物模糊、眼前黑色网状影，伴眼干、畏光",
+              "timestamp": 1771461280.3426523,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "identity": [
+            {
+              "id": "ca5c4916-96c1-41aa-b6db-55e6ce3d7a48",
+              "content": "患者女，28岁",
+              "timestamp": 1771461271.6362836,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc39a0c0-3a7c-4db9-bb6c-23d1f50782e3",
+              "content": "医生建议可考虑试管婴儿（IVF）助孕治疗",
+              "timestamp": 1771461235.3384237,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "70938111-50c8-418a-b094-b2748ea6dd3e",
+              "content": "医生建议因疑似宫腔粘连，需提前做宫腔镜检查",
+              "timestamp": 1771461235.3384457,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4ad72a63-95ce-4d6f-9ea8-3800e19cb44b",
+              "content": "2009-10 诊断/病史：左股骨头缺血性坏死",
+              "timestamp": 1771461239.2610278,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "75d9bd8d-2834-4429-85a8-83fc9921ca42",
+              "content": "就诊医院：积水潭医院、北京中医医院",
+              "timestamp": 1771461239.261041,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "d7bd05e0-99ae-4b03-b4cf-71021b62b95e",
+              "content": "医生意见（骨关节/髋部）：若不做关节置换，仅能靠药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771461248.0362468,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "280dc746-4a2d-44aa-a4a3-cbdb6bf76dfd",
+              "content": "颈后肿块病史约20多年；曾在蚌埠第一人民医院就诊；B超提示脂肪瘤；医生评估暂不需要手术",
+              "timestamp": 1771461255.7615178,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "503a8d3d-0a93-422c-9008-3398faa250dd",
+              "content": "卵巢早衰，病程约6年",
+              "timestamp": 1771461271.6362934,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "8f2138fd-ecb7-42df-84c4-35d897f558f3",
+              "content": "长期服药维持月经",
+              "timestamp": 1771461271.6362982,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "d1768c87-cd6e-481b-aeae-1346f5fabaaa",
+              "content": "曾在省中医就诊2年，期间未能怀孕",
+              "timestamp": 1771461271.636303,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "317cfbe8-de79-4a3a-85e3-2b1dac218398",
+              "content": "曾就诊北京同仁医院（眼病）",
+              "timestamp": 1771461280.3426614,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "ff7ef653-7307-4d20-9001-f457f461331d",
+              "content": "眼部症状医生判断可能为玻璃体浑浊",
+              "timestamp": 1771461286.191231,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "cb2572d2-c88c-411b-8993-f3bccc56c003",
+              "content": "医生建议可尝试服用石斛夜光丸",
+              "timestamp": 1771461286.191241,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "ca5c4916-96c1-41aa-b6db-55e6ce3d7a48",
+              "content": "患者女，28岁",
+              "timestamp": 1771461271.6362836,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc39a0c0-3a7c-4db9-bb6c-23d1f50782e3",
+              "content": "医生建议可考虑试管婴儿（IVF）助孕治疗",
+              "timestamp": 1771461235.3384237,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "70938111-50c8-418a-b094-b2748ea6dd3e",
+              "content": "医生建议因疑似宫腔粘连，需提前做宫腔镜检查",
+              "timestamp": 1771461235.3384457,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4ad72a63-95ce-4d6f-9ea8-3800e19cb44b",
+              "content": "2009-10 诊断/病史：左股骨头缺血性坏死",
+              "timestamp": 1771461239.2610278,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "75d9bd8d-2834-4429-85a8-83fc9921ca42",
+              "content": "就诊医院：积水潭医院、北京中医医院",
+              "timestamp": 1771461239.261041,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "d7bd05e0-99ae-4b03-b4cf-71021b62b95e",
+              "content": "医生意见（骨关节/髋部）：若不做关节置换，仅能靠药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771461248.0362468,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "280dc746-4a2d-44aa-a4a3-cbdb6bf76dfd",
+              "content": "颈后肿块病史约20多年；曾在蚌埠第一人民医院就诊；B超提示脂肪瘤；医生评估暂不需要手术",
+              "timestamp": 1771461255.7615178,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "503a8d3d-0a93-422c-9008-3398faa250dd",
+              "content": "卵巢早衰，病程约6年",
+              "timestamp": 1771461271.6362934,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "8f2138fd-ecb7-42df-84c4-35d897f558f3",
+              "content": "长期服药维持月经",
+              "timestamp": 1771461271.6362982,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "d1768c87-cd6e-481b-aeae-1346f5fabaaa",
+              "content": "曾在省中医就诊2年，期间未能怀孕",
+              "timestamp": 1771461271.636303,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "317cfbe8-de79-4a3a-85e3-2b1dac218398",
+              "content": "曾就诊北京同仁医院（眼病）",
+              "timestamp": 1771461280.3426614,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "ff7ef653-7307-4d20-9001-f457f461331d",
+              "content": "眼部症状医生判断可能为玻璃体浑浊",
+              "timestamp": 1771461286.191231,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "cb2572d2-c88c-411b-8993-f3bccc56c003",
+              "content": "医生建议可尝试服用石斛夜光丸",
+              "timestamp": 1771461286.191241,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "鼻部注射后，医生你好：我是08年3月做的注射隆鼻，四针，注射的什么不清楚，当时没问清楚，是在美容院注射的。现在鼻子显得很宽，而且鼻头很低，中间有驼峰，以前的鼻子就有驼峰。现在想重新做，看怎么做。需要多少钱，要住院吗。非常感谢！\n。",
+        "to_memory": [
+          "history: 2008年3月曾在美容院行注射隆鼻（共4针），注射材料不详",
+          "identity: 目前鼻子显得较宽、鼻头低、中间有驼峰（既往鼻子也有驼峰）；希望重新隆鼻，咨询如何处理、费用及是否需要住院"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "ca5c4916-96c1-41aa-b6db-55e6ce3d7a48",
+              "content": "患者女，28岁",
+              "timestamp": 1771461271.6362836,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "dc2846ee-af4d-4f4a-ad22-7c53c93c15ac",
+              "content": "目前鼻子较宽、鼻头低，中间有驼峰（既往亦有驼峰）；希望重新隆鼻，咨询处理方案、费用及是否需住院",
+              "timestamp": 1771461291.1470678,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc39a0c0-3a7c-4db9-bb6c-23d1f50782e3",
+              "content": "医生建议可考虑试管婴儿（IVF）助孕治疗",
+              "timestamp": 1771461235.3384237,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "70938111-50c8-418a-b094-b2748ea6dd3e",
+              "content": "医生建议因疑似宫腔粘连，需提前做宫腔镜检查",
+              "timestamp": 1771461235.3384457,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4ad72a63-95ce-4d6f-9ea8-3800e19cb44b",
+              "content": "2009-10 诊断/病史：左股骨头缺血性坏死",
+              "timestamp": 1771461239.2610278,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "75d9bd8d-2834-4429-85a8-83fc9921ca42",
+              "content": "就诊医院：积水潭医院、北京中医医院",
+              "timestamp": 1771461239.261041,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "d7bd05e0-99ae-4b03-b4cf-71021b62b95e",
+              "content": "医生意见（骨关节/髋部）：若不做关节置换，仅能靠药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771461248.0362468,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "280dc746-4a2d-44aa-a4a3-cbdb6bf76dfd",
+              "content": "颈后肿块病史约20多年；曾在蚌埠第一人民医院就诊；B超提示脂肪瘤；医生评估暂不需要手术",
+              "timestamp": 1771461255.7615178,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "503a8d3d-0a93-422c-9008-3398faa250dd",
+              "content": "卵巢早衰，病程约6年",
+              "timestamp": 1771461271.6362934,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "8f2138fd-ecb7-42df-84c4-35d897f558f3",
+              "content": "长期服药维持月经",
+              "timestamp": 1771461271.6362982,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "d1768c87-cd6e-481b-aeae-1346f5fabaaa",
+              "content": "曾在省中医就诊2年，期间未能怀孕",
+              "timestamp": 1771461271.636303,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "317cfbe8-de79-4a3a-85e3-2b1dac218398",
+              "content": "曾就诊北京同仁医院（眼病）",
+              "timestamp": 1771461280.3426614,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "ff7ef653-7307-4d20-9001-f457f461331d",
+              "content": "眼部症状医生判断可能为玻璃体浑浊",
+              "timestamp": 1771461286.191231,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "cb2572d2-c88c-411b-8993-f3bccc56c003",
+              "content": "医生建议可尝试服用石斛夜光丸",
+              "timestamp": 1771461286.191241,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "0bdaefae-ce1d-4aef-a96c-bb379205b37f",
+              "content": "2008年3月曾在美容院行注射隆鼻（共4针），注射材料不详",
+              "timestamp": 1771461291.1470594,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你好！我是北京整形外科医院的刘珍君医生，就你所讲的情况，需要先将原先注射的取出来，然后再隆鼻（应用硅胶或膨体的鼻假体），若想做手术的话或有不明白的问题，可以与我电话联系，电话是13641132589.",
+        "to_memory": [
+          "history: 2008年3月曾在美容院注射隆鼻（共4针，注射材料不详）",
+          "history: 医生建议先取出原先注射物，再行假体隆鼻（硅胶或膨体）",
+          "working: 目前鼻部外观问题：鼻子显宽、鼻头低、中间有驼峰，计划重新隆鼻并咨询费用及是否需住院"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "ca5c4916-96c1-41aa-b6db-55e6ce3d7a48",
+              "content": "患者女，28岁",
+              "timestamp": 1771461271.6362836,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "dc2846ee-af4d-4f4a-ad22-7c53c93c15ac",
+              "content": "目前鼻子较宽、鼻头低，中间有驼峰（既往亦有驼峰）；希望重新隆鼻，咨询处理方案、费用及是否需住院",
+              "timestamp": 1771461291.1470678,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc39a0c0-3a7c-4db9-bb6c-23d1f50782e3",
+              "content": "医生建议可考虑试管婴儿（IVF）助孕治疗",
+              "timestamp": 1771461235.3384237,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "70938111-50c8-418a-b094-b2748ea6dd3e",
+              "content": "医生建议因疑似宫腔粘连，需提前做宫腔镜检查",
+              "timestamp": 1771461235.3384457,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4ad72a63-95ce-4d6f-9ea8-3800e19cb44b",
+              "content": "2009-10 诊断/病史：左股骨头缺血性坏死",
+              "timestamp": 1771461239.2610278,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "75d9bd8d-2834-4429-85a8-83fc9921ca42",
+              "content": "就诊医院：积水潭医院、北京中医医院",
+              "timestamp": 1771461239.261041,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "d7bd05e0-99ae-4b03-b4cf-71021b62b95e",
+              "content": "医生意见（骨关节/髋部）：若不做关节置换，仅能靠药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771461248.0362468,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "280dc746-4a2d-44aa-a4a3-cbdb6bf76dfd",
+              "content": "颈后肿块病史约20多年；曾在蚌埠第一人民医院就诊；B超提示脂肪瘤；医生评估暂不需要手术",
+              "timestamp": 1771461255.7615178,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "503a8d3d-0a93-422c-9008-3398faa250dd",
+              "content": "卵巢早衰，病程约6年",
+              "timestamp": 1771461271.6362934,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "8f2138fd-ecb7-42df-84c4-35d897f558f3",
+              "content": "长期服药维持月经",
+              "timestamp": 1771461271.6362982,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "d1768c87-cd6e-481b-aeae-1346f5fabaaa",
+              "content": "曾在省中医就诊2年，期间未能怀孕",
+              "timestamp": 1771461271.636303,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "317cfbe8-de79-4a3a-85e3-2b1dac218398",
+              "content": "曾就诊北京同仁医院（眼病）",
+              "timestamp": 1771461280.3426614,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "ff7ef653-7307-4d20-9001-f457f461331d",
+              "content": "眼部症状医生判断可能为玻璃体浑浊",
+              "timestamp": 1771461286.191231,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "cb2572d2-c88c-411b-8993-f3bccc56c003",
+              "content": "医生建议可尝试服用石斛夜光丸",
+              "timestamp": 1771461286.191241,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "0bdaefae-ce1d-4aef-a96c-bb379205b37f",
+              "content": "2008年3月曾在美容院行注射隆鼻（共4针），注射材料不详",
+              "timestamp": 1771461291.1470594,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "9c38b7bd-74a2-4d69-a315-6de7edbf9b7d",
+              "content": "医生建议先取出原先注射隆鼻的注射物，再行假体隆鼻（硅胶或膨体）。",
+              "timestamp": 1771461294.9458477,
+              "metadata": {
+                "turn_idx": 27
+              },
+              "turn_idx": 27
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "ca5c4916-96c1-41aa-b6db-55e6ce3d7a48",
+              "content": "患者女，28岁",
+              "timestamp": 1771461271.6362836,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "dc2846ee-af4d-4f4a-ad22-7c53c93c15ac",
+              "content": "目前鼻子较宽、鼻头低，中间有驼峰（既往亦有驼峰）；希望重新隆鼻，咨询处理方案、费用及是否需住院",
+              "timestamp": 1771461291.1470678,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc39a0c0-3a7c-4db9-bb6c-23d1f50782e3",
+              "content": "医生建议可考虑试管婴儿（IVF）助孕治疗",
+              "timestamp": 1771461235.3384237,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "70938111-50c8-418a-b094-b2748ea6dd3e",
+              "content": "医生建议因疑似宫腔粘连，需提前做宫腔镜检查",
+              "timestamp": 1771461235.3384457,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4ad72a63-95ce-4d6f-9ea8-3800e19cb44b",
+              "content": "2009-10 诊断/病史：左股骨头缺血性坏死",
+              "timestamp": 1771461239.2610278,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "75d9bd8d-2834-4429-85a8-83fc9921ca42",
+              "content": "就诊医院：积水潭医院、北京中医医院",
+              "timestamp": 1771461239.261041,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "d7bd05e0-99ae-4b03-b4cf-71021b62b95e",
+              "content": "医生意见（骨关节/髋部）：若不做关节置换，仅能靠药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771461248.0362468,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "280dc746-4a2d-44aa-a4a3-cbdb6bf76dfd",
+              "content": "颈后肿块病史约20多年；曾在蚌埠第一人民医院就诊；B超提示脂肪瘤；医生评估暂不需要手术",
+              "timestamp": 1771461255.7615178,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "503a8d3d-0a93-422c-9008-3398faa250dd",
+              "content": "卵巢早衰，病程约6年",
+              "timestamp": 1771461271.6362934,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "8f2138fd-ecb7-42df-84c4-35d897f558f3",
+              "content": "长期服药维持月经",
+              "timestamp": 1771461271.6362982,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "d1768c87-cd6e-481b-aeae-1346f5fabaaa",
+              "content": "曾在省中医就诊2年，期间未能怀孕",
+              "timestamp": 1771461271.636303,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "317cfbe8-de79-4a3a-85e3-2b1dac218398",
+              "content": "曾就诊北京同仁医院（眼病）",
+              "timestamp": 1771461280.3426614,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "ff7ef653-7307-4d20-9001-f457f461331d",
+              "content": "眼部症状医生判断可能为玻璃体浑浊",
+              "timestamp": 1771461286.191231,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "cb2572d2-c88c-411b-8993-f3bccc56c003",
+              "content": "医生建议可尝试服用石斛夜光丸",
+              "timestamp": 1771461286.191241,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "0bdaefae-ce1d-4aef-a96c-bb379205b37f",
+              "content": "2008年3月曾在美容院行注射隆鼻（共4针），注射材料不详",
+              "timestamp": 1771461291.1470594,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "9c38b7bd-74a2-4d69-a315-6de7edbf9b7d",
+              "content": "医生建议先取出原先注射隆鼻的注射物，再行假体隆鼻（硅胶或膨体）。",
+              "timestamp": 1771461294.9458477,
+              "metadata": {
+                "turn_idx": 27
+              },
+              "turn_idx": 27
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "子宫肌瘤，邱医生您好！我是山西的患者（双子宫），上星期和您约定周一（8月30）日住院，因为我月经期就在月底月初这几天，不知道术前检查需要几天，我是该提前如约住院检查等待月经干净后再手术呢，还是月经期过后再入院检查？谢谢您百忙之中的回复！邱医生您好：。",
+        "to_memory": [
+          "identity: 患者女，28岁（既往信息），山西患者；解剖/先天情况：双子宫",
+          "history: 既往诊断：卵巢早衰（患病约6年，曾长期用药维持月经；省中医就诊2年未孕，曾被建议试管婴儿）；既往眼部问题：2个月前视物模糊、眼前黑色网状影、眼干畏光，就诊北京同仁医院；既往医嘱：考虑玻璃体浑浊，曾建议服用石斛夜光丸；既往美容史：2008年3月美容院注射隆鼻4针（注射物不详），拟取出后再行假体隆鼻（硅胶/膨体）",
+          "history: 本次就诊问题：子宫肌瘤；计划8月30日入院，咨询术前检查所需天数及应在月经期前入院检查等待经净后手术，或月经期过后再入院检查"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "ca5c4916-96c1-41aa-b6db-55e6ce3d7a48",
+              "content": "患者女，28岁",
+              "timestamp": 1771461271.6362836,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "dc2846ee-af4d-4f4a-ad22-7c53c93c15ac",
+              "content": "目前鼻子较宽、鼻头低，中间有驼峰（既往亦有驼峰）；希望重新隆鼻，咨询处理方案、费用及是否需住院",
+              "timestamp": 1771461291.1470678,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "f2dbd2f0-e032-4510-b614-a5f0ff7cb363",
+              "content": "患者来自山西",
+              "timestamp": 1771461303.3936877,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            }
+          ],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc39a0c0-3a7c-4db9-bb6c-23d1f50782e3",
+              "content": "医生建议可考虑试管婴儿（IVF）助孕治疗",
+              "timestamp": 1771461235.3384237,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "70938111-50c8-418a-b094-b2748ea6dd3e",
+              "content": "医生建议因疑似宫腔粘连，需提前做宫腔镜检查",
+              "timestamp": 1771461235.3384457,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4ad72a63-95ce-4d6f-9ea8-3800e19cb44b",
+              "content": "2009-10 诊断/病史：左股骨头缺血性坏死",
+              "timestamp": 1771461239.2610278,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "75d9bd8d-2834-4429-85a8-83fc9921ca42",
+              "content": "就诊医院：积水潭医院、北京中医医院",
+              "timestamp": 1771461239.261041,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "d7bd05e0-99ae-4b03-b4cf-71021b62b95e",
+              "content": "医生意见（骨关节/髋部）：若不做关节置换，仅能靠药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771461248.0362468,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "280dc746-4a2d-44aa-a4a3-cbdb6bf76dfd",
+              "content": "颈后肿块病史约20多年；曾在蚌埠第一人民医院就诊；B超提示脂肪瘤；医生评估暂不需要手术",
+              "timestamp": 1771461255.7615178,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "503a8d3d-0a93-422c-9008-3398faa250dd",
+              "content": "卵巢早衰，病程约6年",
+              "timestamp": 1771461271.6362934,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "8f2138fd-ecb7-42df-84c4-35d897f558f3",
+              "content": "长期服药维持月经",
+              "timestamp": 1771461271.6362982,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "d1768c87-cd6e-481b-aeae-1346f5fabaaa",
+              "content": "曾在省中医就诊2年，期间未能怀孕",
+              "timestamp": 1771461271.636303,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "317cfbe8-de79-4a3a-85e3-2b1dac218398",
+              "content": "曾就诊北京同仁医院（眼病）",
+              "timestamp": 1771461280.3426614,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "ff7ef653-7307-4d20-9001-f457f461331d",
+              "content": "眼部症状医生判断可能为玻璃体浑浊",
+              "timestamp": 1771461286.191231,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "cb2572d2-c88c-411b-8993-f3bccc56c003",
+              "content": "医生建议可尝试服用石斛夜光丸",
+              "timestamp": 1771461286.191241,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "0bdaefae-ce1d-4aef-a96c-bb379205b37f",
+              "content": "2008年3月曾在美容院行注射隆鼻（共4针），注射材料不详",
+              "timestamp": 1771461291.1470594,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "9c38b7bd-74a2-4d69-a315-6de7edbf9b7d",
+              "content": "医生建议先取出原先注射隆鼻的注射物，再行假体隆鼻（硅胶或膨体）。",
+              "timestamp": 1771461294.9458477,
+              "metadata": {
+                "turn_idx": 27
+              },
+              "turn_idx": 27
+            },
+            {
+              "id": "96820340-f3db-4940-86ae-a6b3662461b7",
+              "content": "解剖/先天情况：双子宫",
+              "timestamp": 1771461303.3936968,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            },
+            {
+              "id": "c4501f04-b693-425c-b250-f58637c53d3d",
+              "content": "本次就诊问题：子宫肌瘤；计划8月30日入院，咨询术前检查所需天数及是否需月经期前入院检查等待经净后手术，或月经期过后再入院检查",
+              "timestamp": 1771461303.3937013,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在生殖系统既往检查中曾被记录过一项可能影响受孕或手术方案选择的异常情况。请指出该异常具体是什么，并说明在当前就诊计划中需要做哪些安全核对以避免遗漏这一风险点？",
+          "answer": "右侧输卵管伞端不通",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b4449a21-e7f9-46d4-90cf-c1e39c25114d"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "f2dbd2f0-e032-4510-b614-a5f0ff7cb363"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            18,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "是阴道顶段缝线少量渗出，每个病人均有，过几天即可。",
+        "to_memory": [
+          "working: 阴道顶段缝线处少量渗出，医生称属常见情况，预计过几天即可好转"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "461d5800-c927-492b-8184-e40d74a5e595",
+              "content": "阴道顶段缝线处少量渗出，医生称属常见情况，预计过几天即可好转",
+              "timestamp": 1771461309.597485,
+              "metadata": {
+                "turn_idx": 30
+              },
+              "turn_idx": 30
+            }
+          ],
+          "identity": [
+            {
+              "id": "ca5c4916-96c1-41aa-b6db-55e6ce3d7a48",
+              "content": "患者女，28岁",
+              "timestamp": 1771461271.6362836,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "dc2846ee-af4d-4f4a-ad22-7c53c93c15ac",
+              "content": "目前鼻子较宽、鼻头低，中间有驼峰（既往亦有驼峰）；希望重新隆鼻，咨询处理方案、费用及是否需住院",
+              "timestamp": 1771461291.1470678,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "f2dbd2f0-e032-4510-b614-a5f0ff7cb363",
+              "content": "患者来自山西",
+              "timestamp": 1771461303.3936877,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            }
+          ],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc39a0c0-3a7c-4db9-bb6c-23d1f50782e3",
+              "content": "医生建议可考虑试管婴儿（IVF）助孕治疗",
+              "timestamp": 1771461235.3384237,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "70938111-50c8-418a-b094-b2748ea6dd3e",
+              "content": "医生建议因疑似宫腔粘连，需提前做宫腔镜检查",
+              "timestamp": 1771461235.3384457,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4ad72a63-95ce-4d6f-9ea8-3800e19cb44b",
+              "content": "2009-10 诊断/病史：左股骨头缺血性坏死",
+              "timestamp": 1771461239.2610278,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "75d9bd8d-2834-4429-85a8-83fc9921ca42",
+              "content": "就诊医院：积水潭医院、北京中医医院",
+              "timestamp": 1771461239.261041,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "d7bd05e0-99ae-4b03-b4cf-71021b62b95e",
+              "content": "医生意见（骨关节/髋部）：若不做关节置换，仅能靠药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771461248.0362468,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "280dc746-4a2d-44aa-a4a3-cbdb6bf76dfd",
+              "content": "颈后肿块病史约20多年；曾在蚌埠第一人民医院就诊；B超提示脂肪瘤；医生评估暂不需要手术",
+              "timestamp": 1771461255.7615178,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "503a8d3d-0a93-422c-9008-3398faa250dd",
+              "content": "卵巢早衰，病程约6年",
+              "timestamp": 1771461271.6362934,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "8f2138fd-ecb7-42df-84c4-35d897f558f3",
+              "content": "长期服药维持月经",
+              "timestamp": 1771461271.6362982,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "d1768c87-cd6e-481b-aeae-1346f5fabaaa",
+              "content": "曾在省中医就诊2年，期间未能怀孕",
+              "timestamp": 1771461271.636303,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "317cfbe8-de79-4a3a-85e3-2b1dac218398",
+              "content": "曾就诊北京同仁医院（眼病）",
+              "timestamp": 1771461280.3426614,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "ff7ef653-7307-4d20-9001-f457f461331d",
+              "content": "眼部症状医生判断可能为玻璃体浑浊",
+              "timestamp": 1771461286.191231,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "cb2572d2-c88c-411b-8993-f3bccc56c003",
+              "content": "医生建议可尝试服用石斛夜光丸",
+              "timestamp": 1771461286.191241,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "0bdaefae-ce1d-4aef-a96c-bb379205b37f",
+              "content": "2008年3月曾在美容院行注射隆鼻（共4针），注射材料不详",
+              "timestamp": 1771461291.1470594,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "9c38b7bd-74a2-4d69-a315-6de7edbf9b7d",
+              "content": "医生建议先取出原先注射隆鼻的注射物，再行假体隆鼻（硅胶或膨体）。",
+              "timestamp": 1771461294.9458477,
+              "metadata": {
+                "turn_idx": 27
+              },
+              "turn_idx": 27
+            },
+            {
+              "id": "96820340-f3db-4940-86ae-a6b3662461b7",
+              "content": "解剖/先天情况：双子宫",
+              "timestamp": 1771461303.3936968,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            },
+            {
+              "id": "c4501f04-b693-425c-b250-f58637c53d3d",
+              "content": "本次就诊问题：子宫肌瘤；计划8月30日入院，咨询术前检查所需天数及是否需月经期前入院检查等待经净后手术，或月经期过后再入院检查",
+              "timestamp": 1771461303.3937013,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "邱医生您好！",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "461d5800-c927-492b-8184-e40d74a5e595",
+              "content": "阴道顶段缝线处少量渗出，医生称属常见情况，预计过几天即可好转",
+              "timestamp": 1771461309.597485,
+              "metadata": {
+                "turn_idx": 30
+              },
+              "turn_idx": 30
+            }
+          ],
+          "identity": [
+            {
+              "id": "ca5c4916-96c1-41aa-b6db-55e6ce3d7a48",
+              "content": "患者女，28岁",
+              "timestamp": 1771461271.6362836,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "dc2846ee-af4d-4f4a-ad22-7c53c93c15ac",
+              "content": "目前鼻子较宽、鼻头低，中间有驼峰（既往亦有驼峰）；希望重新隆鼻，咨询处理方案、费用及是否需住院",
+              "timestamp": 1771461291.1470678,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "f2dbd2f0-e032-4510-b614-a5f0ff7cb363",
+              "content": "患者来自山西",
+              "timestamp": 1771461303.3936877,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            }
+          ],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc39a0c0-3a7c-4db9-bb6c-23d1f50782e3",
+              "content": "医生建议可考虑试管婴儿（IVF）助孕治疗",
+              "timestamp": 1771461235.3384237,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "70938111-50c8-418a-b094-b2748ea6dd3e",
+              "content": "医生建议因疑似宫腔粘连，需提前做宫腔镜检查",
+              "timestamp": 1771461235.3384457,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4ad72a63-95ce-4d6f-9ea8-3800e19cb44b",
+              "content": "2009-10 诊断/病史：左股骨头缺血性坏死",
+              "timestamp": 1771461239.2610278,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "75d9bd8d-2834-4429-85a8-83fc9921ca42",
+              "content": "就诊医院：积水潭医院、北京中医医院",
+              "timestamp": 1771461239.261041,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "d7bd05e0-99ae-4b03-b4cf-71021b62b95e",
+              "content": "医生意见（骨关节/髋部）：若不做关节置换，仅能靠药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771461248.0362468,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "280dc746-4a2d-44aa-a4a3-cbdb6bf76dfd",
+              "content": "颈后肿块病史约20多年；曾在蚌埠第一人民医院就诊；B超提示脂肪瘤；医生评估暂不需要手术",
+              "timestamp": 1771461255.7615178,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "503a8d3d-0a93-422c-9008-3398faa250dd",
+              "content": "卵巢早衰，病程约6年",
+              "timestamp": 1771461271.6362934,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "8f2138fd-ecb7-42df-84c4-35d897f558f3",
+              "content": "长期服药维持月经",
+              "timestamp": 1771461271.6362982,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "d1768c87-cd6e-481b-aeae-1346f5fabaaa",
+              "content": "曾在省中医就诊2年，期间未能怀孕",
+              "timestamp": 1771461271.636303,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "317cfbe8-de79-4a3a-85e3-2b1dac218398",
+              "content": "曾就诊北京同仁医院（眼病）",
+              "timestamp": 1771461280.3426614,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "ff7ef653-7307-4d20-9001-f457f461331d",
+              "content": "眼部症状医生判断可能为玻璃体浑浊",
+              "timestamp": 1771461286.191231,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "cb2572d2-c88c-411b-8993-f3bccc56c003",
+              "content": "医生建议可尝试服用石斛夜光丸",
+              "timestamp": 1771461286.191241,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "0bdaefae-ce1d-4aef-a96c-bb379205b37f",
+              "content": "2008年3月曾在美容院行注射隆鼻（共4针），注射材料不详",
+              "timestamp": 1771461291.1470594,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "9c38b7bd-74a2-4d69-a315-6de7edbf9b7d",
+              "content": "医生建议先取出原先注射隆鼻的注射物，再行假体隆鼻（硅胶或膨体）。",
+              "timestamp": 1771461294.9458477,
+              "metadata": {
+                "turn_idx": 27
+              },
+              "turn_idx": 27
+            },
+            {
+              "id": "96820340-f3db-4940-86ae-a6b3662461b7",
+              "content": "解剖/先天情况：双子宫",
+              "timestamp": 1771461303.3936968,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            },
+            {
+              "id": "c4501f04-b693-425c-b250-f58637c53d3d",
+              "content": "本次就诊问题：子宫肌瘤；计划8月30日入院，咨询术前检查所需天数及是否需月经期前入院检查等待经净后手术，或月经期过后再入院检查",
+              "timestamp": 1771461303.3937013,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可能有点炎症，可以用点消炎药。我7日上班，你可以来。",
+        "to_memory": [
+          "working: 医生判断可能有点炎症，建议可用消炎药；医生7日上班，患者可于7日前来就诊"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "461d5800-c927-492b-8184-e40d74a5e595",
+              "content": "阴道顶段缝线处少量渗出，医生称属常见情况，预计过几天即可好转",
+              "timestamp": 1771461309.597485,
+              "metadata": {
+                "turn_idx": 30
+              },
+              "turn_idx": 30
+            },
+            {
+              "id": "822cda4e-d903-4c18-8136-794632e66851",
+              "content": "医生判断可能有点炎症，建议可用消炎药；医生7日上班，患者可于7日前来就诊",
+              "timestamp": 1771461313.720788,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            }
+          ],
+          "identity": [
+            {
+              "id": "ca5c4916-96c1-41aa-b6db-55e6ce3d7a48",
+              "content": "患者女，28岁",
+              "timestamp": 1771461271.6362836,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "dc2846ee-af4d-4f4a-ad22-7c53c93c15ac",
+              "content": "目前鼻子较宽、鼻头低，中间有驼峰（既往亦有驼峰）；希望重新隆鼻，咨询处理方案、费用及是否需住院",
+              "timestamp": 1771461291.1470678,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "f2dbd2f0-e032-4510-b614-a5f0ff7cb363",
+              "content": "患者来自山西",
+              "timestamp": 1771461303.3936877,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            }
+          ],
+          "history": [
+            {
+              "id": "b247ef12-f844-4577-b024-4787b99b0ee7",
+              "content": "曾在友谊医院和儿研所就诊，被告知支气管炎",
+              "timestamp": 1771461193.9389267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6d4bd462-cea2-447f-bfe4-87ea4726a630",
+              "content": "曾自行饮用梨煮百合水、梨蒸川贝等食疗",
+              "timestamp": 1771461193.9389312,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c4845ad2-84aa-4c6b-b2ff-7b226d35e031",
+              "content": "医生建议必要时进行支原体相关检测（检查支原体）",
+              "timestamp": 1771461200.2066932,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "3ea89d41-08b2-44ae-90e7-87b335be0140",
+              "content": "医生表示上述两种药物也可以服用",
+              "timestamp": 1771461200.2067006,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "0304a91f-7e84-40f1-8222-7512040b54cf",
+              "content": "激光祛斑结痂后不慎蹭掉部分痂皮遗留红印，医生建议可外用生长因子等产品促进表皮恢复；结痂蹭掉后也可至医院美容科购买/使用修复类产品（如修复肽）促进修复",
+              "timestamp": 1771461213.4433987,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "abcdfb9e-67e8-4d44-9822-fd8cf7b92895",
+              "content": "2005年2月宫外孕，行腹腔镜手术切除左侧输卵管",
+              "timestamp": 1771461229.195853,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "b4449a21-e7f9-46d4-90cf-c1e39c25114d",
+              "content": "右侧输卵管伞端不通（输卵管不通）",
+              "timestamp": 1771461229.1958628,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "9cb56c42-f98b-4585-bc86-16c46b32adac",
+              "content": "曾服用中药治疗2个月仍未怀孕",
+              "timestamp": 1771461229.1958673,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fc39a0c0-3a7c-4db9-bb6c-23d1f50782e3",
+              "content": "医生建议可考虑试管婴儿（IVF）助孕治疗",
+              "timestamp": 1771461235.3384237,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "70938111-50c8-418a-b094-b2748ea6dd3e",
+              "content": "医生建议因疑似宫腔粘连，需提前做宫腔镜检查",
+              "timestamp": 1771461235.3384457,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "4ad72a63-95ce-4d6f-9ea8-3800e19cb44b",
+              "content": "2009-10 诊断/病史：左股骨头缺血性坏死",
+              "timestamp": 1771461239.2610278,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "75d9bd8d-2834-4429-85a8-83fc9921ca42",
+              "content": "就诊医院：积水潭医院、北京中医医院",
+              "timestamp": 1771461239.261041,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "d7bd05e0-99ae-4b03-b4cf-71021b62b95e",
+              "content": "医生意见（骨关节/髋部）：若不做关节置换，仅能靠药物减轻疼痛；若关节软骨破碎可考虑关节清理手术，但功能可能受影响",
+              "timestamp": 1771461248.0362468,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "280dc746-4a2d-44aa-a4a3-cbdb6bf76dfd",
+              "content": "颈后肿块病史约20多年；曾在蚌埠第一人民医院就诊；B超提示脂肪瘤；医生评估暂不需要手术",
+              "timestamp": 1771461255.7615178,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            },
+            {
+              "id": "503a8d3d-0a93-422c-9008-3398faa250dd",
+              "content": "卵巢早衰，病程约6年",
+              "timestamp": 1771461271.6362934,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "8f2138fd-ecb7-42df-84c4-35d897f558f3",
+              "content": "长期服药维持月经",
+              "timestamp": 1771461271.6362982,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "d1768c87-cd6e-481b-aeae-1346f5fabaaa",
+              "content": "曾在省中医就诊2年，期间未能怀孕",
+              "timestamp": 1771461271.636303,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            },
+            {
+              "id": "317cfbe8-de79-4a3a-85e3-2b1dac218398",
+              "content": "曾就诊北京同仁医院（眼病）",
+              "timestamp": 1771461280.3426614,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "ff7ef653-7307-4d20-9001-f457f461331d",
+              "content": "眼部症状医生判断可能为玻璃体浑浊",
+              "timestamp": 1771461286.191231,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "cb2572d2-c88c-411b-8993-f3bccc56c003",
+              "content": "医生建议可尝试服用石斛夜光丸",
+              "timestamp": 1771461286.191241,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "0bdaefae-ce1d-4aef-a96c-bb379205b37f",
+              "content": "2008年3月曾在美容院行注射隆鼻（共4针），注射材料不详",
+              "timestamp": 1771461291.1470594,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "9c38b7bd-74a2-4d69-a315-6de7edbf9b7d",
+              "content": "医生建议先取出原先注射隆鼻的注射物，再行假体隆鼻（硅胶或膨体）。",
+              "timestamp": 1771461294.9458477,
+              "metadata": {
+                "turn_idx": 27
+              },
+              "turn_idx": 27
+            },
+            {
+              "id": "96820340-f3db-4940-86ae-a6b3662461b7",
+              "content": "解剖/先天情况：双子宫",
+              "timestamp": 1771461303.3936968,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            },
+            {
+              "id": "c4501f04-b693-425c-b250-f58637c53d3d",
+              "content": "本次就诊问题：子宫肌瘤；计划8月30日入院，咨询术前检查所需天数及是否需月经期前入院检查等待经净后手术，或月经期过后再入院检查",
+              "timestamp": 1771461303.3937013,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者曾就某处术后/术区出现的异常表现向医生咨询过。医生当时判断这是否属于需要紧急处理的危险信号？预计多久会自行好转？",
+          "answer": "医生认为属常见情况，不需紧急处理，通常过几天即可好转。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "d7bd05e0-99ae-4b03-b4cf-71021b62b95e"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "461d5800-c927-492b-8184-e40d74a5e595"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            17,
+            2
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "rare_disease_ddx",
+    "scenario_name": "罕见病鉴别诊断",
+    "session_count": 10,
+    "group_key": "综合科"
+  }
+}

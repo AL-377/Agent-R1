@@ -1,0 +1,991 @@
+{
+  "patient_id": "5118e343b8b3",
+  "messages": [
+    {
+      "user": {
+        "content": "肚子疼，象这样的疼痛也不是很多，但已经有几次了，每次都特别难受大汗淋漓的，大约持续几分钟过去以后才不疼了。",
+        "to_memory": [
+          "working: 主诉肚子疼，已发作数次",
+          "working: 疼痛发作时特别难受，伴大汗淋漓",
+          "working: 每次发作持续约几分钟后自行缓解"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "20df7332-f08f-4a1f-801d-5706bc07724f",
+              "content": "主诉肚子疼，已发作数次",
+              "timestamp": 1771443959.2578442,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "9cd27f16-ff1e-4b78-8026-dd07904e972e",
+              "content": "疼痛发作时特别难受，伴大汗淋漓",
+              "timestamp": 1771443959.257855,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "9ecb3c70-df33-4010-8e76-c43e6951199a",
+              "content": "每次发作持续约几分钟后自行缓解",
+              "timestamp": 1771443959.2578595,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者描述腹痛每次发作一般会持续多长时间才缓解？",
+          "answer": "约几分钟后自行缓解",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "9ecb3c70-df33-4010-8e76-c43e6951199a"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "排便时发生肠痉挛而腹痛，建议到正规医院就诊，进行必要的检查排除器质性疾病，并适当中医辨病辨证治疗调理。平时注意避免受凉，忌食生冷、酸辣、甜粘等刺激性食物。",
+        "to_memory": [
+          "working: 反复发作性腹痛/肠痉挛样疼痛，排便时发作，每次大汗淋漓，持续数分钟后缓解",
+          "history: 医嘱建议至正规医院就诊，完善必要检查以排除器质性疾病，可考虑中医辨证调理",
+          "history: 日常建议避免受凉，忌食生冷、酸辣、甜粘等刺激性食物"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "20df7332-f08f-4a1f-801d-5706bc07724f",
+              "content": "反复发作性腹痛/肠痉挛样疼痛，排便时发作，已发作数次",
+              "timestamp": 1771443959.2578442,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "9cd27f16-ff1e-4b78-8026-dd07904e972e",
+              "content": "疼痛发作时特别难受，伴大汗淋漓",
+              "timestamp": 1771443959.257855,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "9ecb3c70-df33-4010-8e76-c43e6951199a",
+              "content": "每次发作持续约几分钟后自行缓解",
+              "timestamp": 1771443959.2578595,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "886337b4-647a-4fe4-9db5-cbccb8b9f477",
+              "content": "医嘱建议至正规医院就诊，完善必要检查以排除器质性疾病，可考虑中医辨证调理",
+              "timestamp": 1771443966.3206277,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "4cc3dd6c-0c62-486f-b3d5-9cc68b94bd2c",
+              "content": "日常建议避免受凉，忌食生冷、酸辣、甜粘等刺激性食物",
+              "timestamp": 1771443966.3206363,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "结合患者最早描述不适的出现情境，与医生当时提出的进一步就诊与检查安排，这两部分信息分别是什么？",
+          "answer": "患者腹痛呈反复发作，排便时出现肠痉挛样疼痛，已发作数次；医生建议到正规医院就诊，完善必要检查以排除器质性疾病，并可考虑中医辨证调理。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "20df7332-f08f-4a1f-801d-5706bc07724f"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "886337b4-647a-4fe4-9db5-cbccb8b9f477"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "886337b4-647a-4fe4-9db5-cbccb8b9f477",
+              "content": "医嘱建议至正规医院就诊，完善必要检查以排除器质性疾病，可考虑中医辨证调理",
+              "timestamp": 1771443966.3206277,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "4cc3dd6c-0c62-486f-b3d5-9cc68b94bd2c",
+              "content": "日常建议避免受凉，忌食生冷、酸辣、甜粘等刺激性食物",
+              "timestamp": 1771443966.3206363,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "脚跟走路痛，脚跟走路痛，并且痛的位置在脚掌，脚跟怎办？",
+        "to_memory": [
+          "working: 主诉走路时脚跟痛，疼痛位置描述在脚掌（足底）区域，询问处理办法"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "049bab54-4b20-4806-b982-443aeba6d4aa",
+              "content": "主诉走路时脚跟痛，疼痛位置在脚掌（足底）区域，询问处理办法",
+              "timestamp": 1771443973.9240494,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "886337b4-647a-4fe4-9db5-cbccb8b9f477",
+              "content": "医嘱建议至正规医院就诊，完善必要检查以排除器质性疾病，可考虑中医辨证调理",
+              "timestamp": 1771443966.3206277,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "4cc3dd6c-0c62-486f-b3d5-9cc68b94bd2c",
+              "content": "日常建议避免受凉，忌食生冷、酸辣、甜粘等刺激性食物",
+              "timestamp": 1771443966.3206363,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "医生在前一次就诊记录里提到过需要患者在日常生活中特别避免的环境因素和饮食类别有哪些？这些注意事项在后续咨询中是否被延续关注？",
+          "answer": "注意避免受凉；忌食生冷、酸辣、甜粘等刺激性食物。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "049bab54-4b20-4806-b982-443aeba6d4aa"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "4cc3dd6c-0c62-486f-b3d5-9cc68b94bd2c"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "打封闭。",
+        "to_memory": [
+          "working: 主诉脚跟走路痛，疼痛位置在脚掌",
+          "history: 医生建议打封闭（封闭治疗）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "049bab54-4b20-4806-b982-443aeba6d4aa",
+              "content": "主诉走路时脚跟痛，疼痛位置在脚掌（足底）区域，询问处理办法",
+              "timestamp": 1771443973.9240494,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "886337b4-647a-4fe4-9db5-cbccb8b9f477",
+              "content": "医嘱建议至正规医院就诊，完善必要检查以排除器质性疾病，可考虑中医辨证调理",
+              "timestamp": 1771443966.3206277,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "4cc3dd6c-0c62-486f-b3d5-9cc68b94bd2c",
+              "content": "日常建议避免受凉，忌食生冷、酸辣、甜粘等刺激性食物",
+              "timestamp": 1771443966.3206363,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e22e43a2-9e6c-4b3e-8e16-fe2abc2aae26",
+              "content": "医生建议可考虑打封闭（封闭治疗）缓解足跟/足底疼痛",
+              "timestamp": 1771443980.8867967,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "886337b4-647a-4fe4-9db5-cbccb8b9f477",
+              "content": "医嘱建议至正规医院就诊，完善必要检查以排除器质性疾病，可考虑中医辨证调理",
+              "timestamp": 1771443966.3206277,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "4cc3dd6c-0c62-486f-b3d5-9cc68b94bd2c",
+              "content": "日常建议避免受凉，忌食生冷、酸辣、甜粘等刺激性食物",
+              "timestamp": 1771443966.3206363,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e22e43a2-9e6c-4b3e-8e16-fe2abc2aae26",
+              "content": "医生建议可考虑打封闭（封闭治疗）缓解足跟/足底疼痛",
+              "timestamp": 1771443980.8867967,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "先天外耳骨性封锁，",
+        "to_memory": [
+          "history: 先天外耳骨性封锁（先天性外耳道骨性闭锁/狭窄）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "886337b4-647a-4fe4-9db5-cbccb8b9f477",
+              "content": "医嘱建议至正规医院就诊，完善必要检查以排除器质性疾病，可考虑中医辨证调理",
+              "timestamp": 1771443966.3206277,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "4cc3dd6c-0c62-486f-b3d5-9cc68b94bd2c",
+              "content": "日常建议避免受凉，忌食生冷、酸辣、甜粘等刺激性食物",
+              "timestamp": 1771443966.3206363,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e22e43a2-9e6c-4b3e-8e16-fe2abc2aae26",
+              "content": "医生建议可考虑打封闭（封闭治疗）缓解足跟/足底疼痛",
+              "timestamp": 1771443980.8867967,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f323df4-2dac-4d02-a219-c25377d0b833",
+              "content": "先天外耳骨性封锁（先天性外耳道骨性闭锁/狭窄）",
+              "timestamp": 1771443985.1901202,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者最初因腹部不适咨询时与后来因足部走路痛咨询时，医生分别给出的核心处理建议是什么？请分别概括两次建议。",
+          "answer": "首次：建议到正规医院就诊并做必要检查以排除器质性疾病，可考虑中医辨证调理；后来：建议封闭治疗以缓解足跟/足底疼痛。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "886337b4-647a-4fe4-9db5-cbccb8b9f477",
+                "e22e43a2-9e6c-4b3e-8e16-fe2abc2aae26"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            5,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "我是哈尔滨，长春不清楚。",
+        "to_memory": [
+          "working: 医生表示自己在哈尔滨，长春情况不清楚（与患者先天外耳骨性封锁就诊地点相关）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "3059eedc-0525-4710-add3-12c1a83dd541",
+              "content": "医生表示自己在哈尔滨，长春情况不清楚（与患者先天外耳骨性封锁就诊地点相关）",
+              "timestamp": 1771443992.5659606,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "886337b4-647a-4fe4-9db5-cbccb8b9f477",
+              "content": "医嘱建议至正规医院就诊，完善必要检查以排除器质性疾病，可考虑中医辨证调理",
+              "timestamp": 1771443966.3206277,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "4cc3dd6c-0c62-486f-b3d5-9cc68b94bd2c",
+              "content": "日常建议避免受凉，忌食生冷、酸辣、甜粘等刺激性食物",
+              "timestamp": 1771443966.3206363,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e22e43a2-9e6c-4b3e-8e16-fe2abc2aae26",
+              "content": "医生建议可考虑打封闭（封闭治疗）缓解足跟/足底疼痛",
+              "timestamp": 1771443980.8867967,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f323df4-2dac-4d02-a219-c25377d0b833",
+              "content": "先天外耳骨性封锁（先天性外耳道骨性闭锁/狭窄）",
+              "timestamp": 1771443985.1901202,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者咨询足部疼痛那次和随后咨询耳部问题那次：医生在前一次提出的主要处理方式是什么？而在后一次医生对自己所在城市及另一城市的情况分别做了怎样的说明？",
+          "answer": "前一次建议做封闭治疗缓解足跟/足底疼痛；后一次表示自己在哈尔滨，长春情况不清楚。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "e22e43a2-9e6c-4b3e-8e16-fe2abc2aae26"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "3059eedc-0525-4710-add3-12c1a83dd541"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            3,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "886337b4-647a-4fe4-9db5-cbccb8b9f477",
+              "content": "医嘱建议至正规医院就诊，完善必要检查以排除器质性疾病，可考虑中医辨证调理",
+              "timestamp": 1771443966.3206277,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "4cc3dd6c-0c62-486f-b3d5-9cc68b94bd2c",
+              "content": "日常建议避免受凉，忌食生冷、酸辣、甜粘等刺激性食物",
+              "timestamp": 1771443966.3206363,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e22e43a2-9e6c-4b3e-8e16-fe2abc2aae26",
+              "content": "医生建议可考虑打封闭（封闭治疗）缓解足跟/足底疼痛",
+              "timestamp": 1771443980.8867967,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f323df4-2dac-4d02-a219-c25377d0b833",
+              "content": "先天外耳骨性封锁（先天性外耳道骨性闭锁/狭窄）",
+              "timestamp": 1771443985.1901202,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "直肠癌，2009月3月做的直肠癌手术，术后进行过放疗与化疗，在2009年11月出现肠梗阻现象，但是至今没好，前几天检查发现说是因为进行过放疗而产生的肠炎，由于做放疗的使得那块肠子坏死。非常感谢您的解答，我想再问一下，放射性肠炎这个病严重吗？治疗起来难度大吗？他会有什么后患？这2个手术一起做危险性有多大？",
+        "to_memory": [
+          "history: 直肠癌；2009年3月行直肠癌手术；术后接受放疗与化疗；2009年11月出现肠梗阻，至今未愈；近期检查提示放疗相关放射性肠炎，局部肠段坏死",
+          "history: 询问放射性肠炎是否严重、治疗难度及可能后遗症；询问两项手术一起做的风险/危险性"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "886337b4-647a-4fe4-9db5-cbccb8b9f477",
+              "content": "医嘱建议至正规医院就诊，完善必要检查以排除器质性疾病，可考虑中医辨证调理",
+              "timestamp": 1771443966.3206277,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "4cc3dd6c-0c62-486f-b3d5-9cc68b94bd2c",
+              "content": "日常建议避免受凉，忌食生冷、酸辣、甜粘等刺激性食物",
+              "timestamp": 1771443966.3206363,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e22e43a2-9e6c-4b3e-8e16-fe2abc2aae26",
+              "content": "医生建议可考虑打封闭（封闭治疗）缓解足跟/足底疼痛",
+              "timestamp": 1771443980.8867967,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f323df4-2dac-4d02-a219-c25377d0b833",
+              "content": "先天外耳骨性封锁（先天性外耳道骨性闭锁/狭窄）",
+              "timestamp": 1771443985.1901202,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "a022b657-09de-446d-94d6-97dd50db110b",
+              "content": "既往史：直肠癌；2009年3月行直肠癌手术，术后接受放疗与化疗；2009年11月出现肠梗阻至今未愈；近期检查提示放疗相关放射性肠炎，局部肠段坏死。",
+              "timestamp": 1771444001.2754931,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0124ba94-4139-4d6c-a443-5451d3f18132",
+              "content": "患者咨询：放射性肠炎是否严重、治疗难度及可能后遗症；两项手术一起做的风险/危险性。",
+              "timestamp": 1771444001.275507,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "严重，治疗难度很大。",
+        "to_memory": [
+          "history: 2009年3月行直肠癌手术，术后接受放疗与化疗；2009年11月出现肠梗阻至今未愈；近期检查提示放疗相关放射性肠炎，局部肠道坏死",
+          "history: 咨询放射性肠炎严重程度、治疗难度、后遗症及合并手术风险；医生反馈放射性肠炎严重且治疗难度大"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "886337b4-647a-4fe4-9db5-cbccb8b9f477",
+              "content": "医嘱建议至正规医院就诊，完善必要检查以排除器质性疾病，可考虑中医辨证调理",
+              "timestamp": 1771443966.3206277,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "4cc3dd6c-0c62-486f-b3d5-9cc68b94bd2c",
+              "content": "日常建议避免受凉，忌食生冷、酸辣、甜粘等刺激性食物",
+              "timestamp": 1771443966.3206363,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e22e43a2-9e6c-4b3e-8e16-fe2abc2aae26",
+              "content": "医生建议可考虑打封闭（封闭治疗）缓解足跟/足底疼痛",
+              "timestamp": 1771443980.8867967,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f323df4-2dac-4d02-a219-c25377d0b833",
+              "content": "先天外耳骨性封锁（先天性外耳道骨性闭锁/狭窄）",
+              "timestamp": 1771443985.1901202,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "a022b657-09de-446d-94d6-97dd50db110b",
+              "content": "既往史：直肠癌；2009年3月行直肠癌手术，术后接受放疗与化疗；2009年11月出现肠梗阻至今未愈；近期检查提示放疗相关放射性肠炎，局部肠段坏死。",
+              "timestamp": 1771444001.2754931,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0124ba94-4139-4d6c-a443-5451d3f18132",
+              "content": "患者咨询：放射性肠炎严重程度、治疗难度、可能后遗症及合并手术风险；医生反馈放射性肠炎严重且治疗难度大。",
+              "timestamp": 1771444001.275507,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "医生在之前的交流中对患者下一步就诊地点和后续处理给出了哪些具体建议？",
+          "answer": "建议至正规医院就诊，完善必要检查以排除器质性疾病，可考虑中医辨证调理。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "886337b4-647a-4fe4-9db5-cbccb8b9f477"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            9
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "886337b4-647a-4fe4-9db5-cbccb8b9f477",
+              "content": "医嘱建议至正规医院就诊，完善必要检查以排除器质性疾病，可考虑中医辨证调理",
+              "timestamp": 1771443966.3206277,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "4cc3dd6c-0c62-486f-b3d5-9cc68b94bd2c",
+              "content": "日常建议避免受凉，忌食生冷、酸辣、甜粘等刺激性食物",
+              "timestamp": 1771443966.3206363,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e22e43a2-9e6c-4b3e-8e16-fe2abc2aae26",
+              "content": "医生建议可考虑打封闭（封闭治疗）缓解足跟/足底疼痛",
+              "timestamp": 1771443980.8867967,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f323df4-2dac-4d02-a219-c25377d0b833",
+              "content": "先天外耳骨性封锁（先天性外耳道骨性闭锁/狭窄）",
+              "timestamp": 1771443985.1901202,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "a022b657-09de-446d-94d6-97dd50db110b",
+              "content": "既往史：直肠癌；2009年3月行直肠癌手术，术后接受放疗与化疗；2009年11月出现肠梗阻至今未愈；近期检查提示放疗相关放射性肠炎，局部肠段坏死。",
+              "timestamp": 1771444001.2754931,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0124ba94-4139-4d6c-a443-5451d3f18132",
+              "content": "患者咨询：放射性肠炎严重程度、治疗难度、可能后遗症及合并手术风险；医生反馈放射性肠炎严重且治疗难度大。",
+              "timestamp": 1771444001.275507,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "肚挤流水，我女友肚挤偶尔会流水，这是从小就有的症状了，每次流水后都清洗干净是用棉签吸干，然后用阿莫西林的药粉倒进去，这样便会好。请问要怎样治疗或怎样做才正确，谢谢。",
+        "to_memory": [
+          "identity: 患者咨询其女友肚脐偶尔流水/渗液，自幼存在该症状；每次渗液后会清洗、用棉签吸干，并将阿莫西林药粉倒入肚脐后可暂时好转；询问正确处理及治疗方法"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "886337b4-647a-4fe4-9db5-cbccb8b9f477",
+              "content": "医嘱建议至正规医院就诊，完善必要检查以排除器质性疾病，可考虑中医辨证调理",
+              "timestamp": 1771443966.3206277,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "4cc3dd6c-0c62-486f-b3d5-9cc68b94bd2c",
+              "content": "日常建议避免受凉，忌食生冷、酸辣、甜粘等刺激性食物",
+              "timestamp": 1771443966.3206363,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e22e43a2-9e6c-4b3e-8e16-fe2abc2aae26",
+              "content": "医生建议可考虑打封闭（封闭治疗）缓解足跟/足底疼痛",
+              "timestamp": 1771443980.8867967,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f323df4-2dac-4d02-a219-c25377d0b833",
+              "content": "先天外耳骨性封锁（先天性外耳道骨性闭锁/狭窄）",
+              "timestamp": 1771443985.1901202,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "a022b657-09de-446d-94d6-97dd50db110b",
+              "content": "既往史：直肠癌；2009年3月行直肠癌手术，术后接受放疗与化疗；2009年11月出现肠梗阻至今未愈；近期检查提示放疗相关放射性肠炎，局部肠段坏死。",
+              "timestamp": 1771444001.2754931,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0124ba94-4139-4d6c-a443-5451d3f18132",
+              "content": "患者咨询：放射性肠炎严重程度、治疗难度、可能后遗症及合并手术风险；医生反馈放射性肠炎严重且治疗难度大。",
+              "timestamp": 1771444001.275507,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "5f1abdfd-9234-4687-a02e-4fa8f9859164",
+              "content": "患者咨询其女友肚脐偶尔流水/渗液，自幼存在；每次渗液后会清洗、用棉签吸干，并将阿莫西林药粉倒入肚脐后可暂时好转；询问正确处理及治疗方法",
+              "timestamp": 1771444010.8578918,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "医生曾提到过一种可考虑用于缓解足跟/足底疼痛的处置方式，具体是什么？",
+          "answer": "可考虑打封闭（封闭治疗）",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "e22e43a2-9e6c-4b3e-8e16-fe2abc2aae26"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            8
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你好！请参照。",
+        "to_memory": [
+          "history: 2009年3月行直肠癌手术，术后接受放疗与化疗；2009年11月出现肠梗阻至今未愈；近期检查提示放疗相关肠炎/放射性肠炎，疑放疗致肠段坏死",
+          "history: 医生意见：放射性肠炎严重，治疗难度很大",
+          "working: 主诉脚跟走路痛，疼痛位置在脚掌/脚跟区域",
+          "history: 医生建议：打封闭（针对脚跟疼痛）",
+          "working: 先天外耳骨性封锁（先天性外耳道骨性闭锁）",
+          "identity: 女友自幼肚脐偶尔挤压会流水；每次流水后用棉签吸干并将阿莫西林药粉倒入肚脐后可好转；询问正确治疗方法"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "93c9d653-1258-41a9-bc94-cac4eadc4b2c",
+              "content": "主诉足跟/足底（脚掌-脚跟区域）行走痛",
+              "timestamp": 1771444020.739382,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "886337b4-647a-4fe4-9db5-cbccb8b9f477",
+              "content": "医嘱建议至正规医院就诊，完善必要检查以排除器质性疾病，可考虑中医辨证调理",
+              "timestamp": 1771443966.3206277,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "4cc3dd6c-0c62-486f-b3d5-9cc68b94bd2c",
+              "content": "日常建议避免受凉，忌食生冷、酸辣、甜粘等刺激性食物",
+              "timestamp": 1771443966.3206363,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "e22e43a2-9e6c-4b3e-8e16-fe2abc2aae26",
+              "content": "医生建议可考虑打封闭（封闭治疗）缓解足跟/足底疼痛",
+              "timestamp": 1771443980.8867967,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4f323df4-2dac-4d02-a219-c25377d0b833",
+              "content": "先天外耳骨性封锁（先天性外耳道骨性闭锁/狭窄）",
+              "timestamp": 1771443985.1901202,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "a022b657-09de-446d-94d6-97dd50db110b",
+              "content": "既往史：直肠癌；2009年3月行直肠癌手术，术后接受放疗与化疗；2009年11月出现肠梗阻至今未愈；近期检查提示放疗相关放射性肠炎，局部肠段坏死。",
+              "timestamp": 1771444001.2754931,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0124ba94-4139-4d6c-a443-5451d3f18132",
+              "content": "患者咨询：放射性肠炎严重程度、治疗难度、可能后遗症及合并手术风险；医生反馈放射性肠炎严重且治疗难度大。",
+              "timestamp": 1771444001.275507,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "5f1abdfd-9234-4687-a02e-4fa8f9859164",
+              "content": "患者咨询其女友肚脐偶尔流水/渗液，自幼存在；每次渗液后会清洗、用棉签吸干，并将阿莫西林药粉倒入肚脐后可暂时好转；询问正确处理及治疗方法",
+              "timestamp": 1771444010.8578918,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者在本次就诊中主要描述的行走时疼痛部位在哪里？",
+          "answer": "足跟/足底（脚掌-脚跟区域）行走痛",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "93c9d653-1258-41a9-bc94-cac4eadc4b2c"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "complex_treatment",
+    "scenario_name": "复杂疾病诊疗",
+    "session_count": 5,
+    "group_key": "综合科"
+  }
+}

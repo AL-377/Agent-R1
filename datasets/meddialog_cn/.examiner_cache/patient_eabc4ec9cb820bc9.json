@@ -1,0 +1,4189 @@
+{
+  "patient_id": "4be270eeee83",
+  "messages": [
+    {
+      "user": {
+        "content": "心肌梗死，患者男34岁5天前患急性心梗住院治疗缓解后出院今天早上经化验结果：LDH:266HBDH:296AST:52CK:492CK-MD:40自觉症状不适胸闷乏力出冷汗等请问专家应怎样治疗？\n。",
+        "to_memory": [
+          "identity: 患者男，34岁",
+          "history: 5天前急性心肌梗死住院治疗，缓解后出院",
+          "history: 今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+          "working: 今日自觉不适：胸闷、乏力、出冷汗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "bbd966e0-fc98-436e-9518-21b186f4df11",
+              "content": "今日自觉不适：胸闷、乏力、出冷汗",
+              "timestamp": 1771465944.6555283,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者男，34岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在本次咨询中，患者描述了一个近期发生的严重心血管事件及其住院经过。请指出该事件发生在距今天大约多久之前、并说明当时是否曾住院治疗后出院？",
+          "answer": "约5天前发生急性心肌梗死，曾住院治疗缓解后出院。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "72d8f159-5188-42ff-9264-f81ae9556c9b"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "761905b9-e59f-42f0-8ac6-161d714d4731"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你好！心肌酶谱还很高！当时的心肌酶谱是什么情况，能吃上了吗？现在吃的什么药？血压血糖血脂正常吗？",
+        "to_memory": [
+          "identity: 患者男，34岁",
+          "history: 5天前发生急性心肌梗死，住院治疗缓解后出院",
+          "history: 今日化验心肌酶谱/相关指标：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40（医生提示仍偏高）",
+          "working: 出院后今日自觉不适：胸闷、乏力、出冷汗",
+          "history: 医生询问：当时住院期间心肌酶谱情况、目前是否能进食/是否吃得上、目前正在服用的药物、血压/血糖/血脂是否正常"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "bbd966e0-fc98-436e-9518-21b186f4df11",
+              "content": "今日自觉不适：胸闷、乏力、出冷汗",
+              "timestamp": 1771465944.6555283,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者男，34岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者今天早上自觉出现了哪些不适表现？",
+          "answer": "胸闷、乏力、出冷汗",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "bbd966e0-fc98-436e-9518-21b186f4df11"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "发病时心肌酶谱虽高但比现在低，使用丹参注射液，马来酸注射液，口服硝酸甘油和丹参滴丸发病时血压低血糖正常血脂高。",
+        "to_memory": [
+          "identity: 患者男，34岁",
+          "identity: 血脂偏高（高脂血症/血脂高）",
+          "history: 5天前急性心肌梗死住院治疗后缓解出院",
+          "history: 今日化验心肌酶谱：LDH 266、HBDH 296、AST 52、CK 492、CK-MB 40；发病时心肌酶谱虽高但比现在低",
+          "history: 发病时血压低；血糖正常；血脂高",
+          "history: 近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+          "working: 目前自觉不适：胸闷、乏力、出冷汗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "bbd966e0-fc98-436e-9518-21b186f4df11",
+              "content": "今日自觉不适：胸闷、乏力、出冷汗",
+              "timestamp": 1771465944.6555283,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者男，34岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "症状是否也加重了？做了心肌肌钙蛋白定性检查了吗？都用了什么药，详细点告诉我！",
+        "to_memory": [
+          "identity: 患者男，34岁",
+          "history: 5天前急性心肌梗死住院治疗后缓解出院",
+          "history: 今日化验心肌酶谱：LDH 266↑，HBDH 296，AST 52，CK 492，CK-MB 40",
+          "history: 发病时心肌酶谱虽高但比现在低",
+          "history: 用药史：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+          "history: 发病时血压低；血糖正常；血脂高",
+          "working: 当前自觉不适：胸闷、乏力、出冷汗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "bbd966e0-fc98-436e-9518-21b186f4df11",
+              "content": "今日自觉不适：胸闷、乏力、出冷汗",
+              "timestamp": 1771465944.6555283,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者男，34岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者出院后今天早上复查时自述的不适表现与出院时缓解阶段的情况，本次主要出现了哪些不适症状？",
+          "answer": "胸闷、乏力、出冷汗",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "761905b9-e59f-42f0-8ac6-161d714d4731"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "bbd966e0-fc98-436e-9518-21b186f4df11"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            3,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "症状未见加重现在胸闷出虚汗未做心肌肌钙蛋白定性试验使用上述的药物当时住院时医生建议做心脏血管造影因家境不好未做。问鲜医生应怎样治疗比较好？谢谢！！！",
+        "to_memory": [
+          "identity: 患者男，34岁",
+          "history: 5天前急性心肌梗死住院治疗后缓解出院",
+          "history: 今日化验心肌酶谱：LDH 266、HBDH 296、AST 52、CK 492、CK-MB 40",
+          "history: 发病时血压偏低；血糖正常；血脂偏高",
+          "history: 既往/当前用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+          "history: 住院医生曾建议行心脏血管造影（冠脉造影），但因经济原因未做",
+          "working: 目前症状：胸闷、出虚汗、乏力；自述症状未见加重",
+          "working: 尚未做心肌肌钙蛋白（定性）检查"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "bbd966e0-fc98-436e-9518-21b186f4df11",
+              "content": "今日自觉不适：胸闷、乏力、出冷汗",
+              "timestamp": 1771465944.6555283,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e669cb80-5c88-4f8f-bc31-7c8413b0a708",
+              "content": "自述目前胸闷、出虚汗、乏力等症状未见加重",
+              "timestamp": 1771465970.4297388,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "17f66041-c450-4e37-b23d-df24af34753d",
+              "content": "尚未做心肌肌钙蛋白（定性）检查",
+              "timestamp": 1771465970.4297433,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者男，34岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "46d5fbfa-5067-4321-8de7-b9fc91a95037",
+              "content": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做",
+              "timestamp": 1771465970.429729,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者曾提到住院期间医生建议进行的一项关键检查/操作最终没有完成；请指出是哪一项，并说明未完成的原因。这一遗漏对当前处理是否构成安全隐患？",
+          "answer": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做；这可能构成安全隐患。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "bbd966e0-fc98-436e-9518-21b186f4df11"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "46d5fbfa-5067-4321-8de7-b9fc91a95037"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "必须要抗凝治疗才行，心肌梗塞很明确了，现在怎么用的药？能将心电图传上来吗？",
+        "to_memory": [
+          "identity: 患者男，34岁",
+          "history: 5天前急性心肌梗死住院治疗后缓解出院",
+          "history: 今日化验心肌酶谱：LDH 266、HBDH 296、AST 52、CK 492、CK-MB 40",
+          "history: 发病时血压低；血糖正常；血脂高",
+          "history: 既往/近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+          "history: 未做心肌肌钙蛋白定性检查",
+          "history: 住院时医生建议行心脏血管造影，因家境原因未做",
+          "history: 医生明确建议需进行抗凝治疗",
+          "working: 当前不适：胸闷、乏力、出冷汗/虚汗；自述症状未见加重",
+          "history: 医生询问目前具体用药情况并建议上传心电图"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "bbd966e0-fc98-436e-9518-21b186f4df11",
+              "content": "今日自觉不适：胸闷、乏力、出冷汗",
+              "timestamp": 1771465944.6555283,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e669cb80-5c88-4f8f-bc31-7c8413b0a708",
+              "content": "自述目前胸闷、出虚汗、乏力等症状未见加重",
+              "timestamp": 1771465970.4297388,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "17f66041-c450-4e37-b23d-df24af34753d",
+              "content": "尚未做心肌肌钙蛋白（定性）检查",
+              "timestamp": 1771465970.4297433,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "6263ba57-7980-4a51-9d3b-d2fe8ef493f3",
+              "content": "医生询问目前具体用药情况并建议上传心电图",
+              "timestamp": 1771465980.0547507,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者男，34岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "46d5fbfa-5067-4321-8de7-b9fc91a95037",
+              "content": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做",
+              "timestamp": 1771465970.429729,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "914b44f4-17a6-4323-9c97-0dc7a80a0a62",
+              "content": "住院医生明确建议需要进行抗凝治疗",
+              "timestamp": 1771465980.0547407,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "回顾患者住院期间与本次咨询：住院医生当时建议进一步做的关键检查/评估是什么？这项检查为什么直到今天仍未完成？",
+          "answer": "住院医生建议做冠状动脉造影（冠脉造影），因经济/家境原因未做。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "46d5fbfa-5067-4321-8de7-b9fc91a95037"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "bbd966e0-fc98-436e-9518-21b186f4df11"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            5
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "我是患者的朋友怎么用的药详情不太知道？只是想问现在各项化验指标都高能说明什么问题呢？",
+        "to_memory": [
+          "identity: 患者男，34岁",
+          "history: 5天前急性心肌梗死住院治疗后缓解出院",
+          "history: 今早化验心肌酶谱：LDH 266（升高）、HBDH 296、AST 52、CK 492、CK-MB 40",
+          "history: 发病时心肌酶谱升高（但据述比本次低）",
+          "history: 用药史：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+          "history: 发病时血压低；血糖正常；血脂高",
+          "history: 未做心肌肌钙蛋白定性检查",
+          "history: 住院时医生建议做心脏血管造影，但因经济原因未做",
+          "history: 医生建议：必须进行抗凝治疗",
+          "working: 当前自觉症状：胸闷、乏力、出冷汗/虚汗（自述未见加重）",
+          "history: 提问：目前各项化验指标都高说明什么问题（提问者为患者朋友，具体用药细节不清楚）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "bbd966e0-fc98-436e-9518-21b186f4df11",
+              "content": "今日自觉不适：胸闷、乏力、出冷汗",
+              "timestamp": 1771465944.6555283,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e669cb80-5c88-4f8f-bc31-7c8413b0a708",
+              "content": "自述目前胸闷、出虚汗、乏力等症状未见加重",
+              "timestamp": 1771465970.4297388,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "17f66041-c450-4e37-b23d-df24af34753d",
+              "content": "尚未做心肌肌钙蛋白（定性）检查",
+              "timestamp": 1771465970.4297433,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "6263ba57-7980-4a51-9d3b-d2fe8ef493f3",
+              "content": "医生询问目前具体用药情况并建议上传心电图",
+              "timestamp": 1771465980.0547507,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者男，34岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "46d5fbfa-5067-4321-8de7-b9fc91a95037",
+              "content": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做",
+              "timestamp": 1771465970.429729,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "914b44f4-17a6-4323-9c97-0dc7a80a0a62",
+              "content": "住院医生明确建议需要进行抗凝治疗",
+              "timestamp": 1771465980.0547407,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "4473a17a-1867-4c99-821f-b01445160f1c",
+              "content": "提问者为患者朋友，表示对患者具体用药细节不清楚；询问目前心肌酶谱等化验指标升高说明什么问题",
+              "timestamp": 1771465989.503134,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者发病当时与今天复查时的心肌酶谱结果，哪一次的水平相对更高？",
+          "answer": "今天复查时的心肌酶谱比发病当时更高（发病当时虽高但比现在低）。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "60463953-a789-4589-a6c9-9f0c85fc5f88"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "e669cb80-5c88-4f8f-bc31-7c8413b0a708"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "说明有心肌细胞坏死，但这几项指标从心梗发作开始逐渐升高，不能说明现在还有进行性坏死，但能确定患者肯定是心肌梗塞。",
+        "to_memory": [
+          "history: 医生解释：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；这些指标从心梗发作开始会逐渐升高，单凭其升高不能说明当前仍有进行性坏死，但可确定患者为心肌梗塞"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "bbd966e0-fc98-436e-9518-21b186f4df11",
+              "content": "今日自觉不适：胸闷、乏力、出冷汗",
+              "timestamp": 1771465944.6555283,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e669cb80-5c88-4f8f-bc31-7c8413b0a708",
+              "content": "自述目前胸闷、出虚汗、乏力等症状未见加重",
+              "timestamp": 1771465970.4297388,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "17f66041-c450-4e37-b23d-df24af34753d",
+              "content": "尚未做心肌肌钙蛋白（定性）检查",
+              "timestamp": 1771465970.4297433,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "6263ba57-7980-4a51-9d3b-d2fe8ef493f3",
+              "content": "医生询问目前具体用药情况并建议上传心电图",
+              "timestamp": 1771465980.0547507,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者男，34岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "46d5fbfa-5067-4321-8de7-b9fc91a95037",
+              "content": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做",
+              "timestamp": 1771465970.429729,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "914b44f4-17a6-4323-9c97-0dc7a80a0a62",
+              "content": "住院医生明确建议需要进行抗凝治疗",
+              "timestamp": 1771465980.0547407,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "4473a17a-1867-4c99-821f-b01445160f1c",
+              "content": "提问者为患者朋友，表示对患者具体用药细节不清楚；询问目前心肌酶谱等化验指标升高说明什么问题",
+              "timestamp": 1771465989.503134,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "bd385582-8202-4e88-b5d6-69503211694f",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；这些指标自心梗发作开始会逐渐升高，单凭升高不能说明当前仍有进行性坏死，但可确定患者为心肌梗塞",
+              "timestamp": 1771465996.5590904,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "5天时间里做了3次化验这几项指标一次比一次高 暂不能说明进行性坏死的话  问一般正常情况下这几项指标发病几天达高峰呢？",
+        "to_memory": [
+          "identity: 患者男，34岁",
+          "history: 5天前急性心肌梗死住院治疗后缓解出院",
+          "history: 5天前至今心肌酶谱/相关指标多次化验升高（最新：LDH 266、HBDH 296、AST 52、CK 492、CK-MB 40）",
+          "history: 发病时血压低；血糖正常；血脂高",
+          "history: 用药史：丹参注射液、马来酸（注射液，具体药名不详）、口服硝酸甘油、丹参滴丸",
+          "history: 未做心肌肌钙蛋白定性检查；住院医生曾建议做心脏血管造影但未做",
+          "history: 医生建议需要抗凝治疗",
+          "working: 目前自觉胸闷、乏力、出冷汗/虚汗；症状未见加重",
+          "history: 近5天内做3次化验，指标一次比一次高；提问这些指标一般在发病后几天达高峰"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "bbd966e0-fc98-436e-9518-21b186f4df11",
+              "content": "今日自觉不适：胸闷、乏力、出冷汗",
+              "timestamp": 1771465944.6555283,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e669cb80-5c88-4f8f-bc31-7c8413b0a708",
+              "content": "自述目前胸闷、出虚汗、乏力等症状未见加重",
+              "timestamp": 1771465970.4297388,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "17f66041-c450-4e37-b23d-df24af34753d",
+              "content": "尚未做心肌肌钙蛋白（定性）检查",
+              "timestamp": 1771465970.4297433,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "6263ba57-7980-4a51-9d3b-d2fe8ef493f3",
+              "content": "医生询问目前具体用药情况并建议上传心电图",
+              "timestamp": 1771465980.0547507,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "6eb06259-305c-47d9-addf-e0dde0c0c830",
+              "content": "提问：心梗后LDH/HBDH/AST/CK/CK-MB等指标一般在发病后几天达到高峰",
+              "timestamp": 1771466003.2469523,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者男，34岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "46d5fbfa-5067-4321-8de7-b9fc91a95037",
+              "content": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做",
+              "timestamp": 1771465970.429729,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "914b44f4-17a6-4323-9c97-0dc7a80a0a62",
+              "content": "住院医生明确建议需要进行抗凝治疗",
+              "timestamp": 1771465980.0547407,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "4473a17a-1867-4c99-821f-b01445160f1c",
+              "content": "提问者为患者朋友，表示对患者具体用药细节不清楚；询问目前心肌酶谱等化验指标升高说明什么问题",
+              "timestamp": 1771465989.503134,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "bd385582-8202-4e88-b5d6-69503211694f",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；这些指标自心梗发作开始会逐渐升高，单凭升高不能说明当前仍有进行性坏死，但可确定患者为心肌梗塞",
+              "timestamp": 1771465996.5590904,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dd265fb7-7b9e-4c36-a86b-e9d7b66713b6",
+              "content": "近5天内共做3次心肌酶谱/相关指标化验，结果呈一次比一次高的趋势",
+              "timestamp": 1771466003.2469442,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "在这次对话里，医生询问患者是否做过哪一项用于评估心肌损伤的实验室检查？",
+          "answer": "心肌肌钙蛋白定性检查尚未做",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "17f66041-c450-4e37-b23d-df24af34753d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "这几项指标对于这个患者而言需要看病人具体是一个什么情况、有没有其他疾病，主管医生应该会告诉你！第五天应是高峰时期！你最好问一下主管医生，主管医生最清楚患者的情况，在这上面，我看不见患者，只能通过你提到的情况分析，会有很大的误差！",
+        "to_memory": [
+          "history: 医生建议：心梗发作第5天相关心肌酶指标通常为高峰期；需结合患者具体情况及是否合并其他疾病判断，建议咨询主管医生获取最准确评估。"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "bbd966e0-fc98-436e-9518-21b186f4df11",
+              "content": "今日自觉不适：胸闷、乏力、出冷汗",
+              "timestamp": 1771465944.6555283,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "e669cb80-5c88-4f8f-bc31-7c8413b0a708",
+              "content": "自述目前胸闷、出虚汗、乏力等症状未见加重",
+              "timestamp": 1771465970.4297388,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "17f66041-c450-4e37-b23d-df24af34753d",
+              "content": "尚未做心肌肌钙蛋白（定性）检查",
+              "timestamp": 1771465970.4297433,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "6263ba57-7980-4a51-9d3b-d2fe8ef493f3",
+              "content": "医生询问目前具体用药情况并建议上传心电图",
+              "timestamp": 1771465980.0547507,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "6eb06259-305c-47d9-addf-e0dde0c0c830",
+              "content": "提问：心梗后LDH/HBDH/AST/CK/CK-MB等指标一般在发病后几天达到高峰",
+              "timestamp": 1771466003.2469523,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者男，34岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "46d5fbfa-5067-4321-8de7-b9fc91a95037",
+              "content": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做",
+              "timestamp": 1771465970.429729,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "914b44f4-17a6-4323-9c97-0dc7a80a0a62",
+              "content": "住院医生明确建议需要进行抗凝治疗",
+              "timestamp": 1771465980.0547407,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "4473a17a-1867-4c99-821f-b01445160f1c",
+              "content": "提问者为患者朋友，表示对患者具体用药细节不清楚；询问目前心肌酶谱等化验指标升高说明什么问题",
+              "timestamp": 1771465989.503134,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "bd385582-8202-4e88-b5d6-69503211694f",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；这些指标自心梗发作开始会逐渐升高，单凭升高不能说明当前仍有进行性坏死，但可确定患者为心肌梗塞",
+              "timestamp": 1771465996.5590904,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dd265fb7-7b9e-4c36-a86b-e9d7b66713b6",
+              "content": "近5天内共做3次心肌酶谱/相关指标化验，结果呈一次比一次高的趋势",
+              "timestamp": 1771466003.2469442,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ee150a7c-9590-412c-80b1-0f27d45ba221",
+              "content": "医生建议：心梗发作第5天相关心肌酶指标通常为高峰期；需结合患者具体情况及是否合并其他疾病判断，建议咨询主管医生获取最准确评估。",
+              "timestamp": 1771466009.3129478,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者住院期间与本次线上咨询时的检查项目：住院时医生提到过需要补做哪一项关键的血液学检查，但在本次描述中仍未完成？",
+          "answer": "尚未做心肌肌钙蛋白（定性）检查",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "914b44f4-17a6-4323-9c97-0dc7a80a0a62"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "17f66041-c450-4e37-b23d-df24af34753d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            5
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者男，34岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "46d5fbfa-5067-4321-8de7-b9fc91a95037",
+              "content": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做",
+              "timestamp": 1771465970.429729,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "914b44f4-17a6-4323-9c97-0dc7a80a0a62",
+              "content": "住院医生明确建议需要进行抗凝治疗",
+              "timestamp": 1771465980.0547407,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "4473a17a-1867-4c99-821f-b01445160f1c",
+              "content": "提问者为患者朋友，表示对患者具体用药细节不清楚；询问目前心肌酶谱等化验指标升高说明什么问题",
+              "timestamp": 1771465989.503134,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "bd385582-8202-4e88-b5d6-69503211694f",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；这些指标自心梗发作开始会逐渐升高，单凭升高不能说明当前仍有进行性坏死，但可确定患者为心肌梗塞",
+              "timestamp": 1771465996.5590904,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dd265fb7-7b9e-4c36-a86b-e9d7b66713b6",
+              "content": "近5天内共做3次心肌酶谱/相关指标化验，结果呈一次比一次高的趋势",
+              "timestamp": 1771466003.2469442,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ee150a7c-9590-412c-80b1-0f27d45ba221",
+              "content": "医生建议：心梗发作第5天相关心肌酶指标通常为高峰期；需结合患者具体情况及是否合并其他疾病判断，建议咨询主管医生获取最准确评估。",
+              "timestamp": 1771466009.3129478,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "子宫腺肌症，本人46岁，有一年的时间，来月经时肚子特疼，医院诊断为子宫腺肌症。",
+        "to_memory": [
+          "identity: 患者，46岁",
+          "history: 医院诊断为子宫腺肌症（病程约1年）",
+          "working: 来月经时下腹/肚子疼痛明显（痛经）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "2404b048-3fd0-4af2-a8b3-f59e7c36696e",
+              "content": "来月经时下腹/肚子疼痛明显（痛经）",
+              "timestamp": 1771466014.781408,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者女，46岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "46d5fbfa-5067-4321-8de7-b9fc91a95037",
+              "content": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做",
+              "timestamp": 1771465970.429729,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "914b44f4-17a6-4323-9c97-0dc7a80a0a62",
+              "content": "住院医生明确建议需要进行抗凝治疗",
+              "timestamp": 1771465980.0547407,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "4473a17a-1867-4c99-821f-b01445160f1c",
+              "content": "提问者为患者朋友，表示对患者具体用药细节不清楚；询问目前心肌酶谱等化验指标升高说明什么问题",
+              "timestamp": 1771465989.503134,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "bd385582-8202-4e88-b5d6-69503211694f",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；这些指标自心梗发作开始会逐渐升高，单凭升高不能说明当前仍有进行性坏死，但可确定患者为心肌梗塞",
+              "timestamp": 1771465996.5590904,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dd265fb7-7b9e-4c36-a86b-e9d7b66713b6",
+              "content": "近5天内共做3次心肌酶谱/相关指标化验，结果呈一次比一次高的趋势",
+              "timestamp": 1771466003.2469442,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ee150a7c-9590-412c-80b1-0f27d45ba221",
+              "content": "医生建议：心梗发作第5天相关心肌酶指标通常为高峰期；需结合患者具体情况及是否合并其他疾病判断，建议咨询主管医生获取最准确评估。",
+              "timestamp": 1771466009.3129478,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "18a5349f-b38c-4a68-9710-a090098d5b99",
+              "content": "医院诊断为子宫腺肌症（病程约1年）",
+              "timestamp": 1771466014.781399,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在这段对话里，患者后续补充的妇科诊断与其描述的经期相关不适之间是否存在需要优先排除的严重不匹配或用药安全隐患？请指出该经期相关不适具体是什么。",
+          "answer": "来月经时下腹/肚子疼痛明显（痛经）。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "60463953-a789-4589-a6c9-9f0c85fc5f88"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "2404b048-3fd0-4af2-a8b3-f59e7c36696e"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            9,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "建议先服用口服避孕药治疗。",
+        "to_memory": [
+          "history: 医生建议子宫腺肌症先口服避孕药治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "2404b048-3fd0-4af2-a8b3-f59e7c36696e",
+              "content": "来月经时下腹/肚子疼痛明显（痛经）",
+              "timestamp": 1771466014.781408,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者女，46岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "46d5fbfa-5067-4321-8de7-b9fc91a95037",
+              "content": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做",
+              "timestamp": 1771465970.429729,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "914b44f4-17a6-4323-9c97-0dc7a80a0a62",
+              "content": "住院医生明确建议需要进行抗凝治疗",
+              "timestamp": 1771465980.0547407,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "4473a17a-1867-4c99-821f-b01445160f1c",
+              "content": "提问者为患者朋友，表示对患者具体用药细节不清楚；询问目前心肌酶谱等化验指标升高说明什么问题",
+              "timestamp": 1771465989.503134,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "bd385582-8202-4e88-b5d6-69503211694f",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；这些指标自心梗发作开始会逐渐升高，单凭升高不能说明当前仍有进行性坏死，但可确定患者为心肌梗塞",
+              "timestamp": 1771465996.5590904,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dd265fb7-7b9e-4c36-a86b-e9d7b66713b6",
+              "content": "近5天内共做3次心肌酶谱/相关指标化验，结果呈一次比一次高的趋势",
+              "timestamp": 1771466003.2469442,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ee150a7c-9590-412c-80b1-0f27d45ba221",
+              "content": "医生建议：心梗发作第5天相关心肌酶指标通常为高峰期；需结合患者具体情况及是否合并其他疾病判断，建议咨询主管医生获取最准确评估。",
+              "timestamp": 1771466009.3129478,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "18a5349f-b38c-4a68-9710-a090098d5b99",
+              "content": "医院诊断为子宫腺肌症（病程约1年）",
+              "timestamp": 1771466014.781399,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "8f37b094-920f-4c7c-9acd-388ed0aa4e70",
+              "content": "医生建议子宫腺肌症先口服避孕药治疗",
+              "timestamp": 1771466019.450115,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者女，46岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "46d5fbfa-5067-4321-8de7-b9fc91a95037",
+              "content": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做",
+              "timestamp": 1771465970.429729,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "914b44f4-17a6-4323-9c97-0dc7a80a0a62",
+              "content": "住院医生明确建议需要进行抗凝治疗",
+              "timestamp": 1771465980.0547407,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "4473a17a-1867-4c99-821f-b01445160f1c",
+              "content": "提问者为患者朋友，表示对患者具体用药细节不清楚；询问目前心肌酶谱等化验指标升高说明什么问题",
+              "timestamp": 1771465989.503134,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "bd385582-8202-4e88-b5d6-69503211694f",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；这些指标自心梗发作开始会逐渐升高，单凭升高不能说明当前仍有进行性坏死，但可确定患者为心肌梗塞",
+              "timestamp": 1771465996.5590904,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dd265fb7-7b9e-4c36-a86b-e9d7b66713b6",
+              "content": "近5天内共做3次心肌酶谱/相关指标化验，结果呈一次比一次高的趋势",
+              "timestamp": 1771466003.2469442,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ee150a7c-9590-412c-80b1-0f27d45ba221",
+              "content": "医生建议：心梗发作第5天相关心肌酶指标通常为高峰期；需结合患者具体情况及是否合并其他疾病判断，建议咨询主管医生获取最准确评估。",
+              "timestamp": 1771466009.3129478,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "18a5349f-b38c-4a68-9710-a090098d5b99",
+              "content": "医院诊断为子宫腺肌症（病程约1年）",
+              "timestamp": 1771466014.781399,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "8f37b094-920f-4c7c-9acd-388ed0aa4e70",
+              "content": "医生建议子宫腺肌症先口服避孕药治疗",
+              "timestamp": 1771466019.450115,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "皮肤，今年26岁，这个斑点应该是好几年前就长了，一直没引起重视，现在越长越大跟黄豆料差不多大了，好几颗，类似他们说的老年斑，如果就诊的话是挂什么科室，",
+        "to_memory": [
+          "identity: 患者，26岁",
+          "working: 皮肤斑点多年前出现，近来逐渐增大，约黄豆大小，有好几颗，外观类似“老年斑”；咨询就诊应挂什么科"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "c15ea56a-dac1-4327-bc80-a0b3333e832e",
+              "content": "皮肤斑点多年前出现，近来逐渐增大，约黄豆大小，有好几颗，外观类似“老年斑”；咨询就诊应挂什么科",
+              "timestamp": 1771466026.3456247,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者女，46岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "897f779b-3ea2-4be4-9805-4378cd41c0e7",
+              "content": "患者，26岁",
+              "timestamp": 1771466026.3456166,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "46d5fbfa-5067-4321-8de7-b9fc91a95037",
+              "content": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做",
+              "timestamp": 1771465970.429729,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "914b44f4-17a6-4323-9c97-0dc7a80a0a62",
+              "content": "住院医生明确建议需要进行抗凝治疗",
+              "timestamp": 1771465980.0547407,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "4473a17a-1867-4c99-821f-b01445160f1c",
+              "content": "提问者为患者朋友，表示对患者具体用药细节不清楚；询问目前心肌酶谱等化验指标升高说明什么问题",
+              "timestamp": 1771465989.503134,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "bd385582-8202-4e88-b5d6-69503211694f",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；这些指标自心梗发作开始会逐渐升高，单凭升高不能说明当前仍有进行性坏死，但可确定患者为心肌梗塞",
+              "timestamp": 1771465996.5590904,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dd265fb7-7b9e-4c36-a86b-e9d7b66713b6",
+              "content": "近5天内共做3次心肌酶谱/相关指标化验，结果呈一次比一次高的趋势",
+              "timestamp": 1771466003.2469442,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ee150a7c-9590-412c-80b1-0f27d45ba221",
+              "content": "医生建议：心梗发作第5天相关心肌酶指标通常为高峰期；需结合患者具体情况及是否合并其他疾病判断，建议咨询主管医生获取最准确评估。",
+              "timestamp": 1771466009.3129478,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "18a5349f-b38c-4a68-9710-a090098d5b99",
+              "content": "医院诊断为子宫腺肌症（病程约1年）",
+              "timestamp": 1771466014.781399,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "8f37b094-920f-4c7c-9acd-388ed0aa4e70",
+              "content": "医生建议子宫腺肌症先口服避孕药治疗",
+              "timestamp": 1771466019.450115,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可以看整形科或者皮肤科，估计是色素斑或脂溢性角化症之类等，可以激光或手术治疗。",
+        "to_memory": [
+          "identity: 患者，26岁",
+          "working: 皮肤斑点数年前出现，近期逐渐增大，约黄豆大小，有数颗，外观类似老年斑",
+          "working: 医生推测可能为色素斑或脂溢性角化症",
+          "history: 就诊建议：可挂整形科或皮肤科；可考虑激光或手术治疗",
+          "identity: 患者，46岁",
+          "history: 诊断：子宫腺肌症（病程约1年）",
+          "working: 症状：月经期腹痛明显",
+          "history: 医生建议先口服避孕药治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "c15ea56a-dac1-4327-bc80-a0b3333e832e",
+              "content": "患者，26岁：皮肤斑点数年前出现，近期逐渐增大，约黄豆大小，有数颗，外观类似老年斑；医生推测可能为色素斑或脂溢性角化症；就诊建议可挂整形科或皮肤科，可考虑激光或手术治疗。",
+              "timestamp": 1771466026.3456247,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者女，46岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "897f779b-3ea2-4be4-9805-4378cd41c0e7",
+              "content": "患者，26岁",
+              "timestamp": 1771466026.3456166,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "46d5fbfa-5067-4321-8de7-b9fc91a95037",
+              "content": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做",
+              "timestamp": 1771465970.429729,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "914b44f4-17a6-4323-9c97-0dc7a80a0a62",
+              "content": "住院医生明确建议需要进行抗凝治疗",
+              "timestamp": 1771465980.0547407,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "4473a17a-1867-4c99-821f-b01445160f1c",
+              "content": "提问者为患者朋友，表示对患者具体用药细节不清楚；询问目前心肌酶谱等化验指标升高说明什么问题",
+              "timestamp": 1771465989.503134,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "bd385582-8202-4e88-b5d6-69503211694f",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；这些指标自心梗发作开始会逐渐升高，单凭升高不能说明当前仍有进行性坏死，但可确定患者为心肌梗塞",
+              "timestamp": 1771465996.5590904,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dd265fb7-7b9e-4c36-a86b-e9d7b66713b6",
+              "content": "近5天内共做3次心肌酶谱/相关指标化验，结果呈一次比一次高的趋势",
+              "timestamp": 1771466003.2469442,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ee150a7c-9590-412c-80b1-0f27d45ba221",
+              "content": "医生建议：心梗发作第5天相关心肌酶指标通常为高峰期；需结合患者具体情况及是否合并其他疾病判断，建议咨询主管医生获取最准确评估。",
+              "timestamp": 1771466009.3129478,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "18a5349f-b38c-4a68-9710-a090098d5b99",
+              "content": "医院诊断为子宫腺肌症（病程约1年）",
+              "timestamp": 1771466014.781399,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "8f37b094-920f-4c7c-9acd-388ed0aa4e70",
+              "content": "医生建议子宫腺肌症先口服避孕药治疗",
+              "timestamp": 1771466019.450115,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "针对皮肤斑点这一段咨询中，医生建议患者就诊时可以挂哪个科室？",
+          "answer": "整形科或皮肤科。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "c15ea56a-dac1-4327-bc80-a0b3333e832e"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者女，46岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "897f779b-3ea2-4be4-9805-4378cd41c0e7",
+              "content": "患者，26岁",
+              "timestamp": 1771466026.3456166,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "46d5fbfa-5067-4321-8de7-b9fc91a95037",
+              "content": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做",
+              "timestamp": 1771465970.429729,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "914b44f4-17a6-4323-9c97-0dc7a80a0a62",
+              "content": "住院医生明确建议需要进行抗凝治疗",
+              "timestamp": 1771465980.0547407,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "4473a17a-1867-4c99-821f-b01445160f1c",
+              "content": "提问者为患者朋友，表示对患者具体用药细节不清楚；询问目前心肌酶谱等化验指标升高说明什么问题",
+              "timestamp": 1771465989.503134,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "bd385582-8202-4e88-b5d6-69503211694f",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；这些指标自心梗发作开始会逐渐升高，单凭升高不能说明当前仍有进行性坏死，但可确定患者为心肌梗塞",
+              "timestamp": 1771465996.5590904,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dd265fb7-7b9e-4c36-a86b-e9d7b66713b6",
+              "content": "近5天内共做3次心肌酶谱/相关指标化验，结果呈一次比一次高的趋势",
+              "timestamp": 1771466003.2469442,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ee150a7c-9590-412c-80b1-0f27d45ba221",
+              "content": "医生建议：心梗发作第5天相关心肌酶指标通常为高峰期；需结合患者具体情况及是否合并其他疾病判断，建议咨询主管医生获取最准确评估。",
+              "timestamp": 1771466009.3129478,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "18a5349f-b38c-4a68-9710-a090098d5b99",
+              "content": "医院诊断为子宫腺肌症（病程约1年）",
+              "timestamp": 1771466014.781399,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "8f37b094-920f-4c7c-9acd-388ed0aa4e70",
+              "content": "医生建议子宫腺肌症先口服避孕药治疗",
+              "timestamp": 1771466019.450115,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "乳腺，患者女，35岁，以前身体状况好，去年也有过胸部右上方针刺的感觉，可很快消失了，昨天到现在却疼得很厉害。不知我得了是不是此病。",
+        "to_memory": [
+          "identity: 患者女，35岁",
+          "working: 乳腺/胸部右上方疼痛；去年曾出现右上方针刺感很快消失；本次自昨天起疼痛明显加重、很厉害；患者担心是否患某种乳腺疾病"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5564f022-190b-4acb-9ca9-f7cb9f11f442",
+              "content": "主诉乳腺/胸部右上方疼痛：去年曾出现右上方针刺感很快消失；本次自昨天起疼痛明显加重、很厉害；担心是否患乳腺疾病",
+              "timestamp": 1771466037.004445,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者女，46岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "897f779b-3ea2-4be4-9805-4378cd41c0e7",
+              "content": "患者，26岁",
+              "timestamp": 1771466026.3456166,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "51e448f7-011e-4b88-a1bc-d229ab78cb22",
+              "content": "患者女，35岁",
+              "timestamp": 1771466037.0044363,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "46d5fbfa-5067-4321-8de7-b9fc91a95037",
+              "content": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做",
+              "timestamp": 1771465970.429729,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "914b44f4-17a6-4323-9c97-0dc7a80a0a62",
+              "content": "住院医生明确建议需要进行抗凝治疗",
+              "timestamp": 1771465980.0547407,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "4473a17a-1867-4c99-821f-b01445160f1c",
+              "content": "提问者为患者朋友，表示对患者具体用药细节不清楚；询问目前心肌酶谱等化验指标升高说明什么问题",
+              "timestamp": 1771465989.503134,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "bd385582-8202-4e88-b5d6-69503211694f",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；这些指标自心梗发作开始会逐渐升高，单凭升高不能说明当前仍有进行性坏死，但可确定患者为心肌梗塞",
+              "timestamp": 1771465996.5590904,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dd265fb7-7b9e-4c36-a86b-e9d7b66713b6",
+              "content": "近5天内共做3次心肌酶谱/相关指标化验，结果呈一次比一次高的趋势",
+              "timestamp": 1771466003.2469442,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ee150a7c-9590-412c-80b1-0f27d45ba221",
+              "content": "医生建议：心梗发作第5天相关心肌酶指标通常为高峰期；需结合患者具体情况及是否合并其他疾病判断，建议咨询主管医生获取最准确评估。",
+              "timestamp": 1771466009.3129478,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "18a5349f-b38c-4a68-9710-a090098d5b99",
+              "content": "医院诊断为子宫腺肌症（病程约1年）",
+              "timestamp": 1771466014.781399,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "8f37b094-920f-4c7c-9acd-388ed0aa4e70",
+              "content": "医生建议子宫腺肌症先口服避孕药治疗",
+              "timestamp": 1771466019.450115,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者最初发病时的心肌酶谱水平，与当前这次检测结果相比是更高还是更低？",
+          "answer": "虽高但比现在低",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "60463953-a789-4589-a6c9-9f0c85fc5f88"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            15
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "B超和钼靶检查。",
+        "to_memory": [
+          "history: 乳腺相关检查建议/安排：B超和钼靶检查"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5564f022-190b-4acb-9ca9-f7cb9f11f442",
+              "content": "主诉乳腺/胸部右上方疼痛：去年曾出现右上方针刺感很快消失；本次自昨天起疼痛明显加重、很厉害；担心是否患乳腺疾病",
+              "timestamp": 1771466037.004445,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者女，46岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "897f779b-3ea2-4be4-9805-4378cd41c0e7",
+              "content": "患者，26岁",
+              "timestamp": 1771466026.3456166,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "51e448f7-011e-4b88-a1bc-d229ab78cb22",
+              "content": "患者女，35岁",
+              "timestamp": 1771466037.0044363,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "46d5fbfa-5067-4321-8de7-b9fc91a95037",
+              "content": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做",
+              "timestamp": 1771465970.429729,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "914b44f4-17a6-4323-9c97-0dc7a80a0a62",
+              "content": "住院医生明确建议需要进行抗凝治疗",
+              "timestamp": 1771465980.0547407,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "4473a17a-1867-4c99-821f-b01445160f1c",
+              "content": "提问者为患者朋友，表示对患者具体用药细节不清楚；询问目前心肌酶谱等化验指标升高说明什么问题",
+              "timestamp": 1771465989.503134,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "bd385582-8202-4e88-b5d6-69503211694f",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；这些指标自心梗发作开始会逐渐升高，单凭升高不能说明当前仍有进行性坏死，但可确定患者为心肌梗塞",
+              "timestamp": 1771465996.5590904,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dd265fb7-7b9e-4c36-a86b-e9d7b66713b6",
+              "content": "近5天内共做3次心肌酶谱/相关指标化验，结果呈一次比一次高的趋势",
+              "timestamp": 1771466003.2469442,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ee150a7c-9590-412c-80b1-0f27d45ba221",
+              "content": "医生建议：心梗发作第5天相关心肌酶指标通常为高峰期；需结合患者具体情况及是否合并其他疾病判断，建议咨询主管医生获取最准确评估。",
+              "timestamp": 1771466009.3129478,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "18a5349f-b38c-4a68-9710-a090098d5b99",
+              "content": "医院诊断为子宫腺肌症（病程约1年）",
+              "timestamp": 1771466014.781399,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "8f37b094-920f-4c7c-9acd-388ed0aa4e70",
+              "content": "医生建议子宫腺肌症先口服避孕药治疗",
+              "timestamp": 1771466019.450115,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f1d6ccb9-fbc7-4ed7-9c8d-4b28fd22197c",
+              "content": "乳腺相关检查建议/安排：乳腺B超和钼靶检查",
+              "timestamp": 1771466042.2859657,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者女，46岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "897f779b-3ea2-4be4-9805-4378cd41c0e7",
+              "content": "患者，26岁",
+              "timestamp": 1771466026.3456166,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "51e448f7-011e-4b88-a1bc-d229ab78cb22",
+              "content": "患者女，35岁",
+              "timestamp": 1771466037.0044363,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "46d5fbfa-5067-4321-8de7-b9fc91a95037",
+              "content": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做",
+              "timestamp": 1771465970.429729,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "914b44f4-17a6-4323-9c97-0dc7a80a0a62",
+              "content": "住院医生明确建议需要进行抗凝治疗",
+              "timestamp": 1771465980.0547407,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "4473a17a-1867-4c99-821f-b01445160f1c",
+              "content": "提问者为患者朋友，表示对患者具体用药细节不清楚；询问目前心肌酶谱等化验指标升高说明什么问题",
+              "timestamp": 1771465989.503134,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "bd385582-8202-4e88-b5d6-69503211694f",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；这些指标自心梗发作开始会逐渐升高，单凭升高不能说明当前仍有进行性坏死，但可确定患者为心肌梗塞",
+              "timestamp": 1771465996.5590904,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dd265fb7-7b9e-4c36-a86b-e9d7b66713b6",
+              "content": "近5天内共做3次心肌酶谱/相关指标化验，结果呈一次比一次高的趋势",
+              "timestamp": 1771466003.2469442,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ee150a7c-9590-412c-80b1-0f27d45ba221",
+              "content": "医生建议：心梗发作第5天相关心肌酶指标通常为高峰期；需结合患者具体情况及是否合并其他疾病判断，建议咨询主管医生获取最准确评估。",
+              "timestamp": 1771466009.3129478,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "18a5349f-b38c-4a68-9710-a090098d5b99",
+              "content": "医院诊断为子宫腺肌症（病程约1年）",
+              "timestamp": 1771466014.781399,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "8f37b094-920f-4c7c-9acd-388ed0aa4e70",
+              "content": "医生建议子宫腺肌症先口服避孕药治疗",
+              "timestamp": 1771466019.450115,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f1d6ccb9-fbc7-4ed7-9c8d-4b28fd22197c",
+              "content": "乳腺相关检查建议/安排：乳腺B超和钼靶检查",
+              "timestamp": 1771466042.2859657,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "尿道口结石，腰部涨痛，没有小便。",
+        "to_memory": [
+          "working: 本次主诉尿道口结石，伴腰部胀痛、无小便"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5603cd92-5d96-4e25-a80e-4b7d0f80261f",
+              "content": "本次主诉：尿道口结石，伴腰部胀痛、无小便",
+              "timestamp": 1771466044.8378596,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者女，46岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "897f779b-3ea2-4be4-9805-4378cd41c0e7",
+              "content": "患者，26岁",
+              "timestamp": 1771466026.3456166,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "51e448f7-011e-4b88-a1bc-d229ab78cb22",
+              "content": "患者女，35岁",
+              "timestamp": 1771466037.0044363,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "46d5fbfa-5067-4321-8de7-b9fc91a95037",
+              "content": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做",
+              "timestamp": 1771465970.429729,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "914b44f4-17a6-4323-9c97-0dc7a80a0a62",
+              "content": "住院医生明确建议需要进行抗凝治疗",
+              "timestamp": 1771465980.0547407,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "4473a17a-1867-4c99-821f-b01445160f1c",
+              "content": "提问者为患者朋友，表示对患者具体用药细节不清楚；询问目前心肌酶谱等化验指标升高说明什么问题",
+              "timestamp": 1771465989.503134,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "bd385582-8202-4e88-b5d6-69503211694f",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；这些指标自心梗发作开始会逐渐升高，单凭升高不能说明当前仍有进行性坏死，但可确定患者为心肌梗塞",
+              "timestamp": 1771465996.5590904,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dd265fb7-7b9e-4c36-a86b-e9d7b66713b6",
+              "content": "近5天内共做3次心肌酶谱/相关指标化验，结果呈一次比一次高的趋势",
+              "timestamp": 1771466003.2469442,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ee150a7c-9590-412c-80b1-0f27d45ba221",
+              "content": "医生建议：心梗发作第5天相关心肌酶指标通常为高峰期；需结合患者具体情况及是否合并其他疾病判断，建议咨询主管医生获取最准确评估。",
+              "timestamp": 1771466009.3129478,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "18a5349f-b38c-4a68-9710-a090098d5b99",
+              "content": "医院诊断为子宫腺肌症（病程约1年）",
+              "timestamp": 1771466014.781399,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "8f37b094-920f-4c7c-9acd-388ed0aa4e70",
+              "content": "医生建议子宫腺肌症先口服避孕药治疗",
+              "timestamp": 1771466019.450115,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f1d6ccb9-fbc7-4ed7-9c8d-4b28fd22197c",
+              "content": "乳腺相关检查建议/安排：乳腺B超和钼靶检查",
+              "timestamp": 1771466042.2859657,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "回顾患者既往的心血管相关评估记录：曾有一项医生建议尽快完成但最终未实施的关键检查，且未实施的原因可能影响后续风险评估。请问该检查是什么？未实施的原因是什么？",
+          "answer": "冠状动脉造影（冠脉造影）；因经济原因未做。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "46d5fbfa-5067-4321-8de7-b9fc91a95037"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "51e448f7-011e-4b88-a1bc-d229ab78cb22"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            16,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "您好！激光碎石只要操作得当，一般不会出现较大危害，但如果损伤了尿道粘膜，存在术后尿道狭窄，排尿困难等表现。",
+        "to_memory": [
+          "history: 医生告知激光碎石一般危害不大，但若损伤尿道黏膜可能导致术后尿道狭窄、排尿困难"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "5603cd92-5d96-4e25-a80e-4b7d0f80261f",
+              "content": "本次主诉：尿道口结石，伴腰部胀痛、无小便",
+              "timestamp": 1771466044.8378596,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者女，46岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "897f779b-3ea2-4be4-9805-4378cd41c0e7",
+              "content": "患者，26岁",
+              "timestamp": 1771466026.3456166,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "51e448f7-011e-4b88-a1bc-d229ab78cb22",
+              "content": "患者女，35岁",
+              "timestamp": 1771466037.0044363,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "46d5fbfa-5067-4321-8de7-b9fc91a95037",
+              "content": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做",
+              "timestamp": 1771465970.429729,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "914b44f4-17a6-4323-9c97-0dc7a80a0a62",
+              "content": "住院医生明确建议需要进行抗凝治疗",
+              "timestamp": 1771465980.0547407,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "4473a17a-1867-4c99-821f-b01445160f1c",
+              "content": "提问者为患者朋友，表示对患者具体用药细节不清楚；询问目前心肌酶谱等化验指标升高说明什么问题",
+              "timestamp": 1771465989.503134,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "bd385582-8202-4e88-b5d6-69503211694f",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；这些指标自心梗发作开始会逐渐升高，单凭升高不能说明当前仍有进行性坏死，但可确定患者为心肌梗塞",
+              "timestamp": 1771465996.5590904,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dd265fb7-7b9e-4c36-a86b-e9d7b66713b6",
+              "content": "近5天内共做3次心肌酶谱/相关指标化验，结果呈一次比一次高的趋势",
+              "timestamp": 1771466003.2469442,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ee150a7c-9590-412c-80b1-0f27d45ba221",
+              "content": "医生建议：心梗发作第5天相关心肌酶指标通常为高峰期；需结合患者具体情况及是否合并其他疾病判断，建议咨询主管医生获取最准确评估。",
+              "timestamp": 1771466009.3129478,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "18a5349f-b38c-4a68-9710-a090098d5b99",
+              "content": "医院诊断为子宫腺肌症（病程约1年）",
+              "timestamp": 1771466014.781399,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "8f37b094-920f-4c7c-9acd-388ed0aa4e70",
+              "content": "医生建议子宫腺肌症先口服避孕药治疗",
+              "timestamp": 1771466019.450115,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f1d6ccb9-fbc7-4ed7-9c8d-4b28fd22197c",
+              "content": "乳腺相关检查建议/安排：乳腺B超和钼靶检查",
+              "timestamp": 1771466042.2859657,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "50c464d3-c79e-48f3-9233-99892b89d7eb",
+              "content": "医生告知：激光碎石一般危害不大，但若损伤尿道黏膜，可能导致术后尿道狭窄、排尿困难。",
+              "timestamp": 1771466051.3906393,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "结合患者既往一次住院期间医生提出的关键治疗措施，以及本次就诊的泌尿系统主诉与拟行操作，是否存在需要优先核对的用药/出血相关安全冲突？请指出需要核对的那项既往治疗措施是什么。",
+          "answer": "住院医生明确建议需要进行抗凝治疗",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "914b44f4-17a6-4323-9c97-0dc7a80a0a62"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "5603cd92-5d96-4e25-a80e-4b7d0f80261f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            16,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者女，46岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "897f779b-3ea2-4be4-9805-4378cd41c0e7",
+              "content": "患者，26岁",
+              "timestamp": 1771466026.3456166,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "51e448f7-011e-4b88-a1bc-d229ab78cb22",
+              "content": "患者女，35岁",
+              "timestamp": 1771466037.0044363,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "46d5fbfa-5067-4321-8de7-b9fc91a95037",
+              "content": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做",
+              "timestamp": 1771465970.429729,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "914b44f4-17a6-4323-9c97-0dc7a80a0a62",
+              "content": "住院医生明确建议需要进行抗凝治疗",
+              "timestamp": 1771465980.0547407,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "4473a17a-1867-4c99-821f-b01445160f1c",
+              "content": "提问者为患者朋友，表示对患者具体用药细节不清楚；询问目前心肌酶谱等化验指标升高说明什么问题",
+              "timestamp": 1771465989.503134,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "bd385582-8202-4e88-b5d6-69503211694f",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；这些指标自心梗发作开始会逐渐升高，单凭升高不能说明当前仍有进行性坏死，但可确定患者为心肌梗塞",
+              "timestamp": 1771465996.5590904,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dd265fb7-7b9e-4c36-a86b-e9d7b66713b6",
+              "content": "近5天内共做3次心肌酶谱/相关指标化验，结果呈一次比一次高的趋势",
+              "timestamp": 1771466003.2469442,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ee150a7c-9590-412c-80b1-0f27d45ba221",
+              "content": "医生建议：心梗发作第5天相关心肌酶指标通常为高峰期；需结合患者具体情况及是否合并其他疾病判断，建议咨询主管医生获取最准确评估。",
+              "timestamp": 1771466009.3129478,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "18a5349f-b38c-4a68-9710-a090098d5b99",
+              "content": "医院诊断为子宫腺肌症（病程约1年）",
+              "timestamp": 1771466014.781399,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "8f37b094-920f-4c7c-9acd-388ed0aa4e70",
+              "content": "医生建议子宫腺肌症先口服避孕药治疗",
+              "timestamp": 1771466019.450115,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f1d6ccb9-fbc7-4ed7-9c8d-4b28fd22197c",
+              "content": "乳腺相关检查建议/安排：乳腺B超和钼靶检查",
+              "timestamp": 1771466042.2859657,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "50c464d3-c79e-48f3-9233-99892b89d7eb",
+              "content": "医生告知：激光碎石一般危害不大，但若损伤尿道黏膜，可能导致术后尿道狭窄、排尿困难。",
+              "timestamp": 1771466051.3906393,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "乳腺癌，40岁，乳腺癌。",
+        "to_memory": [
+          "identity: 患者女，40岁",
+          "history: 乳腺癌（患者自述）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者女，40岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "897f779b-3ea2-4be4-9805-4378cd41c0e7",
+              "content": "患者，26岁",
+              "timestamp": 1771466026.3456166,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "51e448f7-011e-4b88-a1bc-d229ab78cb22",
+              "content": "患者女，35岁",
+              "timestamp": 1771466037.0044363,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "46d5fbfa-5067-4321-8de7-b9fc91a95037",
+              "content": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做",
+              "timestamp": 1771465970.429729,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "914b44f4-17a6-4323-9c97-0dc7a80a0a62",
+              "content": "住院医生明确建议需要进行抗凝治疗",
+              "timestamp": 1771465980.0547407,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "4473a17a-1867-4c99-821f-b01445160f1c",
+              "content": "提问者为患者朋友，表示对患者具体用药细节不清楚；询问目前心肌酶谱等化验指标升高说明什么问题",
+              "timestamp": 1771465989.503134,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "bd385582-8202-4e88-b5d6-69503211694f",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；这些指标自心梗发作开始会逐渐升高，单凭升高不能说明当前仍有进行性坏死，但可确定患者为心肌梗塞",
+              "timestamp": 1771465996.5590904,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dd265fb7-7b9e-4c36-a86b-e9d7b66713b6",
+              "content": "近5天内共做3次心肌酶谱/相关指标化验，结果呈一次比一次高的趋势",
+              "timestamp": 1771466003.2469442,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ee150a7c-9590-412c-80b1-0f27d45ba221",
+              "content": "医生建议：心梗发作第5天相关心肌酶指标通常为高峰期；需结合患者具体情况及是否合并其他疾病判断，建议咨询主管医生获取最准确评估。",
+              "timestamp": 1771466009.3129478,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "18a5349f-b38c-4a68-9710-a090098d5b99",
+              "content": "医院诊断为子宫腺肌症（病程约1年）",
+              "timestamp": 1771466014.781399,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "8f37b094-920f-4c7c-9acd-388ed0aa4e70",
+              "content": "医生建议子宫腺肌症先口服避孕药治疗",
+              "timestamp": 1771466019.450115,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f1d6ccb9-fbc7-4ed7-9c8d-4b28fd22197c",
+              "content": "乳腺相关检查建议/安排：乳腺B超和钼靶检查",
+              "timestamp": 1771466042.2859657,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "50c464d3-c79e-48f3-9233-99892b89d7eb",
+              "content": "医生告知：激光碎石一般危害不大，但若损伤尿道黏膜，可能导致术后尿道狭窄、排尿困难。",
+              "timestamp": 1771466051.3906393,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "31cb634e-f8a0-4d50-8828-3cf37f4d7673",
+              "content": "乳腺癌（患者自述）",
+              "timestamp": 1771466057.0495477,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者在提到肿瘤相关病史时，报告的就诊时年龄是多少？",
+          "answer": "40岁",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "72d8f159-5188-42ff-9264-f81ae9556c9b"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            23
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可以考虑术后中药巩固调理。",
+        "to_memory": [
+          "history: 医生建议乳腺癌术后可考虑中药巩固调理"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "72d8f159-5188-42ff-9264-f81ae9556c9b",
+              "content": "患者女，40岁",
+              "timestamp": 1771465944.6555097,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fff64ffd-fce7-483d-a82d-b30f201bc160",
+              "content": "血脂偏高（高脂血症/血脂高）",
+              "timestamp": 1771465958.2665954,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "897f779b-3ea2-4be4-9805-4378cd41c0e7",
+              "content": "患者，26岁",
+              "timestamp": 1771466026.3456166,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "51e448f7-011e-4b88-a1bc-d229ab78cb22",
+              "content": "患者女，35岁",
+              "timestamp": 1771466037.0044363,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "history": [
+            {
+              "id": "761905b9-e59f-42f0-8ac6-161d714d4731",
+              "content": "5天前急性心肌梗死住院治疗，缓解后出院",
+              "timestamp": 1771465944.6555192,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "202fb7ac-384e-4e23-962a-802d8aa84411",
+              "content": "今日化验结果：LDH 266，HBDH 296，AST 52，CK 492，CK-MB 40",
+              "timestamp": 1771465944.6555238,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "862d498a-0d65-4fd8-8707-682770c7063d",
+              "content": "发病时血压低；血糖正常；血脂高",
+              "timestamp": 1771465958.2666051,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "60463953-a789-4589-a6c9-9f0c85fc5f88",
+              "content": "发病时心肌酶谱虽高但比现在低",
+              "timestamp": 1771465958.2666104,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "536996ca-88a9-462f-86d1-ab5cacb2d42c",
+              "content": "近期用药：丹参注射液、马来酸注射液、口服硝酸甘油、丹参滴丸",
+              "timestamp": 1771465958.2666142,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "46d5fbfa-5067-4321-8de7-b9fc91a95037",
+              "content": "住院医生曾建议行冠状动脉造影（冠脉造影），但因经济原因未做",
+              "timestamp": 1771465970.429729,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "914b44f4-17a6-4323-9c97-0dc7a80a0a62",
+              "content": "住院医生明确建议需要进行抗凝治疗",
+              "timestamp": 1771465980.0547407,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "4473a17a-1867-4c99-821f-b01445160f1c",
+              "content": "提问者为患者朋友，表示对患者具体用药细节不清楚；询问目前心肌酶谱等化验指标升高说明什么问题",
+              "timestamp": 1771465989.503134,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "bd385582-8202-4e88-b5d6-69503211694f",
+              "content": "医生解释：LDH/HBDH/AST/CK/CK-MB升高提示心肌细胞坏死；这些指标自心梗发作开始会逐渐升高，单凭升高不能说明当前仍有进行性坏死，但可确定患者为心肌梗塞",
+              "timestamp": 1771465996.5590904,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dd265fb7-7b9e-4c36-a86b-e9d7b66713b6",
+              "content": "近5天内共做3次心肌酶谱/相关指标化验，结果呈一次比一次高的趋势",
+              "timestamp": 1771466003.2469442,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "ee150a7c-9590-412c-80b1-0f27d45ba221",
+              "content": "医生建议：心梗发作第5天相关心肌酶指标通常为高峰期；需结合患者具体情况及是否合并其他疾病判断，建议咨询主管医生获取最准确评估。",
+              "timestamp": 1771466009.3129478,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "18a5349f-b38c-4a68-9710-a090098d5b99",
+              "content": "医院诊断为子宫腺肌症（病程约1年）",
+              "timestamp": 1771466014.781399,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "8f37b094-920f-4c7c-9acd-388ed0aa4e70",
+              "content": "医生建议子宫腺肌症先口服避孕药治疗",
+              "timestamp": 1771466019.450115,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f1d6ccb9-fbc7-4ed7-9c8d-4b28fd22197c",
+              "content": "乳腺相关检查建议/安排：乳腺B超和钼靶检查",
+              "timestamp": 1771466042.2859657,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "50c464d3-c79e-48f3-9233-99892b89d7eb",
+              "content": "医生告知：激光碎石一般危害不大，但若损伤尿道黏膜，可能导致术后尿道狭窄、排尿困难。",
+              "timestamp": 1771466051.3906393,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "31cb634e-f8a0-4d50-8828-3cf37f4d7673",
+              "content": "乳腺癌（患者自述）",
+              "timestamp": 1771466057.0495477,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "a642de43-bfae-42b0-848e-7c6a10949c87",
+              "content": "医生建议：乳腺癌术后可考虑中药巩固调理",
+              "timestamp": 1771466061.0829637,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在该患者的既往就诊记录中，医生曾安排过哪些与该肿瘤相关的影像学检查？本次随访或治疗决策前是否需要核对这些检查是否已完成，以避免遗漏？",
+          "answer": "乳腺B超和钼靶检查",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "f1d6ccb9-fbc7-4ed7-9c8d-4b28fd22197c",
+                "a642de43-bfae-42b0-848e-7c6a10949c87"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6,
+            0
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "comorbidity_management",
+    "scenario_name": "多疾病共病管理",
+    "session_count": 6,
+    "group_key": "综合科"
+  }
+}

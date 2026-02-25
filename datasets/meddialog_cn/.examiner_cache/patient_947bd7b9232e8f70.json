@@ -1,0 +1,1863 @@
+{
+  "patient_id": "591b8db4eb95",
+  "messages": [
+    {
+      "user": {
+        "content": "弥漫性肝癌晚期，患者男，45岁，以前身体状况良好，这几天发现腹痛，在昆山人民医院检查，发现为弥漫性肝癌晚期。",
+        "to_memory": [
+          "identity: 患者男，45岁；既往身体状况良好（未述慢性病）",
+          "history: 昆山人民医院检查确诊弥漫性肝癌晚期",
+          "working: 近几天出现腹痛"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e9a1728a-3f65-4b79-be90-0339b3a5f6bf",
+              "content": "近几天出现腹痛",
+              "timestamp": 1771494751.079141,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [
+            {
+              "id": "6fa6139c-bd51-4eb4-874d-1497d2ddddf3",
+              "content": "患者男，45岁；既往身体状况良好（未述慢性病）",
+              "timestamp": 1771494751.079127,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "94f075f9-b89a-4243-a8c6-18b224573359",
+              "content": "昆山人民医院检查确诊弥漫性肝癌晚期",
+              "timestamp": 1771494751.0791357,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者最初是在什么医疗机构完成检查并据此明确诊断的？",
+          "answer": "昆山人民医院",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "94f075f9-b89a-4243-a8c6-18b224573359"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "请把相关的检查及化验结果传上来。",
+        "to_memory": [
+          "identity: 患者男，45岁",
+          "history: 在昆山人民医院检查后诊断为弥漫性肝癌晚期",
+          "working: 近日出现腹痛"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e9a1728a-3f65-4b79-be90-0339b3a5f6bf",
+              "content": "近几天出现腹痛",
+              "timestamp": 1771494751.079141,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [
+            {
+              "id": "6fa6139c-bd51-4eb4-874d-1497d2ddddf3",
+              "content": "患者男，45岁；既往身体状况良好（未述慢性病）",
+              "timestamp": 1771494751.079127,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "94f075f9-b89a-4243-a8c6-18b224573359",
+              "content": "昆山人民医院检查确诊弥漫性肝癌晚期",
+              "timestamp": 1771494751.0791357,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在本次就诊前自述的既往健康与慢病情况，是否与其当前就诊时描述的背景信息存在需要核对的潜在冲突？请说明应核对的要点。",
+          "answer": "患者自述既往身体状况良好，未提及慢性病史；当前需核对是否有未披露的既往疾病或相关健康问题。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "6fa6139c-bd51-4eb4-874d-1497d2ddddf3"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "e9a1728a-3f65-4b79-be90-0339b3a5f6bf"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "6fa6139c-bd51-4eb4-874d-1497d2ddddf3",
+              "content": "患者男，45岁；既往身体状况良好（未述慢性病）",
+              "timestamp": 1771494751.079127,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "94f075f9-b89a-4243-a8c6-18b224573359",
+              "content": "昆山人民医院检查确诊弥漫性肝癌晚期",
+              "timestamp": 1771494751.0791357,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "不知道，心胸部痛，痰带血，已有一年。",
+        "to_memory": [
+          "working: 目前症状：心胸部疼痛；痰中带血（咯血/血痰）；病程约1年"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "83eb2ca7-60a8-47ed-aeab-da0d31676178",
+              "content": "目前症状：心胸部疼痛；痰中带血（咯血/血痰）；病程约1年",
+              "timestamp": 1771494763.4377847,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [
+            {
+              "id": "6fa6139c-bd51-4eb4-874d-1497d2ddddf3",
+              "content": "患者男，45岁；既往身体状况良好（未述慢性病）",
+              "timestamp": 1771494751.079127,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "94f075f9-b89a-4243-a8c6-18b224573359",
+              "content": "昆山人民医院检查确诊弥漫性肝癌晚期",
+              "timestamp": 1771494751.0791357,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "胸部CT和纤维支气管镜检查。",
+        "to_memory": [
+          "history: 医生建议/要求进行胸部CT和纤维支气管镜检查"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "83eb2ca7-60a8-47ed-aeab-da0d31676178",
+              "content": "目前症状：心胸部疼痛；痰中带血（咯血/血痰）；病程约1年",
+              "timestamp": 1771494763.4377847,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [
+            {
+              "id": "6fa6139c-bd51-4eb4-874d-1497d2ddddf3",
+              "content": "患者男，45岁；既往身体状况良好（未述慢性病）",
+              "timestamp": 1771494751.079127,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "94f075f9-b89a-4243-a8c6-18b224573359",
+              "content": "昆山人民医院检查确诊弥漫性肝癌晚期",
+              "timestamp": 1771494751.0791357,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b348add2-68c0-4693-b7d7-a37afa1763ed",
+              "content": "医生建议/要求进行胸部CT和纤维支气管镜检查",
+              "timestamp": 1771494768.1541946,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "就诊记录中，患者既往健康状况方面是否有提到慢性基础疾病？如果有，具体是什么？",
+          "answer": "未述慢性病（既往身体状况良好）",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "6fa6139c-bd51-4eb4-874d-1497d2ddddf3"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "6fa6139c-bd51-4eb4-874d-1497d2ddddf3",
+              "content": "患者男，45岁；既往身体状况良好（未述慢性病）",
+              "timestamp": 1771494751.079127,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "94f075f9-b89a-4243-a8c6-18b224573359",
+              "content": "昆山人民医院检查确诊弥漫性肝癌晚期",
+              "timestamp": 1771494751.0791357,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b348add2-68c0-4693-b7d7-a37afa1763ed",
+              "content": "医生建议/要求进行胸部CT和纤维支气管镜检查",
+              "timestamp": 1771494768.1541946,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "夜惊，刘主任，您好！宝宝现在15个月了，14个月断的奶，自从断奶后就特别恋母，入睡前总是要手放到妈妈脖子里才肯入睡，每天睡到晚上2-3点就要哭醒，抱起后会挺身子，闭着眼睛哼唧。抱着晃上半个小时到一个小时才能睡踏实，放下后过一两个小时又会哭醒，又要抱着晃。孩子白天精神好，睡眠也很踏实。身高81cm,体重22斤。出牙10颗。食欲好，吃饭挺好。每天奶量200ml左右。断断续续在补钙。想咨询刘主任孩子是否微量元素缺乏，如果缺的话，去医院要怎么测呢？是测头发，还是血液？还有孩子患蛲虫病的机会大不大呢，我目测她大便也没有什么虫虫之类的，屁眼里也没发现。\n。",
+        "to_memory": [
+          "identity: 患儿女，15个月；身高81cm，体重22斤",
+          "history: 14个月已断奶；目前每日奶量约200ml；间断补钙；出牙10颗",
+          "working: 断奶后夜间频繁惊醒/夜惊：入睡需手放在妈妈脖子里；夜间2-3点哭醒，抱起后挺身子、闭眼哼唧；需抱着摇晃30-60分钟才能再睡，放下1-2小时后又醒；白天精神好，白天睡眠踏实；食欲好",
+          "working: 家长咨询是否存在微量元素缺乏及检测方式（头发/血液）；咨询蛲虫病可能性，未见大便虫体及肛周未见虫"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "921c007b-4802-4c6f-8753-0d4866cebfe7",
+              "content": "断奶后夜间频繁惊醒/夜惊：入睡需手放在妈妈脖子里；夜间2-3点哭醒，抱起后挺身子、闭眼哼唧；需抱着摇晃30-60分钟才能再睡，放下1-2小时后又醒；白天精神好，白天睡眠踏实；食欲好",
+              "timestamp": 1771494776.8400264,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d9d6e232-fc62-47c9-8fac-5ab7bb4e4122",
+              "content": "家长咨询是否存在微量元素缺乏及检测方式（头发/血液）；咨询蛲虫病可能性，未见大便虫体及肛周未见虫",
+              "timestamp": 1771494776.840031,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "6fa6139c-bd51-4eb4-874d-1497d2ddddf3",
+              "content": "患者男，45岁；既往身体状况良好（未述慢性病）",
+              "timestamp": 1771494751.079127,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3d2e5d4c-c96f-4153-9d9d-fa1b5e3f72ee",
+              "content": "患儿女，15个月；身高81cm，体重22斤",
+              "timestamp": 1771494776.8400111,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "94f075f9-b89a-4243-a8c6-18b224573359",
+              "content": "昆山人民医院检查确诊弥漫性肝癌晚期",
+              "timestamp": 1771494751.0791357,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b348add2-68c0-4693-b7d7-a37afa1763ed",
+              "content": "医生建议/要求进行胸部CT和纤维支气管镜检查",
+              "timestamp": 1771494768.1541946,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4765a01e-1592-43d3-8861-609293592ad8",
+              "content": "14个月已断奶；目前每日奶量约200ml；间断补钙；出牙10颗",
+              "timestamp": 1771494776.840021,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "两种情况都可以通过化验确定，微量元素我院通过血液检查。",
+        "to_memory": [
+          "history: 医生建议微量元素与蛲虫病均可通过化验确定；微量元素在我院可通过血液检查"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "921c007b-4802-4c6f-8753-0d4866cebfe7",
+              "content": "断奶后夜间频繁惊醒/夜惊：入睡需手放在妈妈脖子里；夜间2-3点哭醒，抱起后挺身子、闭眼哼唧；需抱着摇晃30-60分钟才能再睡，放下1-2小时后又醒；白天精神好，白天睡眠踏实；食欲好",
+              "timestamp": 1771494776.8400264,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "d9d6e232-fc62-47c9-8fac-5ab7bb4e4122",
+              "content": "家长咨询是否存在微量元素缺乏及检测方式（头发/血液）；咨询蛲虫病可能性，未见大便虫体及肛周未见虫",
+              "timestamp": 1771494776.840031,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "9603b127-b3db-48e2-aed1-0123f1643f60",
+              "content": "医生建议：微量元素与蛲虫病均可通过化验确定；微量元素在我院可通过血液检查",
+              "timestamp": 1771494779.950851,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "identity": [
+            {
+              "id": "6fa6139c-bd51-4eb4-874d-1497d2ddddf3",
+              "content": "患者男，45岁；既往身体状况良好（未述慢性病）",
+              "timestamp": 1771494751.079127,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3d2e5d4c-c96f-4153-9d9d-fa1b5e3f72ee",
+              "content": "患儿女，15个月；身高81cm，体重22斤",
+              "timestamp": 1771494776.8400111,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "94f075f9-b89a-4243-a8c6-18b224573359",
+              "content": "昆山人民医院检查确诊弥漫性肝癌晚期",
+              "timestamp": 1771494751.0791357,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b348add2-68c0-4693-b7d7-a37afa1763ed",
+              "content": "医生建议/要求进行胸部CT和纤维支气管镜检查",
+              "timestamp": 1771494768.1541946,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4765a01e-1592-43d3-8861-609293592ad8",
+              "content": "14个月已断奶；目前每日奶量约200ml；间断补钙；出牙10颗",
+              "timestamp": 1771494776.840021,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "6fa6139c-bd51-4eb4-874d-1497d2ddddf3",
+              "content": "患者男，45岁；既往身体状况良好（未述慢性病）",
+              "timestamp": 1771494751.079127,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3d2e5d4c-c96f-4153-9d9d-fa1b5e3f72ee",
+              "content": "患儿女，15个月；身高81cm，体重22斤",
+              "timestamp": 1771494776.8400111,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "94f075f9-b89a-4243-a8c6-18b224573359",
+              "content": "昆山人民医院检查确诊弥漫性肝癌晚期",
+              "timestamp": 1771494751.0791357,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b348add2-68c0-4693-b7d7-a37afa1763ed",
+              "content": "医生建议/要求进行胸部CT和纤维支气管镜检查",
+              "timestamp": 1771494768.1541946,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4765a01e-1592-43d3-8861-609293592ad8",
+              "content": "14个月已断奶；目前每日奶量约200ml；间断补钙；出牙10颗",
+              "timestamp": 1771494776.840021,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "甲亢，08年6月流产（40多天），12月得知甲亢，开始治疗，09年7月碘131治疗（吃了3个碘），在天津总医院核医学进行治疗到现在。我现在每天吃三片，计划两周以后验血，看看指标再调成两片，您看可以么？由于计划六月份怀孕，所以想尽快让指标下来点，可以么大夫？我吃了两周每天三片丙硫，早中晚各一片（其中有三天中午忘了，吃了两片），新的验血结果。",
+        "to_memory": [
+          "history: 患者诊断为甲亢（2012年12月得知并开始治疗）",
+          "history: 2008年6月流产，孕40余天",
+          "history: 2009年7月曾行碘-131治疗（天津总医院核医学科，描述为“吃了3个碘”）",
+          "history: 目前口服丙硫氧嘧啶治疗，近2周用量为每日3片（早中晚各1片），其中有3天漏服中午剂量改为当日2片",
+          "history: 计划两周后复查验血并考虑将丙硫氧嘧啶调整为每日2片，咨询是否可行",
+          "history: 计划6月份怀孕，希望尽快将甲状腺指标降下来，咨询是否可行",
+          "working: 提到“新的验血结果”（具体数值未提供）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7a388b2b-b4e7-43b4-bc32-a41868455328",
+              "content": "计划：两周后复查验血，拟考虑将丙硫氧嘧啶调整为每日2片，咨询是否可行。",
+              "timestamp": 1771494789.0887582,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "324dc9fe-4e89-4e45-85f0-e2036f49e2ed",
+              "content": "计划：拟6月份怀孕，希望尽快将甲状腺指标降下来，咨询是否可行。",
+              "timestamp": 1771494789.088763,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "7f78694e-7da6-4cb9-8e6e-f6c30d812388",
+              "content": "提及有“新的验血结果”，但未提供具体数值。",
+              "timestamp": 1771494789.0887673,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "6fa6139c-bd51-4eb4-874d-1497d2ddddf3",
+              "content": "患者男，45岁；既往身体状况良好（未述慢性病）",
+              "timestamp": 1771494751.079127,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3d2e5d4c-c96f-4153-9d9d-fa1b5e3f72ee",
+              "content": "患儿女，15个月；身高81cm，体重22斤",
+              "timestamp": 1771494776.8400111,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "94f075f9-b89a-4243-a8c6-18b224573359",
+              "content": "昆山人民医院检查确诊弥漫性肝癌晚期",
+              "timestamp": 1771494751.0791357,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b348add2-68c0-4693-b7d7-a37afa1763ed",
+              "content": "医生建议/要求进行胸部CT和纤维支气管镜检查",
+              "timestamp": 1771494768.1541946,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4765a01e-1592-43d3-8861-609293592ad8",
+              "content": "14个月已断奶；目前每日奶量约200ml；间断补钙；出牙10颗",
+              "timestamp": 1771494776.840021,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "24227496-85c1-4d42-af27-9e0a2f83f504",
+              "content": "既往史：甲亢，2012年12月确诊并开始治疗。",
+              "timestamp": 1771494789.0887353,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b439d2a1-1370-4677-ba4a-8aafba7b9b40",
+              "content": "孕产史：2008年6月流产，孕40余天。",
+              "timestamp": 1771494789.0887442,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0fa16fe6-65e3-4a98-8b61-6caa9b04c8e1",
+              "content": "既往治疗史：2009年7月行碘-131治疗（天津总医院核医学科，患者描述“吃了3个碘”）。",
+              "timestamp": 1771494789.08875,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "252df217-23f1-4a1d-8f6a-fdbc9130a5ec",
+              "content": "用药史：目前口服丙硫氧嘧啶，近2周剂量为每日3片（早中晚各1片）；其中有3天漏服中午剂量，当日改为2片。",
+              "timestamp": 1771494789.088754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "继续原量，可以怀孕。",
+        "to_memory": [
+          "history: 甲亢病史；2009年7月在天津总医院核医学科行碘-131治疗（约3个碘）",
+          "history: 目前口服丙硫氧嘧啶每日3片（早中晚各1片），医生建议继续原剂量；医生表示目前可以怀孕",
+          "history: 2008年6月妊娠40余天流产史；计划6月怀孕并拟两周后复查甲功验血以评估调整剂量"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7a388b2b-b4e7-43b4-bc32-a41868455328",
+              "content": "计划：两周后复查甲功验血以评估是否需要调整丙硫氧嘧啶剂量；目前医生建议继续每日3片（早中晚各1片）。",
+              "timestamp": 1771494789.0887582,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "324dc9fe-4e89-4e45-85f0-e2036f49e2ed",
+              "content": "计划：拟6月份怀孕；医生表示目前可以怀孕。",
+              "timestamp": 1771494789.088763,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "7f78694e-7da6-4cb9-8e6e-f6c30d812388",
+              "content": "提及有“新的验血结果”，但未提供具体数值。",
+              "timestamp": 1771494789.0887673,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "6fa6139c-bd51-4eb4-874d-1497d2ddddf3",
+              "content": "患者男，45岁；既往身体状况良好（未述慢性病）",
+              "timestamp": 1771494751.079127,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3d2e5d4c-c96f-4153-9d9d-fa1b5e3f72ee",
+              "content": "患儿女，15个月；身高81cm，体重22斤",
+              "timestamp": 1771494776.8400111,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "94f075f9-b89a-4243-a8c6-18b224573359",
+              "content": "昆山人民医院检查确诊弥漫性肝癌晚期",
+              "timestamp": 1771494751.0791357,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b348add2-68c0-4693-b7d7-a37afa1763ed",
+              "content": "医生建议/要求进行胸部CT和纤维支气管镜检查",
+              "timestamp": 1771494768.1541946,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4765a01e-1592-43d3-8861-609293592ad8",
+              "content": "14个月已断奶；目前每日奶量约200ml；间断补钙；出牙10颗",
+              "timestamp": 1771494776.840021,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "24227496-85c1-4d42-af27-9e0a2f83f504",
+              "content": "既往史：甲亢，2012年12月确诊并开始治疗。",
+              "timestamp": 1771494789.0887353,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b439d2a1-1370-4677-ba4a-8aafba7b9b40",
+              "content": "孕产史：2008年6月流产，孕40余天。",
+              "timestamp": 1771494789.0887442,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0fa16fe6-65e3-4a98-8b61-6caa9b04c8e1",
+              "content": "既往治疗史：2009年7月行碘-131治疗（天津总医院核医学科，患者描述“吃了3个碘”）。",
+              "timestamp": 1771494789.08875,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "252df217-23f1-4a1d-8f6a-fdbc9130a5ec",
+              "content": "用药史：目前口服丙硫氧嘧啶，近2周剂量为每日3片（早中晚各1片）；其中有3天漏服中午剂量，当日改为2片。",
+              "timestamp": 1771494789.088754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "aa2df0f7-44bd-44be-9869-e1069bb17277",
+              "content": "医生建议：目前丙硫氧嘧啶维持原剂量（每日3片，早中晚各1片）；并表示目前可以怀孕。",
+              "timestamp": 1771494798.2812357,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在这段就诊记录中，医生曾要求患者为进一步明确诊断而进行哪些影像/内镜类检查？这些检查与患者当前就诊内容是否存在需要核对的潜在不一致之处？",
+          "answer": "医生建议/要求进行胸部CT和纤维支气管镜检查。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b348add2-68c0-4693-b7d7-a37afa1763ed"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "7a388b2b-b4e7-43b4-bc32-a41868455328"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "我吃了两周每天两片丙硫（换成了进口的丙硫），早晚各一片，新的验血结果。",
+        "to_memory": [
+          "history: 甲亢病史；2008-06流产（孕40余天）；2008-12确诊甲亢；2009-07行碘131治疗（天津总医院核医学）；计划2026-06怀孕；曾用丙硫氧嘧啶每日3片（早中晚各1片，偶有漏服）；医生建议继续原量并表示可怀孕",
+          "history: 近2周改为进口丙硫氧嘧啶，每日2片（早晚各1片）；已复查/有新的验血结果（具体数值未提供）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7a388b2b-b4e7-43b4-bc32-a41868455328",
+              "content": "计划：已于近2周将丙硫氧嘧啶调整为每日2片（早晚各1片，进口药）；已复查/有新的甲功验血结果但未提供具体数值，需补充后评估是否调整剂量。",
+              "timestamp": 1771494789.0887582,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "324dc9fe-4e89-4e45-85f0-e2036f49e2ed",
+              "content": "计划：计划2026年6月怀孕；医生表示目前可以怀孕。",
+              "timestamp": 1771494789.088763,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "7f78694e-7da6-4cb9-8e6e-f6c30d812388",
+              "content": "提及有“新的验血结果”，但未提供具体数值。",
+              "timestamp": 1771494789.0887673,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "6fa6139c-bd51-4eb4-874d-1497d2ddddf3",
+              "content": "患者男，45岁；既往身体状况良好（未述慢性病）",
+              "timestamp": 1771494751.079127,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3d2e5d4c-c96f-4153-9d9d-fa1b5e3f72ee",
+              "content": "患儿女，15个月；身高81cm，体重22斤",
+              "timestamp": 1771494776.8400111,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "94f075f9-b89a-4243-a8c6-18b224573359",
+              "content": "昆山人民医院检查确诊弥漫性肝癌晚期",
+              "timestamp": 1771494751.0791357,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b348add2-68c0-4693-b7d7-a37afa1763ed",
+              "content": "医生建议/要求进行胸部CT和纤维支气管镜检查",
+              "timestamp": 1771494768.1541946,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4765a01e-1592-43d3-8861-609293592ad8",
+              "content": "14个月已断奶；目前每日奶量约200ml；间断补钙；出牙10颗",
+              "timestamp": 1771494776.840021,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "24227496-85c1-4d42-af27-9e0a2f83f504",
+              "content": "既往史：甲亢，2008年12月确诊并开始治疗（原记录为2012年12月，已更正）。",
+              "timestamp": 1771494789.0887353,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b439d2a1-1370-4677-ba4a-8aafba7b9b40",
+              "content": "孕产史：2008年6月流产，孕40余天。",
+              "timestamp": 1771494789.0887442,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0fa16fe6-65e3-4a98-8b61-6caa9b04c8e1",
+              "content": "既往治疗史：2009年7月行碘-131治疗（天津总医院核医学科，患者描述“吃了3个碘”）。",
+              "timestamp": 1771494789.08875,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "252df217-23f1-4a1d-8f6a-fdbc9130a5ec",
+              "content": "用药史：目前口服丙硫氧嘧啶，近2周剂量为每日3片（早中晚各1片）；其中有3天漏服中午剂量，当日改为2片。",
+              "timestamp": 1771494789.088754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "aa2df0f7-44bd-44be-9869-e1069bb17277",
+              "content": "医生建议：目前丙硫氧嘧啶维持原剂量（每日3片，早中晚各1片）；并表示目前可以怀孕。",
+              "timestamp": 1771494798.2812357,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "医生在既往就诊中建议患者为了进一步评估而做哪两项检查？",
+          "answer": "胸部CT和纤维支气管镜检查",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b348add2-68c0-4693-b7d7-a37afa1763ed"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            7
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "结果很好，可以怀孕，维持原量。",
+        "to_memory": [
+          "history: 患者甲亢病史；2008-06流产（孕40余天）；2008-12确诊甲亢并开始治疗；2009-07在天津总医院核医学行碘-131治疗（服用3个碘）；目前使用丙硫氧嘧啶治疗（曾每日3片，后改为每日2片/早晚各1片，换为进口丙硫）；复查验血结果医生评价“结果很好”，建议维持原剂量；医生明确建议目前可以怀孕"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7a388b2b-b4e7-43b4-bc32-a41868455328",
+              "content": "计划：已于近2周将丙硫氧嘧啶调整为每日2片（早晚各1片，进口药）；复查验血医生评价“结果很好”，建议维持原剂量；具体甲功数值仍未提供，需补充以便评估。",
+              "timestamp": 1771494789.0887582,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "324dc9fe-4e89-4e45-85f0-e2036f49e2ed",
+              "content": "计划：计划2026年6月怀孕；医生表示目前可以怀孕。",
+              "timestamp": 1771494789.088763,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "7f78694e-7da6-4cb9-8e6e-f6c30d812388",
+              "content": "提及有“新的验血结果”，但未提供具体数值。",
+              "timestamp": 1771494789.0887673,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "6fa6139c-bd51-4eb4-874d-1497d2ddddf3",
+              "content": "患者男，45岁；既往身体状况良好（未述慢性病）",
+              "timestamp": 1771494751.079127,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3d2e5d4c-c96f-4153-9d9d-fa1b5e3f72ee",
+              "content": "患儿女，15个月；身高81cm，体重22斤",
+              "timestamp": 1771494776.8400111,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "94f075f9-b89a-4243-a8c6-18b224573359",
+              "content": "昆山人民医院检查确诊弥漫性肝癌晚期",
+              "timestamp": 1771494751.0791357,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b348add2-68c0-4693-b7d7-a37afa1763ed",
+              "content": "医生建议/要求进行胸部CT和纤维支气管镜检查",
+              "timestamp": 1771494768.1541946,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4765a01e-1592-43d3-8861-609293592ad8",
+              "content": "14个月已断奶；目前每日奶量约200ml；间断补钙；出牙10颗",
+              "timestamp": 1771494776.840021,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "24227496-85c1-4d42-af27-9e0a2f83f504",
+              "content": "既往史：甲亢，2008年12月确诊并开始治疗（原记录为2012年12月，已更正）。",
+              "timestamp": 1771494789.0887353,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b439d2a1-1370-4677-ba4a-8aafba7b9b40",
+              "content": "孕产史：2008年6月流产，孕40余天。",
+              "timestamp": 1771494789.0887442,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0fa16fe6-65e3-4a98-8b61-6caa9b04c8e1",
+              "content": "既往治疗史：2009年7月行碘-131治疗（天津总医院核医学科，患者描述“吃了3个碘”）。",
+              "timestamp": 1771494789.08875,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "252df217-23f1-4a1d-8f6a-fdbc9130a5ec",
+              "content": "用药史：目前口服丙硫氧嘧啶治疗；曾每日3片（早中晚各1片），后调整为每日2片（早晚各1片），并更换为进口丙硫氧嘧啶。",
+              "timestamp": 1771494789.088754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "aa2df0f7-44bd-44be-9869-e1069bb17277",
+              "content": "医生建议：目前丙硫氧嘧啶维持原剂量（每日3片，早中晚各1片）；并表示目前可以怀孕。",
+              "timestamp": 1771494798.2812357,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "我吃了两周每天一片进口丙硫，新的验血结果。",
+        "to_memory": [
+          "history: 甲亢病史；2008-06流产（孕40余天）；2008-12确诊甲亢；2009-07于天津总医院核医学行碘-131治疗（共3个碘）；曾用丙硫氧嘧啶治疗并多次调整剂量（曾每日3片→每日2片→目前每日1片进口丙硫氧嘧啶，各持续约2周）；既往医生建议“结果很好可怀孕，维持原量”",
+          "history: 当前用药情况：已连续2周每日1片进口丙硫氧嘧啶；本次有新的验血结果（具体数值未提供）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7a388b2b-b4e7-43b4-bc32-a41868455328",
+              "content": "用药/计划：近2周已调整为每日1片进口丙硫氧嘧啶（而非每日2片）；既往复查验血医生评价“结果很好”，建议维持原量；本次提及有新的验血结果但未提供具体甲功数值，需补充以便评估。",
+              "timestamp": 1771494789.0887582,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "324dc9fe-4e89-4e45-85f0-e2036f49e2ed",
+              "content": "计划：计划2026年6月怀孕；医生表示目前可以怀孕。",
+              "timestamp": 1771494789.088763,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "7f78694e-7da6-4cb9-8e6e-f6c30d812388",
+              "content": "提及有“新的验血结果”，但未提供具体数值。",
+              "timestamp": 1771494789.0887673,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "6fa6139c-bd51-4eb4-874d-1497d2ddddf3",
+              "content": "患者男，45岁；既往身体状况良好（未述慢性病）",
+              "timestamp": 1771494751.079127,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3d2e5d4c-c96f-4153-9d9d-fa1b5e3f72ee",
+              "content": "患儿女，15个月；身高81cm，体重22斤",
+              "timestamp": 1771494776.8400111,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "94f075f9-b89a-4243-a8c6-18b224573359",
+              "content": "昆山人民医院检查确诊弥漫性肝癌晚期",
+              "timestamp": 1771494751.0791357,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b348add2-68c0-4693-b7d7-a37afa1763ed",
+              "content": "医生建议/要求进行胸部CT和纤维支气管镜检查",
+              "timestamp": 1771494768.1541946,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4765a01e-1592-43d3-8861-609293592ad8",
+              "content": "14个月已断奶；目前每日奶量约200ml；间断补钙；出牙10颗",
+              "timestamp": 1771494776.840021,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "24227496-85c1-4d42-af27-9e0a2f83f504",
+              "content": "既往史：甲亢，2008年12月确诊并开始治疗（原记录为2012年12月，已更正）。",
+              "timestamp": 1771494789.0887353,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b439d2a1-1370-4677-ba4a-8aafba7b9b40",
+              "content": "孕产史：2008年6月流产，孕40余天。",
+              "timestamp": 1771494789.0887442,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0fa16fe6-65e3-4a98-8b61-6caa9b04c8e1",
+              "content": "既往治疗史：2009年7月行碘-131治疗（天津总医院核医学科，患者描述“吃了3个碘”）。",
+              "timestamp": 1771494789.08875,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "252df217-23f1-4a1d-8f6a-fdbc9130a5ec",
+              "content": "用药史：目前口服丙硫氧嘧啶治疗；曾每日3片（早中晚各1片），后调整为每日2片（早晚各1片），并更换为进口丙硫氧嘧啶。",
+              "timestamp": 1771494789.088754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "aa2df0f7-44bd-44be-9869-e1069bb17277",
+              "content": "医生建议：复查结果“很好”，可怀孕；建议维持当时的丙硫氧嘧啶原剂量（未明确具体片数）。",
+              "timestamp": 1771494798.2812357,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "4a5bf067-6c17-4f76-ac59-9b0c5351f0b5",
+              "content": "用药调整史（患者描述）：丙硫氧嘧啶曾每日3片→每日2片→目前每日1片（进口），各阶段约持续2周。",
+              "timestamp": 1771494827.7012892,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "隔天减少半粒就行。",
+        "to_memory": [
+          "history: 甲亢病史；曾于2009年7月行碘131治疗（天津总医院核医学）。",
+          "history: 目前使用丙硫氧嘧啶治疗；医生建议隔天减少半粒剂量。"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7a388b2b-b4e7-43b4-bc32-a41868455328",
+              "content": "用药/计划：近2周已调整为每日1片进口丙硫氧嘧啶（而非每日2片）；既往复查验血医生评价“结果很好”，建议维持原量；目前仍在用丙硫氧嘧啶，医生建议后续隔天减少半粒剂量；本次提及有新的验血结果但未提供具体甲功数值，需补充以便评估。",
+              "timestamp": 1771494789.0887582,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "324dc9fe-4e89-4e45-85f0-e2036f49e2ed",
+              "content": "计划：计划2026年6月怀孕；医生表示目前可以怀孕。",
+              "timestamp": 1771494789.088763,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "7f78694e-7da6-4cb9-8e6e-f6c30d812388",
+              "content": "提及有“新的验血结果”，但未提供具体数值。",
+              "timestamp": 1771494789.0887673,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "6fa6139c-bd51-4eb4-874d-1497d2ddddf3",
+              "content": "患者男，45岁；既往身体状况良好（未述慢性病）",
+              "timestamp": 1771494751.079127,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3d2e5d4c-c96f-4153-9d9d-fa1b5e3f72ee",
+              "content": "患儿女，15个月；身高81cm，体重22斤",
+              "timestamp": 1771494776.8400111,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "94f075f9-b89a-4243-a8c6-18b224573359",
+              "content": "昆山人民医院检查确诊弥漫性肝癌晚期",
+              "timestamp": 1771494751.0791357,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b348add2-68c0-4693-b7d7-a37afa1763ed",
+              "content": "医生建议/要求进行胸部CT和纤维支气管镜检查",
+              "timestamp": 1771494768.1541946,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4765a01e-1592-43d3-8861-609293592ad8",
+              "content": "14个月已断奶；目前每日奶量约200ml；间断补钙；出牙10颗",
+              "timestamp": 1771494776.840021,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "24227496-85c1-4d42-af27-9e0a2f83f504",
+              "content": "既往史：甲亢，2008年12月确诊并开始治疗（原记录为2012年12月，已更正）。",
+              "timestamp": 1771494789.0887353,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b439d2a1-1370-4677-ba4a-8aafba7b9b40",
+              "content": "孕产史：2008年6月流产，孕40余天。",
+              "timestamp": 1771494789.0887442,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0fa16fe6-65e3-4a98-8b61-6caa9b04c8e1",
+              "content": "既往治疗史：2009年7月行碘-131治疗（天津总医院核医学科，患者描述“吃了3个碘”）。",
+              "timestamp": 1771494789.08875,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "252df217-23f1-4a1d-8f6a-fdbc9130a5ec",
+              "content": "用药史：目前口服丙硫氧嘧啶治疗；曾每日3片（早中晚各1片），后调整为每日2片（早晚各1片），并更换为进口丙硫氧嘧啶。",
+              "timestamp": 1771494789.088754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "aa2df0f7-44bd-44be-9869-e1069bb17277",
+              "content": "医生建议：复查结果“很好”，可怀孕；建议维持当时的丙硫氧嘧啶原剂量（未明确具体片数）。",
+              "timestamp": 1771494798.2812357,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "4a5bf067-6c17-4f76-ac59-9b0c5351f0b5",
+              "content": "用药调整史（患者描述）：丙硫氧嘧啶曾每日3片→每日2片→目前每日1片（进口），各阶段约持续2周。",
+              "timestamp": 1771494827.7012892,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "在既往就诊记录中，医生曾建议患者做哪些影像学或内镜相关检查？",
+          "answer": "胸部CT和纤维支气管镜检查",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b348add2-68c0-4693-b7d7-a37afa1763ed"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            10
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "6fa6139c-bd51-4eb4-874d-1497d2ddddf3",
+              "content": "患者男，45岁；既往身体状况良好（未述慢性病）",
+              "timestamp": 1771494751.079127,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3d2e5d4c-c96f-4153-9d9d-fa1b5e3f72ee",
+              "content": "患儿女，15个月；身高81cm，体重22斤",
+              "timestamp": 1771494776.8400111,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "94f075f9-b89a-4243-a8c6-18b224573359",
+              "content": "昆山人民医院检查确诊弥漫性肝癌晚期",
+              "timestamp": 1771494751.0791357,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b348add2-68c0-4693-b7d7-a37afa1763ed",
+              "content": "医生建议/要求进行胸部CT和纤维支气管镜检查",
+              "timestamp": 1771494768.1541946,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4765a01e-1592-43d3-8861-609293592ad8",
+              "content": "14个月已断奶；目前每日奶量约200ml；间断补钙；出牙10颗",
+              "timestamp": 1771494776.840021,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "24227496-85c1-4d42-af27-9e0a2f83f504",
+              "content": "既往史：甲亢，2008年12月确诊并开始治疗（原记录为2012年12月，已更正）。",
+              "timestamp": 1771494789.0887353,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b439d2a1-1370-4677-ba4a-8aafba7b9b40",
+              "content": "孕产史：2008年6月流产，孕40余天。",
+              "timestamp": 1771494789.0887442,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0fa16fe6-65e3-4a98-8b61-6caa9b04c8e1",
+              "content": "既往治疗史：2009年7月行碘-131治疗（天津总医院核医学科，患者描述“吃了3个碘”）。",
+              "timestamp": 1771494789.08875,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "252df217-23f1-4a1d-8f6a-fdbc9130a5ec",
+              "content": "用药史：目前口服丙硫氧嘧啶治疗；曾每日3片（早中晚各1片），后调整为每日2片（早晚各1片），并更换为进口丙硫氧嘧啶。",
+              "timestamp": 1771494789.088754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "aa2df0f7-44bd-44be-9869-e1069bb17277",
+              "content": "医生建议：复查结果“很好”，可怀孕；建议维持当时的丙硫氧嘧啶原剂量（未明确具体片数）。",
+              "timestamp": 1771494798.2812357,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "4a5bf067-6c17-4f76-ac59-9b0c5351f0b5",
+              "content": "用药调整史（患者描述）：丙硫氧嘧啶曾每日3片→每日2片→目前每日1片（进口），各阶段约持续2周。",
+              "timestamp": 1771494827.7012892,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "乳房纤维瘤，一年前当时乳房疼痛四川省人民医院。",
+        "to_memory": [
+          "history: 既往诊断乳房纤维瘤；约1年前因乳房疼痛就诊四川省人民医院"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "6fa6139c-bd51-4eb4-874d-1497d2ddddf3",
+              "content": "患者男，45岁；既往身体状况良好（未述慢性病）",
+              "timestamp": 1771494751.079127,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3d2e5d4c-c96f-4153-9d9d-fa1b5e3f72ee",
+              "content": "患儿女，15个月；身高81cm，体重22斤",
+              "timestamp": 1771494776.8400111,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "94f075f9-b89a-4243-a8c6-18b224573359",
+              "content": "昆山人民医院检查确诊弥漫性肝癌晚期",
+              "timestamp": 1771494751.0791357,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b348add2-68c0-4693-b7d7-a37afa1763ed",
+              "content": "医生建议/要求进行胸部CT和纤维支气管镜检查",
+              "timestamp": 1771494768.1541946,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4765a01e-1592-43d3-8861-609293592ad8",
+              "content": "14个月已断奶；目前每日奶量约200ml；间断补钙；出牙10颗",
+              "timestamp": 1771494776.840021,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "24227496-85c1-4d42-af27-9e0a2f83f504",
+              "content": "既往史：甲亢，2008年12月确诊并开始治疗（原记录为2012年12月，已更正）。",
+              "timestamp": 1771494789.0887353,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b439d2a1-1370-4677-ba4a-8aafba7b9b40",
+              "content": "孕产史：2008年6月流产，孕40余天。",
+              "timestamp": 1771494789.0887442,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0fa16fe6-65e3-4a98-8b61-6caa9b04c8e1",
+              "content": "既往治疗史：2009年7月行碘-131治疗（天津总医院核医学科，患者描述“吃了3个碘”）。",
+              "timestamp": 1771494789.08875,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "252df217-23f1-4a1d-8f6a-fdbc9130a5ec",
+              "content": "用药史：目前口服丙硫氧嘧啶治疗；曾每日3片（早中晚各1片），后调整为每日2片（早晚各1片），并更换为进口丙硫氧嘧啶。",
+              "timestamp": 1771494789.088754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "aa2df0f7-44bd-44be-9869-e1069bb17277",
+              "content": "医生建议：复查结果“很好”，可怀孕；建议维持当时的丙硫氧嘧啶原剂量（未明确具体片数）。",
+              "timestamp": 1771494798.2812357,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "4a5bf067-6c17-4f76-ac59-9b0c5351f0b5",
+              "content": "用药调整史（患者描述）：丙硫氧嘧啶曾每日3片→每日2片→目前每日1片（进口），各阶段约持续2周。",
+              "timestamp": 1771494827.7012892,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "5a69be3e-77c9-4c87-a2d1-4af9341c29f1",
+              "content": "既往诊断：乳房纤维瘤；约1年前因乳房疼痛就诊四川省人民医院。",
+              "timestamp": 1771494838.9351938,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者关于用药剂量的自述在不同时间点出现了变化：请指出其用药剂量调整的完整顺序（按先后顺序写出），并说明每个阶段大约持续多久，以便核对是否存在用药记录不一致的安全隐患。",
+          "answer": "丙硫氧嘧啶：曾每日3片→每日2片→目前每日1片（进口）；各阶段约持续2周。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "4765a01e-1592-43d3-8861-609293592ad8",
+                "4a5bf067-6c17-4f76-ac59-9b0c5351f0b5"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            10,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "怕不美观，可以微创。",
+        "to_memory": [
+          "history: 既往诊断乳房纤维瘤；曾于四川省人民医院就诊（约一年前，伴乳房疼痛）",
+          "history: 甲亢病史；2008-06流产（孕40余天）；2009-07行碘131治疗（天津总医院核医学）",
+          "history: 抗甲状腺药物治疗史：丙硫氧嘧啶（丙硫）曾用3片/日→2片/日（进口）→1片/日；医生建议维持原量可怀孕，后建议隔天减少半粒",
+          "history: 医生建议乳房手术如担心美观可选择微创"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "6fa6139c-bd51-4eb4-874d-1497d2ddddf3",
+              "content": "患者男，45岁；既往身体状况良好（未述慢性病）",
+              "timestamp": 1771494751.079127,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3d2e5d4c-c96f-4153-9d9d-fa1b5e3f72ee",
+              "content": "患儿女，15个月；身高81cm，体重22斤",
+              "timestamp": 1771494776.8400111,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "94f075f9-b89a-4243-a8c6-18b224573359",
+              "content": "昆山人民医院检查确诊弥漫性肝癌晚期",
+              "timestamp": 1771494751.0791357,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b348add2-68c0-4693-b7d7-a37afa1763ed",
+              "content": "医生建议/要求进行胸部CT和纤维支气管镜检查",
+              "timestamp": 1771494768.1541946,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "4765a01e-1592-43d3-8861-609293592ad8",
+              "content": "14个月已断奶；目前每日奶量约200ml；间断补钙；出牙10颗",
+              "timestamp": 1771494776.840021,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "24227496-85c1-4d42-af27-9e0a2f83f504",
+              "content": "既往史：甲亢，2008年12月确诊并开始治疗（原记录为2012年12月，已更正）。",
+              "timestamp": 1771494789.0887353,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "b439d2a1-1370-4677-ba4a-8aafba7b9b40",
+              "content": "孕产史：2008年6月流产，孕40余天。",
+              "timestamp": 1771494789.0887442,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0fa16fe6-65e3-4a98-8b61-6caa9b04c8e1",
+              "content": "既往治疗史：2009年7月行碘-131治疗（天津总医院核医学科，患者描述“吃了3个碘”）。",
+              "timestamp": 1771494789.08875,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "252df217-23f1-4a1d-8f6a-fdbc9130a5ec",
+              "content": "用药史：目前口服丙硫氧嘧啶治疗；曾每日3片（早中晚各1片），后调整为每日2片（早晚各1片），并更换为进口丙硫氧嘧啶。",
+              "timestamp": 1771494789.088754,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "aa2df0f7-44bd-44be-9869-e1069bb17277",
+              "content": "医生建议：复查结果“很好”，可怀孕；建议维持当时的丙硫氧嘧啶原剂量；后续又建议隔天减少半粒。",
+              "timestamp": 1771494798.2812357,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "4a5bf067-6c17-4f76-ac59-9b0c5351f0b5",
+              "content": "用药调整史（患者描述）：丙硫氧嘧啶曾每日3片→每日2片→目前每日1片（进口），各阶段约持续2周。",
+              "timestamp": 1771494827.7012892,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "5a69be3e-77c9-4c87-a2d1-4af9341c29f1",
+              "content": "既往诊断：乳房纤维瘤；约1年前因乳房疼痛就诊四川省人民医院。",
+              "timestamp": 1771494838.9351938,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "29cbd651-dd25-4bcd-b51f-8e2538e812cd",
+              "content": "医生建议：乳房手术如担心美观可选择微创。",
+              "timestamp": 1771494850.7037067,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "关于患者目前正在服用的那种药物，医生在两次不同回复中分别给出了怎样的用量调整意见？这些意见之间是否需要做一致性核对？请说明两次各自的建议。",
+          "answer": "先建议维持原量；随后又建议隔天减少半粒。需要核对两次用量建议的一致性。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "aa2df0f7-44bd-44be-9869-e1069bb17277",
+                "29cbd651-dd25-4bcd-b51f-8e2538e812cd"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            7,
+            0
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "rare_disease_ddx",
+    "scenario_name": "罕见病鉴别诊断",
+    "session_count": 5,
+    "group_key": "综合科"
+  }
+}

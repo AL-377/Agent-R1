@@ -1,0 +1,4233 @@
+{
+  "patient_id": "45b0fc1a3df7",
+  "messages": [
+    {
+      "user": {
+        "content": "左胯骨疼，左肩后背疼，2月初，感觉受风。",
+        "to_memory": [
+          "working: 主诉左胯骨疼、左肩后背疼",
+          "working: 起病时间约2月初",
+          "working: 自述诱因/伴随情况：感觉受风"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e73c35be-ba58-4675-af87-6d63eefb2b21",
+              "content": "主诉左胯骨疼、左肩后背疼",
+              "timestamp": 1771465786.158309,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "576b9455-abb5-4f31-8613-080d23501744",
+              "content": "起病时间约2月初",
+              "timestamp": 1771465786.1583176,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3e97a7da-c170-488b-9a17-b1f0a144b29f",
+              "content": "自述诱因/伴随情况：感觉受风",
+              "timestamp": 1771465786.158322,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "为避免病情记录出现时间线矛盾，请回忆并说明：患者在本次咨询中描述的不适最早大约是什么时候开始的？",
+          "answer": "约2月初",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "e73c35be-ba58-4675-af87-6d63eefb2b21",
+                "576b9455-abb5-4f31-8613-080d23501744"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "不是坐骨神经痛，吃扶他林片，每次两片，每日两次。不是坐骨神经痛，吃扶他林片，每次两片，每日两次。不是坐骨神经痛，吃扶他林片，每次两片，每日两次。",
+        "to_memory": [
+          "history: 医生判断不是坐骨神经痛",
+          "history: 处方用药扶他林片（双氯芬酸），每次2片，每日2次",
+          "working: 本次主诉左胯骨疼、左肩后背疼（2月初起，自觉受风后出现）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e73c35be-ba58-4675-af87-6d63eefb2b21",
+              "content": "本次主诉左胯骨疼、左肩后背疼（2月初起，自觉受风后出现）",
+              "timestamp": 1771465786.158309,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "576b9455-abb5-4f31-8613-080d23501744",
+              "content": "起病时间约2月初",
+              "timestamp": 1771465786.1583176,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3e97a7da-c170-488b-9a17-b1f0a144b29f",
+              "content": "自述诱因/伴随情况：感觉受风",
+              "timestamp": 1771465786.158322,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者本次因疼痛来咨询时医生给出的用药方案：药物名称是什么，且每次用量与每日服用次数分别是多少？",
+          "answer": "扶他林片（双氯芬酸），每次2片，每日2次",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "e73c35be-ba58-4675-af87-6d63eefb2b21"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "慢性咽喉炎，8月1日在西安解放军518五官科检查出患有咽喉部有增生、咽侧索肥厚、双声带肥厚、充血做完手术现未好。",
+        "to_memory": [
+          "history: 慢性咽喉炎",
+          "history: 2025-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+          "history: 已做咽喉相关手术（术后仍未好）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2025-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者最初因疼痛就诊时与随后咨询咽喉问题这次：医生在首次就诊时对“疼痛是否属于某一类神经痛”的判断是什么？同时首次就诊给出的口服用药方案（药名及用法用量）是什么？",
+          "answer": "医生判断不是坐骨神经痛；口服扶他林片（双氯芬酸）每次2片，每日2次。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+                "88967626-c34a-4f03-b47f-cdfaaf11d336"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            2,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "对你疾病诊治过程我不想作过多的评论。如果还感到不适，请到我的门诊检查治疗。",
+        "to_memory": [
+          "history: 医生判断左胯骨疼、左肩后背疼“不是坐骨神经痛”",
+          "history: 曾建议用药：扶他林片（每次2片，每日2次）",
+          "working: 近期主诉左胯骨疼、左肩后背疼，起病约2月初，自述“感觉受风”",
+          "history: 慢性咽喉炎；2024-08-01于西安解放军518医院五官科检查提示：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+          "history: 咽喉部已做手术，术后目前仍未好/仍不适",
+          "working: 医生建议如仍不适到其门诊进一步检查治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "073494ea-cd51-44c8-9f3c-97f231e2d555",
+              "content": "近期主诉左胯骨疼、左肩后背疼，起病约2月初，自述“感觉受风”",
+              "timestamp": 1771465807.979627,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "7fc0262c-7416-47c8-9bee-720bd6abda47",
+              "content": "医生建议如仍不适到其门诊进一步检查治疗",
+              "timestamp": 1771465807.979642,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "没去医院做过检查，",
+        "to_memory": [
+          "history: 患者自述未去医院做过检查"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "23c32d22-360d-4db3-acb6-1d9dc2e429e0",
+              "content": "患者自述未去医院做过检查",
+              "timestamp": 1771465811.4417877,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "把患者最早因疼痛咨询时医生给出的主要判断，与后来患者在咽喉问题描述中提到的既往处理经历进行对比：这两次就诊分别涉及医生排除的是什么情况，以及患者曾接受过哪类治疗？",
+          "answer": "医生判断不是坐骨神经痛；患者既往做过咽喉相关手术且术后仍未好。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "88967626-c34a-4f03-b47f-cdfaaf11d336",
+                "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            5,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "这是包皮龟头炎你去买一只派瑞松擦一擦看。",
+        "to_memory": [
+          "history: 医生判断为包皮龟头炎",
+          "history: 医嘱外用派瑞松擦拭治疗（用药建议）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "23c32d22-360d-4db3-acb6-1d9dc2e429e0",
+              "content": "患者自述未去医院做过检查",
+              "timestamp": 1771465811.4417877,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "30a37763-24a8-493f-b8d4-d8db2dc71c50",
+              "content": "医生判断为包皮龟头炎",
+              "timestamp": 1771465822.4242134,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "af2f46d3-937c-48a7-bfa3-549a07676b32",
+              "content": "医嘱外用派瑞松擦拭治疗（用药建议）",
+              "timestamp": 1771465822.4242222,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "23c32d22-360d-4db3-acb6-1d9dc2e429e0",
+              "content": "患者自述未去医院做过检查",
+              "timestamp": 1771465811.4417877,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "30a37763-24a8-493f-b8d4-d8db2dc71c50",
+              "content": "医生判断为包皮龟头炎",
+              "timestamp": 1771465822.4242134,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "af2f46d3-937c-48a7-bfa3-549a07676b32",
+              "content": "医嘱外用派瑞松擦拭治疗（用药建议）",
+              "timestamp": 1771465822.4242222,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "牙齿酥，易掉部分，患者女，30岁，今天吃话梅咬到核，大牙被咯掉一块，当时没注意，把掉的那块牙当做沙子咬的粉碎，很容易咬碎的，之后牙齿微酸。",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "23c32d22-360d-4db3-acb6-1d9dc2e429e0",
+              "content": "患者自述未去医院做过检查",
+              "timestamp": 1771465811.4417877,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "30a37763-24a8-493f-b8d4-d8db2dc71c50",
+              "content": "医生判断为包皮龟头炎",
+              "timestamp": 1771465822.4242134,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "af2f46d3-937c-48a7-bfa3-549a07676b32",
+              "content": "医嘱外用派瑞松擦拭治疗（用药建议）",
+              "timestamp": 1771465822.4242222,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "看你的描述，你的牙齿脆性较大，建议你及早到医院口腔科检查、治疗。通过治疗后在原来的牙齿上做个烤瓷冠保护起来比较好些，以免造成不可修复的损伤。你可能患有牙周炎，可一并到医院检查后医生会根据你的情况给以处理、治疗、修复的意见和方案的。",
+        "to_memory": [
+          "identity: 患者女，30岁",
+          "history: 2024-08-01在西安解放军518医院五官科检查提示咽喉部增生、咽侧索肥厚、双声带肥厚、充血，已行手术，术后仍未好转",
+          "history: 医生判断左胯骨/左肩后背疼痛“不是坐骨神经痛”，曾建议扶他林片每次2片，每日2次",
+          "history: 医生曾判断为包皮龟头炎，建议外用派瑞松",
+          "history: 牙科就诊建议尽早至口腔科检查治疗，治疗后建议做烤瓷冠保护",
+          "working: 牙齿脆、易掉；今日吃话梅咬到核导致大牙崩掉一块，之后牙齿微酸",
+          "working: 医生提示“可能患有牙周炎”，建议一并检查评估"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "4df68347-ee35-4a1d-8359-08af94d9044b",
+              "content": "牙齿脆、易掉；今日吃话梅咬到核导致大牙崩掉一块，之后牙齿微酸",
+              "timestamp": 1771465832.1784825,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "5af22fa3-f54c-4ea0-aab2-e32db6b97ee3",
+              "content": "医生提示“可能患有牙周炎”，建议一并检查评估",
+              "timestamp": 1771465832.1784885,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "identity": [
+            {
+              "id": "5836a69f-2043-4b7c-8b4a-20fbb8d84d80",
+              "content": "患者女，30岁",
+              "timestamp": 1771465832.1784556,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "30a37763-24a8-493f-b8d4-d8db2dc71c50",
+              "content": "医生判断为包皮龟头炎",
+              "timestamp": 1771465822.4242134,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "af2f46d3-937c-48a7-bfa3-549a07676b32",
+              "content": "医嘱外用派瑞松擦拭治疗（用药建议）",
+              "timestamp": 1771465822.4242222,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "f2be9e22-b0f1-4def-9e31-d00afc351308",
+              "content": "牙科就诊建议尽早至口腔科检查治疗，治疗后建议做烤瓷冠保护",
+              "timestamp": 1771465832.178476,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5836a69f-2043-4b7c-8b4a-20fbb8d84d80",
+              "content": "患者女，30岁",
+              "timestamp": 1771465832.1784556,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "30a37763-24a8-493f-b8d4-d8db2dc71c50",
+              "content": "医生判断为包皮龟头炎",
+              "timestamp": 1771465822.4242134,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "af2f46d3-937c-48a7-bfa3-549a07676b32",
+              "content": "医嘱外用派瑞松擦拭治疗（用药建议）",
+              "timestamp": 1771465822.4242222,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "f2be9e22-b0f1-4def-9e31-d00afc351308",
+              "content": "牙科就诊建议尽早至口腔科检查治疗，治疗后建议做烤瓷冠保护",
+              "timestamp": 1771465832.178476,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "龟头炎，大约3、4个月的时间，龟头及包皮内侧发红，其他无太明显特征，无不良性行为。",
+        "to_memory": [
+          "working: 主诉龟头炎相关不适，病程约3-4个月",
+          "working: 症状为龟头及包皮内侧发红，其他无明显特征",
+          "working: 否认不良性行为"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5836a69f-2043-4b7c-8b4a-20fbb8d84d80",
+              "content": "患者女，30岁",
+              "timestamp": 1771465832.1784556,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "30a37763-24a8-493f-b8d4-d8db2dc71c50",
+              "content": "医生判断为包皮龟头炎",
+              "timestamp": 1771465822.4242134,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "af2f46d3-937c-48a7-bfa3-549a07676b32",
+              "content": "医嘱外用派瑞松擦拭治疗（用药建议）",
+              "timestamp": 1771465822.4242222,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "f2be9e22-b0f1-4def-9e31-d00afc351308",
+              "content": "牙科就诊建议尽早至口腔科检查治疗，治疗后建议做烤瓷冠保护",
+              "timestamp": 1771465832.178476,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "974bcd6d-2380-408c-afec-40edb9301616",
+              "content": "包皮龟头炎相关不适病程约3-4个月",
+              "timestamp": 1771465835.8064737,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "192a7225-cbef-4282-a8e8-e47c2cc54e0b",
+              "content": "症状：龟头及包皮内侧发红，其他无明显特征",
+              "timestamp": 1771465835.8064833,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7ebd92c8-9c12-467f-a1d5-3f652d99a5c8",
+              "content": "否认不良性行为",
+              "timestamp": 1771465835.8064883,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "包皮环切，去除“烦恼”，",
+        "to_memory": [
+          "history: 医生建议行包皮环切术以处理包皮龟头炎相关“烦恼”"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5836a69f-2043-4b7c-8b4a-20fbb8d84d80",
+              "content": "患者女，30岁",
+              "timestamp": 1771465832.1784556,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "30a37763-24a8-493f-b8d4-d8db2dc71c50",
+              "content": "医生判断为包皮龟头炎",
+              "timestamp": 1771465822.4242134,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "af2f46d3-937c-48a7-bfa3-549a07676b32",
+              "content": "医嘱外用派瑞松擦拭治疗（用药建议）",
+              "timestamp": 1771465822.4242222,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "f2be9e22-b0f1-4def-9e31-d00afc351308",
+              "content": "牙科就诊建议尽早至口腔科检查治疗，治疗后建议做烤瓷冠保护",
+              "timestamp": 1771465832.178476,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "974bcd6d-2380-408c-afec-40edb9301616",
+              "content": "包皮龟头炎相关不适病程约3-4个月",
+              "timestamp": 1771465835.8064737,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "192a7225-cbef-4282-a8e8-e47c2cc54e0b",
+              "content": "症状：龟头及包皮内侧发红，其他无明显特征",
+              "timestamp": 1771465835.8064833,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7ebd92c8-9c12-467f-a1d5-3f652d99a5c8",
+              "content": "否认不良性行为",
+              "timestamp": 1771465835.8064883,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "3fd9af87-303e-423f-89ab-61ac327027f7",
+              "content": "医生建议行包皮环切术以处理包皮龟头炎相关“烦恼”",
+              "timestamp": 1771465838.7215517,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "请核对本次患者主诉中自报的基本信息，是否与既往记录里患者的身份信息存在矛盾？若有矛盾，矛盾点是什么？",
+          "answer": "既往记录为“患者女，30岁”，与本次“龟头炎”的主诉存在身份信息矛盾。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "5836a69f-2043-4b7c-8b4a-20fbb8d84d80"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            12,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5836a69f-2043-4b7c-8b4a-20fbb8d84d80",
+              "content": "患者女，30岁",
+              "timestamp": 1771465832.1784556,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "30a37763-24a8-493f-b8d4-d8db2dc71c50",
+              "content": "医生判断为包皮龟头炎",
+              "timestamp": 1771465822.4242134,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "af2f46d3-937c-48a7-bfa3-549a07676b32",
+              "content": "医嘱外用派瑞松擦拭治疗（用药建议）",
+              "timestamp": 1771465822.4242222,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "f2be9e22-b0f1-4def-9e31-d00afc351308",
+              "content": "牙科就诊建议尽早至口腔科检查治疗，治疗后建议做烤瓷冠保护",
+              "timestamp": 1771465832.178476,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "974bcd6d-2380-408c-afec-40edb9301616",
+              "content": "包皮龟头炎相关不适病程约3-4个月",
+              "timestamp": 1771465835.8064737,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "192a7225-cbef-4282-a8e8-e47c2cc54e0b",
+              "content": "症状：龟头及包皮内侧发红，其他无明显特征",
+              "timestamp": 1771465835.8064833,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7ebd92c8-9c12-467f-a1d5-3f652d99a5c8",
+              "content": "否认不良性行为",
+              "timestamp": 1771465835.8064883,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "3fd9af87-303e-423f-89ab-61ac327027f7",
+              "content": "医生建议行包皮环切术以处理包皮龟头炎相关“烦恼”",
+              "timestamp": 1771465838.7215517,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "痔疮，肛门边上有肿块，外面看不见红肿，摸上去很痛。有10天左右了。",
+        "to_memory": [
+          "identity: 患者女，30岁",
+          "history: 既往医生判断为包皮龟头炎，曾建议外用派瑞松；曾建议包皮环切",
+          "history: 既往牙齿脆性大/咬硬物崩裂，医生建议口腔科检查治疗并考虑烤瓷冠保护；可能牙周炎，建议检查",
+          "working: 本次主诉痔疮/肛门边肿块疼痛约10天；外观无明显红肿，触摸疼痛明显"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "9f250958-00ac-404a-9d97-fff32d9142d7",
+              "content": "本次主诉痔疮/肛门边肿块疼痛约10天；外观无明显红肿，触摸疼痛明显",
+              "timestamp": 1771465845.1705205,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "identity": [
+            {
+              "id": "5836a69f-2043-4b7c-8b4a-20fbb8d84d80",
+              "content": "患者女，30岁",
+              "timestamp": 1771465832.1784556,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "30a37763-24a8-493f-b8d4-d8db2dc71c50",
+              "content": "医生判断为包皮龟头炎",
+              "timestamp": 1771465822.4242134,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "af2f46d3-937c-48a7-bfa3-549a07676b32",
+              "content": "医嘱外用派瑞松擦拭治疗（用药建议）",
+              "timestamp": 1771465822.4242222,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "f2be9e22-b0f1-4def-9e31-d00afc351308",
+              "content": "牙科就诊建议尽早至口腔科检查治疗，治疗后建议做烤瓷冠保护",
+              "timestamp": 1771465832.178476,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "974bcd6d-2380-408c-afec-40edb9301616",
+              "content": "包皮龟头炎相关不适病程约3-4个月",
+              "timestamp": 1771465835.8064737,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "192a7225-cbef-4282-a8e8-e47c2cc54e0b",
+              "content": "症状：龟头及包皮内侧发红，其他无明显特征",
+              "timestamp": 1771465835.8064833,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7ebd92c8-9c12-467f-a1d5-3f652d99a5c8",
+              "content": "否认不良性行为",
+              "timestamp": 1771465835.8064883,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "3fd9af87-303e-423f-89ab-61ac327027f7",
+              "content": "医生建议行包皮环切术以处理包皮龟头炎相关“烦恼”",
+              "timestamp": 1771465838.7215517,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "c3a61681-e59e-4d16-9ef7-b75bf3984a2b",
+              "content": "既往牙齿脆性大/咬硬物易崩裂，医生提示可能牙周炎，建议口腔科检查治疗，必要时考虑烤瓷冠保护",
+              "timestamp": 1771465845.170511,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "在之前关于龟头炎的咨询中，医生建议患者外用的具体药物名称是什么？",
+          "answer": "派瑞松",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "af2f46d3-937c-48a7-bfa3-549a07676b32"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            8
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "应该到医院看看，有可能是肛窦炎。",
+        "to_memory": [
+          "identity: 患者女，30岁",
+          "history: 既往未去医院做过检查",
+          "history: 医生曾判断为包皮龟头炎，建议外用派瑞松",
+          "history: 医生曾建议包皮环切",
+          "history: 牙齿脆性较大，疑牙周炎，医生建议至口腔科检查治疗并考虑烤瓷冠保护",
+          "working: 本次主诉肛门边有肿块、触痛，约10天，外观无明显红肿",
+          "working: 医生提示可能为肛窦炎，建议到医院就诊"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "9f250958-00ac-404a-9d97-fff32d9142d7",
+              "content": "本次主诉痔疮/肛门边肿块疼痛约10天；外观无明显红肿，触摸疼痛明显；医生提示可能为肛窦炎，建议到医院就诊",
+              "timestamp": 1771465845.1705205,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "identity": [
+            {
+              "id": "5836a69f-2043-4b7c-8b4a-20fbb8d84d80",
+              "content": "患者女，30岁",
+              "timestamp": 1771465832.1784556,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "30a37763-24a8-493f-b8d4-d8db2dc71c50",
+              "content": "医生判断为包皮龟头炎",
+              "timestamp": 1771465822.4242134,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "af2f46d3-937c-48a7-bfa3-549a07676b32",
+              "content": "医嘱外用派瑞松擦拭治疗（用药建议）",
+              "timestamp": 1771465822.4242222,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "f2be9e22-b0f1-4def-9e31-d00afc351308",
+              "content": "牙科就诊建议尽早至口腔科检查治疗，治疗后建议做烤瓷冠保护",
+              "timestamp": 1771465832.178476,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "974bcd6d-2380-408c-afec-40edb9301616",
+              "content": "包皮龟头炎相关不适病程约3-4个月",
+              "timestamp": 1771465835.8064737,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "192a7225-cbef-4282-a8e8-e47c2cc54e0b",
+              "content": "症状：龟头及包皮内侧发红，其他无明显特征",
+              "timestamp": 1771465835.8064833,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7ebd92c8-9c12-467f-a1d5-3f652d99a5c8",
+              "content": "否认不良性行为",
+              "timestamp": 1771465835.8064883,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "3fd9af87-303e-423f-89ab-61ac327027f7",
+              "content": "医生建议行包皮环切术以处理包皮龟头炎相关“烦恼”",
+              "timestamp": 1771465838.7215517,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "c3a61681-e59e-4d16-9ef7-b75bf3984a2b",
+              "content": "既往牙齿脆性大/咬硬物易崩裂，医生提示可能牙周炎，建议口腔科检查治疗，必要时考虑烤瓷冠保护",
+              "timestamp": 1771465845.170511,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "d2ace1b0-f7b9-4567-ae11-894a08c4a18c",
+              "content": "既往未去医院做过检查",
+              "timestamp": 1771465853.2427464,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "在更早一次就诊/咨询中，医生对患者的主要问题作出的诊断结论是什么？",
+          "answer": "包皮龟头炎",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "30a37763-24a8-493f-b8d4-d8db2dc71c50"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            9
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5836a69f-2043-4b7c-8b4a-20fbb8d84d80",
+              "content": "患者女，30岁",
+              "timestamp": 1771465832.1784556,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "30a37763-24a8-493f-b8d4-d8db2dc71c50",
+              "content": "医生判断为包皮龟头炎",
+              "timestamp": 1771465822.4242134,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "af2f46d3-937c-48a7-bfa3-549a07676b32",
+              "content": "医嘱外用派瑞松擦拭治疗（用药建议）",
+              "timestamp": 1771465822.4242222,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "f2be9e22-b0f1-4def-9e31-d00afc351308",
+              "content": "牙科就诊建议尽早至口腔科检查治疗，治疗后建议做烤瓷冠保护",
+              "timestamp": 1771465832.178476,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "974bcd6d-2380-408c-afec-40edb9301616",
+              "content": "包皮龟头炎相关不适病程约3-4个月",
+              "timestamp": 1771465835.8064737,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "192a7225-cbef-4282-a8e8-e47c2cc54e0b",
+              "content": "症状：龟头及包皮内侧发红，其他无明显特征",
+              "timestamp": 1771465835.8064833,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7ebd92c8-9c12-467f-a1d5-3f652d99a5c8",
+              "content": "否认不良性行为",
+              "timestamp": 1771465835.8064883,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "3fd9af87-303e-423f-89ab-61ac327027f7",
+              "content": "医生建议行包皮环切术以处理包皮龟头炎相关“烦恼”",
+              "timestamp": 1771465838.7215517,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "c3a61681-e59e-4d16-9ef7-b75bf3984a2b",
+              "content": "既往牙齿脆性大/咬硬物易崩裂，医生提示可能牙周炎，建议口腔科检查治疗，必要时考虑烤瓷冠保护",
+              "timestamp": 1771465845.170511,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "d2ace1b0-f7b9-4567-ae11-894a08c4a18c",
+              "content": "既往未去医院做过检查",
+              "timestamp": 1771465853.2427464,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "不良妊娠，09年2月自然流产次，当时只有40天，没有任何症状，流了点血，去照B超时什么也看不到。09年10月胎停四周，本来要清宫的，又自然流产了。我现在做了全面的检查，除了封闭抗体阴性外，其它都正常，老公的也正常。请问我是不是要做封闭抗体的治疗？治疗这个之前还要做哪些检查？",
+        "to_memory": [
+          "history: 2009年2月发生自然流产1次，孕约40天，少量出血，B超未见明确孕囊/妊娠组织",
+          "history: 2009年10月发生胎停（约4周）后再次自然流产，原计划清宫但未实施",
+          "history: 已做全面检查：除封闭抗体（阻断抗体）阴性外，其它检查均正常；丈夫检查亦正常",
+          "working: 主诉不良妊娠/反复流产史，咨询是否需要进行封闭抗体治疗及治疗前还需做哪些检查"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a8ebfd2a-9c43-4598-8d06-1be41ed9e560",
+              "content": "主诉不良妊娠/反复流产史，咨询是否需要进行封闭抗体治疗及治疗前还需做哪些检查",
+              "timestamp": 1771465860.4468634,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "identity": [
+            {
+              "id": "5836a69f-2043-4b7c-8b4a-20fbb8d84d80",
+              "content": "患者女，30岁",
+              "timestamp": 1771465832.1784556,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "30a37763-24a8-493f-b8d4-d8db2dc71c50",
+              "content": "医生判断为包皮龟头炎",
+              "timestamp": 1771465822.4242134,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "af2f46d3-937c-48a7-bfa3-549a07676b32",
+              "content": "医嘱外用派瑞松擦拭治疗（用药建议）",
+              "timestamp": 1771465822.4242222,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "f2be9e22-b0f1-4def-9e31-d00afc351308",
+              "content": "牙科就诊建议尽早至口腔科检查治疗，治疗后建议做烤瓷冠保护",
+              "timestamp": 1771465832.178476,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "974bcd6d-2380-408c-afec-40edb9301616",
+              "content": "包皮龟头炎相关不适病程约3-4个月",
+              "timestamp": 1771465835.8064737,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "192a7225-cbef-4282-a8e8-e47c2cc54e0b",
+              "content": "症状：龟头及包皮内侧发红，其他无明显特征",
+              "timestamp": 1771465835.8064833,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7ebd92c8-9c12-467f-a1d5-3f652d99a5c8",
+              "content": "否认不良性行为",
+              "timestamp": 1771465835.8064883,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "3fd9af87-303e-423f-89ab-61ac327027f7",
+              "content": "医生建议行包皮环切术以处理包皮龟头炎相关“烦恼”",
+              "timestamp": 1771465838.7215517,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "c3a61681-e59e-4d16-9ef7-b75bf3984a2b",
+              "content": "既往牙齿脆性大/咬硬物易崩裂，医生提示可能牙周炎，建议口腔科检查治疗，必要时考虑烤瓷冠保护",
+              "timestamp": 1771465845.170511,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "d2ace1b0-f7b9-4567-ae11-894a08c4a18c",
+              "content": "既往未去医院做过检查",
+              "timestamp": 1771465853.2427464,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bff56627-2d29-41a1-a713-b4f08e218f26",
+              "content": "2009年2月自然流产1次，孕约40天，少量出血，B超未见明确孕囊/妊娠组织",
+              "timestamp": 1771465860.4468422,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "8c89e8ae-d5c4-42ec-9ef6-7bebc51a5861",
+              "content": "2009年10月胎停（约4周）后再次自然流产，原计划清宫但未实施",
+              "timestamp": 1771465860.4468539,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "5ecd530e-ef2a-41fc-940c-1599ac1a4a6d",
+              "content": "不良妊娠/反复流产相关检查：除封闭抗体（阻断抗体）阴性外，其它检查均正常；丈夫检查亦正常",
+              "timestamp": 1771465860.4468582,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "针对患者在本次咨询中提出的一项拟进行的免疫相关干预，结合其既往妊娠结局和现有检查结果，医生在决定是否开展前需要重点核对的那一项异常检查结论是什么？",
+          "answer": "封闭抗体阴性",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "f2be9e22-b0f1-4def-9e31-d00afc351308"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "a8ebfd2a-9c43-4598-8d06-1be41ed9e560"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            8,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "我建议你中药治疗。",
+        "to_memory": [
+          "history: 医生建议中药治疗（针对不良妊娠/封闭抗体阴性相关问题）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a8ebfd2a-9c43-4598-8d06-1be41ed9e560",
+              "content": "主诉不良妊娠/反复流产史，咨询是否需要进行封闭抗体治疗及治疗前还需做哪些检查",
+              "timestamp": 1771465860.4468634,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "identity": [
+            {
+              "id": "5836a69f-2043-4b7c-8b4a-20fbb8d84d80",
+              "content": "患者女，30岁",
+              "timestamp": 1771465832.1784556,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "30a37763-24a8-493f-b8d4-d8db2dc71c50",
+              "content": "医生判断为包皮龟头炎",
+              "timestamp": 1771465822.4242134,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "af2f46d3-937c-48a7-bfa3-549a07676b32",
+              "content": "医嘱外用派瑞松擦拭治疗（用药建议）",
+              "timestamp": 1771465822.4242222,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "f2be9e22-b0f1-4def-9e31-d00afc351308",
+              "content": "牙科就诊建议尽早至口腔科检查治疗，治疗后建议做烤瓷冠保护",
+              "timestamp": 1771465832.178476,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "974bcd6d-2380-408c-afec-40edb9301616",
+              "content": "包皮龟头炎相关不适病程约3-4个月",
+              "timestamp": 1771465835.8064737,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "192a7225-cbef-4282-a8e8-e47c2cc54e0b",
+              "content": "症状：龟头及包皮内侧发红，其他无明显特征",
+              "timestamp": 1771465835.8064833,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7ebd92c8-9c12-467f-a1d5-3f652d99a5c8",
+              "content": "否认不良性行为",
+              "timestamp": 1771465835.8064883,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "3fd9af87-303e-423f-89ab-61ac327027f7",
+              "content": "医生建议行包皮环切术以处理包皮龟头炎相关“烦恼”",
+              "timestamp": 1771465838.7215517,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "c3a61681-e59e-4d16-9ef7-b75bf3984a2b",
+              "content": "既往牙齿脆性大/咬硬物易崩裂，医生提示可能牙周炎，建议口腔科检查治疗，必要时考虑烤瓷冠保护",
+              "timestamp": 1771465845.170511,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "d2ace1b0-f7b9-4567-ae11-894a08c4a18c",
+              "content": "既往未去医院做过检查",
+              "timestamp": 1771465853.2427464,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bff56627-2d29-41a1-a713-b4f08e218f26",
+              "content": "2009年2月自然流产1次，孕约40天，少量出血，B超未见明确孕囊/妊娠组织",
+              "timestamp": 1771465860.4468422,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "8c89e8ae-d5c4-42ec-9ef6-7bebc51a5861",
+              "content": "2009年10月胎停（约4周）后再次自然流产，原计划清宫但未实施",
+              "timestamp": 1771465860.4468539,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "5ecd530e-ef2a-41fc-940c-1599ac1a4a6d",
+              "content": "不良妊娠/反复流产相关检查：除封闭抗体（阻断抗体）阴性外，其它检查均正常；丈夫检查亦正常",
+              "timestamp": 1771465860.4468582,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "8f81a052-977c-427d-99d0-a291f400659f",
+              "content": "不良妊娠/封闭抗体（阻断抗体）阴性相关问题：医生建议可考虑中药治疗",
+              "timestamp": 1771465867.0429296,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "在这段对话中，患者在最后一次就诊提出了希望医生评估是否需要进行某项免疫相关治疗并询问治疗前还要做哪些检查。请回忆：她这次就诊所围绕的核心病史问题是什么？",
+          "answer": "不良妊娠/反复流产史，咨询是否需要进行封闭抗体治疗及治疗前还需做哪些检查",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "88967626-c34a-4f03-b47f-cdfaaf11d336"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "a8ebfd2a-9c43-4598-8d06-1be41ed9e560"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            18,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5836a69f-2043-4b7c-8b4a-20fbb8d84d80",
+              "content": "患者女，30岁",
+              "timestamp": 1771465832.1784556,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "30a37763-24a8-493f-b8d4-d8db2dc71c50",
+              "content": "医生判断为包皮龟头炎",
+              "timestamp": 1771465822.4242134,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "af2f46d3-937c-48a7-bfa3-549a07676b32",
+              "content": "医嘱外用派瑞松擦拭治疗（用药建议）",
+              "timestamp": 1771465822.4242222,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "f2be9e22-b0f1-4def-9e31-d00afc351308",
+              "content": "牙科就诊建议尽早至口腔科检查治疗，治疗后建议做烤瓷冠保护",
+              "timestamp": 1771465832.178476,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "974bcd6d-2380-408c-afec-40edb9301616",
+              "content": "包皮龟头炎相关不适病程约3-4个月",
+              "timestamp": 1771465835.8064737,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "192a7225-cbef-4282-a8e8-e47c2cc54e0b",
+              "content": "症状：龟头及包皮内侧发红，其他无明显特征",
+              "timestamp": 1771465835.8064833,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7ebd92c8-9c12-467f-a1d5-3f652d99a5c8",
+              "content": "否认不良性行为",
+              "timestamp": 1771465835.8064883,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "3fd9af87-303e-423f-89ab-61ac327027f7",
+              "content": "医生建议行包皮环切术以处理包皮龟头炎相关“烦恼”",
+              "timestamp": 1771465838.7215517,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "c3a61681-e59e-4d16-9ef7-b75bf3984a2b",
+              "content": "既往牙齿脆性大/咬硬物易崩裂，医生提示可能牙周炎，建议口腔科检查治疗，必要时考虑烤瓷冠保护",
+              "timestamp": 1771465845.170511,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "d2ace1b0-f7b9-4567-ae11-894a08c4a18c",
+              "content": "既往未去医院做过检查",
+              "timestamp": 1771465853.2427464,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bff56627-2d29-41a1-a713-b4f08e218f26",
+              "content": "2009年2月自然流产1次，孕约40天，少量出血，B超未见明确孕囊/妊娠组织",
+              "timestamp": 1771465860.4468422,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "8c89e8ae-d5c4-42ec-9ef6-7bebc51a5861",
+              "content": "2009年10月胎停（约4周）后再次自然流产，原计划清宫但未实施",
+              "timestamp": 1771465860.4468539,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "5ecd530e-ef2a-41fc-940c-1599ac1a4a6d",
+              "content": "不良妊娠/反复流产相关检查：除封闭抗体（阻断抗体）阴性外，其它检查均正常；丈夫检查亦正常",
+              "timestamp": 1771465860.4468582,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "8f81a052-977c-427d-99d0-a291f400659f",
+              "content": "不良妊娠/封闭抗体（阻断抗体）阴性相关问题：医生建议可考虑中药治疗",
+              "timestamp": 1771465867.0429296,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "化脓性中耳炎鼓膜穿孔，宝宝女，2周岁，感冒近一个月，后左耳化脓，检查中耳炎鼓膜穿孔，伴感冒。",
+        "to_memory": [
+          "identity: 患者为女婴，2周岁",
+          "working: 主诉/现病史：感冒近1个月后出现左耳化脓；检查提示化脓性中耳炎并鼓膜穿孔；目前仍伴感冒症状"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "09b4377d-f8a7-4ec1-a0cc-1c5999819279",
+              "content": "主诉/现病史：感冒近1个月后出现左耳化脓；检查提示化脓性中耳炎并鼓膜穿孔；目前仍伴感冒症状",
+              "timestamp": 1771465874.138437,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            }
+          ],
+          "identity": [
+            {
+              "id": "5836a69f-2043-4b7c-8b4a-20fbb8d84d80",
+              "content": "患者为女婴，2周岁",
+              "timestamp": 1771465832.1784556,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "30a37763-24a8-493f-b8d4-d8db2dc71c50",
+              "content": "医生判断为包皮龟头炎",
+              "timestamp": 1771465822.4242134,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "af2f46d3-937c-48a7-bfa3-549a07676b32",
+              "content": "医嘱外用派瑞松擦拭治疗（用药建议）",
+              "timestamp": 1771465822.4242222,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "f2be9e22-b0f1-4def-9e31-d00afc351308",
+              "content": "牙科就诊建议尽早至口腔科检查治疗，治疗后建议做烤瓷冠保护",
+              "timestamp": 1771465832.178476,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "974bcd6d-2380-408c-afec-40edb9301616",
+              "content": "包皮龟头炎相关不适病程约3-4个月",
+              "timestamp": 1771465835.8064737,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "192a7225-cbef-4282-a8e8-e47c2cc54e0b",
+              "content": "症状：龟头及包皮内侧发红，其他无明显特征",
+              "timestamp": 1771465835.8064833,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7ebd92c8-9c12-467f-a1d5-3f652d99a5c8",
+              "content": "否认不良性行为",
+              "timestamp": 1771465835.8064883,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "3fd9af87-303e-423f-89ab-61ac327027f7",
+              "content": "医生建议行包皮环切术以处理包皮龟头炎相关“烦恼”",
+              "timestamp": 1771465838.7215517,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "c3a61681-e59e-4d16-9ef7-b75bf3984a2b",
+              "content": "既往牙齿脆性大/咬硬物易崩裂，医生提示可能牙周炎，建议口腔科检查治疗，必要时考虑烤瓷冠保护",
+              "timestamp": 1771465845.170511,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "d2ace1b0-f7b9-4567-ae11-894a08c4a18c",
+              "content": "既往未去医院做过检查",
+              "timestamp": 1771465853.2427464,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bff56627-2d29-41a1-a713-b4f08e218f26",
+              "content": "2009年2月自然流产1次，孕约40天，少量出血，B超未见明确孕囊/妊娠组织",
+              "timestamp": 1771465860.4468422,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "8c89e8ae-d5c4-42ec-9ef6-7bebc51a5861",
+              "content": "2009年10月胎停（约4周）后再次自然流产，原计划清宫但未实施",
+              "timestamp": 1771465860.4468539,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "5ecd530e-ef2a-41fc-940c-1599ac1a4a6d",
+              "content": "不良妊娠/反复流产相关检查：除封闭抗体（阻断抗体）阴性外，其它检查均正常；丈夫检查亦正常",
+              "timestamp": 1771465860.4468582,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "8f81a052-977c-427d-99d0-a291f400659f",
+              "content": "不良妊娠/封闭抗体（阻断抗体）阴性相关问题：医生建议可考虑中药治疗",
+              "timestamp": 1771465867.0429296,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "在这段对话里，患者既往曾提到做过一次与上呼吸道相关的手术但效果不理想；请问在后续关于宝宝耳部问题的那次咨询中，患者描述的主要就诊背景与检查结论分别是什么？",
+          "answer": "感冒近1个月后出现左耳化脓；检查提示化脓性中耳炎并鼓膜穿孔；目前仍伴感冒症状。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "09b4377d-f8a7-4ec1-a0cc-1c5999819279"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            18,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可以在家用双氧水洗耳。",
+        "to_memory": [
+          "identity: 患者女，2周岁（宝宝）",
+          "history: 检查提示化脓性中耳炎并鼓膜穿孔（左耳）",
+          "history: 医嘱/建议：可在家用双氧水洗耳",
+          "working: 近1个月感冒，后左耳化脓，伴感冒"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "09b4377d-f8a7-4ec1-a0cc-1c5999819279",
+              "content": "主诉/现病史：感冒近1个月后出现左耳化脓；检查提示化脓性中耳炎并鼓膜穿孔；目前仍伴感冒症状",
+              "timestamp": 1771465874.138437,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            }
+          ],
+          "identity": [
+            {
+              "id": "5836a69f-2043-4b7c-8b4a-20fbb8d84d80",
+              "content": "患者为女婴，2周岁",
+              "timestamp": 1771465832.1784556,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "30a37763-24a8-493f-b8d4-d8db2dc71c50",
+              "content": "医生判断为包皮龟头炎",
+              "timestamp": 1771465822.4242134,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "af2f46d3-937c-48a7-bfa3-549a07676b32",
+              "content": "医嘱外用派瑞松擦拭治疗（用药建议）",
+              "timestamp": 1771465822.4242222,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "f2be9e22-b0f1-4def-9e31-d00afc351308",
+              "content": "牙科就诊建议尽早至口腔科检查治疗，治疗后建议做烤瓷冠保护",
+              "timestamp": 1771465832.178476,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "974bcd6d-2380-408c-afec-40edb9301616",
+              "content": "包皮龟头炎相关不适病程约3-4个月",
+              "timestamp": 1771465835.8064737,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "192a7225-cbef-4282-a8e8-e47c2cc54e0b",
+              "content": "症状：龟头及包皮内侧发红，其他无明显特征",
+              "timestamp": 1771465835.8064833,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7ebd92c8-9c12-467f-a1d5-3f652d99a5c8",
+              "content": "否认不良性行为",
+              "timestamp": 1771465835.8064883,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "3fd9af87-303e-423f-89ab-61ac327027f7",
+              "content": "医生建议行包皮环切术以处理包皮龟头炎相关“烦恼”",
+              "timestamp": 1771465838.7215517,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "c3a61681-e59e-4d16-9ef7-b75bf3984a2b",
+              "content": "既往牙齿脆性大/咬硬物易崩裂，医生提示可能牙周炎，建议口腔科检查治疗，必要时考虑烤瓷冠保护",
+              "timestamp": 1771465845.170511,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "d2ace1b0-f7b9-4567-ae11-894a08c4a18c",
+              "content": "既往未去医院做过检查",
+              "timestamp": 1771465853.2427464,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bff56627-2d29-41a1-a713-b4f08e218f26",
+              "content": "2009年2月自然流产1次，孕约40天，少量出血，B超未见明确孕囊/妊娠组织",
+              "timestamp": 1771465860.4468422,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "8c89e8ae-d5c4-42ec-9ef6-7bebc51a5861",
+              "content": "2009年10月胎停（约4周）后再次自然流产，原计划清宫但未实施",
+              "timestamp": 1771465860.4468539,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "5ecd530e-ef2a-41fc-940c-1599ac1a4a6d",
+              "content": "不良妊娠/反复流产相关检查：除封闭抗体（阻断抗体）阴性外，其它检查均正常；丈夫检查亦正常",
+              "timestamp": 1771465860.4468582,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "8f81a052-977c-427d-99d0-a291f400659f",
+              "content": "不良妊娠/封闭抗体（阻断抗体）阴性相关问题：医生建议可考虑中药治疗",
+              "timestamp": 1771465867.0429296,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "0362a8da-d952-4876-9fb0-c3aa70989dc7",
+              "content": "医嘱/建议：可在家用双氧水洗耳",
+              "timestamp": 1771465882.818473,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在该患儿的既往病史中，家属曾提到做过哪一类与本次就诊部位相关的手术？这条既往史在当前处理建议中需要做哪些安全性核对？",
+          "answer": "既往做过咽喉相关手术，术后仍未好；当前处理需核对该既往手术史与本次耳部在家处理措施的适用性与安全性。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "09b4377d-f8a7-4ec1-a0cc-1c5999819279"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            19,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5836a69f-2043-4b7c-8b4a-20fbb8d84d80",
+              "content": "患者为女婴，2周岁",
+              "timestamp": 1771465832.1784556,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "30a37763-24a8-493f-b8d4-d8db2dc71c50",
+              "content": "医生判断为包皮龟头炎",
+              "timestamp": 1771465822.4242134,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "af2f46d3-937c-48a7-bfa3-549a07676b32",
+              "content": "医嘱外用派瑞松擦拭治疗（用药建议）",
+              "timestamp": 1771465822.4242222,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "f2be9e22-b0f1-4def-9e31-d00afc351308",
+              "content": "牙科就诊建议尽早至口腔科检查治疗，治疗后建议做烤瓷冠保护",
+              "timestamp": 1771465832.178476,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "974bcd6d-2380-408c-afec-40edb9301616",
+              "content": "包皮龟头炎相关不适病程约3-4个月",
+              "timestamp": 1771465835.8064737,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "192a7225-cbef-4282-a8e8-e47c2cc54e0b",
+              "content": "症状：龟头及包皮内侧发红，其他无明显特征",
+              "timestamp": 1771465835.8064833,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7ebd92c8-9c12-467f-a1d5-3f652d99a5c8",
+              "content": "否认不良性行为",
+              "timestamp": 1771465835.8064883,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "3fd9af87-303e-423f-89ab-61ac327027f7",
+              "content": "医生建议行包皮环切术以处理包皮龟头炎相关“烦恼”",
+              "timestamp": 1771465838.7215517,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "c3a61681-e59e-4d16-9ef7-b75bf3984a2b",
+              "content": "既往牙齿脆性大/咬硬物易崩裂，医生提示可能牙周炎，建议口腔科检查治疗，必要时考虑烤瓷冠保护",
+              "timestamp": 1771465845.170511,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "d2ace1b0-f7b9-4567-ae11-894a08c4a18c",
+              "content": "既往未去医院做过检查",
+              "timestamp": 1771465853.2427464,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bff56627-2d29-41a1-a713-b4f08e218f26",
+              "content": "2009年2月自然流产1次，孕约40天，少量出血，B超未见明确孕囊/妊娠组织",
+              "timestamp": 1771465860.4468422,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "8c89e8ae-d5c4-42ec-9ef6-7bebc51a5861",
+              "content": "2009年10月胎停（约4周）后再次自然流产，原计划清宫但未实施",
+              "timestamp": 1771465860.4468539,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "5ecd530e-ef2a-41fc-940c-1599ac1a4a6d",
+              "content": "不良妊娠/反复流产相关检查：除封闭抗体（阻断抗体）阴性外，其它检查均正常；丈夫检查亦正常",
+              "timestamp": 1771465860.4468582,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "8f81a052-977c-427d-99d0-a291f400659f",
+              "content": "不良妊娠/封闭抗体（阻断抗体）阴性相关问题：医生建议可考虑中药治疗",
+              "timestamp": 1771465867.0429296,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "0362a8da-d952-4876-9fb0-c3aa70989dc7",
+              "content": "医嘱/建议：可在家用双氧水洗耳",
+              "timestamp": 1771465882.818473,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "车祸伤头，打开颅骨减压，现已4个半月。，09年12月15日在巩义市中医院做开颅手术，现在说话慢，心与口不照。双眼看不到右侧物体。找中医吃中药后头晕。",
+        "to_memory": [
+          "history: 车祸致头部外伤，曾行开颅去骨瓣减压术；2009-12-15在巩义市中医院行开颅手术；术后至今约4个半月",
+          "history: 目前表现为说话变慢、言行不一致/心口不一；双眼右侧视野缺损（看不到右侧物体）；服用中药后出现头晕"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5836a69f-2043-4b7c-8b4a-20fbb8d84d80",
+              "content": "患者为女婴，2周岁",
+              "timestamp": 1771465832.1784556,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "30a37763-24a8-493f-b8d4-d8db2dc71c50",
+              "content": "医生判断为包皮龟头炎",
+              "timestamp": 1771465822.4242134,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "af2f46d3-937c-48a7-bfa3-549a07676b32",
+              "content": "医嘱外用派瑞松擦拭治疗（用药建议）",
+              "timestamp": 1771465822.4242222,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "f2be9e22-b0f1-4def-9e31-d00afc351308",
+              "content": "牙科就诊建议尽早至口腔科检查治疗，治疗后建议做烤瓷冠保护",
+              "timestamp": 1771465832.178476,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "974bcd6d-2380-408c-afec-40edb9301616",
+              "content": "包皮龟头炎相关不适病程约3-4个月",
+              "timestamp": 1771465835.8064737,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "192a7225-cbef-4282-a8e8-e47c2cc54e0b",
+              "content": "症状：龟头及包皮内侧发红，其他无明显特征",
+              "timestamp": 1771465835.8064833,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7ebd92c8-9c12-467f-a1d5-3f652d99a5c8",
+              "content": "否认不良性行为",
+              "timestamp": 1771465835.8064883,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "3fd9af87-303e-423f-89ab-61ac327027f7",
+              "content": "医生建议行包皮环切术以处理包皮龟头炎相关“烦恼”",
+              "timestamp": 1771465838.7215517,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "c3a61681-e59e-4d16-9ef7-b75bf3984a2b",
+              "content": "既往牙齿脆性大/咬硬物易崩裂，医生提示可能牙周炎，建议口腔科检查治疗，必要时考虑烤瓷冠保护",
+              "timestamp": 1771465845.170511,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "d2ace1b0-f7b9-4567-ae11-894a08c4a18c",
+              "content": "既往未去医院做过检查",
+              "timestamp": 1771465853.2427464,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bff56627-2d29-41a1-a713-b4f08e218f26",
+              "content": "2009年2月自然流产1次，孕约40天，少量出血，B超未见明确孕囊/妊娠组织",
+              "timestamp": 1771465860.4468422,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "8c89e8ae-d5c4-42ec-9ef6-7bebc51a5861",
+              "content": "2009年10月胎停（约4周）后再次自然流产，原计划清宫但未实施",
+              "timestamp": 1771465860.4468539,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "5ecd530e-ef2a-41fc-940c-1599ac1a4a6d",
+              "content": "不良妊娠/反复流产相关检查：除封闭抗体（阻断抗体）阴性外，其它检查均正常；丈夫检查亦正常",
+              "timestamp": 1771465860.4468582,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "8f81a052-977c-427d-99d0-a291f400659f",
+              "content": "不良妊娠/封闭抗体（阻断抗体）阴性相关问题：医生建议可考虑中药治疗",
+              "timestamp": 1771465867.0429296,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "0362a8da-d952-4876-9fb0-c3aa70989dc7",
+              "content": "医嘱/建议：可在家用双氧水洗耳",
+              "timestamp": 1771465882.818473,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "6a2edac3-4b43-47a4-9d40-975155c3cf83",
+              "content": "既往史：车祸致头部外伤，曾行开颅去骨瓣减压术；2009-12-15在巩义市中医院行开颅手术；术后至今约4个半月。",
+              "timestamp": 1771465892.7341413,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "e9e8cade-140e-47ce-8b6d-7c7feb727254",
+              "content": "现状/症状：说话变慢；言行不一致/心口不一；双眼右侧视野缺损（看不到右侧物体）；服用中药后出现头晕。",
+              "timestamp": 1771465892.7341492,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者既往接受过哪一类部位相关的手术治疗，但术后效果仍不理想？",
+          "answer": "咽喉相关手术",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            21
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可能是同向偏盲，右侧肢体活动怎样？药物尽量少用，关键是全方位的康复。",
+        "to_memory": [
+          "identity: 患者女，2周岁（宝宝）",
+          "history: 车祸致颅脑外伤，2009-12-15于巩义市中医院行开颅手术/打开颅骨减压",
+          "history: 检查提示化脓性中耳炎并鼓膜穿孔；医生曾建议在家用双氧水洗耳",
+          "history: 既往不良妊娠史：2009-02自然流产（孕40天），2009-10胎停后自然流产；检查除封闭抗体阴性外其余正常；医生曾建议中药治疗",
+          "working: 开颅术后4个半月仍说话慢、言语与口型不一致，双眼右侧视野缺失；服中药后出现头晕",
+          "working: 医生考虑同向偏盲，询问右侧肢体活动情况；建议药物尽量少用，关键进行全方位康复"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "abd2e1f9-d793-4f4c-8c5e-ee411fc0ab1f",
+              "content": "医生考虑同向偏盲；询问右侧肢体活动情况。",
+              "timestamp": 1771465899.882668,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            },
+            {
+              "id": "cf18f6f2-4cd5-4db4-a649-8a472b3db85d",
+              "content": "医生建议药物尽量少用，关键进行全方位康复。",
+              "timestamp": 1771465899.8826733,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            }
+          ],
+          "identity": [
+            {
+              "id": "5836a69f-2043-4b7c-8b4a-20fbb8d84d80",
+              "content": "患者为女婴，2周岁",
+              "timestamp": 1771465832.1784556,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "30a37763-24a8-493f-b8d4-d8db2dc71c50",
+              "content": "医生判断为包皮龟头炎",
+              "timestamp": 1771465822.4242134,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "af2f46d3-937c-48a7-bfa3-549a07676b32",
+              "content": "医嘱外用派瑞松擦拭治疗（用药建议）",
+              "timestamp": 1771465822.4242222,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "f2be9e22-b0f1-4def-9e31-d00afc351308",
+              "content": "牙科就诊建议尽早至口腔科检查治疗，治疗后建议做烤瓷冠保护",
+              "timestamp": 1771465832.178476,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "974bcd6d-2380-408c-afec-40edb9301616",
+              "content": "包皮龟头炎相关不适病程约3-4个月",
+              "timestamp": 1771465835.8064737,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "192a7225-cbef-4282-a8e8-e47c2cc54e0b",
+              "content": "症状：龟头及包皮内侧发红，其他无明显特征",
+              "timestamp": 1771465835.8064833,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7ebd92c8-9c12-467f-a1d5-3f652d99a5c8",
+              "content": "否认不良性行为",
+              "timestamp": 1771465835.8064883,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "3fd9af87-303e-423f-89ab-61ac327027f7",
+              "content": "医生建议行包皮环切术以处理包皮龟头炎相关“烦恼”",
+              "timestamp": 1771465838.7215517,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "c3a61681-e59e-4d16-9ef7-b75bf3984a2b",
+              "content": "既往牙齿脆性大/咬硬物易崩裂，医生提示可能牙周炎，建议口腔科检查治疗，必要时考虑烤瓷冠保护",
+              "timestamp": 1771465845.170511,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "d2ace1b0-f7b9-4567-ae11-894a08c4a18c",
+              "content": "既往未去医院做过检查",
+              "timestamp": 1771465853.2427464,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bff56627-2d29-41a1-a713-b4f08e218f26",
+              "content": "2009年2月自然流产1次，孕约40天，少量出血，B超未见明确孕囊/妊娠组织",
+              "timestamp": 1771465860.4468422,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "8c89e8ae-d5c4-42ec-9ef6-7bebc51a5861",
+              "content": "2009年10月胎停（约4周）后再次自然流产，原计划清宫但未实施",
+              "timestamp": 1771465860.4468539,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "5ecd530e-ef2a-41fc-940c-1599ac1a4a6d",
+              "content": "不良妊娠/反复流产相关检查：除封闭抗体（阻断抗体）阴性外，其它检查均正常；丈夫检查亦正常",
+              "timestamp": 1771465860.4468582,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "8f81a052-977c-427d-99d0-a291f400659f",
+              "content": "不良妊娠/封闭抗体（阻断抗体）阴性相关问题：医生建议可考虑中药治疗",
+              "timestamp": 1771465867.0429296,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "0362a8da-d952-4876-9fb0-c3aa70989dc7",
+              "content": "医嘱/建议：可在家用双氧水洗耳",
+              "timestamp": 1771465882.818473,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "6a2edac3-4b43-47a4-9d40-975155c3cf83",
+              "content": "既往史：车祸致头部外伤，曾行开颅去骨瓣减压术；2009-12-15在巩义市中医院行开颅手术；术后至今约4个半月。",
+              "timestamp": 1771465892.7341413,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "e9e8cade-140e-47ce-8b6d-7c7feb727254",
+              "content": "现状/症状：说话变慢；言行不一致/心口不一；双眼右侧视野缺损（看不到右侧物体）；服用中药后出现头晕。",
+              "timestamp": 1771465892.7341492,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "9dc990b3-b9e1-4e9e-8f47-d306c71bd1ad",
+              "content": "检查提示化脓性中耳炎并鼓膜穿孔。",
+              "timestamp": 1771465899.882659,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "在第二段就诊对话中，医生对患者“看不到右侧物体”的情况首先考虑的具体诊断是什么？",
+          "answer": "同向偏盲",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "abd2e1f9-d793-4f4c-8c5e-ee411fc0ab1f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "右臂肩关节疼痛，中医看后说是肩周炎，按摩治疗，一个疗程后不见效果。现在右臂不能后摆；平摆疼痛厉害。",
+        "to_memory": [
+          "working: 右臂肩关节疼痛；中医认为肩周炎并进行按摩治疗1个疗程无效；目前右臂不能后摆，平摆时疼痛明显加重"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "abd2e1f9-d793-4f4c-8c5e-ee411fc0ab1f",
+              "content": "医生考虑同向偏盲；询问右侧肢体活动情况。",
+              "timestamp": 1771465899.882668,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            },
+            {
+              "id": "cf18f6f2-4cd5-4db4-a649-8a472b3db85d",
+              "content": "医生建议药物尽量少用，关键进行全方位康复。",
+              "timestamp": 1771465899.8826733,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            },
+            {
+              "id": "19e13b2e-0310-4b69-b314-5a92e419993b",
+              "content": "右臂肩关节疼痛；中医认为肩周炎，已按摩治疗1个疗程无效；目前右臂不能后摆，平摆时疼痛明显加重",
+              "timestamp": 1771465906.391094,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "identity": [
+            {
+              "id": "5836a69f-2043-4b7c-8b4a-20fbb8d84d80",
+              "content": "患者为女婴，2周岁",
+              "timestamp": 1771465832.1784556,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "30a37763-24a8-493f-b8d4-d8db2dc71c50",
+              "content": "医生判断为包皮龟头炎",
+              "timestamp": 1771465822.4242134,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "af2f46d3-937c-48a7-bfa3-549a07676b32",
+              "content": "医嘱外用派瑞松擦拭治疗（用药建议）",
+              "timestamp": 1771465822.4242222,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "f2be9e22-b0f1-4def-9e31-d00afc351308",
+              "content": "牙科就诊建议尽早至口腔科检查治疗，治疗后建议做烤瓷冠保护",
+              "timestamp": 1771465832.178476,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "974bcd6d-2380-408c-afec-40edb9301616",
+              "content": "包皮龟头炎相关不适病程约3-4个月",
+              "timestamp": 1771465835.8064737,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "192a7225-cbef-4282-a8e8-e47c2cc54e0b",
+              "content": "症状：龟头及包皮内侧发红，其他无明显特征",
+              "timestamp": 1771465835.8064833,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7ebd92c8-9c12-467f-a1d5-3f652d99a5c8",
+              "content": "否认不良性行为",
+              "timestamp": 1771465835.8064883,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "3fd9af87-303e-423f-89ab-61ac327027f7",
+              "content": "医生建议行包皮环切术以处理包皮龟头炎相关“烦恼”",
+              "timestamp": 1771465838.7215517,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "c3a61681-e59e-4d16-9ef7-b75bf3984a2b",
+              "content": "既往牙齿脆性大/咬硬物易崩裂，医生提示可能牙周炎，建议口腔科检查治疗，必要时考虑烤瓷冠保护",
+              "timestamp": 1771465845.170511,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "d2ace1b0-f7b9-4567-ae11-894a08c4a18c",
+              "content": "既往未去医院做过检查",
+              "timestamp": 1771465853.2427464,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bff56627-2d29-41a1-a713-b4f08e218f26",
+              "content": "2009年2月自然流产1次，孕约40天，少量出血，B超未见明确孕囊/妊娠组织",
+              "timestamp": 1771465860.4468422,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "8c89e8ae-d5c4-42ec-9ef6-7bebc51a5861",
+              "content": "2009年10月胎停（约4周）后再次自然流产，原计划清宫但未实施",
+              "timestamp": 1771465860.4468539,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "5ecd530e-ef2a-41fc-940c-1599ac1a4a6d",
+              "content": "不良妊娠/反复流产相关检查：除封闭抗体（阻断抗体）阴性外，其它检查均正常；丈夫检查亦正常",
+              "timestamp": 1771465860.4468582,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "8f81a052-977c-427d-99d0-a291f400659f",
+              "content": "不良妊娠/封闭抗体（阻断抗体）阴性相关问题：医生建议可考虑中药治疗",
+              "timestamp": 1771465867.0429296,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "0362a8da-d952-4876-9fb0-c3aa70989dc7",
+              "content": "医嘱/建议：可在家用双氧水洗耳",
+              "timestamp": 1771465882.818473,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "6a2edac3-4b43-47a4-9d40-975155c3cf83",
+              "content": "既往史：车祸致头部外伤，曾行开颅去骨瓣减压术；2009-12-15在巩义市中医院行开颅手术；术后至今约4个半月。",
+              "timestamp": 1771465892.7341413,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "e9e8cade-140e-47ce-8b6d-7c7feb727254",
+              "content": "现状/症状：说话变慢；言行不一致/心口不一；双眼右侧视野缺损（看不到右侧物体）；服用中药后出现头晕。",
+              "timestamp": 1771465892.7341492,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "9dc990b3-b9e1-4e9e-8f47-d306c71bd1ad",
+              "content": "检查提示化脓性中耳炎并鼓膜穿孔。",
+              "timestamp": 1771465899.882659,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者既往做过哪一类部位相关的手术？术后恢复情况如何？",
+          "answer": "既往做过咽喉相关手术，术后仍未好。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            23
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "这要亲自检查病人后确定是否是肩周炎还是外伤后臂丛神经的损伤？",
+        "to_memory": [
+          "working: 医生认为需面诊检查以鉴别右肩关节疼痛/活动受限是肩周炎还是外伤后臂丛神经损伤"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "abd2e1f9-d793-4f4c-8c5e-ee411fc0ab1f",
+              "content": "医生考虑同向偏盲；询问右侧肢体活动情况。",
+              "timestamp": 1771465899.882668,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            },
+            {
+              "id": "cf18f6f2-4cd5-4db4-a649-8a472b3db85d",
+              "content": "医生建议药物尽量少用，关键进行全方位康复。",
+              "timestamp": 1771465899.8826733,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            },
+            {
+              "id": "19e13b2e-0310-4b69-b314-5a92e419993b",
+              "content": "右臂肩关节疼痛；中医认为肩周炎，已按摩治疗1个疗程无效；目前右臂不能后摆，平摆时疼痛明显加重",
+              "timestamp": 1771465906.391094,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "31138776-edb2-4825-ae4a-29c7d32c6385",
+              "content": "医生认为需面诊检查以鉴别右肩关节疼痛/活动受限是肩周炎还是外伤后臂丛神经损伤",
+              "timestamp": 1771465911.1687388,
+              "metadata": {
+                "turn_idx": 27
+              },
+              "turn_idx": 27
+            }
+          ],
+          "identity": [
+            {
+              "id": "5836a69f-2043-4b7c-8b4a-20fbb8d84d80",
+              "content": "患者为女婴，2周岁",
+              "timestamp": 1771465832.1784556,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "history": [
+            {
+              "id": "88967626-c34a-4f03-b47f-cdfaaf11d336",
+              "content": "医生判断不是坐骨神经痛",
+              "timestamp": 1771465792.5791209,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5b7a470d-1f55-47e5-bea7-47a3c9c15ecb",
+              "content": "处方用药：扶他林片（双氯芬酸），每次2片，每日2次",
+              "timestamp": 1771465792.5791295,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "a8eee631-6d31-4609-ac8f-15ce8238b983",
+              "content": "慢性咽喉炎",
+              "timestamp": 1771465799.4047647,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "006e1a36-214e-4eb0-8578-c22fbcddb6b2",
+              "content": "2024-08-01在西安解放军518医院五官科检查：咽喉部增生、咽侧索肥厚、双声带肥厚、充血",
+              "timestamp": 1771465799.4047759,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "68c6ed85-29e7-4de3-8c12-6b6437f1a0c4",
+              "content": "既往已做咽喉相关手术（术后仍未好）",
+              "timestamp": 1771465799.4047809,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "30a37763-24a8-493f-b8d4-d8db2dc71c50",
+              "content": "医生判断为包皮龟头炎",
+              "timestamp": 1771465822.4242134,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "af2f46d3-937c-48a7-bfa3-549a07676b32",
+              "content": "医嘱外用派瑞松擦拭治疗（用药建议）",
+              "timestamp": 1771465822.4242222,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "f2be9e22-b0f1-4def-9e31-d00afc351308",
+              "content": "牙科就诊建议尽早至口腔科检查治疗，治疗后建议做烤瓷冠保护",
+              "timestamp": 1771465832.178476,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "974bcd6d-2380-408c-afec-40edb9301616",
+              "content": "包皮龟头炎相关不适病程约3-4个月",
+              "timestamp": 1771465835.8064737,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "192a7225-cbef-4282-a8e8-e47c2cc54e0b",
+              "content": "症状：龟头及包皮内侧发红，其他无明显特征",
+              "timestamp": 1771465835.8064833,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7ebd92c8-9c12-467f-a1d5-3f652d99a5c8",
+              "content": "否认不良性行为",
+              "timestamp": 1771465835.8064883,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "3fd9af87-303e-423f-89ab-61ac327027f7",
+              "content": "医生建议行包皮环切术以处理包皮龟头炎相关“烦恼”",
+              "timestamp": 1771465838.7215517,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "c3a61681-e59e-4d16-9ef7-b75bf3984a2b",
+              "content": "既往牙齿脆性大/咬硬物易崩裂，医生提示可能牙周炎，建议口腔科检查治疗，必要时考虑烤瓷冠保护",
+              "timestamp": 1771465845.170511,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "d2ace1b0-f7b9-4567-ae11-894a08c4a18c",
+              "content": "既往未去医院做过检查",
+              "timestamp": 1771465853.2427464,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "bff56627-2d29-41a1-a713-b4f08e218f26",
+              "content": "2009年2月自然流产1次，孕约40天，少量出血，B超未见明确孕囊/妊娠组织",
+              "timestamp": 1771465860.4468422,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "8c89e8ae-d5c4-42ec-9ef6-7bebc51a5861",
+              "content": "2009年10月胎停（约4周）后再次自然流产，原计划清宫但未实施",
+              "timestamp": 1771465860.4468539,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "5ecd530e-ef2a-41fc-940c-1599ac1a4a6d",
+              "content": "不良妊娠/反复流产相关检查：除封闭抗体（阻断抗体）阴性外，其它检查均正常；丈夫检查亦正常",
+              "timestamp": 1771465860.4468582,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "8f81a052-977c-427d-99d0-a291f400659f",
+              "content": "不良妊娠/封闭抗体（阻断抗体）阴性相关问题：医生建议可考虑中药治疗",
+              "timestamp": 1771465867.0429296,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "0362a8da-d952-4876-9fb0-c3aa70989dc7",
+              "content": "医嘱/建议：可在家用双氧水洗耳",
+              "timestamp": 1771465882.818473,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "6a2edac3-4b43-47a4-9d40-975155c3cf83",
+              "content": "既往史：车祸致头部外伤，曾行开颅去骨瓣减压术；2009-12-15在巩义市中医院行开颅手术；术后至今约4个半月。",
+              "timestamp": 1771465892.7341413,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "e9e8cade-140e-47ce-8b6d-7c7feb727254",
+              "content": "现状/症状：说话变慢；言行不一致/心口不一；双眼右侧视野缺损（看不到右侧物体）；服用中药后出现头晕。",
+              "timestamp": 1771465892.7341492,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "9dc990b3-b9e1-4e9e-8f47-d306c71bd1ad",
+              "content": "检查提示化脓性中耳炎并鼓膜穿孔。",
+              "timestamp": 1771465899.882659,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "医生对患者右侧上肢疼痛与活动受限的原因是否已做出明确结论？若没有，医生认为下一步为避免误判需要采取什么关键措施？",
+          "answer": "未明确结论；医生认为需要面诊亲自检查以鉴别原因（肩周炎还是外伤后臂丛神经损伤）。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "7ebd92c8-9c12-467f-a1d5-3f652d99a5c8"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "31138776-edb2-4825-ae4a-29c7d32c6385"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            15,
+            0
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "chronic_followup",
+    "scenario_name": "慢性病随访管理",
+    "session_count": 9,
+    "group_key": "综合科"
+  }
+}

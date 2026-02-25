@@ -1,0 +1,1372 @@
+{
+  "patient_id": "75b721517ad9",
+  "messages": [
+    {
+      "user": {
+        "content": "痛风，",
+        "to_memory": [
+          "history: 本次主诉/问题为“痛风”】【identity/history暂缺：未提供是否已确诊、既往发作史、用药/检查结果等】"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "494ed2b1-1e08-48c6-bc6f-b7c9e79e430a",
+              "content": "本次主诉/问题：痛风（尚未提供是否已确诊、既往发作史、用药/检查结果等信息）",
+              "timestamp": 1771494019.548072,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者本次咨询主要在问的是什么健康问题？",
+          "answer": "痛风",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "494ed2b1-1e08-48c6-bc6f-b7c9e79e430a"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "也算关节炎的一种，但是从机制上讲应该是代谢病，是尿酸代谢出了问题。尿酸非常高是高到多少，有没有关节疼痛的症状，１年关节疼痛几次，这些不同，治疗也是不同的。",
+        "to_memory": [
+          "working: 患者提及“痛风”相关就诊/咨询",
+          "history: 医生询问尿酸水平是否很高、是否有关节疼痛、每年关节疼痛发作次数以决定治疗方案"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "494ed2b1-1e08-48c6-bc6f-b7c9e79e430a",
+              "content": "本次主诉/问题：痛风（尚未提供是否已确诊、既往发作史、用药/检查结果等信息）",
+              "timestamp": 1771494019.548072,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "92b40e72-cd46-41f5-93bf-a650eb27058a",
+              "content": "医生询问尿酸水平是否很高、是否有关节疼痛、每年关节疼痛发作次数，以决定治疗方案",
+              "timestamp": 1771494026.8205411,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "医生在评估该患者的情况时，提到需要核对哪些关键信息来避免因信息不全而导致治疗方案不匹配？请列出这些需要进一步确认的点。",
+          "answer": "需要确认尿酸水平是否很高、是否有关节疼痛症状、以及一年关节疼痛发作次数。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "494ed2b1-1e08-48c6-bc6f-b7c9e79e430a"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "92b40e72-cd46-41f5-93bf-a650eb27058a"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "92b40e72-cd46-41f5-93bf-a650eb27058a",
+              "content": "医生询问尿酸水平是否很高、是否有关节疼痛、每年关节疼痛发作次数，以决定治疗方案",
+              "timestamp": 1771494026.8205411,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "尿道下裂，1996年5月出生,尿道下裂.    对不起,现在暂无照片.以前在上海儿童医院做的手术不是很理想,出现排尿一直困难,且排尿口在阴茎的边上.现在是否能够带病人到你处住院治疗.谢谢!(请告诉门诊时间)。",
+        "to_memory": [
+          "identity: 出生日期1996年5月",
+          "history: 既往诊断尿道下裂",
+          "history: 既往在上海儿童医院行尿道下裂手术，术后效果不理想",
+          "working: 目前排尿一直困难",
+          "working: 目前尿道口位于阴茎边侧",
+          "working: 咨询是否可来院住院治疗及门诊时间"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "02fc41f1-e19e-4091-aa6b-0b7a03d7cfcd",
+              "content": "目前排尿一直困难",
+              "timestamp": 1771494035.2663186,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "0578dca3-3f85-432e-9fe1-29dd19687f50",
+              "content": "目前尿道口位于阴茎边侧",
+              "timestamp": 1771494035.266323,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "d9c4dab1-74ae-42e9-bfc2-15e85e4630fc",
+              "content": "咨询是否可来院住院治疗及门诊时间",
+              "timestamp": 1771494035.2663267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [
+            {
+              "id": "63852df8-696d-41c6-8ee7-65b85110bcc5",
+              "content": "出生日期：1996年5月",
+              "timestamp": 1771494035.2662985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "92b40e72-cd46-41f5-93bf-a650eb27058a",
+              "content": "医生询问尿酸水平是否很高、是否有关节疼痛、每年关节疼痛发作次数，以决定治疗方案",
+              "timestamp": 1771494026.8205411,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "1889ced0-48e4-4ebc-98ee-2809b89364c5",
+              "content": "既往诊断：尿道下裂",
+              "timestamp": 1771494035.266308,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "25738d0f-ff5e-4d4a-b4ca-b42fd3280e27",
+              "content": "既往在上海儿童医院行尿道下裂手术，术后效果不理想",
+              "timestamp": 1771494035.266314,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者既往曾在哪家医院接受过与其泌尿生殖系统先天问题相关的手术治疗？",
+          "answer": "上海儿童医院",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "25738d0f-ff5e-4d4a-b4ca-b42fd3280e27"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "周一下午，小儿泌尿专科门诊，仁济东院，假期内床位非常紧张，你这种情况，治疗较复杂的，请安排好时间。",
+        "to_memory": [
+          "history: 1996年5月出生，既往诊断尿道下裂；曾在上海儿童医院行尿道下裂手术，术后效果不理想",
+          "working: 目前排尿一直困难，尿道口位于阴茎边缘，咨询是否可住院进一步治疗及门诊时间",
+          "history: 医生建议周一下午至仁济东院小儿泌尿专科门诊就诊；提示假期床位紧张、治疗较复杂需提前安排时间"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "02fc41f1-e19e-4091-aa6b-0b7a03d7cfcd",
+              "content": "目前排尿一直困难",
+              "timestamp": 1771494035.2663186,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "0578dca3-3f85-432e-9fe1-29dd19687f50",
+              "content": "目前尿道口位于阴茎边侧",
+              "timestamp": 1771494035.266323,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "d9c4dab1-74ae-42e9-bfc2-15e85e4630fc",
+              "content": "咨询是否可来院住院治疗及门诊时间",
+              "timestamp": 1771494035.2663267,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b8d688f5-c2e6-477a-a6b6-a634998fde3f",
+              "content": "医生建议周一下午至仁济东院小儿泌尿专科门诊就诊；提示假期床位紧张、治疗较复杂需提前安排时间",
+              "timestamp": 1771494042.0040119,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "identity": [
+            {
+              "id": "63852df8-696d-41c6-8ee7-65b85110bcc5",
+              "content": "出生日期：1996年5月",
+              "timestamp": 1771494035.2662985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "92b40e72-cd46-41f5-93bf-a650eb27058a",
+              "content": "医生询问尿酸水平是否很高、是否有关节疼痛、每年关节疼痛发作次数，以决定治疗方案",
+              "timestamp": 1771494026.8205411,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "1889ced0-48e4-4ebc-98ee-2809b89364c5",
+              "content": "既往诊断：尿道下裂",
+              "timestamp": 1771494035.266308,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "25738d0f-ff5e-4d4a-b4ca-b42fd3280e27",
+              "content": "既往在上海儿童医院行尿道下裂手术，术后效果不理想",
+              "timestamp": 1771494035.266314,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "63852df8-696d-41c6-8ee7-65b85110bcc5",
+              "content": "出生日期：1996年5月",
+              "timestamp": 1771494035.2662985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "92b40e72-cd46-41f5-93bf-a650eb27058a",
+              "content": "医生询问尿酸水平是否很高、是否有关节疼痛、每年关节疼痛发作次数，以决定治疗方案",
+              "timestamp": 1771494026.8205411,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "1889ced0-48e4-4ebc-98ee-2809b89364c5",
+              "content": "既往诊断：尿道下裂",
+              "timestamp": 1771494035.266308,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "25738d0f-ff5e-4d4a-b4ca-b42fd3280e27",
+              "content": "既往在上海儿童医院行尿道下裂手术，术后效果不理想",
+              "timestamp": 1771494035.266314,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "不自主运动及痉挛性斜颈，2008年开始严重的，脖子歪，抽动厉害\n。您好，我想问下大概得多少费用，银川能做么，用多长时间。",
+        "to_memory": [
+          "history: 既往疾病/诊断：尿道下裂，1996年5月出生；曾在上海儿童医院行尿道下裂手术，术后效果不理想，长期排尿困难，尿道口位于阴茎边缘",
+          "history: 既往疾病/诊断：痛风（关节炎/尿酸代谢异常相关）",
+          "working: 本次主诉：不自主运动及痉挛性斜颈",
+          "working: 现病史：2008年开始严重，表现为脖子歪、抽动厉害",
+          "working: 就诊诉求：咨询治疗大概费用、银川是否能做、需要多长时间"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "9512a365-f4a5-417e-9c09-2f16406d2dd9",
+              "content": "本次主诉：不自主运动及痉挛性斜颈",
+              "timestamp": 1771494051.1086473,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f852efea-3250-48e5-8d85-b1f4a18e89e8",
+              "content": "现病史：2008年开始严重，表现为脖子歪、抽动厉害",
+              "timestamp": 1771494051.108652,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "6766b929-3bc9-443b-be50-f489ad06721f",
+              "content": "就诊诉求：咨询治疗大概费用、银川是否能做、需要多长时间",
+              "timestamp": 1771494051.1086562,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "63852df8-696d-41c6-8ee7-65b85110bcc5",
+              "content": "出生日期：1996年5月",
+              "timestamp": 1771494035.2662985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "92b40e72-cd46-41f5-93bf-a650eb27058a",
+              "content": "医生询问尿酸水平是否很高、是否有关节疼痛、每年关节疼痛发作次数，以决定治疗方案",
+              "timestamp": 1771494026.8205411,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "1889ced0-48e4-4ebc-98ee-2809b89364c5",
+              "content": "既往诊断：尿道下裂",
+              "timestamp": 1771494035.266308,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "25738d0f-ff5e-4d4a-b4ca-b42fd3280e27",
+              "content": "既往在上海儿童医院行尿道下裂手术，术后效果不理想",
+              "timestamp": 1771494035.266314,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "1b4e363f-869d-4ed8-8233-bd78ea4eda92",
+              "content": "尿道下裂术后长期排尿困难，尿道口位于阴茎边缘",
+              "timestamp": 1771494051.1086323,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "640f0a39-a8f3-4fee-ba3d-937669f42000",
+              "content": "既往疾病/诊断：痛风（关节炎/尿酸代谢异常相关）",
+              "timestamp": 1771494051.1086426,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "医生为决定后续治疗方案，曾重点询问了患者哪几项与关节相关的既往情况？",
+          "answer": "是否尿酸水平很高、是否有关节疼痛、每年关节疼痛发作次数",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "92b40e72-cd46-41f5-93bf-a650eb27058a"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            5
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "住院约需两周，全部治疗费用约22000元。",
+        "to_memory": [
+          "working: 医生告知：如需住院治疗，住院约2周；全部治疗费用约22000元。"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "9512a365-f4a5-417e-9c09-2f16406d2dd9",
+              "content": "本次主诉：不自主运动及痉挛性斜颈",
+              "timestamp": 1771494051.1086473,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f852efea-3250-48e5-8d85-b1f4a18e89e8",
+              "content": "现病史：2008年开始严重，表现为脖子歪、抽动厉害",
+              "timestamp": 1771494051.108652,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "6766b929-3bc9-443b-be50-f489ad06721f",
+              "content": "就诊诉求：咨询治疗大概费用、银川是否能做、需要多长时间",
+              "timestamp": 1771494051.1086562,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "22dde1a7-4b66-4d6b-8115-b5a9c7b1dc2c",
+              "content": "医生告知：如需住院治疗，住院约2周；全部治疗费用约22000元。",
+              "timestamp": 1771494055.6756554,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "identity": [
+            {
+              "id": "63852df8-696d-41c6-8ee7-65b85110bcc5",
+              "content": "出生日期：1996年5月",
+              "timestamp": 1771494035.2662985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "92b40e72-cd46-41f5-93bf-a650eb27058a",
+              "content": "医生询问尿酸水平是否很高、是否有关节疼痛、每年关节疼痛发作次数，以决定治疗方案",
+              "timestamp": 1771494026.8205411,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "1889ced0-48e4-4ebc-98ee-2809b89364c5",
+              "content": "既往诊断：尿道下裂",
+              "timestamp": 1771494035.266308,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "25738d0f-ff5e-4d4a-b4ca-b42fd3280e27",
+              "content": "既往在上海儿童医院行尿道下裂手术，术后效果不理想",
+              "timestamp": 1771494035.266314,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "1b4e363f-869d-4ed8-8233-bd78ea4eda92",
+              "content": "尿道下裂术后长期排尿困难，尿道口位于阴茎边缘",
+              "timestamp": 1771494051.1086323,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "640f0a39-a8f3-4fee-ba3d-937669f42000",
+              "content": "既往疾病/诊断：痛风（关节炎/尿酸代谢异常相关）",
+              "timestamp": 1771494051.1086426,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者之前为泌尿系统问题咨询时所描述的术后长期情况，与本次为神经肌肉相关问题咨询时的主诉分别是什么？请各用一句话概括。",
+          "answer": "之前：尿道下裂术后长期排尿困难，尿道口位于阴茎边缘；本次：不自主运动及痉挛性斜颈。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "9512a365-f4a5-417e-9c09-2f16406d2dd9"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "1b4e363f-869d-4ed8-8233-bd78ea4eda92"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "63852df8-696d-41c6-8ee7-65b85110bcc5",
+              "content": "出生日期：1996年5月",
+              "timestamp": 1771494035.2662985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "92b40e72-cd46-41f5-93bf-a650eb27058a",
+              "content": "医生询问尿酸水平是否很高、是否有关节疼痛、每年关节疼痛发作次数，以决定治疗方案",
+              "timestamp": 1771494026.8205411,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "1889ced0-48e4-4ebc-98ee-2809b89364c5",
+              "content": "既往诊断：尿道下裂",
+              "timestamp": 1771494035.266308,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "25738d0f-ff5e-4d4a-b4ca-b42fd3280e27",
+              "content": "既往在上海儿童医院行尿道下裂手术，术后效果不理想",
+              "timestamp": 1771494035.266314,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "1b4e363f-869d-4ed8-8233-bd78ea4eda92",
+              "content": "尿道下裂术后长期排尿困难，尿道口位于阴茎边缘",
+              "timestamp": 1771494051.1086323,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "640f0a39-a8f3-4fee-ba3d-937669f42000",
+              "content": "既往疾病/诊断：痛风（关节炎/尿酸代谢异常相关）",
+              "timestamp": 1771494051.1086426,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "肛肠疾病，大夫你好~我今年21岁，有痔疮已经两三年了，不知道有没有内痔，反正肯定有外痔。前两天大便结束擦得时候发现手纸上有鲜血，第一天只是一点点，对准拉大便的那个洞才有，后来第二天一下子就有蛮多，但也只是纸上有。后来几天又恢复到第一天的样子。而且不大便的时候用手纸去擦会发现有黄色的粘液。内裤上也粘有。大便不太成型，有点扁，这个样子好像有将近1年了。最近下腹部有时有点痛，不是很剧烈，经常肠鸣，放屁也多，还常常有便意，但是除了每天早上一次之外都拉不出来。肛门处常不舒服，异物感。",
+        "to_memory": [
+          "identity: 患者，21岁",
+          "working: 主诉肛肠疾病/痔疮相关不适；痔疮史约2-3年，自述外痔，是否内痔不确定",
+          "working: 近两天排便后擦拭纸上见鲜血（鲜红色），第二天量较多但仅在纸上，随后又减少",
+          "working: 非排便时擦拭可见黄色黏液，内裤亦有黏液污染",
+          "working: 大便不成形且偏扁，持续约1年",
+          "working: 近期下腹部偶有轻痛；肠鸣多、排气多；常有便意但除每天早晨一次外多排不出",
+          "working: 肛门常不适，有异物感"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "dd7d5e3b-1427-4d89-a54c-f283ae7a4ec9",
+              "content": "主诉肛肠疾病/痔疮相关不适；痔疮史约2-3年，自述外痔，是否内痔不确定",
+              "timestamp": 1771494065.7963634,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "c2ee7d96-22e2-4b61-b2b6-80d1df634a52",
+              "content": "近两天排便后擦拭纸上见鲜红色血，第二天量较多但仅在纸上，随后又减少",
+              "timestamp": 1771494065.7963681,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "8de4f094-f97f-489f-b5db-9dd4fc1a36e9",
+              "content": "非排便时擦拭可见黄色黏液，内裤亦有黏液污染",
+              "timestamp": 1771494065.7963722,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "8d4a6137-5ee4-453f-aa73-4c0f18956303",
+              "content": "大便不成形且偏扁，持续约1年",
+              "timestamp": 1771494065.7963762,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "45deef00-421d-4a00-be75-377b19acc8d1",
+              "content": "近期下腹部偶有轻痛；肠鸣多、排气多；常有便意但除每天早晨一次外多排不出",
+              "timestamp": 1771494065.79638,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "7456d258-3179-467e-a45a-57c6069999a3",
+              "content": "肛门常不适，有异物感",
+              "timestamp": 1771494065.7963896,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "63852df8-696d-41c6-8ee7-65b85110bcc5",
+              "content": "出生日期：1996年5月",
+              "timestamp": 1771494035.2662985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "23698eef-1a02-48f9-b526-329fcf8eb18f",
+              "content": "患者，21岁",
+              "timestamp": 1771494065.7963502,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "92b40e72-cd46-41f5-93bf-a650eb27058a",
+              "content": "医生询问尿酸水平是否很高、是否有关节疼痛、每年关节疼痛发作次数，以决定治疗方案",
+              "timestamp": 1771494026.8205411,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "1889ced0-48e4-4ebc-98ee-2809b89364c5",
+              "content": "既往诊断：尿道下裂",
+              "timestamp": 1771494035.266308,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "25738d0f-ff5e-4d4a-b4ca-b42fd3280e27",
+              "content": "既往在上海儿童医院行尿道下裂手术，术后效果不理想",
+              "timestamp": 1771494035.266314,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "1b4e363f-869d-4ed8-8233-bd78ea4eda92",
+              "content": "尿道下裂术后长期排尿困难，尿道口位于阴茎边缘",
+              "timestamp": 1771494051.1086323,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "640f0a39-a8f3-4fee-ba3d-937669f42000",
+              "content": "既往疾病/诊断：痛风（关节炎/尿酸代谢异常相关）",
+              "timestamp": 1771494051.1086426,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者档案中记录的出生日期是哪一天（写出年月日）？",
+          "answer": "1996年5月",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "63852df8-696d-41c6-8ee7-65b85110bcc5"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "门诊就诊前挂号即可，门诊一般先做肛门检查，如果病情需要，可能要进一步肠镜检查，需要预约另外的时间，就诊前不需要特殊准备。",
+        "to_memory": [
+          "history: 医生建议门诊就诊前挂号即可；门诊一般先做肛门检查，必要时进一步预约肠镜检查；就诊前不需要特殊准备"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "dd7d5e3b-1427-4d89-a54c-f283ae7a4ec9",
+              "content": "主诉肛肠疾病/痔疮相关不适；痔疮史约2-3年，自述外痔，是否内痔不确定",
+              "timestamp": 1771494065.7963634,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "c2ee7d96-22e2-4b61-b2b6-80d1df634a52",
+              "content": "近两天排便后擦拭纸上见鲜红色血，第二天量较多但仅在纸上，随后又减少",
+              "timestamp": 1771494065.7963681,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "8de4f094-f97f-489f-b5db-9dd4fc1a36e9",
+              "content": "非排便时擦拭可见黄色黏液，内裤亦有黏液污染",
+              "timestamp": 1771494065.7963722,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "8d4a6137-5ee4-453f-aa73-4c0f18956303",
+              "content": "大便不成形且偏扁，持续约1年",
+              "timestamp": 1771494065.7963762,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "45deef00-421d-4a00-be75-377b19acc8d1",
+              "content": "近期下腹部偶有轻痛；肠鸣多、排气多；常有便意但除每天早晨一次外多排不出",
+              "timestamp": 1771494065.79638,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "7456d258-3179-467e-a45a-57c6069999a3",
+              "content": "肛门常不适，有异物感",
+              "timestamp": 1771494065.7963896,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "63852df8-696d-41c6-8ee7-65b85110bcc5",
+              "content": "出生日期：1996年5月",
+              "timestamp": 1771494035.2662985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "23698eef-1a02-48f9-b526-329fcf8eb18f",
+              "content": "患者，21岁",
+              "timestamp": 1771494065.7963502,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "92b40e72-cd46-41f5-93bf-a650eb27058a",
+              "content": "医生询问尿酸水平是否很高、是否有关节疼痛、每年关节疼痛发作次数，以决定治疗方案",
+              "timestamp": 1771494026.8205411,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "1889ced0-48e4-4ebc-98ee-2809b89364c5",
+              "content": "既往诊断：尿道下裂",
+              "timestamp": 1771494035.266308,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "25738d0f-ff5e-4d4a-b4ca-b42fd3280e27",
+              "content": "既往在上海儿童医院行尿道下裂手术，术后效果不理想",
+              "timestamp": 1771494035.266314,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "1b4e363f-869d-4ed8-8233-bd78ea4eda92",
+              "content": "尿道下裂术后长期排尿困难，尿道口位于阴茎边缘",
+              "timestamp": 1771494051.1086323,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "640f0a39-a8f3-4fee-ba3d-937669f42000",
+              "content": "既往疾病/诊断：痛风（关节炎/尿酸代谢异常相关）",
+              "timestamp": 1771494051.1086426,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "052ab4ad-830a-4275-a902-684791c27ca9",
+              "content": "医生建议门诊就诊前挂号即可；门诊一般先做肛门检查，必要时进一步预约肠镜检查；就诊前不需要特殊准备",
+              "timestamp": 1771494071.3846416,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在肛肠相关就诊前，医生需要核对患者既往曾被诊断过的哪一种慢性基础疾病，以避免后续用药或检查安排出现安全隐患？",
+          "answer": "痛风",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "640f0a39-a8f3-4fee-ba3d-937669f42000"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "dd7d5e3b-1427-4d89-a54c-f283ae7a4ec9"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "63852df8-696d-41c6-8ee7-65b85110bcc5",
+              "content": "出生日期：1996年5月",
+              "timestamp": 1771494035.2662985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "23698eef-1a02-48f9-b526-329fcf8eb18f",
+              "content": "患者，21岁",
+              "timestamp": 1771494065.7963502,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "history": [
+            {
+              "id": "92b40e72-cd46-41f5-93bf-a650eb27058a",
+              "content": "医生询问尿酸水平是否很高、是否有关节疼痛、每年关节疼痛发作次数，以决定治疗方案",
+              "timestamp": 1771494026.8205411,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "1889ced0-48e4-4ebc-98ee-2809b89364c5",
+              "content": "既往诊断：尿道下裂",
+              "timestamp": 1771494035.266308,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "25738d0f-ff5e-4d4a-b4ca-b42fd3280e27",
+              "content": "既往在上海儿童医院行尿道下裂手术，术后效果不理想",
+              "timestamp": 1771494035.266314,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "1b4e363f-869d-4ed8-8233-bd78ea4eda92",
+              "content": "尿道下裂术后长期排尿困难，尿道口位于阴茎边缘",
+              "timestamp": 1771494051.1086323,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "640f0a39-a8f3-4fee-ba3d-937669f42000",
+              "content": "既往疾病/诊断：痛风（关节炎/尿酸代谢异常相关）",
+              "timestamp": 1771494051.1086426,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "052ab4ad-830a-4275-a902-684791c27ca9",
+              "content": "医生建议门诊就诊前挂号即可；门诊一般先做肛门检查，必要时进一步预约肠镜检查；就诊前不需要特殊准备",
+              "timestamp": 1771494071.3846416,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "肺癌，我母亲75岁，今年4月26日发现肺癌骨转移、肝转移，没有在医院系统治疗，病人不知情。主要症状，脊椎及腿疼痛，吃饭少，消瘦，厌食，肝区没有出现自然疼痛，但做B超时，压迫是疼痛很厉害。真情寄语：。我想问一下，保肝的药物可以用写什么？万分感谢。",
+        "to_memory": [
+          "identity: 患者母亲，女，75岁",
+          "history: 2026-04-26发现/诊断肺癌，已出现骨转移、肝转移；至今未在医院系统治疗；患者本人不知情",
+          "history: 主要症状为脊椎及腿部疼痛、进食少、消瘦、厌食；肝区平时无自发痛，但B超检查按压时疼痛明显；咨询可用哪些保肝药物"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "63852df8-696d-41c6-8ee7-65b85110bcc5",
+              "content": "出生日期：1996年5月",
+              "timestamp": 1771494035.2662985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "23698eef-1a02-48f9-b526-329fcf8eb18f",
+              "content": "患者，21岁",
+              "timestamp": 1771494065.7963502,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "6cbfd85f-dae6-454c-b41e-c2984c9ee103",
+              "content": "患者母亲，女，75岁",
+              "timestamp": 1771494080.1187658,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "history": [
+            {
+              "id": "92b40e72-cd46-41f5-93bf-a650eb27058a",
+              "content": "医生询问尿酸水平是否很高、是否有关节疼痛、每年关节疼痛发作次数，以决定治疗方案",
+              "timestamp": 1771494026.8205411,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "1889ced0-48e4-4ebc-98ee-2809b89364c5",
+              "content": "既往诊断：尿道下裂",
+              "timestamp": 1771494035.266308,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "25738d0f-ff5e-4d4a-b4ca-b42fd3280e27",
+              "content": "既往在上海儿童医院行尿道下裂手术，术后效果不理想",
+              "timestamp": 1771494035.266314,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "1b4e363f-869d-4ed8-8233-bd78ea4eda92",
+              "content": "尿道下裂术后长期排尿困难，尿道口位于阴茎边缘",
+              "timestamp": 1771494051.1086323,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "640f0a39-a8f3-4fee-ba3d-937669f42000",
+              "content": "既往疾病/诊断：痛风（关节炎/尿酸代谢异常相关）",
+              "timestamp": 1771494051.1086426,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "052ab4ad-830a-4275-a902-684791c27ca9",
+              "content": "医生建议门诊就诊前挂号即可；门诊一般先做肛门检查，必要时进一步预约肠镜检查；就诊前不需要特殊准备",
+              "timestamp": 1771494071.3846416,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "99bf7d55-1237-4c3d-b442-28894b305ad2",
+              "content": "2026-04-26发现/诊断肺癌，已出现骨转移、肝转移；至今未在医院系统治疗；患者本人不知情",
+              "timestamp": 1771494080.1187751,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f6066c7c-3898-4f1c-8cb5-3e6fe430936a",
+              "content": "主要症状：脊椎及腿部疼痛、进食少、消瘦、厌食；肝区平时无自发痛，但B超按压时疼痛明显；咨询可用哪些保肝药物",
+              "timestamp": 1771494080.11878,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "保肝的药物很多，如肌酐、肝泰乐、甘草双苷、阿拓木兰等等，很多。看你们那有什么。",
+        "to_memory": [
+          "history: 医生提及可选保肝药物包括肌酐、肝泰乐、甘草双苷、阿拓木兰等（需结合当地可用药选择）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "63852df8-696d-41c6-8ee7-65b85110bcc5",
+              "content": "出生日期：1996年5月",
+              "timestamp": 1771494035.2662985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "23698eef-1a02-48f9-b526-329fcf8eb18f",
+              "content": "患者，21岁",
+              "timestamp": 1771494065.7963502,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "6cbfd85f-dae6-454c-b41e-c2984c9ee103",
+              "content": "患者母亲，女，75岁",
+              "timestamp": 1771494080.1187658,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "history": [
+            {
+              "id": "92b40e72-cd46-41f5-93bf-a650eb27058a",
+              "content": "医生询问尿酸水平是否很高、是否有关节疼痛、每年关节疼痛发作次数，以决定治疗方案",
+              "timestamp": 1771494026.8205411,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "1889ced0-48e4-4ebc-98ee-2809b89364c5",
+              "content": "既往诊断：尿道下裂",
+              "timestamp": 1771494035.266308,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "25738d0f-ff5e-4d4a-b4ca-b42fd3280e27",
+              "content": "既往在上海儿童医院行尿道下裂手术，术后效果不理想",
+              "timestamp": 1771494035.266314,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "1b4e363f-869d-4ed8-8233-bd78ea4eda92",
+              "content": "尿道下裂术后长期排尿困难，尿道口位于阴茎边缘",
+              "timestamp": 1771494051.1086323,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "640f0a39-a8f3-4fee-ba3d-937669f42000",
+              "content": "既往疾病/诊断：痛风（关节炎/尿酸代谢异常相关）",
+              "timestamp": 1771494051.1086426,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "052ab4ad-830a-4275-a902-684791c27ca9",
+              "content": "医生建议门诊就诊前挂号即可；门诊一般先做肛门检查，必要时进一步预约肠镜检查；就诊前不需要特殊准备",
+              "timestamp": 1771494071.3846416,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "99bf7d55-1237-4c3d-b442-28894b305ad2",
+              "content": "2026-04-26发现/诊断肺癌，已出现骨转移、肝转移；至今未在医院系统治疗；患者本人不知情",
+              "timestamp": 1771494080.1187751,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f6066c7c-3898-4f1c-8cb5-3e6fe430936a",
+              "content": "主要症状：脊椎及腿部疼痛、进食少、消瘦、厌食；肝区平时无自发痛，但B超按压时疼痛明显；咨询可用哪些保肝药物",
+              "timestamp": 1771494080.11878,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "663af77c-398f-4036-9532-4c9ec224d13b",
+              "content": "医生提及可选保肝药物包括肌酐、肝泰乐、甘草双苷、阿拓木兰等（需结合当地可用药选择）",
+              "timestamp": 1771494083.7040625,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者既往病史中记录过的一项先天/泌尿生殖系统方面的诊断，与后续就诊时提到的肿瘤相关情况：既往那项诊断具体是什么？肿瘤最初被发现的大致日期是什么？并说明当时是否已经出现远处转移以及是否接受过系统治疗。",
+          "answer": "既往诊断：尿道下裂；肿瘤发现日期：2026-04-26；当时已出现骨转移、肝转移；未在医院系统治疗。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "1889ced0-48e4-4ebc-98ee-2809b89364c5",
+                "99bf7d55-1237-4c3d-b442-28894b305ad2"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            10,
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "comorbidity_management",
+    "scenario_name": "多疾病共病管理",
+    "session_count": 5,
+    "group_key": "综合科"
+  }
+}

@@ -1,0 +1,2623 @@
+{
+  "patient_id": "e77467cc8ffb",
+  "messages": [
+    {
+      "user": {
+        "content": "高血压，冠心病，，今年64岁，父有冠心病，我30岁有房性早搏，有时频发，年龄增长，体重180，血压140——150/90-100；十天前跑步800米后胸闷，伺候病人6天劳累，胸闷共十天，27日拍CT片；。",
+        "to_memory": [
+          "identity: 患者64岁",
+          "identity: 慢性病史：高血压、冠心病",
+          "identity: 家族史：父亲有冠心病",
+          "identity: 体重约180（单位未述）",
+          "history: 既往心律失常史：30岁起房性早搏（有时频发）",
+          "history: 近期血压约140–150/90–100 mmHg",
+          "working: 10天前跑步800米后出现胸闷，之后因照顾病人劳累（6天），胸闷持续共10天",
+          "history: 27日行CT检查（结果未提供）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a97a38e8-62ec-4b1c-87bc-fa1328de3bdb",
+              "content": "10天前跑步800米后出现胸闷；其后因照顾病人劳累（约6天），胸闷持续共10天",
+              "timestamp": 1771493386.1932354,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [
+            {
+              "id": "622eeed2-c231-4d5b-956f-973de714e92f",
+              "content": "患者64岁",
+              "timestamp": 1771493386.1932065,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "2c75d34a-732b-40d8-a046-44465c6b142e",
+              "content": "慢性病史：高血压、冠心病",
+              "timestamp": 1771493386.1932144,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8af96923-279a-49cf-9833-05231d47e569",
+              "content": "家族史：父亲有冠心病",
+              "timestamp": 1771493386.1932194,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d9700810-b902-4226-8e31-87c922e5167e",
+              "content": "体重约180（单位未述）",
+              "timestamp": 1771493386.1932232,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "078eaebc-3eca-4b02-ac5f-e2c13d6f1d3e",
+              "content": "既往心律失常史：30岁起房性早搏（有时频发）",
+              "timestamp": 1771493386.1932275,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b53a05e8-cab8-47b4-a2af-ba8e0fa96e7a",
+              "content": "近期血压约140–150/90–100 mmHg",
+              "timestamp": 1771493386.1932318,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fa3e906a-5f8b-4393-aaeb-1d456a592025",
+              "content": "27日行CT检查（结果未提供）",
+              "timestamp": 1771493386.1932392,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在本次病史中，患者曾自述过一种既往出现过且可能在后续用药或处理时需要特别核对的心律相关问题；请指出该问题具体是什么？",
+          "answer": "30岁起有房性早搏（有时频发）",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "078eaebc-3eca-4b02-ac5f-e2c13d6f1d3e"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "2c75d34a-732b-40d8-a046-44465c6b142e"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "您今年六十四岁，按说已经到了冠心病的高发年龄段，因此须谨慎才是。以我的经验，CTA仅可以作为冠心病筛查使用，由这种方法确诊很难，也就是说，cta报的狭窄率有很大出入，可高可低，因此，谨慎起见您可以在当地行冠脉造影，明确诊断，以便调整药物，无论如何，他汀类调脂药您都该吃了。",
+        "to_memory": [
+          "identity: 患者64岁；慢性病/基础疾病：高血压、冠心病；既往心律失常：30岁起房性早搏；体重约180（单位未述）；家族史：父亲有冠心病",
+          "history: 近10天胸闷（跑步800米后出现，期间照护病人劳累6天），血压约140–150/90–100mmHg",
+          "history: 2026-01-27行CT检查（具体结果未提供）；医生建议：CTA仅用于冠心病筛查、狭窄率误差大，建议当地行冠脉造影明确诊断以便调整用药；建议开始/需要服用他汀类调脂药"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a97a38e8-62ec-4b1c-87bc-fa1328de3bdb",
+              "content": "10天前跑步800米后出现胸闷；其后因照顾病人劳累（约6天），胸闷持续共10天",
+              "timestamp": 1771493386.1932354,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [
+            {
+              "id": "622eeed2-c231-4d5b-956f-973de714e92f",
+              "content": "患者64岁",
+              "timestamp": 1771493386.1932065,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "2c75d34a-732b-40d8-a046-44465c6b142e",
+              "content": "慢性病史：高血压、冠心病",
+              "timestamp": 1771493386.1932144,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8af96923-279a-49cf-9833-05231d47e569",
+              "content": "家族史：父亲有冠心病",
+              "timestamp": 1771493386.1932194,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d9700810-b902-4226-8e31-87c922e5167e",
+              "content": "体重约180（单位未述）",
+              "timestamp": 1771493386.1932232,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "078eaebc-3eca-4b02-ac5f-e2c13d6f1d3e",
+              "content": "既往心律失常史：30岁起房性早搏（有时频发）",
+              "timestamp": 1771493386.1932275,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b53a05e8-cab8-47b4-a2af-ba8e0fa96e7a",
+              "content": "近期血压约140–150/90–100 mmHg",
+              "timestamp": 1771493386.1932318,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fa3e906a-5f8b-4393-aaeb-1d456a592025",
+              "content": "27日行CT检查（结果未提供）",
+              "timestamp": 1771493386.1932392,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fd422b57-64e4-4c06-8c91-ee5f668bf316",
+              "content": "医生建议：CTA仅用于冠心病筛查、狭窄率误差较大；建议在当地行冠脉造影明确诊断以便调整用药；建议开始/需要服用他汀类调脂药",
+              "timestamp": 1771493396.7079637,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者在本次对话中自述的近期血压范围（收缩压/舒张压）分别是多少？",
+          "answer": "140–150/90–100 mmHg",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b53a05e8-cab8-47b4-a2af-ba8e0fa96e7a"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "622eeed2-c231-4d5b-956f-973de714e92f",
+              "content": "患者64岁",
+              "timestamp": 1771493386.1932065,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "2c75d34a-732b-40d8-a046-44465c6b142e",
+              "content": "慢性病史：高血压、冠心病",
+              "timestamp": 1771493386.1932144,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8af96923-279a-49cf-9833-05231d47e569",
+              "content": "家族史：父亲有冠心病",
+              "timestamp": 1771493386.1932194,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d9700810-b902-4226-8e31-87c922e5167e",
+              "content": "体重约180（单位未述）",
+              "timestamp": 1771493386.1932232,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "078eaebc-3eca-4b02-ac5f-e2c13d6f1d3e",
+              "content": "既往心律失常史：30岁起房性早搏（有时频发）",
+              "timestamp": 1771493386.1932275,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b53a05e8-cab8-47b4-a2af-ba8e0fa96e7a",
+              "content": "近期血压约140–150/90–100 mmHg",
+              "timestamp": 1771493386.1932318,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fa3e906a-5f8b-4393-aaeb-1d456a592025",
+              "content": "27日行CT检查（结果未提供）",
+              "timestamp": 1771493386.1932392,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fd422b57-64e4-4c06-8c91-ee5f668bf316",
+              "content": "医生建议：CTA仅用于冠心病筛查、狭窄率误差较大；建议在当地行冠脉造影明确诊断以便调整用药；建议开始/需要服用他汀类调脂药",
+              "timestamp": 1771493396.7079637,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "慢性直肠炎，我患肠炎有一年多了，我23岁，几个月前做肠镜只是直肠血管网有点模糊，现在大便基本正常，但是我不敢吃凉的，肛门和肛管有一点溃疡，有少许血液伴随粘液，在大便时候。我想问一下大夫怎样能治好，我今年要上大学，我还年轻，我想恳求陈大夫帮我治好。万分感谢。",
+        "to_memory": [
+          "identity: 患者23岁（性别未提及）",
+          "history: 既往/现病史：慢性直肠炎/肠炎病程1年多",
+          "history: 几个月前肠镜结果：直肠血管网有点模糊",
+          "working: 当前大便基本正常，但不敢吃凉的",
+          "working: 当前肛门及肛管有一点溃疡",
+          "working: 排便时有少许血液伴随黏液",
+          "identity: 就诊诉求：咨询如何治愈/改善慢性直肠炎症状"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "f533017e-9f0a-427c-89e0-40f317da44b1",
+              "content": "当前大便基本正常，但不敢吃凉的",
+              "timestamp": 1771493408.4058945,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "e6d34992-b213-4aef-8b86-d695a6960cb7",
+              "content": "当前肛门及肛管有一点溃疡",
+              "timestamp": 1771493408.4058983,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "4ee8b162-d645-4e94-b19b-509d0f971eb3",
+              "content": "排便时有少许血液伴随黏液",
+              "timestamp": 1771493408.405902,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6f30012e-4bcf-411f-8a21-5c072aa91973",
+              "content": "就诊诉求：咨询如何治愈/改善慢性直肠炎症状",
+              "timestamp": 1771493408.4059057,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [
+            {
+              "id": "622eeed2-c231-4d5b-956f-973de714e92f",
+              "content": "患者23岁（性别未提及）",
+              "timestamp": 1771493386.1932065,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "2c75d34a-732b-40d8-a046-44465c6b142e",
+              "content": "慢性病史：高血压、冠心病",
+              "timestamp": 1771493386.1932144,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8af96923-279a-49cf-9833-05231d47e569",
+              "content": "家族史：父亲有冠心病",
+              "timestamp": 1771493386.1932194,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d9700810-b902-4226-8e31-87c922e5167e",
+              "content": "体重约180（单位未述）",
+              "timestamp": 1771493386.1932232,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "078eaebc-3eca-4b02-ac5f-e2c13d6f1d3e",
+              "content": "既往心律失常史：30岁起房性早搏（有时频发）",
+              "timestamp": 1771493386.1932275,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b53a05e8-cab8-47b4-a2af-ba8e0fa96e7a",
+              "content": "近期血压约140–150/90–100 mmHg",
+              "timestamp": 1771493386.1932318,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fa3e906a-5f8b-4393-aaeb-1d456a592025",
+              "content": "27日行CT检查（结果未提供）",
+              "timestamp": 1771493386.1932392,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fd422b57-64e4-4c06-8c91-ee5f668bf316",
+              "content": "医生建议：CTA仅用于冠心病筛查、狭窄率误差较大；建议在当地行冠脉造影明确诊断以便调整用药；建议开始/需要服用他汀类调脂药",
+              "timestamp": 1771493396.7079637,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "84480346-2953-4657-befc-6632815d6501",
+              "content": "慢性直肠炎/肠炎病程1年多",
+              "timestamp": 1771493408.4058793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "4fb63715-012d-4e4a-bb50-8e1f6b322ac0",
+              "content": "几个月前肠镜结果：直肠血管网有点模糊",
+              "timestamp": 1771493408.4058897,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "根据症状及结肠镜检查结果，考虑你可能有轻度溃疡性结肠炎。如服药有明显效果，建议你继续到医院进行巩固治疗一段时间。陈金泉复。",
+        "to_memory": [
+          "history: 结肠镜检查结果提示轻度异常（直肠血管网模糊），结合症状医生考虑可能为轻度溃疡性结肠炎",
+          "history: 医生建议如服药有效则继续到医院巩固治疗一段时间"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "f533017e-9f0a-427c-89e0-40f317da44b1",
+              "content": "当前大便基本正常，但不敢吃凉的",
+              "timestamp": 1771493408.4058945,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "e6d34992-b213-4aef-8b86-d695a6960cb7",
+              "content": "当前肛门及肛管有一点溃疡",
+              "timestamp": 1771493408.4058983,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "4ee8b162-d645-4e94-b19b-509d0f971eb3",
+              "content": "排便时有少许血液伴随黏液",
+              "timestamp": 1771493408.405902,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6f30012e-4bcf-411f-8a21-5c072aa91973",
+              "content": "就诊诉求：咨询如何治愈/改善慢性直肠炎症状",
+              "timestamp": 1771493408.4059057,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [
+            {
+              "id": "622eeed2-c231-4d5b-956f-973de714e92f",
+              "content": "患者23岁（性别未提及）",
+              "timestamp": 1771493386.1932065,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "2c75d34a-732b-40d8-a046-44465c6b142e",
+              "content": "慢性病史：高血压、冠心病",
+              "timestamp": 1771493386.1932144,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8af96923-279a-49cf-9833-05231d47e569",
+              "content": "家族史：父亲有冠心病",
+              "timestamp": 1771493386.1932194,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d9700810-b902-4226-8e31-87c922e5167e",
+              "content": "体重约180（单位未述）",
+              "timestamp": 1771493386.1932232,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "078eaebc-3eca-4b02-ac5f-e2c13d6f1d3e",
+              "content": "既往心律失常史：30岁起房性早搏（有时频发）",
+              "timestamp": 1771493386.1932275,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b53a05e8-cab8-47b4-a2af-ba8e0fa96e7a",
+              "content": "近期血压约140–150/90–100 mmHg",
+              "timestamp": 1771493386.1932318,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fa3e906a-5f8b-4393-aaeb-1d456a592025",
+              "content": "27日行CT检查（结果未提供）",
+              "timestamp": 1771493386.1932392,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fd422b57-64e4-4c06-8c91-ee5f668bf316",
+              "content": "医生建议：CTA仅用于冠心病筛查、狭窄率误差较大；建议在当地行冠脉造影明确诊断以便调整用药；建议开始/需要服用他汀类调脂药",
+              "timestamp": 1771493396.7079637,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "84480346-2953-4657-befc-6632815d6501",
+              "content": "慢性直肠炎/肠炎病程1年多",
+              "timestamp": 1771493408.4058793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "4fb63715-012d-4e4a-bb50-8e1f6b322ac0",
+              "content": "结肠镜检查提示轻度异常：直肠血管网模糊；结合症状医生考虑可能为轻度溃疡性结肠炎",
+              "timestamp": 1771493408.4058897,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "03f58997-703c-4072-84a5-30fb48416539",
+              "content": "医生建议：如服药有效则继续到医院巩固治疗一段时间",
+              "timestamp": 1771493413.11751,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "结合患者既往已提到的慢性疾病史，本次咨询的主要就诊诉求是什么？该诉求在用药或检查选择上需要做哪些安全性核对？",
+          "answer": "患者就诊诉求是咨询如何治愈/改善慢性直肠炎症状；需结合其既往高血压、冠心病史在用药或检查选择上做安全性核对。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "2c75d34a-732b-40d8-a046-44465c6b142e"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "6f30012e-4bcf-411f-8a21-5c072aa91973"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "622eeed2-c231-4d5b-956f-973de714e92f",
+              "content": "患者23岁（性别未提及）",
+              "timestamp": 1771493386.1932065,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "2c75d34a-732b-40d8-a046-44465c6b142e",
+              "content": "慢性病史：高血压、冠心病",
+              "timestamp": 1771493386.1932144,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8af96923-279a-49cf-9833-05231d47e569",
+              "content": "家族史：父亲有冠心病",
+              "timestamp": 1771493386.1932194,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d9700810-b902-4226-8e31-87c922e5167e",
+              "content": "体重约180（单位未述）",
+              "timestamp": 1771493386.1932232,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "078eaebc-3eca-4b02-ac5f-e2c13d6f1d3e",
+              "content": "既往心律失常史：30岁起房性早搏（有时频发）",
+              "timestamp": 1771493386.1932275,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b53a05e8-cab8-47b4-a2af-ba8e0fa96e7a",
+              "content": "近期血压约140–150/90–100 mmHg",
+              "timestamp": 1771493386.1932318,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fa3e906a-5f8b-4393-aaeb-1d456a592025",
+              "content": "27日行CT检查（结果未提供）",
+              "timestamp": 1771493386.1932392,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fd422b57-64e4-4c06-8c91-ee5f668bf316",
+              "content": "医生建议：CTA仅用于冠心病筛查、狭窄率误差较大；建议在当地行冠脉造影明确诊断以便调整用药；建议开始/需要服用他汀类调脂药",
+              "timestamp": 1771493396.7079637,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "84480346-2953-4657-befc-6632815d6501",
+              "content": "慢性直肠炎/肠炎病程1年多",
+              "timestamp": 1771493408.4058793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "4fb63715-012d-4e4a-bb50-8e1f6b322ac0",
+              "content": "结肠镜检查提示轻度异常：直肠血管网模糊；结合症状医生考虑可能为轻度溃疡性结肠炎",
+              "timestamp": 1771493408.4058897,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "03f58997-703c-4072-84a5-30fb48416539",
+              "content": "医生建议：如服药有效则继续到医院巩固治疗一段时间",
+              "timestamp": 1771493413.11751,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "早泄，结婚5年，性交时间短，1分钟左右，有手淫史，带避孕套时间也很短。",
+        "to_memory": [
+          "working: 主诉早泄；已婚5年，性交时间约1分钟左右；有手淫史；使用避孕套时性交时间也很短"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "fde0f886-193c-4d61-b3ab-b7ffbff186af",
+              "content": "主诉早泄：已婚5年，性交时间约1分钟；有手淫史；使用避孕套时性交时间也很短",
+              "timestamp": 1771493431.426911,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "622eeed2-c231-4d5b-956f-973de714e92f",
+              "content": "患者23岁（性别未提及）",
+              "timestamp": 1771493386.1932065,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "2c75d34a-732b-40d8-a046-44465c6b142e",
+              "content": "慢性病史：高血压、冠心病",
+              "timestamp": 1771493386.1932144,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8af96923-279a-49cf-9833-05231d47e569",
+              "content": "家族史：父亲有冠心病",
+              "timestamp": 1771493386.1932194,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d9700810-b902-4226-8e31-87c922e5167e",
+              "content": "体重约180（单位未述）",
+              "timestamp": 1771493386.1932232,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "078eaebc-3eca-4b02-ac5f-e2c13d6f1d3e",
+              "content": "既往心律失常史：30岁起房性早搏（有时频发）",
+              "timestamp": 1771493386.1932275,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b53a05e8-cab8-47b4-a2af-ba8e0fa96e7a",
+              "content": "近期血压约140–150/90–100 mmHg",
+              "timestamp": 1771493386.1932318,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fa3e906a-5f8b-4393-aaeb-1d456a592025",
+              "content": "27日行CT检查（结果未提供）",
+              "timestamp": 1771493386.1932392,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fd422b57-64e4-4c06-8c91-ee5f668bf316",
+              "content": "医生建议：CTA仅用于冠心病筛查、狭窄率误差较大；建议在当地行冠脉造影明确诊断以便调整用药；建议开始/需要服用他汀类调脂药",
+              "timestamp": 1771493396.7079637,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "84480346-2953-4657-befc-6632815d6501",
+              "content": "慢性直肠炎/肠炎病程1年多",
+              "timestamp": 1771493408.4058793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "4fb63715-012d-4e4a-bb50-8e1f6b322ac0",
+              "content": "结肠镜检查提示轻度异常：直肠血管网模糊；结合症状医生考虑可能为轻度溃疡性结肠炎",
+              "timestamp": 1771493408.4058897,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "03f58997-703c-4072-84a5-30fb48416539",
+              "content": "医生建议：如服药有效则继续到医院巩固治疗一段时间",
+              "timestamp": 1771493413.11751,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "宜详细检查治疗，不要轻易去手术。",
+        "to_memory": [
+          "history: 医生建议：宜进行详细检查与治疗，避免轻易选择手术"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "fde0f886-193c-4d61-b3ab-b7ffbff186af",
+              "content": "主诉早泄：已婚5年，性交时间约1分钟；有手淫史；使用避孕套时性交时间也很短",
+              "timestamp": 1771493431.426911,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "622eeed2-c231-4d5b-956f-973de714e92f",
+              "content": "患者23岁（性别未提及）",
+              "timestamp": 1771493386.1932065,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "2c75d34a-732b-40d8-a046-44465c6b142e",
+              "content": "慢性病史：高血压、冠心病",
+              "timestamp": 1771493386.1932144,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8af96923-279a-49cf-9833-05231d47e569",
+              "content": "家族史：父亲有冠心病",
+              "timestamp": 1771493386.1932194,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d9700810-b902-4226-8e31-87c922e5167e",
+              "content": "体重约180（单位未述）",
+              "timestamp": 1771493386.1932232,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "078eaebc-3eca-4b02-ac5f-e2c13d6f1d3e",
+              "content": "既往心律失常史：30岁起房性早搏（有时频发）",
+              "timestamp": 1771493386.1932275,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b53a05e8-cab8-47b4-a2af-ba8e0fa96e7a",
+              "content": "近期血压约140–150/90–100 mmHg",
+              "timestamp": 1771493386.1932318,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fa3e906a-5f8b-4393-aaeb-1d456a592025",
+              "content": "27日行CT检查（结果未提供）",
+              "timestamp": 1771493386.1932392,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fd422b57-64e4-4c06-8c91-ee5f668bf316",
+              "content": "医生建议：CTA仅用于冠心病筛查、狭窄率误差较大；建议在当地行冠脉造影明确诊断以便调整用药；建议开始/需要服用他汀类调脂药",
+              "timestamp": 1771493396.7079637,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "84480346-2953-4657-befc-6632815d6501",
+              "content": "慢性直肠炎/肠炎病程1年多",
+              "timestamp": 1771493408.4058793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "4fb63715-012d-4e4a-bb50-8e1f6b322ac0",
+              "content": "结肠镜检查提示轻度异常：直肠血管网模糊；结合症状医生考虑可能为轻度溃疡性结肠炎",
+              "timestamp": 1771493408.4058897,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "03f58997-703c-4072-84a5-30fb48416539",
+              "content": "医生建议：如服药有效则继续到医院巩固治疗一段时间",
+              "timestamp": 1771493413.11751,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "04c7bf47-88d9-488d-9d9b-17f8a0410418",
+              "content": "医生建议：宜进行详细检查与治疗，避免轻易选择手术",
+              "timestamp": 1771493435.076812,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者既往曾被记录过的心律失常类型是什么？最早大约从多少岁开始出现？",
+          "answer": "30岁起房性早搏（有时频发）",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "078eaebc-3eca-4b02-ac5f-e2c13d6f1d3e"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            7
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "622eeed2-c231-4d5b-956f-973de714e92f",
+              "content": "患者23岁（性别未提及）",
+              "timestamp": 1771493386.1932065,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "2c75d34a-732b-40d8-a046-44465c6b142e",
+              "content": "慢性病史：高血压、冠心病",
+              "timestamp": 1771493386.1932144,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8af96923-279a-49cf-9833-05231d47e569",
+              "content": "家族史：父亲有冠心病",
+              "timestamp": 1771493386.1932194,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d9700810-b902-4226-8e31-87c922e5167e",
+              "content": "体重约180（单位未述）",
+              "timestamp": 1771493386.1932232,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "078eaebc-3eca-4b02-ac5f-e2c13d6f1d3e",
+              "content": "既往心律失常史：30岁起房性早搏（有时频发）",
+              "timestamp": 1771493386.1932275,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b53a05e8-cab8-47b4-a2af-ba8e0fa96e7a",
+              "content": "近期血压约140–150/90–100 mmHg",
+              "timestamp": 1771493386.1932318,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fa3e906a-5f8b-4393-aaeb-1d456a592025",
+              "content": "27日行CT检查（结果未提供）",
+              "timestamp": 1771493386.1932392,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fd422b57-64e4-4c06-8c91-ee5f668bf316",
+              "content": "医生建议：CTA仅用于冠心病筛查、狭窄率误差较大；建议在当地行冠脉造影明确诊断以便调整用药；建议开始/需要服用他汀类调脂药",
+              "timestamp": 1771493396.7079637,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "84480346-2953-4657-befc-6632815d6501",
+              "content": "慢性直肠炎/肠炎病程1年多",
+              "timestamp": 1771493408.4058793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "4fb63715-012d-4e4a-bb50-8e1f6b322ac0",
+              "content": "结肠镜检查提示轻度异常：直肠血管网模糊；结合症状医生考虑可能为轻度溃疡性结肠炎",
+              "timestamp": 1771493408.4058897,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "03f58997-703c-4072-84a5-30fb48416539",
+              "content": "医生建议：如服药有效则继续到医院巩固治疗一段时间",
+              "timestamp": 1771493413.11751,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "04c7bf47-88d9-488d-9d9b-17f8a0410418",
+              "content": "医生建议：宜进行详细检查与治疗，避免轻易选择手术",
+              "timestamp": 1771493435.076812,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "左腿x型，",
+        "to_memory": [
+          "working: 本次主诉/描述“左腿X型”（疑指左下肢呈X型畸形/外观异常），具体含义与伴随症状未明"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "61c14695-6ffa-44b6-83a6-33c3314553ea",
+              "content": "本次主诉/描述“左腿X型”（疑指左下肢呈X型畸形/外观异常），具体含义与伴随症状未明",
+              "timestamp": 1771493440.9309263,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "622eeed2-c231-4d5b-956f-973de714e92f",
+              "content": "患者23岁（性别未提及）",
+              "timestamp": 1771493386.1932065,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "2c75d34a-732b-40d8-a046-44465c6b142e",
+              "content": "慢性病史：高血压、冠心病",
+              "timestamp": 1771493386.1932144,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8af96923-279a-49cf-9833-05231d47e569",
+              "content": "家族史：父亲有冠心病",
+              "timestamp": 1771493386.1932194,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d9700810-b902-4226-8e31-87c922e5167e",
+              "content": "体重约180（单位未述）",
+              "timestamp": 1771493386.1932232,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "078eaebc-3eca-4b02-ac5f-e2c13d6f1d3e",
+              "content": "既往心律失常史：30岁起房性早搏（有时频发）",
+              "timestamp": 1771493386.1932275,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b53a05e8-cab8-47b4-a2af-ba8e0fa96e7a",
+              "content": "近期血压约140–150/90–100 mmHg",
+              "timestamp": 1771493386.1932318,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fa3e906a-5f8b-4393-aaeb-1d456a592025",
+              "content": "27日行CT检查（结果未提供）",
+              "timestamp": 1771493386.1932392,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fd422b57-64e4-4c06-8c91-ee5f668bf316",
+              "content": "医生建议：CTA仅用于冠心病筛查、狭窄率误差较大；建议在当地行冠脉造影明确诊断以便调整用药；建议开始/需要服用他汀类调脂药",
+              "timestamp": 1771493396.7079637,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "84480346-2953-4657-befc-6632815d6501",
+              "content": "慢性直肠炎/肠炎病程1年多",
+              "timestamp": 1771493408.4058793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "4fb63715-012d-4e4a-bb50-8e1f6b322ac0",
+              "content": "结肠镜检查提示轻度异常：直肠血管网模糊；结合症状医生考虑可能为轻度溃疡性结肠炎",
+              "timestamp": 1771493408.4058897,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "03f58997-703c-4072-84a5-30fb48416539",
+              "content": "医生建议：如服药有效则继续到医院巩固治疗一段时间",
+              "timestamp": 1771493413.11751,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "04c7bf47-88d9-488d-9d9b-17f8a0410418",
+              "content": "医生建议：宜进行详细检查与治疗，避免轻易选择手术",
+              "timestamp": 1771493435.076812,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者既往曾做过一次影像学检查，但本次就诊记录中未见对应结果或后续处理信息。请问该检查是在几号进行的？这对后续评估是否构成信息缺口需要补充？",
+          "answer": "27日行CT检查（结果未提供）",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "fa3e906a-5f8b-4393-aaeb-1d456a592025"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "61c14695-6ffa-44b6-83a6-33c3314553ea"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            9,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "手术费用3万，包括钢板，手术和治疗费等所有费用。只做一条腿的话，术后一周就可以下地，骨折愈合需要6-8周。",
+        "to_memory": [
+          "history: 医生说明左腿X型矫形手术费用约3万元（含钢板、手术及治疗等费用），若仅做单侧，术后约1周可下地，骨折愈合约需6-8周"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "61c14695-6ffa-44b6-83a6-33c3314553ea",
+              "content": "本次主诉/描述“左腿X型”（疑指左下肢呈X型畸形/外观异常），具体含义与伴随症状未明",
+              "timestamp": 1771493440.9309263,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "622eeed2-c231-4d5b-956f-973de714e92f",
+              "content": "患者23岁（性别未提及）",
+              "timestamp": 1771493386.1932065,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "2c75d34a-732b-40d8-a046-44465c6b142e",
+              "content": "慢性病史：高血压、冠心病",
+              "timestamp": 1771493386.1932144,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8af96923-279a-49cf-9833-05231d47e569",
+              "content": "家族史：父亲有冠心病",
+              "timestamp": 1771493386.1932194,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d9700810-b902-4226-8e31-87c922e5167e",
+              "content": "体重约180（单位未述）",
+              "timestamp": 1771493386.1932232,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "078eaebc-3eca-4b02-ac5f-e2c13d6f1d3e",
+              "content": "既往心律失常史：30岁起房性早搏（有时频发）",
+              "timestamp": 1771493386.1932275,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b53a05e8-cab8-47b4-a2af-ba8e0fa96e7a",
+              "content": "近期血压约140–150/90–100 mmHg",
+              "timestamp": 1771493386.1932318,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fa3e906a-5f8b-4393-aaeb-1d456a592025",
+              "content": "27日行CT检查（结果未提供）",
+              "timestamp": 1771493386.1932392,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fd422b57-64e4-4c06-8c91-ee5f668bf316",
+              "content": "医生建议：CTA仅用于冠心病筛查、狭窄率误差较大；建议在当地行冠脉造影明确诊断以便调整用药；建议开始/需要服用他汀类调脂药",
+              "timestamp": 1771493396.7079637,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "84480346-2953-4657-befc-6632815d6501",
+              "content": "慢性直肠炎/肠炎病程1年多",
+              "timestamp": 1771493408.4058793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "4fb63715-012d-4e4a-bb50-8e1f6b322ac0",
+              "content": "结肠镜检查提示轻度异常：直肠血管网模糊；结合症状医生考虑可能为轻度溃疡性结肠炎",
+              "timestamp": 1771493408.4058897,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "03f58997-703c-4072-84a5-30fb48416539",
+              "content": "医生建议：如服药有效则继续到医院巩固治疗一段时间",
+              "timestamp": 1771493413.11751,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "04c7bf47-88d9-488d-9d9b-17f8a0410418",
+              "content": "医生建议：宜进行详细检查与治疗，避免轻易选择手术",
+              "timestamp": 1771493435.076812,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "0599d130-ba52-4172-85cf-1359ac3c5c65",
+              "content": "医生说明：左腿X型矫形手术费用约3万元（含钢板、手术及治疗等费用）；若仅做单侧，术后约1周可下地；骨折愈合约需6-8周。",
+              "timestamp": 1771493449.8630655,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者既往病史记录与本次因下肢外观问题就诊的描述：患者曾被记录过的一个心脏节律方面的既往情况是什么？",
+          "answer": "30岁起房性早搏（有时频发）的心律失常史",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "078eaebc-3eca-4b02-ac5f-e2c13d6f1d3e"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "61c14695-6ffa-44b6-83a6-33c3314553ea"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            10,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "622eeed2-c231-4d5b-956f-973de714e92f",
+              "content": "患者23岁（性别未提及）",
+              "timestamp": 1771493386.1932065,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "2c75d34a-732b-40d8-a046-44465c6b142e",
+              "content": "慢性病史：高血压、冠心病",
+              "timestamp": 1771493386.1932144,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8af96923-279a-49cf-9833-05231d47e569",
+              "content": "家族史：父亲有冠心病",
+              "timestamp": 1771493386.1932194,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d9700810-b902-4226-8e31-87c922e5167e",
+              "content": "体重约180（单位未述）",
+              "timestamp": 1771493386.1932232,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "078eaebc-3eca-4b02-ac5f-e2c13d6f1d3e",
+              "content": "既往心律失常史：30岁起房性早搏（有时频发）",
+              "timestamp": 1771493386.1932275,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b53a05e8-cab8-47b4-a2af-ba8e0fa96e7a",
+              "content": "近期血压约140–150/90–100 mmHg",
+              "timestamp": 1771493386.1932318,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fa3e906a-5f8b-4393-aaeb-1d456a592025",
+              "content": "27日行CT检查（结果未提供）",
+              "timestamp": 1771493386.1932392,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fd422b57-64e4-4c06-8c91-ee5f668bf316",
+              "content": "医生建议：CTA仅用于冠心病筛查、狭窄率误差较大；建议在当地行冠脉造影明确诊断以便调整用药；建议开始/需要服用他汀类调脂药",
+              "timestamp": 1771493396.7079637,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "84480346-2953-4657-befc-6632815d6501",
+              "content": "慢性直肠炎/肠炎病程1年多",
+              "timestamp": 1771493408.4058793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "4fb63715-012d-4e4a-bb50-8e1f6b322ac0",
+              "content": "结肠镜检查提示轻度异常：直肠血管网模糊；结合症状医生考虑可能为轻度溃疡性结肠炎",
+              "timestamp": 1771493408.4058897,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "03f58997-703c-4072-84a5-30fb48416539",
+              "content": "医生建议：如服药有效则继续到医院巩固治疗一段时间",
+              "timestamp": 1771493413.11751,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "04c7bf47-88d9-488d-9d9b-17f8a0410418",
+              "content": "医生建议：宜进行详细检查与治疗，避免轻易选择手术",
+              "timestamp": 1771493435.076812,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "0599d130-ba52-4172-85cf-1359ac3c5c65",
+              "content": "医生说明：左腿X型矫形手术费用约3万元（含钢板、手术及治疗等费用）；若仅做单侧，术后约1周可下地；骨折愈合约需6-8周。",
+              "timestamp": 1771493449.8630655,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "肌无力，四肢无力早轻下午重的变化偶尔伴有肌肉刺痛在初中后稍微发现之后就稍重但是变化不大。",
+        "to_memory": [
+          "working: 主诉肌无力、四肢无力，呈早轻下午重的日内波动，偶尔伴肌肉刺痛；初中后开始发现，之后略有加重但总体变化不大"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "51972815-6592-4545-9f18-67bb1df24cc1",
+              "content": "主诉肌无力、四肢无力，呈早轻下午重的日内波动，偶有肌肉刺痛；初中后开始发现，之后略有加重但总体变化不大",
+              "timestamp": 1771493455.969269,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "identity": [
+            {
+              "id": "622eeed2-c231-4d5b-956f-973de714e92f",
+              "content": "患者23岁（性别未提及）",
+              "timestamp": 1771493386.1932065,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "2c75d34a-732b-40d8-a046-44465c6b142e",
+              "content": "慢性病史：高血压、冠心病",
+              "timestamp": 1771493386.1932144,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8af96923-279a-49cf-9833-05231d47e569",
+              "content": "家族史：父亲有冠心病",
+              "timestamp": 1771493386.1932194,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d9700810-b902-4226-8e31-87c922e5167e",
+              "content": "体重约180（单位未述）",
+              "timestamp": 1771493386.1932232,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "078eaebc-3eca-4b02-ac5f-e2c13d6f1d3e",
+              "content": "既往心律失常史：30岁起房性早搏（有时频发）",
+              "timestamp": 1771493386.1932275,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b53a05e8-cab8-47b4-a2af-ba8e0fa96e7a",
+              "content": "近期血压约140–150/90–100 mmHg",
+              "timestamp": 1771493386.1932318,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fa3e906a-5f8b-4393-aaeb-1d456a592025",
+              "content": "27日行CT检查（结果未提供）",
+              "timestamp": 1771493386.1932392,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fd422b57-64e4-4c06-8c91-ee5f668bf316",
+              "content": "医生建议：CTA仅用于冠心病筛查、狭窄率误差较大；建议在当地行冠脉造影明确诊断以便调整用药；建议开始/需要服用他汀类调脂药",
+              "timestamp": 1771493396.7079637,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "84480346-2953-4657-befc-6632815d6501",
+              "content": "慢性直肠炎/肠炎病程1年多",
+              "timestamp": 1771493408.4058793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "4fb63715-012d-4e4a-bb50-8e1f6b322ac0",
+              "content": "结肠镜检查提示轻度异常：直肠血管网模糊；结合症状医生考虑可能为轻度溃疡性结肠炎",
+              "timestamp": 1771493408.4058897,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "03f58997-703c-4072-84a5-30fb48416539",
+              "content": "医生建议：如服药有效则继续到医院巩固治疗一段时间",
+              "timestamp": 1771493413.11751,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "04c7bf47-88d9-488d-9d9b-17f8a0410418",
+              "content": "医生建议：宜进行详细检查与治疗，避免轻易选择手术",
+              "timestamp": 1771493435.076812,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "0599d130-ba52-4172-85cf-1359ac3c5c65",
+              "content": "医生说明：左腿X型矫形手术费用约3万元（含钢板、手术及治疗等费用）；若仅做单侧，术后约1周可下地；骨折愈合约需6-8周。",
+              "timestamp": 1771493449.8630655,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者既往一次就诊中提到的心脏方面病史与本次就诊主诉的症状：既往具体被记录的心律问题是什么？",
+          "answer": "30岁起有房性早搏史（有时频发），属既往心律失常史。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "078eaebc-3eca-4b02-ac5f-e2c13d6f1d3e"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "51972815-6592-4545-9f18-67bb1df24cc1"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            12,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "最终肌无力的诊断是什么，请告知。建议你检查肌电图除外重症肌无力，这是可治的病。如果诊断肌营养不良，则目前没有特效药。",
+        "to_memory": [
+          "history: 询问肌无力最终诊断是什么",
+          "history: 医生建议检查肌电图以排除重症肌无力（可治）",
+          "history: 医生提示如诊断为肌营养不良，目前无特效药"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "51972815-6592-4545-9f18-67bb1df24cc1",
+              "content": "主诉肌无力、四肢无力，呈早轻下午重的日内波动，偶有肌肉刺痛；初中后开始发现，之后略有加重但总体变化不大",
+              "timestamp": 1771493455.969269,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "identity": [
+            {
+              "id": "622eeed2-c231-4d5b-956f-973de714e92f",
+              "content": "患者23岁（性别未提及）",
+              "timestamp": 1771493386.1932065,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "2c75d34a-732b-40d8-a046-44465c6b142e",
+              "content": "慢性病史：高血压、冠心病",
+              "timestamp": 1771493386.1932144,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8af96923-279a-49cf-9833-05231d47e569",
+              "content": "家族史：父亲有冠心病",
+              "timestamp": 1771493386.1932194,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d9700810-b902-4226-8e31-87c922e5167e",
+              "content": "体重约180（单位未述）",
+              "timestamp": 1771493386.1932232,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "078eaebc-3eca-4b02-ac5f-e2c13d6f1d3e",
+              "content": "既往心律失常史：30岁起房性早搏（有时频发）",
+              "timestamp": 1771493386.1932275,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b53a05e8-cab8-47b4-a2af-ba8e0fa96e7a",
+              "content": "近期血压约140–150/90–100 mmHg",
+              "timestamp": 1771493386.1932318,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fa3e906a-5f8b-4393-aaeb-1d456a592025",
+              "content": "27日行CT检查（结果未提供）",
+              "timestamp": 1771493386.1932392,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fd422b57-64e4-4c06-8c91-ee5f668bf316",
+              "content": "医生建议：CTA仅用于冠心病筛查、狭窄率误差较大；建议在当地行冠脉造影明确诊断以便调整用药；建议开始/需要服用他汀类调脂药",
+              "timestamp": 1771493396.7079637,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "84480346-2953-4657-befc-6632815d6501",
+              "content": "慢性直肠炎/肠炎病程1年多",
+              "timestamp": 1771493408.4058793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "4fb63715-012d-4e4a-bb50-8e1f6b322ac0",
+              "content": "结肠镜检查提示轻度异常：直肠血管网模糊；结合症状医生考虑可能为轻度溃疡性结肠炎",
+              "timestamp": 1771493408.4058897,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "03f58997-703c-4072-84a5-30fb48416539",
+              "content": "医生建议：如服药有效则继续到医院巩固治疗一段时间",
+              "timestamp": 1771493413.11751,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "04c7bf47-88d9-488d-9d9b-17f8a0410418",
+              "content": "医生建议：宜进行详细检查与治疗，避免轻易选择手术",
+              "timestamp": 1771493435.076812,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "0599d130-ba52-4172-85cf-1359ac3c5c65",
+              "content": "医生说明：左腿X型矫形手术费用约3万元（含钢板、手术及治疗等费用）；若仅做单侧，术后约1周可下地；骨折愈合约需6-8周。",
+              "timestamp": 1771493449.8630655,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "692f1161-b851-466f-99b3-6ae1ebfffd17",
+              "content": "患者询问肌无力最终诊断是什么。",
+              "timestamp": 1771493463.1944644,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "5e3aa0af-224c-4dc1-8b9a-f91e3ad25a19",
+              "content": "医生建议检查肌电图以排除重症肌无力（提示该病可治疗）。",
+              "timestamp": 1771493463.1944735,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "79fc302b-6a2a-4c03-8e95-0ecd10c9da96",
+              "content": "医生提示：如诊断为肌营养不良，目前无特效药。",
+              "timestamp": 1771493463.194478,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者在本次咨询中描述的四肢乏力表现与其最早出现相关不适时的情况：这种症状在一天内的波动规律是什么？同时，自首次发现以来总体是加重、减轻还是基本无明显变化？",
+          "answer": "症状呈日内波动：早轻下午重；初中后开始发现，之后略有加重但总体变化不大。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "4fb63715-012d-4e4a-bb50-8e1f6b322ac0"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "51972815-6592-4545-9f18-67bb1df24cc1"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            10,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "622eeed2-c231-4d5b-956f-973de714e92f",
+              "content": "患者23岁（性别未提及）",
+              "timestamp": 1771493386.1932065,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "2c75d34a-732b-40d8-a046-44465c6b142e",
+              "content": "慢性病史：高血压、冠心病",
+              "timestamp": 1771493386.1932144,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8af96923-279a-49cf-9833-05231d47e569",
+              "content": "家族史：父亲有冠心病",
+              "timestamp": 1771493386.1932194,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d9700810-b902-4226-8e31-87c922e5167e",
+              "content": "体重约180（单位未述）",
+              "timestamp": 1771493386.1932232,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "078eaebc-3eca-4b02-ac5f-e2c13d6f1d3e",
+              "content": "既往心律失常史：30岁起房性早搏（有时频发）",
+              "timestamp": 1771493386.1932275,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b53a05e8-cab8-47b4-a2af-ba8e0fa96e7a",
+              "content": "近期血压约140–150/90–100 mmHg",
+              "timestamp": 1771493386.1932318,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fa3e906a-5f8b-4393-aaeb-1d456a592025",
+              "content": "27日行CT检查（结果未提供）",
+              "timestamp": 1771493386.1932392,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fd422b57-64e4-4c06-8c91-ee5f668bf316",
+              "content": "医生建议：CTA仅用于冠心病筛查、狭窄率误差较大；建议在当地行冠脉造影明确诊断以便调整用药；建议开始/需要服用他汀类调脂药",
+              "timestamp": 1771493396.7079637,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "84480346-2953-4657-befc-6632815d6501",
+              "content": "慢性直肠炎/肠炎病程1年多",
+              "timestamp": 1771493408.4058793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "4fb63715-012d-4e4a-bb50-8e1f6b322ac0",
+              "content": "结肠镜检查提示轻度异常：直肠血管网模糊；结合症状医生考虑可能为轻度溃疡性结肠炎",
+              "timestamp": 1771493408.4058897,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "03f58997-703c-4072-84a5-30fb48416539",
+              "content": "医生建议：如服药有效则继续到医院巩固治疗一段时间",
+              "timestamp": 1771493413.11751,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "04c7bf47-88d9-488d-9d9b-17f8a0410418",
+              "content": "医生建议：宜进行详细检查与治疗，避免轻易选择手术",
+              "timestamp": 1771493435.076812,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "0599d130-ba52-4172-85cf-1359ac3c5c65",
+              "content": "医生说明：左腿X型矫形手术费用约3万元（含钢板、手术及治疗等费用）；若仅做单侧，术后约1周可下地；骨折愈合约需6-8周。",
+              "timestamp": 1771493449.8630655,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "692f1161-b851-466f-99b3-6ae1ebfffd17",
+              "content": "患者询问肌无力最终诊断是什么。",
+              "timestamp": 1771493463.1944644,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "5e3aa0af-224c-4dc1-8b9a-f91e3ad25a19",
+              "content": "医生建议检查肌电图以排除重症肌无力（提示该病可治疗）。",
+              "timestamp": 1771493463.1944735,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "79fc302b-6a2a-4c03-8e95-0ecd10c9da96",
+              "content": "医生提示：如诊断为肌营养不良，目前无特效药。",
+              "timestamp": 1771493463.194478,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "不排卵，不排卵用药物可以顺利排卵也不知道为什么老不怀孕我们做了2次人工都没有受孕请问做试管希望多少前期准备什么请指点谢谢\n。在吗。",
+        "to_memory": [
+          "history: 结婚5年，性交时间约1分钟，有手淫史，戴避孕套性交时间也短（早泄相关病史）",
+          "history: 左腿X型腿，咨询过手术治疗；医生告知手术费用约3万（含钢板/手术/治疗费），单侧术后一周可下地，骨折愈合约6-8周",
+          "history: 长期肌无力/四肢无力（早轻午后重），偶伴肌肉刺痛；医生建议做肌电图以排除重症肌无力，若为肌营养不良目前无特效药",
+          "history: 本次主诉不排卵；用药可诱导排卵但长期未怀孕",
+          "working: 已做2次人工授精未受孕，咨询试管婴儿成功率及前期准备"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "c85d5977-27f9-4a52-ba77-f1bc6ef82e46",
+              "content": "已做2次人工授精未受孕，咨询试管婴儿成功率及前期准备。",
+              "timestamp": 1771493475.6268723,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "identity": [
+            {
+              "id": "622eeed2-c231-4d5b-956f-973de714e92f",
+              "content": "患者23岁（性别未提及）",
+              "timestamp": 1771493386.1932065,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "2c75d34a-732b-40d8-a046-44465c6b142e",
+              "content": "慢性病史：高血压、冠心病",
+              "timestamp": 1771493386.1932144,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8af96923-279a-49cf-9833-05231d47e569",
+              "content": "家族史：父亲有冠心病",
+              "timestamp": 1771493386.1932194,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d9700810-b902-4226-8e31-87c922e5167e",
+              "content": "体重约180（单位未述）",
+              "timestamp": 1771493386.1932232,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "078eaebc-3eca-4b02-ac5f-e2c13d6f1d3e",
+              "content": "既往心律失常史：30岁起房性早搏（有时频发）",
+              "timestamp": 1771493386.1932275,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b53a05e8-cab8-47b4-a2af-ba8e0fa96e7a",
+              "content": "近期血压约140–150/90–100 mmHg",
+              "timestamp": 1771493386.1932318,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fa3e906a-5f8b-4393-aaeb-1d456a592025",
+              "content": "27日行CT检查（结果未提供）",
+              "timestamp": 1771493386.1932392,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fd422b57-64e4-4c06-8c91-ee5f668bf316",
+              "content": "医生建议：CTA仅用于冠心病筛查、狭窄率误差较大；建议在当地行冠脉造影明确诊断以便调整用药；建议开始/需要服用他汀类调脂药",
+              "timestamp": 1771493396.7079637,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "84480346-2953-4657-befc-6632815d6501",
+              "content": "慢性直肠炎/肠炎病程1年多",
+              "timestamp": 1771493408.4058793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "4fb63715-012d-4e4a-bb50-8e1f6b322ac0",
+              "content": "结肠镜检查提示轻度异常：直肠血管网模糊；结合症状医生考虑可能为轻度溃疡性结肠炎",
+              "timestamp": 1771493408.4058897,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "03f58997-703c-4072-84a5-30fb48416539",
+              "content": "医生建议：如服药有效则继续到医院巩固治疗一段时间",
+              "timestamp": 1771493413.11751,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "04c7bf47-88d9-488d-9d9b-17f8a0410418",
+              "content": "医生建议：宜进行详细检查与治疗，避免轻易选择手术",
+              "timestamp": 1771493435.076812,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "0599d130-ba52-4172-85cf-1359ac3c5c65",
+              "content": "医生说明：左腿X型矫形手术费用约3万元（含钢板、手术及治疗等费用）；若仅做单侧，术后约1周可下地；骨折愈合约需6-8周。",
+              "timestamp": 1771493449.8630655,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "692f1161-b851-466f-99b3-6ae1ebfffd17",
+              "content": "患者询问肌无力最终诊断是什么。",
+              "timestamp": 1771493463.1944644,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "5e3aa0af-224c-4dc1-8b9a-f91e3ad25a19",
+              "content": "医生建议检查肌电图以排除重症肌无力（提示该病可治疗）。",
+              "timestamp": 1771493463.1944735,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "79fc302b-6a2a-4c03-8e95-0ecd10c9da96",
+              "content": "医生提示：如诊断为肌营养不良，目前无特效药。",
+              "timestamp": 1771493463.194478,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "0c325176-2a16-4843-b9ff-d04a29f653c0",
+              "content": "婚史5年；性交时间约1分钟，有手淫史；戴避孕套性交时间也短，考虑早泄相关病史。",
+              "timestamp": 1771493475.6268482,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "c8f250cb-58d9-4b8e-b5dc-c58c29f44acb",
+              "content": "长期肌无力/四肢无力（早轻午后重），偶伴肌肉刺痛。",
+              "timestamp": 1771493475.6268597,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "fb36db0a-3f8d-403e-bbc8-a9397b87ee55",
+              "content": "本次主诉：不排卵；用药可诱导排卵但长期未怀孕。",
+              "timestamp": 1771493475.626866,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "将患者此前一次消化道相关检查提示的异常及医生当时倾向的可能诊断，与本次就诊中患者在生育方面汇报的既往助孕经历进行关联：患者本次就诊前已经进行过哪种助孕尝试、共进行了几次，结果如何？",
+          "answer": "已做过2次人工授精，均未受孕。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "4fb63715-012d-4e4a-bb50-8e1f6b322ac0"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "c85d5977-27f9-4a52-ba77-f1bc6ef82e46"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            12,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "很抱歉，建议您到生殖中心就诊。",
+        "to_memory": [
+          "history: 患者诉不排卵；用药可诱导排卵但长期未孕；已进行2次人工授精未受孕；咨询试管婴儿成功率及前期准备",
+          "history: 医生建议到生殖中心就诊"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "c85d5977-27f9-4a52-ba77-f1bc6ef82e46",
+              "content": "已做2次人工授精未受孕，咨询试管婴儿成功率及前期准备。",
+              "timestamp": 1771493475.6268723,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "identity": [
+            {
+              "id": "622eeed2-c231-4d5b-956f-973de714e92f",
+              "content": "患者23岁（性别未提及）",
+              "timestamp": 1771493386.1932065,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "2c75d34a-732b-40d8-a046-44465c6b142e",
+              "content": "慢性病史：高血压、冠心病",
+              "timestamp": 1771493386.1932144,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "8af96923-279a-49cf-9833-05231d47e569",
+              "content": "家族史：父亲有冠心病",
+              "timestamp": 1771493386.1932194,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "d9700810-b902-4226-8e31-87c922e5167e",
+              "content": "体重约180（单位未述）",
+              "timestamp": 1771493386.1932232,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "078eaebc-3eca-4b02-ac5f-e2c13d6f1d3e",
+              "content": "既往心律失常史：30岁起房性早搏（有时频发）",
+              "timestamp": 1771493386.1932275,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b53a05e8-cab8-47b4-a2af-ba8e0fa96e7a",
+              "content": "近期血压约140–150/90–100 mmHg",
+              "timestamp": 1771493386.1932318,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fa3e906a-5f8b-4393-aaeb-1d456a592025",
+              "content": "27日行CT检查（结果未提供）",
+              "timestamp": 1771493386.1932392,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fd422b57-64e4-4c06-8c91-ee5f668bf316",
+              "content": "医生建议：CTA仅用于冠心病筛查、狭窄率误差较大；建议在当地行冠脉造影明确诊断以便调整用药；建议开始/需要服用他汀类调脂药",
+              "timestamp": 1771493396.7079637,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "84480346-2953-4657-befc-6632815d6501",
+              "content": "慢性直肠炎/肠炎病程1年多",
+              "timestamp": 1771493408.4058793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "4fb63715-012d-4e4a-bb50-8e1f6b322ac0",
+              "content": "结肠镜检查提示轻度异常：直肠血管网模糊；结合症状医生考虑可能为轻度溃疡性结肠炎",
+              "timestamp": 1771493408.4058897,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "03f58997-703c-4072-84a5-30fb48416539",
+              "content": "医生建议：如服药有效则继续到医院巩固治疗一段时间",
+              "timestamp": 1771493413.11751,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "04c7bf47-88d9-488d-9d9b-17f8a0410418",
+              "content": "医生建议：宜进行详细检查与治疗，避免轻易选择手术",
+              "timestamp": 1771493435.076812,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "0599d130-ba52-4172-85cf-1359ac3c5c65",
+              "content": "医生说明：左腿X型矫形手术费用约3万元（含钢板、手术及治疗等费用）；若仅做单侧，术后约1周可下地；骨折愈合约需6-8周。",
+              "timestamp": 1771493449.8630655,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "692f1161-b851-466f-99b3-6ae1ebfffd17",
+              "content": "患者询问肌无力最终诊断是什么。",
+              "timestamp": 1771493463.1944644,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "5e3aa0af-224c-4dc1-8b9a-f91e3ad25a19",
+              "content": "医生建议检查肌电图以排除重症肌无力（提示该病可治疗）。",
+              "timestamp": 1771493463.1944735,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "79fc302b-6a2a-4c03-8e95-0ecd10c9da96",
+              "content": "医生提示：如诊断为肌营养不良，目前无特效药。",
+              "timestamp": 1771493463.194478,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "0c325176-2a16-4843-b9ff-d04a29f653c0",
+              "content": "婚史5年；性交时间约1分钟，有手淫史；戴避孕套性交时间也短，考虑早泄相关病史。",
+              "timestamp": 1771493475.6268482,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "c8f250cb-58d9-4b8e-b5dc-c58c29f44acb",
+              "content": "长期肌无力/四肢无力（早轻午后重），偶伴肌肉刺痛。",
+              "timestamp": 1771493475.6268597,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "fb36db0a-3f8d-403e-bbc8-a9397b87ee55",
+              "content": "本次主诉：不排卵；用药可诱导排卵但长期未怀孕。",
+              "timestamp": 1771493475.626866,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "90b60f52-dbc4-478a-a6db-9292ad92a3fd",
+              "content": "不孕相关：患者诉不排卵；用药可诱导排卵但长期未孕；已进行2次人工授精未受孕；咨询试管婴儿成功率及前期准备。",
+              "timestamp": 1771493483.9064767,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "70c7a235-e1a8-4366-82c4-06171b61efcc",
+              "content": "医生建议：到生殖中心就诊。",
+              "timestamp": 1771493483.9064853,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在评估这对夫妇的不孕问题时，既往病史里有一项与同房过程相关的关键信息可能提示存在需要同时处理的性功能因素。请问患者曾具体报告过该项情况是什么？",
+          "answer": "性交时间约1分钟，考虑早泄相关病史（有手淫史，戴避孕套性交时间也短）。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "d9700810-b902-4226-8e31-87c922e5167e"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "0c325176-2a16-4843-b9ff-d04a29f653c0"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            16,
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "postop_rehab",
+    "scenario_name": "术后康复管理",
+    "session_count": 6,
+    "group_key": "综合科"
+  }
+}

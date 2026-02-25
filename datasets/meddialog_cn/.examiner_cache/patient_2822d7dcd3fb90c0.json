@@ -1,0 +1,1002 @@
+{
+  "patient_id": "0320e942a337",
+  "messages": [
+    {
+      "user": {
+        "content": "鼻炎，很多次吃药。",
+        "to_memory": [
+          "history: 既往有鼻炎，曾多次服药治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "鼻炎有不同的种类，普通的鼻炎以药物治疗和自我保健为主。如果有下鼻甲肥大者，可考虑微波、冷冻、激光或射频治疗。因您年纪较小，建议以非手术治疗为主。",
+        "to_memory": [
+          "history: 医生说明鼻炎类型多，普通鼻炎以药物治疗和自我保健为主；如有下鼻甲肥大可考虑微波/冷冻/激光/射频治疗；因患者年纪较小建议以非手术治疗为主"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e34d915f-44d0-4c1f-a702-ccdc43a37666",
+              "content": "医生说明：鼻炎类型多；普通鼻炎以药物治疗和自我保健为主；如有下鼻甲肥大可考虑微波/冷冻/激光/射频治疗；因患者年纪较小建议以非手术治疗为主。",
+              "timestamp": 1771493677.467881,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "医生提到在什么情况下可以考虑采用一些器械/物理方式进行治疗？",
+          "answer": "如果有下鼻甲肥大者，可考虑微波、冷冻、激光或射频治疗。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "e34d915f-44d0-4c1f-a702-ccdc43a37666"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "肺疾病，东台人民医院。",
+        "to_memory": [
+          "history: 患者提及“肺疾病”（具体类型/诊断未明）",
+          "working: 患者提及就诊/相关医院为东台人民医院"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "4c39acae-bf83-41fa-9bdd-5c37dd1880dc",
+              "content": "患者提及就诊/相关医院为东台人民医院",
+              "timestamp": 1771493683.830208,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "14cb6ab6-e506-4f5c-ae3f-78b7e9e756fe",
+              "content": "患者提及“肺疾病”（具体类型/诊断未明）",
+              "timestamp": 1771493683.8301995,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者最开始咨询的主要问题与诊疗分割线后补充的新情况：患者后来提到的另一项健康问题是什么，并且提到是在哪家医院就诊/相关的？",
+          "answer": "肺疾病；东台人民医院",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "4c39acae-bf83-41fa-9bdd-5c37dd1880dc"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "14cb6ab6-e506-4f5c-ae3f-78b7e9e756fe"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你没有提供病情的具体情况，我无法帮助你。比如手术切除的肺叶是否做了病理检查，病理检查是否确诊是什么疾病。现在的胸腔积液是否抽出来化验，是什么性质的、什么原因引起的胸水？",
+        "to_memory": [
+          "history: 既往多次因鼻炎服药治疗",
+          "working: 患者提及肺疾病，就诊/相关医院为东台人民医院",
+          "history: 医生询问需补充信息：是否进行肺叶切除及病理检查结果；是否存在胸腔积液并已抽液化验、胸水性质及可能病因"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "4c39acae-bf83-41fa-9bdd-5c37dd1880dc",
+              "content": "患者提及就诊/相关医院为东台人民医院",
+              "timestamp": 1771493683.830208,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "14c7cfdc-6ada-4a43-b9c4-2709695e66f7",
+              "content": "医生询问需补充：是否进行肺叶切除及病理检查结果；是否存在胸腔积液并已抽液化验、胸水性质及可能病因",
+              "timestamp": 1771493691.5197902,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "14cb6ab6-e506-4f5c-ae3f-78b7e9e756fe",
+              "content": "患者提及“肺疾病”（具体类型/诊断未明）",
+              "timestamp": 1771493683.8301995,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "3e0ba870-0f93-4c5a-9699-a69c9339f46c",
+              "content": "既往多次因鼻炎服药治疗",
+              "timestamp": 1771493691.5197814,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "14cb6ab6-e506-4f5c-ae3f-78b7e9e756fe",
+              "content": "患者提及“肺疾病”（具体类型/诊断未明）",
+              "timestamp": 1771493683.8301995,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "3e0ba870-0f93-4c5a-9699-a69c9339f46c",
+              "content": "既往多次因鼻炎服药治疗",
+              "timestamp": 1771493691.5197814,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "烫伤，孩子于2009年11月份热水烫在胳膊及肩膀上，诊断为深二度、三度烫伤。孩子较小，目前只有15个月，烫伤的位置主要集中在孩子的肩部和腋下，烫伤的二处大小为3x1厘米，烫伤后的疤痕由原来的浅粉色，逐渐变深，疤痕也越来越大，孩子感觉很痒，半夜睡觉时不断抓挠。积水潭的医生认为这是深二度、三度烫伤。",
+        "to_memory": [
+          "identity: 患者为儿童，当前15个月大",
+          "history: 2009年11月热水烫伤，部位为胳膊及肩膀；被诊断为深二度、三度烫伤（积水潭医院医生判断）",
+          "working: 烫伤/瘢痕主要在肩部和腋下；两处创面/瘢痕大小约3x1厘米；瘢痕颜色由浅粉色逐渐变深且范围变大；瘙痒明显，夜间抓挠影响睡眠"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "9f75df39-3ef8-4700-a21e-ae0ebec2d095",
+              "content": "烫伤/瘢痕主要在肩部和腋下；两处创面/瘢痕大小约3x1厘米；瘢痕颜色由浅粉色逐渐变深且范围变大；瘙痒明显，夜间抓挠影响睡眠",
+              "timestamp": 1771493699.1713884,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "a041fc1c-5cfe-4b21-a01e-c6d7ee1b65a7",
+              "content": "患者为儿童，当前15个月大",
+              "timestamp": 1771493699.1713746,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "14cb6ab6-e506-4f5c-ae3f-78b7e9e756fe",
+              "content": "患者提及“肺疾病”（具体类型/诊断未明）",
+              "timestamp": 1771493683.8301995,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "3e0ba870-0f93-4c5a-9699-a69c9339f46c",
+              "content": "既往多次因鼻炎服药治疗",
+              "timestamp": 1771493691.5197814,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "a1b4d635-4a63-40fc-a2c6-c5d9e74e3ffa",
+              "content": "2009年11月热水烫伤，部位为胳膊及肩膀；积水潭医院医生判断为深二度、三度烫伤",
+              "timestamp": 1771493699.1713831,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者描述孩子烫伤后出现的主要不适表现有哪些？",
+          "answer": "瘢痕越来越大、颜色由浅粉色逐渐变深，瘙痒明显，夜间抓挠影响睡眠",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "9f75df39-3ef8-4700-a21e-ae0ebec2d095"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "这样的烧伤创面愈合后很可能形成瘢痕，要早期抗瘢痕治疗。",
+        "to_memory": [
+          "history: 2009年11月（患儿约15个月）热水烫伤胳膊、肩膀及腋下，诊断为深二度/三度烧伤；创面约2处，每处约3×1cm；愈合后瘢痕颜色变深、面积增大，瘙痒明显夜间抓挠；积水潭医生同样认为为深二度/三度烫伤",
+          "history: 医生建议烧伤创面愈合后需早期进行抗瘢痕治疗",
+          "identity: 既往有鼻炎，曾多次用药",
+          "working: 提及肺疾病并在东台人民医院就诊，但具体病情与检查未提供"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "9f75df39-3ef8-4700-a21e-ae0ebec2d095",
+              "content": "烫伤/瘢痕主要在肩部和腋下；两处创面/瘢痕大小约3x1厘米；瘢痕颜色由浅粉色逐渐变深且范围变大；瘙痒明显，夜间抓挠影响睡眠",
+              "timestamp": 1771493699.1713884,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "a041fc1c-5cfe-4b21-a01e-c6d7ee1b65a7",
+              "content": "患者为儿童；2009年11月烫伤时约15个月大",
+              "timestamp": 1771493699.1713746,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "14cb6ab6-e506-4f5c-ae3f-78b7e9e756fe",
+              "content": "患者提及“肺疾病”，曾在东台人民医院就诊（具体病情与检查未提供）",
+              "timestamp": 1771493683.8301995,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "3e0ba870-0f93-4c5a-9699-a69c9339f46c",
+              "content": "既往多次因鼻炎服药治疗",
+              "timestamp": 1771493691.5197814,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "a1b4d635-4a63-40fc-a2c6-c5d9e74e3ffa",
+              "content": "2009年11月（患儿约15个月）热水烫伤胳膊、肩膀及腋下；创面约2处，每处约3×1cm；积水潭医院医生判断为深二度/三度烫伤；愈合后瘢痕颜色变深、面积增大，瘙痒明显夜间抓挠",
+              "timestamp": 1771493699.1713831,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2ba9c6b1-7dcb-44ee-a651-978ec5713d7d",
+              "content": "医生建议：烧伤创面愈合后需早期进行抗瘢痕治疗",
+              "timestamp": 1771493710.4561324,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "a041fc1c-5cfe-4b21-a01e-c6d7ee1b65a7",
+              "content": "患者为儿童；2009年11月烫伤时约15个月大",
+              "timestamp": 1771493699.1713746,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "14cb6ab6-e506-4f5c-ae3f-78b7e9e756fe",
+              "content": "患者提及“肺疾病”，曾在东台人民医院就诊（具体病情与检查未提供）",
+              "timestamp": 1771493683.8301995,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "3e0ba870-0f93-4c5a-9699-a69c9339f46c",
+              "content": "既往多次因鼻炎服药治疗",
+              "timestamp": 1771493691.5197814,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "a1b4d635-4a63-40fc-a2c6-c5d9e74e3ffa",
+              "content": "2009年11月（患儿约15个月）热水烫伤胳膊、肩膀及腋下；创面约2处，每处约3×1cm；积水潭医院医生判断为深二度/三度烫伤；愈合后瘢痕颜色变深、面积增大，瘙痒明显夜间抓挠",
+              "timestamp": 1771493699.1713831,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2ba9c6b1-7dcb-44ee-a651-978ec5713d7d",
+              "content": "医生建议：烧伤创面愈合后需早期进行抗瘢痕治疗",
+              "timestamp": 1771493710.4561324,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "化脓性中耳炎鼓膜穿孔，宝宝女，2周岁，感冒近一个月，后左耳化脓，检查中耳炎鼓膜穿孔，伴感冒。",
+        "to_memory": [
+          "identity: 患者为女童，2周岁",
+          "working: 本次主诉/现病史：感冒近1个月，之后左耳化脓；检查提示化脓性中耳炎并鼓膜穿孔；目前仍伴感冒症状"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "0c395992-93cf-4b7d-ad2b-e27921470305",
+              "content": "本次主诉/现病史：感冒近1个月，之后左耳化脓；检查提示化脓性中耳炎并鼓膜穿孔；目前仍伴感冒症状",
+              "timestamp": 1771493718.0261328,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "a041fc1c-5cfe-4b21-a01e-c6d7ee1b65a7",
+              "content": "患者为女童，2周岁",
+              "timestamp": 1771493699.1713746,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "14cb6ab6-e506-4f5c-ae3f-78b7e9e756fe",
+              "content": "患者提及“肺疾病”，曾在东台人民医院就诊（具体病情与检查未提供）",
+              "timestamp": 1771493683.8301995,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "3e0ba870-0f93-4c5a-9699-a69c9339f46c",
+              "content": "既往多次因鼻炎服药治疗",
+              "timestamp": 1771493691.5197814,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "a1b4d635-4a63-40fc-a2c6-c5d9e74e3ffa",
+              "content": "2009年11月（患儿约15个月）热水烫伤胳膊、肩膀及腋下；创面约2处，每处约3×1cm；积水潭医院医生判断为深二度/三度烫伤；愈合后瘢痕颜色变深、面积增大，瘙痒明显夜间抓挠",
+              "timestamp": 1771493699.1713831,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2ba9c6b1-7dcb-44ee-a651-978ec5713d7d",
+              "content": "医生建议：烧伤创面愈合后需早期进行抗瘢痕治疗",
+              "timestamp": 1771493710.4561324,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可以在家用双氧水洗耳。",
+        "to_memory": [
+          "identity: 患者女，2周岁（宝宝）",
+          "history: 诊断为化脓性中耳炎并左侧鼓膜穿孔",
+          "working: 伴感冒近1个月后出现左耳化脓",
+          "history: 医嘱可在家用双氧水洗耳"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "0c395992-93cf-4b7d-ad2b-e27921470305",
+              "content": "本次主诉/现病史：感冒近1个月，之后左耳化脓；检查提示化脓性中耳炎并鼓膜穿孔；目前仍伴感冒症状",
+              "timestamp": 1771493718.0261328,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "a041fc1c-5cfe-4b21-a01e-c6d7ee1b65a7",
+              "content": "患者为女童，2周岁",
+              "timestamp": 1771493699.1713746,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "14cb6ab6-e506-4f5c-ae3f-78b7e9e756fe",
+              "content": "患者提及“肺疾病”，曾在东台人民医院就诊（具体病情与检查未提供）",
+              "timestamp": 1771493683.8301995,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "3e0ba870-0f93-4c5a-9699-a69c9339f46c",
+              "content": "既往多次因鼻炎服药治疗",
+              "timestamp": 1771493691.5197814,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "a1b4d635-4a63-40fc-a2c6-c5d9e74e3ffa",
+              "content": "2009年11月（患儿约15个月）热水烫伤胳膊、肩膀及腋下；创面约2处，每处约3×1cm；积水潭医院医生判断为深二度/三度烫伤；愈合后瘢痕颜色变深、面积增大，瘙痒明显夜间抓挠",
+              "timestamp": 1771493699.1713831,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2ba9c6b1-7dcb-44ee-a651-978ec5713d7d",
+              "content": "医生建议：烧伤创面愈合后需早期进行抗瘢痕治疗",
+              "timestamp": 1771493710.4561324,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "9aff7b9a-f88a-404c-acd7-bd1488898e22",
+              "content": "本次诊断：化脓性中耳炎并左侧鼓膜穿孔",
+              "timestamp": 1771493722.7027707,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "0de86a35-0e3f-44ef-a675-894dc84a2638",
+              "content": "医嘱：可在家用双氧水洗耳",
+              "timestamp": 1771493722.7027812,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者既往因哪一种慢性上呼吸道相关疾病曾多次服药治疗？",
+          "answer": "鼻炎",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "3e0ba870-0f93-4c5a-9699-a69c9339f46c"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "a041fc1c-5cfe-4b21-a01e-c6d7ee1b65a7",
+              "content": "患者为女童，2周岁",
+              "timestamp": 1771493699.1713746,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "14cb6ab6-e506-4f5c-ae3f-78b7e9e756fe",
+              "content": "患者提及“肺疾病”，曾在东台人民医院就诊（具体病情与检查未提供）",
+              "timestamp": 1771493683.8301995,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "3e0ba870-0f93-4c5a-9699-a69c9339f46c",
+              "content": "既往多次因鼻炎服药治疗",
+              "timestamp": 1771493691.5197814,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "a1b4d635-4a63-40fc-a2c6-c5d9e74e3ffa",
+              "content": "2009年11月（患儿约15个月）热水烫伤胳膊、肩膀及腋下；创面约2处，每处约3×1cm；积水潭医院医生判断为深二度/三度烫伤；愈合后瘢痕颜色变深、面积增大，瘙痒明显夜间抓挠",
+              "timestamp": 1771493699.1713831,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2ba9c6b1-7dcb-44ee-a651-978ec5713d7d",
+              "content": "医生建议：烧伤创面愈合后需早期进行抗瘢痕治疗",
+              "timestamp": 1771493710.4561324,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "9aff7b9a-f88a-404c-acd7-bd1488898e22",
+              "content": "本次诊断：化脓性中耳炎并左侧鼓膜穿孔",
+              "timestamp": 1771493722.7027707,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "0de86a35-0e3f-44ef-a675-894dc84a2638",
+              "content": "医嘱：可在家用双氧水洗耳",
+              "timestamp": 1771493722.7027812,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "右眼虹膜粘连，双眼震颤（左眼轻微的），孩子是在附二平产出生的，用了助产铗，当时就双眼损伤，我们年轻不懂没经验，医生当时说没事，没及时治疗，造成右眼虹膜粘连，现在孩子的症状：双眼震颤，右眼更厉害些，右眼没有视力只有五米的光感，眼底损伤了。现在孩子上五年级了因视力很吃力。",
+        "to_memory": [
+          "history: 出生时使用助产钳导致双眼损伤，未及时治疗",
+          "history: 右眼虹膜粘连",
+          "history: 右眼眼底损伤",
+          "history: 右眼视力极差，仅约5米光感",
+          "working: 当前症状为双眼震颤（左眼轻微、右眼更明显）",
+          "working: 目前上五年级，因视力问题学习/用眼吃力"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d4db607b-1147-43b4-89c6-82a10cf9242d",
+              "content": "当前症状为双眼震颤（左眼轻微、右眼更明显）",
+              "timestamp": 1771493732.3973386,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "d3c8ec74-5c50-4203-a0aa-88f9acb7acd1",
+              "content": "目前上五年级，因视力问题学习/用眼吃力",
+              "timestamp": 1771493732.3973427,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "identity": [
+            {
+              "id": "a041fc1c-5cfe-4b21-a01e-c6d7ee1b65a7",
+              "content": "患者为女童，目前上五年级（提示年龄已非2周岁）",
+              "timestamp": 1771493699.1713746,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "14cb6ab6-e506-4f5c-ae3f-78b7e9e756fe",
+              "content": "患者提及“肺疾病”，曾在东台人民医院就诊（具体病情与检查未提供）",
+              "timestamp": 1771493683.8301995,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "3e0ba870-0f93-4c5a-9699-a69c9339f46c",
+              "content": "既往多次因鼻炎服药治疗",
+              "timestamp": 1771493691.5197814,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "a1b4d635-4a63-40fc-a2c6-c5d9e74e3ffa",
+              "content": "2009年11月（患儿约15个月）热水烫伤胳膊、肩膀及腋下；创面约2处，每处约3×1cm；积水潭医院医生判断为深二度/三度烫伤；愈合后瘢痕颜色变深、面积增大，瘙痒明显夜间抓挠",
+              "timestamp": 1771493699.1713831,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2ba9c6b1-7dcb-44ee-a651-978ec5713d7d",
+              "content": "医生建议：烧伤创面愈合后需早期进行抗瘢痕治疗",
+              "timestamp": 1771493710.4561324,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "9aff7b9a-f88a-404c-acd7-bd1488898e22",
+              "content": "本次诊断：化脓性中耳炎并左侧鼓膜穿孔",
+              "timestamp": 1771493722.7027707,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "0de86a35-0e3f-44ef-a675-894dc84a2638",
+              "content": "医嘱：可在家用双氧水洗耳",
+              "timestamp": 1771493722.7027812,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "e6043497-1b49-4bcd-9a79-88dc78eb6fc7",
+              "content": "出生时使用助产钳导致双眼损伤，未及时治疗",
+              "timestamp": 1771493732.397317,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "561674c8-c516-4690-9a57-9a5564d6975c",
+              "content": "右眼虹膜粘连",
+              "timestamp": 1771493732.3973253,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "913ade0f-9840-4184-baa2-eda4f67c3f8e",
+              "content": "右眼眼底损伤",
+              "timestamp": 1771493732.3973296,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "2ed73cdd-08ac-45db-b795-2024ed7c4525",
+              "content": "右眼视力极差，仅约5米光感",
+              "timestamp": 1771493732.3973346,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "如果眼底损伤了，很难手术治疗，建议做低视力验配。",
+        "to_memory": [
+          "history: 右眼虹膜粘连，双眼震颤（左眼轻微），右眼视力仅约5米光感；存在眼底损伤；为产钳助产相关双眼损伤后未及时治疗所致；目前上五年级视力吃力",
+          "history: 医生建议：眼底损伤手术治疗困难，建议进行低视力验配"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d4db607b-1147-43b4-89c6-82a10cf9242d",
+              "content": "当前症状为双眼震颤（左眼轻微、右眼更明显）",
+              "timestamp": 1771493732.3973386,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "d3c8ec74-5c50-4203-a0aa-88f9acb7acd1",
+              "content": "目前上五年级，因视力问题学习/用眼吃力",
+              "timestamp": 1771493732.3973427,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "identity": [
+            {
+              "id": "a041fc1c-5cfe-4b21-a01e-c6d7ee1b65a7",
+              "content": "患者为女童，目前上五年级（提示年龄已非2周岁）",
+              "timestamp": 1771493699.1713746,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "14cb6ab6-e506-4f5c-ae3f-78b7e9e756fe",
+              "content": "患者提及“肺疾病”，曾在东台人民医院就诊（具体病情与检查未提供）",
+              "timestamp": 1771493683.8301995,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "3e0ba870-0f93-4c5a-9699-a69c9339f46c",
+              "content": "既往多次因鼻炎服药治疗",
+              "timestamp": 1771493691.5197814,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "a1b4d635-4a63-40fc-a2c6-c5d9e74e3ffa",
+              "content": "2009年11月（患儿约15个月）热水烫伤胳膊、肩膀及腋下；创面约2处，每处约3×1cm；积水潭医院医生判断为深二度/三度烫伤；愈合后瘢痕颜色变深、面积增大，瘙痒明显夜间抓挠",
+              "timestamp": 1771493699.1713831,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2ba9c6b1-7dcb-44ee-a651-978ec5713d7d",
+              "content": "医生建议：烧伤创面愈合后需早期进行抗瘢痕治疗",
+              "timestamp": 1771493710.4561324,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "9aff7b9a-f88a-404c-acd7-bd1488898e22",
+              "content": "本次诊断：化脓性中耳炎并左侧鼓膜穿孔",
+              "timestamp": 1771493722.7027707,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "0de86a35-0e3f-44ef-a675-894dc84a2638",
+              "content": "医嘱：可在家用双氧水洗耳",
+              "timestamp": 1771493722.7027812,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "e6043497-1b49-4bcd-9a79-88dc78eb6fc7",
+              "content": "出生时使用助产钳导致双眼损伤，未及时治疗",
+              "timestamp": 1771493732.397317,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "561674c8-c516-4690-9a57-9a5564d6975c",
+              "content": "右眼虹膜粘连",
+              "timestamp": 1771493732.3973253,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "913ade0f-9840-4184-baa2-eda4f67c3f8e",
+              "content": "右眼眼底损伤",
+              "timestamp": 1771493732.3973296,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "2ed73cdd-08ac-45db-b795-2024ed7c4525",
+              "content": "右眼视力极差，仅约5米光感",
+              "timestamp": 1771493732.3973346,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "dbec482d-f8b5-4e7b-a566-c58a04091b53",
+              "content": "医生建议：因眼底损伤手术治疗困难，建议进行低视力验配（低视力辅助器具/验配评估）",
+              "timestamp": 1771493741.2848916,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "关于孩子目前的眼部表现，家长在本次咨询中提到的主要症状是什么？",
+          "answer": "双眼震颤（左眼轻微、右眼更明显）",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "d4db607b-1147-43b4-89c6-82a10cf9242d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "chronic_followup",
+    "scenario_name": "慢性病随访管理",
+    "session_count": 5,
+    "group_key": "综合科"
+  }
+}

@@ -1,0 +1,1667 @@
+{
+  "patient_id": "552d5f395560",
+  "messages": [
+    {
+      "user": {
+        "content": "甲亢，",
+        "to_memory": [
+          "history: 既往诊断/病史提示甲状腺功能亢进（甲亢）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "甲状腺肿大严重吗？",
+        "to_memory": [
+          "history: 患者有甲亢（甲状腺功能亢进）病史/既往诊断",
+          "working: 医生询问甲状腺肿大是否严重（本次会话讨论问题）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "be9597dc-e2e9-43b3-a13f-d75255b63466",
+              "content": "本次会话医生询问甲状腺肿大是否严重",
+              "timestamp": 1771465918.7825978,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "bfe094b6-a67c-491d-92e2-318afdc88f9e",
+              "content": "患者有甲亢（甲状腺功能亢进）病史/既往诊断",
+              "timestamp": 1771465918.7825897,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "bfe094b6-a67c-491d-92e2-318afdc88f9e",
+              "content": "患者有甲亢（甲状腺功能亢进）病史/既往诊断",
+              "timestamp": 1771465918.7825897,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "眼睛近视，我近视从上初中的时候就开始啦，现在375°，现在职业是货车司机，想通过手术让视力恢复正常！所以向余大夫咨询下，我这种情况怎样处理，敬请恢复！",
+        "to_memory": [
+          "history: 既往提及甲亢",
+          "history: 近视自初中开始",
+          "identity: 职业为货车司机",
+          "history: 目前近视度数约375度，想通过手术恢复视力并咨询处理方案"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f2b77b66-87e3-4fe2-b40b-b70a5f49001b",
+              "content": "患者职业为货车司机",
+              "timestamp": 1771465923.0952828,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "bfe094b6-a67c-491d-92e2-318afdc88f9e",
+              "content": "患者有甲亢（甲状腺功能亢进）病史/既往诊断",
+              "timestamp": 1771465918.7825897,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "95cc5c97-addd-440d-bf20-fe285e49b2fc",
+              "content": "患者近视自初中开始",
+              "timestamp": 1771465923.0952737,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cf7c9878-7f42-43b2-821d-c1b516ceca2e",
+              "content": "患者目前近视度数约375度，想通过手术恢复视力并咨询处理方案",
+              "timestamp": 1771465923.0952876,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "把患者更早开始出现视力问题的时间点，与他这次咨询时提出的治疗目标联系起来：患者称自己的视力问题是从什么时候开始的？这次咨询希望通过什么方式达到什么目的？",
+          "answer": "近视从初中开始；希望通过手术恢复正常视力。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "cf7c9878-7f42-43b2-821d-c1b516ceca2e",
+                "95cc5c97-addd-440d-bf20-fe285e49b2fc"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可以考虑通过手术矫正。",
+        "to_memory": [
+          "history: 既往/当前诊断提及甲亢",
+          "identity: 职业为货车司机",
+          "history: 近视自初中开始，目前约375度",
+          "history: 医生建议可考虑通过手术进行视力矫正"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f2b77b66-87e3-4fe2-b40b-b70a5f49001b",
+              "content": "患者职业为货车司机",
+              "timestamp": 1771465923.0952828,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "bfe094b6-a67c-491d-92e2-318afdc88f9e",
+              "content": "患者有甲亢（甲状腺功能亢进）病史/既往诊断",
+              "timestamp": 1771465918.7825897,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "95cc5c97-addd-440d-bf20-fe285e49b2fc",
+              "content": "患者近视自初中开始",
+              "timestamp": 1771465923.0952737,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cf7c9878-7f42-43b2-821d-c1b516ceca2e",
+              "content": "患者目前近视度数约375度，想通过手术恢复视力并咨询处理方案",
+              "timestamp": 1771465923.0952876,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在咨询中提到希望进行视力相关手术治疗；从职业安全角度看，需要先核对其从事的具体工作是什么，以评估术后恢复期对工作是否有影响。该患者的职业是什么？",
+          "answer": "货车司机",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "bfe094b6-a67c-491d-92e2-318afdc88f9e"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "f2b77b66-87e3-4fe2-b40b-b70a5f49001b"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            3,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f2b77b66-87e3-4fe2-b40b-b70a5f49001b",
+              "content": "患者职业为货车司机",
+              "timestamp": 1771465923.0952828,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "bfe094b6-a67c-491d-92e2-318afdc88f9e",
+              "content": "患者有甲亢（甲状腺功能亢进）病史/既往诊断",
+              "timestamp": 1771465918.7825897,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "95cc5c97-addd-440d-bf20-fe285e49b2fc",
+              "content": "患者近视自初中开始",
+              "timestamp": 1771465923.0952737,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cf7c9878-7f42-43b2-821d-c1b516ceca2e",
+              "content": "患者目前近视度数约375度，想通过手术恢复视力并咨询处理方案",
+              "timestamp": 1771465923.0952876,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "小孩近7个月得了湿疹，要多长时间恢复？，",
+        "to_memory": [
+          "history: 既往提及甲亢",
+          "history: 既往近视，自初中开始，目前约375度；职业货车司机；医生建议可考虑手术矫正视力",
+          "working: 本次咨询：小孩（约7个月）患湿疹，询问恢复时间"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b0607c37-25ef-4220-84bc-88ea1bb1261a",
+              "content": "本次咨询：小孩（约7个月）患湿疹，询问恢复时间",
+              "timestamp": 1771465941.9936533,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "f2b77b66-87e3-4fe2-b40b-b70a5f49001b",
+              "content": "患者职业为货车司机",
+              "timestamp": 1771465923.0952828,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "bfe094b6-a67c-491d-92e2-318afdc88f9e",
+              "content": "患者有甲亢（甲状腺功能亢进）病史/既往诊断",
+              "timestamp": 1771465918.7825897,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "95cc5c97-addd-440d-bf20-fe285e49b2fc",
+              "content": "患者近视自初中开始",
+              "timestamp": 1771465923.0952737,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cf7c9878-7f42-43b2-821d-c1b516ceca2e",
+              "content": "患者目前近视度数约375度，想通过手术恢复视力并咨询处理方案",
+              "timestamp": 1771465923.0952876,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你好！可以在医生的指导下外用尤卓尔（不超过一周）、氧化锌、炉甘石洗剂及润肤霜等，如果面积大，较为顽固，也可以加用一些口服药抗过敏。",
+        "to_memory": [
+          "history: 甲亢（既往提及）",
+          "history: 近视约375度，自初中开始；职业为货车司机；曾咨询屈光手术，医生表示可考虑手术矫正",
+          "working: 患儿约7个月，主诉湿疹，询问恢复时间",
+          "history: 医生建议湿疹可在指导下外用尤卓尔（不超过1周）、氧化锌、炉甘石洗剂、润肤霜；面积大/顽固可加用口服抗过敏药"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "b0607c37-25ef-4220-84bc-88ea1bb1261a",
+              "content": "本次咨询：小孩（约7个月）患湿疹，询问恢复时间",
+              "timestamp": 1771465941.9936533,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "f2b77b66-87e3-4fe2-b40b-b70a5f49001b",
+              "content": "患者职业为货车司机",
+              "timestamp": 1771465923.0952828,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "bfe094b6-a67c-491d-92e2-318afdc88f9e",
+              "content": "患者有甲亢（甲状腺功能亢进）病史/既往诊断",
+              "timestamp": 1771465918.7825897,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "95cc5c97-addd-440d-bf20-fe285e49b2fc",
+              "content": "患者近视自初中开始，约375度",
+              "timestamp": 1771465923.0952737,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cf7c9878-7f42-43b2-821d-c1b516ceca2e",
+              "content": "患者目前近视度数约375度，想通过手术恢复视力并咨询处理方案",
+              "timestamp": 1771465923.0952876,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5b63f22-700d-42c9-9dab-d6b0370e46be",
+              "content": "湿疹治疗建议：可在指导下外用尤卓尔（不超过1周）、氧化锌、炉甘石洗剂、润肤霜；面积大/顽固可加用口服抗过敏药",
+              "timestamp": 1771465947.4264336,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f2b77b66-87e3-4fe2-b40b-b70a5f49001b",
+              "content": "患者职业为货车司机",
+              "timestamp": 1771465923.0952828,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "bfe094b6-a67c-491d-92e2-318afdc88f9e",
+              "content": "患者有甲亢（甲状腺功能亢进）病史/既往诊断",
+              "timestamp": 1771465918.7825897,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "95cc5c97-addd-440d-bf20-fe285e49b2fc",
+              "content": "患者近视自初中开始，约375度",
+              "timestamp": 1771465923.0952737,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cf7c9878-7f42-43b2-821d-c1b516ceca2e",
+              "content": "患者目前近视度数约375度，想通过手术恢复视力并咨询处理方案",
+              "timestamp": 1771465923.0952876,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5b63f22-700d-42c9-9dab-d6b0370e46be",
+              "content": "湿疹治疗建议：可在指导下外用尤卓尔（不超过1周）、氧化锌、炉甘石洗剂、润肤霜；面积大/顽固可加用口服抗过敏药",
+              "timestamp": 1771465947.4264336,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "被开水烫伤，一个月前，被开水烫伤，当时红肿12天以后起水泡，现在蜕皮了。",
+        "to_memory": [
+          "history: 既往有甲亢",
+          "history: 既往近视，约375度（初中起）",
+          "history: 职业为货车司机",
+          "working: 1个月前被开水烫伤",
+          "working: 烫伤后当时红肿，持续约12天后起水泡",
+          "working: 目前已蜕皮"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e775a598-65dd-49d9-be0e-cee601306f23",
+              "content": "患者1个月前被开水烫伤；当时出现红肿，约持续12天后起水泡；目前已蜕皮",
+              "timestamp": 1771465952.0614512,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "f2b77b66-87e3-4fe2-b40b-b70a5f49001b",
+              "content": "患者职业为货车司机",
+              "timestamp": 1771465923.0952828,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "bfe094b6-a67c-491d-92e2-318afdc88f9e",
+              "content": "患者有甲亢（甲状腺功能亢进）病史/既往诊断",
+              "timestamp": 1771465918.7825897,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "95cc5c97-addd-440d-bf20-fe285e49b2fc",
+              "content": "患者近视自初中开始，约375度",
+              "timestamp": 1771465923.0952737,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cf7c9878-7f42-43b2-821d-c1b516ceca2e",
+              "content": "患者目前近视度数约375度，想通过手术恢复视力并咨询处理方案",
+              "timestamp": 1771465923.0952876,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5b63f22-700d-42c9-9dab-d6b0370e46be",
+              "content": "湿疹治疗建议：可在指导下外用尤卓尔（不超过1周）、氧化锌、炉甘石洗剂、润肤霜；面积大/顽固可加用口服抗过敏药",
+              "timestamp": 1771465947.4264336,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "估计是感染.控制感染不是靠用抗菌素,应该积极处理创面,建议用烧烫宁(磺胺嘧啶银)换药.",
+        "to_memory": [
+          "working: 1个月前开水烫伤，红肿约12天后起水泡，目前已蜕皮；医生估计存在感染可能",
+          "history: 医生建议积极处理创面并换药，使用烧烫宁（磺胺嘧啶银），不主张仅靠抗菌素控制感染"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "e775a598-65dd-49d9-be0e-cee601306f23",
+              "content": "患者1个月前被开水烫伤；当时出现红肿，约持续12天后起水泡；目前已蜕皮；医生估计存在感染可能",
+              "timestamp": 1771465952.0614512,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "f2b77b66-87e3-4fe2-b40b-b70a5f49001b",
+              "content": "患者职业为货车司机",
+              "timestamp": 1771465923.0952828,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "bfe094b6-a67c-491d-92e2-318afdc88f9e",
+              "content": "患者有甲亢（甲状腺功能亢进）病史/既往诊断",
+              "timestamp": 1771465918.7825897,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "95cc5c97-addd-440d-bf20-fe285e49b2fc",
+              "content": "患者近视自初中开始，约375度",
+              "timestamp": 1771465923.0952737,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cf7c9878-7f42-43b2-821d-c1b516ceca2e",
+              "content": "患者目前近视度数约375度，想通过手术恢复视力并咨询处理方案",
+              "timestamp": 1771465923.0952876,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5b63f22-700d-42c9-9dab-d6b0370e46be",
+              "content": "湿疹治疗建议：可在指导下外用尤卓尔（不超过1周）、氧化锌、炉甘石洗剂、润肤霜；面积大/顽固可加用口服抗过敏药",
+              "timestamp": 1771465947.4264336,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "548c3169-1bfe-4813-967b-11cf9306cb9f",
+              "content": "烫伤处理建议：积极处理创面并换药；使用烧烫宁/磺胺嘧啶银；不主张仅靠抗菌素控制感染",
+              "timestamp": 1771465957.830141,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者目前这次皮肤损伤的阶段性表现与医生对其风险判断之间，是否存在需要特别核对的安全隐患？请指出医生当时重点担心的那一类问题是什么。",
+          "answer": "医生估计可能存在感染风险。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "cf7c9878-7f42-43b2-821d-c1b516ceca2e"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "e775a598-65dd-49d9-be0e-cee601306f23"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            7,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f2b77b66-87e3-4fe2-b40b-b70a5f49001b",
+              "content": "患者职业为货车司机",
+              "timestamp": 1771465923.0952828,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "bfe094b6-a67c-491d-92e2-318afdc88f9e",
+              "content": "患者有甲亢（甲状腺功能亢进）病史/既往诊断",
+              "timestamp": 1771465918.7825897,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "95cc5c97-addd-440d-bf20-fe285e49b2fc",
+              "content": "患者近视自初中开始，约375度",
+              "timestamp": 1771465923.0952737,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cf7c9878-7f42-43b2-821d-c1b516ceca2e",
+              "content": "患者目前近视度数约375度，想通过手术恢复视力并咨询处理方案",
+              "timestamp": 1771465923.0952876,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5b63f22-700d-42c9-9dab-d6b0370e46be",
+              "content": "湿疹治疗建议：可在指导下外用尤卓尔（不超过1周）、氧化锌、炉甘石洗剂、润肤霜；面积大/顽固可加用口服抗过敏药",
+              "timestamp": 1771465947.4264336,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "548c3169-1bfe-4813-967b-11cf9306cb9f",
+              "content": "烫伤处理建议：积极处理创面并换药；使用烧烫宁/磺胺嘧啶银；不主张仅靠抗菌素控制感染",
+              "timestamp": 1771465957.830141,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "可能是肩周炎，",
+        "to_memory": [
+          "history: 患者自述可能是肩周炎（尚未确诊）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f2b77b66-87e3-4fe2-b40b-b70a5f49001b",
+              "content": "患者职业为货车司机",
+              "timestamp": 1771465923.0952828,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "bfe094b6-a67c-491d-92e2-318afdc88f9e",
+              "content": "患者有甲亢（甲状腺功能亢进）病史/既往诊断",
+              "timestamp": 1771465918.7825897,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "95cc5c97-addd-440d-bf20-fe285e49b2fc",
+              "content": "患者近视自初中开始，约375度",
+              "timestamp": 1771465923.0952737,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cf7c9878-7f42-43b2-821d-c1b516ceca2e",
+              "content": "患者目前近视度数约375度，想通过手术恢复视力并咨询处理方案",
+              "timestamp": 1771465923.0952876,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5b63f22-700d-42c9-9dab-d6b0370e46be",
+              "content": "湿疹治疗建议：可在指导下外用尤卓尔（不超过1周）、氧化锌、炉甘石洗剂、润肤霜；面积大/顽固可加用口服抗过敏药",
+              "timestamp": 1771465947.4264336,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "548c3169-1bfe-4813-967b-11cf9306cb9f",
+              "content": "烫伤处理建议：积极处理创面并换药；使用烧烫宁/磺胺嘧啶银；不主张仅靠抗菌素控制感染",
+              "timestamp": 1771465957.830141,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "926800ea-ca3e-463c-b5b2-503c3d2dabb8",
+              "content": "患者自述可能是肩周炎（尚未确诊）",
+              "timestamp": 1771465962.2918274,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者在更早一次就诊中提到的既往内分泌相关疾病史，与后来一次就诊中提到的视力相关既往情况：这两次分别提到的具体既往问题是什么？",
+          "answer": "既往有甲亢；近视自初中开始，约375度",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "bfe094b6-a67c-491d-92e2-318afdc88f9e",
+                "95cc5c97-addd-440d-bf20-fe285e49b2fc"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            11,
+            9
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你好，请问除了手臂不能上举，有没有伴有疼痛等症状。还有，不知道有没有外伤，如果因为劳损导致的功能受限，考虑为肩周炎，加强功能锻炼。",
+        "to_memory": [
+          "working: 主诉疑似肩周炎，表现为手臂不能上举，是否伴疼痛及是否有外伤待确认",
+          "working: 医生推测若为劳损导致功能受限则考虑肩周炎，建议加强功能锻炼"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f2b77b66-87e3-4fe2-b40b-b70a5f49001b",
+              "content": "患者职业为货车司机",
+              "timestamp": 1771465923.0952828,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "bfe094b6-a67c-491d-92e2-318afdc88f9e",
+              "content": "患者有甲亢（甲状腺功能亢进）病史/既往诊断",
+              "timestamp": 1771465918.7825897,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "95cc5c97-addd-440d-bf20-fe285e49b2fc",
+              "content": "患者近视自初中开始，约375度",
+              "timestamp": 1771465923.0952737,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cf7c9878-7f42-43b2-821d-c1b516ceca2e",
+              "content": "患者目前近视度数约375度，想通过手术恢复视力并咨询处理方案",
+              "timestamp": 1771465923.0952876,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5b63f22-700d-42c9-9dab-d6b0370e46be",
+              "content": "湿疹治疗建议：可在指导下外用尤卓尔（不超过1周）、氧化锌、炉甘石洗剂、润肤霜；面积大/顽固可加用口服抗过敏药",
+              "timestamp": 1771465947.4264336,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "548c3169-1bfe-4813-967b-11cf9306cb9f",
+              "content": "烫伤处理建议：积极处理创面并换药；使用烧烫宁/磺胺嘧啶银；不主张仅靠抗菌素控制感染",
+              "timestamp": 1771465957.830141,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "926800ea-ca3e-463c-b5b2-503c3d2dabb8",
+              "content": "患者主诉疑似肩周炎（尚未确诊），表现为手臂不能上举；是否伴疼痛及是否有外伤待确认。医生推测若为劳损导致功能受限则考虑肩周炎，建议加强功能锻炼。",
+              "timestamp": 1771465962.2918274,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "请回忆在最初关于皮肤问题的那次咨询中，医生给出的用药与护理方案具体包括哪些；若症状范围较大或反复不易好转，当时医生还建议可以如何调整治疗？",
+          "answer": "在医生指导下外用尤卓尔（不超过1周）、氧化锌、炉甘石洗剂及润肤霜；若面积大或顽固可加用口服抗过敏药。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "bfe094b6-a67c-491d-92e2-318afdc88f9e",
+                "b5b63f22-700d-42c9-9dab-d6b0370e46be"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            12,
+            6
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f2b77b66-87e3-4fe2-b40b-b70a5f49001b",
+              "content": "患者职业为货车司机",
+              "timestamp": 1771465923.0952828,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "bfe094b6-a67c-491d-92e2-318afdc88f9e",
+              "content": "患者有甲亢（甲状腺功能亢进）病史/既往诊断",
+              "timestamp": 1771465918.7825897,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "95cc5c97-addd-440d-bf20-fe285e49b2fc",
+              "content": "患者近视自初中开始，约375度",
+              "timestamp": 1771465923.0952737,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cf7c9878-7f42-43b2-821d-c1b516ceca2e",
+              "content": "患者目前近视度数约375度，想通过手术恢复视力并咨询处理方案",
+              "timestamp": 1771465923.0952876,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5b63f22-700d-42c9-9dab-d6b0370e46be",
+              "content": "湿疹治疗建议：可在指导下外用尤卓尔（不超过1周）、氧化锌、炉甘石洗剂、润肤霜；面积大/顽固可加用口服抗过敏药",
+              "timestamp": 1771465947.4264336,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "548c3169-1bfe-4813-967b-11cf9306cb9f",
+              "content": "烫伤处理建议：积极处理创面并换药；使用烧烫宁/磺胺嘧啶银；不主张仅靠抗菌素控制感染",
+              "timestamp": 1771465957.830141,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "926800ea-ca3e-463c-b5b2-503c3d2dabb8",
+              "content": "患者主诉疑似肩周炎（尚未确诊），表现为手臂不能上举；是否伴疼痛及是否有外伤待确认。医生推测若为劳损导致功能受限则考虑肩周炎，建议加强功能锻炼。",
+              "timestamp": 1771465962.2918274,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "右腿胫骨骨折，您好，两个月前我右腿胫骨骨折，骨折后第五天进行髓内针手术。",
+        "to_memory": [
+          "history: 2个月前右腿胫骨骨折",
+          "history: 骨折后第5天行髓内针内固定手术（右胫骨髓内钉）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f2b77b66-87e3-4fe2-b40b-b70a5f49001b",
+              "content": "患者职业为货车司机",
+              "timestamp": 1771465923.0952828,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "bfe094b6-a67c-491d-92e2-318afdc88f9e",
+              "content": "患者有甲亢（甲状腺功能亢进）病史/既往诊断",
+              "timestamp": 1771465918.7825897,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "95cc5c97-addd-440d-bf20-fe285e49b2fc",
+              "content": "患者近视自初中开始，约375度",
+              "timestamp": 1771465923.0952737,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cf7c9878-7f42-43b2-821d-c1b516ceca2e",
+              "content": "患者目前近视度数约375度，想通过手术恢复视力并咨询处理方案",
+              "timestamp": 1771465923.0952876,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5b63f22-700d-42c9-9dab-d6b0370e46be",
+              "content": "湿疹治疗建议：可在指导下外用尤卓尔（不超过1周）、氧化锌、炉甘石洗剂、润肤霜；面积大/顽固可加用口服抗过敏药",
+              "timestamp": 1771465947.4264336,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "548c3169-1bfe-4813-967b-11cf9306cb9f",
+              "content": "烫伤处理建议：积极处理创面并换药；使用烧烫宁/磺胺嘧啶银；不主张仅靠抗菌素控制感染",
+              "timestamp": 1771465957.830141,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "926800ea-ca3e-463c-b5b2-503c3d2dabb8",
+              "content": "患者主诉疑似肩周炎（尚未确诊），表现为手臂不能上举；是否伴疼痛及是否有外伤待确认。医生推测若为劳损导致功能受限则考虑肩周炎，建议加强功能锻炼。",
+              "timestamp": 1771465962.2918274,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "59835722-3d86-47f4-9cfc-0baf3bbefa91",
+              "content": "患者2个月前右腿胫骨骨折",
+              "timestamp": 1771465974.8808973,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "539b303c-366a-429a-a12c-bf0f7b465cf2",
+              "content": "患者右胫骨骨折后第5天行髓内针内固定手术（右胫骨髓内钉）",
+              "timestamp": 1771465974.88091,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在一次就诊中描述过自己下肢骨折后接受了内固定手术。请核对：他提到的手术时点与当前病程描述是否一致？如不一致，具体是骨折后第几天做的什么手术？",
+          "answer": "患者右胫骨骨折后第5天行髓内针内固定手术（右胫骨髓内钉）。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b5b63f22-700d-42c9-9dab-d6b0370e46be",
+                "539b303c-366a-429a-a12c-bf0f7b465cf2"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            8,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "如果拍片有骨痂生长，那么就可以完全负重，不需要拐杖了，如果愈合欠佳，那么就只能部分负重，一般不超过体重的五分之一。6个月还是没有骨痂，就需要再次手术。其他的包括膝关节活动和大腿肌肉力量的练习都不能忽视。",
+        "to_memory": [
+          "history: 右腿胫骨骨折，骨折后第5天已行髓内针内固定手术（约2个月前）",
+          "history: 医嘱/随访建议：拍片若见骨痂生长可完全负重并停用拐杖；若愈合欠佳仅可部分负重（一般不超过体重的1/5）；若6个月仍无骨痂需考虑再次手术；需重视膝关节活动训练及大腿肌力练习"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f2b77b66-87e3-4fe2-b40b-b70a5f49001b",
+              "content": "患者职业为货车司机",
+              "timestamp": 1771465923.0952828,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "bfe094b6-a67c-491d-92e2-318afdc88f9e",
+              "content": "患者有甲亢（甲状腺功能亢进）病史/既往诊断",
+              "timestamp": 1771465918.7825897,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "95cc5c97-addd-440d-bf20-fe285e49b2fc",
+              "content": "患者近视自初中开始，约375度",
+              "timestamp": 1771465923.0952737,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cf7c9878-7f42-43b2-821d-c1b516ceca2e",
+              "content": "患者目前近视度数约375度，想通过手术恢复视力并咨询处理方案",
+              "timestamp": 1771465923.0952876,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5b63f22-700d-42c9-9dab-d6b0370e46be",
+              "content": "湿疹治疗建议：可在指导下外用尤卓尔（不超过1周）、氧化锌、炉甘石洗剂、润肤霜；面积大/顽固可加用口服抗过敏药",
+              "timestamp": 1771465947.4264336,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "548c3169-1bfe-4813-967b-11cf9306cb9f",
+              "content": "烫伤处理建议：积极处理创面并换药；使用烧烫宁/磺胺嘧啶银；不主张仅靠抗菌素控制感染",
+              "timestamp": 1771465957.830141,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "926800ea-ca3e-463c-b5b2-503c3d2dabb8",
+              "content": "患者主诉疑似肩周炎（尚未确诊），表现为手臂不能上举；是否伴疼痛及是否有外伤待确认。医生推测若为劳损导致功能受限则考虑肩周炎，建议加强功能锻炼。",
+              "timestamp": 1771465962.2918274,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "59835722-3d86-47f4-9cfc-0baf3bbefa91",
+              "content": "患者2个月前右腿胫骨骨折",
+              "timestamp": 1771465974.8808973,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "539b303c-366a-429a-a12c-bf0f7b465cf2",
+              "content": "患者右胫骨骨折后第5天行髓内针内固定手术（右胫骨髓内钉）",
+              "timestamp": 1771465974.88091,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "b7098d72-5809-4248-be0f-5f950288d663",
+              "content": "右胫骨骨折术后随访/医嘱：拍片若见骨痂生长可完全负重并停用拐杖；若愈合欠佳仅可部分负重（一般不超过体重的1/5）；若6个月仍无骨痂需考虑再次手术；需重视膝关节活动训练及大腿肌力练习。",
+              "timestamp": 1771465984.4116805,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在本次就诊记录中，患者曾提到一个与视力相关的既往情况。若医生计划开具或建议使用可能影响视力的药物/处理措施，首先需要核对患者既往的哪一项具体视力情况（起始时间与程度）以避免安全风险？",
+          "answer": "患者近视自初中开始，约375度",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "95cc5c97-addd-440d-bf20-fe285e49b2fc",
+                "59835722-3d86-47f4-9cfc-0baf3bbefa91"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            13,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "f2b77b66-87e3-4fe2-b40b-b70a5f49001b",
+              "content": "患者职业为货车司机",
+              "timestamp": 1771465923.0952828,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "bfe094b6-a67c-491d-92e2-318afdc88f9e",
+              "content": "患者有甲亢（甲状腺功能亢进）病史/既往诊断",
+              "timestamp": 1771465918.7825897,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "95cc5c97-addd-440d-bf20-fe285e49b2fc",
+              "content": "患者近视自初中开始，约375度",
+              "timestamp": 1771465923.0952737,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cf7c9878-7f42-43b2-821d-c1b516ceca2e",
+              "content": "患者目前近视度数约375度，想通过手术恢复视力并咨询处理方案",
+              "timestamp": 1771465923.0952876,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5b63f22-700d-42c9-9dab-d6b0370e46be",
+              "content": "湿疹治疗建议：可在指导下外用尤卓尔（不超过1周）、氧化锌、炉甘石洗剂、润肤霜；面积大/顽固可加用口服抗过敏药",
+              "timestamp": 1771465947.4264336,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "548c3169-1bfe-4813-967b-11cf9306cb9f",
+              "content": "烫伤处理建议：积极处理创面并换药；使用烧烫宁/磺胺嘧啶银；不主张仅靠抗菌素控制感染",
+              "timestamp": 1771465957.830141,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "926800ea-ca3e-463c-b5b2-503c3d2dabb8",
+              "content": "患者主诉疑似肩周炎（尚未确诊），表现为手臂不能上举；是否伴疼痛及是否有外伤待确认。医生推测若为劳损导致功能受限则考虑肩周炎，建议加强功能锻炼。",
+              "timestamp": 1771465962.2918274,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "59835722-3d86-47f4-9cfc-0baf3bbefa91",
+              "content": "患者2个月前右腿胫骨骨折",
+              "timestamp": 1771465974.8808973,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "539b303c-366a-429a-a12c-bf0f7b465cf2",
+              "content": "患者右胫骨骨折后第5天行髓内针内固定手术（右胫骨髓内钉）",
+              "timestamp": 1771465974.88091,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "b7098d72-5809-4248-be0f-5f950288d663",
+              "content": "右胫骨骨折术后随访/医嘱：拍片若见骨痂生长可完全负重并停用拐杖；若愈合欠佳仅可部分负重（一般不超过体重的1/5）；若6个月仍无骨痂需考虑再次手术；需重视膝关节活动训练及大腿肌力练习。",
+              "timestamp": 1771465984.4116805,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "肌无力，四肢无力早轻下午重的变化偶尔伴有肌肉刺痛在初中后稍微发现之后就稍重但是变化不大。",
+        "to_memory": [
+          "history: 右腿胫骨骨折（2个月前），骨折后第5天行髓内针内固定手术",
+          "history: 1个月前开水烫伤，红肿约12天后起水泡，目前蜕皮；医生曾考虑感染并建议用烧烫宁（磺胺嘧啶银）换药",
+          "working: 主诉肌无力/四肢无力，呈早轻下午重，偶有肌肉刺痛；初中后开始发现，之后稍重但总体变化不大"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "1458d3c2-c330-4fc1-99c1-e95a4c8338a6",
+              "content": "主诉肌无力/四肢无力，呈早轻下午重，偶有肌肉刺痛；初中后开始发现，之后稍重但总体变化不大",
+              "timestamp": 1771465992.5034773,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "identity": [
+            {
+              "id": "f2b77b66-87e3-4fe2-b40b-b70a5f49001b",
+              "content": "患者职业为货车司机",
+              "timestamp": 1771465923.0952828,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "bfe094b6-a67c-491d-92e2-318afdc88f9e",
+              "content": "患者有甲亢（甲状腺功能亢进）病史/既往诊断",
+              "timestamp": 1771465918.7825897,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "95cc5c97-addd-440d-bf20-fe285e49b2fc",
+              "content": "患者近视自初中开始，约375度",
+              "timestamp": 1771465923.0952737,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cf7c9878-7f42-43b2-821d-c1b516ceca2e",
+              "content": "患者目前近视度数约375度，想通过手术恢复视力并咨询处理方案",
+              "timestamp": 1771465923.0952876,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5b63f22-700d-42c9-9dab-d6b0370e46be",
+              "content": "湿疹治疗建议：可在指导下外用尤卓尔（不超过1周）、氧化锌、炉甘石洗剂、润肤霜；面积大/顽固可加用口服抗过敏药",
+              "timestamp": 1771465947.4264336,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "548c3169-1bfe-4813-967b-11cf9306cb9f",
+              "content": "烫伤处理建议：积极处理创面并换药；使用烧烫宁/磺胺嘧啶银；不主张仅靠抗菌素控制感染",
+              "timestamp": 1771465957.830141,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "926800ea-ca3e-463c-b5b2-503c3d2dabb8",
+              "content": "患者主诉疑似肩周炎（尚未确诊），表现为手臂不能上举；是否伴疼痛及是否有外伤待确认。医生推测若为劳损导致功能受限则考虑肩周炎，建议加强功能锻炼。",
+              "timestamp": 1771465962.2918274,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "59835722-3d86-47f4-9cfc-0baf3bbefa91",
+              "content": "患者2个月前右腿胫骨骨折",
+              "timestamp": 1771465974.8808973,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "539b303c-366a-429a-a12c-bf0f7b465cf2",
+              "content": "患者右胫骨骨折后第5天行髓内针内固定手术（右胫骨髓内钉）",
+              "timestamp": 1771465974.88091,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "b7098d72-5809-4248-be0f-5f950288d663",
+              "content": "右胫骨骨折术后随访/医嘱：拍片若见骨痂生长可完全负重并停用拐杖；若愈合欠佳仅可部分负重（一般不超过体重的1/5）；若6个月仍无骨痂需考虑再次手术；需重视膝关节活动训练及大腿肌力练习。",
+              "timestamp": 1771465984.4116805,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "4a2702ca-8f3f-4b8b-b014-cc451ae61aaa",
+              "content": "患者1个月前开水烫伤，红肿约12天后起水泡，目前蜕皮；医生曾考虑感染并建议用烧烫宁（磺胺嘧啶银）换药",
+              "timestamp": 1771465992.503468,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "在患者最早一次就诊时提到过的既往疾病史是什么？把它与本次就诊所描述的主要不适联系起来，医生需要重点考虑哪一项既往史因素？",
+          "answer": "甲亢（甲状腺功能亢进）病史",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "bfe094b6-a67c-491d-92e2-318afdc88f9e"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "1458d3c2-c330-4fc1-99c1-e95a4c8338a6"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            17,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "最终肌无力的诊断是什么，请告知。建议你检查肌电图除外重症肌无力，这是可治的病。如果诊断肌营养不良，则目前没有特效药。",
+        "to_memory": [
+          "history: 医生建议检查肌电图以排除重症肌无力（可治）；若诊断为肌营养不良，目前无特效药",
+          "history: 当前问题为“最终肌无力的诊断是什么”"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "1458d3c2-c330-4fc1-99c1-e95a4c8338a6",
+              "content": "主诉肌无力/四肢无力，呈早轻下午重，偶有肌肉刺痛；初中后开始发现，之后稍重但总体变化不大",
+              "timestamp": 1771465992.5034773,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "identity": [
+            {
+              "id": "f2b77b66-87e3-4fe2-b40b-b70a5f49001b",
+              "content": "患者职业为货车司机",
+              "timestamp": 1771465923.0952828,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "bfe094b6-a67c-491d-92e2-318afdc88f9e",
+              "content": "患者有甲亢（甲状腺功能亢进）病史/既往诊断",
+              "timestamp": 1771465918.7825897,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "95cc5c97-addd-440d-bf20-fe285e49b2fc",
+              "content": "患者近视自初中开始，约375度",
+              "timestamp": 1771465923.0952737,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cf7c9878-7f42-43b2-821d-c1b516ceca2e",
+              "content": "患者目前近视度数约375度，想通过手术恢复视力并咨询处理方案",
+              "timestamp": 1771465923.0952876,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "b5b63f22-700d-42c9-9dab-d6b0370e46be",
+              "content": "湿疹治疗建议：可在指导下外用尤卓尔（不超过1周）、氧化锌、炉甘石洗剂、润肤霜；面积大/顽固可加用口服抗过敏药",
+              "timestamp": 1771465947.4264336,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "548c3169-1bfe-4813-967b-11cf9306cb9f",
+              "content": "烫伤处理建议：积极处理创面并换药；使用烧烫宁/磺胺嘧啶银；不主张仅靠抗菌素控制感染",
+              "timestamp": 1771465957.830141,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "926800ea-ca3e-463c-b5b2-503c3d2dabb8",
+              "content": "患者主诉疑似肩周炎（尚未确诊），表现为手臂不能上举；是否伴疼痛及是否有外伤待确认。医生推测若为劳损导致功能受限则考虑肩周炎，建议加强功能锻炼。",
+              "timestamp": 1771465962.2918274,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "59835722-3d86-47f4-9cfc-0baf3bbefa91",
+              "content": "患者2个月前右腿胫骨骨折",
+              "timestamp": 1771465974.8808973,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "539b303c-366a-429a-a12c-bf0f7b465cf2",
+              "content": "患者右胫骨骨折后第5天行髓内针内固定手术（右胫骨髓内钉）",
+              "timestamp": 1771465974.88091,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "b7098d72-5809-4248-be0f-5f950288d663",
+              "content": "右胫骨骨折术后随访/医嘱：拍片若见骨痂生长可完全负重并停用拐杖；若愈合欠佳仅可部分负重（一般不超过体重的1/5）；若6个月仍无骨痂需考虑再次手术；需重视膝关节活动训练及大腿肌力练习。",
+              "timestamp": 1771465984.4116805,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "4a2702ca-8f3f-4b8b-b014-cc451ae61aaa",
+              "content": "患者1个月前开水烫伤，红肿约12天后起水泡，目前蜕皮；医生曾考虑感染并建议用烧烫宁（磺胺嘧啶银）换药",
+              "timestamp": 1771465992.503468,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "421e8af6-5daf-4d86-9916-6e098b40819b",
+              "content": "医生建议完善肌电图检查以排除重症肌无力（可治疗）；若诊断为肌营养不良，目前无特效药。",
+              "timestamp": 1771465998.509525,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者在既往记录中登记的职业是什么？",
+          "answer": "货车司机",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "f2b77b66-87e3-4fe2-b40b-b70a5f49001b"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            16
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "postop_rehab",
+    "scenario_name": "术后康复管理",
+    "session_count": 7,
+    "group_key": "综合科"
+  }
+}

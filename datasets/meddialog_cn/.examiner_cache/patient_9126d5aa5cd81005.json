@@ -1,0 +1,3654 @@
+{
+  "patient_id": "b9eeebc57a2f",
+  "messages": [
+    {
+      "user": {
+        "content": "黄胆偏高，口服茴三硫，，熊胆舒肝利胆胶囊150天效果不佳。",
+        "to_memory": [
+          "history: 化验/检查提示胆红素（黄疸）偏高",
+          "history: 曾口服茴三硫治疗",
+          "history: 曾口服熊胆舒肝利胆胶囊治疗约150天，疗效不佳"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "53c21843-b4f8-4f3b-b9de-5bc2807280ae",
+              "content": "化验/检查提示胆红素（黄疸）偏高",
+              "timestamp": 1771494379.5006123,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "9affb09c-0b84-45cb-8236-8e6e162c5c5d",
+              "content": "曾口服茴三硫治疗",
+              "timestamp": 1771494379.5006206,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "033d1399-3247-4298-a27d-39548d1585d9",
+              "content": "曾口服熊胆舒肝利胆胶囊治疗约150天，疗效不佳",
+              "timestamp": 1771494379.5006251,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者此前口服某种用于护肝利胆的胶囊治疗持续了多长时间，效果如何？",
+          "answer": "口服熊胆舒肝利胆胶囊约150天，效果不佳。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "033d1399-3247-4298-a27d-39548d1585d9"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可考虑来南京市第二医院（三级甲等公立肝病专科医院），行肝穿病理检查，我院殷国庆主任已有大量类似病例的电镜结果。当然，23.3-28的总胆红素，不治疗定期随访或许更可取。",
+        "to_memory": [
+          "history: 既往化验提示总胆红素23.3-28（黄疸/胆红素偏高）",
+          "history: 曾口服茴三硫、熊胆舒肝利胆胶囊约150天，效果不佳",
+          "history: 医生建议可至南京市第二医院行肝穿刺病理检查（该院有类似病例电镜结果经验）",
+          "history: 医生建议总胆红素23.3-28可不治疗，定期随访"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "53c21843-b4f8-4f3b-b9de-5bc2807280ae",
+              "content": "既往化验提示总胆红素23.3-28（黄疸/胆红素偏高）",
+              "timestamp": 1771494379.5006123,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "9affb09c-0b84-45cb-8236-8e6e162c5c5d",
+              "content": "曾口服茴三硫治疗",
+              "timestamp": 1771494379.5006206,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "033d1399-3247-4298-a27d-39548d1585d9",
+              "content": "曾口服熊胆舒肝利胆胶囊治疗约150天，疗效不佳",
+              "timestamp": 1771494379.5006251,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fc294ddc-89b6-49c2-a96a-cb8d3a0b7e21",
+              "content": "医生建议可至南京市第二医院行肝穿刺病理检查（该院有类似病例电镜结果经验）",
+              "timestamp": 1771494386.8599622,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "fee3f22a-9a9f-4297-8985-c68c80c5488b",
+              "content": "医生建议总胆红素23.3-28可不治疗，定期随访",
+              "timestamp": 1771494386.8599703,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "医生对患者当前这次化验指标的处理策略与“需要进一步侵入性检查/积极用药”的倾向之间是否存在潜在的安全性冲突？请指出医生在对话中给出的处理策略。",
+          "answer": "医生认为该指标范围内可不治疗，定期随访可能更可取。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "fee3f22a-9a9f-4297-8985-c68c80c5488b",
+                "53c21843-b4f8-4f3b-b9de-5bc2807280ae"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "强制性脊柱炎，晚上睡觉翻身时腰骶骨区域疼痛，其他身体任何部位均不疼痛。",
+        "to_memory": [
+          "identity: 既往/基础疾病：强直性脊柱炎",
+          "working: 目前症状：夜间睡觉翻身时腰骶部区域疼痛；其余身体部位无疼痛"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d941acfa-55b2-42b6-8538-d3077f9ec550",
+              "content": "目前症状：夜间睡觉翻身时腰骶部区域疼痛；其余身体部位无疼痛",
+              "timestamp": 1771494392.7484915,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：强直性脊柱炎",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者在本次对话中描述的主要不适症状是什么？",
+          "answer": "夜间睡觉翻身时腰骶部区域疼痛，其他身体部位无疼痛",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "d941acfa-55b2-42b6-8538-d3077f9ec550"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "应该没有问题，但最好把图像上传看看。",
+        "to_memory": [
+          "working: 医生表示问题不大，但建议患者上传相关图像以便查看判断"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d941acfa-55b2-42b6-8538-d3077f9ec550",
+              "content": "目前症状：夜间睡觉翻身时腰骶部区域疼痛；其余身体部位无疼痛",
+              "timestamp": 1771494392.7484915,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ad2dd964-df7a-4bb4-bd24-2743440347fb",
+              "content": "医生表示问题不大，但建议患者上传相关图像以便进一步查看判断",
+              "timestamp": 1771494398.193918,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：强直性脊柱炎",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者在本次对话中提到自己既往患有什么基础疾病？",
+          "answer": "强直性脊柱炎",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "a3a156be-0e31-4424-bc44-b50d217b3e4d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：强直性脊柱炎",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "是上睑下垂还是重症肌无力，一出生右眼睛没睁开，后来睁开后就睁不大，再后来睁大一些了就有时大有时小，最大的时候几乎两个一样大，最小的时候还是遮盖半个眼球，睁大睁小和时间没关系，和吃饭说话也没关系，好像也没有出汗什么的症状，就是情绪好的时候两个眼睛大小差不多。",
+        "to_memory": [
+          "working: 自出生起右眼睑开睑异常/疑上睑下垂或重症肌无力；右眼出生时未睁开，后可睁开但一直睁不大，后期有所改善；右眼睑大小波动（有时大有时小），最大时接近双眼对称，最小时遮盖半个眼球",
+          "working: 右眼睑大小变化与时间无明显关系，与进食、说话无明显相关；无明显出汗等伴随症状；情绪好时双眼大小更接近"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a32a2709-8da3-4c75-93dc-0310205e643d",
+              "content": "自出生起右眼睑开睑异常，疑上睑下垂或重症肌无力；右眼出生时未睁开，后可睁开但一直睁不大，后期有所改善；右眼睑大小波动，最大时接近双眼对称，最小时遮盖半个眼球",
+              "timestamp": 1771494407.755514,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "cb57c8ae-0afc-44d2-9db0-ff601e61389e",
+              "content": "右眼睑大小变化与时间无明显关系，与进食、说话无明显相关；无明显出汗等伴随症状；情绪好时双眼大小更接近",
+              "timestamp": 1771494407.7555237,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：强直性脊柱炎",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者既往被明确诊断过的基础疾病是什么？这一既往诊断在本次咨询中是否需要作为当前症状评估的安全性/冲突检查点？请说明。",
+          "answer": "既往/基础疾病：强直性脊柱炎；需要作为评估当前症状时的潜在关联/冲突检查点。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "a32a2709-8da3-4c75-93dc-0310205e643d"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "a3a156be-0e31-4424-bc44-b50d217b3e4d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "应该是上睑下垂。",
+        "to_memory": [
+          "history: 医生判断为上睑下垂（与重症肌无力鉴别后倾向此诊断）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a32a2709-8da3-4c75-93dc-0310205e643d",
+              "content": "自出生起右眼睑开睑异常，疑上睑下垂或重症肌无力；右眼出生时未睁开，后可睁开但一直睁不大，后期有所改善；右眼睑大小波动，最大时接近双眼对称，最小时遮盖半个眼球；医生鉴别重症肌无力后更倾向诊断为上睑下垂",
+              "timestamp": 1771494407.755514,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "cb57c8ae-0afc-44d2-9db0-ff601e61389e",
+              "content": "右眼睑大小变化与时间无明显关系，与进食、说话无明显相关；无明显出汗等伴随症状；情绪好时双眼大小更接近",
+              "timestamp": 1771494407.7555237,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：强直性脊柱炎",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "上睑下垂中有这种时大时小的情况吗？会不会有神经方面的问题啊。好像没用力，有时候就是突然就上去了，像最后一张照片那样，有时候几乎可以睁全，不过仰视的时候，经常会遮盖比较多，不高兴或者不舒服的时候也总是耷拉着右眼的眼皮。是不是肌无力之类的病啊，有没有其他通过吃药或者打针什么的方法可以治愈啊。",
+        "to_memory": [
+          "history: 既往胆红素偏高（总胆红素约23.3–28），口服茴三硫、熊胆舒肝利胆胶囊约150天效果不佳；医生曾建议可至南京市第二医院行肝穿病理检查或不治疗定期随访",
+          "history: 既往自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+          "history: 右眼自出生起上睑下垂（右眼一出生未睁开，后可睁开但睁不大）；医生判断“应该是上睑下垂”",
+          "working: 目前关注右眼上睑下垂的波动性（时大时小、情绪差/不适时更明显；有时突然抬起可几乎睁全；仰视时遮盖更多），担心是否存在神经问题/重症肌无力，询问是否可通过吃药或打针治愈"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a32a2709-8da3-4c75-93dc-0310205e643d",
+              "content": "右眼自出生起上睑下垂：出生时右眼未睁开，后可睁开但一直睁不大；医生判断更倾向上睑下垂（曾鉴别重症肌无力）；眼睑大小有波动，最大时接近双眼对称，最小时可遮盖半个眼球",
+              "timestamp": 1771494407.755514,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "cb57c8ae-0afc-44d2-9db0-ff601e61389e",
+              "content": "右眼上睑下垂波动性：时大时小，情绪差/不适时更明显；有时突然抬起可几乎睁全；仰视时遮盖更多；与时间无明显关系，与进食/说话无明显相关；无明显出汗等伴随症状；情绪好时双眼大小更接近；患者担心神经问题/重症肌无力，询问是否可通过吃药或打针治愈",
+              "timestamp": 1771494407.7555237,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "793c4e48-02e0-4206-bb67-a3717e2fe1c4",
+              "content": "既往胆红素偏高（总胆红素约23.3–28）；口服茴三硫、熊胆舒肝利胆胶囊约150天效果不佳；医生曾建议可至南京市第二医院行肝穿病理检查或不治疗定期随访",
+              "timestamp": 1771494425.994684,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "不是肌无力，肌无力不会只影响一侧肌肉的。最后一张照片右眉高于左眉，不知是拍照角度有关还是用力造成的。",
+        "to_memory": [
+          "history: 医生判断不是重症肌无力（肌无力通常不会只影响一侧肌肉）",
+          "working: 照片观察提示右眉高于左眉；可能与拍照角度或用力有关（未确定）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a32a2709-8da3-4c75-93dc-0310205e643d",
+              "content": "右眼自出生起上睑下垂：出生时右眼未睁开，后可睁开但一直睁不大；医生判断更倾向上睑下垂，认为不是重症肌无力（肌无力通常不会只影响一侧肌肉）；眼睑大小有波动，最大时接近双眼对称，最小时可遮盖半个眼球",
+              "timestamp": 1771494407.755514,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "cb57c8ae-0afc-44d2-9db0-ff601e61389e",
+              "content": "右眼上睑下垂波动性：时大时小，情绪差/不适时更明显；有时突然抬起可几乎睁全；仰视时遮盖更多；与时间无明显关系，与进食/说话无明显相关；无明显出汗等伴随症状；情绪好时双眼大小更接近；患者担心神经问题/重症肌无力，询问是否可通过吃药或打针治愈",
+              "timestamp": 1771494407.7555237,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "793c4e48-02e0-4206-bb67-a3717e2fe1c4",
+              "content": "既往胆红素偏高（总胆红素约23.3–28）；口服茴三硫、熊胆舒肝利胆胶囊约150天效果不佳；医生曾建议可至南京市第二医院行肝穿病理检查或不治疗定期随访",
+              "timestamp": 1771494425.994684,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "c2e2c916-c6f1-4fe6-9433-84fbfb87644c",
+              "content": "照片观察提示右眉高于左眉；可能与拍照角度或用力有关（未确定）",
+              "timestamp": 1771494429.9468205,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "既往病史中患者自述过一种明确的基础疾病；结合其同时描述的疼痛部位与诱发场景，这两者在记录里是否存在需要进一步核对的矛盾点？请指出该基础疾病名称，并概述需要核对的点是什么。",
+          "answer": "自述强直性脊柱炎；但其描述为夜间翻身时腰骶部疼痛、其他部位不痛，需核对该既往诊断与当前疼痛表现是否一致。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "a3a156be-0e31-4424-bc44-b50d217b3e4d"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "793c4e48-02e0-4206-bb67-a3717e2fe1c4"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "您看看这张呢，应该没有用力吧。",
+        "to_memory": [
+          "history: 既往提示总胆红素23.3-28偏高；口服茴三硫、熊胆舒肝利胆胶囊约150天效果不佳；医生曾建议可至南京市第二医院考虑肝穿病理检查，或不治疗定期随访",
+          "history: 既往医生判断右侧表现应为上睑下垂，认为不是重症肌无力（肌无力通常不只影响一侧肌肉）",
+          "identity: 既往主诉强制性脊柱炎，夜间翻身时腰骶部疼痛，其他部位不痛",
+          "working: 本次关注右眼自出生起睑裂偏小/上睑下垂，表现为时大时小；情绪好时两眼大小接近，不高兴或不舒服时右眼皮更下垂；仰视时遮盖更多；与吃饭说话无关；无明显出汗等症状",
+          "working: 患者当前补充上传新照片，请医生判断是否未用力"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a32a2709-8da3-4c75-93dc-0310205e643d",
+              "content": "右眼自出生起上睑下垂：出生时右眼未睁开，后可睁开但一直睁不大；医生判断更倾向上睑下垂，认为不是重症肌无力（肌无力通常不会只影响一侧肌肉）；眼睑大小有波动，最大时接近双眼对称，最小时可遮盖半个眼球",
+              "timestamp": 1771494407.755514,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "cb57c8ae-0afc-44d2-9db0-ff601e61389e",
+              "content": "右眼上睑下垂波动性：时大时小，情绪差/不适时更明显；有时突然抬起可几乎睁全；仰视时遮盖更多；与时间无明显关系，与进食/说话无明显相关；无明显出汗等伴随症状；情绪好时双眼大小更接近；患者担心神经问题/重症肌无力，询问是否可通过吃药或打针治愈",
+              "timestamp": 1771494407.7555237,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "793c4e48-02e0-4206-bb67-a3717e2fe1c4",
+              "content": "既往胆红素偏高（总胆红素约23.3–28）；口服茴三硫、熊胆舒肝利胆胶囊约150天效果不佳；医生曾建议可至南京市第二医院行肝穿病理检查或不治疗定期随访",
+              "timestamp": 1771494425.994684,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "c2e2c916-c6f1-4fe6-9433-84fbfb87644c",
+              "content": "患者补充上传新照片，请医生判断是否拍照时未用力；此前照片观察提示右眉高于左眉，可能与拍照角度或用力有关（未确定）",
+              "timestamp": 1771494429.9468205,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "医生在评估患者的眼部表现时，提到一个用于排除某类神经肌肉疾病的关键“安全检查点”。这个检查点具体是什么？它与患者当前表现之间有什么不匹配之处？",
+          "answer": "医生认为不是重症肌无力，理由是肌无力通常不会只影响一侧肌肉；而患者主要表现为右侧受影响。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "a32a2709-8da3-4c75-93dc-0310205e643d",
+                "793c4e48-02e0-4206-bb67-a3717e2fe1c4"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "是，不过右眉的形状与左侧好像不太一样，右眉可以动吗？",
+        "to_memory": [
+          "working: 医生指出右侧眉毛形状与左侧不太一样，询问右眉是否可以活动（用于进一步判断右侧上睑下垂相关情况）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a32a2709-8da3-4c75-93dc-0310205e643d",
+              "content": "右眼自出生起上睑下垂：出生时右眼未睁开，后可睁开但一直睁不大；医生判断更倾向上睑下垂，认为不是重症肌无力（肌无力通常不会只影响一侧肌肉）；眼睑大小有波动，最大时接近双眼对称，最小时可遮盖半个眼球",
+              "timestamp": 1771494407.755514,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "cb57c8ae-0afc-44d2-9db0-ff601e61389e",
+              "content": "右眼上睑下垂波动性：时大时小，情绪差/不适时更明显；有时突然抬起可几乎睁全；仰视时遮盖更多；与时间无明显关系，与进食/说话无明显相关；无明显出汗等伴随症状；情绪好时双眼大小更接近；患者担心神经问题/重症肌无力，询问是否可通过吃药或打针治愈",
+              "timestamp": 1771494407.7555237,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "793c4e48-02e0-4206-bb67-a3717e2fe1c4",
+              "content": "既往胆红素偏高（总胆红素约23.3–28）；口服茴三硫、熊胆舒肝利胆胶囊约150天效果不佳；医生曾建议可至南京市第二医院行肝穿病理检查或不治疗定期随访",
+              "timestamp": 1771494425.994684,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "c2e2c916-c6f1-4fe6-9433-84fbfb87644c",
+              "content": "患者补充上传新照片，请医生判断是否拍照时未用力；此前照片观察提示右眉高于左眉，可能与拍照角度或用力有关（未确定）",
+              "timestamp": 1771494429.9468205,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "3e8855b4-492a-4336-826a-354f46d3753b",
+              "content": "医生发现右侧眉毛形状与左侧不一致，询问右眉是否可自主活动/抬动，以进一步评估右侧上睑下垂相关情况",
+              "timestamp": 1771494449.7388322,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者既往自述的基础疾病是什么？",
+          "answer": "强直性脊柱炎",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "a3a156be-0e31-4424-bc44-b50d217b3e4d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            8
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "慢性胰腺炎引发糖尿病，秦大夫，您好。目前我妈妈已经来了浙江，因为我在海宁工作。我想趁此机会到贵院给她做下具体的确诊。我妈妈是慢性胰腺炎引发的糖尿病，三个月前，慢性胰腺炎急性发作一次。现在偶尔饮食不当，就会感到疼痛。请问这种情况也是需要先看内分泌科吗？非常感谢。",
+        "to_memory": [
+          "identity: 患者母亲有糖尿病（慢性胰腺炎相关/胰源性糖尿病）",
+          "identity: 患者母亲有慢性胰腺炎",
+          "history: 3个月前慢性胰腺炎曾急性发作1次",
+          "working: 目前偶尔饮食不当会出现疼痛（疑胰腺区/腹痛）",
+          "history: 计划在浙江就医做进一步确诊与评估；询问是否需要先挂内分泌科"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "f8357be2-0f81-4db5-8079-5acdf2b9d6e6",
+              "content": "目前偶尔饮食不当会出现腹痛/疑胰腺区疼痛",
+              "timestamp": 1771494458.52183,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "518343c4-5dbf-43a7-8939-0f1470c3976b",
+              "content": "家族史：患者母亲患糖尿病（考虑慢性胰腺炎相关/胰源性糖尿病）",
+              "timestamp": 1771494458.5218112,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "f39138a6-15f1-4011-82b5-fd69c6f6f88a",
+              "content": "家族史：患者母亲患慢性胰腺炎",
+              "timestamp": 1771494458.5218203,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "history": [
+            {
+              "id": "68a6a124-d4d0-4cd5-a1f7-4a2b1dcc7c90",
+              "content": "3个月前慢性胰腺炎曾急性发作1次",
+              "timestamp": 1771494458.5218258,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "4b8a39a8-139b-429f-9bc0-7be83eed2a40",
+              "content": "计划在浙江就医进一步确诊与评估；咨询是否需要先挂内分泌科",
+              "timestamp": 1771494458.5218341,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者描述母亲目前在什么情况下会出现疼痛不适？",
+          "answer": "偶尔饮食不当时会感到疼痛。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "f8357be2-0f81-4db5-8079-5acdf2b9d6e6"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "是在抱歉，没能给您及时回复，个人建议先看内分泌科，如有外科问题再转到外科来。",
+        "to_memory": [
+          "identity: 患者母亲有糖尿病（慢性胰腺炎相关/胰源性糖尿病）",
+          "history: 既往慢性胰腺炎；约3个月前有一次慢性胰腺炎急性发作",
+          "history: 医生建议就诊路径：先看内分泌科，如有外科问题再转外科",
+          "history: 目前偶尔饮食不当会出现腹痛；计划在浙江就医做进一步确诊"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "f8357be2-0f81-4db5-8079-5acdf2b9d6e6",
+              "content": "目前偶尔饮食不当会出现腹痛/疑胰腺区疼痛",
+              "timestamp": 1771494458.52183,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "518343c4-5dbf-43a7-8939-0f1470c3976b",
+              "content": "家族史：患者母亲患糖尿病（考虑慢性胰腺炎相关/胰源性糖尿病）",
+              "timestamp": 1771494458.5218112,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "f39138a6-15f1-4011-82b5-fd69c6f6f88a",
+              "content": "家族史：患者母亲患慢性胰腺炎",
+              "timestamp": 1771494458.5218203,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "history": [
+            {
+              "id": "68a6a124-d4d0-4cd5-a1f7-4a2b1dcc7c90",
+              "content": "3个月前慢性胰腺炎曾急性发作1次",
+              "timestamp": 1771494458.5218258,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "4b8a39a8-139b-429f-9bc0-7be83eed2a40",
+              "content": "计划在浙江就医进一步确诊与评估；咨询是否需要先挂内分泌科",
+              "timestamp": 1771494458.5218341,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "850b65b0-96c4-4dbb-bd69-23a549fa8bad",
+              "content": "既往慢性胰腺炎",
+              "timestamp": 1771494465.9909556,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ae171d53-885e-4c9d-95c3-81495e0e263f",
+              "content": "医生建议就诊路径：先看内分泌科，如有外科问题再转外科",
+              "timestamp": 1771494465.9909635,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者提到在某种情况下会出现不适或疼痛，这种诱因是什么？",
+          "answer": "偶尔饮食不当",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "f8357be2-0f81-4db5-8079-5acdf2b9d6e6"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "谢谢你 秦大夫。如果有什么问题 再咨询您。",
+        "to_memory": [
+          "history: 医生判断患者（右眼）情况应为上睑下垂，认为不是重症肌无力",
+          "working: 患者右眼自出生起睁不开/睁不大，后可变动：上睑下垂时大时小，情绪好时两眼大小接近；与时间、吃饭说话关系不大；仰视时遮盖较多，不高兴或不舒服时更明显",
+          "history: 医生指出重症肌无力通常不会只影响一侧肌肉；观察到右眉高于左眉且形状可能不同，并询问右眉是否能活动",
+          "identity: 患者母亲有慢性胰腺炎及慢性胰腺炎引发的糖尿病",
+          "history: 患者母亲三个月前慢性胰腺炎急性发作一次；目前偶尔饮食不当会腹痛",
+          "history: 医生建议患者母亲先就诊内分泌科，如有外科问题再转外科"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "f8357be2-0f81-4db5-8079-5acdf2b9d6e6",
+              "content": "目前偶尔饮食不当会出现腹痛/疑胰腺区疼痛",
+              "timestamp": 1771494458.52183,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "e5d77af6-a9d6-43af-b96a-55264a870d20",
+              "content": "患者右眼自出生起睁不开/睁不大；上睑下垂程度可波动：情绪好时两眼大小接近；与时间、吃饭说话关系不大；仰视时遮盖较多；不高兴或不舒服时更明显",
+              "timestamp": 1771494476.767875,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "518343c4-5dbf-43a7-8939-0f1470c3976b",
+              "content": "家族史：患者母亲患糖尿病（考虑慢性胰腺炎相关/胰源性糖尿病）",
+              "timestamp": 1771494458.5218112,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "f39138a6-15f1-4011-82b5-fd69c6f6f88a",
+              "content": "家族史：患者母亲患慢性胰腺炎",
+              "timestamp": 1771494458.5218203,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "history": [
+            {
+              "id": "68a6a124-d4d0-4cd5-a1f7-4a2b1dcc7c90",
+              "content": "3个月前慢性胰腺炎曾急性发作1次",
+              "timestamp": 1771494458.5218258,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "4b8a39a8-139b-429f-9bc0-7be83eed2a40",
+              "content": "计划在浙江就医进一步确诊与评估；咨询是否需要先挂内分泌科",
+              "timestamp": 1771494458.5218341,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "850b65b0-96c4-4dbb-bd69-23a549fa8bad",
+              "content": "既往慢性胰腺炎",
+              "timestamp": 1771494465.9909556,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ae171d53-885e-4c9d-95c3-81495e0e263f",
+              "content": "医生建议就诊路径：先看内分泌科，如有外科问题再转外科",
+              "timestamp": 1771494465.9909635,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "afc02690-571c-4679-9f9e-f3eae1f20afc",
+              "content": "医生判断患者右眼情况更符合上睑下垂，认为不是重症肌无力",
+              "timestamp": 1771494476.7678676,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "82c43f77-c1db-4455-8b11-5f0020da004b",
+              "content": "医生指出重症肌无力通常不会只影响一侧肌肉；观察到右眉高于左眉且形状可能不同，并询问右眉是否能活动",
+              "timestamp": 1771494476.7678797,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者既往自述患有什么基础疾病？",
+          "answer": "强直性脊柱炎",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "a3a156be-0e31-4424-bc44-b50d217b3e4d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            12
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "好的，随时为您服务！",
+        "to_memory": [
+          "working: 患者/家属咨询先天性右眼上睑下垂，症状为眼睑开合大小时大时小、情绪好时更接近正常；医生判断更像上睑下垂，认为非重症肌无力（肌无力通常不只影响单侧），并提及右眉位置/形态差异、询问右眉是否可活动",
+          "identity: 患者家属咨询母亲慢性胰腺炎引发糖尿病，3个月前慢性胰腺炎曾急性发作，现偶尔饮食不当会腹痛；计划到浙江就诊；医生建议先看内分泌科，必要时再转外科"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "f8357be2-0f81-4db5-8079-5acdf2b9d6e6",
+              "content": "目前偶尔饮食不当会出现腹痛/疑胰腺区疼痛",
+              "timestamp": 1771494458.52183,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "e5d77af6-a9d6-43af-b96a-55264a870d20",
+              "content": "患者右眼自出生起睁不开/睁不大；上睑下垂程度可波动：情绪好时两眼大小接近；与时间、吃饭说话关系不大；仰视时遮盖较多；不高兴或不舒服时更明显",
+              "timestamp": 1771494476.767875,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "518343c4-5dbf-43a7-8939-0f1470c3976b",
+              "content": "家族史：患者母亲患糖尿病（考虑慢性胰腺炎相关/胰源性糖尿病）",
+              "timestamp": 1771494458.5218112,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "f39138a6-15f1-4011-82b5-fd69c6f6f88a",
+              "content": "家族史：患者母亲患慢性胰腺炎",
+              "timestamp": 1771494458.5218203,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "history": [
+            {
+              "id": "68a6a124-d4d0-4cd5-a1f7-4a2b1dcc7c90",
+              "content": "3个月前慢性胰腺炎曾急性发作1次",
+              "timestamp": 1771494458.5218258,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "4b8a39a8-139b-429f-9bc0-7be83eed2a40",
+              "content": "计划在浙江就医进一步确诊与评估；咨询是否需要先挂内分泌科",
+              "timestamp": 1771494458.5218341,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "850b65b0-96c4-4dbb-bd69-23a549fa8bad",
+              "content": "既往慢性胰腺炎",
+              "timestamp": 1771494465.9909556,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ae171d53-885e-4c9d-95c3-81495e0e263f",
+              "content": "医生建议就诊路径：先看内分泌科，如有外科问题再转外科",
+              "timestamp": 1771494465.9909635,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "afc02690-571c-4679-9f9e-f3eae1f20afc",
+              "content": "医生判断患者右眼情况更符合上睑下垂，认为不是重症肌无力",
+              "timestamp": 1771494476.7678676,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "82c43f77-c1db-4455-8b11-5f0020da004b",
+              "content": "医生指出重症肌无力通常不会只影响一侧肌肉；观察到右眉高于左眉且形状可能不同，并询问右眉是否能活动",
+              "timestamp": 1771494476.7678797,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "518343c4-5dbf-43a7-8939-0f1470c3976b",
+              "content": "家族史：患者母亲患糖尿病（考虑慢性胰腺炎相关/胰源性糖尿病）",
+              "timestamp": 1771494458.5218112,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "f39138a6-15f1-4011-82b5-fd69c6f6f88a",
+              "content": "家族史：患者母亲患慢性胰腺炎",
+              "timestamp": 1771494458.5218203,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "history": [
+            {
+              "id": "68a6a124-d4d0-4cd5-a1f7-4a2b1dcc7c90",
+              "content": "3个月前慢性胰腺炎曾急性发作1次",
+              "timestamp": 1771494458.5218258,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "4b8a39a8-139b-429f-9bc0-7be83eed2a40",
+              "content": "计划在浙江就医进一步确诊与评估；咨询是否需要先挂内分泌科",
+              "timestamp": 1771494458.5218341,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "850b65b0-96c4-4dbb-bd69-23a549fa8bad",
+              "content": "既往慢性胰腺炎",
+              "timestamp": 1771494465.9909556,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ae171d53-885e-4c9d-95c3-81495e0e263f",
+              "content": "医生建议就诊路径：先看内分泌科，如有外科问题再转外科",
+              "timestamp": 1771494465.9909635,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "afc02690-571c-4679-9f9e-f3eae1f20afc",
+              "content": "医生判断患者右眼情况更符合上睑下垂，认为不是重症肌无力",
+              "timestamp": 1771494476.7678676,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "82c43f77-c1db-4455-8b11-5f0020da004b",
+              "content": "医生指出重症肌无力通常不会只影响一侧肌肉；观察到右眉高于左眉且形状可能不同，并询问右眉是否能活动",
+              "timestamp": 1771494476.7678797,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "儿童中耳炎，小孩有过敏性鼻炎慢性鼻窦炎和扁桃体炎，母亲有油耳。小孩常感冒每次用力擤鼻涕耳朵会痛。平常无耳聆耳痛.已经切除腺样体2年了。",
+        "to_memory": [
+          "identity: 家族史/体质：母亲有油耳",
+          "history: 手术史：患儿2年前已行腺样体切除术",
+          "history: 既往/基础疾病：患儿有过敏性鼻炎、慢性鼻窦炎、扁桃体炎",
+          "working: 本次主诉：儿童中耳炎/耳部不适",
+          "working: 现病史：小孩易感冒；每次用力擤鼻涕时耳朵会痛；平时无耳聋、无耳痛"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "968d5b69-72f3-4943-b99a-80a583566739",
+              "content": "本次主诉：儿童中耳炎/耳部不适",
+              "timestamp": 1771494490.7135804,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "58633f0d-d900-4341-a6c6-d2985e4b1781",
+              "content": "现病史：小孩易感冒；每次用力擤鼻涕时耳朵会痛；平时无耳聋、无耳痛",
+              "timestamp": 1771494490.7135844,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "518343c4-5dbf-43a7-8939-0f1470c3976b",
+              "content": "家族史：患者母亲患糖尿病（考虑慢性胰腺炎相关/胰源性糖尿病）",
+              "timestamp": 1771494458.5218112,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "f39138a6-15f1-4011-82b5-fd69c6f6f88a",
+              "content": "家族史：患者母亲患慢性胰腺炎",
+              "timestamp": 1771494458.5218203,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "76a1cad2-7b93-4fc9-860a-0acdb50c797b",
+              "content": "家族史/体质：母亲有油耳",
+              "timestamp": 1771494490.7135623,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "68a6a124-d4d0-4cd5-a1f7-4a2b1dcc7c90",
+              "content": "3个月前慢性胰腺炎曾急性发作1次",
+              "timestamp": 1771494458.5218258,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "4b8a39a8-139b-429f-9bc0-7be83eed2a40",
+              "content": "计划在浙江就医进一步确诊与评估；咨询是否需要先挂内分泌科",
+              "timestamp": 1771494458.5218341,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "850b65b0-96c4-4dbb-bd69-23a549fa8bad",
+              "content": "既往慢性胰腺炎",
+              "timestamp": 1771494465.9909556,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ae171d53-885e-4c9d-95c3-81495e0e263f",
+              "content": "医生建议就诊路径：先看内分泌科，如有外科问题再转外科",
+              "timestamp": 1771494465.9909635,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "afc02690-571c-4679-9f9e-f3eae1f20afc",
+              "content": "医生判断患者右眼情况更符合上睑下垂，认为不是重症肌无力",
+              "timestamp": 1771494476.7678676,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "82c43f77-c1db-4455-8b11-5f0020da004b",
+              "content": "医生指出重症肌无力通常不会只影响一侧肌肉；观察到右眉高于左眉且形状可能不同，并询问右眉是否能活动",
+              "timestamp": 1771494476.7678797,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "42fc53c1-2e50-4c66-91d4-564f224dacf0",
+              "content": "手术史：患儿2年前已行腺样体切除术",
+              "timestamp": 1771494490.7135715,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "b6b23a40-f39a-4d6b-b10e-7575801878d9",
+              "content": "既往/基础疾病：患儿有过敏性鼻炎、慢性鼻窦炎、扁桃体炎",
+              "timestamp": 1771494490.7135766,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "对话中医生曾基于面部观察提出对某种神经肌肉疾病表现的安全性提醒，并进一步追问了患者某一侧局部功能。请问医生提醒的关键点是什么，以及他具体追问了哪一侧的哪个功能？",
+          "answer": "医生指出重症肌无力通常不会只影响一侧肌肉；观察到右眉高于左眉且形状可能不同，并询问右眉是否能活动。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "518343c4-5dbf-43a7-8939-0f1470c3976b"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "82c43f77-c1db-4455-8b11-5f0020da004b"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            5,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "请找张榕教授看看。",
+        "to_memory": [
+          "history: 医生建议转诊/就诊：请找张榕教授看看"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "968d5b69-72f3-4943-b99a-80a583566739",
+              "content": "本次主诉：儿童中耳炎/耳部不适",
+              "timestamp": 1771494490.7135804,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "58633f0d-d900-4341-a6c6-d2985e4b1781",
+              "content": "现病史：小孩易感冒；每次用力擤鼻涕时耳朵会痛；平时无耳聋、无耳痛",
+              "timestamp": 1771494490.7135844,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "518343c4-5dbf-43a7-8939-0f1470c3976b",
+              "content": "家族史：患者母亲患糖尿病（考虑慢性胰腺炎相关/胰源性糖尿病）",
+              "timestamp": 1771494458.5218112,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "f39138a6-15f1-4011-82b5-fd69c6f6f88a",
+              "content": "家族史：患者母亲患慢性胰腺炎",
+              "timestamp": 1771494458.5218203,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "76a1cad2-7b93-4fc9-860a-0acdb50c797b",
+              "content": "家族史/体质：母亲有油耳",
+              "timestamp": 1771494490.7135623,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "68a6a124-d4d0-4cd5-a1f7-4a2b1dcc7c90",
+              "content": "3个月前慢性胰腺炎曾急性发作1次",
+              "timestamp": 1771494458.5218258,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "4b8a39a8-139b-429f-9bc0-7be83eed2a40",
+              "content": "计划在浙江就医进一步确诊与评估；咨询是否需要先挂内分泌科",
+              "timestamp": 1771494458.5218341,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "850b65b0-96c4-4dbb-bd69-23a549fa8bad",
+              "content": "既往慢性胰腺炎",
+              "timestamp": 1771494465.9909556,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ae171d53-885e-4c9d-95c3-81495e0e263f",
+              "content": "医生建议就诊路径：先看内分泌科，如有外科问题再转外科",
+              "timestamp": 1771494465.9909635,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "afc02690-571c-4679-9f9e-f3eae1f20afc",
+              "content": "医生判断患者右眼情况更符合上睑下垂，认为不是重症肌无力",
+              "timestamp": 1771494476.7678676,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "82c43f77-c1db-4455-8b11-5f0020da004b",
+              "content": "医生指出重症肌无力通常不会只影响一侧肌肉；观察到右眉高于左眉且形状可能不同，并询问右眉是否能活动",
+              "timestamp": 1771494476.7678797,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "42fc53c1-2e50-4c66-91d4-564f224dacf0",
+              "content": "手术史：患儿2年前已行腺样体切除术",
+              "timestamp": 1771494490.7135715,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "b6b23a40-f39a-4d6b-b10e-7575801878d9",
+              "content": "既往/基础疾病：患儿有过敏性鼻炎、慢性鼻窦炎、扁桃体炎",
+              "timestamp": 1771494490.7135766,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "0e2db1c6-e88a-4725-af18-80b0d3123800",
+              "content": "医生建议转诊/就诊：请找张榕教授看看",
+              "timestamp": 1771494527.746161,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "在第二段就诊咨询中，家长描述孩子耳部相关不适后，医生建议接下来去找哪位具体的专家进一步就诊？",
+          "answer": "请找张榕教授看看",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "0e2db1c6-e88a-4725-af18-80b0d3123800"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "968d5b69-72f3-4943-b99a-80a583566739"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "是哪个医院的张榕教授。",
+        "to_memory": [
+          "working: 患者询问“张榕教授是哪个医院的”"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "968d5b69-72f3-4943-b99a-80a583566739",
+              "content": "本次主诉：儿童中耳炎/耳部不适",
+              "timestamp": 1771494490.7135804,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "58633f0d-d900-4341-a6c6-d2985e4b1781",
+              "content": "现病史：小孩易感冒；每次用力擤鼻涕时耳朵会痛；平时无耳聋、无耳痛",
+              "timestamp": 1771494490.7135844,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "a283cda1-c2e5-42ac-a41d-7f31b4c038e7",
+              "content": "患者询问：张榕教授是哪个医院的",
+              "timestamp": 1771494533.9115448,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "518343c4-5dbf-43a7-8939-0f1470c3976b",
+              "content": "家族史：患者母亲患糖尿病（考虑慢性胰腺炎相关/胰源性糖尿病）",
+              "timestamp": 1771494458.5218112,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "f39138a6-15f1-4011-82b5-fd69c6f6f88a",
+              "content": "家族史：患者母亲患慢性胰腺炎",
+              "timestamp": 1771494458.5218203,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "76a1cad2-7b93-4fc9-860a-0acdb50c797b",
+              "content": "家族史/体质：母亲有油耳",
+              "timestamp": 1771494490.7135623,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "68a6a124-d4d0-4cd5-a1f7-4a2b1dcc7c90",
+              "content": "3个月前慢性胰腺炎曾急性发作1次",
+              "timestamp": 1771494458.5218258,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "4b8a39a8-139b-429f-9bc0-7be83eed2a40",
+              "content": "计划在浙江就医进一步确诊与评估；咨询是否需要先挂内分泌科",
+              "timestamp": 1771494458.5218341,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "850b65b0-96c4-4dbb-bd69-23a549fa8bad",
+              "content": "既往慢性胰腺炎",
+              "timestamp": 1771494465.9909556,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ae171d53-885e-4c9d-95c3-81495e0e263f",
+              "content": "医生建议就诊路径：先看内分泌科，如有外科问题再转外科",
+              "timestamp": 1771494465.9909635,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "afc02690-571c-4679-9f9e-f3eae1f20afc",
+              "content": "医生判断患者右眼情况更符合上睑下垂，认为不是重症肌无力",
+              "timestamp": 1771494476.7678676,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "82c43f77-c1db-4455-8b11-5f0020da004b",
+              "content": "医生指出重症肌无力通常不会只影响一侧肌肉；观察到右眉高于左眉且形状可能不同，并询问右眉是否能活动",
+              "timestamp": 1771494476.7678797,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "42fc53c1-2e50-4c66-91d4-564f224dacf0",
+              "content": "手术史：患儿2年前已行腺样体切除术",
+              "timestamp": 1771494490.7135715,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "b6b23a40-f39a-4d6b-b10e-7575801878d9",
+              "content": "既往/基础疾病：患儿有过敏性鼻炎、慢性鼻窦炎、扁桃体炎",
+              "timestamp": 1771494490.7135766,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "0e2db1c6-e88a-4725-af18-80b0d3123800",
+              "content": "医生建议转诊/就诊：请找张榕教授看看",
+              "timestamp": 1771494527.746161,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者既往病史中曾被明确诊断过哪一种慢性消化系统疾病？",
+          "answer": "慢性胰腺炎",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "850b65b0-96c4-4dbb-bd69-23a549fa8bad"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "附一医院。",
+        "to_memory": [
+          "working: 医生回复“附一医院”（指张榕教授所在医院为附一医院）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "968d5b69-72f3-4943-b99a-80a583566739",
+              "content": "本次主诉：儿童中耳炎/耳部不适",
+              "timestamp": 1771494490.7135804,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "58633f0d-d900-4341-a6c6-d2985e4b1781",
+              "content": "现病史：小孩易感冒；每次用力擤鼻涕时耳朵会痛；平时无耳聋、无耳痛",
+              "timestamp": 1771494490.7135844,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "a283cda1-c2e5-42ac-a41d-7f31b4c038e7",
+              "content": "患者询问：张榕教授是哪个医院的；医生回复“附一医院”（指张榕教授所在医院为附一医院）",
+              "timestamp": 1771494533.9115448,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "518343c4-5dbf-43a7-8939-0f1470c3976b",
+              "content": "家族史：患者母亲患糖尿病（考虑慢性胰腺炎相关/胰源性糖尿病）",
+              "timestamp": 1771494458.5218112,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "f39138a6-15f1-4011-82b5-fd69c6f6f88a",
+              "content": "家族史：患者母亲患慢性胰腺炎",
+              "timestamp": 1771494458.5218203,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "76a1cad2-7b93-4fc9-860a-0acdb50c797b",
+              "content": "家族史/体质：母亲有油耳",
+              "timestamp": 1771494490.7135623,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "68a6a124-d4d0-4cd5-a1f7-4a2b1dcc7c90",
+              "content": "3个月前慢性胰腺炎曾急性发作1次",
+              "timestamp": 1771494458.5218258,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "4b8a39a8-139b-429f-9bc0-7be83eed2a40",
+              "content": "计划在浙江就医进一步确诊与评估；咨询是否需要先挂内分泌科",
+              "timestamp": 1771494458.5218341,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "850b65b0-96c4-4dbb-bd69-23a549fa8bad",
+              "content": "既往慢性胰腺炎",
+              "timestamp": 1771494465.9909556,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ae171d53-885e-4c9d-95c3-81495e0e263f",
+              "content": "医生建议就诊路径：先看内分泌科，如有外科问题再转外科",
+              "timestamp": 1771494465.9909635,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "afc02690-571c-4679-9f9e-f3eae1f20afc",
+              "content": "医生判断患者右眼情况更符合上睑下垂，认为不是重症肌无力",
+              "timestamp": 1771494476.7678676,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "82c43f77-c1db-4455-8b11-5f0020da004b",
+              "content": "医生指出重症肌无力通常不会只影响一侧肌肉；观察到右眉高于左眉且形状可能不同，并询问右眉是否能活动",
+              "timestamp": 1771494476.7678797,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "42fc53c1-2e50-4c66-91d4-564f224dacf0",
+              "content": "手术史：患儿2年前已行腺样体切除术",
+              "timestamp": 1771494490.7135715,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "b6b23a40-f39a-4d6b-b10e-7575801878d9",
+              "content": "既往/基础疾病：患儿有过敏性鼻炎、慢性鼻窦炎、扁桃体炎",
+              "timestamp": 1771494490.7135766,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "0e2db1c6-e88a-4725-af18-80b0d3123800",
+              "content": "医生建议转诊/就诊：请找张榕教授看看",
+              "timestamp": 1771494527.746161,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者在家族史中提到母亲患有哪种慢性疾病？",
+          "answer": "糖尿病",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "518343c4-5dbf-43a7-8939-0f1470c3976b"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            8
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "518343c4-5dbf-43a7-8939-0f1470c3976b",
+              "content": "家族史：患者母亲患糖尿病（考虑慢性胰腺炎相关/胰源性糖尿病）",
+              "timestamp": 1771494458.5218112,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "f39138a6-15f1-4011-82b5-fd69c6f6f88a",
+              "content": "家族史：患者母亲患慢性胰腺炎",
+              "timestamp": 1771494458.5218203,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "76a1cad2-7b93-4fc9-860a-0acdb50c797b",
+              "content": "家族史/体质：母亲有油耳",
+              "timestamp": 1771494490.7135623,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "68a6a124-d4d0-4cd5-a1f7-4a2b1dcc7c90",
+              "content": "3个月前慢性胰腺炎曾急性发作1次",
+              "timestamp": 1771494458.5218258,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "4b8a39a8-139b-429f-9bc0-7be83eed2a40",
+              "content": "计划在浙江就医进一步确诊与评估；咨询是否需要先挂内分泌科",
+              "timestamp": 1771494458.5218341,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "850b65b0-96c4-4dbb-bd69-23a549fa8bad",
+              "content": "既往慢性胰腺炎",
+              "timestamp": 1771494465.9909556,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ae171d53-885e-4c9d-95c3-81495e0e263f",
+              "content": "医生建议就诊路径：先看内分泌科，如有外科问题再转外科",
+              "timestamp": 1771494465.9909635,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "afc02690-571c-4679-9f9e-f3eae1f20afc",
+              "content": "医生判断患者右眼情况更符合上睑下垂，认为不是重症肌无力",
+              "timestamp": 1771494476.7678676,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "82c43f77-c1db-4455-8b11-5f0020da004b",
+              "content": "医生指出重症肌无力通常不会只影响一侧肌肉；观察到右眉高于左眉且形状可能不同，并询问右眉是否能活动",
+              "timestamp": 1771494476.7678797,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "42fc53c1-2e50-4c66-91d4-564f224dacf0",
+              "content": "手术史：患儿2年前已行腺样体切除术",
+              "timestamp": 1771494490.7135715,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "b6b23a40-f39a-4d6b-b10e-7575801878d9",
+              "content": "既往/基础疾病：患儿有过敏性鼻炎、慢性鼻窦炎、扁桃体炎",
+              "timestamp": 1771494490.7135766,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "0e2db1c6-e88a-4725-af18-80b0d3123800",
+              "content": "医生建议转诊/就诊：请找张榕教授看看",
+              "timestamp": 1771494527.746161,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "不知道，一岁左右就发现脸上有少量的黑点，后来这些黑点不断增多增大，特别是嘴角上更是如此。这些点主要呈线形分布，且向头部延伸增长。",
+        "to_memory": [
+          "identity: 约1岁起面部出现少量黑点，随后黑点逐渐增多增大；嘴角处更明显；黑点呈线形分布，并向头部方向延伸增长"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "518343c4-5dbf-43a7-8939-0f1470c3976b",
+              "content": "家族史：患者母亲患糖尿病（考虑慢性胰腺炎相关/胰源性糖尿病）",
+              "timestamp": 1771494458.5218112,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "f39138a6-15f1-4011-82b5-fd69c6f6f88a",
+              "content": "家族史：患者母亲患慢性胰腺炎",
+              "timestamp": 1771494458.5218203,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "76a1cad2-7b93-4fc9-860a-0acdb50c797b",
+              "content": "家族史/体质：母亲有油耳",
+              "timestamp": 1771494490.7135623,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "68a6a124-d4d0-4cd5-a1f7-4a2b1dcc7c90",
+              "content": "3个月前慢性胰腺炎曾急性发作1次",
+              "timestamp": 1771494458.5218258,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "4b8a39a8-139b-429f-9bc0-7be83eed2a40",
+              "content": "计划在浙江就医进一步确诊与评估；咨询是否需要先挂内分泌科",
+              "timestamp": 1771494458.5218341,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "850b65b0-96c4-4dbb-bd69-23a549fa8bad",
+              "content": "既往慢性胰腺炎",
+              "timestamp": 1771494465.9909556,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ae171d53-885e-4c9d-95c3-81495e0e263f",
+              "content": "医生建议就诊路径：先看内分泌科，如有外科问题再转外科",
+              "timestamp": 1771494465.9909635,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "afc02690-571c-4679-9f9e-f3eae1f20afc",
+              "content": "医生判断患者右眼情况更符合上睑下垂，认为不是重症肌无力",
+              "timestamp": 1771494476.7678676,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "82c43f77-c1db-4455-8b11-5f0020da004b",
+              "content": "医生指出重症肌无力通常不会只影响一侧肌肉；观察到右眉高于左眉且形状可能不同，并询问右眉是否能活动",
+              "timestamp": 1771494476.7678797,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "42fc53c1-2e50-4c66-91d4-564f224dacf0",
+              "content": "手术史：患儿2年前已行腺样体切除术",
+              "timestamp": 1771494490.7135715,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "b6b23a40-f39a-4d6b-b10e-7575801878d9",
+              "content": "既往/基础疾病：患儿有过敏性鼻炎、慢性鼻窦炎、扁桃体炎",
+              "timestamp": 1771494490.7135766,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "0e2db1c6-e88a-4725-af18-80b0d3123800",
+              "content": "医生建议转诊/就诊：请找张榕教授看看",
+              "timestamp": 1771494527.746161,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "67344b8c-3eac-40c4-a9cf-88313660153a",
+              "content": "皮肤表现：约1岁起面部出现少量黑点，随后逐渐增多增大；嘴角处更明显；黑点呈线形分布，并向头部方向延伸增长",
+              "timestamp": 1771494546.0640543,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "医生在之前一次讨论某种神经肌肉相关问题时，提到这种疾病在受累部位分布上通常有什么特点？同时医生当时观察到患者面部哪一侧的哪项外观或活动异常并进行了追问？",
+          "answer": "医生指出重症肌无力通常不会只影响一侧肌肉；观察到右眉高于左眉且形状可能不同，并询问右眉是否能活动。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "68a6a124-d4d0-4cd5-a1f7-4a2b1dcc7c90",
+                "82c43f77-c1db-4455-8b11-5f0020da004b"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            10,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "最好传个照片看看。",
+        "to_memory": [
+          "identity: 皮肤问题主诉：约1岁起面部出现少量黑点，后逐渐增多增大，嘴角更明显；黑点呈线形分布并向头部延伸增长",
+          "history: 既往手术史：已切除腺样体约2年",
+          "identity: 家族史：母亲有油耳",
+          "identity: 既往/基础疾病：过敏性鼻炎、慢性鼻窦炎、扁桃体炎",
+          "working: 伴随情况：常感冒；每次用力擤鼻涕时耳朵会痛，平时无耳鸣耳痛",
+          "working: 医生建议：最好上传照片供评估"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "2f90ff4a-94e7-4d08-b000-38dc28ce5b40",
+              "content": "伴随情况：常感冒；每次用力擤鼻涕时耳朵会痛，平时无耳鸣耳痛",
+              "timestamp": 1771494555.3500624,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "aba2dc46-21c7-40e4-81b2-8f879fb0385f",
+              "content": "医生建议：最好上传照片供评估",
+              "timestamp": 1771494555.3500712,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            }
+          ],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "518343c4-5dbf-43a7-8939-0f1470c3976b",
+              "content": "家族史：患者母亲患糖尿病（考虑慢性胰腺炎相关/胰源性糖尿病）",
+              "timestamp": 1771494458.5218112,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "f39138a6-15f1-4011-82b5-fd69c6f6f88a",
+              "content": "家族史：患者母亲患慢性胰腺炎",
+              "timestamp": 1771494458.5218203,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "76a1cad2-7b93-4fc9-860a-0acdb50c797b",
+              "content": "家族史/体质：母亲有油耳",
+              "timestamp": 1771494490.7135623,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "68a6a124-d4d0-4cd5-a1f7-4a2b1dcc7c90",
+              "content": "3个月前慢性胰腺炎曾急性发作1次",
+              "timestamp": 1771494458.5218258,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "4b8a39a8-139b-429f-9bc0-7be83eed2a40",
+              "content": "计划在浙江就医进一步确诊与评估；咨询是否需要先挂内分泌科",
+              "timestamp": 1771494458.5218341,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "850b65b0-96c4-4dbb-bd69-23a549fa8bad",
+              "content": "既往慢性胰腺炎",
+              "timestamp": 1771494465.9909556,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ae171d53-885e-4c9d-95c3-81495e0e263f",
+              "content": "医生建议就诊路径：先看内分泌科，如有外科问题再转外科",
+              "timestamp": 1771494465.9909635,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "afc02690-571c-4679-9f9e-f3eae1f20afc",
+              "content": "医生判断患者右眼情况更符合上睑下垂，认为不是重症肌无力",
+              "timestamp": 1771494476.7678676,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "82c43f77-c1db-4455-8b11-5f0020da004b",
+              "content": "医生指出重症肌无力通常不会只影响一侧肌肉；观察到右眉高于左眉且形状可能不同，并询问右眉是否能活动",
+              "timestamp": 1771494476.7678797,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "42fc53c1-2e50-4c66-91d4-564f224dacf0",
+              "content": "手术史：患儿2年前已行腺样体切除术",
+              "timestamp": 1771494490.7135715,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "b6b23a40-f39a-4d6b-b10e-7575801878d9",
+              "content": "既往/基础疾病：患儿有过敏性鼻炎、慢性鼻窦炎、扁桃体炎",
+              "timestamp": 1771494490.7135766,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "0e2db1c6-e88a-4725-af18-80b0d3123800",
+              "content": "医生建议转诊/就诊：请找张榕教授看看",
+              "timestamp": 1771494527.746161,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "67344b8c-3eac-40c4-a9cf-88313660153a",
+              "content": "皮肤表现：约1岁起面部出现少量黑点，随后逐渐增多增大；嘴角处更明显；黑点呈线形分布，并向头部方向延伸增长",
+              "timestamp": 1771494546.0640543,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在这次皮肤问题的描述中，患者是否提到过任何家族相关的体质或遗传线索需要在后续诊疗中核对？如果有，具体是什么？",
+          "answer": "母亲有油耳。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "76a1cad2-7b93-4fc9-860a-0acdb50c797b"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "67344b8c-3eac-40c4-a9cf-88313660153a"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "518343c4-5dbf-43a7-8939-0f1470c3976b",
+              "content": "家族史：患者母亲患糖尿病（考虑慢性胰腺炎相关/胰源性糖尿病）",
+              "timestamp": 1771494458.5218112,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "f39138a6-15f1-4011-82b5-fd69c6f6f88a",
+              "content": "家族史：患者母亲患慢性胰腺炎",
+              "timestamp": 1771494458.5218203,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "76a1cad2-7b93-4fc9-860a-0acdb50c797b",
+              "content": "家族史/体质：母亲有油耳",
+              "timestamp": 1771494490.7135623,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "68a6a124-d4d0-4cd5-a1f7-4a2b1dcc7c90",
+              "content": "3个月前慢性胰腺炎曾急性发作1次",
+              "timestamp": 1771494458.5218258,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "4b8a39a8-139b-429f-9bc0-7be83eed2a40",
+              "content": "计划在浙江就医进一步确诊与评估；咨询是否需要先挂内分泌科",
+              "timestamp": 1771494458.5218341,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "850b65b0-96c4-4dbb-bd69-23a549fa8bad",
+              "content": "既往慢性胰腺炎",
+              "timestamp": 1771494465.9909556,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ae171d53-885e-4c9d-95c3-81495e0e263f",
+              "content": "医生建议就诊路径：先看内分泌科，如有外科问题再转外科",
+              "timestamp": 1771494465.9909635,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "afc02690-571c-4679-9f9e-f3eae1f20afc",
+              "content": "医生判断患者右眼情况更符合上睑下垂，认为不是重症肌无力",
+              "timestamp": 1771494476.7678676,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "82c43f77-c1db-4455-8b11-5f0020da004b",
+              "content": "医生指出重症肌无力通常不会只影响一侧肌肉；观察到右眉高于左眉且形状可能不同，并询问右眉是否能活动",
+              "timestamp": 1771494476.7678797,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "42fc53c1-2e50-4c66-91d4-564f224dacf0",
+              "content": "手术史：患儿2年前已行腺样体切除术",
+              "timestamp": 1771494490.7135715,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "b6b23a40-f39a-4d6b-b10e-7575801878d9",
+              "content": "既往/基础疾病：患儿有过敏性鼻炎、慢性鼻窦炎、扁桃体炎",
+              "timestamp": 1771494490.7135766,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "0e2db1c6-e88a-4725-af18-80b0d3123800",
+              "content": "医生建议转诊/就诊：请找张榕教授看看",
+              "timestamp": 1771494527.746161,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "67344b8c-3eac-40c4-a9cf-88313660153a",
+              "content": "皮肤表现：约1岁起面部出现少量黑点，随后逐渐增多增大；嘴角处更明显；黑点呈线形分布，并向头部方向延伸增长",
+              "timestamp": 1771494546.0640543,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "盆腔炎，女，32岁，体质好，05年12月上海产钳育一子，06年11月出现排卵期小腹轻微疼痛白带带血丝或平时不规则少量出血，期间中药调理没有明显效果，08年3月再次怀孕，孕期未有不规则出血，孕28周时下蹲时出血，量约湿透一两片卫生巾，宁波妇儿医院B超未查出出血原因，后保胎成功，09年2月顺产一子。产后4个月恶露未彻底干净，月经提前或推后两三天。至今仍出现不规则出血，量持续三四天，用护垫会湿透，血暗红或鲜红，掺杂白带。有时出现脓性白带。小腹两侧微痛。谢谢！有医生建议我做刮宫手术用来查内膜有什么病变，您觉得有必要吗？另外我前两次月经量增多，出现铜钱大小的血块，好怕啊？目前我主要是小腹两侧疼，有脓性白带，不规则出血，总是感觉比较累。几次B超都没有积液或只有少量积液，出现过子宫增大的现象，现在已经恢复了。能麻烦您再给我一些详细的建议吗？十分感谢！",
+        "to_memory": [
+          "identity: 女，32岁；自述体质好",
+          "history: 2005-12上海产钳分娩一子；2008-03再次怀孕，孕28周下蹲时阴道出血（约湿透1-2片卫生巾），宁波妇儿医院B超未查明原因，后保胎成功；2009-02顺产一子；产后4个月恶露未净；2006年起曾中药调理但效果不明显；多次B超提示无盆腔积液或少量积液；曾出现子宫增大后已恢复",
+          "working: 2006-11起反复排卵期小腹轻微疼痛、白带带血丝/不规则少量出血；目前仍不规则阴道出血（持续3-4天，暗红或鲜红，夹白带）、有时脓性白带，小腹两侧微痛，近两次月经量增多并有铜钱大小血块，主观乏力；咨询是否需要刮宫以检查子宫内膜病变"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "92814b34-e7de-4856-a9dc-d01e5a3421f1",
+              "content": "妇科症状：自2006-11起反复排卵期小腹轻微疼痛、白带带血丝/不规则少量出血；目前仍不规则阴道出血（持续3-4天，暗红或鲜红，夹白带），有时脓性白带，小腹两侧微痛；近两次月经量增多并有铜钱大小血块；主观乏力",
+              "timestamp": 1771494566.259157,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "17e2fee5-eeab-4ae7-b18d-765d61a8206f",
+              "content": "就诊诉求：咨询是否需要刮宫以检查子宫内膜病变",
+              "timestamp": 1771494566.259161,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "518343c4-5dbf-43a7-8939-0f1470c3976b",
+              "content": "家族史：患者母亲患糖尿病（考虑慢性胰腺炎相关/胰源性糖尿病）",
+              "timestamp": 1771494458.5218112,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "f39138a6-15f1-4011-82b5-fd69c6f6f88a",
+              "content": "家族史：患者母亲患慢性胰腺炎",
+              "timestamp": 1771494458.5218203,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "76a1cad2-7b93-4fc9-860a-0acdb50c797b",
+              "content": "家族史/体质：母亲有油耳",
+              "timestamp": 1771494490.7135623,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "053588bb-37b3-49f5-baed-12e3349d939d",
+              "content": "患者：女，32岁；自述体质好",
+              "timestamp": 1771494566.2591367,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "history": [
+            {
+              "id": "68a6a124-d4d0-4cd5-a1f7-4a2b1dcc7c90",
+              "content": "3个月前慢性胰腺炎曾急性发作1次",
+              "timestamp": 1771494458.5218258,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "4b8a39a8-139b-429f-9bc0-7be83eed2a40",
+              "content": "计划在浙江就医进一步确诊与评估；咨询是否需要先挂内分泌科",
+              "timestamp": 1771494458.5218341,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "850b65b0-96c4-4dbb-bd69-23a549fa8bad",
+              "content": "既往慢性胰腺炎",
+              "timestamp": 1771494465.9909556,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ae171d53-885e-4c9d-95c3-81495e0e263f",
+              "content": "医生建议就诊路径：先看内分泌科，如有外科问题再转外科",
+              "timestamp": 1771494465.9909635,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "afc02690-571c-4679-9f9e-f3eae1f20afc",
+              "content": "医生判断患者右眼情况更符合上睑下垂，认为不是重症肌无力",
+              "timestamp": 1771494476.7678676,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "82c43f77-c1db-4455-8b11-5f0020da004b",
+              "content": "医生指出重症肌无力通常不会只影响一侧肌肉；观察到右眉高于左眉且形状可能不同，并询问右眉是否能活动",
+              "timestamp": 1771494476.7678797,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "42fc53c1-2e50-4c66-91d4-564f224dacf0",
+              "content": "手术史：患儿2年前已行腺样体切除术",
+              "timestamp": 1771494490.7135715,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "b6b23a40-f39a-4d6b-b10e-7575801878d9",
+              "content": "既往/基础疾病：患儿有过敏性鼻炎、慢性鼻窦炎、扁桃体炎",
+              "timestamp": 1771494490.7135766,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "0e2db1c6-e88a-4725-af18-80b0d3123800",
+              "content": "医生建议转诊/就诊：请找张榕教授看看",
+              "timestamp": 1771494527.746161,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "67344b8c-3eac-40c4-a9cf-88313660153a",
+              "content": "皮肤表现：约1岁起面部出现少量黑点，随后逐渐增多增大；嘴角处更明显；黑点呈线形分布，并向头部方向延伸增长",
+              "timestamp": 1771494546.0640543,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "80925065-1877-42bc-bc55-4c09d727475e",
+              "content": "产科史：2005-12上海产钳分娩一子；2008-03再次怀孕，孕28周下蹲时阴道出血（约湿透1-2片卫生巾），宁波妇儿医院B超未查明原因，后保胎成功；2009-02顺产一子",
+              "timestamp": 1771494566.2591472,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "03a37eac-0189-46da-82d5-0bb3406b6542",
+              "content": "产后情况：2009年产后4个月恶露未净；2006年起曾中药调理但效果不明显；多次B超提示无盆腔积液或少量积液；曾出现子宫增大后已恢复",
+              "timestamp": 1771494566.2591527,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "如果有盆腔炎，则先治疗盆腔炎，如果盆腔炎治愈后，月经不调正常了，则暂时不用刮宫。",
+        "to_memory": [
+          "history: 医生建议：如确有盆腔炎应先治疗盆腔炎；盆腔炎治愈后若月经不调恢复正常，则暂不需要刮宫检查"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "92814b34-e7de-4856-a9dc-d01e5a3421f1",
+              "content": "妇科症状：自2006-11起反复排卵期小腹轻微疼痛、白带带血丝/不规则少量出血；目前仍不规则阴道出血（持续3-4天，暗红或鲜红，夹白带），有时脓性白带，小腹两侧微痛；近两次月经量增多并有铜钱大小血块；主观乏力",
+              "timestamp": 1771494566.259157,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "17e2fee5-eeab-4ae7-b18d-765d61a8206f",
+              "content": "就诊诉求：咨询是否需要刮宫以检查子宫内膜病变",
+              "timestamp": 1771494566.259161,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "875382f3-2678-434b-bb80-56004c60570b",
+              "content": "医生建议：如确有盆腔炎应先治疗盆腔炎；盆腔炎治愈后若月经不调恢复正常，则暂不需要刮宫检查",
+              "timestamp": 1771494569.507014,
+              "metadata": {
+                "turn_idx": 27
+              },
+              "turn_idx": 27
+            }
+          ],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "518343c4-5dbf-43a7-8939-0f1470c3976b",
+              "content": "家族史：患者母亲患糖尿病（考虑慢性胰腺炎相关/胰源性糖尿病）",
+              "timestamp": 1771494458.5218112,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "f39138a6-15f1-4011-82b5-fd69c6f6f88a",
+              "content": "家族史：患者母亲患慢性胰腺炎",
+              "timestamp": 1771494458.5218203,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "76a1cad2-7b93-4fc9-860a-0acdb50c797b",
+              "content": "家族史/体质：母亲有油耳",
+              "timestamp": 1771494490.7135623,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "053588bb-37b3-49f5-baed-12e3349d939d",
+              "content": "患者：女，32岁；自述体质好",
+              "timestamp": 1771494566.2591367,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "history": [
+            {
+              "id": "68a6a124-d4d0-4cd5-a1f7-4a2b1dcc7c90",
+              "content": "3个月前慢性胰腺炎曾急性发作1次",
+              "timestamp": 1771494458.5218258,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "4b8a39a8-139b-429f-9bc0-7be83eed2a40",
+              "content": "计划在浙江就医进一步确诊与评估；咨询是否需要先挂内分泌科",
+              "timestamp": 1771494458.5218341,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "850b65b0-96c4-4dbb-bd69-23a549fa8bad",
+              "content": "既往慢性胰腺炎",
+              "timestamp": 1771494465.9909556,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ae171d53-885e-4c9d-95c3-81495e0e263f",
+              "content": "医生建议就诊路径：先看内分泌科，如有外科问题再转外科",
+              "timestamp": 1771494465.9909635,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "afc02690-571c-4679-9f9e-f3eae1f20afc",
+              "content": "医生判断患者右眼情况更符合上睑下垂，认为不是重症肌无力",
+              "timestamp": 1771494476.7678676,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "82c43f77-c1db-4455-8b11-5f0020da004b",
+              "content": "医生指出重症肌无力通常不会只影响一侧肌肉；观察到右眉高于左眉且形状可能不同，并询问右眉是否能活动",
+              "timestamp": 1771494476.7678797,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "42fc53c1-2e50-4c66-91d4-564f224dacf0",
+              "content": "手术史：患儿2年前已行腺样体切除术",
+              "timestamp": 1771494490.7135715,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "b6b23a40-f39a-4d6b-b10e-7575801878d9",
+              "content": "既往/基础疾病：患儿有过敏性鼻炎、慢性鼻窦炎、扁桃体炎",
+              "timestamp": 1771494490.7135766,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "0e2db1c6-e88a-4725-af18-80b0d3123800",
+              "content": "医生建议转诊/就诊：请找张榕教授看看",
+              "timestamp": 1771494527.746161,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "67344b8c-3eac-40c4-a9cf-88313660153a",
+              "content": "皮肤表现：约1岁起面部出现少量黑点，随后逐渐增多增大；嘴角处更明显；黑点呈线形分布，并向头部方向延伸增长",
+              "timestamp": 1771494546.0640543,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "80925065-1877-42bc-bc55-4c09d727475e",
+              "content": "产科史：2005-12上海产钳分娩一子；2008-03再次怀孕，孕28周下蹲时阴道出血（约湿透1-2片卫生巾），宁波妇儿医院B超未查明原因，后保胎成功；2009-02顺产一子",
+              "timestamp": 1771494566.2591472,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "03a37eac-0189-46da-82d5-0bb3406b6542",
+              "content": "产后情况：2009年产后4个月恶露未净；2006年起曾中药调理但效果不明显；多次B超提示无盆腔积液或少量积液；曾出现子宫增大后已恢复",
+              "timestamp": 1771494566.2591527,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "针对患者提出的进一步检查/处理请求，在决定是否实施前，需要优先核对其既往明确诊断史中哪一项可能与相关操作的风险评估或用药选择存在安全冲突？请指出该既往诊断。",
+          "answer": "既往慢性胰腺炎",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "850b65b0-96c4-4dbb-bd69-23a549fa8bad"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "17e2fee5-eeab-4ae7-b18d-765d61a8206f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            13,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "518343c4-5dbf-43a7-8939-0f1470c3976b",
+              "content": "家族史：患者母亲患糖尿病（考虑慢性胰腺炎相关/胰源性糖尿病）",
+              "timestamp": 1771494458.5218112,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "f39138a6-15f1-4011-82b5-fd69c6f6f88a",
+              "content": "家族史：患者母亲患慢性胰腺炎",
+              "timestamp": 1771494458.5218203,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "76a1cad2-7b93-4fc9-860a-0acdb50c797b",
+              "content": "家族史/体质：母亲有油耳",
+              "timestamp": 1771494490.7135623,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "053588bb-37b3-49f5-baed-12e3349d939d",
+              "content": "患者：女，32岁；自述体质好",
+              "timestamp": 1771494566.2591367,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "history": [
+            {
+              "id": "68a6a124-d4d0-4cd5-a1f7-4a2b1dcc7c90",
+              "content": "3个月前慢性胰腺炎曾急性发作1次",
+              "timestamp": 1771494458.5218258,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "4b8a39a8-139b-429f-9bc0-7be83eed2a40",
+              "content": "计划在浙江就医进一步确诊与评估；咨询是否需要先挂内分泌科",
+              "timestamp": 1771494458.5218341,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "850b65b0-96c4-4dbb-bd69-23a549fa8bad",
+              "content": "既往慢性胰腺炎",
+              "timestamp": 1771494465.9909556,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ae171d53-885e-4c9d-95c3-81495e0e263f",
+              "content": "医生建议就诊路径：先看内分泌科，如有外科问题再转外科",
+              "timestamp": 1771494465.9909635,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "afc02690-571c-4679-9f9e-f3eae1f20afc",
+              "content": "医生判断患者右眼情况更符合上睑下垂，认为不是重症肌无力",
+              "timestamp": 1771494476.7678676,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "82c43f77-c1db-4455-8b11-5f0020da004b",
+              "content": "医生指出重症肌无力通常不会只影响一侧肌肉；观察到右眉高于左眉且形状可能不同，并询问右眉是否能活动",
+              "timestamp": 1771494476.7678797,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "42fc53c1-2e50-4c66-91d4-564f224dacf0",
+              "content": "手术史：患儿2年前已行腺样体切除术",
+              "timestamp": 1771494490.7135715,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "b6b23a40-f39a-4d6b-b10e-7575801878d9",
+              "content": "既往/基础疾病：患儿有过敏性鼻炎、慢性鼻窦炎、扁桃体炎",
+              "timestamp": 1771494490.7135766,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "0e2db1c6-e88a-4725-af18-80b0d3123800",
+              "content": "医生建议转诊/就诊：请找张榕教授看看",
+              "timestamp": 1771494527.746161,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "67344b8c-3eac-40c4-a9cf-88313660153a",
+              "content": "皮肤表现：约1岁起面部出现少量黑点，随后逐渐增多增大；嘴角处更明显；黑点呈线形分布，并向头部方向延伸增长",
+              "timestamp": 1771494546.0640543,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "80925065-1877-42bc-bc55-4c09d727475e",
+              "content": "产科史：2005-12上海产钳分娩一子；2008-03再次怀孕，孕28周下蹲时阴道出血（约湿透1-2片卫生巾），宁波妇儿医院B超未查明原因，后保胎成功；2009-02顺产一子",
+              "timestamp": 1771494566.2591472,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "03a37eac-0189-46da-82d5-0bb3406b6542",
+              "content": "产后情况：2009年产后4个月恶露未净；2006年起曾中药调理但效果不明显；多次B超提示无盆腔积液或少量积液；曾出现子宫增大后已恢复",
+              "timestamp": 1771494566.2591527,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "先天性并指，出生后先天性并指，左手中指和无名指并指目前九个月大，四个月的时候有照过片子，片子和目前手的照片请查看附件档案。",
+        "to_memory": [
+          "history: 先天性并指（左手中指与无名指并指），出生后即存在；目前患儿9个月大",
+          "history: 4个月大时已拍片检查（影像资料见附件）",
+          "identity: 本次就诊为评估先天性并指情况，已提供当前手部照片与既往片子（见附件）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "518343c4-5dbf-43a7-8939-0f1470c3976b",
+              "content": "家族史：患者母亲患糖尿病（考虑慢性胰腺炎相关/胰源性糖尿病）",
+              "timestamp": 1771494458.5218112,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "f39138a6-15f1-4011-82b5-fd69c6f6f88a",
+              "content": "家族史：患者母亲患慢性胰腺炎",
+              "timestamp": 1771494458.5218203,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "76a1cad2-7b93-4fc9-860a-0acdb50c797b",
+              "content": "家族史/体质：母亲有油耳",
+              "timestamp": 1771494490.7135623,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "053588bb-37b3-49f5-baed-12e3349d939d",
+              "content": "患者：女，32岁；自述体质好",
+              "timestamp": 1771494566.2591367,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "c3137dd5-3621-40a4-8ba9-fcaea23ff861",
+              "content": "本次就诊目的：评估患儿先天性并指情况；已提供当前手部照片与既往片子（见附件）。",
+              "timestamp": 1771494579.3423214,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            }
+          ],
+          "history": [
+            {
+              "id": "68a6a124-d4d0-4cd5-a1f7-4a2b1dcc7c90",
+              "content": "3个月前慢性胰腺炎曾急性发作1次",
+              "timestamp": 1771494458.5218258,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "4b8a39a8-139b-429f-9bc0-7be83eed2a40",
+              "content": "计划在浙江就医进一步确诊与评估；咨询是否需要先挂内分泌科",
+              "timestamp": 1771494458.5218341,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "850b65b0-96c4-4dbb-bd69-23a549fa8bad",
+              "content": "既往慢性胰腺炎",
+              "timestamp": 1771494465.9909556,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ae171d53-885e-4c9d-95c3-81495e0e263f",
+              "content": "医生建议就诊路径：先看内分泌科，如有外科问题再转外科",
+              "timestamp": 1771494465.9909635,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "afc02690-571c-4679-9f9e-f3eae1f20afc",
+              "content": "医生判断患者右眼情况更符合上睑下垂，认为不是重症肌无力",
+              "timestamp": 1771494476.7678676,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "82c43f77-c1db-4455-8b11-5f0020da004b",
+              "content": "医生指出重症肌无力通常不会只影响一侧肌肉；观察到右眉高于左眉且形状可能不同，并询问右眉是否能活动",
+              "timestamp": 1771494476.7678797,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "42fc53c1-2e50-4c66-91d4-564f224dacf0",
+              "content": "手术史：患儿2年前已行腺样体切除术",
+              "timestamp": 1771494490.7135715,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "b6b23a40-f39a-4d6b-b10e-7575801878d9",
+              "content": "既往/基础疾病：患儿有过敏性鼻炎、慢性鼻窦炎、扁桃体炎",
+              "timestamp": 1771494490.7135766,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "0e2db1c6-e88a-4725-af18-80b0d3123800",
+              "content": "医生建议转诊/就诊：请找张榕教授看看",
+              "timestamp": 1771494527.746161,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "67344b8c-3eac-40c4-a9cf-88313660153a",
+              "content": "皮肤表现：约1岁起面部出现少量黑点，随后逐渐增多增大；嘴角处更明显；黑点呈线形分布，并向头部方向延伸增长",
+              "timestamp": 1771494546.0640543,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "80925065-1877-42bc-bc55-4c09d727475e",
+              "content": "产科史：2005-12上海产钳分娩一子；2008-03再次怀孕，孕28周下蹲时阴道出血（约湿透1-2片卫生巾），宁波妇儿医院B超未查明原因，后保胎成功；2009-02顺产一子",
+              "timestamp": 1771494566.2591472,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "03a37eac-0189-46da-82d5-0bb3406b6542",
+              "content": "产后情况：2009年产后4个月恶露未净；2006年起曾中药调理但效果不明显；多次B超提示无盆腔积液或少量积液；曾出现子宫增大后已恢复",
+              "timestamp": 1771494566.2591527,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "8dd7296d-e798-4561-9150-ea4a86c8ea6f",
+              "content": "患儿：先天性并指（左手中指与无名指并指），出生后即存在；目前9个月大。",
+              "timestamp": 1771494579.3423083,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            },
+            {
+              "id": "23af2515-81aa-4cba-9f2c-eb1ca7d3d04b",
+              "content": "患儿：4个月大时已拍片检查（影像资料见附件/既往片子）。",
+              "timestamp": 1771494579.342317,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者两次分娩相关就诊记录：第一次分娩采用的分娩方式是什么？第二次妊娠在孕中晚期曾出现过一次出血，当时大致到什么程度（以卫生巾浸湿情况描述）？",
+          "answer": "第一次为产钳分娩；第二次妊娠孕中晚期出血量约湿透1-2片卫生巾。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "42fc53c1-2e50-4c66-91d4-564f224dacf0",
+                "80925065-1877-42bc-bc55-4c09d727475e"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            11,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "现在可以手术分开，住院时间约20天，8000元左右。入院后才能按排手术。",
+        "to_memory": [
+          "history: 医生建议先天性并指（左手中指与无名指）目前可行手术分开治疗；需入院后安排手术；预计住院约20天，费用约8000元"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "a3a156be-0e31-4424-bc44-b50d217b3e4d",
+              "content": "既往/基础疾病：自述强直性脊柱炎；夜间翻身时腰骶部疼痛，其他部位不痛",
+              "timestamp": 1771494392.7484834,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "518343c4-5dbf-43a7-8939-0f1470c3976b",
+              "content": "家族史：患者母亲患糖尿病（考虑慢性胰腺炎相关/胰源性糖尿病）",
+              "timestamp": 1771494458.5218112,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "f39138a6-15f1-4011-82b5-fd69c6f6f88a",
+              "content": "家族史：患者母亲患慢性胰腺炎",
+              "timestamp": 1771494458.5218203,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "76a1cad2-7b93-4fc9-860a-0acdb50c797b",
+              "content": "家族史/体质：母亲有油耳",
+              "timestamp": 1771494490.7135623,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "053588bb-37b3-49f5-baed-12e3349d939d",
+              "content": "患者：女，32岁；自述体质好",
+              "timestamp": 1771494566.2591367,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "c3137dd5-3621-40a4-8ba9-fcaea23ff861",
+              "content": "本次就诊目的：评估患儿先天性并指情况；已提供当前手部照片与既往片子（见附件）。",
+              "timestamp": 1771494579.3423214,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            }
+          ],
+          "history": [
+            {
+              "id": "68a6a124-d4d0-4cd5-a1f7-4a2b1dcc7c90",
+              "content": "3个月前慢性胰腺炎曾急性发作1次",
+              "timestamp": 1771494458.5218258,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "4b8a39a8-139b-429f-9bc0-7be83eed2a40",
+              "content": "计划在浙江就医进一步确诊与评估；咨询是否需要先挂内分泌科",
+              "timestamp": 1771494458.5218341,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "850b65b0-96c4-4dbb-bd69-23a549fa8bad",
+              "content": "既往慢性胰腺炎",
+              "timestamp": 1771494465.9909556,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "ae171d53-885e-4c9d-95c3-81495e0e263f",
+              "content": "医生建议就诊路径：先看内分泌科，如有外科问题再转外科",
+              "timestamp": 1771494465.9909635,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "afc02690-571c-4679-9f9e-f3eae1f20afc",
+              "content": "医生判断患者右眼情况更符合上睑下垂，认为不是重症肌无力",
+              "timestamp": 1771494476.7678676,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "82c43f77-c1db-4455-8b11-5f0020da004b",
+              "content": "医生指出重症肌无力通常不会只影响一侧肌肉；观察到右眉高于左眉且形状可能不同，并询问右眉是否能活动",
+              "timestamp": 1771494476.7678797,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "42fc53c1-2e50-4c66-91d4-564f224dacf0",
+              "content": "手术史：患儿2年前已行腺样体切除术",
+              "timestamp": 1771494490.7135715,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "b6b23a40-f39a-4d6b-b10e-7575801878d9",
+              "content": "既往/基础疾病：患儿有过敏性鼻炎、慢性鼻窦炎、扁桃体炎",
+              "timestamp": 1771494490.7135766,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "0e2db1c6-e88a-4725-af18-80b0d3123800",
+              "content": "医生建议转诊/就诊：请找张榕教授看看",
+              "timestamp": 1771494527.746161,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "67344b8c-3eac-40c4-a9cf-88313660153a",
+              "content": "皮肤表现：约1岁起面部出现少量黑点，随后逐渐增多增大；嘴角处更明显；黑点呈线形分布，并向头部方向延伸增长",
+              "timestamp": 1771494546.0640543,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "80925065-1877-42bc-bc55-4c09d727475e",
+              "content": "产科史：2005-12上海产钳分娩一子；2008-03再次怀孕，孕28周下蹲时阴道出血（约湿透1-2片卫生巾），宁波妇儿医院B超未查明原因，后保胎成功；2009-02顺产一子",
+              "timestamp": 1771494566.2591472,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "03a37eac-0189-46da-82d5-0bb3406b6542",
+              "content": "产后情况：2009年产后4个月恶露未净；2006年起曾中药调理但效果不明显；多次B超提示无盆腔积液或少量积液；曾出现子宫增大后已恢复",
+              "timestamp": 1771494566.2591527,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "8dd7296d-e798-4561-9150-ea4a86c8ea6f",
+              "content": "患儿：先天性并指（左手中指与无名指并指），出生后即存在；目前9个月大。",
+              "timestamp": 1771494579.3423083,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            },
+            {
+              "id": "23af2515-81aa-4cba-9f2c-eb1ca7d3d04b",
+              "content": "患儿：4个月大时已拍片检查（影像资料见附件/既往片子）。",
+              "timestamp": 1771494579.342317,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            },
+            {
+              "id": "cf1aefa0-c233-4499-b5c0-cb50be040f7d",
+              "content": "医生建议：患儿先天性并指（左手中指与无名指）目前可行手术分开治疗；需入院后安排手术；预计住院约20天，费用约8000元。",
+              "timestamp": 1771494585.747974,
+              "metadata": {
+                "turn_idx": 30
+              },
+              "turn_idx": 30
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者最初因皮肤问题来咨询时与后来几次妇科/手外科咨询时的描述：患者最早提到的皮肤异常是从大约什么年龄开始出现的？",
+          "answer": "约1岁左右开始出现。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "42fc53c1-2e50-4c66-91d4-564f224dacf0",
+                "67344b8c-3eac-40c4-a9cf-88313660153a"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            12,
+            7
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "rare_disease_ddx",
+    "scenario_name": "罕见病鉴别诊断",
+    "session_count": 8,
+    "group_key": "综合科"
+  }
+}

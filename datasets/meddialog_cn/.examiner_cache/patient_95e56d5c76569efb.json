@@ -1,0 +1,1688 @@
+{
+  "patient_id": "0fac08ece647",
+  "messages": [
+    {
+      "user": {
+        "content": "胃病，星期几上班，是否可以预约？",
+        "to_memory": [
+          "working: 患者咨询胃病相关就诊，并询问医生星期几上班及是否可以预约"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7cbef2f0-6741-4e03-b7a2-46ef88911c70",
+              "content": "患者咨询胃病相关就诊，并询问医生星期几上班及是否可以预约",
+              "timestamp": 1771494351.313669,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者这次咨询主要想了解就诊安排方面的哪些信息？",
+          "answer": "询问医生星期几上班以及是否可以预约。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "7cbef2f0-6741-4e03-b7a2-46ef88911c70"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "专家门诊正常，具体时间请点击查阅网页右上角“刘万里大夫信息中心页”。",
+        "to_memory": [
+          "working: 患者咨询胃病相关就诊，询问专家门诊上班时间及是否可预约",
+          "working: 医生回复专家门诊正常，具体时间需查看网页“刘万里大夫信息中心页”"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7cbef2f0-6741-4e03-b7a2-46ef88911c70",
+              "content": "患者咨询胃病相关就诊，询问专家门诊上班时间及是否可预约；医生回复专家门诊正常，具体时间需查看网页“刘万里大夫信息中心页”",
+              "timestamp": 1771494351.313669,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "医生让患者通过什么途径查看专家门诊的具体出诊时间？",
+          "answer": "点击查阅网页右上角“刘万里大夫信息中心页”。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "7cbef2f0-6741-4e03-b7a2-46ef88911c70"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "急性重症胰腺功能坏死！，发病时间2010-5-14日急性重症胰腺功能坏死，您好李医生，现在病人目前状态比较虚弱，不能做火车。",
+        "to_memory": [
+          "history: 2010-05-14发病/诊断为急性重症胰腺坏死（急性重症胰腺功能坏死）",
+          "working: 目前病人状态较虚弱，无法乘坐火车出行"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "f15c3353-bbc0-4714-ac21-c9d262ad6ee6",
+              "content": "目前病人状态较虚弱，无法乘坐火车出行",
+              "timestamp": 1771494361.9743595,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "d3091f79-2a02-43b0-92b5-8899c5f82aa3",
+              "content": "2010-05-14发病/诊断为急性重症胰腺坏死（急性重症胰腺功能坏死）",
+              "timestamp": 1771494361.9743507,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在本次对话中提到由于当前身体状况而不适合采用哪一种出行方式？这对是否需要安排线下就诊或转运有什么安全提示？",
+          "answer": "病人目前较虚弱，不能坐火车出行。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "d3091f79-2a02-43b0-92b5-8899c5f82aa3"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "f15c3353-bbc0-4714-ac21-c9d262ad6ee6"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "这种情况通常是引流不好所致，肠瘘是那一段肠管？",
+        "to_memory": [
+          "history: 2010-05-14发病/诊断为急性重症胰腺功能坏死",
+          "working: 患者目前状态虚弱，无法乘坐火车",
+          "working: 医生认为当前情况通常与引流不佳有关（推测）",
+          "working: 医生询问是否存在肠瘘及肠瘘位于哪段肠管"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "f15c3353-bbc0-4714-ac21-c9d262ad6ee6",
+              "content": "目前病人状态较虚弱，无法乘坐火车出行",
+              "timestamp": 1771494361.9743595,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cf72ca22-47a7-41ae-aa4c-85babfbbfbee",
+              "content": "医生推测患者当前情况通常与引流不佳有关",
+              "timestamp": 1771494369.6467874,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "cb63a36b-695d-4cff-8180-163cb4ace122",
+              "content": "医生询问是否存在肠瘘，以及肠瘘位于哪段肠管",
+              "timestamp": 1771494369.6467957,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "d3091f79-2a02-43b0-92b5-8899c5f82aa3",
+              "content": "2010-05-14发病/诊断为急性重症胰腺坏死（急性重症胰腺功能坏死）",
+              "timestamp": 1771494361.9743507,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "医生在回复中提到“这种情况通常是……所致”。请回忆：医生认为导致患者当前状况的常见原因是什么？这与患者提供的病情信息是否存在需要进一步核对的潜在冲突点？",
+          "answer": "医生推测患者当前情况通常与引流不佳有关。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "d3091f79-2a02-43b0-92b5-8899c5f82aa3"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "cf72ca22-47a7-41ae-aa4c-85babfbbfbee"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "d3091f79-2a02-43b0-92b5-8899c5f82aa3",
+              "content": "2010-05-14发病/诊断为急性重症胰腺坏死（急性重症胰腺功能坏死）",
+              "timestamp": 1771494361.9743507,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "不孕，试管进行中。",
+        "to_memory": [
+          "history: 不孕症，正在进行试管婴儿（IVF）治疗中"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "d3091f79-2a02-43b0-92b5-8899c5f82aa3",
+              "content": "2010-05-14发病/诊断为急性重症胰腺坏死（急性重症胰腺功能坏死）",
+              "timestamp": 1771494361.9743507,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "47770ae1-01f7-4c38-a351-86e2276bdd4c",
+              "content": "不孕症，正在进行试管婴儿（IVF）治疗中",
+              "timestamp": 1771494376.3652472,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "在最后一次咨询中，患者就生育相关问题提到自己正在进行哪一种具体的辅助生殖治疗？请写出治疗方式名称。",
+          "answer": "正在进行试管婴儿（IVF）治疗中",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "47770ae1-01f7-4c38-a351-86e2276bdd4c",
+                "47770ae1-01f7-4c38-a351-86e2276bdd4c"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "1-2ml都可以，",
+        "to_memory": [
+          "history: 2010-05-14发病急性重症胰腺功能坏死",
+          "history: 既往提及肠瘘/引流不佳相关问题（具体肠段未明确）",
+          "history: 不孕，试管婴儿进行中",
+          "history: 医生回复“1-2ml都可以”（与具体用药/操作对象未明确）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "d3091f79-2a02-43b0-92b5-8899c5f82aa3",
+              "content": "2010-05-14发病/诊断为急性重症胰腺坏死（急性重症胰腺功能坏死）",
+              "timestamp": 1771494361.9743507,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "47770ae1-01f7-4c38-a351-86e2276bdd4c",
+              "content": "不孕症，正在进行试管婴儿（IVF）治疗中",
+              "timestamp": 1771494376.3652472,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f5cfeb03-0af8-4a25-96f2-10a01449537b",
+              "content": "既往提及肠瘘/引流不佳相关问题（具体肠段未明确）",
+              "timestamp": 1771494384.0813305,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dc4389aa-aeef-4be1-b2c0-5d5720ddef3e",
+              "content": "曾有医生回复“1-2ml都可以”（具体用药/操作对象未明确）",
+              "timestamp": 1771494384.081341,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者在讨论胰腺相关病情那次沟通与后来咨询生育相关问题那次沟通：前一次医生重点追问了与哪类并发问题相关的具体部位信息，而后一次医生给出的关键量化建议是多少？",
+          "answer": "前一次追问肠瘘涉及的肠管段（并提示可能引流不佳）；后一次量化建议为“1-2ml都可以”。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "f5cfeb03-0af8-4a25-96f2-10a01449537b",
+                "dc4389aa-aeef-4be1-b2c0-5d5720ddef3e"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "谢谢马主任！祝你工作顺利！身体健康！",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "d3091f79-2a02-43b0-92b5-8899c5f82aa3",
+              "content": "2010-05-14发病/诊断为急性重症胰腺坏死（急性重症胰腺功能坏死）",
+              "timestamp": 1771494361.9743507,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "47770ae1-01f7-4c38-a351-86e2276bdd4c",
+              "content": "不孕症，正在进行试管婴儿（IVF）治疗中",
+              "timestamp": 1771494376.3652472,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f5cfeb03-0af8-4a25-96f2-10a01449537b",
+              "content": "既往提及肠瘘/引流不佳相关问题（具体肠段未明确）",
+              "timestamp": 1771494384.0813305,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dc4389aa-aeef-4be1-b2c0-5d5720ddef3e",
+              "content": "曾有医生回复“1-2ml都可以”（具体用药/操作对象未明确）",
+              "timestamp": 1771494384.081341,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "谢谢，祝你早做妈妈。",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "d3091f79-2a02-43b0-92b5-8899c5f82aa3",
+              "content": "2010-05-14发病/诊断为急性重症胰腺坏死（急性重症胰腺功能坏死）",
+              "timestamp": 1771494361.9743507,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "47770ae1-01f7-4c38-a351-86e2276bdd4c",
+              "content": "不孕症，正在进行试管婴儿（IVF）治疗中",
+              "timestamp": 1771494376.3652472,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f5cfeb03-0af8-4a25-96f2-10a01449537b",
+              "content": "既往提及肠瘘/引流不佳相关问题（具体肠段未明确）",
+              "timestamp": 1771494384.0813305,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dc4389aa-aeef-4be1-b2c0-5d5720ddef3e",
+              "content": "曾有医生回复“1-2ml都可以”（具体用药/操作对象未明确）",
+              "timestamp": 1771494384.081341,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "d3091f79-2a02-43b0-92b5-8899c5f82aa3",
+              "content": "2010-05-14发病/诊断为急性重症胰腺坏死（急性重症胰腺功能坏死）",
+              "timestamp": 1771494361.9743507,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "47770ae1-01f7-4c38-a351-86e2276bdd4c",
+              "content": "不孕症，正在进行试管婴儿（IVF）治疗中",
+              "timestamp": 1771494376.3652472,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f5cfeb03-0af8-4a25-96f2-10a01449537b",
+              "content": "既往提及肠瘘/引流不佳相关问题（具体肠段未明确）",
+              "timestamp": 1771494384.0813305,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dc4389aa-aeef-4be1-b2c0-5d5720ddef3e",
+              "content": "曾有医生回复“1-2ml都可以”（具体用药/操作对象未明确）",
+              "timestamp": 1771494384.081341,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "不停眨眼，不自觉就眨很多下，总是一段时间好了，过一段时间就又犯了。",
+        "to_memory": [
+          "history: 既往病史：2010-05-14发病急性重症胰腺坏死（曾提及肠瘘/引流问题）",
+          "history: 生育史/诊疗史：不孕，试管婴儿进行中",
+          "working: 本次主诉/症状：不停眨眼，非自主频繁眨眼，时好时发作（间歇性复发）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "024d18f3-7d1c-4904-b8e4-ee55a5661de0",
+              "content": "本次主诉/症状：不停眨眼，非自主频繁眨眼，时好时发作（间歇性复发）",
+              "timestamp": 1771494393.439634,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "d3091f79-2a02-43b0-92b5-8899c5f82aa3",
+              "content": "2010-05-14发病/诊断为急性重症胰腺坏死（急性重症胰腺功能坏死）",
+              "timestamp": 1771494361.9743507,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "47770ae1-01f7-4c38-a351-86e2276bdd4c",
+              "content": "不孕症，正在进行试管婴儿（IVF）治疗中",
+              "timestamp": 1771494376.3652472,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f5cfeb03-0af8-4a25-96f2-10a01449537b",
+              "content": "既往提及肠瘘/引流不佳相关问题（具体肠段未明确）",
+              "timestamp": 1771494384.0813305,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dc4389aa-aeef-4be1-b2c0-5d5720ddef3e",
+              "content": "曾有医生回复“1-2ml都可以”（具体用药/操作对象未明确）",
+              "timestamp": 1771494384.081341,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "回顾患者早年那次被记录的重大急性腹部疾病事件，并对照本次就诊时患者主动描述的主要不适：这两次分别涉及的主要系统/器官是什么？",
+          "answer": "早年：胰腺（急性重症胰腺坏死）；本次：眼部/眼睑（非自主频繁眨眼，间歇性复发）。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "d3091f79-2a02-43b0-92b5-8899c5f82aa3"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "024d18f3-7d1c-4904-b8e4-ee55a5661de0"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            8,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "就诊眼科，可能需要点眼药。",
+        "to_memory": [
+          "working: 主诉不停眨眼/频繁不自主眨眼，症状时好时坏；医生建议就诊眼科，可能需要点眼药"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "024d18f3-7d1c-4904-b8e4-ee55a5661de0",
+              "content": "本次主诉/症状：不停眨眼/频繁不自主眨眼，症状时好时坏（间歇性复发）；医生建议就诊眼科，可能需要点眼药。",
+              "timestamp": 1771494393.439634,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "d3091f79-2a02-43b0-92b5-8899c5f82aa3",
+              "content": "2010-05-14发病/诊断为急性重症胰腺坏死（急性重症胰腺功能坏死）",
+              "timestamp": 1771494361.9743507,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "47770ae1-01f7-4c38-a351-86e2276bdd4c",
+              "content": "不孕症，正在进行试管婴儿（IVF）治疗中",
+              "timestamp": 1771494376.3652472,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f5cfeb03-0af8-4a25-96f2-10a01449537b",
+              "content": "既往提及肠瘘/引流不佳相关问题（具体肠段未明确）",
+              "timestamp": 1771494384.0813305,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dc4389aa-aeef-4be1-b2c0-5d5720ddef3e",
+              "content": "曾有医生回复“1-2ml都可以”（具体用药/操作对象未明确）",
+              "timestamp": 1771494384.081341,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "结合患者既往正在进行的生育相关治疗背景，医生本次建议其到专科就诊并可能使用局部用药时，需要重点核对的潜在用药安全风险点是什么？请说明需核对的关键信息。",
+          "answer": "患者在进行试管婴儿（IVF）治疗中；本次就诊可能需要点眼药，需核对该用药是否与其生育治疗（妊娠/备孕用药）存在安全性或相互影响风险。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "47770ae1-01f7-4c38-a351-86e2276bdd4c"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "024d18f3-7d1c-4904-b8e4-ee55a5661de0"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "d3091f79-2a02-43b0-92b5-8899c5f82aa3",
+              "content": "2010-05-14发病/诊断为急性重症胰腺坏死（急性重症胰腺功能坏死）",
+              "timestamp": 1771494361.9743507,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "47770ae1-01f7-4c38-a351-86e2276bdd4c",
+              "content": "不孕症，正在进行试管婴儿（IVF）治疗中",
+              "timestamp": 1771494376.3652472,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f5cfeb03-0af8-4a25-96f2-10a01449537b",
+              "content": "既往提及肠瘘/引流不佳相关问题（具体肠段未明确）",
+              "timestamp": 1771494384.0813305,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dc4389aa-aeef-4be1-b2c0-5d5720ddef3e",
+              "content": "曾有医生回复“1-2ml都可以”（具体用药/操作对象未明确）",
+              "timestamp": 1771494384.081341,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "胰头癌确诊，我爸爸51岁,今年8月分开始肚子痛,前后检查了很多次都没能查出癌症,本月确诊为胰头癌,胃溃疡,肾结石,就诊于湖南省郴州市第四医院.",
+        "to_memory": [
+          "identity: 患者父亲，51岁",
+          "history: 本月确诊胰头癌",
+          "history: 既往/合并疾病：胃溃疡、肾结石",
+          "history: 就诊医院：湖南省郴州市第四医院",
+          "working: 今年8月开始出现腹痛，期间多次检查未发现癌症"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d25be5ee-e089-430a-af00-e1db9f323e2d",
+              "content": "今年8月开始出现腹痛，期间多次检查未发现癌症",
+              "timestamp": 1771494408.3516757,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [
+            {
+              "id": "46d26d05-2be8-4934-8550-81114ed23f4d",
+              "content": "患者父亲，51岁",
+              "timestamp": 1771494408.3516524,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "history": [
+            {
+              "id": "d3091f79-2a02-43b0-92b5-8899c5f82aa3",
+              "content": "2010-05-14发病/诊断为急性重症胰腺坏死（急性重症胰腺功能坏死）",
+              "timestamp": 1771494361.9743507,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "47770ae1-01f7-4c38-a351-86e2276bdd4c",
+              "content": "不孕症，正在进行试管婴儿（IVF）治疗中",
+              "timestamp": 1771494376.3652472,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f5cfeb03-0af8-4a25-96f2-10a01449537b",
+              "content": "既往提及肠瘘/引流不佳相关问题（具体肠段未明确）",
+              "timestamp": 1771494384.0813305,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dc4389aa-aeef-4be1-b2c0-5d5720ddef3e",
+              "content": "曾有医生回复“1-2ml都可以”（具体用药/操作对象未明确）",
+              "timestamp": 1771494384.081341,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "1bc054be-5adf-490a-aef4-aa250b07d70b",
+              "content": "本月确诊胰头癌",
+              "timestamp": 1771494408.351662,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "e54a95eb-97d9-4d40-b1c4-44874a998c63",
+              "content": "既往/合并疾病：胃溃疡、肾结石",
+              "timestamp": 1771494408.3516672,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "b75c24aa-32a0-4c5e-be17-6d0c75aa7c23",
+              "content": "就诊医院：湖南省郴州市第四医院",
+              "timestamp": 1771494408.3516715,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者既往记录里提到过一次与消化道手术后处理相关的安全隐患；该隐患具体是什么情况？它与目前关于腹部不适的病程描述是否需要额外核对以避免遗漏？",
+          "answer": "既往曾提及肠瘘/引流不佳相关问题（具体肠段未明确）；另外今年8月开始腹痛，期间多次检查未发现癌症。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "f5cfeb03-0af8-4a25-96f2-10a01449537b"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "d25be5ee-e089-430a-af00-e1db9f323e2d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            7,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "胰头癌常见的症状就是黄疸，黄疸原因是因为胰头肿瘤堵塞胆总管末段，治疗原则首先考虑手术，能够切除尽量手术切除、手术的方式为胰十二指肠切除术，切除范围包括胃的一半、全部十二指肠、部分空肠、胰头、一部分胆管、胆囊，手术较大，但是，手术是唯一有希望的治疗方式；如果术中证实肿瘤浸润肠系膜上静脉或门静脉无法切除，则可行胆囊空肠吻合解决胆管通路，从而起到减黄的目的，不能切除之后的治疗较为麻烦，因为，胰腺癌对化疗不敏感，效果也自然就不好，放疗有一定的疗效，但是，仍然不能起到很好的效果，放疗需要行三维适形放疗，减少放疗对周围组织的顺手。",
+        "to_memory": [
+          "history: 家属（父亲，51岁）确诊胰头癌（本月确诊），8月起出现腹痛",
+          "history: 家属合并疾病/诊断：胃溃疡、肾结石",
+          "history: 就诊医院：湖南省郴州市第四医院",
+          "history: 医生建议/治疗原则：胰头癌首选手术切除，推荐胰十二指肠切除术；如术中证实浸润肠系膜上静脉或门静脉无法切除，可行胆囊空肠吻合以减黄；胰腺癌对化疗不敏感，放疗（建议三维适形放疗）有一定疗效"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d25be5ee-e089-430a-af00-e1db9f323e2d",
+              "content": "患者父亲今年8月起出现腹痛，期间多次检查未发现癌症；本月确诊胰头癌",
+              "timestamp": 1771494408.3516757,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [
+            {
+              "id": "46d26d05-2be8-4934-8550-81114ed23f4d",
+              "content": "患者父亲，51岁",
+              "timestamp": 1771494408.3516524,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "history": [
+            {
+              "id": "d3091f79-2a02-43b0-92b5-8899c5f82aa3",
+              "content": "2010-05-14发病/诊断为急性重症胰腺坏死（急性重症胰腺功能坏死）",
+              "timestamp": 1771494361.9743507,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "47770ae1-01f7-4c38-a351-86e2276bdd4c",
+              "content": "不孕症，正在进行试管婴儿（IVF）治疗中",
+              "timestamp": 1771494376.3652472,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f5cfeb03-0af8-4a25-96f2-10a01449537b",
+              "content": "既往提及肠瘘/引流不佳相关问题（具体肠段未明确）",
+              "timestamp": 1771494384.0813305,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dc4389aa-aeef-4be1-b2c0-5d5720ddef3e",
+              "content": "曾有医生回复“1-2ml都可以”（具体用药/操作对象未明确）",
+              "timestamp": 1771494384.081341,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "1bc054be-5adf-490a-aef4-aa250b07d70b",
+              "content": "本月确诊胰头癌",
+              "timestamp": 1771494408.351662,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "e54a95eb-97d9-4d40-b1c4-44874a998c63",
+              "content": "既往/合并疾病：胃溃疡、肾结石",
+              "timestamp": 1771494408.3516672,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "b75c24aa-32a0-4c5e-be17-6d0c75aa7c23",
+              "content": "就诊医院：湖南省郴州市第四医院",
+              "timestamp": 1771494408.3516715,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "7eef9d03-8c7c-4857-8c63-33d528693bfe",
+              "content": "医生建议/治疗原则：胰头癌首选手术切除，推荐胰十二指肠切除术；如术中证实浸润肠系膜上静脉或门静脉无法切除，可行胆囊空肠吻合以减黄；胰腺癌对化疗不敏感，放疗（建议三维适形放疗）有一定疗效",
+              "timestamp": 1771494419.0308514,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在这段咨询记录中，患者描述的“就诊对象/家属身份”信息与其年龄描述是否需要做一致性核对？如果需要，请指出需要核对的具体身份与年龄对应关系是什么。",
+          "answer": "患者咨询对象为其父亲，年龄51岁。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "f5cfeb03-0af8-4a25-96f2-10a01449537b"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "46d26d05-2be8-4934-8550-81114ed23f4d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            8,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "你好!放疗是否能控制病情的恶化？有没办法将肿瘤变小,减小肿瘤浸润肠系膜上静脉或门静脉的范围,达到能通过手术来解决问题,这个病最多可以有多久时间来救治？谢谢你!",
+        "to_memory": [
+          "history: 患者父亲，51岁，本月确诊胰头癌；2025年8月起出现腹痛；合并胃溃疡、肾结石；就诊于湖南省郴州市第四医院",
+          "history: 询问放疗是否能控制病情恶化、是否有办法缩小肿瘤/减轻对肠系膜上静脉或门静脉浸润以争取手术机会，以及可救治时间窗口/预后时长"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d25be5ee-e089-430a-af00-e1db9f323e2d",
+              "content": "患者父亲今年8月起出现腹痛，期间多次检查未发现癌症；本月确诊胰头癌；目前关心放疗能否控制病情恶化、是否可缩小肿瘤/减轻对肠系膜上静脉或门静脉浸润以争取手术机会，以及可救治时间窗口/预后时长",
+              "timestamp": 1771494408.3516757,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [
+            {
+              "id": "46d26d05-2be8-4934-8550-81114ed23f4d",
+              "content": "患者父亲，51岁",
+              "timestamp": 1771494408.3516524,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "history": [
+            {
+              "id": "d3091f79-2a02-43b0-92b5-8899c5f82aa3",
+              "content": "2010-05-14发病/诊断为急性重症胰腺坏死（急性重症胰腺功能坏死）",
+              "timestamp": 1771494361.9743507,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "47770ae1-01f7-4c38-a351-86e2276bdd4c",
+              "content": "不孕症，正在进行试管婴儿（IVF）治疗中",
+              "timestamp": 1771494376.3652472,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f5cfeb03-0af8-4a25-96f2-10a01449537b",
+              "content": "既往提及肠瘘/引流不佳相关问题（具体肠段未明确）",
+              "timestamp": 1771494384.0813305,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dc4389aa-aeef-4be1-b2c0-5d5720ddef3e",
+              "content": "曾有医生回复“1-2ml都可以”（具体用药/操作对象未明确）",
+              "timestamp": 1771494384.081341,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "1bc054be-5adf-490a-aef4-aa250b07d70b",
+              "content": "本月确诊胰头癌",
+              "timestamp": 1771494408.351662,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "e54a95eb-97d9-4d40-b1c4-44874a998c63",
+              "content": "既往/合并疾病：胃溃疡、肾结石",
+              "timestamp": 1771494408.3516672,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "b75c24aa-32a0-4c5e-be17-6d0c75aa7c23",
+              "content": "就诊医院：湖南省郴州市第四医院",
+              "timestamp": 1771494408.3516715,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "7eef9d03-8c7c-4857-8c63-33d528693bfe",
+              "content": "医生建议/治疗原则：胰头癌首选手术切除，推荐胰十二指肠切除术；如术中证实浸润肠系膜上静脉或门静脉无法切除，可行胆囊空肠吻合以减黄；胰腺癌对化疗不敏感，放疗（建议三维适形放疗）有一定疗效",
+              "timestamp": 1771494419.0308514,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "回顾对话中两段不同主题的咨询：最早一段医生在结束时对患者表达了与生育相关的祝愿；而后面一段患者在咨询其父亲肿瘤治疗。请问，在最早那段咨询中，患者当时正在进行的生殖相关治疗是什么？",
+          "answer": "不孕症治疗中，正在进行试管婴儿（IVF）。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "47770ae1-01f7-4c38-a351-86e2276bdd4c"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "d25be5ee-e089-430a-af00-e1db9f323e2d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            10,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "理论上放疗是可以达到外科手术的目的，实际上是有差距的，放疗是有作用，有条件可以做。",
+        "to_memory": [
+          "history: （患者父亲）本月确诊胰头癌（胰腺癌），伴胃溃疡、肾结石；8月起出现腹痛；就诊于湖南省郴州市第四医院",
+          "history: 询问放疗能否控制病情恶化、能否缩小肿瘤/减少对肠系膜上静脉或门静脉浸润以争取手术，以及救治时间窗口",
+          "history: 医生建议/意见：放疗有作用，理论上可达到外科手术目的但实际有差距；有条件可以做放疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d25be5ee-e089-430a-af00-e1db9f323e2d",
+              "content": "患者父亲今年8月起出现腹痛，期间多次检查未发现癌症；本月确诊胰头癌（胰腺癌），合并胃溃疡、肾结石；就诊于湖南省郴州市第四医院；目前关心放疗能否控制病情恶化、是否可缩小肿瘤/减轻对肠系膜上静脉或门静脉浸润以争取手术机会，以及救治时间窗口/预后时长；医生意见：放疗有作用，理论上可达到外科手术目的但实际有差距，有条件可做放疗",
+              "timestamp": 1771494408.3516757,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [
+            {
+              "id": "46d26d05-2be8-4934-8550-81114ed23f4d",
+              "content": "患者父亲，51岁",
+              "timestamp": 1771494408.3516524,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "history": [
+            {
+              "id": "d3091f79-2a02-43b0-92b5-8899c5f82aa3",
+              "content": "2010-05-14发病/诊断为急性重症胰腺坏死（急性重症胰腺功能坏死）",
+              "timestamp": 1771494361.9743507,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "47770ae1-01f7-4c38-a351-86e2276bdd4c",
+              "content": "不孕症，正在进行试管婴儿（IVF）治疗中",
+              "timestamp": 1771494376.3652472,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f5cfeb03-0af8-4a25-96f2-10a01449537b",
+              "content": "既往提及肠瘘/引流不佳相关问题（具体肠段未明确）",
+              "timestamp": 1771494384.0813305,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dc4389aa-aeef-4be1-b2c0-5d5720ddef3e",
+              "content": "曾有医生回复“1-2ml都可以”（具体用药/操作对象未明确）",
+              "timestamp": 1771494384.081341,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "1bc054be-5adf-490a-aef4-aa250b07d70b",
+              "content": "本月确诊胰头癌",
+              "timestamp": 1771494408.351662,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "e54a95eb-97d9-4d40-b1c4-44874a998c63",
+              "content": "既往/合并疾病：胃溃疡、肾结石",
+              "timestamp": 1771494408.3516672,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "b75c24aa-32a0-4c5e-be17-6d0c75aa7c23",
+              "content": "就诊医院：湖南省郴州市第四医院",
+              "timestamp": 1771494408.3516715,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "7eef9d03-8c7c-4857-8c63-33d528693bfe",
+              "content": "医生建议/治疗原则：胰头癌首选手术切除，推荐胰十二指肠切除术；如术中证实浸润肠系膜上静脉或门静脉无法切除，可行胆囊空肠吻合以减黄；胰腺癌对化疗不敏感，放疗（建议三维适形放疗）有一定疗效",
+              "timestamp": 1771494419.0308514,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "46d26d05-2be8-4934-8550-81114ed23f4d",
+              "content": "患者父亲，51岁",
+              "timestamp": 1771494408.3516524,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "history": [
+            {
+              "id": "d3091f79-2a02-43b0-92b5-8899c5f82aa3",
+              "content": "2010-05-14发病/诊断为急性重症胰腺坏死（急性重症胰腺功能坏死）",
+              "timestamp": 1771494361.9743507,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "47770ae1-01f7-4c38-a351-86e2276bdd4c",
+              "content": "不孕症，正在进行试管婴儿（IVF）治疗中",
+              "timestamp": 1771494376.3652472,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f5cfeb03-0af8-4a25-96f2-10a01449537b",
+              "content": "既往提及肠瘘/引流不佳相关问题（具体肠段未明确）",
+              "timestamp": 1771494384.0813305,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dc4389aa-aeef-4be1-b2c0-5d5720ddef3e",
+              "content": "曾有医生回复“1-2ml都可以”（具体用药/操作对象未明确）",
+              "timestamp": 1771494384.081341,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "1bc054be-5adf-490a-aef4-aa250b07d70b",
+              "content": "本月确诊胰头癌",
+              "timestamp": 1771494408.351662,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "e54a95eb-97d9-4d40-b1c4-44874a998c63",
+              "content": "既往/合并疾病：胃溃疡、肾结石",
+              "timestamp": 1771494408.3516672,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "b75c24aa-32a0-4c5e-be17-6d0c75aa7c23",
+              "content": "就诊医院：湖南省郴州市第四医院",
+              "timestamp": 1771494408.3516715,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "7eef9d03-8c7c-4857-8c63-33d528693bfe",
+              "content": "医生建议/治疗原则：胰头癌首选手术切除，推荐胰十二指肠切除术；如术中证实浸润肠系膜上静脉或门静脉无法切除，可行胆囊空肠吻合以减黄；胰腺癌对化疗不敏感，放疗（建议三维适形放疗）有一定疗效",
+              "timestamp": 1771494419.0308514,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "横结肠腺癌术后，胃腺癌，患者男，38岁，2005年4月因腹疼做过横结肠腺癌根治术，2008年12月做过胃息肉术，县医院病理诊断为“重度不典型增生”北京协和医院病理诊断为胃腺癌，现在胃内又长一息肉，胃镜下看颜色、活动度均不象癌，但感觉和上次一样。化验癌胚抗原指数为81.56，以前不高，只是近半年从10.3逐渐升到15.78、18.9、26.56、55.1、57.6、81.56。",
+        "to_memory": [
+          "identity: 患者男，38岁",
+          "history: 2005年4月因腹痛行横结肠腺癌根治术（横结肠腺癌术后）",
+          "history: 2008年12月行胃息肉手术；县医院病理为“重度不典型增生”，北京协和医院复核病理诊断为胃腺癌",
+          "history: 癌胚抗原（CEA）近半年逐渐升高：10.3→15.78→18.9→26.56→55.1→57.6→81.56",
+          "working: 目前胃内又长一息肉；胃镜下观察颜色、活动度不太像癌，但患者自述感觉与上次类似"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ef41acda-a98d-44fd-a72d-b289830b2577",
+              "content": "目前胃内又长一息肉；胃镜下观察颜色、活动度不太像癌，但患者自述感觉与上次类似",
+              "timestamp": 1771494450.0720217,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "identity": [
+            {
+              "id": "46d26d05-2be8-4934-8550-81114ed23f4d",
+              "content": "患者父亲，51岁",
+              "timestamp": 1771494408.3516524,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "f50e5801-36a2-48c9-86e4-5436b3393aa4",
+              "content": "患者男，38岁",
+              "timestamp": 1771494450.071999,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "history": [
+            {
+              "id": "d3091f79-2a02-43b0-92b5-8899c5f82aa3",
+              "content": "2010-05-14发病/诊断为急性重症胰腺坏死（急性重症胰腺功能坏死）",
+              "timestamp": 1771494361.9743507,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "47770ae1-01f7-4c38-a351-86e2276bdd4c",
+              "content": "不孕症，正在进行试管婴儿（IVF）治疗中",
+              "timestamp": 1771494376.3652472,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f5cfeb03-0af8-4a25-96f2-10a01449537b",
+              "content": "既往提及肠瘘/引流不佳相关问题（具体肠段未明确）",
+              "timestamp": 1771494384.0813305,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dc4389aa-aeef-4be1-b2c0-5d5720ddef3e",
+              "content": "曾有医生回复“1-2ml都可以”（具体用药/操作对象未明确）",
+              "timestamp": 1771494384.081341,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "1bc054be-5adf-490a-aef4-aa250b07d70b",
+              "content": "本月确诊胰头癌",
+              "timestamp": 1771494408.351662,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "e54a95eb-97d9-4d40-b1c4-44874a998c63",
+              "content": "既往/合并疾病：胃溃疡、肾结石",
+              "timestamp": 1771494408.3516672,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "b75c24aa-32a0-4c5e-be17-6d0c75aa7c23",
+              "content": "就诊医院：湖南省郴州市第四医院",
+              "timestamp": 1771494408.3516715,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "7eef9d03-8c7c-4857-8c63-33d528693bfe",
+              "content": "医生建议/治疗原则：胰头癌首选手术切除，推荐胰十二指肠切除术；如术中证实浸润肠系膜上静脉或门静脉无法切除，可行胆囊空肠吻合以减黄；胰腺癌对化疗不敏感，放疗（建议三维适形放疗）有一定疗效",
+              "timestamp": 1771494419.0308514,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "445ebe27-25e0-4258-952a-3d9a31982c7b",
+              "content": "2005年4月因腹痛行横结肠腺癌根治术（横结肠腺癌术后）",
+              "timestamp": 1771494450.072008,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "6c3fbefe-daf1-47a0-9c60-4ec8c3716e4d",
+              "content": "2008年12月行胃息肉手术；县医院病理为“重度不典型增生”，北京协和医院复核病理诊断为胃腺癌",
+              "timestamp": 1771494450.0720134,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "1f6618e9-094e-4659-a151-1c6fb16ab317",
+              "content": "癌胚抗原（CEA）近半年逐渐升高：10.3→15.78→18.9→26.56→55.1→57.6→81.56",
+              "timestamp": 1771494450.0720177,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "您好：患者癌胚抗原指数过高，应进一步检查以核实原因，胃息肉不会引致指标过高的。",
+        "to_memory": [
+          "identity: 患者男，38岁",
+          "history: 2005-04因腹痛行横结肠腺癌根治术（横结肠腺癌术后）",
+          "history: 2008-12行胃息肉切除术；病理（北京协和医院）诊断为胃腺癌（县医院曾报重度不典型增生）",
+          "history: 目前胃内再次发现息肉/胃息肉复发",
+          "history: 癌胚抗原（CEA）升高并进行性上升：10.3→15.78→18.9→26.56→55.1→57.6→81.56",
+          "history: 医生建议：CEA指数过高需进一步检查以核实原因；胃息肉通常不会导致CEA显著升高"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "ef41acda-a98d-44fd-a72d-b289830b2577",
+              "content": "目前胃内又长一息肉；胃镜下观察颜色、活动度不太像癌，但患者自述感觉与上次类似",
+              "timestamp": 1771494450.0720217,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "identity": [
+            {
+              "id": "46d26d05-2be8-4934-8550-81114ed23f4d",
+              "content": "患者父亲，51岁",
+              "timestamp": 1771494408.3516524,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "f50e5801-36a2-48c9-86e4-5436b3393aa4",
+              "content": "患者男，38岁",
+              "timestamp": 1771494450.071999,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "history": [
+            {
+              "id": "d3091f79-2a02-43b0-92b5-8899c5f82aa3",
+              "content": "2010-05-14发病/诊断为急性重症胰腺坏死（急性重症胰腺功能坏死）",
+              "timestamp": 1771494361.9743507,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "47770ae1-01f7-4c38-a351-86e2276bdd4c",
+              "content": "不孕症，正在进行试管婴儿（IVF）治疗中",
+              "timestamp": 1771494376.3652472,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "f5cfeb03-0af8-4a25-96f2-10a01449537b",
+              "content": "既往提及肠瘘/引流不佳相关问题（具体肠段未明确）",
+              "timestamp": 1771494384.0813305,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dc4389aa-aeef-4be1-b2c0-5d5720ddef3e",
+              "content": "曾有医生回复“1-2ml都可以”（具体用药/操作对象未明确）",
+              "timestamp": 1771494384.081341,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "1bc054be-5adf-490a-aef4-aa250b07d70b",
+              "content": "本月确诊胰头癌",
+              "timestamp": 1771494408.351662,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "e54a95eb-97d9-4d40-b1c4-44874a998c63",
+              "content": "既往/合并疾病：胃溃疡、肾结石",
+              "timestamp": 1771494408.3516672,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "b75c24aa-32a0-4c5e-be17-6d0c75aa7c23",
+              "content": "就诊医院：湖南省郴州市第四医院",
+              "timestamp": 1771494408.3516715,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "7eef9d03-8c7c-4857-8c63-33d528693bfe",
+              "content": "医生建议/治疗原则：胰头癌首选手术切除，推荐胰十二指肠切除术；如术中证实浸润肠系膜上静脉或门静脉无法切除，可行胆囊空肠吻合以减黄；胰腺癌对化疗不敏感，放疗（建议三维适形放疗）有一定疗效",
+              "timestamp": 1771494419.0308514,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "445ebe27-25e0-4258-952a-3d9a31982c7b",
+              "content": "2005年4月因腹痛行横结肠腺癌根治术（横结肠腺癌术后）",
+              "timestamp": 1771494450.072008,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "6c3fbefe-daf1-47a0-9c60-4ec8c3716e4d",
+              "content": "2008年12月行胃息肉手术；县医院病理为“重度不典型增生”，北京协和医院复核病理诊断为胃腺癌",
+              "timestamp": 1771494450.0720134,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "1f6618e9-094e-4659-a151-1c6fb16ab317",
+              "content": "癌胚抗原（CEA）近半年逐渐升高：10.3→15.78→18.9→26.56→55.1→57.6→81.56",
+              "timestamp": 1771494450.0720177,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "请核对病史记录：患者既往提到的生育/辅助生殖相关治疗情况，与本次就诊资料中的患者身份信息是否存在需要澄清的矛盾或安全隐患？如有，具体是哪一项信息需要重点核实？",
+          "answer": "病史中记录有不孕症并在进行试管婴儿（IVF）治疗，但本次资料显示患者为男，38岁，存在需核实的一致性问题。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "47770ae1-01f7-4c38-a351-86e2276bdd4c"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "f50e5801-36a2-48c9-86e4-5436b3393aa4"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            14,
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "chronic_followup",
+    "scenario_name": "慢性病随访管理",
+    "session_count": 6,
+    "group_key": "综合科"
+  }
+}

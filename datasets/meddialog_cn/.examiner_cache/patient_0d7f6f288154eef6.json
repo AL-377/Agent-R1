@@ -1,0 +1,4386 @@
+{
+  "patient_id": "97e21b593985",
+  "messages": [
+    {
+      "user": {
+        "content": "哮喘，过敏性体质，早上起来打喷嚏流鼻子、鼻子不通、有时候有点压气、有痰（特别是早上痰是黄色，像豆腐渣一样，）白天还好，晚上一躺下鼻子就不同。平时打扫卫生就打喷嚏、流鼻子。",
+        "to_memory": [
+          "identity: 既往/基础疾病：哮喘",
+          "identity: 体质特征：过敏性体质",
+          "working: 本次症状：早晨打喷嚏、流鼻涕、鼻塞；有时胸闷/压气；有痰（晨起黄色、豆腐渣样），白天较轻；夜间平躺后鼻塞加重；打扫卫生时易诱发打喷嚏、流鼻涕"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "8ac95245-6997-4a56-9cb3-f24d43ef95a2",
+              "content": "本次症状：早晨打喷嚏、流鼻涕、鼻塞；有时胸闷/压气；有痰（晨起黄色、豆腐渣样），白天较轻；夜间平躺后鼻塞加重；打扫卫生时易诱发打喷嚏、流鼻涕",
+              "timestamp": 1771448286.1725008,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者自述的症状在一天中是否存在明显的时间或体位相关变化？请指出具体在什么情况下会加重或缓解，以便评估是否存在需要重点排查的安全问题。",
+          "answer": "白天相对较轻；夜间平躺后鼻塞加重；早晨起床时症状更明显。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "8ac95245-6997-4a56-9cb3-f24d43ef95a2"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "c2925323-ffd0-4d07-afa7-9bc17965959c"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "第。第。",
+        "to_memory": [
+          "identity: 患者有哮喘史，过敏性体质",
+          "working: 早晨打喷嚏、流鼻涕、鼻塞；有时胸部发闷/压气；有痰（晨起黄色、豆腐渣样），白天较好；夜间平躺后鼻塞加重；打扫卫生时易诱发打喷嚏流鼻涕"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "8ac95245-6997-4a56-9cb3-f24d43ef95a2",
+              "content": "本次症状：早晨打喷嚏、流鼻涕、鼻塞；有时胸闷/压气；有痰（晨起黄色、豆腐渣样），白天较轻；夜间平躺后鼻塞加重；打扫卫生时易诱发打喷嚏、流鼻涕",
+              "timestamp": 1771448286.1725008,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者描述在一天中哪个时间段症状最明显？",
+          "answer": "早晨最明显，夜间平躺后也会加重；白天相对较轻。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "8ac95245-6997-4a56-9cb3-f24d43ef95a2"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "请问我家不在北京，在洛阳，想治疗有没有对口医院可以治疗，十分感谢。",
+        "to_memory": [
+          "identity: 患者有哮喘史，过敏性体质",
+          "working: 近期症状：晨起打喷嚏、流鼻子、鼻塞，偶有胸闷/压气、有痰（晨起黄色豆腐渣样），白天较好，夜间平躺后鼻塞加重；打扫卫生时易诱发打喷嚏、流鼻子",
+          "working: 患者居住地洛阳（不在北京），咨询当地对口医院治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "8ac95245-6997-4a56-9cb3-f24d43ef95a2",
+              "content": "本次症状：早晨打喷嚏、流鼻涕、鼻塞；有时胸闷/压气；有痰（晨起黄色、豆腐渣样），白天较轻；夜间平躺后鼻塞加重；打扫卫生时易诱发打喷嚏、流鼻涕",
+              "timestamp": 1771448286.1725008,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fc964a83-01f1-4c7c-bfaa-dba4b0fb1971",
+              "content": "患者居住地洛阳（不在北京），咨询当地对口医院治疗",
+              "timestamp": 1771448302.9775107,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在本次描述中提到有一种“可能提示感染或需要就医评估”的呼吸道分泌物特征。这个特征具体是什么？这对其既往疾病背景是否构成需要额外安全排查的点？",
+          "answer": "晨起痰呈黄色、豆腐渣样；在哮喘/过敏背景下出现该痰性状提示可能合并感染等情况，属于需要额外安全排查的点。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "c2925323-ffd0-4d07-afa7-9bc17965959c"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "8ac95245-6997-4a56-9cb3-f24d43ef95a2"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            2,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "第。",
+        "to_memory": [
+          "identity: 患者有哮喘史，过敏性体质",
+          "working: 近期症状：晨起打喷嚏、流鼻涕、鼻塞；偶有胸闷/压气、有痰（晨起黄痰，呈豆腐渣样）；白天较轻，夜间平躺鼻塞加重；打扫卫生时易诱发喷嚏流涕",
+          "working: 患者居住地洛阳，咨询本地是否有对口医院可治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "8ac95245-6997-4a56-9cb3-f24d43ef95a2",
+              "content": "本次症状：早晨打喷嚏、流鼻涕、鼻塞；有时胸闷/压气；有痰（晨起黄色、豆腐渣样），白天较轻；夜间平躺后鼻塞加重；打扫卫生时易诱发打喷嚏、流鼻涕",
+              "timestamp": 1771448286.1725008,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fc964a83-01f1-4c7c-bfaa-dba4b0fb1971",
+              "content": "患者居住地洛阳（不在北京），咨询当地对口医院治疗",
+              "timestamp": 1771448302.9775107,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "新生儿黄疸，自出生第五天知道今天29面部还显黄。",
+        "to_memory": [
+          "working: 新生儿黄疸；自出生第5天发现黄疸，至今日第29天面部仍发黄"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "85c94027-1e50-443c-843b-c42e4784c1c6",
+              "content": "新生儿黄疸：出生第5天发现黄疸，至第29天面部仍发黄",
+              "timestamp": 1771448315.7496283,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者在既往资料中被记录的体质特征是什么？",
+          "answer": "过敏性体质",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "c2925323-ffd0-4d07-afa7-9bc17965959c"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            5
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "建议检测黄疸指数，看门诊除外婴儿肝炎综合征。",
+        "to_memory": [
+          "working: 新生儿黄疸，出生第5天发现，现约生后29天面部仍发黄",
+          "history: 医生建议检测黄疸指数，门诊就诊以排除婴儿肝炎综合征"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "85c94027-1e50-443c-843b-c42e4784c1c6",
+              "content": "新生儿黄疸：出生第5天发现黄疸，至第29天面部仍发黄",
+              "timestamp": 1771448315.7496283,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "18b8bbe6-4513-42f4-8bbf-ea2fc086067d",
+              "content": "医生建议检测黄疸指数并门诊就诊，以排除婴儿肝炎综合征",
+              "timestamp": 1771448320.9845762,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "关于婴儿皮肤发黄这次咨询中，家属提到最早是在出生后的哪个时间点发现异常？而在本次描述时，异常持续到出生后的哪个时间点仍然存在？请分别给出这两个时间点。",
+          "answer": "出生第5天发现黄疸；至出生第29天面部仍发黄。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "85c94027-1e50-443c-843b-c42e4784c1c6",
+                "85c94027-1e50-443c-843b-c42e4784c1c6"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "房间隔缺损，08年1月，心悸，南京鼓楼医院确诊。近来心悸发作频繁，偶有胸闷。",
+        "to_memory": [
+          "history: 2008年1月在南京鼓楼医院确诊房间隔缺损",
+          "working: 近来心悸发作频繁",
+          "working: 偶有胸闷"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "48912abb-e1cb-4145-934d-d5c1820fa085",
+              "content": "近来心悸发作频繁",
+              "timestamp": 1771448327.2022946,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "9a35c200-1ec8-4237-bf5e-935012212e35",
+              "content": "偶有胸闷",
+              "timestamp": 1771448327.2022989,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "根据既往病史记录，患者还合并有哪一种呼吸系统方面的基础疾病？",
+          "answer": "哮喘",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "5da9d637-d63c-4b44-b313-b182225fbf21"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            8
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "8mm房间隔缺损可以考虑治疗,应该可以介入治疗.但你所述的情况可能与此病无关,可能是阵发性的心律失常,建议做一24小时的心电监测,看看是否有问题,如无异常,则可以考虑先做房间隔缺损治疗.",
+        "to_memory": [
+          "history: 既往确诊房间隔缺损（南京鼓楼医院，2008年1月确诊），缺损约8mm",
+          "working: 近来心悸发作频繁，偶有胸闷；医生认为症状可能与房间隔缺损无关，考虑阵发性心律失常可能",
+          "history: 医生建议先行24小时动态心电图监测评估心律失常；8mm房间隔缺损可考虑介入治疗，若动态心电图无异常再考虑先做房间隔缺损治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "48912abb-e1cb-4145-934d-d5c1820fa085",
+              "content": "近来心悸发作频繁",
+              "timestamp": 1771448327.2022946,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "9a35c200-1ec8-4237-bf5e-935012212e35",
+              "content": "偶有胸闷",
+              "timestamp": 1771448327.2022989,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "4caed92a-12c2-49d4-a46c-46420abe45de",
+              "content": "医生认为近期心悸/胸闷可能与房间隔缺损无关，考虑阵发性心律失常可能",
+              "timestamp": 1771448336.3655715,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "4a85f9a8-d5c5-44ca-a5b9-2bdee06a76c0",
+              "content": "医生建议先行24小时动态心电图监测评估心律失常；如无异常再考虑介入治疗8mm房间隔缺损",
+              "timestamp": 1771448336.3655787,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在此次咨询中，患者除“心悸”外还提到过一种并非持续出现、间歇发生的不适表现。该表现是什么？在评估其与既往基础疾病可能相关时需要注意什么安全问题？",
+          "answer": "偶有胸闷；需注意其既往/基础疾病为哮喘，评估胸部不适时要避免与哮喘相关症状混淆并关注用药/检查的安全性。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "5da9d637-d63c-4b44-b313-b182225fbf21"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "9a35c200-1ec8-4237-bf5e-935012212e35"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            9,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "白癜风，在2008年10月到12月份，左眼的上眼睫毛变白，慢慢的左眼睑皮肤变白。身上其它地方没有异常。父母双方均无白癜风史。已上传。",
+        "to_memory": [
+          "working: 主诉白癜风；2008年10-12月开始左眼上睫毛变白，逐渐出现左眼睑皮肤变白；身体其他部位无异常；已上传相关资料/图片",
+          "identity: 家族史：父母双方均无白癜风史"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "6a7c6faf-be8e-4b07-b236-2cb7a23816f1",
+              "content": "主诉白癜风：2008年10-12月开始左眼上睫毛变白，逐渐出现左眼睑皮肤变白；身体其他部位无异常；已上传相关资料/图片",
+              "timestamp": 1771448345.0294003,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在评估并给出进一步检查或治疗建议前，患者既往病史里有没有一项需要特别核对、以避免后续用药或检查过程中出现安全风险？请指出这一项是什么。",
+          "answer": "既往/基础疾病：哮喘",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "5da9d637-d63c-4b44-b313-b182225fbf21"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "6a7c6faf-be8e-4b07-b236-2cb7a23816f1"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            11,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "Xixi，您好！不知不斑有没有扩大，如有扩大，需要服用激素，总的来说病史是较长的，如在半年之内还有恢复的希望。",
+        "to_memory": [
+          "identity: 家族史：父母双方均无白癜风史",
+          "history: 2008年10-12月起出现白癜风相关表现：左眼上眼睫毛变白，逐渐左眼睑皮肤变白，身上其他部位无异常",
+          "history: 2008年1月南京鼓楼医院确诊房间隔缺损（约8mm）",
+          "history: 医嘱：建议做24小时动态心电监测以排查阵发性心律失常；如无异常可考虑房间隔缺损介入治疗",
+          "history: 新生儿黄疸：出生第5天开始至第29天面部仍黄",
+          "history: 医嘱：建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+          "history: 目前医生询问白斑是否扩大；若有扩大建议服用激素；病史较长，若在半年内仍有恢复希望"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "6a7c6faf-be8e-4b07-b236-2cb7a23816f1",
+              "content": "主诉白癜风：2008年10-12月开始左眼上睫毛变白，逐渐出现左眼睑皮肤变白；身体其他部位无异常；已上传相关资料/图片",
+              "timestamp": 1771448345.0294003,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fa58310f-30f1-4a60-ba8d-9d1d74549132",
+              "content": "医嘱/随访：医生询问白斑是否扩大；若有扩大建议使用激素治疗；病史较长，但若在半年内仍可能有恢复希望",
+              "timestamp": 1771448355.73632,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱：建议做24小时动态心电监测以排查阵发性心律失常；如无异常可考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者在最初发现该皮肤问题时与本次咨询时的描述：最早出现异常的是哪个具体部位，随后异常又扩展到了哪里？同时，患者当时是否提到身体其他部位也有类似表现？",
+          "answer": "最早是左眼上眼睫毛变白，随后左眼睑皮肤逐渐变白；身体其他部位无异常。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "6a7c6faf-be8e-4b07-b236-2cb7a23816f1",
+                "6a7c6faf-be8e-4b07-b236-2cb7a23816f1"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "白斑的扩展速度很慢，除了服用激素药外还有其它的办法吗？如果服用了激素地药，能把孩子的病彻底的治好吗？停药后会复发或其它副作用吗？谢谢您，在百忙之中及时的回答我们的问题！",
+        "to_memory": [
+          "identity: 家族史：父母双方均无白癜风史",
+          "history: 既往诊断：白癜风（2008年10-12月起，左眼上睫毛变白并逐渐累及左眼睑皮肤；身上其他部位无异常）",
+          "history: 既往诊断：房间隔缺损（2008年1月南京鼓楼医院确诊，约8mm）",
+          "history: 医嘱：建议24小时动态心电监测评估是否阵发性心律失常；如无异常可考虑先行房间隔缺损介入治疗",
+          "history: 既往病史：新生儿黄疸（出生第5天出现，至第29天面部仍黄）",
+          "history: 医嘱：建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+          "working: 目前白斑扩展速度很慢；家属咨询除激素外的治疗办法、激素能否根治、停药后复发风险及可能副作用"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "6a7c6faf-be8e-4b07-b236-2cb7a23816f1",
+              "content": "主诉白癜风：2008年10-12月开始左眼上睫毛变白，逐渐出现左眼睑皮肤变白；身体其他部位无异常；已上传相关资料/图片",
+              "timestamp": 1771448345.0294003,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fa58310f-30f1-4a60-ba8d-9d1d74549132",
+              "content": "医嘱/随访：医生询问白斑是否扩大；若有扩大建议使用激素治疗；病史较长，但若在半年内仍可能有恢复希望",
+              "timestamp": 1771448355.73632,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "fd32060a-e434-40ef-9b94-9c92e73fa7ef",
+              "content": "家属咨询：目前白斑扩展速度很慢；想了解除激素外的治疗办法、激素能否根治、停药后复发风险及可能副作用",
+              "timestamp": 1771448367.4831789,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱：建议做24小时动态心电监测以排查阵发性心律失常；如无异常可考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在评估本次是否适合使用医生提到的那类系统用药之前，病历里有一项既往基础疾病需要先核对以避免用药安全风险。该既往病是什么？",
+          "answer": "哮喘",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "5da9d637-d63c-4b44-b313-b182225fbf21"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "fd32060a-e434-40ef-9b94-9c92e73fa7ef"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            13,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "这么说还是要口服激素。但已经变白的眉毛不可能变黑了。但要就诊以后再定治疗方案。",
+        "to_memory": [
+          "history: 白癜风病史（2008年10-12月起，左眼睫毛/眼睑皮肤逐渐变白，进展缓慢；身上其他部位无异常）",
+          "identity: 家族史：父母双方均无白癜风史",
+          "history: 医生建议：仍需口服激素治疗（需就诊后再制定具体方案）",
+          "history: 医生告知：已变白的眉毛不可能变黑"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "6a7c6faf-be8e-4b07-b236-2cb7a23816f1",
+              "content": "主诉白癜风：2008年10-12月开始左眼上睫毛变白，逐渐出现左眼睑皮肤变白；身体其他部位无异常；已上传相关资料/图片",
+              "timestamp": 1771448345.0294003,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fa58310f-30f1-4a60-ba8d-9d1d74549132",
+              "content": "医嘱/随访：医生询问白斑是否扩大；若有扩大建议使用激素治疗；目前仍需口服激素治疗（需就诊后再制定具体方案）；病史较长，但若在半年内仍可能有恢复希望",
+              "timestamp": 1771448355.73632,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "fd32060a-e434-40ef-9b94-9c92e73fa7ef",
+              "content": "家属咨询：目前白斑扩展速度很慢；想了解除激素外的治疗办法、激素能否根治、停药后复发风险及可能副作用",
+              "timestamp": 1771448367.4831789,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "7a07ca69-6c54-4c22-a7c0-a6e03f372b0e",
+              "content": "医生告知：已变白的眉毛不可能变黑",
+              "timestamp": 1771448376.3702636,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱：建议做24小时动态心电监测以排查阵发性心律失常；如无异常可考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "谢谢您，吴大夫！请问您这几个化验名称缩写代表的是什么项目：TF3  TF4  TSH  TPO  ATG    医生要我们化验？但我们不知道是什么该不该化验？",
+        "to_memory": [
+          "history: 既往诊断房间隔缺损（2008年1月南京鼓楼医院确诊，缺损约8mm），近来心悸发作频繁，偶有胸闷；医生建议24小时心电监测，必要时考虑介入治疗房间隔缺损",
+          "history: 白癜风（2008年10-12月起左眼睫毛变白并累及左眼睑皮肤），扩展慢；父母双方无白癜风史；医生建议可能需口服激素，需就诊后定方案",
+          "history: 新生儿黄疸（生后第5天起至第29天面部仍黄）；医生建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+          "history: 患者询问化验缩写TF3、TF4、TSH、TPO、ATG分别代表的检查项目，以及是否需要化验（医生要求化验但患者不清楚）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "6a7c6faf-be8e-4b07-b236-2cb7a23816f1",
+              "content": "主诉白癜风：2008年10-12月开始左眼上睫毛变白，逐渐出现左眼睑皮肤变白；身体其他部位无异常；已上传相关资料/图片",
+              "timestamp": 1771448345.0294003,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fa58310f-30f1-4a60-ba8d-9d1d74549132",
+              "content": "医嘱/随访：医生询问白斑是否扩大；若有扩大建议使用激素治疗；目前仍需口服激素治疗（需就诊后再制定具体方案）；病史较长，但若在半年内仍可能有恢复希望",
+              "timestamp": 1771448355.73632,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "fd32060a-e434-40ef-9b94-9c92e73fa7ef",
+              "content": "家属咨询：目前白斑扩展速度很慢；想了解除激素外的治疗办法、激素能否根治、停药后复发风险及可能副作用",
+              "timestamp": 1771448367.4831789,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "7a07ca69-6c54-4c22-a7c0-a6e03f372b0e",
+              "content": "医生告知：已变白的眉毛不可能变黑",
+              "timestamp": 1771448376.3702636,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "e24fbd58-c5c5-43b3-b86f-09b48cbfdf0a",
+              "content": "患者咨询化验缩写含义：FT3/TF3、FT4/TF4、TSH、TPO、ATG分别是什么检查项目，以及是否需要按医生要求化验",
+              "timestamp": 1771448385.6700315,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱/近况：近来心悸发作频繁，偶有胸闷；建议做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "对不起，你还是问你的接诊医生。",
+        "to_memory": [
+          "history: 2008-01于南京鼓楼医院确诊房间隔缺损（约8mm），有心悸史；近来心悸发作频繁，偶有胸闷",
+          "history: 医生建议做24小时动态心电图监测以排查阵发性心律失常；如无异常可考虑房间隔缺损介入治疗",
+          "history: 2008-10至12出现白癜风表现：左眼上睫毛变白并逐渐左眼睑皮肤变白，身上其他部位无异常",
+          "identity: 父母双方均无白癜风史（家族史阴性）",
+          "history: 医生建议可能需要口服激素治疗白斑扩展；已变白的眉毛/睫毛不易恢复变黑；需面诊后制定方案",
+          "history: 患者询问甲状腺相关化验缩写TF3、TF4、TSH、TPO、ATG代表项目及是否需要化验"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "6a7c6faf-be8e-4b07-b236-2cb7a23816f1",
+              "content": "主诉白癜风：2008年10-12月开始左眼上睫毛变白，逐渐出现左眼睑皮肤变白；身体其他部位无异常；已上传相关资料/图片",
+              "timestamp": 1771448345.0294003,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "fa58310f-30f1-4a60-ba8d-9d1d74549132",
+              "content": "医嘱/随访：医生询问白斑是否扩大；若有扩大建议使用激素治疗；目前仍需口服激素治疗（需就诊后再制定具体方案）；病史较长，但若在半年内仍可能有恢复希望",
+              "timestamp": 1771448355.73632,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "fd32060a-e434-40ef-9b94-9c92e73fa7ef",
+              "content": "家属咨询：目前白斑扩展速度很慢；想了解除激素外的治疗办法、激素能否根治、停药后复发风险及可能副作用",
+              "timestamp": 1771448367.4831789,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "7a07ca69-6c54-4c22-a7c0-a6e03f372b0e",
+              "content": "医生告知：已变白的眉毛不可能变黑",
+              "timestamp": 1771448376.3702636,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "e24fbd58-c5c5-43b3-b86f-09b48cbfdf0a",
+              "content": "患者咨询化验缩写含义：FT3/TF3、FT4/TF4、TSH、TPO、ATG分别是什么检查项目，以及是否需要按医生要求化验",
+              "timestamp": 1771448385.6700315,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱/近况：近来心悸发作频繁，偶有胸闷；建议做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱/近况：近来心悸发作频繁，偶有胸闷；建议做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "本人的手在医院被玻璃药瓶划伤了，手在医院被玻璃药瓶划伤了，当时出血很多止不住，医生说是血管破了，经过一番处理还是止血了。",
+        "to_memory": [
+          "history: 既往诊断房间隔缺损（约8mm），2008年1月因心悸在南京鼓楼医院确诊",
+          "history: 既往诊断白癜风，2008年10-12月起左眼睫毛/眼睑皮肤变白，家族史（父母双方）否认白癜风",
+          "history: 医生曾建议做24小时动态心电监测评估是否阵发性心律失常；如无异常可考虑房间隔缺损介入治疗",
+          "history: 白癜风曾被建议口服激素治疗（需就诊后定方案）",
+          "working: 本次主诉手部被医院玻璃药瓶划伤",
+          "working: 伤后出血多且一度止不住，医生称血管破裂，处理后已止血"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "1edf8aff-d62c-480a-9982-781ae1a9463b",
+              "content": "本次主诉：手部被医院玻璃药瓶划伤",
+              "timestamp": 1771448402.0983815,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "6232615f-addc-4fdc-bb9d-a404cb27a2eb",
+              "content": "现病史：伤后出血多且一度止不住，医生称血管破裂，处理后已止血",
+              "timestamp": 1771448402.0983858,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱/近况：近来心悸发作频繁，偶有胸闷；建议做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "453de245-8c67-43ac-90c3-59cf16a6c88f",
+              "content": "既往/基础疾病：白癜风，2008年10-12月起左眼睫毛/眼睑皮肤变白",
+              "timestamp": 1771448402.098368,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "643d4e7b-5514-4a16-b644-d88ae694de9e",
+              "content": "既往医嘱：白癜风曾被建议口服激素治疗（需就诊后定方案）",
+              "timestamp": 1771448402.0983772,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者近期被提示存在需要进一步排查的心脏相关情况。结合其近况与医生提出的下一步检查/处理计划，当前是否存在未落实检查或可能延误处置的安全风险？请指出应尽快完成的检查或评估，以及必要时可能考虑的进一步治疗方向。",
+          "answer": "近来心悸发作频繁，偶有胸闷；建议尽快做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "628cdfd7-cb0e-4534-b31e-8b3874b142be"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "6232615f-addc-4fdc-bb9d-a404cb27a2eb"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "如果有玻璃在里面的话可能会导致伤口愈合慢或者炎症.",
+        "to_memory": [
+          "history: 2008年10-12月出现左眼上睫毛变白、左眼睑皮肤白斑，疑白癜风；父母双方无白癜风史",
+          "history: 医生建议如白斑扩大需口服激素治疗，就诊后再定方案；已变白的眉毛/睫毛不易恢复变黑",
+          "history: 既往医生提示8mm房间隔缺损可考虑介入治疗；建议做24小时动态心电监测以排除阵发性心律失常",
+          "history: 曾被要求化验甲功/甲状腺抗体相关项目（FT3/FT4/TSH/TPO/ATG）",
+          "working: 手部被玻璃药瓶划伤，曾大量出血，医生称血管破裂，处理后止血",
+          "working: 医生提示若伤口内残留玻璃可能导致伤口愈合慢或出现炎症"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "1edf8aff-d62c-480a-9982-781ae1a9463b",
+              "content": "本次主诉：手部被医院玻璃药瓶划伤；医生提示若伤口内残留玻璃可能导致愈合慢或出现炎症",
+              "timestamp": 1771448402.0983815,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "6232615f-addc-4fdc-bb9d-a404cb27a2eb",
+              "content": "现病史：伤后出血多且一度止不住，医生称血管破裂，处理后已止血",
+              "timestamp": 1771448402.0983858,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱/近况：近来心悸发作频繁，偶有胸闷；建议做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "453de245-8c67-43ac-90c3-59cf16a6c88f",
+              "content": "既往/基础疾病：白癜风，2008年10-12月起左眼睫毛/眼睑皮肤变白",
+              "timestamp": 1771448402.098368,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "643d4e7b-5514-4a16-b644-d88ae694de9e",
+              "content": "既往医嘱：白癜风白斑如扩大需考虑口服激素治疗（就诊后再定方案）；已变白的眉毛/睫毛不易恢复变黑",
+              "timestamp": 1771448402.0983772,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱/近况：近来心悸发作频繁，偶有胸闷；建议做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "453de245-8c67-43ac-90c3-59cf16a6c88f",
+              "content": "既往/基础疾病：白癜风，2008年10-12月起左眼睫毛/眼睑皮肤变白",
+              "timestamp": 1771448402.098368,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "643d4e7b-5514-4a16-b644-d88ae694de9e",
+              "content": "既往医嘱：白癜风白斑如扩大需考虑口服激素治疗（就诊后再定方案）；已变白的眉毛/睫毛不易恢复变黑",
+              "timestamp": 1771448402.0983772,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "烟雾病现引起脑部出血，发病时间是半个月前，感手脚麻木，突然说不出话，送随州2医院，拍片是脑出血，血块有米大小，住一星期送一医院昨天做造影说是烟雾病，今天上午10点左右突然，头疼历害，呕吐伴有血丝，病人昏迷不醒，在次CT显示脑部多处出血，现己转到武汉同济，各位大夫这是我弟弟的造影和检查报告。",
+        "to_memory": [
+          "history: 约半个月前发病，影像学提示脑出血（血块约米粒大小），先在随州二医院住院1周后转至一医院",
+          "history: 昨日脑血管造影提示烟雾病",
+          "history: 今日再次CT提示脑部多处出血",
+          "history: 目前已转至武汉同济医院就诊/治疗",
+          "working: 现病程中出现手脚麻木、突然失语",
+          "working: 今日上午约10点突发剧烈头痛、呕吐（伴血丝），随后昏迷不醒",
+          "history: 家属称已提供（弟弟的）造影及检查报告供医生评估"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "f89d830f-5c71-4435-aa40-74af1abf4eb3",
+              "content": "现病程中出现手脚麻木、突然失语",
+              "timestamp": 1771448426.9658015,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "0cbf6fed-f662-49d4-817e-e3960ea035da",
+              "content": "今日上午约10点突发剧烈头痛、呕吐（伴血丝），随后昏迷不醒",
+              "timestamp": 1771448426.965806,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱/近况：近来心悸发作频繁，偶有胸闷；建议做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "453de245-8c67-43ac-90c3-59cf16a6c88f",
+              "content": "既往/基础疾病：白癜风，2008年10-12月起左眼睫毛/眼睑皮肤变白",
+              "timestamp": 1771448402.098368,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "643d4e7b-5514-4a16-b644-d88ae694de9e",
+              "content": "既往医嘱：白癜风白斑如扩大需考虑口服激素治疗（就诊后再定方案）；已变白的眉毛/睫毛不易恢复变黑",
+              "timestamp": 1771448402.0983772,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "2534348a-723b-437a-9a15-5fb32e8566d6",
+              "content": "约半个月前发病，影像学提示脑出血（血块约米粒大小），先在随州二医院住院1周后转至随州一医院",
+              "timestamp": 1771448426.9657807,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "d4808334-b93c-4ef4-818b-a7c1837dd2e0",
+              "content": "昨日脑血管造影提示烟雾病",
+              "timestamp": 1771448426.965789,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "b9d3b87a-fb19-4571-9377-5d4f7bae4036",
+              "content": "今日再次CT提示脑部多处出血",
+              "timestamp": 1771448426.9657936,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "a18dda68-cd6f-44e9-ae24-5332be4bc86b",
+              "content": "目前已转至武汉同济医院就诊/治疗",
+              "timestamp": 1771448426.9657974,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "814675b8-fee2-420b-9b81-60665afae4d5",
+              "content": "家属称已提供（弟弟的）造影及检查报告供医生评估",
+              "timestamp": 1771448426.9658096,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "您好，烟雾病导致的出血不能手术治疗，非常抱歉。",
+        "to_memory": [
+          "history: 医生表示：烟雾病导致的脑出血不能手术治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "f89d830f-5c71-4435-aa40-74af1abf4eb3",
+              "content": "现病程中出现手脚麻木、突然失语",
+              "timestamp": 1771448426.9658015,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "0cbf6fed-f662-49d4-817e-e3960ea035da",
+              "content": "今日上午约10点突发剧烈头痛、呕吐（伴血丝），随后昏迷不醒",
+              "timestamp": 1771448426.965806,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱/近况：近来心悸发作频繁，偶有胸闷；建议做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "453de245-8c67-43ac-90c3-59cf16a6c88f",
+              "content": "既往/基础疾病：白癜风，2008年10-12月起左眼睫毛/眼睑皮肤变白",
+              "timestamp": 1771448402.098368,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "643d4e7b-5514-4a16-b644-d88ae694de9e",
+              "content": "既往医嘱：白癜风白斑如扩大需考虑口服激素治疗（就诊后再定方案）；已变白的眉毛/睫毛不易恢复变黑",
+              "timestamp": 1771448402.0983772,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "2534348a-723b-437a-9a15-5fb32e8566d6",
+              "content": "约半个月前发病，影像学提示脑出血（血块约米粒大小），先在随州二医院住院1周后转至随州一医院",
+              "timestamp": 1771448426.9657807,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "d4808334-b93c-4ef4-818b-a7c1837dd2e0",
+              "content": "昨日脑血管造影提示烟雾病",
+              "timestamp": 1771448426.965789,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "b9d3b87a-fb19-4571-9377-5d4f7bae4036",
+              "content": "今日再次CT提示脑部多处出血",
+              "timestamp": 1771448426.9657936,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "a18dda68-cd6f-44e9-ae24-5332be4bc86b",
+              "content": "目前已转至武汉同济医院就诊/治疗",
+              "timestamp": 1771448426.9657974,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "814675b8-fee2-420b-9b81-60665afae4d5",
+              "content": "家属称已提供（弟弟的）造影及检查报告供医生评估",
+              "timestamp": 1771448426.9658096,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "67044927-b7f9-4ee2-83d4-14c323d19fe5",
+              "content": "医生表示：烟雾病导致的脑出血不能手术治疗",
+              "timestamp": 1771448429.770244,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者既往记录中提到其体质特点可能影响用药与处置安全性。请指出该体质特点是什么，并说明在本次就诊沟通中需要重点提醒的安全注意点（只需基于对话内容概括）。",
+          "answer": "过敏性体质",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "c2925323-ffd0-4d07-afa7-9bc17965959c"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "d4808334-b93c-4ef4-818b-a7c1837dd2e0"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            22,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "你好,李教授,那现在有没有什么更好的办法能救他？真情寄语：。",
+        "to_memory": [
+          "history: 患者弟弟半个月前因烟雾病引起脑出血；曾在随州二医院CT示脑出血（血块约米粒大小），住院1周后转院；昨日造影提示烟雾病；今上午突发剧烈头痛、呕吐伴血丝、昏迷，再次CT示脑部多处出血；目前已转至武汉同济医院；医生反馈“烟雾病导致的出血不能手术治疗”",
+          "working: 家属询问目前是否有更好的办法能救治患者弟弟"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "f89d830f-5c71-4435-aa40-74af1abf4eb3",
+              "content": "现病程中出现手脚麻木、突然失语",
+              "timestamp": 1771448426.9658015,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "0cbf6fed-f662-49d4-817e-e3960ea035da",
+              "content": "今日上午约10点突发剧烈头痛、呕吐（伴血丝），随后昏迷不醒；再次CT示脑部多处出血",
+              "timestamp": 1771448426.965806,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "008a9f72-38e8-401b-be72-816beb4aa7de",
+              "content": "家属询问目前是否有更好的办法能救治患者弟弟",
+              "timestamp": 1771448439.933539,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱/近况：近来心悸发作频繁，偶有胸闷；建议做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "453de245-8c67-43ac-90c3-59cf16a6c88f",
+              "content": "既往/基础疾病：白癜风，2008年10-12月起左眼睫毛/眼睑皮肤变白",
+              "timestamp": 1771448402.098368,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "643d4e7b-5514-4a16-b644-d88ae694de9e",
+              "content": "既往医嘱：白癜风白斑如扩大需考虑口服激素治疗（就诊后再定方案）；已变白的眉毛/睫毛不易恢复变黑",
+              "timestamp": 1771448402.0983772,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "2534348a-723b-437a-9a15-5fb32e8566d6",
+              "content": "患者弟弟约半个月前因烟雾病相关事件发病；随州二医院CT示脑出血（血块约米粒大小），住院1周后转院",
+              "timestamp": 1771448426.9657807,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "d4808334-b93c-4ef4-818b-a7c1837dd2e0",
+              "content": "昨日脑血管造影提示烟雾病",
+              "timestamp": 1771448426.965789,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "b9d3b87a-fb19-4571-9377-5d4f7bae4036",
+              "content": "今日再次CT提示脑部多处出血",
+              "timestamp": 1771448426.9657936,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "a18dda68-cd6f-44e9-ae24-5332be4bc86b",
+              "content": "目前已转至武汉同济医院就诊/治疗",
+              "timestamp": 1771448426.9657974,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "814675b8-fee2-420b-9b81-60665afae4d5",
+              "content": "家属称已提供（弟弟的）造影及检查报告供医生评估",
+              "timestamp": 1771448426.9658096,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "67044927-b7f9-4ee2-83d4-14c323d19fe5",
+              "content": "医生表示：烟雾病导致的脑出血不能手术治疗",
+              "timestamp": 1771448429.770244,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "病人既往或基础疾病中，医生/家属曾提到过哪一种慢性呼吸系统疾病？",
+          "answer": "哮喘",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "5da9d637-d63c-4b44-b313-b182225fbf21"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            23
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "您好，对于出血发病的烟雾病，目前没有好的办法，抱歉。",
+        "to_memory": [
+          "history: 患者家属（弟弟）造影提示烟雾病，约半个月前发病并引起脑出血，现多处脑出血、昏迷，已转至武汉同济医院",
+          "history: 医生意见：出血发病的烟雾病目前无较好治疗办法，且出血型烟雾病导致的出血不能手术治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "f89d830f-5c71-4435-aa40-74af1abf4eb3",
+              "content": "现病程中出现手脚麻木、突然失语",
+              "timestamp": 1771448426.9658015,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "0cbf6fed-f662-49d4-817e-e3960ea035da",
+              "content": "今日上午约10点突发剧烈头痛、呕吐（伴血丝），随后昏迷不醒；再次CT示脑部多处出血",
+              "timestamp": 1771448426.965806,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "008a9f72-38e8-401b-be72-816beb4aa7de",
+              "content": "家属询问目前是否有更好的办法能救治患者弟弟",
+              "timestamp": 1771448439.933539,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱/近况：近来心悸发作频繁，偶有胸闷；建议做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "453de245-8c67-43ac-90c3-59cf16a6c88f",
+              "content": "既往/基础疾病：白癜风，2008年10-12月起左眼睫毛/眼睑皮肤变白",
+              "timestamp": 1771448402.098368,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "643d4e7b-5514-4a16-b644-d88ae694de9e",
+              "content": "既往医嘱：白癜风白斑如扩大需考虑口服激素治疗（就诊后再定方案）；已变白的眉毛/睫毛不易恢复变黑",
+              "timestamp": 1771448402.0983772,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "2534348a-723b-437a-9a15-5fb32e8566d6",
+              "content": "患者弟弟约半个月前因烟雾病相关事件发病；随州二医院CT示脑出血（血块约米粒大小），住院1周后转院",
+              "timestamp": 1771448426.9657807,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "d4808334-b93c-4ef4-818b-a7c1837dd2e0",
+              "content": "患者弟弟脑血管造影提示烟雾病",
+              "timestamp": 1771448426.965789,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "b9d3b87a-fb19-4571-9377-5d4f7bae4036",
+              "content": "今日再次CT提示脑部多处出血",
+              "timestamp": 1771448426.9657936,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "a18dda68-cd6f-44e9-ae24-5332be4bc86b",
+              "content": "目前已转至武汉同济医院就诊/治疗",
+              "timestamp": 1771448426.9657974,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "814675b8-fee2-420b-9b81-60665afae4d5",
+              "content": "家属称已提供（弟弟的）造影及检查报告供医生评估",
+              "timestamp": 1771448426.9658096,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "67044927-b7f9-4ee2-83d4-14c323d19fe5",
+              "content": "医生意见：出血发病的烟雾病目前无较好治疗办法；且出血型烟雾病导致的出血不能手术治疗",
+              "timestamp": 1771448429.770244,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "还是非常感谢你在百忙之中抽时间给我答复,那现在只能内科辽法了吗？是不是只要患者保持好心情好心态就可以恢复？>。",
+        "to_memory": [
+          "history: 患者弟弟半个月前发病，诊断为烟雾病并引起脑出血；曾行脑血管造影；CT提示脑部多处出血；已转至武汉同济医院",
+          "working: 家属询问目前是否只能内科疗法/保守治疗，及保持好心情好心态是否可恢复"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "f89d830f-5c71-4435-aa40-74af1abf4eb3",
+              "content": "现病程中出现手脚麻木、突然失语",
+              "timestamp": 1771448426.9658015,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "0cbf6fed-f662-49d4-817e-e3960ea035da",
+              "content": "今日上午约10点突发剧烈头痛、呕吐（伴血丝），随后昏迷不醒；再次CT示脑部多处出血",
+              "timestamp": 1771448426.965806,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "008a9f72-38e8-401b-be72-816beb4aa7de",
+              "content": "家属询问目前是否有更好的办法能救治患者弟弟",
+              "timestamp": 1771448439.933539,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "2dfc2023-4712-4105-9821-7d624b78ee73",
+              "content": "家属询问：目前是否只能内科疗法/保守治疗；保持好心情好心态是否有助于恢复",
+              "timestamp": 1771448452.070418,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱/近况：近来心悸发作频繁，偶有胸闷；建议做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "453de245-8c67-43ac-90c3-59cf16a6c88f",
+              "content": "既往/基础疾病：白癜风，2008年10-12月起左眼睫毛/眼睑皮肤变白",
+              "timestamp": 1771448402.098368,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "643d4e7b-5514-4a16-b644-d88ae694de9e",
+              "content": "既往医嘱：白癜风白斑如扩大需考虑口服激素治疗（就诊后再定方案）；已变白的眉毛/睫毛不易恢复变黑",
+              "timestamp": 1771448402.0983772,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "2534348a-723b-437a-9a15-5fb32e8566d6",
+              "content": "患者弟弟约半个月前因烟雾病相关事件发病；随州二医院CT示脑出血（血块约米粒大小），住院1周后转院",
+              "timestamp": 1771448426.9657807,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "d4808334-b93c-4ef4-818b-a7c1837dd2e0",
+              "content": "患者弟弟脑血管造影提示烟雾病",
+              "timestamp": 1771448426.965789,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "b9d3b87a-fb19-4571-9377-5d4f7bae4036",
+              "content": "今日再次CT提示脑部多处出血",
+              "timestamp": 1771448426.9657936,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "a18dda68-cd6f-44e9-ae24-5332be4bc86b",
+              "content": "目前已转至武汉同济医院就诊/治疗",
+              "timestamp": 1771448426.9657974,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "814675b8-fee2-420b-9b81-60665afae4d5",
+              "content": "家属称已提供（弟弟的）造影及检查报告供医生评估",
+              "timestamp": 1771448426.9658096,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "67044927-b7f9-4ee2-83d4-14c323d19fe5",
+              "content": "医生意见：出血发病的烟雾病目前无较好治疗办法；且出血型烟雾病导致的出血不能手术治疗",
+              "timestamp": 1771448429.770244,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "根据既往病史记录，患者（或该患者本人）之前被明确诊断过的基础慢性呼吸系统疾病是什么？",
+          "answer": "哮喘",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "5da9d637-d63c-4b44-b313-b182225fbf21"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            25
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "您好，即使是回复也只是暂时的，烟雾病如果不能形成颅内外的血管侧枝，烟雾血管消失，以后还是会出血的。抱歉。",
+        "to_memory": [
+          "history: 诊断为烟雾病（DSA/造影提示），并已发生脑出血（多发出血）",
+          "history: 医生意见：烟雾病相关出血目前无较好/不宜手术治疗；若不能形成颅内外侧支循环、烟雾血管消失，后续仍可能再次出血",
+          "working: 患者家属询问目前是否只能内科治疗及是否保持好心情即可恢复"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "f89d830f-5c71-4435-aa40-74af1abf4eb3",
+              "content": "现病程中出现手脚麻木、突然失语",
+              "timestamp": 1771448426.9658015,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "0cbf6fed-f662-49d4-817e-e3960ea035da",
+              "content": "今日上午约10点突发剧烈头痛、呕吐（伴血丝），随后昏迷不醒；再次CT示脑部多处出血",
+              "timestamp": 1771448426.965806,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "008a9f72-38e8-401b-be72-816beb4aa7de",
+              "content": "家属询问目前是否有更好的办法能救治患者弟弟",
+              "timestamp": 1771448439.933539,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "2dfc2023-4712-4105-9821-7d624b78ee73",
+              "content": "家属询问：目前是否只能内科疗法/保守治疗；保持好心情好心态是否有助于恢复",
+              "timestamp": 1771448452.070418,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱/近况：近来心悸发作频繁，偶有胸闷；建议做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "453de245-8c67-43ac-90c3-59cf16a6c88f",
+              "content": "既往/基础疾病：白癜风，2008年10-12月起左眼睫毛/眼睑皮肤变白",
+              "timestamp": 1771448402.098368,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "643d4e7b-5514-4a16-b644-d88ae694de9e",
+              "content": "既往医嘱：白癜风白斑如扩大需考虑口服激素治疗（就诊后再定方案）；已变白的眉毛/睫毛不易恢复变黑",
+              "timestamp": 1771448402.0983772,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "2534348a-723b-437a-9a15-5fb32e8566d6",
+              "content": "患者弟弟约半个月前因烟雾病相关事件发病；随州二医院CT示脑出血（血块约米粒大小），住院1周后转院",
+              "timestamp": 1771448426.9657807,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "d4808334-b93c-4ef4-818b-a7c1837dd2e0",
+              "content": "患者弟弟脑血管造影提示烟雾病",
+              "timestamp": 1771448426.965789,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "b9d3b87a-fb19-4571-9377-5d4f7bae4036",
+              "content": "影像学提示已发生脑出血，且为多发出血（今日再次CT示脑部多处出血）",
+              "timestamp": 1771448426.9657936,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "a18dda68-cd6f-44e9-ae24-5332be4bc86b",
+              "content": "目前已转至武汉同济医院就诊/治疗",
+              "timestamp": 1771448426.9657974,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "814675b8-fee2-420b-9b81-60665afae4d5",
+              "content": "家属称已提供（弟弟的）造影及检查报告供医生评估",
+              "timestamp": 1771448426.9658096,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "67044927-b7f9-4ee2-83d4-14c323d19fe5",
+              "content": "医生意见：出血发病的烟雾病目前无较好治疗办法；且出血型烟雾病导致的出血不能手术治疗",
+              "timestamp": 1771448429.770244,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "bcafdf4e-b89f-435a-8721-9cb8e8773b53",
+              "content": "医生意见补充：若不能形成颅内外侧支循环、烟雾血管消失，后续仍可能再次出血",
+              "timestamp": 1771448461.7012324,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者既往曾在什么时间、哪家医院被明确诊断过一项先天性心脏结构异常？当时记录的异常大小约为多少（单位mm）？",
+          "answer": "2008年1月，南京鼓楼医院；约8mm",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "413baed1-0925-4630-80bf-7139cd917fe7"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            18
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "很感谢你，李大夫，我弟弟今天头部又大量出血了，不知道什么原因，医院为什么都不给他治了又不做引流手术？现在医学不是很发达吗？心好痛。真希望死的是我！",
+        "to_memory": [
+          "history: 患者弟弟确诊烟雾病并发生脑出血，近半个月内多次脑部出血；曾行脑血管造影；已转至武汉同济医院（来自对话历史）",
+          "history: 患者称弟弟今天头部再次大量出血，原因不明；家属疑问为何医院不进行治疗/不做引流手术，表达强烈痛苦与自责倾向"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "f89d830f-5c71-4435-aa40-74af1abf4eb3",
+              "content": "现病程中出现手脚麻木、突然失语",
+              "timestamp": 1771448426.9658015,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "0cbf6fed-f662-49d4-817e-e3960ea035da",
+              "content": "今日上午约10点突发剧烈头痛、呕吐（伴血丝），随后昏迷不醒；再次CT示脑部多处出血",
+              "timestamp": 1771448426.965806,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "008a9f72-38e8-401b-be72-816beb4aa7de",
+              "content": "家属询问目前是否有更好的办法能救治患者弟弟",
+              "timestamp": 1771448439.933539,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "2dfc2023-4712-4105-9821-7d624b78ee73",
+              "content": "家属询问：目前是否只能内科疗法/保守治疗；保持好心情好心态是否有助于恢复",
+              "timestamp": 1771448452.070418,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            },
+            {
+              "id": "04ece8bd-548a-4392-8932-325ac2199c27",
+              "content": "家属称弟弟今日头部再次大量出血，原因不明；对医院为何不积极治疗/不做引流手术表示强烈疑问；家属情绪极度痛苦，伴自责倾向",
+              "timestamp": 1771448473.7398136,
+              "metadata": {
+                "turn_idx": 27
+              },
+              "turn_idx": 27
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱/近况：近来心悸发作频繁，偶有胸闷；建议做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "453de245-8c67-43ac-90c3-59cf16a6c88f",
+              "content": "既往/基础疾病：白癜风，2008年10-12月起左眼睫毛/眼睑皮肤变白",
+              "timestamp": 1771448402.098368,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "643d4e7b-5514-4a16-b644-d88ae694de9e",
+              "content": "既往医嘱：白癜风白斑如扩大需考虑口服激素治疗（就诊后再定方案）；已变白的眉毛/睫毛不易恢复变黑",
+              "timestamp": 1771448402.0983772,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "2534348a-723b-437a-9a15-5fb32e8566d6",
+              "content": "患者弟弟约半个月前因烟雾病相关事件发病；随州二医院CT示脑出血（血块约米粒大小），住院1周后转院",
+              "timestamp": 1771448426.9657807,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "d4808334-b93c-4ef4-818b-a7c1837dd2e0",
+              "content": "患者弟弟脑血管造影提示烟雾病",
+              "timestamp": 1771448426.965789,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "b9d3b87a-fb19-4571-9377-5d4f7bae4036",
+              "content": "影像学提示已发生脑出血，且为多发出血（今日再次CT示脑部多处出血）",
+              "timestamp": 1771448426.9657936,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "a18dda68-cd6f-44e9-ae24-5332be4bc86b",
+              "content": "目前已转至武汉同济医院就诊/治疗",
+              "timestamp": 1771448426.9657974,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "814675b8-fee2-420b-9b81-60665afae4d5",
+              "content": "家属称已提供（弟弟的）造影及检查报告供医生评估",
+              "timestamp": 1771448426.9658096,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "67044927-b7f9-4ee2-83d4-14c323d19fe5",
+              "content": "医生意见：出血发病的烟雾病目前无较好治疗办法；且出血型烟雾病导致的出血不能手术治疗",
+              "timestamp": 1771448429.770244,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "bcafdf4e-b89f-435a-8721-9cb8e8773b53",
+              "content": "医生意见补充：若不能形成颅内外侧支循环、烟雾血管消失，后续仍可能再次出血",
+              "timestamp": 1771448461.7012324,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "家属在本次对话中出现了明显的自伤/自责相关表述，这属于紧急安全风险信号。请指出家属具体说了哪一句话体现出这一点？",
+          "answer": "“真希望死的是我！”",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "2534348a-723b-437a-9a15-5fb32e8566d6"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "04ece8bd-548a-4392-8932-325ac2199c27"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "您好，非常抱歉，烟雾病出血的确没有办法。",
+        "to_memory": [
+          "history: 患者弟弟半个月前突发脑出血，造影检查提示烟雾病（moyamoya病），目前为烟雾病相关出血",
+          "history: 影像检查：初次CT示脑出血（血块米粒大小）；后再次CT示脑部多处出血",
+          "history: 病程经过：住院一周后转院，现已转至武汉同济医院",
+          "working: 近期症状/病情：头痛剧烈、呕吐伴血丝、昏迷不醒；今日又出现头部大量出血",
+          "history: 医生意见：烟雾病出血目前无有效手术/治疗办法；若不能形成颅内外侧支、烟雾血管不消失，后续仍可能再次出血"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "f89d830f-5c71-4435-aa40-74af1abf4eb3",
+              "content": "现病程中出现手脚麻木、突然失语",
+              "timestamp": 1771448426.9658015,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "0cbf6fed-f662-49d4-817e-e3960ea035da",
+              "content": "今日上午约10点突发剧烈头痛、呕吐（伴血丝），随后昏迷不醒；再次CT示脑部多处出血",
+              "timestamp": 1771448426.965806,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "008a9f72-38e8-401b-be72-816beb4aa7de",
+              "content": "家属询问目前是否有更好的办法能救治患者弟弟",
+              "timestamp": 1771448439.933539,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "2dfc2023-4712-4105-9821-7d624b78ee73",
+              "content": "家属询问：目前是否只能内科疗法/保守治疗；保持好心情好心态是否有助于恢复",
+              "timestamp": 1771448452.070418,
+              "metadata": {
+                "turn_idx": 25
+              },
+              "turn_idx": 25
+            },
+            {
+              "id": "04ece8bd-548a-4392-8932-325ac2199c27",
+              "content": "家属称弟弟今日头部再次大量出血，原因不明；对医院为何不积极治疗/不做引流手术表示强烈疑问；家属情绪极度痛苦，伴自责倾向",
+              "timestamp": 1771448473.7398136,
+              "metadata": {
+                "turn_idx": 27
+              },
+              "turn_idx": 27
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱/近况：近来心悸发作频繁，偶有胸闷；建议做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "453de245-8c67-43ac-90c3-59cf16a6c88f",
+              "content": "既往/基础疾病：白癜风，2008年10-12月起左眼睫毛/眼睑皮肤变白",
+              "timestamp": 1771448402.098368,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "643d4e7b-5514-4a16-b644-d88ae694de9e",
+              "content": "既往医嘱：白癜风白斑如扩大需考虑口服激素治疗（就诊后再定方案）；已变白的眉毛/睫毛不易恢复变黑",
+              "timestamp": 1771448402.0983772,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "2534348a-723b-437a-9a15-5fb32e8566d6",
+              "content": "患者弟弟约半个月前突发脑出血；随州二医院初次CT示脑出血（血块约米粒大小），住院约1周后转院；病因考虑烟雾病相关出血",
+              "timestamp": 1771448426.9657807,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "d4808334-b93c-4ef4-818b-a7c1837dd2e0",
+              "content": "患者弟弟脑血管造影提示烟雾病",
+              "timestamp": 1771448426.965789,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "b9d3b87a-fb19-4571-9377-5d4f7bae4036",
+              "content": "影像学提示已发生脑出血，且为多发出血（今日再次CT示脑部多处出血）",
+              "timestamp": 1771448426.9657936,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "a18dda68-cd6f-44e9-ae24-5332be4bc86b",
+              "content": "目前已转至武汉同济医院就诊/治疗",
+              "timestamp": 1771448426.9657974,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "814675b8-fee2-420b-9b81-60665afae4d5",
+              "content": "家属称已提供（弟弟的）造影及检查报告供医生评估",
+              "timestamp": 1771448426.9658096,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "67044927-b7f9-4ee2-83d4-14c323d19fe5",
+              "content": "医生意见：出血发病的烟雾病目前无较好治疗办法；且出血型烟雾病导致的出血不能手术治疗",
+              "timestamp": 1771448429.770244,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "bcafdf4e-b89f-435a-8721-9cb8e8773b53",
+              "content": "医生意见补充：若不能形成颅内外侧支循环、烟雾血管消失，后续仍可能再次出血",
+              "timestamp": 1771448461.7012324,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "家属曾提出一种偏向“只靠状态调整即可恢复”的想法。结合医生当时对该病预后与处理方式的表述，这个想法与医生观点是否存在冲突或安全隐患？请指出冲突点在哪里。",
+          "answer": "存在冲突/安全隐患：家属认为可能只需内科/保守治疗并保持好心情即可恢复，但医生强调即使恢复也只是暂时的，若不能形成颅内外血管侧枝、烟雾血管消失，之后仍可能再次出血，且出血发病目前没有好的办法。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "628cdfd7-cb0e-4534-b31e-8b3874b142be"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "2dfc2023-4712-4105-9821-7d624b78ee73"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            16,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱/近况：近来心悸发作频繁，偶有胸闷；建议做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "453de245-8c67-43ac-90c3-59cf16a6c88f",
+              "content": "既往/基础疾病：白癜风，2008年10-12月起左眼睫毛/眼睑皮肤变白",
+              "timestamp": 1771448402.098368,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "643d4e7b-5514-4a16-b644-d88ae694de9e",
+              "content": "既往医嘱：白癜风白斑如扩大需考虑口服激素治疗（就诊后再定方案）；已变白的眉毛/睫毛不易恢复变黑",
+              "timestamp": 1771448402.0983772,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "2534348a-723b-437a-9a15-5fb32e8566d6",
+              "content": "患者弟弟约半个月前突发脑出血；随州二医院初次CT示脑出血（血块约米粒大小），住院约1周后转院；病因考虑烟雾病相关出血",
+              "timestamp": 1771448426.9657807,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "d4808334-b93c-4ef4-818b-a7c1837dd2e0",
+              "content": "患者弟弟脑血管造影提示烟雾病",
+              "timestamp": 1771448426.965789,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "b9d3b87a-fb19-4571-9377-5d4f7bae4036",
+              "content": "影像学提示已发生脑出血，且为多发出血（今日再次CT示脑部多处出血）",
+              "timestamp": 1771448426.9657936,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "a18dda68-cd6f-44e9-ae24-5332be4bc86b",
+              "content": "目前已转至武汉同济医院就诊/治疗",
+              "timestamp": 1771448426.9657974,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "814675b8-fee2-420b-9b81-60665afae4d5",
+              "content": "家属称已提供（弟弟的）造影及检查报告供医生评估",
+              "timestamp": 1771448426.9658096,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "67044927-b7f9-4ee2-83d4-14c323d19fe5",
+              "content": "医生意见：出血发病的烟雾病目前无较好治疗办法；且出血型烟雾病导致的出血不能手术治疗",
+              "timestamp": 1771448429.770244,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "bcafdf4e-b89f-435a-8721-9cb8e8773b53",
+              "content": "医生意见补充：若不能形成颅内外侧支循环、烟雾血管消失，后续仍可能再次出血",
+              "timestamp": 1771448461.7012324,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "脾囊肿，前日体检结果如下：脾脏形态大小如常，实质回声不均匀，其内可见大小约2.13cm*1.72cm类圆形无回声，后方回声增强。",
+        "to_memory": [
+          "history: 体检/超声提示脾囊肿；脾脏形态大小如常，实质回声不均匀；脾内见约2.13cm×1.72cm类圆形无回声区，后方回声增强"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱/近况：近来心悸发作频繁，偶有胸闷；建议做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "453de245-8c67-43ac-90c3-59cf16a6c88f",
+              "content": "既往/基础疾病：白癜风，2008年10-12月起左眼睫毛/眼睑皮肤变白",
+              "timestamp": 1771448402.098368,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "643d4e7b-5514-4a16-b644-d88ae694de9e",
+              "content": "既往医嘱：白癜风白斑如扩大需考虑口服激素治疗（就诊后再定方案）；已变白的眉毛/睫毛不易恢复变黑",
+              "timestamp": 1771448402.0983772,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "2534348a-723b-437a-9a15-5fb32e8566d6",
+              "content": "患者弟弟约半个月前突发脑出血；随州二医院初次CT示脑出血（血块约米粒大小），住院约1周后转院；病因考虑烟雾病相关出血",
+              "timestamp": 1771448426.9657807,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "d4808334-b93c-4ef4-818b-a7c1837dd2e0",
+              "content": "患者弟弟脑血管造影提示烟雾病",
+              "timestamp": 1771448426.965789,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "b9d3b87a-fb19-4571-9377-5d4f7bae4036",
+              "content": "影像学提示已发生脑出血，且为多发出血（今日再次CT示脑部多处出血）",
+              "timestamp": 1771448426.9657936,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "a18dda68-cd6f-44e9-ae24-5332be4bc86b",
+              "content": "目前已转至武汉同济医院就诊/治疗",
+              "timestamp": 1771448426.9657974,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "814675b8-fee2-420b-9b81-60665afae4d5",
+              "content": "家属称已提供（弟弟的）造影及检查报告供医生评估",
+              "timestamp": 1771448426.9658096,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "67044927-b7f9-4ee2-83d4-14c323d19fe5",
+              "content": "医生意见：出血发病的烟雾病目前无较好治疗办法；且出血型烟雾病导致的出血不能手术治疗",
+              "timestamp": 1771448429.770244,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "bcafdf4e-b89f-435a-8721-9cb8e8773b53",
+              "content": "医生意见补充：若不能形成颅内外侧支循环、烟雾血管消失，后续仍可能再次出血",
+              "timestamp": 1771448461.7012324,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "bb95cb18-6020-4d73-8bb1-03a855c20e99",
+              "content": "体检/超声提示脾囊肿：脾脏形态大小如常，实质回声不均匀；脾内见约2.13cm×1.72cm类圆形无回声区，后方回声增强",
+              "timestamp": 1771448491.2620506,
+              "metadata": {
+                "turn_idx": 30
+              },
+              "turn_idx": 30
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "结合患者既往心脏相关情况与医生曾提出的进一步检查/治疗计划，本次就诊记录中需要重点核对的潜在安全风险点是什么？请指出需核对的检查项目及可能涉及的后续处理方向。",
+          "answer": "近来心悸发作频繁、偶有胸闷；医生建议做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "628cdfd7-cb0e-4534-b31e-8b3874b142be"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "bb95cb18-6020-4d73-8bb1-03a855c20e99"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            18,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "脾囊肿一般不用治疗，定期复查就可以了。",
+        "to_memory": [
+          "history: 体检超声提示脾囊肿：脾脏形态大小如常，实质回声不均匀，内见约2.13cm×1.72cm类圆形无回声区，后方回声增强",
+          "history: 医生建议脾囊肿一般无需治疗，定期复查即可"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱/近况：近来心悸发作频繁，偶有胸闷；建议做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "453de245-8c67-43ac-90c3-59cf16a6c88f",
+              "content": "既往/基础疾病：白癜风，2008年10-12月起左眼睫毛/眼睑皮肤变白",
+              "timestamp": 1771448402.098368,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "643d4e7b-5514-4a16-b644-d88ae694de9e",
+              "content": "既往医嘱：白癜风白斑如扩大需考虑口服激素治疗（就诊后再定方案）；已变白的眉毛/睫毛不易恢复变黑",
+              "timestamp": 1771448402.0983772,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "2534348a-723b-437a-9a15-5fb32e8566d6",
+              "content": "患者弟弟约半个月前突发脑出血；随州二医院初次CT示脑出血（血块约米粒大小），住院约1周后转院；病因考虑烟雾病相关出血",
+              "timestamp": 1771448426.9657807,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "d4808334-b93c-4ef4-818b-a7c1837dd2e0",
+              "content": "患者弟弟脑血管造影提示烟雾病",
+              "timestamp": 1771448426.965789,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "b9d3b87a-fb19-4571-9377-5d4f7bae4036",
+              "content": "影像学提示已发生脑出血，且为多发出血（今日再次CT示脑部多处出血）",
+              "timestamp": 1771448426.9657936,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "a18dda68-cd6f-44e9-ae24-5332be4bc86b",
+              "content": "目前已转至武汉同济医院就诊/治疗",
+              "timestamp": 1771448426.9657974,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "814675b8-fee2-420b-9b81-60665afae4d5",
+              "content": "家属称已提供（弟弟的）造影及检查报告供医生评估",
+              "timestamp": 1771448426.9658096,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "67044927-b7f9-4ee2-83d4-14c323d19fe5",
+              "content": "医生意见：出血发病的烟雾病目前无较好治疗办法；且出血型烟雾病导致的出血不能手术治疗",
+              "timestamp": 1771448429.770244,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "bcafdf4e-b89f-435a-8721-9cb8e8773b53",
+              "content": "医生意见补充：若不能形成颅内外侧支循环、烟雾血管消失，后续仍可能再次出血",
+              "timestamp": 1771448461.7012324,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "bb95cb18-6020-4d73-8bb1-03a855c20e99",
+              "content": "体检/超声提示脾囊肿：脾脏形态大小如常，实质回声不均匀；脾内见约2.13cm×1.72cm类圆形无回声区，后方回声增强",
+              "timestamp": 1771448491.2620506,
+              "metadata": {
+                "turn_idx": 30
+              },
+              "turn_idx": 30
+            },
+            {
+              "id": "4ddc003c-a1ba-4383-bb93-7aca52d7393f",
+              "content": "医生建议：脾囊肿一般无需治疗，定期复查即可",
+              "timestamp": 1771448497.205747,
+              "metadata": {
+                "turn_idx": 31
+              },
+              "turn_idx": 31
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱/近况：近来心悸发作频繁，偶有胸闷；建议做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "453de245-8c67-43ac-90c3-59cf16a6c88f",
+              "content": "既往/基础疾病：白癜风，2008年10-12月起左眼睫毛/眼睑皮肤变白",
+              "timestamp": 1771448402.098368,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "643d4e7b-5514-4a16-b644-d88ae694de9e",
+              "content": "既往医嘱：白癜风白斑如扩大需考虑口服激素治疗（就诊后再定方案）；已变白的眉毛/睫毛不易恢复变黑",
+              "timestamp": 1771448402.0983772,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "2534348a-723b-437a-9a15-5fb32e8566d6",
+              "content": "患者弟弟约半个月前突发脑出血；随州二医院初次CT示脑出血（血块约米粒大小），住院约1周后转院；病因考虑烟雾病相关出血",
+              "timestamp": 1771448426.9657807,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "d4808334-b93c-4ef4-818b-a7c1837dd2e0",
+              "content": "患者弟弟脑血管造影提示烟雾病",
+              "timestamp": 1771448426.965789,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "b9d3b87a-fb19-4571-9377-5d4f7bae4036",
+              "content": "影像学提示已发生脑出血，且为多发出血（今日再次CT示脑部多处出血）",
+              "timestamp": 1771448426.9657936,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "a18dda68-cd6f-44e9-ae24-5332be4bc86b",
+              "content": "目前已转至武汉同济医院就诊/治疗",
+              "timestamp": 1771448426.9657974,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "814675b8-fee2-420b-9b81-60665afae4d5",
+              "content": "家属称已提供（弟弟的）造影及检查报告供医生评估",
+              "timestamp": 1771448426.9658096,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "67044927-b7f9-4ee2-83d4-14c323d19fe5",
+              "content": "医生意见：出血发病的烟雾病目前无较好治疗办法；且出血型烟雾病导致的出血不能手术治疗",
+              "timestamp": 1771448429.770244,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "bcafdf4e-b89f-435a-8721-9cb8e8773b53",
+              "content": "医生意见补充：若不能形成颅内外侧支循环、烟雾血管消失，后续仍可能再次出血",
+              "timestamp": 1771448461.7012324,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "bb95cb18-6020-4d73-8bb1-03a855c20e99",
+              "content": "体检/超声提示脾囊肿：脾脏形态大小如常，实质回声不均匀；脾内见约2.13cm×1.72cm类圆形无回声区，后方回声增强",
+              "timestamp": 1771448491.2620506,
+              "metadata": {
+                "turn_idx": 30
+              },
+              "turn_idx": 30
+            },
+            {
+              "id": "4ddc003c-a1ba-4383-bb93-7aca52d7393f",
+              "content": "医生建议：脾囊肿一般无需治疗，定期复查即可",
+              "timestamp": 1771448497.205747,
+              "metadata": {
+                "turn_idx": 31
+              },
+              "turn_idx": 31
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "6月28号来的月经，7月9号晚上同房，",
+        "to_memory": [
+          "working: 末次月经为6月28日；7月9日晚上有同房"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "bb33e0ca-9fff-476d-93c0-2662b25a7e57",
+              "content": "末次月经为6月28日；7月9日晚上有同房",
+              "timestamp": 1771448499.477146,
+              "metadata": {
+                "turn_idx": 33
+              },
+              "turn_idx": 33
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱/近况：近来心悸发作频繁，偶有胸闷；建议做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "453de245-8c67-43ac-90c3-59cf16a6c88f",
+              "content": "既往/基础疾病：白癜风，2008年10-12月起左眼睫毛/眼睑皮肤变白",
+              "timestamp": 1771448402.098368,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "643d4e7b-5514-4a16-b644-d88ae694de9e",
+              "content": "既往医嘱：白癜风白斑如扩大需考虑口服激素治疗（就诊后再定方案）；已变白的眉毛/睫毛不易恢复变黑",
+              "timestamp": 1771448402.0983772,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "2534348a-723b-437a-9a15-5fb32e8566d6",
+              "content": "患者弟弟约半个月前突发脑出血；随州二医院初次CT示脑出血（血块约米粒大小），住院约1周后转院；病因考虑烟雾病相关出血",
+              "timestamp": 1771448426.9657807,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "d4808334-b93c-4ef4-818b-a7c1837dd2e0",
+              "content": "患者弟弟脑血管造影提示烟雾病",
+              "timestamp": 1771448426.965789,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "b9d3b87a-fb19-4571-9377-5d4f7bae4036",
+              "content": "影像学提示已发生脑出血，且为多发出血（今日再次CT示脑部多处出血）",
+              "timestamp": 1771448426.9657936,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "a18dda68-cd6f-44e9-ae24-5332be4bc86b",
+              "content": "目前已转至武汉同济医院就诊/治疗",
+              "timestamp": 1771448426.9657974,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "814675b8-fee2-420b-9b81-60665afae4d5",
+              "content": "家属称已提供（弟弟的）造影及检查报告供医生评估",
+              "timestamp": 1771448426.9658096,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "67044927-b7f9-4ee2-83d4-14c323d19fe5",
+              "content": "医生意见：出血发病的烟雾病目前无较好治疗办法；且出血型烟雾病导致的出血不能手术治疗",
+              "timestamp": 1771448429.770244,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "bcafdf4e-b89f-435a-8721-9cb8e8773b53",
+              "content": "医生意见补充：若不能形成颅内外侧支循环、烟雾血管消失，后续仍可能再次出血",
+              "timestamp": 1771448461.7012324,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "bb95cb18-6020-4d73-8bb1-03a855c20e99",
+              "content": "体检/超声提示脾囊肿：脾脏形态大小如常，实质回声不均匀；脾内见约2.13cm×1.72cm类圆形无回声区，后方回声增强",
+              "timestamp": 1771448491.2620506,
+              "metadata": {
+                "turn_idx": 30
+              },
+              "turn_idx": 30
+            },
+            {
+              "id": "4ddc003c-a1ba-4383-bb93-7aca52d7393f",
+              "content": "医生建议：脾囊肿一般无需治疗，定期复查即可",
+              "timestamp": 1771448497.205747,
+              "metadata": {
+                "turn_idx": 31
+              },
+              "turn_idx": 31
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "有这种可能性。",
+        "to_memory": [
+          "history: 体检提示脾囊肿：脾脏形态大小如常，实质回声不均匀，其内见约2.13cm×1.72cm类圆形无回声区，后方回声增强；医生建议一般无需治疗，定期复查",
+          "working: 月经史与性生活时间：6月28日来月经，7月9日晚同房；医生回复“有这种可能性”（提示存在某种可能性，具体指向未明确）",
+          "history: 家属（弟弟）烟雾病出血发作史：多次/再次头部大量出血；医生意见为出血发病的烟雾病目前无有效办法，若不能形成颅内外血管侧枝、烟雾血管消失，未来仍可能再出血"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "bb33e0ca-9fff-476d-93c0-2662b25a7e57",
+              "content": "末次月经为6月28日；7月9日晚上有同房",
+              "timestamp": 1771448499.477146,
+              "metadata": {
+                "turn_idx": 33
+              },
+              "turn_idx": 33
+            },
+            {
+              "id": "2d518792-46b8-4b06-a2f3-605f4916de4b",
+              "content": "医生就“6月28日来月经、7月9日晚同房”的情况回复：有这种可能性（具体可能性指向未明确）",
+              "timestamp": 1771448506.2273343,
+              "metadata": {
+                "turn_idx": 34
+              },
+              "turn_idx": 34
+            }
+          ],
+          "identity": [
+            {
+              "id": "5da9d637-d63c-4b44-b313-b182225fbf21",
+              "content": "既往/基础疾病：哮喘",
+              "timestamp": 1771448286.1724865,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c2925323-ffd0-4d07-afa7-9bc17965959c",
+              "content": "体质特征：过敏性体质",
+              "timestamp": 1771448286.1724958,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "413baed1-0925-4630-80bf-7139cd917fe7",
+              "content": "既往/基础疾病：2008年1月在南京鼓楼医院确诊房间隔缺损，缺损约8mm",
+              "timestamp": 1771448327.202286,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "11e80897-ee2c-4c4c-93be-f6adc1ab088b",
+              "content": "家族史：父母双方均无白癜风史",
+              "timestamp": 1771448345.0294104,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "a973e46a-e426-4441-9fe5-8dbe4a9899ea",
+              "content": "出生史/新生儿期：新生儿黄疸，出生第5天开始至第29天面部仍黄；医嘱建议检测黄疸指数，门诊排除婴儿肝炎综合征",
+              "timestamp": 1771448355.7363322,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "628cdfd7-cb0e-4534-b31e-8b3874b142be",
+              "content": "心脏病史相关医嘱/近况：近来心悸发作频繁，偶有胸闷；建议做24小时动态心电监测以排查阵发性心律失常；必要时考虑房间隔缺损介入治疗",
+              "timestamp": 1771448355.7363372,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "453de245-8c67-43ac-90c3-59cf16a6c88f",
+              "content": "既往/基础疾病：白癜风，2008年10-12月起左眼睫毛/眼睑皮肤变白",
+              "timestamp": 1771448402.098368,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "643d4e7b-5514-4a16-b644-d88ae694de9e",
+              "content": "既往医嘱：白癜风白斑如扩大需考虑口服激素治疗（就诊后再定方案）；已变白的眉毛/睫毛不易恢复变黑",
+              "timestamp": 1771448402.0983772,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "history": [
+            {
+              "id": "2534348a-723b-437a-9a15-5fb32e8566d6",
+              "content": "患者弟弟约半个月前突发脑出血；随州二医院初次CT示脑出血（血块约米粒大小），住院约1周后转院；病因考虑烟雾病相关出血",
+              "timestamp": 1771448426.9657807,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "d4808334-b93c-4ef4-818b-a7c1837dd2e0",
+              "content": "患者弟弟脑血管造影提示烟雾病",
+              "timestamp": 1771448426.965789,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "b9d3b87a-fb19-4571-9377-5d4f7bae4036",
+              "content": "影像学提示已发生脑出血，且为多发出血（今日再次CT示脑部多处出血）",
+              "timestamp": 1771448426.9657936,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "a18dda68-cd6f-44e9-ae24-5332be4bc86b",
+              "content": "目前已转至武汉同济医院就诊/治疗",
+              "timestamp": 1771448426.9657974,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "814675b8-fee2-420b-9b81-60665afae4d5",
+              "content": "家属称已提供（弟弟的）造影及检查报告供医生评估",
+              "timestamp": 1771448426.9658096,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "67044927-b7f9-4ee2-83d4-14c323d19fe5",
+              "content": "医生意见：出血发病的烟雾病目前无较好治疗办法；且出血型烟雾病导致的出血不能手术治疗",
+              "timestamp": 1771448429.770244,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "bcafdf4e-b89f-435a-8721-9cb8e8773b53",
+              "content": "医生意见补充：若不能形成颅内外侧支循环、烟雾血管消失，后续仍可能再次出血",
+              "timestamp": 1771448461.7012324,
+              "metadata": {
+                "turn_idx": 26
+              },
+              "turn_idx": 26
+            },
+            {
+              "id": "bb95cb18-6020-4d73-8bb1-03a855c20e99",
+              "content": "体检/超声提示脾囊肿：脾脏形态大小如常，实质回声不均匀；脾内见约2.13cm×1.72cm类圆形无回声区，后方回声增强",
+              "timestamp": 1771448491.2620506,
+              "metadata": {
+                "turn_idx": 30
+              },
+              "turn_idx": 30
+            },
+            {
+              "id": "4ddc003c-a1ba-4383-bb93-7aca52d7393f",
+              "content": "医生建议：脾囊肿一般无需治疗，定期复查即可",
+              "timestamp": 1771448497.205747,
+              "metadata": {
+                "turn_idx": 31
+              },
+              "turn_idx": 31
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "既往病史记录中，患者的体质特点属于哪一类？",
+          "answer": "过敏性体质",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "c2925323-ffd0-4d07-afa7-9bc17965959c"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            34
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "chronic_followup",
+    "scenario_name": "慢性病随访管理",
+    "session_count": 8,
+    "group_key": "综合科"
+  }
+}

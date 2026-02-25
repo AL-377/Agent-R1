@@ -1,0 +1,884 @@
+{
+  "patient_id": "5058e0fb6a6c",
+  "messages": [
+    {
+      "user": {
+        "content": "步牙4棵可否一起补？，现小孩5岁零4个月。",
+        "to_memory": [
+          "identity: 患儿，5岁4个月",
+          "working: 家长咨询：4颗牙是否可以一起补牙"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "c373d671-3bf2-4569-900c-559ab278af43",
+              "content": "家长咨询：4颗牙是否可以一起补牙",
+              "timestamp": 1771494274.6197727,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [
+            {
+              "id": "df2d17f2-9351-4dae-b3c0-66440b7b341d",
+              "content": "患儿，5岁4个月",
+              "timestamp": 1771494274.6197636,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "家长这次主要想咨询的牙科处理问题是什么？",
+          "answer": "询问4颗牙能否一起补",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "c373d671-3bf2-4569-900c-559ab278af43"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你孩子还未上学，最好周五上午来。周六上学的孩子较多，不容易挂号。孩子坏的4颗牙齿要看部位，如果在一个区域便可以一起治疗，如果在不同的区域可分次来，医生会给你约好下次来的时间。",
+        "to_memory": [
+          "identity: 患儿，5岁4个月",
+          "working: 家长咨询孩子坏了4颗牙是否可以一起补/治疗",
+          "working: 医生说明4颗坏牙是否能一起治疗取决于坏牙是否在同一区域；若不在同一区域需分次治疗，并会预约下次就诊时间",
+          "working: 医生建议最好周五上午来就诊，周六挂号相对不易"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "c373d671-3bf2-4569-900c-559ab278af43",
+              "content": "家长咨询：4颗牙是否可以一起补牙",
+              "timestamp": 1771494274.6197727,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "fb340582-63fd-4d31-acdc-b4ab09aa8ba5",
+              "content": "医生说明：4颗坏牙是否能一起治疗取决于坏牙是否在同一区域；若不在同一区域需分次治疗，并会预约下次就诊时间",
+              "timestamp": 1771494280.7547116,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "450fa0d4-29fa-4746-aaa2-d1cee01e4d69",
+              "content": "医生建议：最好周五上午来就诊，周六挂号相对不易",
+              "timestamp": 1771494280.75472,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "identity": [
+            {
+              "id": "df2d17f2-9351-4dae-b3c0-66440b7b341d",
+              "content": "患儿，5岁4个月",
+              "timestamp": 1771494274.6197636,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "家长希望一次性完成多个牙齿的治疗安排。根据医生在对话中提到的限制条件，在哪种具体情况下不建议在同一次就把所有需要处理的牙齿都完成？",
+          "answer": "当坏牙不在同一个区域、分布在不同区域时不建议一次全部完成，应分次治疗。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "c373d671-3bf2-4569-900c-559ab278af43"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "df2d17f2-9351-4dae-b3c0-66440b7b341d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "df2d17f2-9351-4dae-b3c0-66440b7b341d",
+              "content": "患儿，5岁4个月",
+              "timestamp": 1771494274.6197636,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "耳前瘘管，耳前瘘管感染，脓肿很大。发病已有一个半月。",
+        "to_memory": [
+          "working: 主诉耳前瘘管感染，脓肿较大，病程约1个半月"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7a861e9a-e46c-48d6-8d24-88570b47a933",
+              "content": "主诉耳前瘘管感染，脓肿较大，病程约1个半月",
+              "timestamp": 1771494285.8141565,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [
+            {
+              "id": "df2d17f2-9351-4dae-b3c0-66440b7b341d",
+              "content": "患儿，5岁4个月",
+              "timestamp": 1771494274.6197636,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可以做。",
+        "to_memory": [
+          "identity: 患者为儿童，5岁4个月",
+          "working: 主诉耳前瘘管感染，脓肿较大，病程约1个半月",
+          "working: 询问坏4颗牙是否可一起补/一起治疗，医生答复可以做"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7a861e9a-e46c-48d6-8d24-88570b47a933",
+              "content": "主诉耳前瘘管感染，脓肿较大，病程约1个半月",
+              "timestamp": 1771494285.8141565,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "59b2c371-805b-4726-80c2-0612cfcb4a5c",
+              "content": "家属询问坏4颗牙是否可一起补/一起治疗，医生答复可以做",
+              "timestamp": 1771494293.6365972,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "identity": [
+            {
+              "id": "df2d17f2-9351-4dae-b3c0-66440b7b341d",
+              "content": "患儿，5岁4个月",
+              "timestamp": 1771494274.6197636,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "本次咨询中提到的患儿月龄或具体年龄是多少？",
+          "answer": "5岁4个月",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "df2d17f2-9351-4dae-b3c0-66440b7b341d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "谢谢李医生回复。不过这边医院医生说感染期不能做，只有等感染完全好了才能够再行手术。现在，经医生做了一些去除肉芽术后，不再有脓了。希望能够尽快结疤，好后再做手术。",
+        "to_memory": [
+          "history: 医生曾对耳前瘘管感染表示“可以做”手术（具体时机需结合感染控制情况）",
+          "history: 当前耳前瘘管感染期处理后（去除肉芽术后）已无脓，患者希望尽快结痂后再行手术；当地医院医生建议感染期不能手术，需待感染完全好转后再手术"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7a861e9a-e46c-48d6-8d24-88570b47a933",
+              "content": "主诉耳前瘘管感染，脓肿较大，病程约1个半月",
+              "timestamp": 1771494285.8141565,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "59b2c371-805b-4726-80c2-0612cfcb4a5c",
+              "content": "家属询问坏4颗牙是否可一起补/一起治疗，医生答复可以做",
+              "timestamp": 1771494293.6365972,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "b6ba64e3-58ff-4ad3-b3f5-9b1d284124b0",
+              "content": "医生曾表示耳前瘘管感染“可以做”手术，但具体时机需结合感染控制情况",
+              "timestamp": 1771494300.645118,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c4207510-ef4c-461b-a272-86a478fc4e83",
+              "content": "感染期处理后（去除肉芽术后）已无脓，患者希望尽快结痂后再行手术；当地医院建议感染期不能手术，需待感染完全好转后手术",
+              "timestamp": 1771494300.6451278,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "identity": [
+            {
+              "id": "df2d17f2-9351-4dae-b3c0-66440b7b341d",
+              "content": "患儿，5岁4个月",
+              "timestamp": 1771494274.6197636,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "本次咨询记录中，患者（患儿）的具体月龄/年龄是多少？",
+          "answer": "5岁4个月",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "df2d17f2-9351-4dae-b3c0-66440b7b341d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            5
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "不是绝对的，如果一直炎症不消退时可以做的。",
+        "to_memory": [
+          "history: 医生意见：感染期并非绝对不能手术；若炎症长期不消退时也可考虑手术"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "7a861e9a-e46c-48d6-8d24-88570b47a933",
+              "content": "主诉耳前瘘管感染，脓肿较大，病程约1个半月",
+              "timestamp": 1771494285.8141565,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "59b2c371-805b-4726-80c2-0612cfcb4a5c",
+              "content": "家属询问坏4颗牙是否可一起补/一起治疗，医生答复可以做",
+              "timestamp": 1771494293.6365972,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "b6ba64e3-58ff-4ad3-b3f5-9b1d284124b0",
+              "content": "医生意见：感染期并非绝对不能手术；若炎症长期不消退也可考虑手术，但具体时机需结合感染控制情况",
+              "timestamp": 1771494300.645118,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c4207510-ef4c-461b-a272-86a478fc4e83",
+              "content": "感染期处理后（去除肉芽术后）已无脓，患者希望尽快结痂后再行手术；当地医院建议感染期不能手术，需待感染完全好转后手术",
+              "timestamp": 1771494300.6451278,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "identity": [
+            {
+              "id": "df2d17f2-9351-4dae-b3c0-66440b7b341d",
+              "content": "患儿，5岁4个月",
+              "timestamp": 1771494274.6197636,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者在当地医院就诊时对手术时机的说法与本次线上医生的意见：两方在“什么时候可以进行手术”这一点上主要分歧是什么？",
+          "answer": "当地医院认为需要等感染完全好转后才能手术；线上医生认为感染期并非绝对不能手术，若炎症久不消退也可考虑手术。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "c4207510-ef4c-461b-a272-86a478fc4e83",
+                "b6ba64e3-58ff-4ad3-b3f5-9b1d284124b0"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "df2d17f2-9351-4dae-b3c0-66440b7b341d",
+              "content": "患儿，5岁4个月",
+              "timestamp": 1771494274.6197636,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "咳嗽，一直咳嗽,晚上连续咳,因没时间去您那里,想先吃点中成药,等有时间再去您那里给调理一下,谢谢了!",
+        "to_memory": [
+          "history: 主诉咳嗽一直不缓解，夜间连续咳嗽；因暂无时间就诊，想先自行服用中成药，之后再就诊调理"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a154e1dc-0bfa-4c3d-ad29-cfe2ba605d0f",
+              "content": "主诉：咳嗽一直不缓解，夜间连续咳嗽；因暂无时间就诊，想先自行服用中成药，之后再就诊调理",
+              "timestamp": 1771494312.7724574,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "df2d17f2-9351-4dae-b3c0-66440b7b341d",
+              "content": "患儿，5岁4个月",
+              "timestamp": 1771494274.6197636,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者本次提出想先自行用药再择期就诊；结合其年龄信息，这一计划是否存在用药安全或就诊安排上的潜在冲突点？请指出需要优先核对的关键信息是什么。",
+          "answer": "患儿，5岁4个月；计划先自行服用中成药、之后再就诊调理，需优先核对是否适用于该年龄段（儿童用药安全）。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "df2d17f2-9351-4dae-b3c0-66440b7b341d"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "a154e1dc-0bfa-4c3d-ad29-cfe2ba605d0f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            8,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "止嗽化痰定喘丸，2克日两次看看疗效。",
+        "to_memory": [
+          "identity: 患者家属咨询，患儿5岁4个月",
+          "working: 本次主诉咳嗽，持续咳嗽，夜间连续咳",
+          "history: 医嘱/用药：止嗽化痰定喘丸2克，每日2次，观察疗效"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a154e1dc-0bfa-4c3d-ad29-cfe2ba605d0f",
+              "content": "主诉：持续咳嗽一直不缓解，夜间连续咳嗽；因暂无时间就诊，想先自行服用中成药，之后再就诊调理。医嘱/用药：止嗽化痰定喘丸2克，每日2次，观察疗效。",
+              "timestamp": 1771494312.7724574,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "df2d17f2-9351-4dae-b3c0-66440b7b341d",
+              "content": "患儿，5岁4个月",
+              "timestamp": 1771494274.6197636,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "医生针对本次咳嗽给出的中成药处方中，单次剂量和每日服用次数分别是多少？请核对是否存在用药频次/剂量理解偏差的风险。",
+          "answer": "2克，每日2次。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "df2d17f2-9351-4dae-b3c0-66440b7b341d"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "a154e1dc-0bfa-4c3d-ad29-cfe2ba605d0f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            9,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "df2d17f2-9351-4dae-b3c0-66440b7b341d",
+              "content": "患儿，5岁4个月",
+              "timestamp": 1771494274.6197636,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "湿疹，用过一些外用药，好了以后复发。",
+        "to_memory": [
+          "history: 主诉湿疹，曾用外用药好转后复发"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d2a33c62-faf3-468a-9c86-9ad28e9e4378",
+              "content": "主诉湿疹，曾用外用药好转后复发",
+              "timestamp": 1771494326.2388086,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "identity": [
+            {
+              "id": "df2d17f2-9351-4dae-b3c0-66440b7b341d",
+              "content": "患儿，5岁4个月",
+              "timestamp": 1771494274.6197636,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "我科治疗湿疹以中药内服为主，局部会根据不同的皮损表现对症用药；预防方面要明确过敏原，才能有针对性的避免致敏物质。",
+        "to_memory": [
+          "history: 医生建议湿疹治疗以中药内服为主，局部根据皮损表现对症用药；预防需明确过敏原以针对性避免致敏物质"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d2a33c62-faf3-468a-9c86-9ad28e9e4378",
+              "content": "主诉湿疹，曾用外用药好转后复发",
+              "timestamp": 1771494326.2388086,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            },
+            {
+              "id": "04eba237-4f70-426c-8345-b6177b159c16",
+              "content": "医生建议湿疹治疗以中药内服为主，局部根据皮损表现对症用药；预防需明确过敏原以针对性避免致敏物质",
+              "timestamp": 1771494329.0620368,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "identity": [
+            {
+              "id": "df2d17f2-9351-4dae-b3c0-66440b7b341d",
+              "content": "患儿，5岁4个月",
+              "timestamp": 1771494274.6197636,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "关于这位患儿的皮肤问题，医生在治疗方案的“主要用药途径”和“预防策略”上分别强调了什么？若家属仅按自己以往习惯处理，可能会与医生本次建议出现哪些不一致需要核对？",
+          "answer": "治疗以中药内服为主，局部根据不同皮损表现对症用药；预防需明确过敏原以便针对性避免致敏物质。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "df2d17f2-9351-4dae-b3c0-66440b7b341d"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "04eba237-4f70-426c-8345-b6177b159c16"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            12,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "df2d17f2-9351-4dae-b3c0-66440b7b341d",
+              "content": "患儿，5岁4个月",
+              "timestamp": 1771494274.6197636,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "原来为慢性肾炎，现在可能发展成为了尿毒症，2006年，呕吐，贫血，头晕等症状。河北省二院，石家庄平安医院。如果进行肾脏移植的话，会出现什么并发症吗？以后还会复发吗？我听说进行肾脏移植病人顶多活5年，对捐肾的人有什么影响吗？如果做手术的话，哪的医院比较好呢？",
+        "to_memory": [
+          "history: 既往慢性肾炎，患者自述目前可能已发展为尿毒症",
+          "history: 2006年出现呕吐、贫血、头晕等症状",
+          "history: 曾在河北省二院、石家庄平安医院就诊",
+          "working: 咨询肾移植可能的并发症、移植后是否复发、移植后生存期、对捐肾者影响及推荐医院"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "6cb2beb3-fd95-4215-83cb-d90833c015ca",
+              "content": "咨询肾移植可能的并发症、移植后是否复发、移植后生存期、对捐肾者影响及推荐医院",
+              "timestamp": 1771494338.0648286,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [
+            {
+              "id": "df2d17f2-9351-4dae-b3c0-66440b7b341d",
+              "content": "患儿，5岁4个月",
+              "timestamp": 1771494274.6197636,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "ccf5aaea-9e3e-402e-8e2a-a2a5ea53fd37",
+              "content": "既往慢性肾炎，患者自述目前可能已发展为尿毒症",
+              "timestamp": 1771494338.0648108,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "1fc99872-1a86-4300-b877-a1ccfcbb3783",
+              "content": "2006年出现呕吐、贫血、头晕等症状",
+              "timestamp": 1771494338.0648198,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "8a6bf063-ede8-4505-880e-8b382c7f1c2d",
+              "content": "曾在河北省二院、石家庄平安医院就诊",
+              "timestamp": 1771494338.0648246,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者在“皮肤问题咨询”那次与后来“肾脏相关咨询”那次的表述：他在后一次咨询里提到自己既往患过什么慢性疾病，并认为目前可能进展到了什么阶段？",
+          "answer": "既往慢性肾炎；自述目前可能已发展为尿毒症。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "6cb2beb3-fd95-4215-83cb-d90833c015ca"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "ccf5aaea-9e3e-402e-8e2a-a2a5ea53fd37"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "肾移植的主要并发症就是移植后的排斥反应，能不能渡过危险期，另外还有一个手术风险的问题。我遇到的一个肾移植病人，目前已经存活18年。正常健康的人捐出一个肾脏对日常生活没有什么特殊的影响，因为我们肾脏有强大的代偿能力，一个肾脏可以维持生命。但是毕竟是只剩一个肾脏了，如果万一另一侧肾脏因为外伤等其他情况损伤，您也就没有另一个肾脏代偿了。所以这都是要自己和病人考虑清楚的事。至于手术，北京和天津的大医院都能做。祝您父亲早日康复！",
+        "to_memory": [
+          "history: 患者既往慢性肾炎，现疑已发展为尿毒症（患者自述）；2006年出现呕吐、贫血、头晕等症状；曾就诊于河北省二院、石家庄平安医院",
+          "history: 医生告知肾移植主要并发症为移植后排斥反应，另有手术风险；建议北京、天津大型医院可开展肾移植手术",
+          "history: 医生告知健康人捐出一个肾脏通常对日常生活无特殊影响（肾脏代偿），但仅剩一肾后若对侧肾因外伤等损伤将缺乏代偿",
+          "history: 患者/家属咨询肾移植并发症、术后是否复发、术后生存期及对捐肾者影响、手术医院选择（疑为父亲）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "6cb2beb3-fd95-4215-83cb-d90833c015ca",
+              "content": "咨询肾移植可能的并发症、移植后是否复发、移植后生存期、对捐肾者影响及推荐医院",
+              "timestamp": 1771494338.0648286,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [
+            {
+              "id": "df2d17f2-9351-4dae-b3c0-66440b7b341d",
+              "content": "患儿，5岁4个月",
+              "timestamp": 1771494274.6197636,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "history": [
+            {
+              "id": "ccf5aaea-9e3e-402e-8e2a-a2a5ea53fd37",
+              "content": "既往慢性肾炎，患者自述目前可能已发展为尿毒症",
+              "timestamp": 1771494338.0648108,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "1fc99872-1a86-4300-b877-a1ccfcbb3783",
+              "content": "2006年出现呕吐、贫血、头晕等症状",
+              "timestamp": 1771494338.0648198,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "8a6bf063-ede8-4505-880e-8b382c7f1c2d",
+              "content": "曾在河北省二院、石家庄平安医院就诊",
+              "timestamp": 1771494338.0648246,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "b3a08ef6-fa8d-457a-9634-72eed3aece2f",
+              "content": "医生告知肾移植主要并发症为移植后排斥反应，另有手术风险；建议北京、天津大型医院可开展肾移植手术",
+              "timestamp": 1771494348.3498073,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "e7bbd7de-af45-440e-a8c8-64f181e10939",
+              "content": "医生告知健康人捐出一个肾脏通常对日常生活无特殊影响（肾脏代偿），但仅剩一肾后若对侧肾因外伤等损伤将缺乏代偿",
+              "timestamp": 1771494348.3498182,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "comorbidity_management",
+    "scenario_name": "多疾病共病管理",
+    "session_count": 5,
+    "group_key": "综合科"
+  }
+}

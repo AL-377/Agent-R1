@@ -1,0 +1,1232 @@
+{
+  "patient_id": "a0e95875d4f1",
+  "messages": [
+    {
+      "user": {
+        "content": "感冒，孩子十天前有些流鼻涕，这两天又咳嗽两声，吃过药后咳嗽反倒加重了。",
+        "to_memory": [
+          "working: 患儿感冒相关症状，10天前出现流鼻涕",
+          "working: 近2天出现咳嗽（咳嗽两声）",
+          "history: 服用药物后咳嗽反而加重（具体药物不详）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "75de0c5b-30e4-4930-9416-ab8dcbc1ab21",
+              "content": "患儿感冒相关症状：10天前出现流鼻涕",
+              "timestamp": 1771494685.912543,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "6e6687b0-9c32-47f7-a20d-2e5347be41a5",
+              "content": "近2天出现咳嗽（偶尔咳嗽两声）",
+              "timestamp": 1771494685.9125516,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "bb48076b-9849-4782-8a03-883a63591d37",
+              "content": "服用药物后咳嗽反而加重（具体药物不详）",
+              "timestamp": 1771494685.9125562,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者提到孩子最近一次出现新的呼吸道症状是在多久之前？",
+          "answer": "近2天",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "6e6687b0-9c32-47f7-a20d-2e5347be41a5"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "孩子小，气管较窄，功能发育不完善，如咳嗽加重，还要及时到医院就诊，以便大夫根据孩子的情况对药物种类及给药方法做出调整。",
+        "to_memory": [
+          "identity: 患者为儿童（年龄小）",
+          "history: 医嘱：如咳嗽加重需及时到医院就诊，由医生根据孩子情况调整药物种类及给药方法"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "75de0c5b-30e4-4930-9416-ab8dcbc1ab21",
+              "content": "患儿感冒相关症状：10天前出现流鼻涕",
+              "timestamp": 1771494685.912543,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "6e6687b0-9c32-47f7-a20d-2e5347be41a5",
+              "content": "近2天出现咳嗽（偶尔咳嗽两声）",
+              "timestamp": 1771494685.9125516,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "46c37fac-5b97-4dd9-9aec-2c193a67245a",
+              "content": "医嘱：如咳嗽加重需及时到医院就诊，由医生根据孩子情况调整药物种类及给药方法",
+              "timestamp": 1771494690.3678885,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "identity": [
+            {
+              "id": "cb937035-46bd-458b-8798-07761c77241e",
+              "content": "患者为儿童（年龄小）",
+              "timestamp": 1771494690.3678808,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "history": [
+            {
+              "id": "bb48076b-9849-4782-8a03-883a63591d37",
+              "content": "服用药物后咳嗽反而加重（具体药物不详）",
+              "timestamp": 1771494685.9125562,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "家长描述孩子在接受某种处理后，出现了什么与先前不同的变化？",
+          "answer": "吃过药后咳嗽反而加重",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "bb48076b-9849-4782-8a03-883a63591d37"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "cb937035-46bd-458b-8798-07761c77241e",
+              "content": "患者为儿童（年龄小）",
+              "timestamp": 1771494690.3678808,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "history": [
+            {
+              "id": "bb48076b-9849-4782-8a03-883a63591d37",
+              "content": "服用药物后咳嗽反而加重（具体药物不详）",
+              "timestamp": 1771494685.9125562,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "肺静脉异位，您好我想问问肺静脉异位这个病手术完了能否遗传\n。",
+        "to_memory": [
+          "history: 询问肺静脉异位（疑似已手术治疗）术后是否会遗传给下一代"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "cb937035-46bd-458b-8798-07761c77241e",
+              "content": "患者为儿童（年龄小）",
+              "timestamp": 1771494690.3678808,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "history": [
+            {
+              "id": "bb48076b-9849-4782-8a03-883a63591d37",
+              "content": "服用药物后咳嗽反而加重（具体药物不详）",
+              "timestamp": 1771494685.9125562,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b2e4009c-3856-43e5-bd1c-e65be6f3f306",
+              "content": "家属询问：肺静脉异位（疑似已手术治疗）术后是否会遗传给下一代",
+              "timestamp": 1771494695.6100707,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "一般不会。",
+        "to_memory": [
+          "history: 医生回复：肺静脉异位手术后一般不会遗传"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "cb937035-46bd-458b-8798-07761c77241e",
+              "content": "患者为儿童（年龄小）",
+              "timestamp": 1771494690.3678808,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "history": [
+            {
+              "id": "bb48076b-9849-4782-8a03-883a63591d37",
+              "content": "服用药物后咳嗽反而加重（具体药物不详）",
+              "timestamp": 1771494685.9125562,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b2e4009c-3856-43e5-bd1c-e65be6f3f306",
+              "content": "家属询问：肺静脉异位（疑似已手术治疗）术后是否会遗传给下一代",
+              "timestamp": 1771494695.6100707,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "af0b0dba-ad94-41e6-aabf-7d4dfb7d4750",
+              "content": "医生回复：肺静脉异位手术后一般不会遗传",
+              "timestamp": 1771494698.0704834,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "回顾最初因感冒相关症状咨询时，家属提到孩子在用药后的症状走向与用药前相比发生了什么变化？",
+          "answer": "吃过药后咳嗽反倒加重了。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "bb48076b-9849-4782-8a03-883a63591d37",
+                "bb48076b-9849-4782-8a03-883a63591d37"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "cb937035-46bd-458b-8798-07761c77241e",
+              "content": "患者为儿童（年龄小）",
+              "timestamp": 1771494690.3678808,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "history": [
+            {
+              "id": "bb48076b-9849-4782-8a03-883a63591d37",
+              "content": "服用药物后咳嗽反而加重（具体药物不详）",
+              "timestamp": 1771494685.9125562,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b2e4009c-3856-43e5-bd1c-e65be6f3f306",
+              "content": "家属询问：肺静脉异位（疑似已手术治疗）术后是否会遗传给下一代",
+              "timestamp": 1771494695.6100707,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "af0b0dba-ad94-41e6-aabf-7d4dfb7d4750",
+              "content": "医生回复：肺静脉异位手术后一般不会遗传",
+              "timestamp": 1771494698.0704834,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "食道癌，4月份检查食道癌2级。伴坏死。今年78岁。身体状况好、。",
+        "to_memory": [
+          "identity: 患者78岁",
+          "history: 2026年4月检查提示食道癌2级，伴坏死",
+          "working: 当前自述身体状况好"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "26b76cd0-6a1f-4651-af94-13900df6bb7a",
+              "content": "当前自述身体状况好",
+              "timestamp": 1771494704.9858003,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "cb937035-46bd-458b-8798-07761c77241e",
+              "content": "患者78岁",
+              "timestamp": 1771494690.3678808,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "history": [
+            {
+              "id": "bb48076b-9849-4782-8a03-883a63591d37",
+              "content": "服用药物后咳嗽反而加重（具体药物不详）",
+              "timestamp": 1771494685.9125562,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b2e4009c-3856-43e5-bd1c-e65be6f3f306",
+              "content": "家属询问：肺静脉异位（疑似已手术治疗）术后是否会遗传给下一代",
+              "timestamp": 1771494695.6100707,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "af0b0dba-ad94-41e6-aabf-7d4dfb7d4750",
+              "content": "医生回复：肺静脉异位手术后一般不会遗传",
+              "timestamp": 1771494698.0704834,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "934bb246-f2d8-465e-ac4d-818a962b319b",
+              "content": "2026年4月检查提示食道癌2级，伴坏死",
+              "timestamp": 1771494704.9857914,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比孩子最初出现呼吸道症状时与之后一次反馈时的情况：在使用过某种处理措施后，孩子的咳嗽表现相较于用之前发生了什么变化？",
+          "answer": "服用药物后咳嗽反而加重。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "bb48076b-9849-4782-8a03-883a63591d37"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "26b76cd0-6a1f-4651-af94-13900df6bb7a"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "年龄不是手术的绝对禁忌，建议还是抓紧就医详询，明确能否手术治疗。",
+        "to_memory": [
+          "history: 2026年4月检查提示食道癌2级，伴坏死",
+          "identity: 患者年龄78岁，整体身体状况好",
+          "history: 医生建议年龄不是手术绝对禁忌，建议尽快就医详询以明确是否可行手术治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "26b76cd0-6a1f-4651-af94-13900df6bb7a",
+              "content": "当前自述身体状况好",
+              "timestamp": 1771494704.9858003,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "cb937035-46bd-458b-8798-07761c77241e",
+              "content": "患者78岁",
+              "timestamp": 1771494690.3678808,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "history": [
+            {
+              "id": "bb48076b-9849-4782-8a03-883a63591d37",
+              "content": "服用药物后咳嗽反而加重（具体药物不详）",
+              "timestamp": 1771494685.9125562,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b2e4009c-3856-43e5-bd1c-e65be6f3f306",
+              "content": "家属询问：肺静脉异位（疑似已手术治疗）术后是否会遗传给下一代",
+              "timestamp": 1771494695.6100707,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "af0b0dba-ad94-41e6-aabf-7d4dfb7d4750",
+              "content": "医生回复：肺静脉异位手术后一般不会遗传",
+              "timestamp": 1771494698.0704834,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "934bb246-f2d8-465e-ac4d-818a962b319b",
+              "content": "2026年4月检查提示食道癌2级，伴坏死",
+              "timestamp": 1771494704.9857914,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "10c1dabf-e123-4259-a385-69c5d1bf421e",
+              "content": "医生建议：年龄不是手术绝对禁忌，建议尽快就医详询以明确是否可行手术治疗",
+              "timestamp": 1771494712.2792845,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在讨论某项治疗决策时，患者曾提到自身整体状态方面的关键信息。请回忆这条信息是什么，并说明它对就医/手术评估可能需要重点核实的安全点是什么？",
+          "answer": "患者自述“身体状况好”；安全点：该自述需进一步客观评估核实（如体能、合并症、麻醉/手术耐受性等），不能仅凭主观感觉决定治疗。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b2e4009c-3856-43e5-bd1c-e65be6f3f306"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "26b76cd0-6a1f-4651-af94-13900df6bb7a"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "cb937035-46bd-458b-8798-07761c77241e",
+              "content": "患者78岁",
+              "timestamp": 1771494690.3678808,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "history": [
+            {
+              "id": "bb48076b-9849-4782-8a03-883a63591d37",
+              "content": "服用药物后咳嗽反而加重（具体药物不详）",
+              "timestamp": 1771494685.9125562,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b2e4009c-3856-43e5-bd1c-e65be6f3f306",
+              "content": "家属询问：肺静脉异位（疑似已手术治疗）术后是否会遗传给下一代",
+              "timestamp": 1771494695.6100707,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "af0b0dba-ad94-41e6-aabf-7d4dfb7d4750",
+              "content": "医生回复：肺静脉异位手术后一般不会遗传",
+              "timestamp": 1771494698.0704834,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "934bb246-f2d8-465e-ac4d-818a962b319b",
+              "content": "2026年4月检查提示食道癌2级，伴坏死",
+              "timestamp": 1771494704.9857914,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "10c1dabf-e123-4259-a385-69c5d1bf421e",
+              "content": "医生建议：年龄不是手术绝对禁忌，建议尽快就医详询以明确是否可行手术治疗",
+              "timestamp": 1771494712.2792845,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "先天性心脏病，诊断描述心脏值AAO：8mm,AOD:12mm,LVd:23mm,LA:15mm,RVd:7mm,IVST:5mm,LVPWT:5mm,MPA:11mm新功能测值LVEDV29mI,LESV9mI,SV20mI,EF70%,FS38%.结论：先天性心脏病完全性大动脉转位室间隔膜周部缺损室水平左向右为主分流II孔型房间隔缺损{筛孔状}房水平左向右分流动脉导管未闭动脉水平分流。",
+        "to_memory": [
+          "history: 超声/心功能测量：AAO 8mm，AOD 12mm，LVd 23mm，LA 15mm，RVd 7mm，IVST 5mm，LVPWT 5mm，MPA 11mm；LVEDV 29ml，LESV 9ml，SV 20ml，EF 70%，FS 38%",
+          "history: 诊断结论：先天性心脏病—完全性大动脉转位；室间隔膜周部缺损（室水平左向右为主分流）；II孔型房间隔缺损（筛孔状，房水平左向右分流）；动脉导管未闭（动脉水平分流）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "cb937035-46bd-458b-8798-07761c77241e",
+              "content": "患者78岁",
+              "timestamp": 1771494690.3678808,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "history": [
+            {
+              "id": "bb48076b-9849-4782-8a03-883a63591d37",
+              "content": "服用药物后咳嗽反而加重（具体药物不详）",
+              "timestamp": 1771494685.9125562,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b2e4009c-3856-43e5-bd1c-e65be6f3f306",
+              "content": "家属询问：肺静脉异位（疑似已手术治疗）术后是否会遗传给下一代",
+              "timestamp": 1771494695.6100707,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "af0b0dba-ad94-41e6-aabf-7d4dfb7d4750",
+              "content": "医生回复：肺静脉异位手术后一般不会遗传",
+              "timestamp": 1771494698.0704834,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "934bb246-f2d8-465e-ac4d-818a962b319b",
+              "content": "2026年4月检查提示食道癌2级，伴坏死",
+              "timestamp": 1771494704.9857914,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "10c1dabf-e123-4259-a385-69c5d1bf421e",
+              "content": "医生建议：年龄不是手术绝对禁忌，建议尽快就医详询以明确是否可行手术治疗",
+              "timestamp": 1771494712.2792845,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dbe90b70-db69-49e6-b2e1-035e0ca7ca90",
+              "content": "超声/心功能测量：AAO 8mm，AOD 12mm，LVd 23mm，LA 15mm，RVd 7mm，IVST 5mm，LVPWT 5mm，MPA 11mm；LVEDV 29ml，LESV 9ml，SV 20ml，EF 70%，FS 38%",
+              "timestamp": 1771494722.2599542,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "aec92dbf-fe2b-4042-a9f1-af5fe6edef27",
+              "content": "诊断结论：先天性心脏病—完全性大动脉转位；室间隔膜周部缺损（室水平左向右为主分流）；II孔型房间隔缺损（筛孔状，房水平左向右分流）；动脉导管未闭（动脉水平分流）",
+              "timestamp": 1771494722.2599626,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可以手术的，需要重新检查，确定手术时间和方案，一般最好最迟不能超过1个月。总的费用可能需要6－7万元（上海）。",
+        "to_memory": [
+          "history: 先天性心脏病：完全性大动脉转位；室间隔膜周部缺损（室水平左向右为主分流）；II孔型房间隔缺损（筛孔状，房水平左向右分流）；动脉导管未闭（动脉水平分流）",
+          "history: 心脏超声/测值：AAO 8mm，AOD 12mm，LVd 23mm，LA 15mm，RVd 7mm，IVST 5mm，LVPWT 5mm，MPA 11mm；LVEDV 29ml，LESV 9ml，SV 20ml，EF 70%，FS 38%",
+          "history: 医嘱：可手术治疗；需重新检查以确定手术时间和方案；建议最迟不超过1个月完成手术安排",
+          "history: 费用预估：总费用约6–7万元（上海）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "cb937035-46bd-458b-8798-07761c77241e",
+              "content": "患者78岁",
+              "timestamp": 1771494690.3678808,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "history": [
+            {
+              "id": "bb48076b-9849-4782-8a03-883a63591d37",
+              "content": "服用药物后咳嗽反而加重（具体药物不详）",
+              "timestamp": 1771494685.9125562,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b2e4009c-3856-43e5-bd1c-e65be6f3f306",
+              "content": "家属询问：肺静脉异位（疑似已手术治疗）术后是否会遗传给下一代",
+              "timestamp": 1771494695.6100707,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "af0b0dba-ad94-41e6-aabf-7d4dfb7d4750",
+              "content": "医生回复：肺静脉异位手术后一般不会遗传",
+              "timestamp": 1771494698.0704834,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "934bb246-f2d8-465e-ac4d-818a962b319b",
+              "content": "2026年4月检查提示食道癌2级，伴坏死",
+              "timestamp": 1771494704.9857914,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "10c1dabf-e123-4259-a385-69c5d1bf421e",
+              "content": "医生建议：年龄不是手术绝对禁忌，建议尽快就医详询以明确是否可行手术治疗",
+              "timestamp": 1771494712.2792845,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dbe90b70-db69-49e6-b2e1-035e0ca7ca90",
+              "content": "超声/心功能测量：AAO 8mm，AOD 12mm，LVd 23mm，LA 15mm，RVd 7mm，IVST 5mm，LVPWT 5mm，MPA 11mm；LVEDV 29ml，LESV 9ml，SV 20ml，EF 70%，FS 38%",
+              "timestamp": 1771494722.2599542,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "aec92dbf-fe2b-4042-a9f1-af5fe6edef27",
+              "content": "诊断结论：先天性心脏病—完全性大动脉转位；室间隔膜周部缺损（室水平左向右为主分流）；II孔型房间隔缺损（筛孔状，房水平左向右分流）；动脉导管未闭（动脉水平分流）",
+              "timestamp": 1771494722.2599626,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "7c3ee8b2-27b1-43d7-b6bd-570f9643225e",
+              "content": "医嘱：可手术治疗；需重新检查以确定手术时间和方案；建议最迟不超过1个月完成手术安排",
+              "timestamp": 1771494729.415388,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "bb83ffcd-0957-4fed-8d95-842fd4ff4fed",
+              "content": "费用预估：总费用约6–7万元（上海）",
+              "timestamp": 1771494729.4153981,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比最早那次咨询与后续关于心脏问题的那次咨询：家属在最早那次主要担心的术后相关问题是什么？",
+          "answer": "询问肺静脉异位手术后是否会遗传给下一代",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "bb48076b-9849-4782-8a03-883a63591d37",
+                "b2e4009c-3856-43e5-bd1c-e65be6f3f306"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            10,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "cb937035-46bd-458b-8798-07761c77241e",
+              "content": "患者78岁",
+              "timestamp": 1771494690.3678808,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "history": [
+            {
+              "id": "bb48076b-9849-4782-8a03-883a63591d37",
+              "content": "服用药物后咳嗽反而加重（具体药物不详）",
+              "timestamp": 1771494685.9125562,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b2e4009c-3856-43e5-bd1c-e65be6f3f306",
+              "content": "家属询问：肺静脉异位（疑似已手术治疗）术后是否会遗传给下一代",
+              "timestamp": 1771494695.6100707,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "af0b0dba-ad94-41e6-aabf-7d4dfb7d4750",
+              "content": "医生回复：肺静脉异位手术后一般不会遗传",
+              "timestamp": 1771494698.0704834,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "934bb246-f2d8-465e-ac4d-818a962b319b",
+              "content": "2026年4月检查提示食道癌2级，伴坏死",
+              "timestamp": 1771494704.9857914,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "10c1dabf-e123-4259-a385-69c5d1bf421e",
+              "content": "医生建议：年龄不是手术绝对禁忌，建议尽快就医详询以明确是否可行手术治疗",
+              "timestamp": 1771494712.2792845,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dbe90b70-db69-49e6-b2e1-035e0ca7ca90",
+              "content": "超声/心功能测量：AAO 8mm，AOD 12mm，LVd 23mm，LA 15mm，RVd 7mm，IVST 5mm，LVPWT 5mm，MPA 11mm；LVEDV 29ml，LESV 9ml，SV 20ml，EF 70%，FS 38%",
+              "timestamp": 1771494722.2599542,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "aec92dbf-fe2b-4042-a9f1-af5fe6edef27",
+              "content": "诊断结论：先天性心脏病—完全性大动脉转位；室间隔膜周部缺损（室水平左向右为主分流）；II孔型房间隔缺损（筛孔状，房水平左向右分流）；动脉导管未闭（动脉水平分流）",
+              "timestamp": 1771494722.2599626,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "7c3ee8b2-27b1-43d7-b6bd-570f9643225e",
+              "content": "医嘱：可手术治疗；需重新检查以确定手术时间和方案；建议最迟不超过1个月完成手术安排",
+              "timestamp": 1771494729.415388,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "bb83ffcd-0957-4fed-8d95-842fd4ff4fed",
+              "content": "费用预估：总费用约6–7万元（上海）",
+              "timestamp": 1771494729.4153981,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "癫痫病，隔两天发作一次，在毫不知情的情况下失神~",
+        "to_memory": [
+          "working: 主诉癫痫发作，约隔两天发作一次；发作时在毫不知情情况下出现失神"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "1537baa7-b71b-444d-b12b-1c826026a1b3",
+              "content": "主诉癫痫发作，约每隔2天发作一次；发作时在毫不知情情况下出现失神",
+              "timestamp": 1771494734.9014566,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "identity": [
+            {
+              "id": "cb937035-46bd-458b-8798-07761c77241e",
+              "content": "患者78岁",
+              "timestamp": 1771494690.3678808,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "history": [
+            {
+              "id": "bb48076b-9849-4782-8a03-883a63591d37",
+              "content": "服用药物后咳嗽反而加重（具体药物不详）",
+              "timestamp": 1771494685.9125562,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b2e4009c-3856-43e5-bd1c-e65be6f3f306",
+              "content": "家属询问：肺静脉异位（疑似已手术治疗）术后是否会遗传给下一代",
+              "timestamp": 1771494695.6100707,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "af0b0dba-ad94-41e6-aabf-7d4dfb7d4750",
+              "content": "医生回复：肺静脉异位手术后一般不会遗传",
+              "timestamp": 1771494698.0704834,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "934bb246-f2d8-465e-ac4d-818a962b319b",
+              "content": "2026年4月检查提示食道癌2级，伴坏死",
+              "timestamp": 1771494704.9857914,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "10c1dabf-e123-4259-a385-69c5d1bf421e",
+              "content": "医生建议：年龄不是手术绝对禁忌，建议尽快就医详询以明确是否可行手术治疗",
+              "timestamp": 1771494712.2792845,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dbe90b70-db69-49e6-b2e1-035e0ca7ca90",
+              "content": "超声/心功能测量：AAO 8mm，AOD 12mm，LVd 23mm，LA 15mm，RVd 7mm，IVST 5mm，LVPWT 5mm，MPA 11mm；LVEDV 29ml，LESV 9ml，SV 20ml，EF 70%，FS 38%",
+              "timestamp": 1771494722.2599542,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "aec92dbf-fe2b-4042-a9f1-af5fe6edef27",
+              "content": "诊断结论：先天性心脏病—完全性大动脉转位；室间隔膜周部缺损（室水平左向右为主分流）；II孔型房间隔缺损（筛孔状，房水平左向右分流）；动脉导管未闭（动脉水平分流）",
+              "timestamp": 1771494722.2599626,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "7c3ee8b2-27b1-43d7-b6bd-570f9643225e",
+              "content": "医嘱：可手术治疗；需重新检查以确定手术时间和方案；建议最迟不超过1个月完成手术安排",
+              "timestamp": 1771494729.415388,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "bb83ffcd-0957-4fed-8d95-842fd4ff4fed",
+              "content": "费用预估：总费用约6–7万元（上海）",
+              "timestamp": 1771494729.4153981,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在最近一次描述的发作性症状中，发作频率以及发作当时的意识状态分别是怎样的？这些信息对后续安全评估有什么需要特别核对的点？",
+          "answer": "约每隔2天发作一次；发作时在毫不知情的情况下出现失神。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "10c1dabf-e123-4259-a385-69c5d1bf421e"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "1537baa7-b71b-444d-b12b-1c826026a1b3"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            5,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "您好！如果是病灶性癫痫，病灶不在功能区，不需要行二次手术（功能区癫痫需二次手术放置颅内电极，以精确定位致痫灶和功能区的关系），那么费用在4万元左右；而功能区病灶性癫痫手术需二次手术，费用在8万元左右。",
+        "to_memory": [
+          "history: 癫痫（疑病灶性癫痫），发作频率约隔两天一次，表现为失神发作",
+          "history: 本次讨论为癫痫手术费用与是否需二次手术：若病灶不在功能区且无需二次手术，费用约4万元；若为功能区病灶性癫痫需二次手术放置颅内电极，费用约8万元"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "1537baa7-b71b-444d-b12b-1c826026a1b3",
+              "content": "癫痫（疑病灶性癫痫），发作频率约每隔2天一次；发作时患者毫不知情出现失神发作",
+              "timestamp": 1771494734.9014566,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "identity": [
+            {
+              "id": "cb937035-46bd-458b-8798-07761c77241e",
+              "content": "患者78岁",
+              "timestamp": 1771494690.3678808,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "history": [
+            {
+              "id": "bb48076b-9849-4782-8a03-883a63591d37",
+              "content": "服用药物后咳嗽反而加重（具体药物不详）",
+              "timestamp": 1771494685.9125562,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "b2e4009c-3856-43e5-bd1c-e65be6f3f306",
+              "content": "家属询问：肺静脉异位（疑似已手术治疗）术后是否会遗传给下一代",
+              "timestamp": 1771494695.6100707,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "af0b0dba-ad94-41e6-aabf-7d4dfb7d4750",
+              "content": "医生回复：肺静脉异位手术后一般不会遗传",
+              "timestamp": 1771494698.0704834,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "934bb246-f2d8-465e-ac4d-818a962b319b",
+              "content": "2026年4月检查提示食道癌2级，伴坏死",
+              "timestamp": 1771494704.9857914,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "10c1dabf-e123-4259-a385-69c5d1bf421e",
+              "content": "医生建议：年龄不是手术绝对禁忌，建议尽快就医详询以明确是否可行手术治疗",
+              "timestamp": 1771494712.2792845,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "dbe90b70-db69-49e6-b2e1-035e0ca7ca90",
+              "content": "超声/心功能测量：AAO 8mm，AOD 12mm，LVd 23mm，LA 15mm，RVd 7mm，IVST 5mm，LVPWT 5mm，MPA 11mm；LVEDV 29ml，LESV 9ml，SV 20ml，EF 70%，FS 38%",
+              "timestamp": 1771494722.2599542,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "aec92dbf-fe2b-4042-a9f1-af5fe6edef27",
+              "content": "诊断结论：先天性心脏病—完全性大动脉转位；室间隔膜周部缺损（室水平左向右为主分流）；II孔型房间隔缺损（筛孔状，房水平左向右分流）；动脉导管未闭（动脉水平分流）",
+              "timestamp": 1771494722.2599626,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "7c3ee8b2-27b1-43d7-b6bd-570f9643225e",
+              "content": "医嘱：可手术治疗；需重新检查以确定手术时间和方案；建议最迟不超过1个月完成手术安排",
+              "timestamp": 1771494729.415388,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "bb83ffcd-0957-4fed-8d95-842fd4ff4fed",
+              "content": "费用预估：总费用约6–7万元（上海）",
+              "timestamp": 1771494729.4153981,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "9f3dcdee-2d70-4bfc-9a62-2592d7f21238",
+              "content": "癫痫手术费用咨询：若病灶不在功能区且无需二次手术，费用约4万元；若为功能区病灶性癫痫需二次手术放置颅内电极，费用约8万元",
+              "timestamp": 1771494743.5428746,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "医生之前在回复患者关于术后对后代影响的提问时，是如何说明这种情况是否会传给下一代的？",
+          "answer": "肺静脉异位手术后一般不会遗传。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "af0b0dba-ad94-41e6-aabf-7d4dfb7d4750"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            9
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "comorbidity_management",
+    "scenario_name": "多疾病共病管理",
+    "session_count": 5,
+    "group_key": "综合科"
+  }
+}

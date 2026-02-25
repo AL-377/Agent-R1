@@ -1,0 +1,3058 @@
+{
+  "patient_id": "5c2cc65bb401",
+  "messages": [
+    {
+      "user": {
+        "content": "拔牙之后肿疼，拔牙之后肿疼。",
+        "to_memory": [
+          "working: 拔牙后出现肿胀和疼痛（主诉：拔牙之后肿疼）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "f30df9ed-086b-48fe-951f-61ea5f92040c",
+              "content": "拔牙后出现肿胀和疼痛（主诉：拔牙之后肿疼）",
+              "timestamp": 1771465579.254223,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者本次就诊最主要的不适是什么？",
+          "answer": "拔牙后肿胀疼痛。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "f30df9ed-086b-48fe-951f-61ea5f92040c"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "基本正常，只是反应大点，如有不适应该找原来的主诊医师复诊一下。",
+        "to_memory": [
+          "working: 拔牙后出现肿胀疼痛",
+          "history: 医生评估为基本正常但术后反应较大，建议如有不适回原主诊医师复诊"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "f30df9ed-086b-48fe-951f-61ea5f92040c",
+              "content": "拔牙后出现肿胀和疼痛（主诉：拔牙之后肿疼）",
+              "timestamp": 1771465579.254223,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "医生评估为基本正常但术后反应较大，建议如有不适回原主诊医师复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "医生对患者拔牙后肿痛的情况作出了怎样的总体评估，并建议后续如果出现不适应如何处理？",
+          "answer": "医生认为基本正常但术后反应较大；如有不适建议回原来的主诊医师复诊。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "27992ca3-49d2-4626-9fae-645c9881a724"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "医生评估为基本正常但术后反应较大，建议如有不适回原主诊医师复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "自然流产，医生您好，患者女，28岁，身体健康，2006年做过药流，之后复查正常，后来月经比以前少了，之前5天，现在两天多，后来吃中药调理过，没见什么效果，2009年7月份停经4天后阴道有少量出血，尿弱阳，血HCG380，子宫未见孕囊，，一周后，血HCG150，之后自然流产，12月份做过妇科检查，正常，1月份在次怀孕，出现和上次一样的情况，（上地医院看的）。",
+        "to_memory": [
+          "identity: 患者女，28岁，自述身体健康",
+          "history: 2006年曾行药物流产，术后复查正常；之后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+          "history: 2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+          "history: 2009年12月妇科检查正常",
+          "history: 2010年1月再次怀孕，出现与上次类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "559fe610-3f68-44e6-9590-ec70043aad28",
+              "content": "患者女，28岁，自述身体健康",
+              "timestamp": 1771465595.4821734,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "医生评估为基本正常但术后反应较大，建议如有不适回原主诊医师复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "3eebd1a8-4a7d-4266-975a-de870b442818",
+              "content": "2006年曾行药物流产，术后复查正常；此后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+              "timestamp": 1771465595.4821842,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f2752f18-5f87-4402-87f6-9ded9ceca7e8",
+              "content": "2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+              "timestamp": 1771465595.4821908,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+              "content": "2009年12月妇科检查正常",
+              "timestamp": 1771465595.482197,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "512a4604-684b-40d0-b1cb-887447d10536",
+              "content": "2010年1月再次怀孕，出现与2009年7月类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊）",
+              "timestamp": 1771465595.4822023,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "在这次关于流产与再次怀孕的咨询中，患者提到曾在某次妇科检查时得到的结论是什么？请说明该检查发生在何时，并写出当时的检查结果。",
+          "answer": "2009年12月做过妇科检查，结果正常。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+                "3eebd1a8-4a7d-4266-975a-de870b442818"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "女方空腹抽血检查生殖免疫5项、病毒4项，男方禁欲2——5天精液检查。",
+        "to_memory": [
+          "history: 医嘱：女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "559fe610-3f68-44e6-9590-ec70043aad28",
+              "content": "患者女，28岁，自述身体健康",
+              "timestamp": 1771465595.4821734,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "医生评估为基本正常但术后反应较大，建议如有不适回原主诊医师复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "3eebd1a8-4a7d-4266-975a-de870b442818",
+              "content": "2006年曾行药物流产，术后复查正常；此后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+              "timestamp": 1771465595.4821842,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f2752f18-5f87-4402-87f6-9ded9ceca7e8",
+              "content": "2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+              "timestamp": 1771465595.4821908,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+              "content": "2009年12月妇科检查正常",
+              "timestamp": 1771465595.482197,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "512a4604-684b-40d0-b1cb-887447d10536",
+              "content": "2010年1月再次怀孕，出现与2009年7月类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊）",
+              "timestamp": 1771465595.4822023,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "2f7c0022-abfd-4f46-84ce-2d83883b8f29",
+              "content": "医嘱：女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查",
+              "timestamp": 1771465601.6346726,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "医生你好，由于北京海淀妇幼专家号不好挂，我是否能先挂个普通的号，把检查的单子开了，拿着结果找专家看行吗，谢谢。",
+        "to_memory": [
+          "history: 患者询问因北京海淀妇幼专家号难挂，是否可先挂普通号开具检查单，拿到检查结果后再找专家就诊"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "559fe610-3f68-44e6-9590-ec70043aad28",
+              "content": "患者女，28岁，自述身体健康",
+              "timestamp": 1771465595.4821734,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "医生评估为基本正常但术后反应较大，建议如有不适回原主诊医师复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "3eebd1a8-4a7d-4266-975a-de870b442818",
+              "content": "2006年曾行药物流产，术后复查正常；此后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+              "timestamp": 1771465595.4821842,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f2752f18-5f87-4402-87f6-9ded9ceca7e8",
+              "content": "2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+              "timestamp": 1771465595.4821908,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+              "content": "2009年12月妇科检查正常",
+              "timestamp": 1771465595.482197,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "512a4604-684b-40d0-b1cb-887447d10536",
+              "content": "2010年1月再次怀孕，出现与2009年7月类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊）",
+              "timestamp": 1771465595.4822023,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "2f7c0022-abfd-4f46-84ce-2d83883b8f29",
+              "content": "医嘱：女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查",
+              "timestamp": 1771465601.6346726,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c315120f-c4c0-4324-8b5f-cf294a93e36f",
+              "content": "患者因北京海淀妇幼专家号难挂，咨询是否可先挂普通号开具检查单，待出检查结果后再找专家就诊",
+              "timestamp": 1771465604.9979517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者在去年年底做过一次妇科检查；这次检查的结果在当时记录为怎样？",
+          "answer": "正常",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "7b053cfa-d40c-4ae4-af31-97a373ca81ff"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "完全可以，结果出来后再咨询。",
+        "to_memory": [
+          "identity: 患者女，28岁",
+          "history: 2006年药物流产后复查正常；之后月经量减少（原5天，现2天多），曾服用中药调理无效；2009年7月停经4天后少量阴道出血，尿妊娠弱阳，血HCG 380，子宫未见孕囊；1周后血HCG降至150，后自然流产；2009年12月妇科检查正常；2010年1月再次怀孕出现类似情况；医生建议女方空腹抽血查生殖免疫5项、病毒4项，男方禁欲2–5天后做精液检查；医生表示可先挂普通号开检查单，出结果后再咨询"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "559fe610-3f68-44e6-9590-ec70043aad28",
+              "content": "患者女，28岁，自述身体健康",
+              "timestamp": 1771465595.4821734,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "医生评估为基本正常但术后反应较大，建议如有不适回原主诊医师复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "3eebd1a8-4a7d-4266-975a-de870b442818",
+              "content": "2006年曾行药物流产，术后复查正常；此后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+              "timestamp": 1771465595.4821842,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f2752f18-5f87-4402-87f6-9ded9ceca7e8",
+              "content": "2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+              "timestamp": 1771465595.4821908,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+              "content": "2009年12月妇科检查正常",
+              "timestamp": 1771465595.482197,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "512a4604-684b-40d0-b1cb-887447d10536",
+              "content": "2010年1月再次怀孕，出现与2009年7月类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊）",
+              "timestamp": 1771465595.4822023,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "2f7c0022-abfd-4f46-84ce-2d83883b8f29",
+              "content": "医嘱：女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查",
+              "timestamp": 1771465601.6346726,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c315120f-c4c0-4324-8b5f-cf294a93e36f",
+              "content": "患者因北京海淀妇幼专家号难挂，咨询是否可先挂普通号开具检查单，待出检查结果后再找专家就诊",
+              "timestamp": 1771465604.9979517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "32344f1a-f897-486f-ace5-8edb7fb208bd",
+              "content": "医生建议：可先挂普通号开具检查单，待检查结果出来后再咨询/就诊",
+              "timestamp": 1771465611.0862534,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "对话中医生提到检查结果总体情况并给出了一条与“何时需要复诊/去哪里复诊”相关的安全建议。请回忆：医生建议在出现哪种情况时应如何复诊？",
+          "answer": "医生评估基本正常但反应较大，建议如有不适应回原来的主诊医师复诊。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "27992ca3-49d2-4626-9fae-645c9881a724"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "559fe610-3f68-44e6-9590-ec70043aad28"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            5,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "陈大夫您好，我今天去医院了，医生说我两次流产，是生化妊娠，我想知道这能治好吗？谢谢。",
+        "to_memory": [
+          "history: 女，28岁；2006年曾药物流产，复查正常；之后月经量减少（由5天变为2天多），曾服用中药调理效果不明显",
+          "history: 2009年7月停经约4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，子宫未见孕囊；1周后血HCG降至150 IU/L，后自然流产",
+          "history: 2009年12月妇科检查正常；2010年1月再次怀孕，出现与上次类似情况，再次流产；医院告知两次流产为“生化妊娠”",
+          "history: 医嘱：女方空腹抽血查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查",
+          "working: 目前咨询问题：两次生化妊娠是否能治疗/如何治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "67d0fdb8-eabd-438a-bf7a-8c12e54ca3e9",
+              "content": "目前咨询问题：两次生化妊娠是否能治疗/如何治疗",
+              "timestamp": 1771465621.0789497,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "identity": [
+            {
+              "id": "559fe610-3f68-44e6-9590-ec70043aad28",
+              "content": "患者女，28岁，自述身体健康",
+              "timestamp": 1771465595.4821734,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "医生评估为基本正常但术后反应较大，建议如有不适回原主诊医师复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "3eebd1a8-4a7d-4266-975a-de870b442818",
+              "content": "2006年曾行药物流产，术后复查正常；此后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+              "timestamp": 1771465595.4821842,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f2752f18-5f87-4402-87f6-9ded9ceca7e8",
+              "content": "2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+              "timestamp": 1771465595.4821908,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+              "content": "2009年12月妇科检查正常",
+              "timestamp": 1771465595.482197,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "512a4604-684b-40d0-b1cb-887447d10536",
+              "content": "2010年1月再次怀孕，出现与2009年7月类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊），再次自然流产；医院告知两次流产为“生化妊娠”",
+              "timestamp": 1771465595.4822023,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "2f7c0022-abfd-4f46-84ce-2d83883b8f29",
+              "content": "医嘱：女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查",
+              "timestamp": 1771465601.6346726,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c315120f-c4c0-4324-8b5f-cf294a93e36f",
+              "content": "患者因北京海淀妇幼专家号难挂，咨询是否可先挂普通号开具检查单，待出检查结果后再找专家就诊",
+              "timestamp": 1771465604.9979517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "32344f1a-f897-486f-ace5-8edb7fb208bd",
+              "content": "医生建议：可先挂普通号开具检查单，待检查结果出来后再咨询/就诊",
+              "timestamp": 1771465611.0862534,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "生化妊娠是自然淘汰，不会影响下次怀孕。",
+        "to_memory": [
+          "history: 患者女性，28岁；2006年曾药物流产，复查正常；此后月经量减少（经期由约5天变为2天多），曾服用中药调理无效；2009年7月停经4天后阴道少量出血，尿妊娠试验弱阳，血HCG 380，子宫未见孕囊；1周后血HCG降至150，后自然流产；12月妇科检查正常；次年1月再次怀孕出现相似情况，医生认为两次为生化妊娠",
+          "history: 医生建议女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2-5天行精液检查",
+          "history: 医生说明生化妊娠属于自然淘汰，一般不会影响下次怀孕"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "67d0fdb8-eabd-438a-bf7a-8c12e54ca3e9",
+              "content": "目前咨询问题：两次生化妊娠是否能治疗/如何治疗",
+              "timestamp": 1771465621.0789497,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "identity": [
+            {
+              "id": "559fe610-3f68-44e6-9590-ec70043aad28",
+              "content": "患者女，28岁，自述身体健康",
+              "timestamp": 1771465595.4821734,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "医生评估为基本正常但术后反应较大，建议如有不适回原主诊医师复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "3eebd1a8-4a7d-4266-975a-de870b442818",
+              "content": "2006年曾行药物流产，术后复查正常；此后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+              "timestamp": 1771465595.4821842,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f2752f18-5f87-4402-87f6-9ded9ceca7e8",
+              "content": "2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+              "timestamp": 1771465595.4821908,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+              "content": "2009年12月妇科检查正常",
+              "timestamp": 1771465595.482197,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "512a4604-684b-40d0-b1cb-887447d10536",
+              "content": "2010年1月再次怀孕，出现与2009年7月类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊），再次自然流产；医院告知两次流产为“生化妊娠”",
+              "timestamp": 1771465595.4822023,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "2f7c0022-abfd-4f46-84ce-2d83883b8f29",
+              "content": "医嘱：女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查",
+              "timestamp": 1771465601.6346726,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c315120f-c4c0-4324-8b5f-cf294a93e36f",
+              "content": "患者因北京海淀妇幼专家号难挂，咨询是否可先挂普通号开具检查单，待出检查结果后再找专家就诊",
+              "timestamp": 1771465604.9979517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "32344f1a-f897-486f-ace5-8edb7fb208bd",
+              "content": "医生建议：可先挂普通号开具检查单，待检查结果出来后再咨询/就诊",
+              "timestamp": 1771465611.0862534,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2d582a14-87c5-4896-89b5-bb0a92e5652a",
+              "content": "医生说明：生化妊娠多为自然淘汰，一般不会影响下次怀孕",
+              "timestamp": 1771465627.7182508,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在这次咨询里，患者提出“能不能治好/如何处理”的具体对象是什么？请指出她关心的是哪一种先前被医生提到的情况。",
+          "answer": "患者询问两次生化妊娠是否能治好/如何治疗。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "7b053cfa-d40c-4ae4-af31-97a373ca81ff"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "67d0fdb8-eabd-438a-bf7a-8c12e54ca3e9"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            5,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "559fe610-3f68-44e6-9590-ec70043aad28",
+              "content": "患者女，28岁，自述身体健康",
+              "timestamp": 1771465595.4821734,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "医生评估为基本正常但术后反应较大，建议如有不适回原主诊医师复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "3eebd1a8-4a7d-4266-975a-de870b442818",
+              "content": "2006年曾行药物流产，术后复查正常；此后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+              "timestamp": 1771465595.4821842,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f2752f18-5f87-4402-87f6-9ded9ceca7e8",
+              "content": "2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+              "timestamp": 1771465595.4821908,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+              "content": "2009年12月妇科检查正常",
+              "timestamp": 1771465595.482197,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "512a4604-684b-40d0-b1cb-887447d10536",
+              "content": "2010年1月再次怀孕，出现与2009年7月类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊），再次自然流产；医院告知两次流产为“生化妊娠”",
+              "timestamp": 1771465595.4822023,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "2f7c0022-abfd-4f46-84ce-2d83883b8f29",
+              "content": "医嘱：女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查",
+              "timestamp": 1771465601.6346726,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c315120f-c4c0-4324-8b5f-cf294a93e36f",
+              "content": "患者因北京海淀妇幼专家号难挂，咨询是否可先挂普通号开具检查单，待出检查结果后再找专家就诊",
+              "timestamp": 1771465604.9979517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "32344f1a-f897-486f-ace5-8edb7fb208bd",
+              "content": "医生建议：可先挂普通号开具检查单，待检查结果出来后再咨询/就诊",
+              "timestamp": 1771465611.0862534,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2d582a14-87c5-4896-89b5-bb0a92e5652a",
+              "content": "医生说明：生化妊娠多为自然淘汰，一般不会影响下次怀孕",
+              "timestamp": 1771465627.7182508,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "白带异常，生完孩子上环之后有血丝出现而且白带增多没有不良反应。",
+        "to_memory": [
+          "identity: 患者女，28岁",
+          "history: 2006年行药物流产，复查正常；月经量减少（由约5天变为约2天多），曾中药调理效果不佳；2009年7月疑生化妊娠/早期流产：停经4天后少量阴道出血，尿妊娠试验弱阳，血HCG 380，子宫未见孕囊；1周后血HCG 150后自然流产；2012年12月妇科检查正常；次年1月再次出现类似情况，被医生评估为生化妊娠；曾被建议女方空腹抽血查生殖免疫5项、病毒4项，男方禁欲2-5天行精液检查",
+          "history: 既往拔牙后出现肿痛（医生评估基本正常，建议不适复诊）",
+          "working: 本次主诉白带异常；生产后上环后出现白带增多并伴血丝；自述无其他不良反应"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "2bd3e749-1a3c-4088-833a-bd531d47a824",
+              "content": "本次主诉白带异常：生产后上环后出现白带增多并伴血丝；自述无其他不良反应",
+              "timestamp": 1771465636.5946805,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "identity": [
+            {
+              "id": "559fe610-3f68-44e6-9590-ec70043aad28",
+              "content": "患者女，28岁，自述身体健康",
+              "timestamp": 1771465595.4821734,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "既往拔牙后出现肿痛，医生评估基本正常，建议不适复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "3eebd1a8-4a7d-4266-975a-de870b442818",
+              "content": "2006年曾行药物流产，术后复查正常；此后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+              "timestamp": 1771465595.4821842,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f2752f18-5f87-4402-87f6-9ded9ceca7e8",
+              "content": "2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+              "timestamp": 1771465595.4821908,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+              "content": "2012年12月妇科检查正常",
+              "timestamp": 1771465595.482197,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "512a4604-684b-40d0-b1cb-887447d10536",
+              "content": "2010年1月再次怀孕，出现与2009年7月类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊），再次自然流产；医院告知两次流产为“生化妊娠”",
+              "timestamp": 1771465595.4822023,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "2f7c0022-abfd-4f46-84ce-2d83883b8f29",
+              "content": "医嘱：女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查",
+              "timestamp": 1771465601.6346726,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c315120f-c4c0-4324-8b5f-cf294a93e36f",
+              "content": "患者因北京海淀妇幼专家号难挂，咨询是否可先挂普通号开具检查单，待出检查结果后再找专家就诊",
+              "timestamp": 1771465604.9979517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "32344f1a-f897-486f-ace5-8edb7fb208bd",
+              "content": "医生建议：可先挂普通号开具检查单，待检查结果出来后再咨询/就诊",
+              "timestamp": 1771465611.0862534,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2d582a14-87c5-4896-89b5-bb0a92e5652a",
+              "content": "医生说明：生化妊娠多为自然淘汰，一般不会影响下次怀孕",
+              "timestamp": 1771465627.7182508,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在本次咨询里提到的妇科相关主要不适，是否与她近期接受过的某项生殖健康相关操作存在需要安全排查的关联？请指出该操作以及她描述的具体不适表现。",
+          "answer": "有关联：产后上环后出现白带增多并伴血丝；自述无其他不良反应。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "559fe610-3f68-44e6-9590-ec70043aad28"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "2bd3e749-1a3c-4088-833a-bd531d47a824"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            7,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可能和上环有关，建议到医院就诊。",
+        "to_memory": [
+          "identity: 患者女，28岁（既往就诊信息）",
+          "history: 2006年曾药物流产，术后复查正常",
+          "history: 月经量较以往减少（由约5天变为2天多），曾服用中药调理但效果不明显",
+          "history: 2009年7月停经后少量阴道出血；尿妊娠试验弱阳；血HCG 380，子宫未见孕囊；1周后血HCG降至150，随后自然流产（生化妊娠）",
+          "history: 12月妇科检查正常",
+          "history: 次年1月再次妊娠，出现与上次类似情况；医生判断两次为生化妊娠",
+          "history: 医生建议女方空腹抽血查生殖免疫5项、病毒4项；男方禁欲2–5天做精液检查",
+          "history: 医生意见：生化妊娠为自然淘汰，一般不影响下次怀孕",
+          "working: 本次主诉白带异常：产后上环后出现血丝及白带增多，无明显不良反应",
+          "working: 医生意见：可能与上环有关，建议到医院就诊"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "2bd3e749-1a3c-4088-833a-bd531d47a824",
+              "content": "本次主诉白带异常：生产后上环后出现白带增多并伴血丝；自述无其他不良反应",
+              "timestamp": 1771465636.5946805,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "caea8e6a-adc4-47db-afa5-01cf1472dcff",
+              "content": "医生意见：白带增多伴血丝可能与上环有关，建议到医院就诊。",
+              "timestamp": 1771465645.9465923,
+              "metadata": {
+                "turn_idx": 11
+              },
+              "turn_idx": 11
+            }
+          ],
+          "identity": [
+            {
+              "id": "559fe610-3f68-44e6-9590-ec70043aad28",
+              "content": "患者女，28岁，自述身体健康",
+              "timestamp": 1771465595.4821734,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "既往拔牙后出现肿痛，医生评估基本正常，建议不适复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "3eebd1a8-4a7d-4266-975a-de870b442818",
+              "content": "2006年曾行药物流产，术后复查正常；此后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+              "timestamp": 1771465595.4821842,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f2752f18-5f87-4402-87f6-9ded9ceca7e8",
+              "content": "2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+              "timestamp": 1771465595.4821908,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+              "content": "2012年12月妇科检查正常",
+              "timestamp": 1771465595.482197,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "512a4604-684b-40d0-b1cb-887447d10536",
+              "content": "2010年1月再次怀孕，出现与2009年7月类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊），再次自然流产；医院告知两次流产为“生化妊娠”",
+              "timestamp": 1771465595.4822023,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "2f7c0022-abfd-4f46-84ce-2d83883b8f29",
+              "content": "医嘱：女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查",
+              "timestamp": 1771465601.6346726,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c315120f-c4c0-4324-8b5f-cf294a93e36f",
+              "content": "患者因北京海淀妇幼专家号难挂，咨询是否可先挂普通号开具检查单，待出检查结果后再找专家就诊",
+              "timestamp": 1771465604.9979517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "32344f1a-f897-486f-ace5-8edb7fb208bd",
+              "content": "医生建议：可先挂普通号开具检查单，待检查结果出来后再咨询/就诊",
+              "timestamp": 1771465611.0862534,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2d582a14-87c5-4896-89b5-bb0a92e5652a",
+              "content": "医生说明：生化妊娠多为自然淘汰，一般不会影响下次怀孕",
+              "timestamp": 1771465627.7182508,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "医生认为患者产后上环后出现白带异常并带血丝的情况，可能与什么因素有关？",
+          "answer": "可能和上环有关。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "caea8e6a-adc4-47db-afa5-01cf1472dcff"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "559fe610-3f68-44e6-9590-ec70043aad28",
+              "content": "患者女，28岁，自述身体健康",
+              "timestamp": 1771465595.4821734,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "既往拔牙后出现肿痛，医生评估基本正常，建议不适复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "3eebd1a8-4a7d-4266-975a-de870b442818",
+              "content": "2006年曾行药物流产，术后复查正常；此后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+              "timestamp": 1771465595.4821842,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f2752f18-5f87-4402-87f6-9ded9ceca7e8",
+              "content": "2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+              "timestamp": 1771465595.4821908,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+              "content": "2012年12月妇科检查正常",
+              "timestamp": 1771465595.482197,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "512a4604-684b-40d0-b1cb-887447d10536",
+              "content": "2010年1月再次怀孕，出现与2009年7月类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊），再次自然流产；医院告知两次流产为“生化妊娠”",
+              "timestamp": 1771465595.4822023,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "2f7c0022-abfd-4f46-84ce-2d83883b8f29",
+              "content": "医嘱：女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查",
+              "timestamp": 1771465601.6346726,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c315120f-c4c0-4324-8b5f-cf294a93e36f",
+              "content": "患者因北京海淀妇幼专家号难挂，咨询是否可先挂普通号开具检查单，待出检查结果后再找专家就诊",
+              "timestamp": 1771465604.9979517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "32344f1a-f897-486f-ace5-8edb7fb208bd",
+              "content": "医生建议：可先挂普通号开具检查单，待检查结果出来后再咨询/就诊",
+              "timestamp": 1771465611.0862534,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2d582a14-87c5-4896-89b5-bb0a92e5652a",
+              "content": "医生说明：生化妊娠多为自然淘汰，一般不会影响下次怀孕",
+              "timestamp": 1771465627.7182508,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "右室双出口房缺室缺二尖瓣骑跨，宝宝出生时检查出还有先心，当地医院只检查出房缺和室缺，五个月时患过肺炎，后检查出右室双出口，二尖瓣骑跨，肺动脉高压，室缺远离大动脉。",
+        "to_memory": [
+          "history: 宝宝（婴儿）先天性心脏病：右室双出口（DORV）、房间隔缺损（房缺/ASD）、室间隔缺损（室缺/VSD）、二尖瓣骑跨；伴肺动脉高压；室缺远离大动脉（解剖特点）",
+          "history: 出生时当地医院仅检出房缺和室缺，后复查进一步明确右室双出口、二尖瓣骑跨及肺动脉高压",
+          "history: 5个月时患过肺炎"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "559fe610-3f68-44e6-9590-ec70043aad28",
+              "content": "患者女，28岁，自述身体健康",
+              "timestamp": 1771465595.4821734,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "既往拔牙后出现肿痛，医生评估基本正常，建议不适复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "3eebd1a8-4a7d-4266-975a-de870b442818",
+              "content": "2006年曾行药物流产，术后复查正常；此后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+              "timestamp": 1771465595.4821842,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f2752f18-5f87-4402-87f6-9ded9ceca7e8",
+              "content": "2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+              "timestamp": 1771465595.4821908,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+              "content": "2012年12月妇科检查正常",
+              "timestamp": 1771465595.482197,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "512a4604-684b-40d0-b1cb-887447d10536",
+              "content": "2010年1月再次怀孕，出现与2009年7月类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊），再次自然流产；医院告知两次流产为“生化妊娠”",
+              "timestamp": 1771465595.4822023,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "2f7c0022-abfd-4f46-84ce-2d83883b8f29",
+              "content": "医嘱：女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查",
+              "timestamp": 1771465601.6346726,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c315120f-c4c0-4324-8b5f-cf294a93e36f",
+              "content": "患者因北京海淀妇幼专家号难挂，咨询是否可先挂普通号开具检查单，待出检查结果后再找专家就诊",
+              "timestamp": 1771465604.9979517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "32344f1a-f897-486f-ace5-8edb7fb208bd",
+              "content": "医生建议：可先挂普通号开具检查单，待检查结果出来后再咨询/就诊",
+              "timestamp": 1771465611.0862534,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2d582a14-87c5-4896-89b5-bb0a92e5652a",
+              "content": "医生说明：生化妊娠多为自然淘汰，一般不会影响下次怀孕",
+              "timestamp": 1771465627.7182508,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "8f38becc-5166-43b1-9e2e-3b696baa26a0",
+              "content": "宝宝（婴儿）先天性心脏病：右室双出口（DORV）、房间隔缺损（ASD）、室间隔缺损（VSD）、二尖瓣骑跨；伴肺动脉高压；解剖特点为室缺远离大动脉",
+              "timestamp": 1771465657.9631932,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "18d0184f-0f4f-415e-b662-f6d5c3d072db",
+              "content": "出生时当地医院仅检出房缺和室缺，后复查进一步明确右室双出口、二尖瓣骑跨及肺动脉高压",
+              "timestamp": 1771465657.963204,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "59a4bdfc-61e4-436f-814c-eaf43ad63c6c",
+              "content": "宝宝5个月时患过肺炎",
+              "timestamp": 1771465657.963209,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者在既往病史中曾被医院告知两次流产属于哪一种妊娠类型？",
+          "answer": "生化妊娠",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "512a4604-684b-40d0-b1cb-887447d10536"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            10
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "很有可能要分三次手术的，而且以后的手术为单心室的Fontan术.",
+        "to_memory": [
+          "history: 医生评估患儿先心复杂畸形很可能需要分三次手术治疗，后续手术方案为单心室方向的Fontan术"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "559fe610-3f68-44e6-9590-ec70043aad28",
+              "content": "患者女，28岁，自述身体健康",
+              "timestamp": 1771465595.4821734,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "既往拔牙后出现肿痛，医生评估基本正常，建议不适复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "3eebd1a8-4a7d-4266-975a-de870b442818",
+              "content": "2006年曾行药物流产，术后复查正常；此后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+              "timestamp": 1771465595.4821842,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f2752f18-5f87-4402-87f6-9ded9ceca7e8",
+              "content": "2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+              "timestamp": 1771465595.4821908,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+              "content": "2012年12月妇科检查正常",
+              "timestamp": 1771465595.482197,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "512a4604-684b-40d0-b1cb-887447d10536",
+              "content": "2010年1月再次怀孕，出现与2009年7月类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊），再次自然流产；医院告知两次流产为“生化妊娠”",
+              "timestamp": 1771465595.4822023,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "2f7c0022-abfd-4f46-84ce-2d83883b8f29",
+              "content": "医嘱：女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查",
+              "timestamp": 1771465601.6346726,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c315120f-c4c0-4324-8b5f-cf294a93e36f",
+              "content": "患者因北京海淀妇幼专家号难挂，咨询是否可先挂普通号开具检查单，待出检查结果后再找专家就诊",
+              "timestamp": 1771465604.9979517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "32344f1a-f897-486f-ace5-8edb7fb208bd",
+              "content": "医生建议：可先挂普通号开具检查单，待检查结果出来后再咨询/就诊",
+              "timestamp": 1771465611.0862534,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2d582a14-87c5-4896-89b5-bb0a92e5652a",
+              "content": "医生说明：生化妊娠多为自然淘汰，一般不会影响下次怀孕",
+              "timestamp": 1771465627.7182508,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "8f38becc-5166-43b1-9e2e-3b696baa26a0",
+              "content": "宝宝（婴儿）先天性心脏病：右室双出口（DORV）、房间隔缺损（ASD）、室间隔缺损（VSD）、二尖瓣骑跨；伴肺动脉高压；解剖特点为室缺远离大动脉",
+              "timestamp": 1771465657.9631932,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "18d0184f-0f4f-415e-b662-f6d5c3d072db",
+              "content": "出生时当地医院仅检出房缺和室缺，后复查进一步明确右室双出口、二尖瓣骑跨及肺动脉高压",
+              "timestamp": 1771465657.963204,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "59a4bdfc-61e4-436f-814c-eaf43ad63c6c",
+              "content": "宝宝5个月时患过肺炎",
+              "timestamp": 1771465657.963209,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "47313acd-54b1-4feb-89c9-20876190e426",
+              "content": "医生评估患儿先心复杂畸形很可能需要分三次手术治疗；后续手术方案为单心室方向的Fontan术",
+              "timestamp": 1771465663.674588,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者曾被医院告知其两次流产在临床上属于哪一种情况？",
+          "answer": "生化妊娠",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "512a4604-684b-40d0-b1cb-887447d10536"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            11
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "559fe610-3f68-44e6-9590-ec70043aad28",
+              "content": "患者女，28岁，自述身体健康",
+              "timestamp": 1771465595.4821734,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "既往拔牙后出现肿痛，医生评估基本正常，建议不适复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "3eebd1a8-4a7d-4266-975a-de870b442818",
+              "content": "2006年曾行药物流产，术后复查正常；此后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+              "timestamp": 1771465595.4821842,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f2752f18-5f87-4402-87f6-9ded9ceca7e8",
+              "content": "2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+              "timestamp": 1771465595.4821908,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+              "content": "2012年12月妇科检查正常",
+              "timestamp": 1771465595.482197,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "512a4604-684b-40d0-b1cb-887447d10536",
+              "content": "2010年1月再次怀孕，出现与2009年7月类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊），再次自然流产；医院告知两次流产为“生化妊娠”",
+              "timestamp": 1771465595.4822023,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "2f7c0022-abfd-4f46-84ce-2d83883b8f29",
+              "content": "医嘱：女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查",
+              "timestamp": 1771465601.6346726,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c315120f-c4c0-4324-8b5f-cf294a93e36f",
+              "content": "患者因北京海淀妇幼专家号难挂，咨询是否可先挂普通号开具检查单，待出检查结果后再找专家就诊",
+              "timestamp": 1771465604.9979517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "32344f1a-f897-486f-ace5-8edb7fb208bd",
+              "content": "医生建议：可先挂普通号开具检查单，待检查结果出来后再咨询/就诊",
+              "timestamp": 1771465611.0862534,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2d582a14-87c5-4896-89b5-bb0a92e5652a",
+              "content": "医生说明：生化妊娠多为自然淘汰，一般不会影响下次怀孕",
+              "timestamp": 1771465627.7182508,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "8f38becc-5166-43b1-9e2e-3b696baa26a0",
+              "content": "宝宝（婴儿）先天性心脏病：右室双出口（DORV）、房间隔缺损（ASD）、室间隔缺损（VSD）、二尖瓣骑跨；伴肺动脉高压；解剖特点为室缺远离大动脉",
+              "timestamp": 1771465657.9631932,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "18d0184f-0f4f-415e-b662-f6d5c3d072db",
+              "content": "出生时当地医院仅检出房缺和室缺，后复查进一步明确右室双出口、二尖瓣骑跨及肺动脉高压",
+              "timestamp": 1771465657.963204,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "59a4bdfc-61e4-436f-814c-eaf43ad63c6c",
+              "content": "宝宝5个月时患过肺炎",
+              "timestamp": 1771465657.963209,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "47313acd-54b1-4feb-89c9-20876190e426",
+              "content": "医生评估患儿先心复杂畸形很可能需要分三次手术治疗；后续手术方案为单心室方向的Fontan术",
+              "timestamp": 1771465663.674588,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "耳膜穿孔，在株洲的医院检查过，说是要做耳膜修复。",
+        "to_memory": [
+          "history: 曾在株洲医院检查提示耳膜穿孔，医生称需行耳膜修复手术"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "559fe610-3f68-44e6-9590-ec70043aad28",
+              "content": "患者女，28岁，自述身体健康",
+              "timestamp": 1771465595.4821734,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "既往拔牙后出现肿痛，医生评估基本正常，建议不适复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "3eebd1a8-4a7d-4266-975a-de870b442818",
+              "content": "2006年曾行药物流产，术后复查正常；此后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+              "timestamp": 1771465595.4821842,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f2752f18-5f87-4402-87f6-9ded9ceca7e8",
+              "content": "2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+              "timestamp": 1771465595.4821908,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+              "content": "2012年12月妇科检查正常",
+              "timestamp": 1771465595.482197,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "512a4604-684b-40d0-b1cb-887447d10536",
+              "content": "2010年1月再次怀孕，出现与2009年7月类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊），再次自然流产；医院告知两次流产为“生化妊娠”",
+              "timestamp": 1771465595.4822023,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "2f7c0022-abfd-4f46-84ce-2d83883b8f29",
+              "content": "医嘱：女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查",
+              "timestamp": 1771465601.6346726,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c315120f-c4c0-4324-8b5f-cf294a93e36f",
+              "content": "患者因北京海淀妇幼专家号难挂，咨询是否可先挂普通号开具检查单，待出检查结果后再找专家就诊",
+              "timestamp": 1771465604.9979517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "32344f1a-f897-486f-ace5-8edb7fb208bd",
+              "content": "医生建议：可先挂普通号开具检查单，待检查结果出来后再咨询/就诊",
+              "timestamp": 1771465611.0862534,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2d582a14-87c5-4896-89b5-bb0a92e5652a",
+              "content": "医生说明：生化妊娠多为自然淘汰，一般不会影响下次怀孕",
+              "timestamp": 1771465627.7182508,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "8f38becc-5166-43b1-9e2e-3b696baa26a0",
+              "content": "宝宝（婴儿）先天性心脏病：右室双出口（DORV）、房间隔缺损（ASD）、室间隔缺损（VSD）、二尖瓣骑跨；伴肺动脉高压；解剖特点为室缺远离大动脉",
+              "timestamp": 1771465657.9631932,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "18d0184f-0f4f-415e-b662-f6d5c3d072db",
+              "content": "出生时当地医院仅检出房缺和室缺，后复查进一步明确右室双出口、二尖瓣骑跨及肺动脉高压",
+              "timestamp": 1771465657.963204,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "59a4bdfc-61e4-436f-814c-eaf43ad63c6c",
+              "content": "宝宝5个月时患过肺炎",
+              "timestamp": 1771465657.963209,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "47313acd-54b1-4feb-89c9-20876190e426",
+              "content": "医生评估患儿先心复杂畸形很可能需要分三次手术治疗；后续手术方案为单心室方向的Fontan术",
+              "timestamp": 1771465663.674588,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "e3a0eab3-b6ab-43cb-866f-42ac4c800882",
+              "content": "既往在株洲医院检查提示耳膜穿孔，医生称需行耳膜修复手术",
+              "timestamp": 1771465667.2614777,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "不流脓半年就可以手术，手术前要评估通过手术能否提高听力。比如做贴补实验等。",
+        "to_memory": [
+          "history: 耳膜穿孔，株洲医院检查提示需行耳膜修复手术",
+          "history: 医生建议耳部不流脓满半年可考虑手术；术前需评估手术能否提高听力（如贴补实验等）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "559fe610-3f68-44e6-9590-ec70043aad28",
+              "content": "患者女，28岁，自述身体健康",
+              "timestamp": 1771465595.4821734,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "既往拔牙后出现肿痛，医生评估基本正常，建议不适复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "3eebd1a8-4a7d-4266-975a-de870b442818",
+              "content": "2006年曾行药物流产，术后复查正常；此后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+              "timestamp": 1771465595.4821842,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f2752f18-5f87-4402-87f6-9ded9ceca7e8",
+              "content": "2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+              "timestamp": 1771465595.4821908,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+              "content": "2012年12月妇科检查正常",
+              "timestamp": 1771465595.482197,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "512a4604-684b-40d0-b1cb-887447d10536",
+              "content": "2010年1月再次怀孕，出现与2009年7月类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊），再次自然流产；医院告知两次流产为“生化妊娠”",
+              "timestamp": 1771465595.4822023,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "2f7c0022-abfd-4f46-84ce-2d83883b8f29",
+              "content": "医嘱：女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查",
+              "timestamp": 1771465601.6346726,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c315120f-c4c0-4324-8b5f-cf294a93e36f",
+              "content": "患者因北京海淀妇幼专家号难挂，咨询是否可先挂普通号开具检查单，待出检查结果后再找专家就诊",
+              "timestamp": 1771465604.9979517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "32344f1a-f897-486f-ace5-8edb7fb208bd",
+              "content": "医生建议：可先挂普通号开具检查单，待检查结果出来后再咨询/就诊",
+              "timestamp": 1771465611.0862534,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2d582a14-87c5-4896-89b5-bb0a92e5652a",
+              "content": "医生说明：生化妊娠多为自然淘汰，一般不会影响下次怀孕",
+              "timestamp": 1771465627.7182508,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "8f38becc-5166-43b1-9e2e-3b696baa26a0",
+              "content": "宝宝（婴儿）先天性心脏病：右室双出口（DORV）、房间隔缺损（ASD）、室间隔缺损（VSD）、二尖瓣骑跨；伴肺动脉高压；解剖特点为室缺远离大动脉",
+              "timestamp": 1771465657.9631932,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "18d0184f-0f4f-415e-b662-f6d5c3d072db",
+              "content": "出生时当地医院仅检出房缺和室缺，后复查进一步明确右室双出口、二尖瓣骑跨及肺动脉高压",
+              "timestamp": 1771465657.963204,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "59a4bdfc-61e4-436f-814c-eaf43ad63c6c",
+              "content": "宝宝5个月时患过肺炎",
+              "timestamp": 1771465657.963209,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "47313acd-54b1-4feb-89c9-20876190e426",
+              "content": "医生评估患儿先心复杂畸形很可能需要分三次手术治疗；后续手术方案为单心室方向的Fontan术",
+              "timestamp": 1771465663.674588,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "e3a0eab3-b6ab-43cb-866f-42ac4c800882",
+              "content": "既往在株洲医院检查提示耳膜穿孔，需行耳膜修复手术；医生建议耳部不流脓满半年可考虑手术；术前需评估手术能否提高听力（如贴补实验等）。",
+              "timestamp": 1771465667.2614777,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "在既往医嘱中，女方需要做哪些抽血检查项目？（请按医嘱所列项目名称回答）",
+          "answer": "女方空腹抽血检查生殖免疫5项、病毒4项。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "2f7c0022-abfd-4f46-84ce-2d83883b8f29"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            13
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "559fe610-3f68-44e6-9590-ec70043aad28",
+              "content": "患者女，28岁，自述身体健康",
+              "timestamp": 1771465595.4821734,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "既往拔牙后出现肿痛，医生评估基本正常，建议不适复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "3eebd1a8-4a7d-4266-975a-de870b442818",
+              "content": "2006年曾行药物流产，术后复查正常；此后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+              "timestamp": 1771465595.4821842,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f2752f18-5f87-4402-87f6-9ded9ceca7e8",
+              "content": "2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+              "timestamp": 1771465595.4821908,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+              "content": "2012年12月妇科检查正常",
+              "timestamp": 1771465595.482197,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "512a4604-684b-40d0-b1cb-887447d10536",
+              "content": "2010年1月再次怀孕，出现与2009年7月类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊），再次自然流产；医院告知两次流产为“生化妊娠”",
+              "timestamp": 1771465595.4822023,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "2f7c0022-abfd-4f46-84ce-2d83883b8f29",
+              "content": "医嘱：女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查",
+              "timestamp": 1771465601.6346726,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c315120f-c4c0-4324-8b5f-cf294a93e36f",
+              "content": "患者因北京海淀妇幼专家号难挂，咨询是否可先挂普通号开具检查单，待出检查结果后再找专家就诊",
+              "timestamp": 1771465604.9979517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "32344f1a-f897-486f-ace5-8edb7fb208bd",
+              "content": "医生建议：可先挂普通号开具检查单，待检查结果出来后再咨询/就诊",
+              "timestamp": 1771465611.0862534,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2d582a14-87c5-4896-89b5-bb0a92e5652a",
+              "content": "医生说明：生化妊娠多为自然淘汰，一般不会影响下次怀孕",
+              "timestamp": 1771465627.7182508,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "8f38becc-5166-43b1-9e2e-3b696baa26a0",
+              "content": "宝宝（婴儿）先天性心脏病：右室双出口（DORV）、房间隔缺损（ASD）、室间隔缺损（VSD）、二尖瓣骑跨；伴肺动脉高压；解剖特点为室缺远离大动脉",
+              "timestamp": 1771465657.9631932,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "18d0184f-0f4f-415e-b662-f6d5c3d072db",
+              "content": "出生时当地医院仅检出房缺和室缺，后复查进一步明确右室双出口、二尖瓣骑跨及肺动脉高压",
+              "timestamp": 1771465657.963204,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "59a4bdfc-61e4-436f-814c-eaf43ad63c6c",
+              "content": "宝宝5个月时患过肺炎",
+              "timestamp": 1771465657.963209,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "47313acd-54b1-4feb-89c9-20876190e426",
+              "content": "医生评估患儿先心复杂畸形很可能需要分三次手术治疗；后续手术方案为单心室方向的Fontan术",
+              "timestamp": 1771465663.674588,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "e3a0eab3-b6ab-43cb-866f-42ac4c800882",
+              "content": "既往在株洲医院检查提示耳膜穿孔，需行耳膜修复手术；医生建议耳部不流脓满半年可考虑手术；术前需评估手术能否提高听力（如贴补实验等）。",
+              "timestamp": 1771465667.2614777,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "烫伤，25号被摩托车排气管烫伤小腿暂时没去医院治疗而且起了很大的水泡。",
+        "to_memory": [
+          "working: 2026-02-25小腿被摩托车排气管烫伤，未去医院治疗，局部出现很大的水泡（疑似烧伤起疱）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "42f8a6c7-18ac-410d-ac9f-bcfe3c428f05",
+              "content": "2026-02-25小腿被摩托车排气管烫伤，未去医院治疗，局部出现很大的水泡（疑似烧伤起疱）",
+              "timestamp": 1771465676.4378123,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "identity": [
+            {
+              "id": "559fe610-3f68-44e6-9590-ec70043aad28",
+              "content": "患者女，28岁，自述身体健康",
+              "timestamp": 1771465595.4821734,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "既往拔牙后出现肿痛，医生评估基本正常，建议不适复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "3eebd1a8-4a7d-4266-975a-de870b442818",
+              "content": "2006年曾行药物流产，术后复查正常；此后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+              "timestamp": 1771465595.4821842,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f2752f18-5f87-4402-87f6-9ded9ceca7e8",
+              "content": "2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+              "timestamp": 1771465595.4821908,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+              "content": "2012年12月妇科检查正常",
+              "timestamp": 1771465595.482197,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "512a4604-684b-40d0-b1cb-887447d10536",
+              "content": "2010年1月再次怀孕，出现与2009年7月类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊），再次自然流产；医院告知两次流产为“生化妊娠”",
+              "timestamp": 1771465595.4822023,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "2f7c0022-abfd-4f46-84ce-2d83883b8f29",
+              "content": "医嘱：女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查",
+              "timestamp": 1771465601.6346726,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c315120f-c4c0-4324-8b5f-cf294a93e36f",
+              "content": "患者因北京海淀妇幼专家号难挂，咨询是否可先挂普通号开具检查单，待出检查结果后再找专家就诊",
+              "timestamp": 1771465604.9979517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "32344f1a-f897-486f-ace5-8edb7fb208bd",
+              "content": "医生建议：可先挂普通号开具检查单，待检查结果出来后再咨询/就诊",
+              "timestamp": 1771465611.0862534,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2d582a14-87c5-4896-89b5-bb0a92e5652a",
+              "content": "医生说明：生化妊娠多为自然淘汰，一般不会影响下次怀孕",
+              "timestamp": 1771465627.7182508,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "8f38becc-5166-43b1-9e2e-3b696baa26a0",
+              "content": "宝宝（婴儿）先天性心脏病：右室双出口（DORV）、房间隔缺损（ASD）、室间隔缺损（VSD）、二尖瓣骑跨；伴肺动脉高压；解剖特点为室缺远离大动脉",
+              "timestamp": 1771465657.9631932,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "18d0184f-0f4f-415e-b662-f6d5c3d072db",
+              "content": "出生时当地医院仅检出房缺和室缺，后复查进一步明确右室双出口、二尖瓣骑跨及肺动脉高压",
+              "timestamp": 1771465657.963204,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "59a4bdfc-61e4-436f-814c-eaf43ad63c6c",
+              "content": "宝宝5个月时患过肺炎",
+              "timestamp": 1771465657.963209,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "47313acd-54b1-4feb-89c9-20876190e426",
+              "content": "医生评估患儿先心复杂畸形很可能需要分三次手术治疗；后续手术方案为单心室方向的Fontan术",
+              "timestamp": 1771465663.674588,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "e3a0eab3-b6ab-43cb-866f-42ac4c800882",
+              "content": "既往在株洲医院检查提示耳膜穿孔，需行耳膜修复手术；医生建议耳部不流脓满半年可考虑手术；术前需评估手术能否提高听力（如贴补实验等）。",
+              "timestamp": 1771465667.2614777,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者描述这次下肢受伤是在几号发生的？",
+          "answer": "25号",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "42f8a6c7-18ac-410d-ac9f-bcfe3c428f05"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "去医院，创面消毒后去除水泡，用无菌敷料包扎。",
+        "to_memory": [
+          "history: 2026-01-25（约）小腿被摩托车排气管烫伤，起较大水泡；医生建议去医院处理：创面消毒后去除水泡，无菌敷料包扎。"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "42f8a6c7-18ac-410d-ac9f-bcfe3c428f05",
+              "content": "2026-01-25（约）小腿被摩托车排气管烫伤，起较大水泡；当时未去医院处理。医生建议：到医院创面消毒后去除水泡，无菌敷料包扎。",
+              "timestamp": 1771465676.4378123,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "identity": [
+            {
+              "id": "559fe610-3f68-44e6-9590-ec70043aad28",
+              "content": "患者女，28岁，自述身体健康",
+              "timestamp": 1771465595.4821734,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "既往拔牙后出现肿痛，医生评估基本正常，建议不适复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "3eebd1a8-4a7d-4266-975a-de870b442818",
+              "content": "2006年曾行药物流产，术后复查正常；此后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+              "timestamp": 1771465595.4821842,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f2752f18-5f87-4402-87f6-9ded9ceca7e8",
+              "content": "2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+              "timestamp": 1771465595.4821908,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+              "content": "2012年12月妇科检查正常",
+              "timestamp": 1771465595.482197,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "512a4604-684b-40d0-b1cb-887447d10536",
+              "content": "2010年1月再次怀孕，出现与2009年7月类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊），再次自然流产；医院告知两次流产为“生化妊娠”",
+              "timestamp": 1771465595.4822023,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "2f7c0022-abfd-4f46-84ce-2d83883b8f29",
+              "content": "医嘱：女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查",
+              "timestamp": 1771465601.6346726,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c315120f-c4c0-4324-8b5f-cf294a93e36f",
+              "content": "患者因北京海淀妇幼专家号难挂，咨询是否可先挂普通号开具检查单，待出检查结果后再找专家就诊",
+              "timestamp": 1771465604.9979517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "32344f1a-f897-486f-ace5-8edb7fb208bd",
+              "content": "医生建议：可先挂普通号开具检查单，待检查结果出来后再咨询/就诊",
+              "timestamp": 1771465611.0862534,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2d582a14-87c5-4896-89b5-bb0a92e5652a",
+              "content": "医生说明：生化妊娠多为自然淘汰，一般不会影响下次怀孕",
+              "timestamp": 1771465627.7182508,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "8f38becc-5166-43b1-9e2e-3b696baa26a0",
+              "content": "宝宝（婴儿）先天性心脏病：右室双出口（DORV）、房间隔缺损（ASD）、室间隔缺损（VSD）、二尖瓣骑跨；伴肺动脉高压；解剖特点为室缺远离大动脉",
+              "timestamp": 1771465657.9631932,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "18d0184f-0f4f-415e-b662-f6d5c3d072db",
+              "content": "出生时当地医院仅检出房缺和室缺，后复查进一步明确右室双出口、二尖瓣骑跨及肺动脉高压",
+              "timestamp": 1771465657.963204,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "59a4bdfc-61e4-436f-814c-eaf43ad63c6c",
+              "content": "宝宝5个月时患过肺炎",
+              "timestamp": 1771465657.963209,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "47313acd-54b1-4feb-89c9-20876190e426",
+              "content": "医生评估患儿先心复杂畸形很可能需要分三次手术治疗；后续手术方案为单心室方向的Fontan术",
+              "timestamp": 1771465663.674588,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "e3a0eab3-b6ab-43cb-866f-42ac4c800882",
+              "content": "既往在株洲医院检查提示耳膜穿孔，需行耳膜修复手术；医生建议耳部不流脓满半年可考虑手术；术前需评估手术能否提高听力（如贴补实验等）。",
+              "timestamp": 1771465667.2614777,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "559fe610-3f68-44e6-9590-ec70043aad28",
+              "content": "患者女，28岁，自述身体健康",
+              "timestamp": 1771465595.4821734,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "既往拔牙后出现肿痛，医生评估基本正常，建议不适复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "3eebd1a8-4a7d-4266-975a-de870b442818",
+              "content": "2006年曾行药物流产，术后复查正常；此后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+              "timestamp": 1771465595.4821842,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f2752f18-5f87-4402-87f6-9ded9ceca7e8",
+              "content": "2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+              "timestamp": 1771465595.4821908,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+              "content": "2012年12月妇科检查正常",
+              "timestamp": 1771465595.482197,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "512a4604-684b-40d0-b1cb-887447d10536",
+              "content": "2010年1月再次怀孕，出现与2009年7月类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊），再次自然流产；医院告知两次流产为“生化妊娠”",
+              "timestamp": 1771465595.4822023,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "2f7c0022-abfd-4f46-84ce-2d83883b8f29",
+              "content": "医嘱：女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查",
+              "timestamp": 1771465601.6346726,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c315120f-c4c0-4324-8b5f-cf294a93e36f",
+              "content": "患者因北京海淀妇幼专家号难挂，咨询是否可先挂普通号开具检查单，待出检查结果后再找专家就诊",
+              "timestamp": 1771465604.9979517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "32344f1a-f897-486f-ace5-8edb7fb208bd",
+              "content": "医生建议：可先挂普通号开具检查单，待检查结果出来后再咨询/就诊",
+              "timestamp": 1771465611.0862534,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2d582a14-87c5-4896-89b5-bb0a92e5652a",
+              "content": "医生说明：生化妊娠多为自然淘汰，一般不会影响下次怀孕",
+              "timestamp": 1771465627.7182508,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "8f38becc-5166-43b1-9e2e-3b696baa26a0",
+              "content": "宝宝（婴儿）先天性心脏病：右室双出口（DORV）、房间隔缺损（ASD）、室间隔缺损（VSD）、二尖瓣骑跨；伴肺动脉高压；解剖特点为室缺远离大动脉",
+              "timestamp": 1771465657.9631932,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "18d0184f-0f4f-415e-b662-f6d5c3d072db",
+              "content": "出生时当地医院仅检出房缺和室缺，后复查进一步明确右室双出口、二尖瓣骑跨及肺动脉高压",
+              "timestamp": 1771465657.963204,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "59a4bdfc-61e4-436f-814c-eaf43ad63c6c",
+              "content": "宝宝5个月时患过肺炎",
+              "timestamp": 1771465657.963209,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "47313acd-54b1-4feb-89c9-20876190e426",
+              "content": "医生评估患儿先心复杂畸形很可能需要分三次手术治疗；后续手术方案为单心室方向的Fontan术",
+              "timestamp": 1771465663.674588,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "e3a0eab3-b6ab-43cb-866f-42ac4c800882",
+              "content": "既往在株洲医院检查提示耳膜穿孔，需行耳膜修复手术；医生建议耳部不流脓满半年可考虑手术；术前需评估手术能否提高听力（如贴补实验等）。",
+              "timestamp": 1771465667.2614777,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "多指畸形，先天性多拇指，7个月时做了简单的切指术，术后大拇指用不上太大劲，倾斜而且手术部位骨头凸出。",
+        "to_memory": [
+          "history: 先天性多拇指（多指畸形/先天性多拇指），7个月时行简单切指术",
+          "history: 术后拇指无力（用不上太大劲）、拇指倾斜、手术部位疑似骨头凸出"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "559fe610-3f68-44e6-9590-ec70043aad28",
+              "content": "患者女，28岁，自述身体健康",
+              "timestamp": 1771465595.4821734,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "既往拔牙后出现肿痛，医生评估基本正常，建议不适复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "3eebd1a8-4a7d-4266-975a-de870b442818",
+              "content": "2006年曾行药物流产，术后复查正常；此后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+              "timestamp": 1771465595.4821842,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f2752f18-5f87-4402-87f6-9ded9ceca7e8",
+              "content": "2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+              "timestamp": 1771465595.4821908,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+              "content": "2012年12月妇科检查正常",
+              "timestamp": 1771465595.482197,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "512a4604-684b-40d0-b1cb-887447d10536",
+              "content": "2010年1月再次怀孕，出现与2009年7月类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊），再次自然流产；医院告知两次流产为“生化妊娠”",
+              "timestamp": 1771465595.4822023,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "2f7c0022-abfd-4f46-84ce-2d83883b8f29",
+              "content": "医嘱：女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查",
+              "timestamp": 1771465601.6346726,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c315120f-c4c0-4324-8b5f-cf294a93e36f",
+              "content": "患者因北京海淀妇幼专家号难挂，咨询是否可先挂普通号开具检查单，待出检查结果后再找专家就诊",
+              "timestamp": 1771465604.9979517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "32344f1a-f897-486f-ace5-8edb7fb208bd",
+              "content": "医生建议：可先挂普通号开具检查单，待检查结果出来后再咨询/就诊",
+              "timestamp": 1771465611.0862534,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2d582a14-87c5-4896-89b5-bb0a92e5652a",
+              "content": "医生说明：生化妊娠多为自然淘汰，一般不会影响下次怀孕",
+              "timestamp": 1771465627.7182508,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "8f38becc-5166-43b1-9e2e-3b696baa26a0",
+              "content": "宝宝（婴儿）先天性心脏病：右室双出口（DORV）、房间隔缺损（ASD）、室间隔缺损（VSD）、二尖瓣骑跨；伴肺动脉高压；解剖特点为室缺远离大动脉",
+              "timestamp": 1771465657.9631932,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "18d0184f-0f4f-415e-b662-f6d5c3d072db",
+              "content": "出生时当地医院仅检出房缺和室缺，后复查进一步明确右室双出口、二尖瓣骑跨及肺动脉高压",
+              "timestamp": 1771465657.963204,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "59a4bdfc-61e4-436f-814c-eaf43ad63c6c",
+              "content": "宝宝5个月时患过肺炎",
+              "timestamp": 1771465657.963209,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "47313acd-54b1-4feb-89c9-20876190e426",
+              "content": "医生评估患儿先心复杂畸形很可能需要分三次手术治疗；后续手术方案为单心室方向的Fontan术",
+              "timestamp": 1771465663.674588,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "e3a0eab3-b6ab-43cb-866f-42ac4c800882",
+              "content": "既往在株洲医院检查提示耳膜穿孔，需行耳膜修复手术；医生建议耳部不流脓满半年可考虑手术；术前需评估手术能否提高听力（如贴补实验等）。",
+              "timestamp": 1771465667.2614777,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "9c75d63b-8572-476f-b463-a5c4eaa4e29b",
+              "content": "既往史：先天性多拇指（多指畸形/先天性多拇指），7个月时行简单切指术。",
+              "timestamp": 1771465688.4080067,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "a09a060d-8cce-41db-a70d-3ee0b540fa9e",
+              "content": "术后情况：拇指无力（用不上太大劲）、拇指倾斜，手术部位疑似骨头凸出。",
+              "timestamp": 1771465688.408015,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "这是一个多拇术后常见畸形，可以手术矫正的，需要截骨。这是一个多拇术后常见畸形，可以手术矫正的，需要截骨。这是一个多拇术后常见畸形，可以手术矫正的，需要截骨。",
+        "to_memory": [
+          "history: 先天性多拇指，7个月时行简单切指术；术后拇指无力、倾斜，手术部位骨性凸出；医生评估为多拇术后常见畸形，可通过手术矫正，需行截骨术"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "559fe610-3f68-44e6-9590-ec70043aad28",
+              "content": "患者女，28岁，自述身体健康",
+              "timestamp": 1771465595.4821734,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "27992ca3-49d2-4626-9fae-645c9881a724",
+              "content": "既往拔牙后出现肿痛，医生评估基本正常，建议不适复诊",
+              "timestamp": 1771465584.2489548,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "3eebd1a8-4a7d-4266-975a-de870b442818",
+              "content": "2006年曾行药物流产，术后复查正常；此后月经量较前减少（由5天变为2天多），曾服用中药调理但效果不明显",
+              "timestamp": 1771465595.4821842,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f2752f18-5f87-4402-87f6-9ded9ceca7e8",
+              "content": "2009年7月停经4天后阴道少量出血；尿妊娠试验弱阳；血HCG 380 IU/L，超声提示子宫未见孕囊；1周后血HCG降至150 IU/L，随后自然流产",
+              "timestamp": 1771465595.4821908,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "7b053cfa-d40c-4ae4-af31-97a373ca81ff",
+              "content": "2012年12月妇科检查正常",
+              "timestamp": 1771465595.482197,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "512a4604-684b-40d0-b1cb-887447d10536",
+              "content": "2010年1月再次怀孕，出现与2009年7月类似情况（停经后少量出血、疑早孕后HCG下降/未见孕囊），再次自然流产；医院告知两次流产为“生化妊娠”",
+              "timestamp": 1771465595.4822023,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "2f7c0022-abfd-4f46-84ce-2d83883b8f29",
+              "content": "医嘱：女方空腹抽血检查生殖免疫5项、病毒4项；男方禁欲2–5天后行精液检查",
+              "timestamp": 1771465601.6346726,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "c315120f-c4c0-4324-8b5f-cf294a93e36f",
+              "content": "患者因北京海淀妇幼专家号难挂，咨询是否可先挂普通号开具检查单，待出检查结果后再找专家就诊",
+              "timestamp": 1771465604.9979517,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "32344f1a-f897-486f-ace5-8edb7fb208bd",
+              "content": "医生建议：可先挂普通号开具检查单，待检查结果出来后再咨询/就诊",
+              "timestamp": 1771465611.0862534,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "2d582a14-87c5-4896-89b5-bb0a92e5652a",
+              "content": "医生说明：生化妊娠多为自然淘汰，一般不会影响下次怀孕",
+              "timestamp": 1771465627.7182508,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "8f38becc-5166-43b1-9e2e-3b696baa26a0",
+              "content": "宝宝（婴儿）先天性心脏病：右室双出口（DORV）、房间隔缺损（ASD）、室间隔缺损（VSD）、二尖瓣骑跨；伴肺动脉高压；解剖特点为室缺远离大动脉",
+              "timestamp": 1771465657.9631932,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "18d0184f-0f4f-415e-b662-f6d5c3d072db",
+              "content": "出生时当地医院仅检出房缺和室缺，后复查进一步明确右室双出口、二尖瓣骑跨及肺动脉高压",
+              "timestamp": 1771465657.963204,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "59a4bdfc-61e4-436f-814c-eaf43ad63c6c",
+              "content": "宝宝5个月时患过肺炎",
+              "timestamp": 1771465657.963209,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "47313acd-54b1-4feb-89c9-20876190e426",
+              "content": "医生评估患儿先心复杂畸形很可能需要分三次手术治疗；后续手术方案为单心室方向的Fontan术",
+              "timestamp": 1771465663.674588,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "e3a0eab3-b6ab-43cb-866f-42ac4c800882",
+              "content": "既往在株洲医院检查提示耳膜穿孔，需行耳膜修复手术；医生建议耳部不流脓满半年可考虑手术；术前需评估手术能否提高听力（如贴补实验等）。",
+              "timestamp": 1771465667.2614777,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "9c75d63b-8572-476f-b463-a5c4eaa4e29b",
+              "content": "既往史：先天性多拇指（多指畸形/先天性多拇指），7个月时行简单切指术。",
+              "timestamp": 1771465688.4080067,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            },
+            {
+              "id": "a09a060d-8cce-41db-a70d-3ee0b540fa9e",
+              "content": "先天性多拇指，7个月时行简单切指术；术后拇指无力、拇指倾斜，手术部位骨性凸出；医生评估为多拇术后常见畸形，可通过手术矫正，需行截骨术。",
+              "timestamp": 1771465688.408015,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者最初就某个问题咨询时医生给出的就诊流程建议，与后来针对手部情况复诊时医生提出的处理方式：两次医生分别让患者先做什么、后做什么？",
+          "answer": "最初建议先挂普通号开具检查单，等检查结果出来后再咨询/就诊；后来针对多拇术后问题评估为常见畸形，可手术矫正，需要截骨术。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "32344f1a-f897-486f-ace5-8edb7fb208bd",
+                "a09a060d-8cce-41db-a70d-3ee0b540fa9e"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            17,
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "postop_rehab",
+    "scenario_name": "术后康复管理",
+    "session_count": 7,
+    "group_key": "综合科"
+  }
+}

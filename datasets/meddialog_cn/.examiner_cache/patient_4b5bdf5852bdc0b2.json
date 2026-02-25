@@ -1,0 +1,2076 @@
+{
+  "patient_id": "561654b9ad7b",
+  "messages": [
+    {
+      "user": {
+        "content": "肩膀酸疼，发病时肩膀抬不起来晚上睡觉时翻身都疼醒了。",
+        "to_memory": [
+          "working: 主诉肩膀酸疼，发作时肩膀抬不起来；夜间睡觉翻身会疼醒"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "792cc662-a5d9-4554-b669-4148f2b00713",
+              "content": "主诉肩膀酸疼，发作时肩膀抬不起来；夜间睡觉翻身会疼醒",
+              "timestamp": 1771494154.7175035,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你最好到医院疼痛科看看。",
+        "to_memory": [
+          "working: 主诉肩膀酸疼，发作时肩膀抬不起来，夜间翻身疼痛会痛醒",
+          "history: 医生建议到医院疼痛科就诊"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "792cc662-a5d9-4554-b669-4148f2b00713",
+              "content": "主诉肩膀酸疼，发作时肩膀抬不起来；夜间睡觉翻身会疼醒",
+              "timestamp": 1771494154.7175035,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "4924e717-a589-4e8a-a62d-e51d45147eb0",
+              "content": "医生建议到医院疼痛科就诊",
+              "timestamp": 1771494159.2379105,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "把患者最初描述的症状对日常活动/睡眠的影响，与医生当时给出的下一步就医去向联系起来：医生建议患者接下来去哪个科室就诊？",
+          "answer": "到医院疼痛科就诊",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "4924e717-a589-4e8a-a62d-e51d45147eb0"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "792cc662-a5d9-4554-b669-4148f2b00713"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "4924e717-a589-4e8a-a62d-e51d45147eb0",
+              "content": "医生建议到医院疼痛科就诊",
+              "timestamp": 1771494159.2379105,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "胆红素升高，我爷爷200911月检查出来他有肺结核，结果医生叫他吃2个月治疗肺结核的药，吃了2个月不到，他人就翻倒了，结果医院检查出来说他吃治疗肺结核的药影响到肝里的胆红素升高了，然后过了年，我爷爷就被送到浙江第一医院里了，可看了20来天，胆红素还是在500左右，最高时590了，然后就回家了，在家里就每天打点滴，可前几天又验了一下，结果胆红素只有300多点了，所以前天又把他送到医院里了，现在我说说症状，人现在皮肤发黄，眼睛发黄，人只剩骨头和皮了，已经快没肉了，全身没一点力气，医生说我爷爷现在检查出来胆红素只有300多点了，可就是不知道为什么300多点还这么黄，医生说应该不会这么黄的，各项检查都很好，没问题，现在天天都没吃东西，只是接着喝水，还有身体里经常烧起来，还有一点我特别说下，他打着点滴看起来舒服点，然后就是为什么，每天晚上有个半小时左右的时间，他会觉得特别难受，我爷爷就说快不行了，这是为什么，问他哪里不舒服，他也说不出来了，请医生详细的说下，然后指导下应该吃什么药好，只要是有一点希望的药，我都愿意给我爷爷试下。跪求跪求跪求\n。",
+        "to_memory": [
+          "history: 2009年11月确诊肺结核，曾服用抗结核药物治疗约2个月后出现药物相关肝损伤/胆红素升高（患者描述）",
+          "history: 胆红素曾长期约500左右，最高约590；近期复查降至300多后再次住院（具体为总胆红素未注明）",
+          "history: 曾在浙江第一医院住院约20天，出院后在家每日静脉输液治疗；近期再次入院（医院/治疗细节未明）",
+          "working: 当前症状：皮肤黄染、巩膜黄染，明显消瘦（“只剩骨头和皮”）、全身乏力",
+          "working: 进食差/基本不进食，仅饮水；自述体内经常“烧起来”（疑发热/潮热，未测体温）",
+          "working: 输液后自觉舒服；夜间每日约半小时出现明显不适并自述“快不行了”，具体不适部位不清"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "32875d62-b7d5-4f89-89fd-ab9c7d469646",
+              "content": "当前症状：皮肤黄染、巩膜黄染，明显消瘦、全身乏力",
+              "timestamp": 1771494171.0409944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6ce1cb35-630d-477d-bb6e-4c58c3f34450",
+              "content": "进食差/基本不进食，仅饮水；自述体内经常“烧起来”（疑发热/潮热，未测体温）",
+              "timestamp": 1771494171.0409985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "daec4f17-fbad-484b-bcca-41e213f3bc7f",
+              "content": "输液后自觉舒服；夜间每日约半小时出现明显不适并自述“快不行了”，具体不适部位不清",
+              "timestamp": 1771494171.0410025,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "4924e717-a589-4e8a-a62d-e51d45147eb0",
+              "content": "医生建议到医院疼痛科就诊",
+              "timestamp": 1771494159.2379105,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5ab235d7-05e4-4663-9de8-3a49378a13dc",
+              "content": "2009年11月确诊肺结核，抗结核药治疗约2个月后出现药物相关肝损伤/胆红素升高（患者自述）",
+              "timestamp": 1771494171.0409777,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ac448bd9-2c42-4c7f-8061-f557857ef21e",
+              "content": "胆红素曾长期约500左右，最高约590；近期复查降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.040986,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "14033fd8-8975-453b-8e8f-55b174e1b817",
+              "content": "曾在浙江第一医院住院约20天，出院后在家每日静脉输液治疗；近期再次入院（医院/治疗细节未明）",
+              "timestamp": 1771494171.04099,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者在饮食摄入方面目前是什么情况？",
+          "answer": "几乎不吃东西，仅喝水。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "6ce1cb35-630d-477d-bb6e-4c58c3f34450"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "黄疸正常值在20左右,300多的数值已经很高了，当然黄了，另外需要直接胆红素和间接胆红素要分类，看看有没有堵塞的可能。",
+        "to_memory": [
+          "history: 患者爷爷2009年11月检查发现肺结核，服用抗结核药物约2个月后出现药物性肝损伤/胆红素升高；入浙江第一医院治疗约20天，胆红素约500左右，最高约590；后在家每日输液，复查胆红素降至300多后再次住院",
+          "working: 当前主要问题为明显黄疸（皮肤/巩膜发黄）、消瘦乏力、基本不进食仅饮水、间歇性发热感（“身体里经常烧起来”）、夜间约半小时明显不适（自觉“快不行了”但说不清具体不适）；当前总胆红素仍为300多",
+          "working: 医生提示黄疸正常值约20，总胆红素300多仍属很高；建议区分直接胆红素与间接胆红素，评估是否存在胆道梗阻可能"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "32875d62-b7d5-4f89-89fd-ab9c7d469646",
+              "content": "当前症状：皮肤黄染、巩膜黄染，明显消瘦、全身乏力",
+              "timestamp": 1771494171.0409944,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "6ce1cb35-630d-477d-bb6e-4c58c3f34450",
+              "content": "进食差/基本不进食，仅饮水；自述体内经常“烧起来”（疑发热/潮热，未测体温）",
+              "timestamp": 1771494171.0409985,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "daec4f17-fbad-484b-bcca-41e213f3bc7f",
+              "content": "输液后自觉舒服；夜间每日约半小时出现明显不适并自述“快不行了”，具体不适部位不清",
+              "timestamp": 1771494171.0410025,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "fd13fba5-f978-4ff2-bbcf-0269451a9e52",
+              "content": "当前总胆红素仍为300多（医生提示正常约20，属明显升高）",
+              "timestamp": 1771494181.4323642,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "dc5bafe2-9cc0-4be5-8855-3c16a9537e60",
+              "content": "医生建议进一步区分直接胆红素与间接胆红素，并评估是否存在胆道梗阻可能",
+              "timestamp": 1771494181.4323766,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "4924e717-a589-4e8a-a62d-e51d45147eb0",
+              "content": "医生建议到医院疼痛科就诊",
+              "timestamp": 1771494159.2379105,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5ab235d7-05e4-4663-9de8-3a49378a13dc",
+              "content": "2009年11月确诊肺结核，抗结核药治疗约2个月后出现药物相关肝损伤/胆红素升高（患者自述）",
+              "timestamp": 1771494171.0409777,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ac448bd9-2c42-4c7f-8061-f557857ef21e",
+              "content": "胆红素曾长期约500左右，最高约590；近期复查降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.040986,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "14033fd8-8975-453b-8e8f-55b174e1b817",
+              "content": "曾在浙江第一医院住院治疗约20天；当时总胆红素约500，最高约590；出院后在家每日静脉输液治疗；复查胆红素降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.04099,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "家属描述的当前体征与“最近一次复查的化验结果”之间，医生在对话中指出了一个需要重点核对的潜在不一致点。这个不一致点具体指什么？",
+          "answer": "化验显示胆红素300多仍属很高水平，因此出现明显黄染并不矛盾；需要进一步区分直接/间接胆红素并排查是否存在梗阻可能。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "ac448bd9-2c42-4c7f-8061-f557857ef21e"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "32875d62-b7d5-4f89-89fd-ab9c7d469646"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "4924e717-a589-4e8a-a62d-e51d45147eb0",
+              "content": "医生建议到医院疼痛科就诊",
+              "timestamp": 1771494159.2379105,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5ab235d7-05e4-4663-9de8-3a49378a13dc",
+              "content": "2009年11月确诊肺结核，抗结核药治疗约2个月后出现药物相关肝损伤/胆红素升高（患者自述）",
+              "timestamp": 1771494171.0409777,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ac448bd9-2c42-4c7f-8061-f557857ef21e",
+              "content": "胆红素曾长期约500左右，最高约590；近期复查降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.040986,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "14033fd8-8975-453b-8e8f-55b174e1b817",
+              "content": "曾在浙江第一医院住院治疗约20天；当时总胆红素约500，最高约590；出院后在家每日静脉输液治疗；复查胆红素降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.04099,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "高血压心律失常，我今年20岁，在外打工的，工作是开印刷折页机，要上夜班有点累，最近头昏头胀，记忆也下降了，还有点耳鸣，由于一人在外工作也没去医院看，上个月厂里体检，血压高160还有心律失常，我真的不知到怎么办，要辞工回老家住院吗？还能工作吗？一个人在外也没和家里人说怕她们担心，工作也不想辞好不易找到的我到底怎么办的好，麻烦指导下真的谢谢，手抄写心电图，心率104bpm，PR间期182ms，QRS时限120ms，QT/QTc间期 330/390 ms，P/QRS/T 电轴 72/83/60。 RV5/SV1  振幅 2.425/1.395 mV      RV5+SV1振幅 3.820mV。",
+        "to_memory": [
+          "identity: 患者，20岁；基础疾病/慢性病：高血压、心律失常",
+          "history: 体检发现血压160mmHg（上个月厂里体检）；心电图（手抄）结果：心率104bpm，PR间期182ms，QRS时限120ms，QT/QTc 330/390ms，P/QRS/T电轴72/83/60，RV5/SV1 2.425/1.395mV，RV5+SV1 3.820mV",
+          "working: 近来头昏头胀、记忆下降、耳鸣；夜班工作（开印刷折页机）较累；未就医，担心是否需要辞工回老家住院/还能否继续工作"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "adb461a3-32f3-4dfb-ae34-f360a0e3169e",
+              "content": "近来头昏头胀、记忆下降、耳鸣；夜班工作（开印刷折页机）较累；未就医，担心是否需要辞工回老家住院/还能否继续工作",
+              "timestamp": 1771494191.4614406,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "29488ef0-1b08-4c7b-b9e2-0cc19c7151ff",
+              "content": "患者，20岁；基础疾病/慢性病：高血压、心律失常",
+              "timestamp": 1771494191.4614146,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "4924e717-a589-4e8a-a62d-e51d45147eb0",
+              "content": "医生建议到医院疼痛科就诊",
+              "timestamp": 1771494159.2379105,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5ab235d7-05e4-4663-9de8-3a49378a13dc",
+              "content": "2009年11月确诊肺结核，抗结核药治疗约2个月后出现药物相关肝损伤/胆红素升高（患者自述）",
+              "timestamp": 1771494171.0409777,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ac448bd9-2c42-4c7f-8061-f557857ef21e",
+              "content": "胆红素曾长期约500左右，最高约590；近期复查降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.040986,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "14033fd8-8975-453b-8e8f-55b174e1b817",
+              "content": "曾在浙江第一医院住院治疗约20天；当时总胆红素约500，最高约590；出院后在家每日静脉输液治疗；复查胆红素降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.04099,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ca1d93d9-0d5c-4d60-8af5-0dbd4ca01537",
+              "content": "上个月厂里体检发现血压约160mmHg；手抄心电图：心率104bpm，PR 182ms，QRS 120ms，QT/QTc 330/390ms，P/QRS/T电轴72/83/60，RV5/SV1 2.425/1.395mV，RV5+SV1 3.820mV",
+              "timestamp": 1771494191.4614325,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在这段对话里，医生曾给出过一个需要患者（或家属）尽快去某个专科就诊的建议。这个建议涉及的具体科室是什么？该建议与患者/家属当时主要诉求是否存在潜在不匹配的安全风险？请说明理由。",
+          "answer": "医生建议到医院疼痛科就诊；与后续患者/家属主要咨询的胆红素升高/黄疸等问题不匹配，可能延误对黄疸病因（如梗阻等）的及时评估。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "4924e717-a589-4e8a-a62d-e51d45147eb0"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "adb461a3-32f3-4dfb-ae34-f360a0e3169e"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            5,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可能跟工作太累有一定关系，一般来讲20岁的年龄高血压的不多见，除非是由于有其他病因：比如肾脏疾病，内分泌疾病等。首先注意调节一下工作压力，注意休息，如果血压仍偏高，则需要应用降压药物。",
+        "to_memory": [
+          "identity: 患者，20岁；既往/当前提示高血压、心律失常",
+          "history: 体检血压约160mmHg；手抄心电图参数：心率104bpm，PR间期182ms，QRS时限120ms，QT/QTc 330/390ms，P/QRS/T电轴72/83/60，RV5/SV1振幅2.425/1.395mV，RV5+SV1振幅3.820mV",
+          "history: 近期上夜班工作劳累（开印刷折页机），出现头昏头胀、记忆下降、耳鸣；医生认为可能与劳累有关，年轻人高血压少见需排查肾脏疾病、内分泌疾病等继发性原因；建议调节工作压力、注意休息，若血压仍偏高需使用降压药"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "adb461a3-32f3-4dfb-ae34-f360a0e3169e",
+              "content": "近来头昏头胀、记忆下降、耳鸣；夜班工作（开印刷折页机）较累；未就医，担心是否需要辞工回老家住院/还能否继续工作",
+              "timestamp": 1771494191.4614406,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "29488ef0-1b08-4c7b-b9e2-0cc19c7151ff",
+              "content": "患者，20岁；基础疾病/慢性病：高血压、心律失常",
+              "timestamp": 1771494191.4614146,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "4924e717-a589-4e8a-a62d-e51d45147eb0",
+              "content": "医生建议到医院疼痛科就诊",
+              "timestamp": 1771494159.2379105,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5ab235d7-05e4-4663-9de8-3a49378a13dc",
+              "content": "2009年11月确诊肺结核，抗结核药治疗约2个月后出现药物相关肝损伤/胆红素升高（患者自述）",
+              "timestamp": 1771494171.0409777,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ac448bd9-2c42-4c7f-8061-f557857ef21e",
+              "content": "胆红素曾长期约500左右，最高约590；近期复查降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.040986,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "14033fd8-8975-453b-8e8f-55b174e1b817",
+              "content": "曾在浙江第一医院住院治疗约20天；当时总胆红素约500，最高约590；出院后在家每日静脉输液治疗；复查胆红素降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.04099,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ca1d93d9-0d5c-4d60-8af5-0dbd4ca01537",
+              "content": "上个月厂里体检发现血压约160mmHg；手抄心电图：心率104bpm，PR 182ms，QRS 120ms，QT/QTc 330/390ms，P/QRS/T电轴72/83/60，RV5/SV1 2.425/1.395mV，RV5+SV1 3.820mV",
+              "timestamp": 1771494191.4614325,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "657a2b8e-cb43-4bb9-80e4-bd8dadb466fa",
+              "content": "医生认为近期头昏头胀、记忆下降、耳鸣可能与夜班劳累有关；年轻人高血压少见，建议排查肾脏疾病、内分泌疾病等继发性高血压原因；建议调节工作压力、注意休息，若血压仍偏高需使用降压药。",
+              "timestamp": 1771494204.8000536,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "关于黄疸这次就诊中提到的那位家属：把他在住院前一段时间的化验结果与前几天复查后的结果相比，相关指标的变化趋势如何？另外，这次复查后家属采取了什么就医安排？",
+          "answer": "该指标从长期约500左右（最高约590）下降到300多；复查后又再次送医住院。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "ac448bd9-2c42-4c7f-8061-f557857ef21e"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "adb461a3-32f3-4dfb-ae34-f360a0e3169e"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "29488ef0-1b08-4c7b-b9e2-0cc19c7151ff",
+              "content": "患者，20岁；基础疾病/慢性病：高血压、心律失常",
+              "timestamp": 1771494191.4614146,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "4924e717-a589-4e8a-a62d-e51d45147eb0",
+              "content": "医生建议到医院疼痛科就诊",
+              "timestamp": 1771494159.2379105,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5ab235d7-05e4-4663-9de8-3a49378a13dc",
+              "content": "2009年11月确诊肺结核，抗结核药治疗约2个月后出现药物相关肝损伤/胆红素升高（患者自述）",
+              "timestamp": 1771494171.0409777,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ac448bd9-2c42-4c7f-8061-f557857ef21e",
+              "content": "胆红素曾长期约500左右，最高约590；近期复查降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.040986,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "14033fd8-8975-453b-8e8f-55b174e1b817",
+              "content": "曾在浙江第一医院住院治疗约20天；当时总胆红素约500，最高约590；出院后在家每日静脉输液治疗；复查胆红素降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.04099,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ca1d93d9-0d5c-4d60-8af5-0dbd4ca01537",
+              "content": "上个月厂里体检发现血压约160mmHg；手抄心电图：心率104bpm，PR 182ms，QRS 120ms，QT/QTc 330/390ms，P/QRS/T电轴72/83/60，RV5/SV1 2.425/1.395mV，RV5+SV1 3.820mV",
+              "timestamp": 1771494191.4614325,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "657a2b8e-cb43-4bb9-80e4-bd8dadb466fa",
+              "content": "医生认为近期头昏头胀、记忆下降、耳鸣可能与夜班劳累有关；年轻人高血压少见，建议排查肾脏疾病、内分泌疾病等继发性高血压原因；建议调节工作压力、注意休息，若血压仍偏高需使用降压药。",
+              "timestamp": 1771494204.8000536,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "隐匿性阴茎，21日在厦门第一医院进行手术。",
+        "to_memory": [
+          "history: 诊断为隐匿性阴茎；于21日在厦门第一医院进行手术（隐匿性阴茎相关手术）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "29488ef0-1b08-4c7b-b9e2-0cc19c7151ff",
+              "content": "患者，20岁；基础疾病/慢性病：高血压、心律失常",
+              "timestamp": 1771494191.4614146,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "4924e717-a589-4e8a-a62d-e51d45147eb0",
+              "content": "医生建议到医院疼痛科就诊",
+              "timestamp": 1771494159.2379105,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5ab235d7-05e4-4663-9de8-3a49378a13dc",
+              "content": "2009年11月确诊肺结核，抗结核药治疗约2个月后出现药物相关肝损伤/胆红素升高（患者自述）",
+              "timestamp": 1771494171.0409777,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ac448bd9-2c42-4c7f-8061-f557857ef21e",
+              "content": "胆红素曾长期约500左右，最高约590；近期复查降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.040986,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "14033fd8-8975-453b-8e8f-55b174e1b817",
+              "content": "曾在浙江第一医院住院治疗约20天；当时总胆红素约500，最高约590；出院后在家每日静脉输液治疗；复查胆红素降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.04099,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ca1d93d9-0d5c-4d60-8af5-0dbd4ca01537",
+              "content": "上个月厂里体检发现血压约160mmHg；手抄心电图：心率104bpm，PR 182ms，QRS 120ms，QT/QTc 330/390ms，P/QRS/T电轴72/83/60，RV5/SV1 2.425/1.395mV，RV5+SV1 3.820mV",
+              "timestamp": 1771494191.4614325,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "657a2b8e-cb43-4bb9-80e4-bd8dadb466fa",
+              "content": "医生认为近期头昏头胀、记忆下降、耳鸣可能与夜班劳累有关；年轻人高血压少见，建议排查肾脏疾病、内分泌疾病等继发性高血压原因；建议调节工作压力、注意休息，若血压仍偏高需使用降压药。",
+              "timestamp": 1771494204.8000536,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "364be084-e6e2-4ffa-931e-aa6a18cd4962",
+              "content": "诊断为隐匿性阴茎；于21日在厦门第一医院进行隐匿性阴茎相关手术。",
+              "timestamp": 1771494218.5627332,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比爷爷在使用抗感染治疗方案前后两次关键时间点：最初被发现需要开始该治疗时，以及连续用药一段时间后出现不适并被提示与用药相关时，这两个时间点分别发生在什么时候？并且用药持续了大约多久后才出现相关问题？",
+          "answer": "2009年11月发现肺结核开始用药；大约用抗结核药不到2个月后出现药物相关肝损伤/胆红素升高。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "5ab235d7-05e4-4663-9de8-3a49378a13dc",
+                "ac448bd9-2c42-4c7f-8061-f557857ef21e"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6,
+            6
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "属正常情况。术后炎症水肿期，过一段时间会好。",
+        "to_memory": [
+          "history: 2026-??-21于厦门第一医院行隐匿性阴茎手术",
+          "working: 术后被医生判断为炎症水肿期，属正常情况，预计过段时间会好转"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "46d2902f-4b33-49a9-81aa-2bb0068236a2",
+              "content": "术后医生判断处于炎症水肿期，属正常情况，预计过段时间会好转。",
+              "timestamp": 1771494227.8569465,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "identity": [
+            {
+              "id": "29488ef0-1b08-4c7b-b9e2-0cc19c7151ff",
+              "content": "患者，20岁；基础疾病/慢性病：高血压、心律失常",
+              "timestamp": 1771494191.4614146,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "4924e717-a589-4e8a-a62d-e51d45147eb0",
+              "content": "医生建议到医院疼痛科就诊",
+              "timestamp": 1771494159.2379105,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5ab235d7-05e4-4663-9de8-3a49378a13dc",
+              "content": "2009年11月确诊肺结核，抗结核药治疗约2个月后出现药物相关肝损伤/胆红素升高（患者自述）",
+              "timestamp": 1771494171.0409777,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ac448bd9-2c42-4c7f-8061-f557857ef21e",
+              "content": "胆红素曾长期约500左右，最高约590；近期复查降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.040986,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "14033fd8-8975-453b-8e8f-55b174e1b817",
+              "content": "曾在浙江第一医院住院治疗约20天；当时总胆红素约500，最高约590；出院后在家每日静脉输液治疗；复查胆红素降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.04099,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ca1d93d9-0d5c-4d60-8af5-0dbd4ca01537",
+              "content": "上个月厂里体检发现血压约160mmHg；手抄心电图：心率104bpm，PR 182ms，QRS 120ms，QT/QTc 330/390ms，P/QRS/T电轴72/83/60，RV5/SV1 2.425/1.395mV，RV5+SV1 3.820mV",
+              "timestamp": 1771494191.4614325,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "657a2b8e-cb43-4bb9-80e4-bd8dadb466fa",
+              "content": "医生认为近期头昏头胀、记忆下降、耳鸣可能与夜班劳累有关；年轻人高血压少见，建议排查肾脏疾病、内分泌疾病等继发性高血压原因；建议调节工作压力、注意休息，若血压仍偏高需使用降压药。",
+              "timestamp": 1771494204.8000536,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "364be084-e6e2-4ffa-931e-aa6a18cd4962",
+              "content": "诊断为隐匿性阴茎；于2026-??-21日在厦门第一医院行隐匿性阴茎手术。",
+              "timestamp": 1771494218.5627332,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "关于患者在厦门第一医院做完该手术后，医生对其当前恢复阶段作出了什么判断，并预计后续会怎样变化？",
+          "answer": "医生判断属正常情况，处于术后炎症水肿期，过一段时间会好转。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "46d2902f-4b33-49a9-81aa-2bb0068236a2"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "29488ef0-1b08-4c7b-b9e2-0cc19c7151ff",
+              "content": "患者，20岁；基础疾病/慢性病：高血压、心律失常",
+              "timestamp": 1771494191.4614146,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "history": [
+            {
+              "id": "4924e717-a589-4e8a-a62d-e51d45147eb0",
+              "content": "医生建议到医院疼痛科就诊",
+              "timestamp": 1771494159.2379105,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5ab235d7-05e4-4663-9de8-3a49378a13dc",
+              "content": "2009年11月确诊肺结核，抗结核药治疗约2个月后出现药物相关肝损伤/胆红素升高（患者自述）",
+              "timestamp": 1771494171.0409777,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ac448bd9-2c42-4c7f-8061-f557857ef21e",
+              "content": "胆红素曾长期约500左右，最高约590；近期复查降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.040986,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "14033fd8-8975-453b-8e8f-55b174e1b817",
+              "content": "曾在浙江第一医院住院治疗约20天；当时总胆红素约500，最高约590；出院后在家每日静脉输液治疗；复查胆红素降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.04099,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ca1d93d9-0d5c-4d60-8af5-0dbd4ca01537",
+              "content": "上个月厂里体检发现血压约160mmHg；手抄心电图：心率104bpm，PR 182ms，QRS 120ms，QT/QTc 330/390ms，P/QRS/T电轴72/83/60，RV5/SV1 2.425/1.395mV，RV5+SV1 3.820mV",
+              "timestamp": 1771494191.4614325,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "657a2b8e-cb43-4bb9-80e4-bd8dadb466fa",
+              "content": "医生认为近期头昏头胀、记忆下降、耳鸣可能与夜班劳累有关；年轻人高血压少见，建议排查肾脏疾病、内分泌疾病等继发性高血压原因；建议调节工作压力、注意休息，若血压仍偏高需使用降压药。",
+              "timestamp": 1771494204.8000536,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "364be084-e6e2-4ffa-931e-aa6a18cd4962",
+              "content": "诊断为隐匿性阴茎；于2026-??-21日在厦门第一医院行隐匿性阴茎手术。",
+              "timestamp": 1771494218.5627332,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "哮喘，过敏性体质，早上起来打喷嚏流鼻子、鼻子不通、有时候有点压气、有痰（特别是早上痰是黄色，像豆腐渣一样，）白天还好，晚上一躺下鼻子就不同。平时打扫卫生就打喷嚏、流鼻子。",
+        "to_memory": [
+          "identity: 哮喘（慢性病）",
+          "identity: 过敏性体质",
+          "working: 早起打喷嚏、流鼻涕、鼻塞",
+          "working: 偶有胸闷/气压感",
+          "working: 有痰，晨起黄色痰，质地呈豆腐渣样",
+          "working: 白天较好，夜间平躺后鼻塞加重",
+          "working: 打扫卫生时易诱发打喷嚏、流鼻涕（清洁/灰尘诱发）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "eac1c0f3-2f4d-47c3-86dd-20e5ebc130ac",
+              "content": "症状：早起打喷嚏、流鼻涕、鼻塞",
+              "timestamp": 1771494237.001655,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f1761710-3830-4f26-8a43-c30a866ec684",
+              "content": "症状：偶有胸闷/气压感",
+              "timestamp": 1771494237.001659,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "5ca34c30-36b0-47ca-8343-82ca24ed0f21",
+              "content": "痰：有痰，晨起黄色痰，质地呈豆腐渣样",
+              "timestamp": 1771494237.001663,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "34119d2b-6449-48e2-8715-570808328663",
+              "content": "日夜变化：白天较好，夜间平躺后鼻塞加重",
+              "timestamp": 1771494237.0016665,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "2fef6617-43fc-45db-94fa-619bc914c9ac",
+              "content": "诱因：打扫卫生/灰尘等清洁时易诱发打喷嚏、流鼻涕",
+              "timestamp": 1771494237.00167,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "identity": [
+            {
+              "id": "29488ef0-1b08-4c7b-b9e2-0cc19c7151ff",
+              "content": "患者，20岁；基础疾病/慢性病：高血压、心律失常",
+              "timestamp": 1771494191.4614146,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "1041a651-1bc9-48fd-940c-04395b1aaad8",
+              "content": "慢性病：哮喘",
+              "timestamp": 1771494237.0016415,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "85e6272b-3e81-401a-879a-b2bb011e5c7a",
+              "content": "体质：过敏性体质",
+              "timestamp": 1771494237.0016506,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "history": [
+            {
+              "id": "4924e717-a589-4e8a-a62d-e51d45147eb0",
+              "content": "医生建议到医院疼痛科就诊",
+              "timestamp": 1771494159.2379105,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5ab235d7-05e4-4663-9de8-3a49378a13dc",
+              "content": "2009年11月确诊肺结核，抗结核药治疗约2个月后出现药物相关肝损伤/胆红素升高（患者自述）",
+              "timestamp": 1771494171.0409777,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ac448bd9-2c42-4c7f-8061-f557857ef21e",
+              "content": "胆红素曾长期约500左右，最高约590；近期复查降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.040986,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "14033fd8-8975-453b-8e8f-55b174e1b817",
+              "content": "曾在浙江第一医院住院治疗约20天；当时总胆红素约500，最高约590；出院后在家每日静脉输液治疗；复查胆红素降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.04099,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ca1d93d9-0d5c-4d60-8af5-0dbd4ca01537",
+              "content": "上个月厂里体检发现血压约160mmHg；手抄心电图：心率104bpm，PR 182ms，QRS 120ms，QT/QTc 330/390ms，P/QRS/T电轴72/83/60，RV5/SV1 2.425/1.395mV，RV5+SV1 3.820mV",
+              "timestamp": 1771494191.4614325,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "657a2b8e-cb43-4bb9-80e4-bd8dadb466fa",
+              "content": "医生认为近期头昏头胀、记忆下降、耳鸣可能与夜班劳累有关；年轻人高血压少见，建议排查肾脏疾病、内分泌疾病等继发性高血压原因；建议调节工作压力、注意休息，若血压仍偏高需使用降压药。",
+              "timestamp": 1771494204.8000536,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "364be084-e6e2-4ffa-931e-aa6a18cd4962",
+              "content": "诊断为隐匿性阴茎；于2026-??-21日在厦门第一医院行隐匿性阴茎手术。",
+              "timestamp": 1771494218.5627332,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者既往明确记录的慢性基础疾病有哪些？请逐一列出。",
+          "answer": "高血压、心律失常",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "29488ef0-1b08-4c7b-b9e2-0cc19c7151ff"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "第。第。",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "eac1c0f3-2f4d-47c3-86dd-20e5ebc130ac",
+              "content": "症状：早起打喷嚏、流鼻涕、鼻塞",
+              "timestamp": 1771494237.001655,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f1761710-3830-4f26-8a43-c30a866ec684",
+              "content": "症状：偶有胸闷/气压感",
+              "timestamp": 1771494237.001659,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "5ca34c30-36b0-47ca-8343-82ca24ed0f21",
+              "content": "痰：有痰，晨起黄色痰，质地呈豆腐渣样",
+              "timestamp": 1771494237.001663,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "34119d2b-6449-48e2-8715-570808328663",
+              "content": "日夜变化：白天较好，夜间平躺后鼻塞加重",
+              "timestamp": 1771494237.0016665,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "2fef6617-43fc-45db-94fa-619bc914c9ac",
+              "content": "诱因：打扫卫生/灰尘等清洁时易诱发打喷嚏、流鼻涕",
+              "timestamp": 1771494237.00167,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "identity": [
+            {
+              "id": "29488ef0-1b08-4c7b-b9e2-0cc19c7151ff",
+              "content": "患者，20岁；基础疾病/慢性病：高血压、心律失常",
+              "timestamp": 1771494191.4614146,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "1041a651-1bc9-48fd-940c-04395b1aaad8",
+              "content": "慢性病：哮喘",
+              "timestamp": 1771494237.0016415,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "85e6272b-3e81-401a-879a-b2bb011e5c7a",
+              "content": "体质：过敏性体质",
+              "timestamp": 1771494237.0016506,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "history": [
+            {
+              "id": "4924e717-a589-4e8a-a62d-e51d45147eb0",
+              "content": "医生建议到医院疼痛科就诊",
+              "timestamp": 1771494159.2379105,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5ab235d7-05e4-4663-9de8-3a49378a13dc",
+              "content": "2009年11月确诊肺结核，抗结核药治疗约2个月后出现药物相关肝损伤/胆红素升高（患者自述）",
+              "timestamp": 1771494171.0409777,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ac448bd9-2c42-4c7f-8061-f557857ef21e",
+              "content": "胆红素曾长期约500左右，最高约590；近期复查降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.040986,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "14033fd8-8975-453b-8e8f-55b174e1b817",
+              "content": "曾在浙江第一医院住院治疗约20天；当时总胆红素约500，最高约590；出院后在家每日静脉输液治疗；复查胆红素降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.04099,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ca1d93d9-0d5c-4d60-8af5-0dbd4ca01537",
+              "content": "上个月厂里体检发现血压约160mmHg；手抄心电图：心率104bpm，PR 182ms，QRS 120ms，QT/QTc 330/390ms，P/QRS/T电轴72/83/60，RV5/SV1 2.425/1.395mV，RV5+SV1 3.820mV",
+              "timestamp": 1771494191.4614325,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "657a2b8e-cb43-4bb9-80e4-bd8dadb466fa",
+              "content": "医生认为近期头昏头胀、记忆下降、耳鸣可能与夜班劳累有关；年轻人高血压少见，建议排查肾脏疾病、内分泌疾病等继发性高血压原因；建议调节工作压力、注意休息，若血压仍偏高需使用降压药。",
+              "timestamp": 1771494204.8000536,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "364be084-e6e2-4ffa-931e-aa6a18cd4962",
+              "content": "诊断为隐匿性阴茎；于2026-??-21日在厦门第一医院行隐匿性阴茎手术。",
+              "timestamp": 1771494218.5627332,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "请问我家不在北京，在洛阳，想治疗有没有对口医院可以治疗，十分感谢。",
+        "to_memory": [
+          "identity: 过敏性体质；哮喘",
+          "history: 21日在厦门第一医院行隐匿性阴茎手术",
+          "history: 上个月体检血压约160mmHg；提示心律失常；心电图参数：心率104bpm，PR 182ms，QRS 120ms，QT/QTc 330/390ms，电轴P/QRS/T 72/83/60，RV5/SV1 2.425/1.395mV，RV5+SV1 3.820mV",
+          "working: 现居/所在地洛阳，咨询当地是否有对口医院治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "eac1c0f3-2f4d-47c3-86dd-20e5ebc130ac",
+              "content": "症状：早起打喷嚏、流鼻涕、鼻塞",
+              "timestamp": 1771494237.001655,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f1761710-3830-4f26-8a43-c30a866ec684",
+              "content": "症状：偶有胸闷/气压感",
+              "timestamp": 1771494237.001659,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "5ca34c30-36b0-47ca-8343-82ca24ed0f21",
+              "content": "痰：有痰，晨起黄色痰，质地呈豆腐渣样",
+              "timestamp": 1771494237.001663,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "34119d2b-6449-48e2-8715-570808328663",
+              "content": "日夜变化：白天较好，夜间平躺后鼻塞加重",
+              "timestamp": 1771494237.0016665,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "2fef6617-43fc-45db-94fa-619bc914c9ac",
+              "content": "诱因：打扫卫生/灰尘等清洁时易诱发打喷嚏、流鼻涕",
+              "timestamp": 1771494237.00167,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "54b1a4cd-a0c9-4e87-8f62-6c1c2fd02596",
+              "content": "现居/所在地：洛阳；咨询当地是否有对口医院治疗。",
+              "timestamp": 1771494250.8089519,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "identity": [
+            {
+              "id": "29488ef0-1b08-4c7b-b9e2-0cc19c7151ff",
+              "content": "患者，20岁；基础疾病/慢性病：高血压、心律失常",
+              "timestamp": 1771494191.4614146,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "1041a651-1bc9-48fd-940c-04395b1aaad8",
+              "content": "慢性病：哮喘",
+              "timestamp": 1771494237.0016415,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "85e6272b-3e81-401a-879a-b2bb011e5c7a",
+              "content": "体质：过敏性体质",
+              "timestamp": 1771494237.0016506,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "history": [
+            {
+              "id": "4924e717-a589-4e8a-a62d-e51d45147eb0",
+              "content": "医生建议到医院疼痛科就诊",
+              "timestamp": 1771494159.2379105,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5ab235d7-05e4-4663-9de8-3a49378a13dc",
+              "content": "2009年11月确诊肺结核，抗结核药治疗约2个月后出现药物相关肝损伤/胆红素升高（患者自述）",
+              "timestamp": 1771494171.0409777,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ac448bd9-2c42-4c7f-8061-f557857ef21e",
+              "content": "胆红素曾长期约500左右，最高约590；近期复查降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.040986,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "14033fd8-8975-453b-8e8f-55b174e1b817",
+              "content": "曾在浙江第一医院住院治疗约20天；当时总胆红素约500，最高约590；出院后在家每日静脉输液治疗；复查胆红素降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.04099,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ca1d93d9-0d5c-4d60-8af5-0dbd4ca01537",
+              "content": "上个月厂里体检发现血压约160mmHg；手抄心电图：心率104bpm，PR 182ms，QRS 120ms，QT/QTc 330/390ms，P/QRS/T电轴72/83/60，RV5/SV1 2.425/1.395mV，RV5+SV1 3.820mV",
+              "timestamp": 1771494191.4614325,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "657a2b8e-cb43-4bb9-80e4-bd8dadb466fa",
+              "content": "医生认为近期头昏头胀、记忆下降、耳鸣可能与夜班劳累有关；年轻人高血压少见，建议排查肾脏疾病、内分泌疾病等继发性高血压原因；建议调节工作压力、注意休息，若血压仍偏高需使用降压药。",
+              "timestamp": 1771494204.8000536,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "364be084-e6e2-4ffa-931e-aa6a18cd4962",
+              "content": "诊断为隐匿性阴茎；于2026-??-21日在厦门第一医院行隐匿性阴茎手术。",
+              "timestamp": 1771494218.5627332,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "第。",
+        "to_memory": [
+          "identity: 患者自述有高血压、心律失常（慢性/基础病）",
+          "identity: 患者自述哮喘、过敏性体质",
+          "history: 上个月厂里体检血压约160mmHg，并提示心律失常",
+          "history: 心电图手抄结果：心率104bpm，PR 182ms，QRS 120ms，QT/QTc 330/390ms，P/QRS/T电轴72/83/60，RV5/SV1 2.425/1.395mV，RV5+SV1 3.820mV",
+          "history: 隐匿性阴茎，21日在厦门第一医院行手术；医生提示术后炎症水肿期，过段时间会好",
+          "working: 近期头昏头胀、记忆下降、耳鸣；夜班工作劳累",
+          "identity: 过敏相关症状：晨起打喷嚏、流鼻涕、鼻塞；打扫卫生诱发；夜间平躺鼻塞加重；偶有胸闷/气短、有痰（晨起黄色豆腐渣样）",
+          "working: 患者在洛阳，咨询当地对口医院治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "eac1c0f3-2f4d-47c3-86dd-20e5ebc130ac",
+              "content": "症状：早起打喷嚏、流鼻涕、鼻塞",
+              "timestamp": 1771494237.001655,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f1761710-3830-4f26-8a43-c30a866ec684",
+              "content": "症状：偶有胸闷/气压感",
+              "timestamp": 1771494237.001659,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "5ca34c30-36b0-47ca-8343-82ca24ed0f21",
+              "content": "痰：有痰，晨起黄色痰，质地呈豆腐渣样",
+              "timestamp": 1771494237.001663,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "34119d2b-6449-48e2-8715-570808328663",
+              "content": "日夜变化：白天较好，夜间平躺后鼻塞加重",
+              "timestamp": 1771494237.0016665,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "2fef6617-43fc-45db-94fa-619bc914c9ac",
+              "content": "诱因：打扫卫生/灰尘等清洁时易诱发打喷嚏、流鼻涕",
+              "timestamp": 1771494237.00167,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "54b1a4cd-a0c9-4e87-8f62-6c1c2fd02596",
+              "content": "现居/所在地：洛阳；咨询当地是否有对口医院治疗。",
+              "timestamp": 1771494250.8089519,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "01e0a4e4-abb1-4cf4-ac26-f03f349e8c52",
+              "content": "近期症状：头昏头胀、记忆下降、耳鸣；夜班工作劳累。",
+              "timestamp": 1771494259.15391,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "identity": [
+            {
+              "id": "29488ef0-1b08-4c7b-b9e2-0cc19c7151ff",
+              "content": "患者，20岁；基础疾病/慢性病：高血压、心律失常",
+              "timestamp": 1771494191.4614146,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "1041a651-1bc9-48fd-940c-04395b1aaad8",
+              "content": "慢性病：哮喘",
+              "timestamp": 1771494237.0016415,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "85e6272b-3e81-401a-879a-b2bb011e5c7a",
+              "content": "体质：过敏性体质",
+              "timestamp": 1771494237.0016506,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "history": [
+            {
+              "id": "4924e717-a589-4e8a-a62d-e51d45147eb0",
+              "content": "医生建议到医院疼痛科就诊",
+              "timestamp": 1771494159.2379105,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5ab235d7-05e4-4663-9de8-3a49378a13dc",
+              "content": "2009年11月确诊肺结核，抗结核药治疗约2个月后出现药物相关肝损伤/胆红素升高（患者自述）",
+              "timestamp": 1771494171.0409777,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ac448bd9-2c42-4c7f-8061-f557857ef21e",
+              "content": "胆红素曾长期约500左右，最高约590；近期复查降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.040986,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "14033fd8-8975-453b-8e8f-55b174e1b817",
+              "content": "曾在浙江第一医院住院治疗约20天；当时总胆红素约500，最高约590；出院后在家每日静脉输液治疗；复查胆红素降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.04099,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ca1d93d9-0d5c-4d60-8af5-0dbd4ca01537",
+              "content": "上个月厂里体检发现血压约160mmHg；手抄心电图：心率104bpm，PR 182ms，QRS 120ms，QT/QTc 330/390ms，P/QRS/T电轴72/83/60，RV5/SV1 2.425/1.395mV，RV5+SV1 3.820mV",
+              "timestamp": 1771494191.4614325,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "657a2b8e-cb43-4bb9-80e4-bd8dadb466fa",
+              "content": "医生认为近期头昏头胀、记忆下降、耳鸣可能与夜班劳累有关；年轻人高血压少见，建议排查肾脏疾病、内分泌疾病等继发性高血压原因；建议调节工作压力、注意休息，若血压仍偏高需使用降压药。",
+              "timestamp": 1771494204.8000536,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "364be084-e6e2-4ffa-931e-aa6a18cd4962",
+              "content": "诊断为隐匿性阴茎；于2026-??-21日在厦门第一医院行隐匿性阴茎手术；医生提示术后为炎症水肿期，后续会逐渐好转。",
+              "timestamp": 1771494218.5627332,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "29488ef0-1b08-4c7b-b9e2-0cc19c7151ff",
+              "content": "患者，20岁；基础疾病/慢性病：高血压、心律失常",
+              "timestamp": 1771494191.4614146,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "1041a651-1bc9-48fd-940c-04395b1aaad8",
+              "content": "慢性病：哮喘",
+              "timestamp": 1771494237.0016415,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "85e6272b-3e81-401a-879a-b2bb011e5c7a",
+              "content": "体质：过敏性体质",
+              "timestamp": 1771494237.0016506,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "history": [
+            {
+              "id": "4924e717-a589-4e8a-a62d-e51d45147eb0",
+              "content": "医生建议到医院疼痛科就诊",
+              "timestamp": 1771494159.2379105,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5ab235d7-05e4-4663-9de8-3a49378a13dc",
+              "content": "2009年11月确诊肺结核，抗结核药治疗约2个月后出现药物相关肝损伤/胆红素升高（患者自述）",
+              "timestamp": 1771494171.0409777,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ac448bd9-2c42-4c7f-8061-f557857ef21e",
+              "content": "胆红素曾长期约500左右，最高约590；近期复查降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.040986,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "14033fd8-8975-453b-8e8f-55b174e1b817",
+              "content": "曾在浙江第一医院住院治疗约20天；当时总胆红素约500，最高约590；出院后在家每日静脉输液治疗；复查胆红素降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.04099,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ca1d93d9-0d5c-4d60-8af5-0dbd4ca01537",
+              "content": "上个月厂里体检发现血压约160mmHg；手抄心电图：心率104bpm，PR 182ms，QRS 120ms，QT/QTc 330/390ms，P/QRS/T电轴72/83/60，RV5/SV1 2.425/1.395mV，RV5+SV1 3.820mV",
+              "timestamp": 1771494191.4614325,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "657a2b8e-cb43-4bb9-80e4-bd8dadb466fa",
+              "content": "医生认为近期头昏头胀、记忆下降、耳鸣可能与夜班劳累有关；年轻人高血压少见，建议排查肾脏疾病、内分泌疾病等继发性高血压原因；建议调节工作压力、注意休息，若血压仍偏高需使用降压药。",
+              "timestamp": 1771494204.8000536,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "364be084-e6e2-4ffa-931e-aa6a18cd4962",
+              "content": "诊断为隐匿性阴茎；于2026-??-21日在厦门第一医院行隐匿性阴茎手术；医生提示术后为炎症水肿期，后续会逐渐好转。",
+              "timestamp": 1771494218.5627332,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "癫痫，2009年五月份脑袋痛睡觉抽咬牙吉林省长春市吉林医大一院。",
+        "to_memory": [
+          "identity: 癫痫（慢性病）",
+          "history: 2009年5月因头痛、睡觉时抽搐伴咬牙就诊于吉林省长春市吉林医大一院"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "29488ef0-1b08-4c7b-b9e2-0cc19c7151ff",
+              "content": "患者，20岁；基础疾病/慢性病：高血压、心律失常",
+              "timestamp": 1771494191.4614146,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "1041a651-1bc9-48fd-940c-04395b1aaad8",
+              "content": "慢性病：哮喘",
+              "timestamp": 1771494237.0016415,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "85e6272b-3e81-401a-879a-b2bb011e5c7a",
+              "content": "体质：过敏性体质",
+              "timestamp": 1771494237.0016506,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c1576601-9825-46ce-8923-fd97896ec33f",
+              "content": "慢性病：癫痫",
+              "timestamp": 1771494263.076185,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "history": [
+            {
+              "id": "4924e717-a589-4e8a-a62d-e51d45147eb0",
+              "content": "医生建议到医院疼痛科就诊",
+              "timestamp": 1771494159.2379105,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5ab235d7-05e4-4663-9de8-3a49378a13dc",
+              "content": "2009年11月确诊肺结核，抗结核药治疗约2个月后出现药物相关肝损伤/胆红素升高（患者自述）",
+              "timestamp": 1771494171.0409777,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ac448bd9-2c42-4c7f-8061-f557857ef21e",
+              "content": "胆红素曾长期约500左右，最高约590；近期复查降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.040986,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "14033fd8-8975-453b-8e8f-55b174e1b817",
+              "content": "曾在浙江第一医院住院治疗约20天；当时总胆红素约500，最高约590；出院后在家每日静脉输液治疗；复查胆红素降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.04099,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ca1d93d9-0d5c-4d60-8af5-0dbd4ca01537",
+              "content": "上个月厂里体检发现血压约160mmHg；手抄心电图：心率104bpm，PR 182ms，QRS 120ms，QT/QTc 330/390ms，P/QRS/T电轴72/83/60，RV5/SV1 2.425/1.395mV，RV5+SV1 3.820mV",
+              "timestamp": 1771494191.4614325,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "657a2b8e-cb43-4bb9-80e4-bd8dadb466fa",
+              "content": "医生认为近期头昏头胀、记忆下降、耳鸣可能与夜班劳累有关；年轻人高血压少见，建议排查肾脏疾病、内分泌疾病等继发性高血压原因；建议调节工作压力、注意休息，若血压仍偏高需使用降压药。",
+              "timestamp": 1771494204.8000536,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "364be084-e6e2-4ffa-931e-aa6a18cd4962",
+              "content": "诊断为隐匿性阴茎；于2026-??-21日在厦门第一医院行隐匿性阴茎手术；医生提示术后为炎症水肿期，后续会逐渐好转。",
+              "timestamp": 1771494218.5627332,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "c9fb4009-90d6-4f4f-b017-334a7df9817b",
+              "content": "2009年5月因头痛、睡觉时抽搐伴咬牙就诊于吉林省长春市吉林医大一院",
+              "timestamp": 1771494263.076195,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你提供信息过于简单。",
+        "to_memory": [
+          "history: 隐匿性阴茎，21日在厦门第一医院进行手术（术后）",
+          "identity: 哮喘",
+          "identity: 过敏性体质",
+          "working: 早起打喷嚏、流鼻涕、鼻塞；有时胸闷/气紧；晨起黄痰呈豆腐渣样；白天较好，夜间平躺鼻塞加重；打扫卫生诱发喷嚏流涕",
+          "working: 居住地洛阳，咨询当地对口医院治疗",
+          "identity: 癫痫",
+          "history: 2009年5月发作：头痛后睡觉时抽搐、咬牙；曾就诊吉林省长春市吉林医大一院"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "472ebb41-cf98-4ae4-9b33-d959b9a2576d",
+              "content": "症状：早起打喷嚏、流鼻涕、鼻塞；有时胸闷/气紧；晨起黄痰呈豆腐渣样；白天较好；夜间平躺鼻塞加重；打扫卫生诱发喷嚏流涕。",
+              "timestamp": 1771494269.7697027,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "a9acf8af-bf0e-45f5-90c4-a0d6d24efc4b",
+              "content": "居住地洛阳；希望咨询当地对口医院治疗。",
+              "timestamp": 1771494269.7697108,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "identity": [
+            {
+              "id": "29488ef0-1b08-4c7b-b9e2-0cc19c7151ff",
+              "content": "患者，20岁；基础疾病/慢性病：高血压、心律失常",
+              "timestamp": 1771494191.4614146,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "1041a651-1bc9-48fd-940c-04395b1aaad8",
+              "content": "慢性病：哮喘",
+              "timestamp": 1771494237.0016415,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "85e6272b-3e81-401a-879a-b2bb011e5c7a",
+              "content": "体质：过敏性体质",
+              "timestamp": 1771494237.0016506,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c1576601-9825-46ce-8923-fd97896ec33f",
+              "content": "慢性病：癫痫",
+              "timestamp": 1771494263.076185,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "history": [
+            {
+              "id": "4924e717-a589-4e8a-a62d-e51d45147eb0",
+              "content": "医生建议到医院疼痛科就诊",
+              "timestamp": 1771494159.2379105,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "5ab235d7-05e4-4663-9de8-3a49378a13dc",
+              "content": "2009年11月确诊肺结核，抗结核药治疗约2个月后出现药物相关肝损伤/胆红素升高（患者自述）",
+              "timestamp": 1771494171.0409777,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ac448bd9-2c42-4c7f-8061-f557857ef21e",
+              "content": "胆红素曾长期约500左右，最高约590；近期复查降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.040986,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "14033fd8-8975-453b-8e8f-55b174e1b817",
+              "content": "曾在浙江第一医院住院治疗约20天；当时总胆红素约500，最高约590；出院后在家每日静脉输液治疗；复查胆红素降至300多后再次住院（具体为总胆红素未注明）",
+              "timestamp": 1771494171.04099,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "ca1d93d9-0d5c-4d60-8af5-0dbd4ca01537",
+              "content": "上个月厂里体检发现血压约160mmHg；手抄心电图：心率104bpm，PR 182ms，QRS 120ms，QT/QTc 330/390ms，P/QRS/T电轴72/83/60，RV5/SV1 2.425/1.395mV，RV5+SV1 3.820mV",
+              "timestamp": 1771494191.4614325,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "657a2b8e-cb43-4bb9-80e4-bd8dadb466fa",
+              "content": "医生认为近期头昏头胀、记忆下降、耳鸣可能与夜班劳累有关；年轻人高血压少见，建议排查肾脏疾病、内分泌疾病等继发性高血压原因；建议调节工作压力、注意休息，若血压仍偏高需使用降压药。",
+              "timestamp": 1771494204.8000536,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "364be084-e6e2-4ffa-931e-aa6a18cd4962",
+              "content": "诊断为隐匿性阴茎；于2026-??-21日在厦门第一医院行隐匿性阴茎手术；医生提示术后为炎症水肿期，后续会逐渐好转。",
+              "timestamp": 1771494218.5627332,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "c9fb4009-90d6-4f4f-b017-334a7df9817b",
+              "content": "2009年5月因头痛、睡觉时抽搐伴咬牙就诊于吉林省长春市吉林医大一院",
+              "timestamp": 1771494263.076195,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者既往被记录的慢性病与近期体检中发现的心血管相关异常是否需要做用药或进一步检查方面的安全性核对？请说明需要重点核对的那项慢性病是什么。",
+          "answer": "癫痫",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "ca1d93d9-0d5c-4d60-8af5-0dbd4ca01537"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "c1576601-9825-46ce-8923-fd97896ec33f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            12,
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "comorbidity_management",
+    "scenario_name": "多疾病共病管理",
+    "session_count": 6,
+    "group_key": "综合科"
+  }
+}

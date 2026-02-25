@@ -1,0 +1,1861 @@
+{
+  "patient_id": "22fe7a371499",
+  "messages": [
+    {
+      "user": {
+        "content": "痔疮，肛门边上有肿块，外面看不见红肿，摸上去很痛。有10天左右了。",
+        "to_memory": [
+          "working: 主诉痔疮相关不适，肛门边上有肿块，外观无明显红肿，触摸疼痛，病程约10天"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "618c41e5-be5f-4d82-86fe-b598f92c13b9",
+              "content": "主诉痔疮相关不适：肛门边上有肿块，外观无明显红肿，触摸疼痛，病程约10天",
+              "timestamp": 1771494025.7345428,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者这次就诊主要描述了哪些不适或体征？",
+          "answer": "肛门边上有肿块，外观无明显红肿，触摸疼痛，症状已持续约10天，考虑痔疮相关不适。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "618c41e5-be5f-4d82-86fe-b598f92c13b9"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "应该到医院看看，有可能是肛窦炎。",
+        "to_memory": [
+          "working: 主诉痔疮相关不适：肛门边有肿块，外观无明显红肿，触痛明显，持续约10天",
+          "working: 医生提示可能为肛窦炎，建议到医院就诊检查"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "618c41e5-be5f-4d82-86fe-b598f92c13b9",
+              "content": "主诉痔疮相关不适：肛门边有肿块，外观无明显红肿，触痛明显，持续约10天；医生提示可能为肛窦炎，建议到医院就诊检查",
+              "timestamp": 1771494025.7345428,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "医生在本次对话中认为患者的情况可能与哪种疾病有关？",
+          "answer": "肛窦炎",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "618c41e5-be5f-4d82-86fe-b598f92c13b9"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "乳腺增生，双乳乳腺增生，发病已经有5个月左右，曾经吃过乳癖消、平消胶囊，在该院就诊做的彩超，现在停药后还有疼痛，有没有特效药，怎么这么长的时间还没有好。现在我的年龄55岁。月经已经停经两年。请问吃什么中成药疗效最好。",
+        "to_memory": [
+          "identity: 患者55岁；已停经2年（绝经后状态）",
+          "history: 既往诊断/病史：双乳乳腺增生，病程约5个月；曾在医院就诊并做过乳腺彩超；曾用药：乳癖消、平消胶囊（现已停药）",
+          "working: 当前仍有乳房疼痛，询问是否有特效药及何种中成药疗效最好；担心病程久未好转"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "49268927-ea0f-4d90-8b88-d4fe324db656",
+              "content": "当前仍有乳房疼痛，询问是否有特效药及何种中成药疗效最好；担心病程久未好转。",
+              "timestamp": 1771494040.685418,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [
+            {
+              "id": "4ff73544-389f-4f30-ab3b-4246c8c2c697",
+              "content": "患者55岁，已停经2年（绝经后状态）。",
+              "timestamp": 1771494040.685396,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "86addd80-701d-42a3-bb94-ef99e09cc9de",
+              "content": "既往诊断/病史：双乳乳腺增生，病程约5个月；曾在医院就诊并做过乳腺彩超；曾用药：乳癖消、平消胶囊（现已停药）。",
+              "timestamp": 1771494040.6854103,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者在咨询中提到的生理状态（与年龄及月经情况相关）对其后续自行选择或使用药物是否存在需要额外谨慎的安全点？请说明该状态是什么。",
+          "answer": "患者55岁，已停经2年（绝经后状态）。",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "4ff73544-389f-4f30-ab3b-4246c8c2c697"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "49268927-ea0f-4d90-8b88-d4fe324db656"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "乳痛丸，乳痛胶囊，平消片，平消胶囊等多种药物都可以。",
+        "to_memory": [
+          "identity: 患者55岁，已停经2年",
+          "identity: 目前主诉双乳疼痛，既往自述双乳乳腺增生，病程约5个月，停药后仍疼痛",
+          "history: 曾用药：乳癖消、平消胶囊（现已停药）",
+          "history: 曾在医院就诊并做过乳腺彩超（结果未提供）",
+          "history: 医生建议可选用药：乳痛丸、乳痛胶囊、平消片、平消胶囊"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "49268927-ea0f-4d90-8b88-d4fe324db656",
+              "content": "当前仍有乳房疼痛，询问是否有特效药及何种中成药疗效最好；担心病程久未好转。",
+              "timestamp": 1771494040.685418,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [
+            {
+              "id": "4ff73544-389f-4f30-ab3b-4246c8c2c697",
+              "content": "患者55岁，已停经2年（绝经后状态）。",
+              "timestamp": 1771494040.685396,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "86addd80-701d-42a3-bb94-ef99e09cc9de",
+              "content": "既往诊断/病史：双乳乳腺增生，病程约5个月；曾在医院就诊并做过乳腺彩超；曾用药：乳癖消、平消胶囊（现已停药）。",
+              "timestamp": 1771494040.6854103,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "879e5f2d-ec5a-4fe9-9b03-76228e250ed1",
+              "content": "医生曾建议可选用药：乳痛丸、乳痛胶囊、平消片、平消胶囊。",
+              "timestamp": 1771494047.47231,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者在本次咨询中目前最困扰、仍未缓解的主要不适是什么？",
+          "answer": "乳房仍有疼痛。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "49268927-ea0f-4d90-8b88-d4fe324db656"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "十分感谢，祝您一切顺利、万事如意！",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "49268927-ea0f-4d90-8b88-d4fe324db656",
+              "content": "当前仍有乳房疼痛，询问是否有特效药及何种中成药疗效最好；担心病程久未好转。",
+              "timestamp": 1771494040.685418,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [
+            {
+              "id": "4ff73544-389f-4f30-ab3b-4246c8c2c697",
+              "content": "患者55岁，已停经2年（绝经后状态）。",
+              "timestamp": 1771494040.685396,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "86addd80-701d-42a3-bb94-ef99e09cc9de",
+              "content": "既往诊断/病史：双乳乳腺增生，病程约5个月；曾在医院就诊并做过乳腺彩超；曾用药：乳癖消、平消胶囊（现已停药）。",
+              "timestamp": 1771494040.6854103,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "879e5f2d-ec5a-4fe9-9b03-76228e250ed1",
+              "content": "医生曾建议可选用药：乳痛丸、乳痛胶囊、平消片、平消胶囊。",
+              "timestamp": 1771494047.47231,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "不客气.",
+        "to_memory": [
+          "identity: 患者55岁，已停经2年",
+          "working: 近10天肛门边有肿块，外观无明显红肿，触痛明显；医生提示可能为肛窦炎，建议到医院就诊",
+          "working: 双乳乳腺增生约5个月，停药后仍有乳房疼痛",
+          "history: 曾使用乳癖消、平消胶囊；曾在医院就诊并做过乳腺彩超检查（结果未提供）；医生建议可用乳痛丸/乳痛胶囊/平消片/平消胶囊等"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "49268927-ea0f-4d90-8b88-d4fe324db656",
+              "content": "当前仍有乳房疼痛，询问是否有特效药及何种中成药疗效最好；担心病程久未好转。",
+              "timestamp": 1771494040.685418,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "c61a1116-059a-4f3e-8d74-b6862c0a1ac2",
+              "content": "近10天肛门边有肿块，外观无明显红肿，触痛明显；医生提示可能为肛窦炎，建议到医院就诊。",
+              "timestamp": 1771494056.392483,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [
+            {
+              "id": "4ff73544-389f-4f30-ab3b-4246c8c2c697",
+              "content": "患者55岁，已停经2年（绝经后状态）。",
+              "timestamp": 1771494040.685396,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "86addd80-701d-42a3-bb94-ef99e09cc9de",
+              "content": "既往诊断/病史：双乳乳腺增生，病程约5个月；曾在医院就诊并做过乳腺彩超；曾用药：乳癖消、平消胶囊（现已停药）。",
+              "timestamp": 1771494040.6854103,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "879e5f2d-ec5a-4fe9-9b03-76228e250ed1",
+              "content": "医生曾建议可选用药：乳痛丸、乳痛胶囊、平消片、平消胶囊。",
+              "timestamp": 1771494047.47231,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "针对患者这次因乳房问题复诊时仍有疼痛、询问更有效药物的情况，医生当时提到可供选择的中成药有哪些？请列出名称。",
+          "answer": "乳痛丸、乳痛胶囊、平消片、平消胶囊。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "879e5f2d-ec5a-4fe9-9b03-76228e250ed1"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "49268927-ea0f-4d90-8b88-d4fe324db656"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            2,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "4ff73544-389f-4f30-ab3b-4246c8c2c697",
+              "content": "患者55岁，已停经2年（绝经后状态）。",
+              "timestamp": 1771494040.685396,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "86addd80-701d-42a3-bb94-ef99e09cc9de",
+              "content": "既往诊断/病史：双乳乳腺增生，病程约5个月；曾在医院就诊并做过乳腺彩超；曾用药：乳癖消、平消胶囊（现已停药）。",
+              "timestamp": 1771494040.6854103,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "879e5f2d-ec5a-4fe9-9b03-76228e250ed1",
+              "content": "医生曾建议可选用药：乳痛丸、乳痛胶囊、平消片、平消胶囊。",
+              "timestamp": 1771494047.47231,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "系统性红斑狼疮，上午老是会脸红。",
+        "to_memory": [
+          "identity: 55岁，已停经2年",
+          "history: 乳腺增生（双乳），病程约5个月；曾用药：乳癖消、平消胶囊；在院做过乳腺彩超；医生建议可用：乳痛丸/乳痛胶囊/平消片/平消胶囊等",
+          "working: 系统性红斑狼疮；上午经常脸红"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d2136e51-b982-4959-b929-92e4acb638e7",
+              "content": "合并症/基础病：系统性红斑狼疮；症状：上午经常脸红。",
+              "timestamp": 1771494062.3460429,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "4ff73544-389f-4f30-ab3b-4246c8c2c697",
+              "content": "患者55岁，已停经2年（绝经后状态）。",
+              "timestamp": 1771494040.685396,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "86addd80-701d-42a3-bb94-ef99e09cc9de",
+              "content": "既往诊断/病史：双乳乳腺增生，病程约5个月；曾在医院就诊并做过乳腺彩超；曾用药：乳癖消、平消胶囊（现已停药）。",
+              "timestamp": 1771494040.6854103,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "879e5f2d-ec5a-4fe9-9b03-76228e250ed1",
+              "content": "医生曾建议可选用药：乳痛丸、乳痛胶囊、平消片、平消胶囊。",
+              "timestamp": 1771494047.47231,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "在诊疗分割线之后，患者新提到的基础疾病是什么？",
+          "answer": "系统性红斑狼疮",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "d2136e51-b982-4959-b929-92e4acb638e7"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你好。资料不是很详细。服用中药前是否脸红？如果没有，可能与中药有关。可以暂时停用，观察。",
+        "to_memory": [
+          "identity: 患者，55岁，已停经2年",
+          "history: 既往/合并症：系统性红斑狼疮（SLE）",
+          "history: 既往诊疗：双乳乳腺增生约5个月；曾用药乳癖消、平消胶囊；做过乳腺彩超；医生曾建议可用乳痛丸/乳痛胶囊/平消片/平消胶囊等",
+          "history: 既往就诊：10天肛门旁肿块触痛，医生提示可能肛窦炎并建议到医院就诊",
+          "history: 当前主诉：上午经常脸红；医生询问服用中药前是否脸红，考虑可能与中药相关，建议暂时停用观察"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d2136e51-b982-4959-b929-92e4acb638e7",
+              "content": "合并症/基础病：系统性红斑狼疮（SLE）；症状：上午经常脸红；处置建议：医生询问服用中药前是否脸红，考虑可能与中药相关，建议暂时停用观察。",
+              "timestamp": 1771494062.3460429,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "4ff73544-389f-4f30-ab3b-4246c8c2c697",
+              "content": "患者55岁，已停经2年（绝经后状态）。",
+              "timestamp": 1771494040.685396,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "86addd80-701d-42a3-bb94-ef99e09cc9de",
+              "content": "既往诊断/病史：双乳乳腺增生，病程约5个月；曾在医院就诊并做过乳腺彩超；曾用药：乳癖消、平消胶囊（现已停药）。",
+              "timestamp": 1771494040.6854103,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "879e5f2d-ec5a-4fe9-9b03-76228e250ed1",
+              "content": "医生曾建议可选用药：乳痛丸、乳痛胶囊、平消片、平消胶囊。",
+              "timestamp": 1771494047.47231,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "36d26a11-bad1-48a6-9beb-4e0b3f3cf5dd",
+              "content": "既往就诊：10天肛门旁肿块触痛，医生提示可能肛窦炎并建议到医院就诊。",
+              "timestamp": 1771494073.4284809,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者在诊疗分割线之后提到自己有哪种基础疾病？",
+          "answer": "系统性红斑狼疮",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "d2136e51-b982-4959-b929-92e4acb638e7"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "服用中药前不会脸红，可我们给中药大夫打电话，他们说中药不会导致脸红。",
+        "to_memory": [
+          "history: 患者系统性红斑狼疮，服用中药后上午经常脸红；服用中药前不会脸红；联系中药医生称中药不会导致脸红"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d2136e51-b982-4959-b929-92e4acb638e7",
+              "content": "合并症/基础病：系统性红斑狼疮（SLE）；症状：上午经常脸红；病程关联：服用中药后开始出现，服用中药前不会脸红；处置建议：曾考虑与中药相关并建议暂时停用观察；补充信息：已联系中药医生，对方称中药不会导致脸红。",
+              "timestamp": 1771494062.3460429,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "4ff73544-389f-4f30-ab3b-4246c8c2c697",
+              "content": "患者55岁，已停经2年（绝经后状态）。",
+              "timestamp": 1771494040.685396,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "86addd80-701d-42a3-bb94-ef99e09cc9de",
+              "content": "既往诊断/病史：双乳乳腺增生，病程约5个月；曾在医院就诊并做过乳腺彩超；曾用药：乳癖消、平消胶囊（现已停药）。",
+              "timestamp": 1771494040.6854103,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "879e5f2d-ec5a-4fe9-9b03-76228e250ed1",
+              "content": "医生曾建议可选用药：乳痛丸、乳痛胶囊、平消片、平消胶囊。",
+              "timestamp": 1771494047.47231,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "36d26a11-bad1-48a6-9beb-4e0b3f3cf5dd",
+              "content": "既往就诊：10天肛门旁肿块触痛，医生提示可能肛窦炎并建议到医院就诊。",
+              "timestamp": 1771494073.4284809,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "根据既往病史记录，这位患者目前距离最后一次月经停止已经多长时间？",
+          "answer": "已停经2年",
+          "source": [
+            {
+              "layer": "identity",
+              "ids": [
+                "4ff73544-389f-4f30-ab3b-4246c8c2c697"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            7
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你好。不知你的脸红如何表现？是全部还是局部？是否发痒？可去风湿免疫科或皮科就诊。有时为血管扩张，有的为皮疹。要请大夫看过才好诊断。",
+        "to_memory": [
+          "identity: 患者55岁，已停经2年",
+          "history: 乳腺增生（双乳），病程约5个月；曾做乳腺彩超；曾用药乳癖消、平消胶囊（后停药仍有疼痛）；医生曾建议可用乳痛丸/乳痛胶囊/平消片/平消胶囊等",
+          "history: 系统性红斑狼疮",
+          "history: 近期上午经常脸红；服用中药前不脸红，服用中药后出现脸红；脸红表现范围及是否瘙痒尚不明确",
+          "working: 医生建议到风湿免疫科或皮肤科就诊，面诊以鉴别血管扩张或皮疹"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d2136e51-b982-4959-b929-92e4acb638e7",
+              "content": "合并症/基础病：系统性红斑狼疮（SLE）；症状：近期上午经常脸红；病程关联：服用中药后开始出现，服用中药前不会脸红；症状细节待补充：脸红范围及是否瘙痒不明确；处置建议：建议到风湿免疫科或皮肤科面诊，鉴别血管扩张或皮疹；补充信息：已联系中药医生，对方称中药不会导致脸红。",
+              "timestamp": 1771494062.3460429,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "4ff73544-389f-4f30-ab3b-4246c8c2c697",
+              "content": "患者55岁，已停经2年（绝经后状态）。",
+              "timestamp": 1771494040.685396,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "86addd80-701d-42a3-bb94-ef99e09cc9de",
+              "content": "既往诊断/病史：双乳乳腺增生，病程约5个月；曾在医院就诊并做过乳腺彩超；曾用药：乳癖消、平消胶囊（现已停药）。",
+              "timestamp": 1771494040.6854103,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "879e5f2d-ec5a-4fe9-9b03-76228e250ed1",
+              "content": "医生曾建议可选用药：乳痛丸、乳痛胶囊、平消片、平消胶囊。",
+              "timestamp": 1771494047.47231,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "36d26a11-bad1-48a6-9beb-4e0b3f3cf5dd",
+              "content": "既往就诊：10天肛门旁肿块触痛，医生提示可能肛窦炎并建议到医院就诊。",
+              "timestamp": 1771494073.4284809,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者在出现本次面部症状前和出现后两个阶段：患者描述该症状与服用某类药物之间的时间关系是怎样的？",
+          "answer": "脸红是在服用中药后开始出现的；服用中药前不会脸红。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "86addd80-701d-42a3-bb94-ef99e09cc9de"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "d2136e51-b982-4959-b929-92e4acb638e7"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            8,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "就是两颊，每天上午就会红，下午就会转变正常了。",
+        "to_memory": [
+          "working: 面部潮红表现为双颊发红，每天上午出现，下午转为正常"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d2136e51-b982-4959-b929-92e4acb638e7",
+              "content": "合并症/基础病：系统性红斑狼疮（SLE）；症状：面部潮红/脸红，表现为双颊发红；时间规律：每天上午出现，下午转为正常；病程关联：服用中药后开始出现，服用中药前不会脸红；症状细节待补充：是否瘙痒不明确；处置建议：建议到风湿免疫科或皮肤科面诊，鉴别血管扩张或皮疹；补充信息：已联系中药医生，对方称中药不会导致脸红。",
+              "timestamp": 1771494062.3460429,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "4ff73544-389f-4f30-ab3b-4246c8c2c697",
+              "content": "患者55岁，已停经2年（绝经后状态）。",
+              "timestamp": 1771494040.685396,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "86addd80-701d-42a3-bb94-ef99e09cc9de",
+              "content": "既往诊断/病史：双乳乳腺增生，病程约5个月；曾在医院就诊并做过乳腺彩超；曾用药：乳癖消、平消胶囊（现已停药）。",
+              "timestamp": 1771494040.6854103,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "879e5f2d-ec5a-4fe9-9b03-76228e250ed1",
+              "content": "医生曾建议可选用药：乳痛丸、乳痛胶囊、平消片、平消胶囊。",
+              "timestamp": 1771494047.47231,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "36d26a11-bad1-48a6-9beb-4e0b3f3cf5dd",
+              "content": "既往就诊：10天肛门旁肿块触痛，医生提示可能肛窦炎并建议到医院就诊。",
+              "timestamp": 1771494073.4284809,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者在开始服用某治疗方案之前与之后，本次咨询中出现的面部相关症状在发生时间规律上有什么变化？",
+          "answer": "服用中药前不会脸红；服用中药后开始出现，每天上午两颊发红，下午恢复正常。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "879e5f2d-ec5a-4fe9-9b03-76228e250ed1"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "d2136e51-b982-4959-b929-92e4acb638e7"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            8,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你好。应该与红斑狼疮病情关系不大。继续观察。因未见到病人，意见仅供参考。",
+        "to_memory": [
+          "history: 系统性红斑狼疮患者，近来每天上午两颊发红，下午恢复正常；服用中药前无脸红，现怀疑与用药或其他因素相关；医生认为与红斑狼疮病情关系不大，建议继续观察"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "d2136e51-b982-4959-b929-92e4acb638e7",
+              "content": "合并症/基础病：系统性红斑狼疮（SLE）；症状：面部潮红/脸红，表现为双颊发红；时间规律：每天上午出现，下午转为正常；病程关联：服用中药后开始出现，服用中药前不会脸红，现怀疑与用药或其他因素相关；医生评估：认为与SLE病情关系不大，建议继续观察；症状细节待补充：是否瘙痒不明确；处置建议：必要时到风湿免疫科或皮肤科面诊，鉴别血管扩张或皮疹；补充信息：已联系中药医生，对方称中药不会导致脸红。",
+              "timestamp": 1771494062.3460429,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [
+            {
+              "id": "4ff73544-389f-4f30-ab3b-4246c8c2c697",
+              "content": "患者55岁，已停经2年（绝经后状态）。",
+              "timestamp": 1771494040.685396,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "86addd80-701d-42a3-bb94-ef99e09cc9de",
+              "content": "既往诊断/病史：双乳乳腺增生，病程约5个月；曾在医院就诊并做过乳腺彩超；曾用药：乳癖消、平消胶囊（现已停药）。",
+              "timestamp": 1771494040.6854103,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "879e5f2d-ec5a-4fe9-9b03-76228e250ed1",
+              "content": "医生曾建议可选用药：乳痛丸、乳痛胶囊、平消片、平消胶囊。",
+              "timestamp": 1771494047.47231,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "36d26a11-bad1-48a6-9beb-4e0b3f3cf5dd",
+              "content": "既往就诊：10天肛门旁肿块触痛，医生提示可能肛窦炎并建议到医院就诊。",
+              "timestamp": 1771494073.4284809,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "4ff73544-389f-4f30-ab3b-4246c8c2c697",
+              "content": "患者55岁，已停经2年（绝经后状态）。",
+              "timestamp": 1771494040.685396,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "86addd80-701d-42a3-bb94-ef99e09cc9de",
+              "content": "既往诊断/病史：双乳乳腺增生，病程约5个月；曾在医院就诊并做过乳腺彩超；曾用药：乳癖消、平消胶囊（现已停药）。",
+              "timestamp": 1771494040.6854103,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "879e5f2d-ec5a-4fe9-9b03-76228e250ed1",
+              "content": "医生曾建议可选用药：乳痛丸、乳痛胶囊、平消片、平消胶囊。",
+              "timestamp": 1771494047.47231,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "36d26a11-bad1-48a6-9beb-4e0b3f3cf5dd",
+              "content": "既往就诊：10天肛门旁肿块触痛，医生提示可能肛窦炎并建议到医院就诊。",
+              "timestamp": 1771494073.4284809,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "过敏性流涕.咳嗽，小儿从上幼儿园(除了夏季)开始基本上就不离流涕.咳嗽,反反复复.每次差不多都要15天左右才好。可是没1.2天又反复.小时候湿疹严重.有过一次急性蕈麻疹,爸爸有过敏性鼻炎。谢谢您!如果是过敏性的咳嗽可以给他先用什么药了,什么计量？",
+        "to_memory": [
+          "identity: 家族史：父亲有过敏性鼻炎",
+          "history: 既往史：小时候湿疹严重；曾有一次急性荨麻疹",
+          "identity: 主诉/现病史：小儿反复过敏性流涕、咳嗽；自上幼儿园起（除夏季外）基本持续流涕咳嗽，反反复复；每次约15天好转，但1-2天后又复发；询问若为过敏性咳嗽可先用什么药及剂量"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "4ff73544-389f-4f30-ab3b-4246c8c2c697",
+              "content": "患者55岁，已停经2年（绝经后状态）。",
+              "timestamp": 1771494040.685396,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "86addd80-701d-42a3-bb94-ef99e09cc9de",
+              "content": "既往诊断/病史：双乳乳腺增生，病程约5个月；曾在医院就诊并做过乳腺彩超；曾用药：乳癖消、平消胶囊（现已停药）。",
+              "timestamp": 1771494040.6854103,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "879e5f2d-ec5a-4fe9-9b03-76228e250ed1",
+              "content": "医生曾建议可选用药：乳痛丸、乳痛胶囊、平消片、平消胶囊。",
+              "timestamp": 1771494047.47231,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "36d26a11-bad1-48a6-9beb-4e0b3f3cf5dd",
+              "content": "既往就诊：10天肛门旁肿块触痛，医生提示可能肛窦炎并建议到医院就诊。",
+              "timestamp": 1771494073.4284809,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "f4680c60-9ddf-42e7-88fc-b73ef5b5f261",
+              "content": "家族史：父亲有过敏性鼻炎。",
+              "timestamp": 1771494112.443297,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "9af6592a-c667-4ed9-94ad-6d92d1e4db12",
+              "content": "既往史：小时候湿疹严重；曾有一次急性荨麻疹。",
+              "timestamp": 1771494112.4433084,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "3b36faae-71c2-4362-af46-357dc2bca4ea",
+              "content": "主诉/现病史：小儿反复过敏性流涕、咳嗽；自上幼儿园起（除夏季外）基本持续流涕咳嗽，反反复复；每次约15天好转，但1-2天后又复发；咨询若为过敏性咳嗽可先用什么药及剂量。",
+              "timestamp": 1771494112.4433148,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "在较早一次就诊中，医生曾给出过几种可选用的药物名称。请回忆并列出这些药物；同时结合本次咨询中家长提到的孩子既往过敏相关皮肤病史，说明该既往史具体包括哪些情况。",
+          "answer": "可选用药：乳痛丸、乳痛胶囊、平消片、平消胶囊；既往史：小时候湿疹严重，曾有一次急性荨麻疹。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "879e5f2d-ec5a-4fe9-9b03-76228e250ed1",
+                "9af6592a-c667-4ed9-94ad-6d92d1e4db12"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            11,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "建议用顺尔宁片。每天晚8点口服4mg。连续用一个月。既治咳嗽又治鼻炎。",
+        "to_memory": [
+          "history: 医嘱/处方建议：顺尔宁片（孟鲁司特）4mg，每天晚8点口服，连续用药1个月；用于同时治疗咳嗽与鼻炎"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "4ff73544-389f-4f30-ab3b-4246c8c2c697",
+              "content": "患者55岁，已停经2年（绝经后状态）。",
+              "timestamp": 1771494040.685396,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "86addd80-701d-42a3-bb94-ef99e09cc9de",
+              "content": "既往诊断/病史：双乳乳腺增生，病程约5个月；曾在医院就诊并做过乳腺彩超；曾用药：乳癖消、平消胶囊（现已停药）。",
+              "timestamp": 1771494040.6854103,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "879e5f2d-ec5a-4fe9-9b03-76228e250ed1",
+              "content": "医生曾建议可选用药：乳痛丸、乳痛胶囊、平消片、平消胶囊。",
+              "timestamp": 1771494047.47231,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "36d26a11-bad1-48a6-9beb-4e0b3f3cf5dd",
+              "content": "既往就诊：10天肛门旁肿块触痛，医生提示可能肛窦炎并建议到医院就诊。",
+              "timestamp": 1771494073.4284809,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "f4680c60-9ddf-42e7-88fc-b73ef5b5f261",
+              "content": "家族史：父亲有过敏性鼻炎。",
+              "timestamp": 1771494112.443297,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "9af6592a-c667-4ed9-94ad-6d92d1e4db12",
+              "content": "既往史：小时候湿疹严重；曾有一次急性荨麻疹。",
+              "timestamp": 1771494112.4433084,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "3b36faae-71c2-4362-af46-357dc2bca4ea",
+              "content": "主诉/现病史：小儿反复过敏性流涕、咳嗽；自上幼儿园起（除夏季外）基本持续流涕咳嗽，反反复复；每次约15天好转，但1-2天后又复发；咨询若为过敏性咳嗽可先用什么药及剂量。",
+              "timestamp": 1771494112.4433148,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "ee2c3728-177c-4bc2-8413-b543f9bfb8eb",
+              "content": "医嘱/处方建议：顺尔宁片（孟鲁司特）4mg，每天晚8点口服，连续用药1个月；用于同时治疗咳嗽与鼻炎。",
+              "timestamp": 1771494121.2864075,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "4ff73544-389f-4f30-ab3b-4246c8c2c697",
+              "content": "患者55岁，已停经2年（绝经后状态）。",
+              "timestamp": 1771494040.685396,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "86addd80-701d-42a3-bb94-ef99e09cc9de",
+              "content": "既往诊断/病史：双乳乳腺增生，病程约5个月；曾在医院就诊并做过乳腺彩超；曾用药：乳癖消、平消胶囊（现已停药）。",
+              "timestamp": 1771494040.6854103,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "879e5f2d-ec5a-4fe9-9b03-76228e250ed1",
+              "content": "医生曾建议可选用药：乳痛丸、乳痛胶囊、平消片、平消胶囊。",
+              "timestamp": 1771494047.47231,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "36d26a11-bad1-48a6-9beb-4e0b3f3cf5dd",
+              "content": "既往就诊：10天肛门旁肿块触痛，医生提示可能肛窦炎并建议到医院就诊。",
+              "timestamp": 1771494073.4284809,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "f4680c60-9ddf-42e7-88fc-b73ef5b5f261",
+              "content": "家族史：父亲有过敏性鼻炎。",
+              "timestamp": 1771494112.443297,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "9af6592a-c667-4ed9-94ad-6d92d1e4db12",
+              "content": "既往史：小时候湿疹严重；曾有一次急性荨麻疹。",
+              "timestamp": 1771494112.4433084,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "3b36faae-71c2-4362-af46-357dc2bca4ea",
+              "content": "主诉/现病史：小儿反复过敏性流涕、咳嗽；自上幼儿园起（除夏季外）基本持续流涕咳嗽，反反复复；每次约15天好转，但1-2天后又复发；咨询若为过敏性咳嗽可先用什么药及剂量。",
+              "timestamp": 1771494112.4433148,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "ee2c3728-177c-4bc2-8413-b543f9bfb8eb",
+              "content": "医嘱/处方建议：顺尔宁片（孟鲁司特）4mg，每天晚8点口服，连续用药1个月；用于同时治疗咳嗽与鼻炎。",
+              "timestamp": 1771494121.2864075,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "肚子疼，象这样的疼痛也不是很多，但已经有几次了，每次都特别难受大汗淋漓的，大约持续几分钟过去以后才不疼了。",
+        "to_memory": [
+          "working: 反复发作性腹痛，发作次数已有几次；每次疼痛剧烈，伴大汗淋漓；持续约几分钟后自行缓解"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "2ae775fb-e79c-46e2-8576-e9408ea201e1",
+              "content": "现病史/症状：反复发作性腹痛，已发作数次；每次疼痛剧烈，伴大汗淋漓；持续约几分钟后可自行缓解。",
+              "timestamp": 1771494126.1221638,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "identity": [
+            {
+              "id": "4ff73544-389f-4f30-ab3b-4246c8c2c697",
+              "content": "患者55岁，已停经2年（绝经后状态）。",
+              "timestamp": 1771494040.685396,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "86addd80-701d-42a3-bb94-ef99e09cc9de",
+              "content": "既往诊断/病史：双乳乳腺增生，病程约5个月；曾在医院就诊并做过乳腺彩超；曾用药：乳癖消、平消胶囊（现已停药）。",
+              "timestamp": 1771494040.6854103,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "879e5f2d-ec5a-4fe9-9b03-76228e250ed1",
+              "content": "医生曾建议可选用药：乳痛丸、乳痛胶囊、平消片、平消胶囊。",
+              "timestamp": 1771494047.47231,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "36d26a11-bad1-48a6-9beb-4e0b3f3cf5dd",
+              "content": "既往就诊：10天肛门旁肿块触痛，医生提示可能肛窦炎并建议到医院就诊。",
+              "timestamp": 1771494073.4284809,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "f4680c60-9ddf-42e7-88fc-b73ef5b5f261",
+              "content": "家族史：父亲有过敏性鼻炎。",
+              "timestamp": 1771494112.443297,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "9af6592a-c667-4ed9-94ad-6d92d1e4db12",
+              "content": "既往史：小时候湿疹严重；曾有一次急性荨麻疹。",
+              "timestamp": 1771494112.4433084,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "3b36faae-71c2-4362-af46-357dc2bca4ea",
+              "content": "主诉/现病史：小儿反复过敏性流涕、咳嗽；自上幼儿园起（除夏季外）基本持续流涕咳嗽，反反复复；每次约15天好转，但1-2天后又复发；咨询若为过敏性咳嗽可先用什么药及剂量。",
+              "timestamp": 1771494112.4433148,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "ee2c3728-177c-4bc2-8413-b543f9bfb8eb",
+              "content": "医嘱/处方建议：顺尔宁片（孟鲁司特）4mg，每天晚8点口服，连续用药1个月；用于同时治疗咳嗽与鼻炎。",
+              "timestamp": 1771494121.2864075,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "排便时发生肠痉挛而腹痛，建议到正规医院就诊，进行必要的检查排除器质性疾病，并适当中医辨病辨证治疗调理。平时注意避免受凉，忌食生冷、酸辣、甜粘等刺激性食物。",
+        "to_memory": [
+          "working: 反复发作腹痛，疑与排便时肠痉挛相关",
+          "history: 医嘱建议至正规医院就诊并进行必要检查以排除器质性疾病，可配合中医辨病辨证调理；日常注意避免受凉，忌食生冷、酸辣、甜粘等刺激性食物"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "2ae775fb-e79c-46e2-8576-e9408ea201e1",
+              "content": "现病史/症状：反复发作性腹痛，已发作数次；每次疼痛剧烈，伴大汗淋漓；持续约几分钟后可自行缓解；疑与排便时肠痉挛相关。",
+              "timestamp": 1771494126.1221638,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "identity": [
+            {
+              "id": "4ff73544-389f-4f30-ab3b-4246c8c2c697",
+              "content": "患者55岁，已停经2年（绝经后状态）。",
+              "timestamp": 1771494040.685396,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "86addd80-701d-42a3-bb94-ef99e09cc9de",
+              "content": "既往诊断/病史：双乳乳腺增生，病程约5个月；曾在医院就诊并做过乳腺彩超；曾用药：乳癖消、平消胶囊（现已停药）。",
+              "timestamp": 1771494040.6854103,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "879e5f2d-ec5a-4fe9-9b03-76228e250ed1",
+              "content": "医生曾建议可选用药：乳痛丸、乳痛胶囊、平消片、平消胶囊。",
+              "timestamp": 1771494047.47231,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "36d26a11-bad1-48a6-9beb-4e0b3f3cf5dd",
+              "content": "既往就诊：10天肛门旁肿块触痛，医生提示可能肛窦炎并建议到医院就诊。",
+              "timestamp": 1771494073.4284809,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "f4680c60-9ddf-42e7-88fc-b73ef5b5f261",
+              "content": "家族史：父亲有过敏性鼻炎。",
+              "timestamp": 1771494112.443297,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "9af6592a-c667-4ed9-94ad-6d92d1e4db12",
+              "content": "既往史：小时候湿疹严重；曾有一次急性荨麻疹。",
+              "timestamp": 1771494112.4433084,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "3b36faae-71c2-4362-af46-357dc2bca4ea",
+              "content": "主诉/现病史：小儿反复过敏性流涕、咳嗽；自上幼儿园起（除夏季外）基本持续流涕咳嗽，反反复复；每次约15天好转，但1-2天后又复发；咨询若为过敏性咳嗽可先用什么药及剂量。",
+              "timestamp": 1771494112.4433148,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "ee2c3728-177c-4bc2-8413-b543f9bfb8eb",
+              "content": "医嘱/处方建议：顺尔宁片（孟鲁司特）4mg，每天晚8点口服，连续用药1个月；用于同时治疗咳嗽与鼻炎。",
+              "timestamp": 1771494121.2864075,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "c3bdac95-1124-4e03-a6ce-54bf746a04c0",
+              "content": "医嘱/建议：建议至正规医院就诊并进行必要检查以排除器质性疾病；可配合中医辨病辨证调理；日常注意避免受凉，忌食生冷、酸辣、甜粘等刺激性食物。",
+              "timestamp": 1771494132.1132848,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者描述这次腹部不适时，每次发作大约会持续多长时间？",
+          "answer": "每次大约持续几分钟，之后可自行缓解。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "2ae775fb-e79c-46e2-8576-e9408ea201e1"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "4ff73544-389f-4f30-ab3b-4246c8c2c697",
+              "content": "患者55岁，已停经2年（绝经后状态）。",
+              "timestamp": 1771494040.685396,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "history": [
+            {
+              "id": "86addd80-701d-42a3-bb94-ef99e09cc9de",
+              "content": "既往诊断/病史：双乳乳腺增生，病程约5个月；曾在医院就诊并做过乳腺彩超；曾用药：乳癖消、平消胶囊（现已停药）。",
+              "timestamp": 1771494040.6854103,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "879e5f2d-ec5a-4fe9-9b03-76228e250ed1",
+              "content": "医生曾建议可选用药：乳痛丸、乳痛胶囊、平消片、平消胶囊。",
+              "timestamp": 1771494047.47231,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "36d26a11-bad1-48a6-9beb-4e0b3f3cf5dd",
+              "content": "既往就诊：10天肛门旁肿块触痛，医生提示可能肛窦炎并建议到医院就诊。",
+              "timestamp": 1771494073.4284809,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "f4680c60-9ddf-42e7-88fc-b73ef5b5f261",
+              "content": "家族史：父亲有过敏性鼻炎。",
+              "timestamp": 1771494112.443297,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "9af6592a-c667-4ed9-94ad-6d92d1e4db12",
+              "content": "既往史：小时候湿疹严重；曾有一次急性荨麻疹。",
+              "timestamp": 1771494112.4433084,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "3b36faae-71c2-4362-af46-357dc2bca4ea",
+              "content": "主诉/现病史：小儿反复过敏性流涕、咳嗽；自上幼儿园起（除夏季外）基本持续流涕咳嗽，反反复复；每次约15天好转，但1-2天后又复发；咨询若为过敏性咳嗽可先用什么药及剂量。",
+              "timestamp": 1771494112.4433148,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "ee2c3728-177c-4bc2-8413-b543f9bfb8eb",
+              "content": "医嘱/处方建议：顺尔宁片（孟鲁司特）4mg，每天晚8点口服，连续用药1个月；用于同时治疗咳嗽与鼻炎。",
+              "timestamp": 1771494121.2864075,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "c3bdac95-1124-4e03-a6ce-54bf746a04c0",
+              "content": "医嘱/建议：建议至正规医院就诊并进行必要检查以排除器质性疾病；可配合中医辨病辨证调理；日常注意避免受凉，忌食生冷、酸辣、甜粘等刺激性食物。",
+              "timestamp": 1771494132.1132848,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "头晕，高血压，脑血管病，今天早晨五点多，头晕，恶心、呕吐。送到医院，当时血压高压2000，七点多就基本正常了。",
+        "to_memory": [
+          "identity: 患者有高血压、脑血管病史",
+          "working: 今日凌晨5点多突发头晕，伴恶心、呕吐；已送医院就诊",
+          "history: 当时测得血压升高（收缩压约200mmHg，原文“高压2000”疑似记录有误）；7点多血压基本恢复正常"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "629572a1-74e9-49e3-86ff-997a3d8d2946",
+              "content": "今日凌晨5点多突发头晕，伴恶心、呕吐；已送医院就诊。",
+              "timestamp": 1771494140.1130705,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            }
+          ],
+          "identity": [
+            {
+              "id": "4ff73544-389f-4f30-ab3b-4246c8c2c697",
+              "content": "患者55岁，已停经2年（绝经后状态）。",
+              "timestamp": 1771494040.685396,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "8c4016c1-ddbb-4c7a-832b-15a85136e26c",
+              "content": "患者有高血压及脑血管病史。",
+              "timestamp": 1771494140.113063,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            }
+          ],
+          "history": [
+            {
+              "id": "86addd80-701d-42a3-bb94-ef99e09cc9de",
+              "content": "既往诊断/病史：双乳乳腺增生，病程约5个月；曾在医院就诊并做过乳腺彩超；曾用药：乳癖消、平消胶囊（现已停药）。",
+              "timestamp": 1771494040.6854103,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "879e5f2d-ec5a-4fe9-9b03-76228e250ed1",
+              "content": "医生曾建议可选用药：乳痛丸、乳痛胶囊、平消片、平消胶囊。",
+              "timestamp": 1771494047.47231,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "36d26a11-bad1-48a6-9beb-4e0b3f3cf5dd",
+              "content": "既往就诊：10天肛门旁肿块触痛，医生提示可能肛窦炎并建议到医院就诊。",
+              "timestamp": 1771494073.4284809,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "f4680c60-9ddf-42e7-88fc-b73ef5b5f261",
+              "content": "家族史：父亲有过敏性鼻炎。",
+              "timestamp": 1771494112.443297,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "9af6592a-c667-4ed9-94ad-6d92d1e4db12",
+              "content": "既往史：小时候湿疹严重；曾有一次急性荨麻疹。",
+              "timestamp": 1771494112.4433084,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "3b36faae-71c2-4362-af46-357dc2bca4ea",
+              "content": "主诉/现病史：小儿反复过敏性流涕、咳嗽；自上幼儿园起（除夏季外）基本持续流涕咳嗽，反反复复；每次约15天好转，但1-2天后又复发；咨询若为过敏性咳嗽可先用什么药及剂量。",
+              "timestamp": 1771494112.4433148,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "ee2c3728-177c-4bc2-8413-b543f9bfb8eb",
+              "content": "医嘱/处方建议：顺尔宁片（孟鲁司特）4mg，每天晚8点口服，连续用药1个月；用于同时治疗咳嗽与鼻炎。",
+              "timestamp": 1771494121.2864075,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "c3bdac95-1124-4e03-a6ce-54bf746a04c0",
+              "content": "医嘱/建议：建议至正规医院就诊并进行必要检查以排除器质性疾病；可配合中医辨病辨证调理；日常注意避免受凉，忌食生冷、酸辣、甜粘等刺激性食物。",
+              "timestamp": 1771494132.1132848,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "7c5f19bd-d27f-43a3-a182-e4691f9f038d",
+              "content": "本次发作时血压升高：收缩压约200mmHg（原记录“高压2000”疑似有误）；约7点多血压基本恢复正常。",
+              "timestamp": 1771494140.1130757,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者今天最早出现不适的大概时间是什么时候？",
+          "answer": "今天凌晨五点多。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "629572a1-74e9-49e3-86ff-997a3d8d2946"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "您所说的症状考虑为短暂性脑缺血发作（TIA），应该尽快查明原因，判断有无血管狭窄，如果证实有狭窄应考虑能否行血管内支架治疗或手术治疗。反复发作的TIA提示脑梗塞的危险，请务必予以重视。",
+        "to_memory": [
+          "identity: 患者有高血压、脑血管病病史",
+          "history: 今日凌晨约5点出现头晕、恶心、呕吐，送医时血压收缩压约200（原文“2000”疑为笔误），7点多基本恢复正常",
+          "history: 医生考虑短暂性脑缺血发作（TIA），提示反复发作有脑梗塞风险，建议尽快查明原因并评估有无血管狭窄；如证实狭窄考虑血管内支架或手术治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "629572a1-74e9-49e3-86ff-997a3d8d2946",
+              "content": "今日凌晨5点多突发头晕，伴恶心、呕吐；已送医院就诊。",
+              "timestamp": 1771494140.1130705,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            }
+          ],
+          "identity": [
+            {
+              "id": "4ff73544-389f-4f30-ab3b-4246c8c2c697",
+              "content": "患者55岁，已停经2年（绝经后状态）。",
+              "timestamp": 1771494040.685396,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "8c4016c1-ddbb-4c7a-832b-15a85136e26c",
+              "content": "患者有高血压及脑血管病史。",
+              "timestamp": 1771494140.113063,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            }
+          ],
+          "history": [
+            {
+              "id": "86addd80-701d-42a3-bb94-ef99e09cc9de",
+              "content": "既往诊断/病史：双乳乳腺增生，病程约5个月；曾在医院就诊并做过乳腺彩超；曾用药：乳癖消、平消胶囊（现已停药）。",
+              "timestamp": 1771494040.6854103,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "879e5f2d-ec5a-4fe9-9b03-76228e250ed1",
+              "content": "医生曾建议可选用药：乳痛丸、乳痛胶囊、平消片、平消胶囊。",
+              "timestamp": 1771494047.47231,
+              "metadata": {
+                "turn_idx": 4
+              },
+              "turn_idx": 4
+            },
+            {
+              "id": "36d26a11-bad1-48a6-9beb-4e0b3f3cf5dd",
+              "content": "既往就诊：10天肛门旁肿块触痛，医生提示可能肛窦炎并建议到医院就诊。",
+              "timestamp": 1771494073.4284809,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "f4680c60-9ddf-42e7-88fc-b73ef5b5f261",
+              "content": "家族史：父亲有过敏性鼻炎。",
+              "timestamp": 1771494112.443297,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "9af6592a-c667-4ed9-94ad-6d92d1e4db12",
+              "content": "既往史：小时候湿疹严重；曾有一次急性荨麻疹。",
+              "timestamp": 1771494112.4433084,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "3b36faae-71c2-4362-af46-357dc2bca4ea",
+              "content": "主诉/现病史：小儿反复过敏性流涕、咳嗽；自上幼儿园起（除夏季外）基本持续流涕咳嗽，反反复复；每次约15天好转，但1-2天后又复发；咨询若为过敏性咳嗽可先用什么药及剂量。",
+              "timestamp": 1771494112.4433148,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "ee2c3728-177c-4bc2-8413-b543f9bfb8eb",
+              "content": "医嘱/处方建议：顺尔宁片（孟鲁司特）4mg，每天晚8点口服，连续用药1个月；用于同时治疗咳嗽与鼻炎。",
+              "timestamp": 1771494121.2864075,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "c3bdac95-1124-4e03-a6ce-54bf746a04c0",
+              "content": "医嘱/建议：建议至正规医院就诊并进行必要检查以排除器质性疾病；可配合中医辨病辨证调理；日常注意避免受凉，忌食生冷、酸辣、甜粘等刺激性食物。",
+              "timestamp": 1771494132.1132848,
+              "metadata": {
+                "turn_idx": 19
+              },
+              "turn_idx": 19
+            },
+            {
+              "id": "7c5f19bd-d27f-43a3-a182-e4691f9f038d",
+              "content": "本次发作时血压升高：收缩压约200mmHg（原记录“高压2000”疑似有误）；约7点多血压基本恢复正常。",
+              "timestamp": 1771494140.1130757,
+              "metadata": {
+                "turn_idx": 21
+              },
+              "turn_idx": 21
+            },
+            {
+              "id": "ff23f8f8-8ba3-460a-a7f5-7f2f0747a8ed",
+              "content": "本次急性发作医生考虑短暂性脑缺血发作（TIA），提示反复发作有脑梗塞风险；建议尽快查明原因并评估有无血管狭窄，若证实狭窄可考虑血管内支架或手术治疗。",
+              "timestamp": 1771494147.7563245,
+              "metadata": {
+                "turn_idx": 22
+              },
+              "turn_idx": 22
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比此前医生为患者提供的“可选用药”建议与本次因清晨突发不适而就诊的情况：此前医生列出的那组可选药物名称分别是什么？",
+          "answer": "乳痛丸、乳痛胶囊、平消片、平消胶囊。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "879e5f2d-ec5a-4fe9-9b03-76228e250ed1"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "629572a1-74e9-49e3-86ff-997a3d8d2946"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            18,
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "chronic_followup",
+    "scenario_name": "慢性病随访管理",
+    "session_count": 6,
+    "group_key": "综合科"
+  }
+}

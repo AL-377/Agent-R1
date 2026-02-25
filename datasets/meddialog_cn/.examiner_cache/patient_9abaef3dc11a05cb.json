@@ -1,0 +1,2900 @@
+{
+  "patient_id": "c546997189a8",
+  "messages": [
+    {
+      "user": {
+        "content": "结肠癌，在协和时大夫说每次3到4周做一次化疗，一共做6到8次即可，第一次在协和做身体未有异常情况。但在我们地区医院做二次时，大夫要求两周做一次化疗，而且一共要做10到12次。请问患者以后化疗时间间隔多久，然后共做几次。患者已于2010年1月5日就诊地区医院，已做化疗前准备及检查，身体状况无太大异常，只有些贫血，定1月6号上午开始做二次化疗。",
+        "to_memory": [
+          "history: 诊断为结肠癌",
+          "history: 在协和医院医生建议化疗每3-4周一次，共6-8次；已在协和完成第1次化疗且身体未见异常",
+          "history: 地区医院医生建议化疗每2周一次，共10-12次",
+          "history: 2010-01-05就诊地区医院，已完成第2次化疗前准备及检查",
+          "history: 检查/身体状况：总体无明显异常，仅有贫血",
+          "working: 咨询问题：后续化疗时间间隔应多久、总共应做几次；已安排2010-01-06上午开始第2次化疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "782a0145-18d8-4d6d-a88d-f9be53774035",
+              "content": "咨询问题：后续化疗时间间隔应多久、总共应做几次；已安排2010-01-06上午开始第2次化疗",
+              "timestamp": 1771493269.848745,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "20f9a155-d0f5-4fe8-beae-08d1a9dbfd0f",
+              "content": "诊断为结肠癌",
+              "timestamp": 1771493269.8487186,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "11756264-5521-4eb9-a886-8f2d29ba7a71",
+              "content": "协和医院医生建议化疗每3-4周一次，共6-8次；已在协和完成第1次化疗且身体未见异常",
+              "timestamp": 1771493269.8487287,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "60179c2f-55bb-474c-97b0-a265fb613cc9",
+              "content": "地区医院医生建议化疗每2周一次，共10-12次",
+              "timestamp": 1771493269.8487332,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3b51bd63-a259-4e38-9465-5f5ace06a571",
+              "content": "2010-01-05就诊地区医院，已完成第2次化疗前准备及检查",
+              "timestamp": 1771493269.8487372,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ee825b6c-24f8-4889-8125-0feb63647355",
+              "content": "检查/身体状况：总体无明显异常，仅有贫血",
+              "timestamp": 1771493269.848741,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在本次咨询里，患者提到下一次治疗已被安排在什么具体日期和时间段进行？请指出该安排与其提出的后续治疗计划疑问之间可能需要核对的关键信息点。",
+          "answer": "已安排于2010年1月6日上午开始第2次化疗。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "20f9a155-d0f5-4fe8-beae-08d1a9dbfd0f"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "782a0145-18d8-4d6d-a88d-f9be53774035"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "如果每次都住院化疗，可以两周一次，因为出院后不需口服希罗达。理论上12次最佳，但多数病人难以坚持，所以6-8次也可以。",
+        "to_memory": [
+          "history: 结肠癌诊断；化疗方案可选每2周住院一次（出院后不需口服希罗达/Xeloda）",
+          "history: 医生建议化疗次数：理论上12次最佳；多数患者难以坚持时6-8次也可",
+          "history: 2010-01-05就诊地区医院，已做化疗前准备及检查；总体无明显异常，仅轻度贫血；计划2010-01-06上午开始第2次化疗"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "782a0145-18d8-4d6d-a88d-f9be53774035",
+              "content": "咨询问题：后续化疗时间间隔应多久、总共应做几次；已安排2010-01-06上午开始第2次化疗",
+              "timestamp": 1771493269.848745,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "20f9a155-d0f5-4fe8-beae-08d1a9dbfd0f",
+              "content": "诊断为结肠癌",
+              "timestamp": 1771493269.8487186,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "11756264-5521-4eb9-a886-8f2d29ba7a71",
+              "content": "协和医院医生建议化疗每3-4周一次，共6-8次；已在协和完成第1次化疗且身体未见异常",
+              "timestamp": 1771493269.8487287,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "60179c2f-55bb-474c-97b0-a265fb613cc9",
+              "content": "地区医院医生建议化疗每2周一次；次数：理论上12次最佳，多数患者难以坚持时6-8次也可（另有观点10-12次）",
+              "timestamp": 1771493269.8487332,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3b51bd63-a259-4e38-9465-5f5ace06a571",
+              "content": "2010-01-05就诊地区医院，已完成第2次化疗前准备及检查；计划2010-01-06上午开始第2次化疗",
+              "timestamp": 1771493269.8487372,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ee825b6c-24f8-4889-8125-0feb63647355",
+              "content": "检查/身体状况：总体无明显异常，仅有贫血",
+              "timestamp": 1771493269.848741,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c309f67e-6ea7-42b2-a81f-1c25fcfbb71d",
+              "content": "化疗方案可选每2周住院一次；出院后不需口服希罗达/Xeloda",
+              "timestamp": 1771493284.401245,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者第一次化疗时的整体身体状况与在地区医院进行第二次化疗前的检查结果：后一次检查中医生提到的主要异常或问题是什么？",
+          "answer": "总体无明显异常，仅有些贫血。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "ee825b6c-24f8-4889-8125-0feb63647355"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "782a0145-18d8-4d6d-a88d-f9be53774035"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "20f9a155-d0f5-4fe8-beae-08d1a9dbfd0f",
+              "content": "诊断为结肠癌",
+              "timestamp": 1771493269.8487186,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "11756264-5521-4eb9-a886-8f2d29ba7a71",
+              "content": "协和医院医生建议化疗每3-4周一次，共6-8次；已在协和完成第1次化疗且身体未见异常",
+              "timestamp": 1771493269.8487287,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "60179c2f-55bb-474c-97b0-a265fb613cc9",
+              "content": "地区医院医生建议化疗每2周一次；次数：理论上12次最佳，多数患者难以坚持时6-8次也可（另有观点10-12次）",
+              "timestamp": 1771493269.8487332,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3b51bd63-a259-4e38-9465-5f5ace06a571",
+              "content": "2010-01-05就诊地区医院，已完成第2次化疗前准备及检查；计划2010-01-06上午开始第2次化疗",
+              "timestamp": 1771493269.8487372,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ee825b6c-24f8-4889-8125-0feb63647355",
+              "content": "检查/身体状况：总体无明显异常，仅有贫血",
+              "timestamp": 1771493269.848741,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c309f67e-6ea7-42b2-a81f-1c25fcfbb71d",
+              "content": "化疗方案可选每2周住院一次；出院后不需口服希罗达/Xeloda",
+              "timestamp": 1771493284.401245,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "再生障碍性贫血，2009年六月在南昌人民医院确诊为再生障碍性贫血。先后在湖南湘雅医院和南昌人民医院治疗。情况越来越来差。现在15天左右摇输血一次，血小板只有1000，牙龈出血，皮肤有血点，",
+        "to_memory": [
+          "history: 2009年6月在南昌人民医院确诊再生障碍性贫血",
+          "history: 曾在湖南湘雅医院及南昌人民医院接受治疗",
+          "working: 病情逐渐加重",
+          "working: 目前约每15天输血一次",
+          "history: 血小板计数约1000（极低）",
+          "working: 牙龈出血",
+          "working: 皮肤出血点/瘀点"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "4262808c-0b12-4026-a383-cb0712cb854f",
+              "content": "病情逐渐加重",
+              "timestamp": 1771493292.4257946,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "eb7d27ee-79f9-4302-ae24-363228427f1d",
+              "content": "目前约每15天输血一次",
+              "timestamp": 1771493292.4257994,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f4674858-5d07-4696-b544-cd2a8f68d545",
+              "content": "牙龈出血",
+              "timestamp": 1771493292.4258084,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "639c55e4-5e05-42d9-9471-77c3651b89c6",
+              "content": "皮肤出血点/瘀点",
+              "timestamp": 1771493292.4258125,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "20f9a155-d0f5-4fe8-beae-08d1a9dbfd0f",
+              "content": "诊断为结肠癌",
+              "timestamp": 1771493269.8487186,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "11756264-5521-4eb9-a886-8f2d29ba7a71",
+              "content": "协和医院医生建议化疗每3-4周一次，共6-8次；已在协和完成第1次化疗且身体未见异常",
+              "timestamp": 1771493269.8487287,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "60179c2f-55bb-474c-97b0-a265fb613cc9",
+              "content": "地区医院医生建议化疗每2周一次；次数：理论上12次最佳，多数患者难以坚持时6-8次也可（另有观点10-12次）",
+              "timestamp": 1771493269.8487332,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3b51bd63-a259-4e38-9465-5f5ace06a571",
+              "content": "2010-01-05就诊地区医院，已完成第2次化疗前准备及检查；计划2010-01-06上午开始第2次化疗",
+              "timestamp": 1771493269.8487372,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ee825b6c-24f8-4889-8125-0feb63647355",
+              "content": "检查/身体状况：总体无明显异常，仅有贫血",
+              "timestamp": 1771493269.848741,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c309f67e-6ea7-42b2-a81f-1c25fcfbb71d",
+              "content": "化疗方案可选每2周住院一次；出院后不需口服希罗达/Xeloda",
+              "timestamp": 1771493284.401245,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b17f7a3d-7719-4d34-9afa-e8f34787dc09",
+              "content": "2009年6月在南昌人民医院确诊再生障碍性贫血",
+              "timestamp": 1771493292.4257793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cae823b7-e6e9-4734-83cb-8e74b0e3b9c8",
+              "content": "曾在湖南湘雅医院及南昌人民医院接受治疗",
+              "timestamp": 1771493292.4257894,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f6a2509c-4f72-4167-9cb9-61bd832b8e0d",
+              "content": "血小板计数约1000（极低）",
+              "timestamp": 1771493292.4258037,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者目前大约多久需要进行一次输血？",
+          "answer": "约每15天一次",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "eb7d27ee-79f9-4302-ae24-363228427f1d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "你好！",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "4262808c-0b12-4026-a383-cb0712cb854f",
+              "content": "病情逐渐加重",
+              "timestamp": 1771493292.4257946,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "eb7d27ee-79f9-4302-ae24-363228427f1d",
+              "content": "目前约每15天输血一次",
+              "timestamp": 1771493292.4257994,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f4674858-5d07-4696-b544-cd2a8f68d545",
+              "content": "牙龈出血",
+              "timestamp": 1771493292.4258084,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "639c55e4-5e05-42d9-9471-77c3651b89c6",
+              "content": "皮肤出血点/瘀点",
+              "timestamp": 1771493292.4258125,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "20f9a155-d0f5-4fe8-beae-08d1a9dbfd0f",
+              "content": "诊断为结肠癌",
+              "timestamp": 1771493269.8487186,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "11756264-5521-4eb9-a886-8f2d29ba7a71",
+              "content": "协和医院医生建议化疗每3-4周一次，共6-8次；已在协和完成第1次化疗且身体未见异常",
+              "timestamp": 1771493269.8487287,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "60179c2f-55bb-474c-97b0-a265fb613cc9",
+              "content": "地区医院医生建议化疗每2周一次；次数：理论上12次最佳，多数患者难以坚持时6-8次也可（另有观点10-12次）",
+              "timestamp": 1771493269.8487332,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3b51bd63-a259-4e38-9465-5f5ace06a571",
+              "content": "2010-01-05就诊地区医院，已完成第2次化疗前准备及检查；计划2010-01-06上午开始第2次化疗",
+              "timestamp": 1771493269.8487372,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ee825b6c-24f8-4889-8125-0feb63647355",
+              "content": "检查/身体状况：总体无明显异常，仅有贫血",
+              "timestamp": 1771493269.848741,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c309f67e-6ea7-42b2-a81f-1c25fcfbb71d",
+              "content": "化疗方案可选每2周住院一次；出院后不需口服希罗达/Xeloda",
+              "timestamp": 1771493284.401245,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b17f7a3d-7719-4d34-9afa-e8f34787dc09",
+              "content": "2009年6月在南昌人民医院确诊再生障碍性贫血",
+              "timestamp": 1771493292.4257793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cae823b7-e6e9-4734-83cb-8e74b0e3b9c8",
+              "content": "曾在湖南湘雅医院及南昌人民医院接受治疗",
+              "timestamp": 1771493292.4257894,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f6a2509c-4f72-4167-9cb9-61bd832b8e0d",
+              "content": "血小板计数约1000（极低）",
+              "timestamp": 1771493292.4258037,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "20f9a155-d0f5-4fe8-beae-08d1a9dbfd0f",
+              "content": "诊断为结肠癌",
+              "timestamp": 1771493269.8487186,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "11756264-5521-4eb9-a886-8f2d29ba7a71",
+              "content": "协和医院医生建议化疗每3-4周一次，共6-8次；已在协和完成第1次化疗且身体未见异常",
+              "timestamp": 1771493269.8487287,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "60179c2f-55bb-474c-97b0-a265fb613cc9",
+              "content": "地区医院医生建议化疗每2周一次；次数：理论上12次最佳，多数患者难以坚持时6-8次也可（另有观点10-12次）",
+              "timestamp": 1771493269.8487332,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3b51bd63-a259-4e38-9465-5f5ace06a571",
+              "content": "2010-01-05就诊地区医院，已完成第2次化疗前准备及检查；计划2010-01-06上午开始第2次化疗",
+              "timestamp": 1771493269.8487372,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ee825b6c-24f8-4889-8125-0feb63647355",
+              "content": "检查/身体状况：总体无明显异常，仅有贫血",
+              "timestamp": 1771493269.848741,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c309f67e-6ea7-42b2-a81f-1c25fcfbb71d",
+              "content": "化疗方案可选每2周住院一次；出院后不需口服希罗达/Xeloda",
+              "timestamp": 1771493284.401245,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b17f7a3d-7719-4d34-9afa-e8f34787dc09",
+              "content": "2009年6月在南昌人民医院确诊再生障碍性贫血",
+              "timestamp": 1771493292.4257793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cae823b7-e6e9-4734-83cb-8e74b0e3b9c8",
+              "content": "曾在湖南湘雅医院及南昌人民医院接受治疗",
+              "timestamp": 1771493292.4257894,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f6a2509c-4f72-4167-9cb9-61bd832b8e0d",
+              "content": "血小板计数约1000（极低）",
+              "timestamp": 1771493292.4258037,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "梅毒，你好！我是在怀孕8个月时候检查出有梅毒的。分娩后。孩子没有。",
+        "to_memory": [
+          "history: 患者妊娠8个月时检查发现梅毒",
+          "history: 分娩后新生儿未存活（患者称“孩子没有”）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "20f9a155-d0f5-4fe8-beae-08d1a9dbfd0f",
+              "content": "诊断为结肠癌",
+              "timestamp": 1771493269.8487186,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "11756264-5521-4eb9-a886-8f2d29ba7a71",
+              "content": "协和医院医生建议化疗每3-4周一次，共6-8次；已在协和完成第1次化疗且身体未见异常",
+              "timestamp": 1771493269.8487287,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "60179c2f-55bb-474c-97b0-a265fb613cc9",
+              "content": "地区医院医生建议化疗每2周一次；次数：理论上12次最佳，多数患者难以坚持时6-8次也可（另有观点10-12次）",
+              "timestamp": 1771493269.8487332,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3b51bd63-a259-4e38-9465-5f5ace06a571",
+              "content": "2010-01-05就诊地区医院，已完成第2次化疗前准备及检查；计划2010-01-06上午开始第2次化疗",
+              "timestamp": 1771493269.8487372,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ee825b6c-24f8-4889-8125-0feb63647355",
+              "content": "检查/身体状况：总体无明显异常，仅有贫血",
+              "timestamp": 1771493269.848741,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c309f67e-6ea7-42b2-a81f-1c25fcfbb71d",
+              "content": "化疗方案可选每2周住院一次；出院后不需口服希罗达/Xeloda",
+              "timestamp": 1771493284.401245,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b17f7a3d-7719-4d34-9afa-e8f34787dc09",
+              "content": "2009年6月在南昌人民医院确诊再生障碍性贫血",
+              "timestamp": 1771493292.4257793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cae823b7-e6e9-4734-83cb-8e74b0e3b9c8",
+              "content": "曾在湖南湘雅医院及南昌人民医院接受治疗",
+              "timestamp": 1771493292.4257894,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f6a2509c-4f72-4167-9cb9-61bd832b8e0d",
+              "content": "血小板计数约1000（极低）",
+              "timestamp": 1771493292.4258037,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "94a006df-1970-4446-8143-14c77ea07003",
+              "content": "患者妊娠8个月时检查发现梅毒",
+              "timestamp": 1771493300.3021731,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "ceb9ef5d-46ec-45af-b619-1bf7e7ad21f1",
+              "content": "分娩后新生儿未存活（患者称“孩子没有”）",
+              "timestamp": 1771493300.3021817,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "在对话中，患者除了肿瘤相关治疗咨询外，还提到过另一种血液系统疾病：该疾病最早是在何时、在哪家医院被明确诊断的？",
+          "answer": "2009年6月在南昌人民医院确诊再生障碍性贫血",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b17f7a3d-7719-4d34-9afa-e8f34787dc09",
+                "20f9a155-d0f5-4fe8-beae-08d1a9dbfd0f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            3,
+            6
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "都要治疗一个疗程。",
+        "to_memory": [
+          "history: 医生建议（针对梅毒）：需要完成一个疗程的治疗"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "20f9a155-d0f5-4fe8-beae-08d1a9dbfd0f",
+              "content": "诊断为结肠癌",
+              "timestamp": 1771493269.8487186,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "11756264-5521-4eb9-a886-8f2d29ba7a71",
+              "content": "协和医院医生建议化疗每3-4周一次，共6-8次；已在协和完成第1次化疗且身体未见异常",
+              "timestamp": 1771493269.8487287,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "60179c2f-55bb-474c-97b0-a265fb613cc9",
+              "content": "地区医院医生建议化疗每2周一次；次数：理论上12次最佳，多数患者难以坚持时6-8次也可（另有观点10-12次）",
+              "timestamp": 1771493269.8487332,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3b51bd63-a259-4e38-9465-5f5ace06a571",
+              "content": "2010-01-05就诊地区医院，已完成第2次化疗前准备及检查；计划2010-01-06上午开始第2次化疗",
+              "timestamp": 1771493269.8487372,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ee825b6c-24f8-4889-8125-0feb63647355",
+              "content": "检查/身体状况：总体无明显异常，仅有贫血",
+              "timestamp": 1771493269.848741,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c309f67e-6ea7-42b2-a81f-1c25fcfbb71d",
+              "content": "化疗方案可选每2周住院一次；出院后不需口服希罗达/Xeloda",
+              "timestamp": 1771493284.401245,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b17f7a3d-7719-4d34-9afa-e8f34787dc09",
+              "content": "2009年6月在南昌人民医院确诊再生障碍性贫血",
+              "timestamp": 1771493292.4257793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cae823b7-e6e9-4734-83cb-8e74b0e3b9c8",
+              "content": "曾在湖南湘雅医院及南昌人民医院接受治疗",
+              "timestamp": 1771493292.4257894,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f6a2509c-4f72-4167-9cb9-61bd832b8e0d",
+              "content": "血小板计数约1000（极低）",
+              "timestamp": 1771493292.4258037,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "94a006df-1970-4446-8143-14c77ea07003",
+              "content": "患者妊娠8个月时检查发现梅毒",
+              "timestamp": 1771493300.3021731,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "ceb9ef5d-46ec-45af-b619-1bf7e7ad21f1",
+              "content": "分娩后新生儿未存活（患者称“孩子没有”）",
+              "timestamp": 1771493300.3021817,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "c3c13a89-a313-43a2-b7be-dca0b30a87d9",
+              "content": "医生建议（针对梅毒）：需要完成一个疗程的治疗",
+              "timestamp": 1771493307.1136525,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "在患者这次关于孕期发现感染并在分娩后描述的结局中，有一个与母婴安全和后续随访密切相关的关键信息需要核实：分娩后的婴儿结局是什么？",
+          "answer": "分娩后新生儿未存活。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "c309f67e-6ea7-42b2-a81f-1c25fcfbb71d",
+                "ceb9ef5d-46ec-45af-b619-1bf7e7ad21f1"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            6,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "20f9a155-d0f5-4fe8-beae-08d1a9dbfd0f",
+              "content": "诊断为结肠癌",
+              "timestamp": 1771493269.8487186,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "11756264-5521-4eb9-a886-8f2d29ba7a71",
+              "content": "协和医院医生建议化疗每3-4周一次，共6-8次；已在协和完成第1次化疗且身体未见异常",
+              "timestamp": 1771493269.8487287,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "60179c2f-55bb-474c-97b0-a265fb613cc9",
+              "content": "地区医院医生建议化疗每2周一次；次数：理论上12次最佳，多数患者难以坚持时6-8次也可（另有观点10-12次）",
+              "timestamp": 1771493269.8487332,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3b51bd63-a259-4e38-9465-5f5ace06a571",
+              "content": "2010-01-05就诊地区医院，已完成第2次化疗前准备及检查；计划2010-01-06上午开始第2次化疗",
+              "timestamp": 1771493269.8487372,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ee825b6c-24f8-4889-8125-0feb63647355",
+              "content": "检查/身体状况：总体无明显异常，仅有贫血",
+              "timestamp": 1771493269.848741,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c309f67e-6ea7-42b2-a81f-1c25fcfbb71d",
+              "content": "化疗方案可选每2周住院一次；出院后不需口服希罗达/Xeloda",
+              "timestamp": 1771493284.401245,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b17f7a3d-7719-4d34-9afa-e8f34787dc09",
+              "content": "2009年6月在南昌人民医院确诊再生障碍性贫血",
+              "timestamp": 1771493292.4257793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cae823b7-e6e9-4734-83cb-8e74b0e3b9c8",
+              "content": "曾在湖南湘雅医院及南昌人民医院接受治疗",
+              "timestamp": 1771493292.4257894,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f6a2509c-4f72-4167-9cb9-61bd832b8e0d",
+              "content": "血小板计数约1000（极低）",
+              "timestamp": 1771493292.4258037,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "94a006df-1970-4446-8143-14c77ea07003",
+              "content": "患者妊娠8个月时检查发现梅毒",
+              "timestamp": 1771493300.3021731,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "ceb9ef5d-46ec-45af-b619-1bf7e7ad21f1",
+              "content": "分娩后新生儿未存活（患者称“孩子没有”）",
+              "timestamp": 1771493300.3021817,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "c3c13a89-a313-43a2-b7be-dca0b30a87d9",
+              "content": "医生建议（针对梅毒）：需要完成一个疗程的治疗",
+              "timestamp": 1771493307.1136525,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "癫痫，晚上12点左右发作，发作是头晕，在南昌看过。",
+        "to_memory": [
+          "history: 既往诊断癫痫；曾在南昌就诊",
+          "working: 本次发作时间约晚上12点；发作表现为头晕"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "31c26ada-62f2-4881-a7f4-cdb6ff9b933f",
+              "content": "本次发作时间约晚上12点",
+              "timestamp": 1771493316.2141955,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "106a1c9d-fcf0-464e-bc2c-7552c958d5b8",
+              "content": "本次发作表现为头晕",
+              "timestamp": 1771493316.2141998,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "20f9a155-d0f5-4fe8-beae-08d1a9dbfd0f",
+              "content": "诊断为结肠癌",
+              "timestamp": 1771493269.8487186,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "11756264-5521-4eb9-a886-8f2d29ba7a71",
+              "content": "协和医院医生建议化疗每3-4周一次，共6-8次；已在协和完成第1次化疗且身体未见异常",
+              "timestamp": 1771493269.8487287,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "60179c2f-55bb-474c-97b0-a265fb613cc9",
+              "content": "地区医院医生建议化疗每2周一次；次数：理论上12次最佳，多数患者难以坚持时6-8次也可（另有观点10-12次）",
+              "timestamp": 1771493269.8487332,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3b51bd63-a259-4e38-9465-5f5ace06a571",
+              "content": "2010-01-05就诊地区医院，已完成第2次化疗前准备及检查；计划2010-01-06上午开始第2次化疗",
+              "timestamp": 1771493269.8487372,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ee825b6c-24f8-4889-8125-0feb63647355",
+              "content": "检查/身体状况：总体无明显异常，仅有贫血",
+              "timestamp": 1771493269.848741,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c309f67e-6ea7-42b2-a81f-1c25fcfbb71d",
+              "content": "化疗方案可选每2周住院一次；出院后不需口服希罗达/Xeloda",
+              "timestamp": 1771493284.401245,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b17f7a3d-7719-4d34-9afa-e8f34787dc09",
+              "content": "2009年6月在南昌人民医院确诊再生障碍性贫血",
+              "timestamp": 1771493292.4257793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cae823b7-e6e9-4734-83cb-8e74b0e3b9c8",
+              "content": "曾在湖南湘雅医院及南昌人民医院接受治疗",
+              "timestamp": 1771493292.4257894,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f6a2509c-4f72-4167-9cb9-61bd832b8e0d",
+              "content": "血小板计数约1000（极低）",
+              "timestamp": 1771493292.4258037,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "94a006df-1970-4446-8143-14c77ea07003",
+              "content": "患者妊娠8个月时检查发现梅毒",
+              "timestamp": 1771493300.3021731,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "ceb9ef5d-46ec-45af-b619-1bf7e7ad21f1",
+              "content": "分娩后新生儿未存活（患者称“孩子没有”）",
+              "timestamp": 1771493300.3021817,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "c3c13a89-a313-43a2-b7be-dca0b30a87d9",
+              "content": "医生建议（针对梅毒）：需要完成一个疗程的治疗",
+              "timestamp": 1771493307.1136525,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7eb35f5e-af12-4207-aabd-6d38b3a1f950",
+              "content": "既往诊断癫痫",
+              "timestamp": 1771493316.214165,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "aac7ac90-dae8-4046-9903-08e117cd583e",
+              "content": "曾在南昌就诊（本次所述与既往南昌就诊记录不同，未注明具体医院/时间）",
+              "timestamp": 1771493316.2141902,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者这次癫痫发作大约是在什么时间发生的？",
+          "answer": "晚上12点左右",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "31c26ada-62f2-4881-a7f4-cdb6ff9b933f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "无论你采取哪种治疗方案（药物或者手术），都必须先做详细的脑电图检查确定病灶的位置和癫痫的发作类型，才能对症治疗，建议你带齐病历资料过来就诊。无论你采取哪种治疗方案（药物或者手术），都必须先做详细的脑电图检查确定病灶的位置和癫痫的发作类型，才能对症治疗，建议你带齐病历资料过来就诊。无论你采取哪种治疗方案（药物或者手术），都必须先做详细的脑电图检查确定病灶的位置和癫痫的发作类型，才能对症治疗，建议你带齐病历资料过来就诊。",
+        "to_memory": [
+          "history: 既往诊断结肠癌；曾在协和医院接受首次化疗，方案建议每3-4周一次，共6-8次；地区医院建议每2周一次住院化疗，共10-12次；患者2010-01-05就诊地区医院，化疗前检查提示仅轻度贫血，计划2010-01-06进行第二次化疗；医生意见：若每次住院化疗可2周一次且出院后无需口服希罗达，理论上12次最佳但多数病人难坚持，6-8次也可",
+          "history: 2009-06在南昌人民医院确诊再生障碍性贫血；曾在湖南湘雅医院及南昌人民医院治疗；目前约15天输血一次；血小板约1000；伴牙龈出血及皮肤出血点",
+          "history: 孕8个月时检出梅毒；医生建议需治疗一个疗程",
+          "history: 既往癫痫/癫痫发作史；发作多在夜间约12点，表现头晕；曾在南昌就诊",
+          "history: 医生建议：无论药物或手术治疗癫痫，需先做详细脑电图检查以明确病灶位置及发作类型，并携带病历资料就诊"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "31c26ada-62f2-4881-a7f4-cdb6ff9b933f",
+              "content": "本次发作时间约晚上12点",
+              "timestamp": 1771493316.2141955,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "106a1c9d-fcf0-464e-bc2c-7552c958d5b8",
+              "content": "本次发作表现为头晕",
+              "timestamp": 1771493316.2141998,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "20f9a155-d0f5-4fe8-beae-08d1a9dbfd0f",
+              "content": "诊断为结肠癌",
+              "timestamp": 1771493269.8487186,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "11756264-5521-4eb9-a886-8f2d29ba7a71",
+              "content": "协和医院医生建议化疗每3-4周一次，共6-8次；已在协和完成第1次化疗且身体未见异常",
+              "timestamp": 1771493269.8487287,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "60179c2f-55bb-474c-97b0-a265fb613cc9",
+              "content": "地区医院医生建议化疗每2周一次；次数：理论上12次最佳，多数患者难以坚持时6-8次也可（另有观点10-12次）",
+              "timestamp": 1771493269.8487332,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3b51bd63-a259-4e38-9465-5f5ace06a571",
+              "content": "2010-01-05就诊地区医院，已完成第2次化疗前准备及检查；计划2010-01-06上午开始第2次化疗",
+              "timestamp": 1771493269.8487372,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ee825b6c-24f8-4889-8125-0feb63647355",
+              "content": "检查/身体状况：总体无明显异常，仅有贫血",
+              "timestamp": 1771493269.848741,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c309f67e-6ea7-42b2-a81f-1c25fcfbb71d",
+              "content": "化疗方案可选每2周住院一次；出院后不需口服希罗达/Xeloda",
+              "timestamp": 1771493284.401245,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b17f7a3d-7719-4d34-9afa-e8f34787dc09",
+              "content": "2009年6月在南昌人民医院确诊再生障碍性贫血",
+              "timestamp": 1771493292.4257793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cae823b7-e6e9-4734-83cb-8e74b0e3b9c8",
+              "content": "曾在湖南湘雅医院及南昌人民医院接受治疗",
+              "timestamp": 1771493292.4257894,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f6a2509c-4f72-4167-9cb9-61bd832b8e0d",
+              "content": "血小板计数约1000（极低）",
+              "timestamp": 1771493292.4258037,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "94a006df-1970-4446-8143-14c77ea07003",
+              "content": "患者妊娠8个月时检查发现梅毒",
+              "timestamp": 1771493300.3021731,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "ceb9ef5d-46ec-45af-b619-1bf7e7ad21f1",
+              "content": "分娩后新生儿未存活（患者称“孩子没有”）",
+              "timestamp": 1771493300.3021817,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "c3c13a89-a313-43a2-b7be-dca0b30a87d9",
+              "content": "医生建议（针对梅毒）：需要完成一个疗程的治疗",
+              "timestamp": 1771493307.1136525,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7eb35f5e-af12-4207-aabd-6d38b3a1f950",
+              "content": "既往诊断癫痫",
+              "timestamp": 1771493316.214165,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "aac7ac90-dae8-4046-9903-08e117cd583e",
+              "content": "曾在南昌就诊（本次所述与既往南昌就诊记录不同，未注明具体医院/时间）",
+              "timestamp": 1771493316.2141902,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "e724e57b-cb96-405c-b9fe-9fd3f4d263e5",
+              "content": "再生障碍性贫血目前约每15天输血一次；伴牙龈出血及皮肤出血点",
+              "timestamp": 1771493328.8100698,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "0716d207-9f85-4697-ad59-c5a826a97ba8",
+              "content": "癫痫发作多在夜间约12点，表现为头晕",
+              "timestamp": 1771493328.8100789,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "5f380d4d-34b8-48ce-84c9-b844031a3455",
+              "content": "医生建议：无论药物或手术治疗癫痫，需先做详细脑电图检查以明确病灶位置及发作类型，并携带病历资料就诊",
+              "timestamp": 1771493328.8100836,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "20f9a155-d0f5-4fe8-beae-08d1a9dbfd0f",
+              "content": "诊断为结肠癌",
+              "timestamp": 1771493269.8487186,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "11756264-5521-4eb9-a886-8f2d29ba7a71",
+              "content": "协和医院医生建议化疗每3-4周一次，共6-8次；已在协和完成第1次化疗且身体未见异常",
+              "timestamp": 1771493269.8487287,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "60179c2f-55bb-474c-97b0-a265fb613cc9",
+              "content": "地区医院医生建议化疗每2周一次；次数：理论上12次最佳，多数患者难以坚持时6-8次也可（另有观点10-12次）",
+              "timestamp": 1771493269.8487332,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3b51bd63-a259-4e38-9465-5f5ace06a571",
+              "content": "2010-01-05就诊地区医院，已完成第2次化疗前准备及检查；计划2010-01-06上午开始第2次化疗",
+              "timestamp": 1771493269.8487372,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ee825b6c-24f8-4889-8125-0feb63647355",
+              "content": "检查/身体状况：总体无明显异常，仅有贫血",
+              "timestamp": 1771493269.848741,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c309f67e-6ea7-42b2-a81f-1c25fcfbb71d",
+              "content": "化疗方案可选每2周住院一次；出院后不需口服希罗达/Xeloda",
+              "timestamp": 1771493284.401245,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b17f7a3d-7719-4d34-9afa-e8f34787dc09",
+              "content": "2009年6月在南昌人民医院确诊再生障碍性贫血",
+              "timestamp": 1771493292.4257793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cae823b7-e6e9-4734-83cb-8e74b0e3b9c8",
+              "content": "曾在湖南湘雅医院及南昌人民医院接受治疗",
+              "timestamp": 1771493292.4257894,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f6a2509c-4f72-4167-9cb9-61bd832b8e0d",
+              "content": "血小板计数约1000（极低）",
+              "timestamp": 1771493292.4258037,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "94a006df-1970-4446-8143-14c77ea07003",
+              "content": "患者妊娠8个月时检查发现梅毒",
+              "timestamp": 1771493300.3021731,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "ceb9ef5d-46ec-45af-b619-1bf7e7ad21f1",
+              "content": "分娩后新生儿未存活（患者称“孩子没有”）",
+              "timestamp": 1771493300.3021817,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "c3c13a89-a313-43a2-b7be-dca0b30a87d9",
+              "content": "医生建议（针对梅毒）：需要完成一个疗程的治疗",
+              "timestamp": 1771493307.1136525,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7eb35f5e-af12-4207-aabd-6d38b3a1f950",
+              "content": "既往诊断癫痫",
+              "timestamp": 1771493316.214165,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "aac7ac90-dae8-4046-9903-08e117cd583e",
+              "content": "曾在南昌就诊（本次所述与既往南昌就诊记录不同，未注明具体医院/时间）",
+              "timestamp": 1771493316.2141902,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "e724e57b-cb96-405c-b9fe-9fd3f4d263e5",
+              "content": "再生障碍性贫血目前约每15天输血一次；伴牙龈出血及皮肤出血点",
+              "timestamp": 1771493328.8100698,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "0716d207-9f85-4697-ad59-c5a826a97ba8",
+              "content": "癫痫发作多在夜间约12点，表现为头晕",
+              "timestamp": 1771493328.8100789,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "5f380d4d-34b8-48ce-84c9-b844031a3455",
+              "content": "医生建议：无论药物或手术治疗癫痫，需先做详细脑电图检查以明确病灶位置及发作类型，并携带病历资料就诊",
+              "timestamp": 1771493328.8100836,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "不明，结婚5年不孕，B超显示盆腔积液90公分08年在镇江四院查出盆腔积液60公分，未治疗。09年在镇江市中医院查出盆腔积液90公分，诊断是盆腔炎（湿热蕴结）,住院治疗输液抗炎，甲肖锉+阿奇霉素10天每天服中药+中药保留灌肠+中药熏药+阴道灌洗上药，一个疗程下来积液到63*28公分了。后又一个疗程下来是62*31公分。后穹窿穿刺积液颜色浑黄色液体，细菌培养阴性，结核杆菌：阴性.脱落细胞检查：见异型细胞，疑似腺癌。穿刺注入甲肖锉40ml，3天后B超显示积液100*26且子宫内膜局部增厚约11mm，无痛刮宫及再次穿刺，脱落细胞检查：见少数异型细胞，病理：宫颈黏膜慢性炎症，伴腺上皮鳞化，子宫内膜单纯性增长过长。随后转院到镇江市江苏大学附属医院，加强CT检查未见异常，结果(上传)；胃镜检查：未见异常。血清：抗核抗体阴性，抗-RNP阴性，抗-Sm阴性，抗-SSA阴性，抗-SSB阴性，抗-JO-1阴性，抗-SCL-70阴性，抗双链DNA抗体阴性，抗心鳞抗体阴性。后穹窿穿刺30ml黄色液体,甲胎蛋白1.71，癌胚抗原\n。",
+        "to_memory": [
+          "history: 2009年6月在南昌人民医院确诊再生障碍性贫血；曾在湖南湘雅医院及南昌人民医院治疗；病情进展至约15天输血一次，血小板约1000，伴牙龈出血及皮肤出血点",
+          "history: 既往妊娠8个月时筛查出梅毒；医生建议需治疗一个疗程；分娩后孩子未存活（患者表述“孩子没有”）",
+          "history: 既往癫痫发作史（约夜间12点发作，发作时头晕），曾在南昌就诊；医生建议先行详细脑电图检查以明确病灶位置及发作类型",
+          "history: 婚后5年不孕",
+          "history: 2008年在镇江四院发现盆腔积液约60（原文单位为“公分”，疑为mm/㎝，按原文记录），未治疗；2009年在镇江市中医院发现盆腔积液约90，诊断盆腔炎（湿热蕴结）并住院抗炎治疗：甲硝唑+阿奇霉素10天，配合中药每日服用、中药保留灌肠、中药熏药、阴道灌洗上药；治疗后积液约63×28，后续疗程约62×31",
+          "history: 后穹窿穿刺：浑黄色/黄色液体；细菌培养阴性；结核杆菌阴性；脱落细胞检查见异型细胞，疑腺癌；穿刺后注入甲硝唑40ml，3天后B超提示积液约100×26且子宫内膜局部增厚约11mm",
+          "history: 无痛刮宫及再次穿刺：脱落细胞检查见少数异型细胞；病理提示宫颈黏膜慢性炎症伴腺上皮鳞化；子宫内膜单纯性增生（原文“增长过长”）",
+          "history: 转至镇江市江苏大学附属医院：加强CT检查未见异常；胃镜未见异常",
+          "history: 血清自身抗体均阴性：ANA、抗RNP、抗Sm、抗SSA、抗SSB、抗JO-1、抗SCL-70、抗dsDNA、抗心磷脂抗体阴性",
+          "history: 后穹窿穿刺30ml黄色液体；肿瘤标志物：甲胎蛋白AFP 1.71；癌胚抗原CEA（数值未提供）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "20f9a155-d0f5-4fe8-beae-08d1a9dbfd0f",
+              "content": "诊断为结肠癌",
+              "timestamp": 1771493269.8487186,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "11756264-5521-4eb9-a886-8f2d29ba7a71",
+              "content": "协和医院医生建议化疗每3-4周一次，共6-8次；已在协和完成第1次化疗且身体未见异常",
+              "timestamp": 1771493269.8487287,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "60179c2f-55bb-474c-97b0-a265fb613cc9",
+              "content": "地区医院医生建议化疗每2周一次；次数：理论上12次最佳，多数患者难以坚持时6-8次也可（另有观点10-12次）",
+              "timestamp": 1771493269.8487332,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3b51bd63-a259-4e38-9465-5f5ace06a571",
+              "content": "2010-01-05就诊地区医院，已完成第2次化疗前准备及检查；计划2010-01-06上午开始第2次化疗",
+              "timestamp": 1771493269.8487372,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ee825b6c-24f8-4889-8125-0feb63647355",
+              "content": "检查/身体状况：总体无明显异常，仅有贫血",
+              "timestamp": 1771493269.848741,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c309f67e-6ea7-42b2-a81f-1c25fcfbb71d",
+              "content": "化疗方案可选每2周住院一次；出院后不需口服希罗达/Xeloda",
+              "timestamp": 1771493284.401245,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b17f7a3d-7719-4d34-9afa-e8f34787dc09",
+              "content": "2009年6月在南昌人民医院确诊再生障碍性贫血",
+              "timestamp": 1771493292.4257793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cae823b7-e6e9-4734-83cb-8e74b0e3b9c8",
+              "content": "曾在湖南湘雅医院及南昌人民医院接受治疗",
+              "timestamp": 1771493292.4257894,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f6a2509c-4f72-4167-9cb9-61bd832b8e0d",
+              "content": "血小板计数约1000（极低）",
+              "timestamp": 1771493292.4258037,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "94a006df-1970-4446-8143-14c77ea07003",
+              "content": "患者妊娠8个月时检查发现梅毒",
+              "timestamp": 1771493300.3021731,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "ceb9ef5d-46ec-45af-b619-1bf7e7ad21f1",
+              "content": "分娩后新生儿未存活（患者称“孩子没有”）",
+              "timestamp": 1771493300.3021817,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "c3c13a89-a313-43a2-b7be-dca0b30a87d9",
+              "content": "医生建议（针对梅毒）：需要完成一个疗程的治疗",
+              "timestamp": 1771493307.1136525,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7eb35f5e-af12-4207-aabd-6d38b3a1f950",
+              "content": "既往诊断癫痫",
+              "timestamp": 1771493316.214165,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "aac7ac90-dae8-4046-9903-08e117cd583e",
+              "content": "曾在南昌就诊（本次所述与既往南昌就诊记录不同，未注明具体医院/时间）",
+              "timestamp": 1771493316.2141902,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "e724e57b-cb96-405c-b9fe-9fd3f4d263e5",
+              "content": "再生障碍性贫血目前约每15天输血一次；伴牙龈出血及皮肤出血点",
+              "timestamp": 1771493328.8100698,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "0716d207-9f85-4697-ad59-c5a826a97ba8",
+              "content": "癫痫发作多在夜间约12点，表现为头晕",
+              "timestamp": 1771493328.8100789,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "5f380d4d-34b8-48ce-84c9-b844031a3455",
+              "content": "医生建议：无论药物或手术治疗癫痫，需先做详细脑电图检查以明确病灶位置及发作类型，并携带病历资料就诊",
+              "timestamp": 1771493328.8100836,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "9f39af83-b9f1-4aa2-b77d-b626621e73dd",
+              "content": "婚后5年不孕史",
+              "timestamp": 1771493352.017658,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7d73b247-47ec-41be-979f-086a37c8380b",
+              "content": "2008年镇江四院发现盆腔积液约60（原文单位“公分”，未治疗）；2009年镇江市中医院发现盆腔积液约90，诊断盆腔炎（湿热蕴结）并住院抗炎治疗：甲硝唑+阿奇霉素10天，配合中药口服/保留灌肠/熏药/阴道灌洗上药；治疗后积液约63×28，后续疗程约62×31",
+              "timestamp": 1771493352.0176687,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f1b93e7f-6415-41d2-93f3-a1e4fc57548d",
+              "content": "后穹窿穿刺：浑黄色/黄色液体；细菌培养阴性；结核杆菌阴性；脱落细胞检查见异型细胞，疑腺癌；穿刺后注入甲硝唑40ml，3天后B超提示积液约100×26且子宫内膜局部增厚约11mm",
+              "timestamp": 1771493352.0176733,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "d289f167-3fad-498c-96be-9b0d180e67eb",
+              "content": "无痛刮宫及再次穿刺：脱落细胞检查见少数异型细胞；病理提示宫颈黏膜慢性炎症伴腺上皮鳞化；子宫内膜单纯性增生（原文“增长过长”）",
+              "timestamp": 1771493352.017677,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "0f2fa940-b863-4e15-bb5c-51d26814fd7d",
+              "content": "转至镇江市江苏大学附属医院：加强CT检查未见异常；胃镜未见异常",
+              "timestamp": 1771493352.0176816,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "d551a51e-222b-4812-9a17-09f82ca9ff9e",
+              "content": "血清自身抗体均阴性：ANA、抗RNP、抗Sm、抗SSA、抗SSB、抗JO-1、抗SCL-70、抗dsDNA、抗心磷脂抗体阴性",
+              "timestamp": 1771493352.0176854,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c8c1bdb0-a21b-42bd-871a-54719495bde6",
+              "content": "后穹窿穿刺30ml黄色液体；肿瘤标志物：甲胎蛋白AFP 1.71；癌胚抗原CEA（数值未提供）",
+              "timestamp": 1771493352.0176897,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "病史复杂，请带好所有资料到门诊当面咨询医生。本人周五上午专家门诊肯定出诊。",
+        "to_memory": [
+          "history: 医生建议患者病史复杂，需携带所有资料到门诊当面咨询；医生周五上午专家门诊出诊"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "20f9a155-d0f5-4fe8-beae-08d1a9dbfd0f",
+              "content": "诊断为结肠癌",
+              "timestamp": 1771493269.8487186,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "11756264-5521-4eb9-a886-8f2d29ba7a71",
+              "content": "协和医院医生建议化疗每3-4周一次，共6-8次；已在协和完成第1次化疗且身体未见异常",
+              "timestamp": 1771493269.8487287,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "60179c2f-55bb-474c-97b0-a265fb613cc9",
+              "content": "地区医院医生建议化疗每2周一次；次数：理论上12次最佳，多数患者难以坚持时6-8次也可（另有观点10-12次）",
+              "timestamp": 1771493269.8487332,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3b51bd63-a259-4e38-9465-5f5ace06a571",
+              "content": "2010-01-05就诊地区医院，已完成第2次化疗前准备及检查；计划2010-01-06上午开始第2次化疗",
+              "timestamp": 1771493269.8487372,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ee825b6c-24f8-4889-8125-0feb63647355",
+              "content": "检查/身体状况：总体无明显异常，仅有贫血",
+              "timestamp": 1771493269.848741,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c309f67e-6ea7-42b2-a81f-1c25fcfbb71d",
+              "content": "化疗方案可选每2周住院一次；出院后不需口服希罗达/Xeloda",
+              "timestamp": 1771493284.401245,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b17f7a3d-7719-4d34-9afa-e8f34787dc09",
+              "content": "2009年6月在南昌人民医院确诊再生障碍性贫血",
+              "timestamp": 1771493292.4257793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cae823b7-e6e9-4734-83cb-8e74b0e3b9c8",
+              "content": "曾在湖南湘雅医院及南昌人民医院接受治疗",
+              "timestamp": 1771493292.4257894,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f6a2509c-4f72-4167-9cb9-61bd832b8e0d",
+              "content": "血小板计数约1000（极低）",
+              "timestamp": 1771493292.4258037,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "94a006df-1970-4446-8143-14c77ea07003",
+              "content": "患者妊娠8个月时检查发现梅毒",
+              "timestamp": 1771493300.3021731,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "ceb9ef5d-46ec-45af-b619-1bf7e7ad21f1",
+              "content": "分娩后新生儿未存活（患者称“孩子没有”）",
+              "timestamp": 1771493300.3021817,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "c3c13a89-a313-43a2-b7be-dca0b30a87d9",
+              "content": "医生建议（针对梅毒）：需要完成一个疗程的治疗",
+              "timestamp": 1771493307.1136525,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7eb35f5e-af12-4207-aabd-6d38b3a1f950",
+              "content": "既往诊断癫痫",
+              "timestamp": 1771493316.214165,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "aac7ac90-dae8-4046-9903-08e117cd583e",
+              "content": "曾在南昌就诊（本次所述与既往南昌就诊记录不同，未注明具体医院/时间）",
+              "timestamp": 1771493316.2141902,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "e724e57b-cb96-405c-b9fe-9fd3f4d263e5",
+              "content": "再生障碍性贫血目前约每15天输血一次；伴牙龈出血及皮肤出血点",
+              "timestamp": 1771493328.8100698,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "0716d207-9f85-4697-ad59-c5a826a97ba8",
+              "content": "癫痫发作多在夜间约12点，表现为头晕",
+              "timestamp": 1771493328.8100789,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "5f380d4d-34b8-48ce-84c9-b844031a3455",
+              "content": "医生建议：无论药物或手术治疗癫痫，需先做详细脑电图检查以明确病灶位置及发作类型，并携带病历资料就诊",
+              "timestamp": 1771493328.8100836,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "9f39af83-b9f1-4aa2-b77d-b626621e73dd",
+              "content": "婚后5年不孕史",
+              "timestamp": 1771493352.017658,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7d73b247-47ec-41be-979f-086a37c8380b",
+              "content": "2008年镇江四院发现盆腔积液约60（原文单位“公分”，未治疗）；2009年镇江市中医院发现盆腔积液约90，诊断盆腔炎（湿热蕴结）并住院抗炎治疗：甲硝唑+阿奇霉素10天，配合中药口服/保留灌肠/熏药/阴道灌洗上药；治疗后积液约63×28，后续疗程约62×31",
+              "timestamp": 1771493352.0176687,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f1b93e7f-6415-41d2-93f3-a1e4fc57548d",
+              "content": "后穹窿穿刺：浑黄色/黄色液体；细菌培养阴性；结核杆菌阴性；脱落细胞检查见异型细胞，疑腺癌；穿刺后注入甲硝唑40ml，3天后B超提示积液约100×26且子宫内膜局部增厚约11mm",
+              "timestamp": 1771493352.0176733,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "d289f167-3fad-498c-96be-9b0d180e67eb",
+              "content": "无痛刮宫及再次穿刺：脱落细胞检查见少数异型细胞；病理提示宫颈黏膜慢性炎症伴腺上皮鳞化；子宫内膜单纯性增生（原文“增长过长”）",
+              "timestamp": 1771493352.017677,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "0f2fa940-b863-4e15-bb5c-51d26814fd7d",
+              "content": "转至镇江市江苏大学附属医院：加强CT检查未见异常；胃镜未见异常",
+              "timestamp": 1771493352.0176816,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "d551a51e-222b-4812-9a17-09f82ca9ff9e",
+              "content": "血清自身抗体均阴性：ANA、抗RNP、抗Sm、抗SSA、抗SSB、抗JO-1、抗SCL-70、抗dsDNA、抗心磷脂抗体阴性",
+              "timestamp": 1771493352.0176854,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c8c1bdb0-a21b-42bd-871a-54719495bde6",
+              "content": "后穹窿穿刺30ml黄色液体；肿瘤标志物：甲胎蛋白AFP 1.71；癌胚抗原CEA（数值未提供）",
+              "timestamp": 1771493352.0176897,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "a2fd2442-f339-47c2-8891-89da26a2df07",
+              "content": "医生建议：患者病史复杂，需携带所有资料到门诊当面咨询；医生周五上午专家门诊出诊",
+              "timestamp": 1771493356.7953181,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者最初描述妊娠晚期发现问题后的分娩结局，以及当前就诊叙述中提到的家庭情况，分娩后的结局是什么？",
+          "answer": "分娩后新生儿未存活。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "ee825b6c-24f8-4889-8125-0feb63647355",
+                "ceb9ef5d-46ec-45af-b619-1bf7e7ad21f1"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            13,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "20f9a155-d0f5-4fe8-beae-08d1a9dbfd0f",
+              "content": "诊断为结肠癌",
+              "timestamp": 1771493269.8487186,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "11756264-5521-4eb9-a886-8f2d29ba7a71",
+              "content": "协和医院医生建议化疗每3-4周一次，共6-8次；已在协和完成第1次化疗且身体未见异常",
+              "timestamp": 1771493269.8487287,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "60179c2f-55bb-474c-97b0-a265fb613cc9",
+              "content": "地区医院医生建议化疗每2周一次；次数：理论上12次最佳，多数患者难以坚持时6-8次也可（另有观点10-12次）",
+              "timestamp": 1771493269.8487332,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3b51bd63-a259-4e38-9465-5f5ace06a571",
+              "content": "2010-01-05就诊地区医院，已完成第2次化疗前准备及检查；计划2010-01-06上午开始第2次化疗",
+              "timestamp": 1771493269.8487372,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ee825b6c-24f8-4889-8125-0feb63647355",
+              "content": "检查/身体状况：总体无明显异常，仅有贫血",
+              "timestamp": 1771493269.848741,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c309f67e-6ea7-42b2-a81f-1c25fcfbb71d",
+              "content": "化疗方案可选每2周住院一次；出院后不需口服希罗达/Xeloda",
+              "timestamp": 1771493284.401245,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b17f7a3d-7719-4d34-9afa-e8f34787dc09",
+              "content": "2009年6月在南昌人民医院确诊再生障碍性贫血",
+              "timestamp": 1771493292.4257793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cae823b7-e6e9-4734-83cb-8e74b0e3b9c8",
+              "content": "曾在湖南湘雅医院及南昌人民医院接受治疗",
+              "timestamp": 1771493292.4257894,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f6a2509c-4f72-4167-9cb9-61bd832b8e0d",
+              "content": "血小板计数约1000（极低）",
+              "timestamp": 1771493292.4258037,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "94a006df-1970-4446-8143-14c77ea07003",
+              "content": "患者妊娠8个月时检查发现梅毒",
+              "timestamp": 1771493300.3021731,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "ceb9ef5d-46ec-45af-b619-1bf7e7ad21f1",
+              "content": "分娩后新生儿未存活（患者称“孩子没有”）",
+              "timestamp": 1771493300.3021817,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "c3c13a89-a313-43a2-b7be-dca0b30a87d9",
+              "content": "医生建议（针对梅毒）：需要完成一个疗程的治疗",
+              "timestamp": 1771493307.1136525,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7eb35f5e-af12-4207-aabd-6d38b3a1f950",
+              "content": "既往诊断癫痫",
+              "timestamp": 1771493316.214165,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "aac7ac90-dae8-4046-9903-08e117cd583e",
+              "content": "曾在南昌就诊（本次所述与既往南昌就诊记录不同，未注明具体医院/时间）",
+              "timestamp": 1771493316.2141902,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "e724e57b-cb96-405c-b9fe-9fd3f4d263e5",
+              "content": "再生障碍性贫血目前约每15天输血一次；伴牙龈出血及皮肤出血点",
+              "timestamp": 1771493328.8100698,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "0716d207-9f85-4697-ad59-c5a826a97ba8",
+              "content": "癫痫发作多在夜间约12点，表现为头晕",
+              "timestamp": 1771493328.8100789,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "5f380d4d-34b8-48ce-84c9-b844031a3455",
+              "content": "医生建议：无论药物或手术治疗癫痫，需先做详细脑电图检查以明确病灶位置及发作类型，并携带病历资料就诊",
+              "timestamp": 1771493328.8100836,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "9f39af83-b9f1-4aa2-b77d-b626621e73dd",
+              "content": "婚后5年不孕史",
+              "timestamp": 1771493352.017658,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7d73b247-47ec-41be-979f-086a37c8380b",
+              "content": "2008年镇江四院发现盆腔积液约60（原文单位“公分”，未治疗）；2009年镇江市中医院发现盆腔积液约90，诊断盆腔炎（湿热蕴结）并住院抗炎治疗：甲硝唑+阿奇霉素10天，配合中药口服/保留灌肠/熏药/阴道灌洗上药；治疗后积液约63×28，后续疗程约62×31",
+              "timestamp": 1771493352.0176687,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f1b93e7f-6415-41d2-93f3-a1e4fc57548d",
+              "content": "后穹窿穿刺：浑黄色/黄色液体；细菌培养阴性；结核杆菌阴性；脱落细胞检查见异型细胞，疑腺癌；穿刺后注入甲硝唑40ml，3天后B超提示积液约100×26且子宫内膜局部增厚约11mm",
+              "timestamp": 1771493352.0176733,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "d289f167-3fad-498c-96be-9b0d180e67eb",
+              "content": "无痛刮宫及再次穿刺：脱落细胞检查见少数异型细胞；病理提示宫颈黏膜慢性炎症伴腺上皮鳞化；子宫内膜单纯性增生（原文“增长过长”）",
+              "timestamp": 1771493352.017677,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "0f2fa940-b863-4e15-bb5c-51d26814fd7d",
+              "content": "转至镇江市江苏大学附属医院：加强CT检查未见异常；胃镜未见异常",
+              "timestamp": 1771493352.0176816,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "d551a51e-222b-4812-9a17-09f82ca9ff9e",
+              "content": "血清自身抗体均阴性：ANA、抗RNP、抗Sm、抗SSA、抗SSB、抗JO-1、抗SCL-70、抗dsDNA、抗心磷脂抗体阴性",
+              "timestamp": 1771493352.0176854,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c8c1bdb0-a21b-42bd-871a-54719495bde6",
+              "content": "后穹窿穿刺30ml黄色液体；肿瘤标志物：甲胎蛋白AFP 1.71；癌胚抗原CEA（数值未提供）",
+              "timestamp": 1771493352.0176897,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "a2fd2442-f339-47c2-8891-89da26a2df07",
+              "content": "医生建议：患者病史复杂，需携带所有资料到门诊当面咨询；医生周五上午专家门诊出诊",
+              "timestamp": 1771493356.7953181,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "冠心病，发病一个月，心绞痛。",
+        "to_memory": [
+          "history: 既往/现患冠心病（发病约1个月）",
+          "working: 本次主诉心绞痛"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a3fdf007-d0da-42a9-8ecb-4d22ba7e3586",
+              "content": "本次主诉心绞痛",
+              "timestamp": 1771493363.9718137,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "20f9a155-d0f5-4fe8-beae-08d1a9dbfd0f",
+              "content": "诊断为结肠癌",
+              "timestamp": 1771493269.8487186,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "11756264-5521-4eb9-a886-8f2d29ba7a71",
+              "content": "协和医院医生建议化疗每3-4周一次，共6-8次；已在协和完成第1次化疗且身体未见异常",
+              "timestamp": 1771493269.8487287,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "60179c2f-55bb-474c-97b0-a265fb613cc9",
+              "content": "地区医院医生建议化疗每2周一次；次数：理论上12次最佳，多数患者难以坚持时6-8次也可（另有观点10-12次）",
+              "timestamp": 1771493269.8487332,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3b51bd63-a259-4e38-9465-5f5ace06a571",
+              "content": "2010-01-05就诊地区医院，已完成第2次化疗前准备及检查；计划2010-01-06上午开始第2次化疗",
+              "timestamp": 1771493269.8487372,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ee825b6c-24f8-4889-8125-0feb63647355",
+              "content": "检查/身体状况：总体无明显异常，仅有贫血",
+              "timestamp": 1771493269.848741,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c309f67e-6ea7-42b2-a81f-1c25fcfbb71d",
+              "content": "化疗方案可选每2周住院一次；出院后不需口服希罗达/Xeloda",
+              "timestamp": 1771493284.401245,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b17f7a3d-7719-4d34-9afa-e8f34787dc09",
+              "content": "2009年6月在南昌人民医院确诊再生障碍性贫血",
+              "timestamp": 1771493292.4257793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cae823b7-e6e9-4734-83cb-8e74b0e3b9c8",
+              "content": "曾在湖南湘雅医院及南昌人民医院接受治疗",
+              "timestamp": 1771493292.4257894,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f6a2509c-4f72-4167-9cb9-61bd832b8e0d",
+              "content": "血小板计数约1000（极低）",
+              "timestamp": 1771493292.4258037,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "94a006df-1970-4446-8143-14c77ea07003",
+              "content": "患者妊娠8个月时检查发现梅毒",
+              "timestamp": 1771493300.3021731,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "ceb9ef5d-46ec-45af-b619-1bf7e7ad21f1",
+              "content": "分娩后新生儿未存活（患者称“孩子没有”）",
+              "timestamp": 1771493300.3021817,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "c3c13a89-a313-43a2-b7be-dca0b30a87d9",
+              "content": "医生建议（针对梅毒）：需要完成一个疗程的治疗",
+              "timestamp": 1771493307.1136525,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7eb35f5e-af12-4207-aabd-6d38b3a1f950",
+              "content": "既往诊断癫痫",
+              "timestamp": 1771493316.214165,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "aac7ac90-dae8-4046-9903-08e117cd583e",
+              "content": "曾在南昌就诊（本次所述与既往南昌就诊记录不同，未注明具体医院/时间）",
+              "timestamp": 1771493316.2141902,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "e724e57b-cb96-405c-b9fe-9fd3f4d263e5",
+              "content": "再生障碍性贫血目前约每15天输血一次；伴牙龈出血及皮肤出血点",
+              "timestamp": 1771493328.8100698,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "0716d207-9f85-4697-ad59-c5a826a97ba8",
+              "content": "癫痫发作多在夜间约12点，表现为头晕",
+              "timestamp": 1771493328.8100789,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "5f380d4d-34b8-48ce-84c9-b844031a3455",
+              "content": "医生建议：无论药物或手术治疗癫痫，需先做详细脑电图检查以明确病灶位置及发作类型，并携带病历资料就诊",
+              "timestamp": 1771493328.8100836,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "9f39af83-b9f1-4aa2-b77d-b626621e73dd",
+              "content": "婚后5年不孕史",
+              "timestamp": 1771493352.017658,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7d73b247-47ec-41be-979f-086a37c8380b",
+              "content": "2008年镇江四院发现盆腔积液约60（原文单位“公分”，未治疗）；2009年镇江市中医院发现盆腔积液约90，诊断盆腔炎（湿热蕴结）并住院抗炎治疗：甲硝唑+阿奇霉素10天，配合中药口服/保留灌肠/熏药/阴道灌洗上药；治疗后积液约63×28，后续疗程约62×31",
+              "timestamp": 1771493352.0176687,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f1b93e7f-6415-41d2-93f3-a1e4fc57548d",
+              "content": "后穹窿穿刺：浑黄色/黄色液体；细菌培养阴性；结核杆菌阴性；脱落细胞检查见异型细胞，疑腺癌；穿刺后注入甲硝唑40ml，3天后B超提示积液约100×26且子宫内膜局部增厚约11mm",
+              "timestamp": 1771493352.0176733,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "d289f167-3fad-498c-96be-9b0d180e67eb",
+              "content": "无痛刮宫及再次穿刺：脱落细胞检查见少数异型细胞；病理提示宫颈黏膜慢性炎症伴腺上皮鳞化；子宫内膜单纯性增生（原文“增长过长”）",
+              "timestamp": 1771493352.017677,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "0f2fa940-b863-4e15-bb5c-51d26814fd7d",
+              "content": "转至镇江市江苏大学附属医院：加强CT检查未见异常；胃镜未见异常",
+              "timestamp": 1771493352.0176816,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "d551a51e-222b-4812-9a17-09f82ca9ff9e",
+              "content": "血清自身抗体均阴性：ANA、抗RNP、抗Sm、抗SSA、抗SSB、抗JO-1、抗SCL-70、抗dsDNA、抗心磷脂抗体阴性",
+              "timestamp": 1771493352.0176854,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c8c1bdb0-a21b-42bd-871a-54719495bde6",
+              "content": "后穹窿穿刺30ml黄色液体；肿瘤标志物：甲胎蛋白AFP 1.71；癌胚抗原CEA（数值未提供）",
+              "timestamp": 1771493352.0176897,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "a2fd2442-f339-47c2-8891-89da26a2df07",
+              "content": "医生建议：患者病史复杂，需携带所有资料到门诊当面咨询；医生周五上午专家门诊出诊",
+              "timestamp": 1771493356.7953181,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "30ff7388-454a-4cf2-8770-e26238b1258c",
+              "content": "既往/现患冠心病，发病约1个月",
+              "timestamp": 1771493363.9718053,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者在最近一次发病时主要不适症状是什么？",
+          "answer": "心绞痛",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "a3fdf007-d0da-42a9-8ecb-4d22ba7e3586"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "在正规药物治疗情况下，如果心绞痛仍发作频繁，应考虑行冠状动脉造影检查以进一步明确病情并指导下一步治疗。如有需要可来我院心内科门诊咨询治疗。",
+        "to_memory": [
+          "history: 既往/现病诊断：冠心病；发病约1个月；有心绞痛",
+          "history: 医嘱/建议：在正规药物治疗下若心绞痛仍频繁发作，建议行冠状动脉造影以明确病情并指导下一步治疗",
+          "working: 当前讨论：心绞痛在药物治疗情况下仍可能频繁发作，需评估是否行冠脉造影；可至心内科门诊咨询"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "a3fdf007-d0da-42a9-8ecb-4d22ba7e3586",
+              "content": "本次主诉心绞痛；在药物治疗情况下仍可能频繁发作，需评估是否行冠状动脉造影；可至心内科门诊咨询",
+              "timestamp": 1771493363.9718137,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "20f9a155-d0f5-4fe8-beae-08d1a9dbfd0f",
+              "content": "诊断为结肠癌",
+              "timestamp": 1771493269.8487186,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "11756264-5521-4eb9-a886-8f2d29ba7a71",
+              "content": "协和医院医生建议化疗每3-4周一次，共6-8次；已在协和完成第1次化疗且身体未见异常",
+              "timestamp": 1771493269.8487287,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "60179c2f-55bb-474c-97b0-a265fb613cc9",
+              "content": "地区医院医生建议化疗每2周一次；次数：理论上12次最佳，多数患者难以坚持时6-8次也可（另有观点10-12次）",
+              "timestamp": 1771493269.8487332,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "3b51bd63-a259-4e38-9465-5f5ace06a571",
+              "content": "2010-01-05就诊地区医院，已完成第2次化疗前准备及检查；计划2010-01-06上午开始第2次化疗",
+              "timestamp": 1771493269.8487372,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "ee825b6c-24f8-4889-8125-0feb63647355",
+              "content": "检查/身体状况：总体无明显异常，仅有贫血",
+              "timestamp": 1771493269.848741,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            },
+            {
+              "id": "c309f67e-6ea7-42b2-a81f-1c25fcfbb71d",
+              "content": "化疗方案可选每2周住院一次；出院后不需口服希罗达/Xeloda",
+              "timestamp": 1771493284.401245,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "b17f7a3d-7719-4d34-9afa-e8f34787dc09",
+              "content": "2009年6月在南昌人民医院确诊再生障碍性贫血",
+              "timestamp": 1771493292.4257793,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "cae823b7-e6e9-4734-83cb-8e74b0e3b9c8",
+              "content": "曾在湖南湘雅医院及南昌人民医院接受治疗",
+              "timestamp": 1771493292.4257894,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "f6a2509c-4f72-4167-9cb9-61bd832b8e0d",
+              "content": "血小板计数约1000（极低）",
+              "timestamp": 1771493292.4258037,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "94a006df-1970-4446-8143-14c77ea07003",
+              "content": "患者妊娠8个月时检查发现梅毒",
+              "timestamp": 1771493300.3021731,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "ceb9ef5d-46ec-45af-b619-1bf7e7ad21f1",
+              "content": "分娩后新生儿未存活（患者称“孩子没有”）",
+              "timestamp": 1771493300.3021817,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            },
+            {
+              "id": "c3c13a89-a313-43a2-b7be-dca0b30a87d9",
+              "content": "医生建议（针对梅毒）：需要完成一个疗程的治疗",
+              "timestamp": 1771493307.1136525,
+              "metadata": {
+                "turn_idx": 7
+              },
+              "turn_idx": 7
+            },
+            {
+              "id": "7eb35f5e-af12-4207-aabd-6d38b3a1f950",
+              "content": "既往诊断癫痫",
+              "timestamp": 1771493316.214165,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "aac7ac90-dae8-4046-9903-08e117cd583e",
+              "content": "曾在南昌就诊（本次所述与既往南昌就诊记录不同，未注明具体医院/时间）",
+              "timestamp": 1771493316.2141902,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "e724e57b-cb96-405c-b9fe-9fd3f4d263e5",
+              "content": "再生障碍性贫血目前约每15天输血一次；伴牙龈出血及皮肤出血点",
+              "timestamp": 1771493328.8100698,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "0716d207-9f85-4697-ad59-c5a826a97ba8",
+              "content": "癫痫发作多在夜间约12点，表现为头晕",
+              "timestamp": 1771493328.8100789,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "5f380d4d-34b8-48ce-84c9-b844031a3455",
+              "content": "医生建议：无论药物或手术治疗癫痫，需先做详细脑电图检查以明确病灶位置及发作类型，并携带病历资料就诊",
+              "timestamp": 1771493328.8100836,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            },
+            {
+              "id": "9f39af83-b9f1-4aa2-b77d-b626621e73dd",
+              "content": "婚后5年不孕史",
+              "timestamp": 1771493352.017658,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "7d73b247-47ec-41be-979f-086a37c8380b",
+              "content": "2008年镇江四院发现盆腔积液约60（原文单位“公分”，未治疗）；2009年镇江市中医院发现盆腔积液约90，诊断盆腔炎（湿热蕴结）并住院抗炎治疗：甲硝唑+阿奇霉素10天，配合中药口服/保留灌肠/熏药/阴道灌洗上药；治疗后积液约63×28，后续疗程约62×31",
+              "timestamp": 1771493352.0176687,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "f1b93e7f-6415-41d2-93f3-a1e4fc57548d",
+              "content": "后穹窿穿刺：浑黄色/黄色液体；细菌培养阴性；结核杆菌阴性；脱落细胞检查见异型细胞，疑腺癌；穿刺后注入甲硝唑40ml，3天后B超提示积液约100×26且子宫内膜局部增厚约11mm",
+              "timestamp": 1771493352.0176733,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "d289f167-3fad-498c-96be-9b0d180e67eb",
+              "content": "无痛刮宫及再次穿刺：脱落细胞检查见少数异型细胞；病理提示宫颈黏膜慢性炎症伴腺上皮鳞化；子宫内膜单纯性增生（原文“增长过长”）",
+              "timestamp": 1771493352.017677,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "0f2fa940-b863-4e15-bb5c-51d26814fd7d",
+              "content": "转至镇江市江苏大学附属医院：加强CT检查未见异常；胃镜未见异常",
+              "timestamp": 1771493352.0176816,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "d551a51e-222b-4812-9a17-09f82ca9ff9e",
+              "content": "血清自身抗体均阴性：ANA、抗RNP、抗Sm、抗SSA、抗SSB、抗JO-1、抗SCL-70、抗dsDNA、抗心磷脂抗体阴性",
+              "timestamp": 1771493352.0176854,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "c8c1bdb0-a21b-42bd-871a-54719495bde6",
+              "content": "后穹窿穿刺30ml黄色液体；肿瘤标志物：甲胎蛋白AFP 1.71；癌胚抗原CEA（数值未提供）",
+              "timestamp": 1771493352.0176897,
+              "metadata": {
+                "turn_idx": 12
+              },
+              "turn_idx": 12
+            },
+            {
+              "id": "a2fd2442-f339-47c2-8891-89da26a2df07",
+              "content": "医生建议：患者病史复杂，需携带所有资料到门诊当面咨询；医生周五上午专家门诊出诊",
+              "timestamp": 1771493356.7953181,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "30ff7388-454a-4cf2-8770-e26238b1258c",
+              "content": "既往/现患冠心病，发病约1个月",
+              "timestamp": 1771493363.9718053,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "82d00653-aa2a-46fc-9454-a1944a2e3442",
+              "content": "既往/现病诊断：冠心病；发病约1个月；有心绞痛",
+              "timestamp": 1771493372.4229758,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "c528f161-bf1e-424d-a0a9-eb0ad549076a",
+              "content": "医嘱/建议：在正规药物治疗下若心绞痛仍频繁发作，建议行冠状动脉造影以明确病情并指导下一步治疗",
+              "timestamp": 1771493372.4229841,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "comorbidity_management",
+    "scenario_name": "多疾病共病管理",
+    "session_count": 6,
+    "group_key": "综合科"
+  }
+}

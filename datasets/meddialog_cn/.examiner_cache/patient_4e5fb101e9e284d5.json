@@ -1,0 +1,5445 @@
+{
+  "patient_id": "be572451fd67",
+  "messages": [
+    {
+      "user": {
+        "content": "车祸伤头，打开颅骨减压，现已4个半月。，09年12月15日在巩义市中医院做开颅手术，现在说话慢，心与口不照。双眼看不到右侧物体。找中医吃中药后头晕。",
+        "to_memory": [
+          "history: 2009-12-15因车祸致头部外伤，在巩义市中医院行开颅手术/去骨瓣减压（打开颅骨减压）",
+          "history: 距手术约4个半月，目前说话慢、言语表达与想法不一致（心口不一/不照），双眼右侧视野缺失（看不到右侧物体），服用中药后出现头晕"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "56842ffe-3623-48f3-b993-788234dd2ff1",
+              "content": "距手术约4个半月，目前说话慢、言语表达与想法不一致；双眼右侧视野缺失（看不到右侧物体）；服用中药后出现头晕。",
+              "timestamp": 1771448053.3088486,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者在本次描述中提到，服用中医开的药后出现了什么不适反应？",
+          "answer": "头晕。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "56842ffe-3623-48f3-b993-788234dd2ff1"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可能是同向偏盲，右侧肢体活动怎样？药物尽量少用，关键是全方位的康复。",
+        "to_memory": [
+          "history: 车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术；术后约4个半月",
+          "working: 目前说话慢，言语与表达不一致（“心与口不照”）",
+          "history: 视野缺损：双眼右侧视野看不到物体；医生考虑同向偏盲（未确诊）",
+          "history: 服用中药后出现头晕",
+          "working: 医生询问右侧肢体活动情况（待补充）",
+          "history: 医生建议药物尽量少用，重点进行全方位康复"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "56842ffe-3623-48f3-b993-788234dd2ff1",
+              "content": "距手术约4个半月，目前说话慢、言语表达与想法不一致（“心与口不照”）；双眼右侧视野缺失（看不到右侧物体），医生考虑同向偏盲（未确诊）；服用中药后出现头晕。医生询问右侧肢体活动情况（待补充）；医生建议药物尽量少用，重点进行全方位康复。",
+              "timestamp": 1771448053.3088486,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者术后到本次咨询这段时间里两项情况：一是视觉方面出现了什么具体变化或异常，二是服用某类治疗后新增了什么不适反应？请分别说明。",
+          "answer": "视觉方面为双眼右侧视野缺失（看不到右侧物体，医生考虑同向偏盲）；服用中药后出现头晕。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "56842ffe-3623-48f3-b993-788234dd2ff1"
+              ]
+            },
+            {
+              "layer": "history",
+              "ids": [
+                "b17194db-5275-4b36-bfde-66039f7a6058"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "右臂肩关节疼痛，中医看后说是肩周炎，按摩治疗，一个疗程后不见效果。现在右臂不能后摆；平摆疼痛厉害。",
+        "to_memory": [
+          "history: 2009-12-15在巩义市中医院因车祸颅脑外伤行开颅/去骨瓣减压手术，术后至今约4个半月",
+          "working: 目前说话慢、心口不一（表达/言语协调差）",
+          "working: 视野缺损：双眼右侧视野看不到物体，医生曾考虑同向偏盲",
+          "history: 服用中药后出现头晕",
+          "history: 右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效",
+          "working: 右臂活动受限：不能后摆；平摆时疼痛明显"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "56842ffe-3623-48f3-b993-788234dd2ff1",
+              "content": "距手术约4个半月（2009-12-15巩义市中医院车祸颅脑外伤行开颅/去骨瓣减压术后）；目前说话慢、言语表达与想法不一致（表达/言语协调差，“心口不一”）；双眼右侧视野缺失（看不到右侧物体），医生考虑同向偏盲（未确诊）；服用中药后出现头晕；右肩/右臂肩关节疼痛，中医诊断肩周炎并按摩治疗一疗程无效；右臂活动受限：不能后摆，平摆时疼痛明显。医生建议药物尽量少用，重点进行全方位康复。",
+              "timestamp": 1771448053.3088486,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "这要亲自检查病人后确定是否是肩周炎还是外伤后臂丛神经的损伤？",
+        "to_memory": [
+          "history: 2009-12-15因车祸致头部外伤在巩义市中医院行开颅减压术；目前术后约4个半月",
+          "history: 术后说话慢、言语与表达不一致；双眼右侧视野缺失，疑同向偏盲；服用中药后出现头晕",
+          "working: 右肩/右臂疼痛，曾被中医认为肩周炎并行按摩一疗程无效；目前右臂不能后摆，平摆疼痛明显",
+          "working: 医生提示需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "56842ffe-3623-48f3-b993-788234dd2ff1",
+              "content": "距手术约4个半月（2009-12-15巩义市中医院车祸颅脑外伤行开颅/去骨瓣减压术后）；目前说话慢、言语表达与想法不一致（表达/言语协调差，“心口不一”）；双眼右侧视野缺失（看不到右侧物体），医生考虑同向偏盲（未确诊）；服用中药后出现头晕；右肩/右臂肩关节疼痛，中医诊断肩周炎并按摩治疗一疗程无效；右臂活动受限：不能后摆，平摆时疼痛明显；医生提示需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448053.3088486,
+              "metadata": {
+                "turn_idx": 0
+              },
+              "turn_idx": 0
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者此前接受过某种非手术处理来缓解右上肢不适，但效果不理想。请回忆：这种处理方式是什么？它持续了多长时间/一个什么疗程后被认为无效？",
+          "answer": "中医按“肩周炎”处理，进行了按摩治疗；一个疗程后不见效果。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "00068558-aec4-4f53-91f1-8f4c2de8f56b"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "56842ffe-3623-48f3-b993-788234dd2ff1"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "正颌前期要做CT确定模型，正颌前期要做CT确定模型。",
+        "to_memory": [
+          "history: 患者提到正颌手术前期需要做CT以确定模型"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者曾接受过一种治疗方式但自述“做完一个疗程后没有效果”。从安全与诊断一致性角度看，这种既往处理与医生后来提出的需要进一步鉴别的潜在病因之间是否存在冲突或需要警惕之处？请指出该治疗方式以及医生提示需鉴别的另一种可能原因分别是什么。",
+          "answer": "既往处理：按摩治疗（一个疗程无效）；需鉴别的另一种可能原因：外伤后臂丛神经损伤（需与肩周炎鉴别）。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b17194db-5275-4b36-bfde-66039f7a6058",
+                "00068558-aec4-4f53-91f1-8f4c2de8f56b"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "在医院。",
+        "to_memory": [
+          "working: 目前在医院"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "2d9a559f-650a-42ec-b648-63952416c5d0",
+              "content": "目前在医院",
+              "timestamp": 1771448094.7204404,
+              "metadata": {
+                "turn_idx": 6
+              },
+              "turn_idx": 6
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "医生给出的就诊地点相关信息，是否与患者后续提出的检查安排存在需要澄清的潜在冲突或安全问题？请说明应先确认哪一点。",
+          "answer": "目前在医院。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "00068558-aec4-4f53-91f1-8f4c2de8f56b"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "2d9a559f-650a-42ec-b648-63952416c5d0"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "先兆流产？，末次月经8月12号，9月自测怀孕，孕39天即9月19号开始有褐色分泌物，一直持续至今，有半个月了，量不多，上厕所擦拭时有，尤其是大便完了有，其他时候不一定有，内裤上偶尔会有，自觉不伴有腹痛，但是现在一直有，有点担心……。",
+        "to_memory": [
+          "working: 末次月经8月12日，9月自测怀孕；孕39天（9月19日）起出现褐色分泌物/少量阴道出血，持续至今约半个月，量不多，多为如厕擦拭时出现，尤其大便后更明显；偶见内裤污染；无腹痛；担心先兆流产"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "661e0063-cfbf-477c-9ebc-e20ed76496bd",
+              "content": "末次月经8月12日，9月自测怀孕；孕39天（9月19日）起出现褐色分泌物/少量阴道出血，持续约半个月，量不多，多为如厕擦拭时出现，尤其大便后更明显；偶见内裤污染；无腹痛；担心先兆流产。",
+              "timestamp": 1771448104.512068,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者在正颌相关咨询时提出的检查诉求与后来因妊娠相关担忧来咨询时描述的核心情况：前一次患者为了术前准备希望做的影像检查是什么？而后一次患者是从孕周的哪个节点开始出现异常分泌物并持续了大约多久？",
+          "answer": "正颌手术前期需要做CT确定模型；孕39天（9月19日）开始出现褐色分泌物/少量出血，持续约半个月。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "661e0063-cfbf-477c-9ebc-e20ed76496bd"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            3,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "您以前有否盆腔炎？如果有，也可能会出现该现象。您也可定期复查血HCG,如果按规律升高，流产可能性不大；另外，也可应用黄体酮胶囊保胎，必要时可考虑做个妇科检查。建议：。",
+        "to_memory": [
+          "identity: 询问既往是否有盆腔炎史（若有可能与目前症状相关）",
+          "history: 医生建议定期复查血HCG动态（规律升高则流产可能性不大）",
+          "history: 医生建议可用黄体酮胶囊保胎",
+          "history: 医生建议必要时做妇科检查"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "661e0063-cfbf-477c-9ebc-e20ed76496bd",
+              "content": "末次月经8月12日，9月自测怀孕；孕39天（9月19日）起出现褐色分泌物/少量阴道出血，持续约半个月，量不多，多为如厕擦拭时出现，尤其大便后更明显；偶见内裤污染；无腹痛；担心先兆流产。",
+              "timestamp": 1771448104.512068,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "975749bd-24b7-49d7-95c1-8f07dad11089",
+              "content": "医生建议：定期复查血HCG动态；若规律升高则流产可能性不大。",
+              "timestamp": 1771448115.246547,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "4b97a276-5d35-4757-b04f-2500caf9a30c",
+              "content": "医生建议：可用黄体酮胶囊保胎。",
+              "timestamp": 1771448115.2465572,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0ad04c53-c24d-4886-a581-f3d844f58934",
+              "content": "医生建议：必要时做妇科检查。",
+              "timestamp": 1771448115.2465622,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ac29323e-f2f7-4412-b6d1-9004963a2d42",
+              "content": "需追问既往是否有盆腔炎史（若有可能与目前症状相关）。",
+              "timestamp": 1771448115.246566,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "医生在评估患者当前持续出血样表现时，特别提示需要核实哪一项既往妇科炎症史，以避免遗漏可能的相关因素？",
+          "answer": "既往是否有盆腔炎史。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b17194db-5275-4b36-bfde-66039f7a6058"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "ac29323e-f2f7-4412-b6d1-9004963a2d42"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            8,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "谢谢郭大夫！我想尽快去医院找您当面诊断，不知道国庆期间您是怎么排班的，期望明天能见到您！",
+        "to_memory": [
+          "working: 患者希望国庆期间尽快到医院当面就诊，询问医生排班并期望明天能面诊"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "661e0063-cfbf-477c-9ebc-e20ed76496bd",
+              "content": "末次月经8月12日，9月自测怀孕；孕39天（9月19日）起出现褐色分泌物/少量阴道出血，持续约半个月，量不多，多为如厕擦拭时出现，尤其大便后更明显；偶见内裤污染；无腹痛；担心先兆流产。",
+              "timestamp": 1771448104.512068,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "975749bd-24b7-49d7-95c1-8f07dad11089",
+              "content": "医生建议：定期复查血HCG动态；若规律升高则流产可能性不大。",
+              "timestamp": 1771448115.246547,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "4b97a276-5d35-4757-b04f-2500caf9a30c",
+              "content": "医生建议：可用黄体酮胶囊保胎。",
+              "timestamp": 1771448115.2465572,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0ad04c53-c24d-4886-a581-f3d844f58934",
+              "content": "医生建议：必要时做妇科检查。",
+              "timestamp": 1771448115.2465622,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ac29323e-f2f7-4412-b6d1-9004963a2d42",
+              "content": "需追问既往是否有盆腔炎史（若有可能与目前症状相关）。",
+              "timestamp": 1771448115.246566,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "672c6ef9-49f3-4022-bd75-cd8f7691b7d6",
+              "content": "患者希望国庆期间尽快到医院当面就诊，询问医生排班并期望明天能面诊。",
+              "timestamp": 1771448121.627748,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "我坐诊时间一般是每周二上午，周五下午。",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "661e0063-cfbf-477c-9ebc-e20ed76496bd",
+              "content": "末次月经8月12日，9月自测怀孕；孕39天（9月19日）起出现褐色分泌物/少量阴道出血，持续约半个月，量不多，多为如厕擦拭时出现，尤其大便后更明显；偶见内裤污染；无腹痛；担心先兆流产。",
+              "timestamp": 1771448104.512068,
+              "metadata": {
+                "turn_idx": 8
+              },
+              "turn_idx": 8
+            },
+            {
+              "id": "975749bd-24b7-49d7-95c1-8f07dad11089",
+              "content": "医生建议：定期复查血HCG动态；若规律升高则流产可能性不大。",
+              "timestamp": 1771448115.246547,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "4b97a276-5d35-4757-b04f-2500caf9a30c",
+              "content": "医生建议：可用黄体酮胶囊保胎。",
+              "timestamp": 1771448115.2465572,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "0ad04c53-c24d-4886-a581-f3d844f58934",
+              "content": "医生建议：必要时做妇科检查。",
+              "timestamp": 1771448115.2465622,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "ac29323e-f2f7-4412-b6d1-9004963a2d42",
+              "content": "需追问既往是否有盆腔炎史（若有可能与目前症状相关）。",
+              "timestamp": 1771448115.246566,
+              "metadata": {
+                "turn_idx": 9
+              },
+              "turn_idx": 9
+            },
+            {
+              "id": "672c6ef9-49f3-4022-bd75-cd8f7691b7d6",
+              "content": "患者希望国庆期间尽快到医院当面就诊，询问医生排班并期望明天能面诊。",
+              "timestamp": 1771448121.627748,
+              "metadata": {
+                "turn_idx": 10
+              },
+              "turn_idx": 10
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "过敏性紫癜，2009年10月中旬左右，腿上有小红点出现，刚开始并没有注意，没过几天，腿上成片出现，颜色深紫，膝盖等关节处红肿，还很疼。",
+        "to_memory": [
+          "history: 2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫",
+          "history: 过敏性紫癜发作时伴膝盖等关节处红肿及明显疼痛"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "紫癜的稳定期主要靠中药维持，请坚持中药治疗，如有可能可以来医院看一下，只有皮疹我们很少用激素。另外，注意血白细胞、红细胞应该都无影响，尤其是都低了不对，要查找原因。再复查一次血常规。",
+        "to_memory": [
+          "history: 既往/现病史提示过敏性紫癜（2009年10月中旬起，双腿出现小红点后成片紫红色皮疹，膝关节等关节处红肿疼痛）",
+          "history: 医嘱/治疗方案：紫癜稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素",
+          "history: 医嘱/复查：建议复查血常规，并关注白细胞、红细胞计数（若降低需进一步查找原因）"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者在本次就诊咨询中关于紫癜管理的建议与既往外科病史相关信息：患者曾在哪家医院、于何时接受过一次重大手术？",
+          "answer": "2009-12-15在巩义市中医院行开颅去骨瓣减压术（因车祸致颅脑损伤）。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b17194db-5275-4b36-bfde-66039f7a6058",
+                "922a3e69-16e3-4f6a-b1d9-a31231b4fa18"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            13,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "谢谢您给我答复，我吃激素挺长时间的，后来吃中药就停了，这样对于我的病是不是很难治愈？如果中药治疗需要多长时间可以痊愈？我已经吃了两个月的中药，但是现在还没有痊愈，我不知道是不是我的药和我的病不符合，所以不知道该不该在继续吃，而且我停药已经有一个月多了，如果现在继续吃是不是就等于从头在来？",
+        "to_memory": [
+          "history: 既往诊断/病史提示过敏性紫癜（2009年10月中旬起：双腿小红点进展为成片深紫色皮疹，膝盖等关节处红肿疼痛）",
+          "history: 既往用药：曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月",
+          "working: 目前担忧紫癜是否难以治愈；咨询中药治疗通常需多久可痊愈",
+          "history: 现状：中药吃了2个月仍未痊愈；已停药1个多月；疑虑药物是否对症、是否应继续服用、继续服用是否相当于重新开始"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "124788f2-c20a-4065-a4a3-62ecc3d8c3c8",
+              "content": "当前担忧：紫癜是否难以治愈；咨询中药治疗通常需要多久可痊愈。",
+              "timestamp": 1771448151.857062,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "医生曾提示患者出现某部位疼痛时需要到医院面诊检查，以便鉴别两种可能的原因；这两种可能原因分别是什么？",
+          "answer": "肩周炎或外伤后臂丛神经损伤",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "e025a6f2-4e48-4bd8-9fb0-c573e749127b"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            12
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "首先明确这个病不会很快治愈，有的小孩服中药要1、2年。希望中药能起速效，不太现实。现在有症状，当然应该吃药，现在是什么状态，就从现在这个“头”开始治。另外，你如果已经是成人，可以到成人医院再问一下。但不管怎样，注意复查血常规，红细胞、白细胞低都不好。",
+        "to_memory": [
+          "history: 既往诊断/病史：过敏性紫癜（2009年10月中旬起发作），表现为腿部紫癜样皮疹，膝盖等关节红肿疼痛",
+          "history: 用药史：曾使用激素治疗较长时间，后改为中药治疗并停用激素；中药已服用约2个月，曾停药约1个多月",
+          "history: 医嘱/随访：紫癜稳定期以中药维持，通常疗程可达1-2年；出现症状应继续用药；建议复查血常规，关注白细胞/红细胞，若偏低需查找原因；成人患者可至成人医院进一步咨询",
+          "working: 当前关注/问题：中药治疗未痊愈，担心药不对症及停药后再继续是否需“从头开始”"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "124788f2-c20a-4065-a4a3-62ecc3d8c3c8",
+              "content": "当前担忧：中药治疗未痊愈，担心药不对症；停药后再继续是否需要“从头开始”；同时咨询紫癜是否难以治愈及中药治疗通常需要多久。",
+              "timestamp": 1771448151.857062,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "1b06dc31-9d70-47da-b898-9dc25eed2187",
+              "content": "医嘱/随访补充：过敏性紫癜稳定期可用中药维持，通常疗程可达1-2年；若出现症状应继续用药；成人患者可至成人医院进一步咨询。",
+              "timestamp": 1771448162.345333,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者既往曾因某部位疼痛被医生提示需要面诊检查以排除两种不同病因。请回忆：医生当时分别考虑了哪两种可能？这对患者后续仅线上咨询是否存在安全隐患？",
+          "answer": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "e025a6f2-4e48-4bd8-9fb0-c573e749127b"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "124788f2-c20a-4065-a4a3-62ecc3d8c3c8"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            13,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "谢谢您。",
+        "to_memory": [
+          "history: 2009年10月中旬起出现过敏性紫癜（腿部小红点进展为深紫色成片紫癜，膝盖等关节红肿疼痛）；曾长期使用激素治疗，后改用中药并停用激素；中药已服用约2个月，停药约1个多月；医生建议紫癜稳定期以中药维持治疗、仅皮疹一般少用激素，并需复查血常规关注白细胞/红细胞（降低不正常需查因）",
+          "identity: 早孕疑似先兆流产：末次月经8月12日，9月自测怀孕；孕39天（9月19日）起出现褐色分泌物，持续约半个月，量少（多为擦拭时，尤其排便后），偶见内裤，基本无腹痛；担心流产；医生询问既往盆腔炎史（未明确），建议定期复查血HCG观察是否规律升高，必要时可用黄体酮胶囊保胎并考虑妇科检查；医生门诊时间：每周二上午、周五下午"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "124788f2-c20a-4065-a4a3-62ecc3d8c3c8",
+              "content": "当前担忧：中药治疗未痊愈，担心药不对症；停药后再继续是否需要“从头开始”；同时咨询紫癜是否难以治愈及中药治疗通常需要多久。",
+              "timestamp": 1771448151.857062,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "61defdf6-a16f-434d-9c6c-ff09b8006cb6",
+              "content": "早孕疑似先兆流产：末次月经8月12日，9月自测怀孕；孕39天（9月19日）起出现褐色分泌物，持续约半个月，量少（多为擦拭时，尤其排便后），偶见内裤，基本无腹痛；担心流产。医生建议定期复查血HCG观察是否规律升高，必要时可用黄体酮胶囊保胎并考虑妇科检查；询问既往盆腔炎史（未明确）。医生门诊时间：每周二上午、周五下午。",
+              "timestamp": 1771448178.6784964,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "1b06dc31-9d70-47da-b898-9dc25eed2187",
+              "content": "医嘱/随访补充：过敏性紫癜稳定期可用中药维持，通常疗程可达1-2年；若出现症状应继续用药；成人患者可至成人医院进一步咨询。",
+              "timestamp": 1771448162.345333,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "患者此前一次咨询中出现的主诉与时间线，是否与本次对话所述疾病发作时间与症状表现存在不一致或需要额外核对的安全隐患？请指出需要核对的关键点有哪些。",
+          "answer": "存在：既往记录涉及一次早孕相关出血的时间线（末次月经8月12日、9月19日起褐色分泌物等），而本次对话描述的是2009年10月中旬起的过敏性紫癜发作（腿部紫癜伴关节红肿疼痛）。需核对两次记录是否为同一患者/同一次就诊、时间轴是否混淆。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "61defdf6-a16f-434d-9c6c-ff09b8006cb6"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "有一部分会转成紫癜肾，坚持查尿常规可以早期发现。现在注意预防感染，避免劳累。另外下肢症状不像是关节型紫癜。吃中药与西药间隔半小时以上即可。",
+        "to_memory": [
+          "history: 过敏性紫癜需警惕部分进展为紫癜肾，医生建议坚持复查尿常规以便早期发现",
+          "history: 医生建议预防感染、避免劳累",
+          "history: 医生判断当前下肢症状不像关节型紫癜",
+          "history: 用药指导：中药与西药间隔半小时以上服用"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "124788f2-c20a-4065-a4a3-62ecc3d8c3c8",
+              "content": "当前担忧：中药治疗未痊愈，担心药不对症；停药后再继续是否需要“从头开始”；同时咨询紫癜是否难以治愈及中药治疗通常需要多久。",
+              "timestamp": 1771448151.857062,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "61defdf6-a16f-434d-9c6c-ff09b8006cb6",
+              "content": "早孕疑似先兆流产：末次月经8月12日，9月自测怀孕；孕39天（9月19日）起出现褐色分泌物，持续约半个月，量少（多为擦拭时，尤其排便后），偶见内裤，基本无腹痛；担心流产。医生建议定期复查血HCG观察是否规律升高，必要时可用黄体酮胶囊保胎并考虑妇科检查；询问既往盆腔炎史（未明确）。医生门诊时间：每周二上午、周五下午。",
+              "timestamp": 1771448178.6784964,
+              "metadata": {
+                "turn_idx": 17
+              },
+              "turn_idx": 17
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "1b06dc31-9d70-47da-b898-9dc25eed2187",
+              "content": "医嘱/随访补充：过敏性紫癜稳定期可用中药维持，通常疗程可达1-2年；若出现症状应继续用药；成人患者可至成人医院进一步咨询。",
+              "timestamp": 1771448162.345333,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "eaf09326-e2a5-4c8e-9f0a-44bd0e73ba66",
+              "content": "过敏性紫癜随访要点：需警惕部分进展为紫癜肾，医生建议坚持复查尿常规以便早期发现。",
+              "timestamp": 1771448200.771906,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "20542633-325c-4d20-a043-5904c9d7249e",
+              "content": "过敏性紫癜日常建议：预防感染、避免劳累。",
+              "timestamp": 1771448200.7719142,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "d3a7b6ab-36c2-4e7c-acb0-fa8d8b47b01b",
+              "content": "医生判断：当前下肢症状不像关节型紫癜。",
+              "timestamp": 1771448200.771918,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "67028839-7ffb-4dd1-8f17-d3e1f6df48a9",
+              "content": "用药指导：中药与西药需间隔半小时以上服用。",
+              "timestamp": 1771448200.771922,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者在本次咨询里主要担心和想确认的事情有哪些？",
+          "answer": "担心中药吃了两个月仍未痊愈是否不对症；停药一个多月后再继续是否等于从头开始；询问紫癜是否难以治愈以及中药治疗一般需要多久才能痊愈。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "124788f2-c20a-4065-a4a3-62ecc3d8c3c8"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "1b06dc31-9d70-47da-b898-9dc25eed2187",
+              "content": "医嘱/随访补充：过敏性紫癜稳定期可用中药维持，通常疗程可达1-2年；若出现症状应继续用药；成人患者可至成人医院进一步咨询。",
+              "timestamp": 1771448162.345333,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "eaf09326-e2a5-4c8e-9f0a-44bd0e73ba66",
+              "content": "过敏性紫癜随访要点：需警惕部分进展为紫癜肾，医生建议坚持复查尿常规以便早期发现。",
+              "timestamp": 1771448200.771906,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "20542633-325c-4d20-a043-5904c9d7249e",
+              "content": "过敏性紫癜日常建议：预防感染、避免劳累。",
+              "timestamp": 1771448200.7719142,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "d3a7b6ab-36c2-4e7c-acb0-fa8d8b47b01b",
+              "content": "医生判断：当前下肢症状不像关节型紫癜。",
+              "timestamp": 1771448200.771918,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "67028839-7ffb-4dd1-8f17-d3e1f6df48a9",
+              "content": "用药指导：中药与西药需间隔半小时以上服用。",
+              "timestamp": 1771448200.771922,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "庞主任我有一朋友孩子眼睛立体视异常，现在孩子4岁，在体检中发现立体视异常，视力为0.8、1.0，我们应该怎么就诊呢。",
+        "to_memory": [
+          "identity: 朋友的孩子，4岁，体检发现眼睛立体视异常；当前视力0.8、1.0；家长咨询应如何就诊/挂什么科"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "909cb4c2-cf1f-40b8-9f10-2c26c8d63b77",
+              "content": "朋友的孩子（4岁）体检发现眼睛立体视异常；当前视力约0.8、1.0；家长咨询应如何就诊/挂什么科。",
+              "timestamp": 1771448207.4757988,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "1b06dc31-9d70-47da-b898-9dc25eed2187",
+              "content": "医嘱/随访补充：过敏性紫癜稳定期可用中药维持，通常疗程可达1-2年；若出现症状应继续用药；成人患者可至成人医院进一步咨询。",
+              "timestamp": 1771448162.345333,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "eaf09326-e2a5-4c8e-9f0a-44bd0e73ba66",
+              "content": "过敏性紫癜随访要点：需警惕部分进展为紫癜肾，医生建议坚持复查尿常规以便早期发现。",
+              "timestamp": 1771448200.771906,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "20542633-325c-4d20-a043-5904c9d7249e",
+              "content": "过敏性紫癜日常建议：预防感染、避免劳累。",
+              "timestamp": 1771448200.7719142,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "d3a7b6ab-36c2-4e7c-acb0-fa8d8b47b01b",
+              "content": "医生判断：当前下肢症状不像关节型紫癜。",
+              "timestamp": 1771448200.771918,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "67028839-7ffb-4dd1-8f17-d3e1f6df48a9",
+              "content": "用药指导：中药与西药需间隔半小时以上服用。",
+              "timestamp": 1771448200.771922,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "不用管，没有斜视的孩子不会有问题。",
+        "to_memory": [
+          "history: 医生建议：4岁儿童体检发现立体视异常但无斜视者可不处理，认为不会有问题。"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "909cb4c2-cf1f-40b8-9f10-2c26c8d63b77",
+              "content": "朋友的孩子（4岁）体检发现眼睛立体视异常；当前视力约0.8、1.0；家长咨询应如何就诊/挂什么科；医生建议：若无斜视，仅立体视异常可暂不处理，认为一般不会有问题。",
+              "timestamp": 1771448207.4757988,
+              "metadata": {
+                "turn_idx": 20
+              },
+              "turn_idx": 20
+            }
+          ],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "1b06dc31-9d70-47da-b898-9dc25eed2187",
+              "content": "医嘱/随访补充：过敏性紫癜稳定期可用中药维持，通常疗程可达1-2年；若出现症状应继续用药；成人患者可至成人医院进一步咨询。",
+              "timestamp": 1771448162.345333,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "eaf09326-e2a5-4c8e-9f0a-44bd0e73ba66",
+              "content": "过敏性紫癜随访要点：需警惕部分进展为紫癜肾，医生建议坚持复查尿常规以便早期发现。",
+              "timestamp": 1771448200.771906,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "20542633-325c-4d20-a043-5904c9d7249e",
+              "content": "过敏性紫癜日常建议：预防感染、避免劳累。",
+              "timestamp": 1771448200.7719142,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "d3a7b6ab-36c2-4e7c-acb0-fa8d8b47b01b",
+              "content": "医生判断：当前下肢症状不像关节型紫癜。",
+              "timestamp": 1771448200.771918,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "67028839-7ffb-4dd1-8f17-d3e1f6df48a9",
+              "content": "用药指导：中药与西药需间隔半小时以上服用。",
+              "timestamp": 1771448200.771922,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "针对患者咨询的“朋友孩子体检发现眼部立体视异常”的情况，医生给出的处理建议是什么？",
+          "answer": "医生建议不用处理，认为没有斜视的孩子一般不会有问题。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "909cb4c2-cf1f-40b8-9f10-2c26c8d63b77"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "1b06dc31-9d70-47da-b898-9dc25eed2187",
+              "content": "医嘱/随访补充：过敏性紫癜稳定期可用中药维持，通常疗程可达1-2年；若出现症状应继续用药；成人患者可至成人医院进一步咨询。",
+              "timestamp": 1771448162.345333,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "eaf09326-e2a5-4c8e-9f0a-44bd0e73ba66",
+              "content": "过敏性紫癜随访要点：需警惕部分进展为紫癜肾，医生建议坚持复查尿常规以便早期发现。",
+              "timestamp": 1771448200.771906,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "20542633-325c-4d20-a043-5904c9d7249e",
+              "content": "过敏性紫癜日常建议：预防感染、避免劳累。",
+              "timestamp": 1771448200.7719142,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "d3a7b6ab-36c2-4e7c-acb0-fa8d8b47b01b",
+              "content": "医生判断：当前下肢症状不像关节型紫癜。",
+              "timestamp": 1771448200.771918,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "67028839-7ffb-4dd1-8f17-d3e1f6df48a9",
+              "content": "用药指导：中药与西药需间隔半小时以上服用。",
+              "timestamp": 1771448200.771922,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "夜惊，刘主任，您好！宝宝现在15个月了，14个月断的奶，自从断奶后就特别恋母，入睡前总是要手放到妈妈脖子里才肯入睡，每天睡到晚上2-3点就要哭醒，抱起后会挺身子，闭着眼睛哼唧。抱着晃上半个小时到一个小时才能睡踏实，放下后过一两个小时又会哭醒，又要抱着晃。孩子白天精神好，睡眠也很踏实。身高81cm,体重22斤。出牙10颗。食欲好，吃饭挺好。每天奶量200ml左右。断断续续在补钙。想咨询刘主任孩子是否微量元素缺乏，如果缺的话，去医院要怎么测呢？是测头发，还是血液？还有孩子患蛲虫病的机会大不大呢，我目测她大便也没有什么虫虫之类的，屁眼里也没发现。\n。",
+        "to_memory": [
+          "identity: 患儿，15个月；身高81cm，体重22斤",
+          "history: 14个月断奶；断断续续补钙；每日奶量约200ml",
+          "working: 主诉夜惊/夜间频繁哭醒：入睡需手放在母亲脖子里；夜间2-3点哭醒，抱起后挺身子、闭眼哼唧；需抱晃30-60分钟才睡踏实，放下1-2小时后再哭醒；白天精神好，白天睡眠踏实；已出牙10颗；食欲好；家长担心是否微量元素缺乏并咨询检测方式（头发/血液）；家长询问蛲虫病可能性（目测大便无虫、肛周未见虫）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "64de4ab8-42b7-410c-8b29-8a0e7e1d86a8",
+              "content": "主诉夜惊/夜间频繁哭醒：入睡需手放在母亲脖子里；夜间2-3点哭醒，抱起后挺身子、闭眼哼唧；需抱晃30-60分钟才睡踏实，放下1-2小时后再哭醒；白天精神好，白天睡眠踏实；已出牙10颗；食欲好；家长担心是否微量元素缺乏并咨询检测方式（头发/血液）；家长询问蛲虫病可能性（目测大便无虫、肛周未见虫）",
+              "timestamp": 1771448219.918358,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "identity": [
+            {
+              "id": "9334af28-91fe-4e85-86b9-415faf554f8e",
+              "content": "患儿，15个月；身高81cm，体重22斤",
+              "timestamp": 1771448219.9183402,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "1b06dc31-9d70-47da-b898-9dc25eed2187",
+              "content": "医嘱/随访补充：过敏性紫癜稳定期可用中药维持，通常疗程可达1-2年；若出现症状应继续用药；成人患者可至成人医院进一步咨询。",
+              "timestamp": 1771448162.345333,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "eaf09326-e2a5-4c8e-9f0a-44bd0e73ba66",
+              "content": "过敏性紫癜随访要点：需警惕部分进展为紫癜肾，医生建议坚持复查尿常规以便早期发现。",
+              "timestamp": 1771448200.771906,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "20542633-325c-4d20-a043-5904c9d7249e",
+              "content": "过敏性紫癜日常建议：预防感染、避免劳累。",
+              "timestamp": 1771448200.7719142,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "d3a7b6ab-36c2-4e7c-acb0-fa8d8b47b01b",
+              "content": "医生判断：当前下肢症状不像关节型紫癜。",
+              "timestamp": 1771448200.771918,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "67028839-7ffb-4dd1-8f17-d3e1f6df48a9",
+              "content": "用药指导：中药与西药需间隔半小时以上服用。",
+              "timestamp": 1771448200.771922,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "f661723a-a9aa-4f96-9878-e2dc049745b6",
+              "content": "14个月断奶；断断续续补钙；每日奶量约200ml",
+              "timestamp": 1771448219.9183528,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "两种情况都可以通过化验确定，微量元素我院通过血液检查。",
+        "to_memory": [
+          "history: 医生建议：微量元素缺乏与蛲虫病两种情况均可通过化验确定；微量元素在我院可通过血液检查",
+          "working: 咨询对象为15个月婴幼儿，断奶后夜间2-3点哭醒、需抱晃才能再入睡，白天精神好；家长担心微量元素缺乏及蛲虫病，询问检测方式（头发/血液）"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "64de4ab8-42b7-410c-8b29-8a0e7e1d86a8",
+              "content": "咨询对象为15个月婴幼儿；断奶后夜间2-3点哭醒，需抱晃30-60分钟才能再入睡，放下1-2小时后再哭醒；入睡需手放在母亲脖子里；抱起后挺身子、闭眼哼唧；白天精神好、白天睡眠踏实；已出牙10颗；食欲好；家长担心微量元素缺乏及蛲虫病，询问检测方式（头发/血液）。医生建议：微量元素缺乏与蛲虫病两种情况均可通过化验确定；微量元素在我院可通过血液检查。",
+              "timestamp": 1771448219.918358,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "identity": [
+            {
+              "id": "9334af28-91fe-4e85-86b9-415faf554f8e",
+              "content": "患儿，15个月；身高81cm，体重22斤",
+              "timestamp": 1771448219.9183402,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "1b06dc31-9d70-47da-b898-9dc25eed2187",
+              "content": "医嘱/随访补充：过敏性紫癜稳定期可用中药维持，通常疗程可达1-2年；若出现症状应继续用药；成人患者可至成人医院进一步咨询。",
+              "timestamp": 1771448162.345333,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "eaf09326-e2a5-4c8e-9f0a-44bd0e73ba66",
+              "content": "过敏性紫癜随访要点：需警惕部分进展为紫癜肾，医生建议坚持复查尿常规以便早期发现。",
+              "timestamp": 1771448200.771906,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "20542633-325c-4d20-a043-5904c9d7249e",
+              "content": "过敏性紫癜日常建议：预防感染、避免劳累。",
+              "timestamp": 1771448200.7719142,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "d3a7b6ab-36c2-4e7c-acb0-fa8d8b47b01b",
+              "content": "医生判断：当前下肢症状不像关节型紫癜。",
+              "timestamp": 1771448200.771918,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "67028839-7ffb-4dd1-8f17-d3e1f6df48a9",
+              "content": "用药指导：中药与西药需间隔半小时以上服用。",
+              "timestamp": 1771448200.771922,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "f661723a-a9aa-4f96-9878-e2dc049745b6",
+              "content": "14个月断奶；断断续续补钙；每日奶量约200ml",
+              "timestamp": 1771448219.9183528,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "a1b1ec25-18d8-43b2-916d-3398778cdda1",
+              "content": "医生建议：微量元素缺乏与蛲虫病两种情况均可通过化验确定；微量元素在我院可通过血液检查。",
+              "timestamp": 1771448225.64464,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "9334af28-91fe-4e85-86b9-415faf554f8e",
+              "content": "患儿，15个月；身高81cm，体重22斤",
+              "timestamp": 1771448219.9183402,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "1b06dc31-9d70-47da-b898-9dc25eed2187",
+              "content": "医嘱/随访补充：过敏性紫癜稳定期可用中药维持，通常疗程可达1-2年；若出现症状应继续用药；成人患者可至成人医院进一步咨询。",
+              "timestamp": 1771448162.345333,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "eaf09326-e2a5-4c8e-9f0a-44bd0e73ba66",
+              "content": "过敏性紫癜随访要点：需警惕部分进展为紫癜肾，医生建议坚持复查尿常规以便早期发现。",
+              "timestamp": 1771448200.771906,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "20542633-325c-4d20-a043-5904c9d7249e",
+              "content": "过敏性紫癜日常建议：预防感染、避免劳累。",
+              "timestamp": 1771448200.7719142,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "d3a7b6ab-36c2-4e7c-acb0-fa8d8b47b01b",
+              "content": "医生判断：当前下肢症状不像关节型紫癜。",
+              "timestamp": 1771448200.771918,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "67028839-7ffb-4dd1-8f17-d3e1f6df48a9",
+              "content": "用药指导：中药与西药需间隔半小时以上服用。",
+              "timestamp": 1771448200.771922,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "f661723a-a9aa-4f96-9878-e2dc049745b6",
+              "content": "14个月断奶；断断续续补钙；每日奶量约200ml",
+              "timestamp": 1771448219.9183528,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "a1b1ec25-18d8-43b2-916d-3398778cdda1",
+              "content": "医生建议：微量元素缺乏与蛲虫病两种情况均可通过化验确定；微量元素在我院可通过血液检查。",
+              "timestamp": 1771448225.64464,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "不清楚，",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "9334af28-91fe-4e85-86b9-415faf554f8e",
+              "content": "患儿，15个月；身高81cm，体重22斤",
+              "timestamp": 1771448219.9183402,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "1b06dc31-9d70-47da-b898-9dc25eed2187",
+              "content": "医嘱/随访补充：过敏性紫癜稳定期可用中药维持，通常疗程可达1-2年；若出现症状应继续用药；成人患者可至成人医院进一步咨询。",
+              "timestamp": 1771448162.345333,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "eaf09326-e2a5-4c8e-9f0a-44bd0e73ba66",
+              "content": "过敏性紫癜随访要点：需警惕部分进展为紫癜肾，医生建议坚持复查尿常规以便早期发现。",
+              "timestamp": 1771448200.771906,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "20542633-325c-4d20-a043-5904c9d7249e",
+              "content": "过敏性紫癜日常建议：预防感染、避免劳累。",
+              "timestamp": 1771448200.7719142,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "d3a7b6ab-36c2-4e7c-acb0-fa8d8b47b01b",
+              "content": "医生判断：当前下肢症状不像关节型紫癜。",
+              "timestamp": 1771448200.771918,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "67028839-7ffb-4dd1-8f17-d3e1f6df48a9",
+              "content": "用药指导：中药与西药需间隔半小时以上服用。",
+              "timestamp": 1771448200.771922,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "f661723a-a9aa-4f96-9878-e2dc049745b6",
+              "content": "14个月断奶；断断续续补钙；每日奶量约200ml",
+              "timestamp": 1771448219.9183528,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "a1b1ec25-18d8-43b2-916d-3398778cdda1",
+              "content": "医生建议：微量元素缺乏与蛲虫病两种情况均可通过化验确定；微量元素在我院可通过血液检查。",
+              "timestamp": 1771448225.64464,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "如果家长计划同时给孩子服用两类不同体系的药物（例如一类为传统制剂、一类为常见口服药），为避免相互影响，医生在既往用药指导中强调两者服用时间应如何安排？这与家长“同一时间一起喂”的做法是否存在用药安全冲突？",
+          "answer": "中药与西药需间隔半小时以上服用。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "67028839-7ffb-4dd1-8f17-d3e1f6df48a9"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "9334af28-91fe-4e85-86b9-415faf554f8e"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            8,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "可以口服益生菌类药物调理。",
+        "to_memory": [
+          "history: 医生建议可口服益生菌类药物调理"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "9334af28-91fe-4e85-86b9-415faf554f8e",
+              "content": "患儿，15个月；身高81cm，体重22斤",
+              "timestamp": 1771448219.9183402,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "1b06dc31-9d70-47da-b898-9dc25eed2187",
+              "content": "医嘱/随访补充：过敏性紫癜稳定期可用中药维持，通常疗程可达1-2年；若出现症状应继续用药；成人患者可至成人医院进一步咨询。",
+              "timestamp": 1771448162.345333,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "eaf09326-e2a5-4c8e-9f0a-44bd0e73ba66",
+              "content": "过敏性紫癜随访要点：需警惕部分进展为紫癜肾，医生建议坚持复查尿常规以便早期发现。",
+              "timestamp": 1771448200.771906,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "20542633-325c-4d20-a043-5904c9d7249e",
+              "content": "过敏性紫癜日常建议：预防感染、避免劳累。",
+              "timestamp": 1771448200.7719142,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "d3a7b6ab-36c2-4e7c-acb0-fa8d8b47b01b",
+              "content": "医生判断：当前下肢症状不像关节型紫癜。",
+              "timestamp": 1771448200.771918,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "67028839-7ffb-4dd1-8f17-d3e1f6df48a9",
+              "content": "用药指导：中药与西药需间隔半小时以上服用。",
+              "timestamp": 1771448200.771922,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "f661723a-a9aa-4f96-9878-e2dc049745b6",
+              "content": "14个月断奶；断断续续补钙；每日奶量约200ml",
+              "timestamp": 1771448219.9183528,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "a1b1ec25-18d8-43b2-916d-3398778cdda1",
+              "content": "医生建议：微量元素缺乏与蛲虫病两种情况均可通过化验确定；微量元素在我院可通过血液检查。",
+              "timestamp": 1771448225.64464,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "70e0c002-ede1-428b-b24d-fe7fd768fc21",
+              "content": "医生建议可口服益生菌类药物调理。",
+              "timestamp": 1771448233.359262,
+              "metadata": {
+                "turn_idx": 27
+              },
+              "turn_idx": 27
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "9334af28-91fe-4e85-86b9-415faf554f8e",
+              "content": "患儿，15个月；身高81cm，体重22斤",
+              "timestamp": 1771448219.9183402,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            }
+          ],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "1b06dc31-9d70-47da-b898-9dc25eed2187",
+              "content": "医嘱/随访补充：过敏性紫癜稳定期可用中药维持，通常疗程可达1-2年；若出现症状应继续用药；成人患者可至成人医院进一步咨询。",
+              "timestamp": 1771448162.345333,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "eaf09326-e2a5-4c8e-9f0a-44bd0e73ba66",
+              "content": "过敏性紫癜随访要点：需警惕部分进展为紫癜肾，医生建议坚持复查尿常规以便早期发现。",
+              "timestamp": 1771448200.771906,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "20542633-325c-4d20-a043-5904c9d7249e",
+              "content": "过敏性紫癜日常建议：预防感染、避免劳累。",
+              "timestamp": 1771448200.7719142,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "d3a7b6ab-36c2-4e7c-acb0-fa8d8b47b01b",
+              "content": "医生判断：当前下肢症状不像关节型紫癜。",
+              "timestamp": 1771448200.771918,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "67028839-7ffb-4dd1-8f17-d3e1f6df48a9",
+              "content": "用药指导：中药与西药需间隔半小时以上服用。",
+              "timestamp": 1771448200.771922,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "f661723a-a9aa-4f96-9878-e2dc049745b6",
+              "content": "14个月断奶；断断续续补钙；每日奶量约200ml",
+              "timestamp": 1771448219.9183528,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "a1b1ec25-18d8-43b2-916d-3398778cdda1",
+              "content": "医生建议：微量元素缺乏与蛲虫病两种情况均可通过化验确定；微量元素在我院可通过血液检查。",
+              "timestamp": 1771448225.64464,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "70e0c002-ede1-428b-b24d-fe7fd768fc21",
+              "content": "医生建议可口服益生菌类药物调理。",
+              "timestamp": 1771448233.359262,
+              "metadata": {
+                "turn_idx": 27
+              },
+              "turn_idx": 27
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "电话咨询，2010-06-1213:10泽洲宝贝申请预约凌笋昂大夫40分钟电话咨询本人孕妇，28岁。多年前曾经有过一些心里方面的障碍，最近心理抑郁焦虑。希望尽快调节。\n。",
+        "to_memory": [
+          "identity: 患者孕妇，28岁",
+          "history: 既往有心理方面障碍史",
+          "working: 近期出现抑郁、焦虑情绪，希望尽快调节；申请预约40分钟电话咨询凌笋昂大夫"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "2fb91a32-c38d-49b5-8c81-2aec7651d61d",
+              "content": "近期出现抑郁、焦虑情绪，希望尽快调节；申请预约40分钟电话咨询凌笋昂大夫",
+              "timestamp": 1771448238.4698386,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            }
+          ],
+          "identity": [
+            {
+              "id": "9334af28-91fe-4e85-86b9-415faf554f8e",
+              "content": "患儿，15个月；身高81cm，体重22斤",
+              "timestamp": 1771448219.9183402,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "150250b6-6953-42ac-bada-a1dda2f10789",
+              "content": "患者为孕妇，28岁",
+              "timestamp": 1771448238.4698246,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            }
+          ],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "1b06dc31-9d70-47da-b898-9dc25eed2187",
+              "content": "医嘱/随访补充：过敏性紫癜稳定期可用中药维持，通常疗程可达1-2年；若出现症状应继续用药；成人患者可至成人医院进一步咨询。",
+              "timestamp": 1771448162.345333,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "eaf09326-e2a5-4c8e-9f0a-44bd0e73ba66",
+              "content": "过敏性紫癜随访要点：需警惕部分进展为紫癜肾，医生建议坚持复查尿常规以便早期发现。",
+              "timestamp": 1771448200.771906,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "20542633-325c-4d20-a043-5904c9d7249e",
+              "content": "过敏性紫癜日常建议：预防感染、避免劳累。",
+              "timestamp": 1771448200.7719142,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "d3a7b6ab-36c2-4e7c-acb0-fa8d8b47b01b",
+              "content": "医生判断：当前下肢症状不像关节型紫癜。",
+              "timestamp": 1771448200.771918,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "67028839-7ffb-4dd1-8f17-d3e1f6df48a9",
+              "content": "用药指导：中药与西药需间隔半小时以上服用。",
+              "timestamp": 1771448200.771922,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "f661723a-a9aa-4f96-9878-e2dc049745b6",
+              "content": "14个月断奶；断断续续补钙；每日奶量约200ml",
+              "timestamp": 1771448219.9183528,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "a1b1ec25-18d8-43b2-916d-3398778cdda1",
+              "content": "医生建议：微量元素缺乏与蛲虫病两种情况均可通过化验确定；微量元素在我院可通过血液检查。",
+              "timestamp": 1771448225.64464,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "70e0c002-ede1-428b-b24d-fe7fd768fc21",
+              "content": "医生建议可口服益生菌类药物调理。",
+              "timestamp": 1771448233.359262,
+              "metadata": {
+                "turn_idx": 27
+              },
+              "turn_idx": 27
+            },
+            {
+              "id": "d880ed6d-818a-4495-a160-9a5292b7f3a1",
+              "content": "既往有心理方面障碍史",
+              "timestamp": 1771448238.4698334,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 1",
+          "type": "State Tracking",
+          "question": "患者这次电话咨询中，希望尽快解决的主要心理状态问题是什么？",
+          "answer": "近期出现抑郁、焦虑情绪，希望尽快调节。",
+          "source": [
+            {
+              "layer": "working",
+              "ids": [
+                "2fb91a32-c38d-49b5-8c81-2aec7651d61d"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "2010-06-12 13:32 和患者泽洲宝贝完成电话咨询。",
+        "to_memory": [
+          "identity: 患者（泽洲宝贝）女，28岁，孕妇",
+          "history: 多年前有心理方面障碍史",
+          "working: 近期心理抑郁、焦虑，希望尽快调节；2010-06-12完成40分钟电话咨询"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "2fb91a32-c38d-49b5-8c81-2aec7651d61d",
+              "content": "近期心理抑郁、焦虑，希望尽快调节；2010-06-12完成40分钟电话咨询（凌笋昂大夫）",
+              "timestamp": 1771448238.4698386,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            }
+          ],
+          "identity": [
+            {
+              "id": "9334af28-91fe-4e85-86b9-415faf554f8e",
+              "content": "患儿，15个月；身高81cm，体重22斤",
+              "timestamp": 1771448219.9183402,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "150250b6-6953-42ac-bada-a1dda2f10789",
+              "content": "患者（泽洲宝贝）女，28岁，孕妇",
+              "timestamp": 1771448238.4698246,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            }
+          ],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "1b06dc31-9d70-47da-b898-9dc25eed2187",
+              "content": "医嘱/随访补充：过敏性紫癜稳定期可用中药维持，通常疗程可达1-2年；若出现症状应继续用药；成人患者可至成人医院进一步咨询。",
+              "timestamp": 1771448162.345333,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "eaf09326-e2a5-4c8e-9f0a-44bd0e73ba66",
+              "content": "过敏性紫癜随访要点：需警惕部分进展为紫癜肾，医生建议坚持复查尿常规以便早期发现。",
+              "timestamp": 1771448200.771906,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "20542633-325c-4d20-a043-5904c9d7249e",
+              "content": "过敏性紫癜日常建议：预防感染、避免劳累。",
+              "timestamp": 1771448200.7719142,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "d3a7b6ab-36c2-4e7c-acb0-fa8d8b47b01b",
+              "content": "医生判断：当前下肢症状不像关节型紫癜。",
+              "timestamp": 1771448200.771918,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "67028839-7ffb-4dd1-8f17-d3e1f6df48a9",
+              "content": "用药指导：中药与西药需间隔半小时以上服用。",
+              "timestamp": 1771448200.771922,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "f661723a-a9aa-4f96-9878-e2dc049745b6",
+              "content": "14个月断奶；断断续续补钙；每日奶量约200ml",
+              "timestamp": 1771448219.9183528,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "a1b1ec25-18d8-43b2-916d-3398778cdda1",
+              "content": "医生建议：微量元素缺乏与蛲虫病两种情况均可通过化验确定；微量元素在我院可通过血液检查。",
+              "timestamp": 1771448225.64464,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "70e0c002-ede1-428b-b24d-fe7fd768fc21",
+              "content": "医生建议可口服益生菌类药物调理。",
+              "timestamp": 1771448233.359262,
+              "metadata": {
+                "turn_idx": 27
+              },
+              "turn_idx": 27
+            },
+            {
+              "id": "d880ed6d-818a-4495-a160-9a5292b7f3a1",
+              "content": "既往有心理方面障碍史",
+              "timestamp": 1771448238.4698334,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            },
+            {
+              "id": "45702241-8a08-4907-8ea4-b691f3647e63",
+              "content": "多年前有心理方面障碍史",
+              "timestamp": 1771448245.699843,
+              "metadata": {
+                "turn_idx": 30
+              },
+              "turn_idx": 30
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "9334af28-91fe-4e85-86b9-415faf554f8e",
+              "content": "患儿，15个月；身高81cm，体重22斤",
+              "timestamp": 1771448219.9183402,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "150250b6-6953-42ac-bada-a1dda2f10789",
+              "content": "患者（泽洲宝贝）女，28岁，孕妇",
+              "timestamp": 1771448238.4698246,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            }
+          ],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "1b06dc31-9d70-47da-b898-9dc25eed2187",
+              "content": "医嘱/随访补充：过敏性紫癜稳定期可用中药维持，通常疗程可达1-2年；若出现症状应继续用药；成人患者可至成人医院进一步咨询。",
+              "timestamp": 1771448162.345333,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "eaf09326-e2a5-4c8e-9f0a-44bd0e73ba66",
+              "content": "过敏性紫癜随访要点：需警惕部分进展为紫癜肾，医生建议坚持复查尿常规以便早期发现。",
+              "timestamp": 1771448200.771906,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "20542633-325c-4d20-a043-5904c9d7249e",
+              "content": "过敏性紫癜日常建议：预防感染、避免劳累。",
+              "timestamp": 1771448200.7719142,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "d3a7b6ab-36c2-4e7c-acb0-fa8d8b47b01b",
+              "content": "医生判断：当前下肢症状不像关节型紫癜。",
+              "timestamp": 1771448200.771918,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "67028839-7ffb-4dd1-8f17-d3e1f6df48a9",
+              "content": "用药指导：中药与西药需间隔半小时以上服用。",
+              "timestamp": 1771448200.771922,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "f661723a-a9aa-4f96-9878-e2dc049745b6",
+              "content": "14个月断奶；断断续续补钙；每日奶量约200ml",
+              "timestamp": 1771448219.9183528,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "a1b1ec25-18d8-43b2-916d-3398778cdda1",
+              "content": "医生建议：微量元素缺乏与蛲虫病两种情况均可通过化验确定；微量元素在我院可通过血液检查。",
+              "timestamp": 1771448225.64464,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "70e0c002-ede1-428b-b24d-fe7fd768fc21",
+              "content": "医生建议可口服益生菌类药物调理。",
+              "timestamp": 1771448233.359262,
+              "metadata": {
+                "turn_idx": 27
+              },
+              "turn_idx": 27
+            },
+            {
+              "id": "d880ed6d-818a-4495-a160-9a5292b7f3a1",
+              "content": "既往有心理方面障碍史",
+              "timestamp": 1771448238.4698334,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            },
+            {
+              "id": "45702241-8a08-4907-8ea4-b691f3647e63",
+              "content": "多年前有心理方面障碍史",
+              "timestamp": 1771448245.699843,
+              "metadata": {
+                "turn_idx": 30
+              },
+              "turn_idx": 30
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "乳腺癌，09年9月右乳癌0.9*0.9曾经治疗情况和效果；乳腺浸润性导管癌3级，免疫组化染色结果：ER(50%+),PR(60++),CerbB-2(+++),Top-2(70%+),p53(++),EGFR(-),p63(-),34BE12(-),CK5/6.已做保乳手术,化疗已做完，目前需要打赫赛丁，请问第一次打需要几支呢？体重128斤.谢谢。",
+        "to_memory": [
+          "history: 2009-09确诊右乳乳腺癌，肿瘤约0.9×0.9cm；病理为乳腺浸润性导管癌（3级）",
+          "history: 免疫组化：ER(50%+)，PR(60++), HER2/CerbB-2(+++)，Top-2(70%+)，p53(++)，EGFR(-)，p63(-)，34BE12(-)，CK5/6（未注明结果）",
+          "history: 已行保乳手术；已完成化疗；目前计划/需要使用赫赛汀（曲妥珠单抗）治疗",
+          "identity: 体重128斤（约64kg）",
+          "history: 咨询赫赛汀首次用药需要几支/剂量如何计算"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "9334af28-91fe-4e85-86b9-415faf554f8e",
+              "content": "患儿，15个月；身高81cm，体重22斤",
+              "timestamp": 1771448219.9183402,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "150250b6-6953-42ac-bada-a1dda2f10789",
+              "content": "患者（泽洲宝贝）女，28岁，孕妇",
+              "timestamp": 1771448238.4698246,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            },
+            {
+              "id": "3a5ecde7-538e-41d5-a0ff-d2b10ef4ce31",
+              "content": "体重128斤（约64kg）。",
+              "timestamp": 1771448255.5354218,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            }
+          ],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "1b06dc31-9d70-47da-b898-9dc25eed2187",
+              "content": "医嘱/随访补充：过敏性紫癜稳定期可用中药维持，通常疗程可达1-2年；若出现症状应继续用药；成人患者可至成人医院进一步咨询。",
+              "timestamp": 1771448162.345333,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "eaf09326-e2a5-4c8e-9f0a-44bd0e73ba66",
+              "content": "过敏性紫癜随访要点：需警惕部分进展为紫癜肾，医生建议坚持复查尿常规以便早期发现。",
+              "timestamp": 1771448200.771906,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "20542633-325c-4d20-a043-5904c9d7249e",
+              "content": "过敏性紫癜日常建议：预防感染、避免劳累。",
+              "timestamp": 1771448200.7719142,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "d3a7b6ab-36c2-4e7c-acb0-fa8d8b47b01b",
+              "content": "医生判断：当前下肢症状不像关节型紫癜。",
+              "timestamp": 1771448200.771918,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "67028839-7ffb-4dd1-8f17-d3e1f6df48a9",
+              "content": "用药指导：中药与西药需间隔半小时以上服用。",
+              "timestamp": 1771448200.771922,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "f661723a-a9aa-4f96-9878-e2dc049745b6",
+              "content": "14个月断奶；断断续续补钙；每日奶量约200ml",
+              "timestamp": 1771448219.9183528,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "a1b1ec25-18d8-43b2-916d-3398778cdda1",
+              "content": "医生建议：微量元素缺乏与蛲虫病两种情况均可通过化验确定；微量元素在我院可通过血液检查。",
+              "timestamp": 1771448225.64464,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "70e0c002-ede1-428b-b24d-fe7fd768fc21",
+              "content": "医生建议可口服益生菌类药物调理。",
+              "timestamp": 1771448233.359262,
+              "metadata": {
+                "turn_idx": 27
+              },
+              "turn_idx": 27
+            },
+            {
+              "id": "d880ed6d-818a-4495-a160-9a5292b7f3a1",
+              "content": "既往有心理方面障碍史",
+              "timestamp": 1771448238.4698334,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            },
+            {
+              "id": "45702241-8a08-4907-8ea4-b691f3647e63",
+              "content": "多年前有心理方面障碍史",
+              "timestamp": 1771448245.699843,
+              "metadata": {
+                "turn_idx": 30
+              },
+              "turn_idx": 30
+            },
+            {
+              "id": "0d82dcd3-8d0c-4913-ac7a-df270b13d48d",
+              "content": "2009-09确诊右乳乳腺癌，肿瘤约0.9×0.9cm；病理：乳腺浸润性导管癌（3级）。",
+              "timestamp": 1771448255.5354028,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            },
+            {
+              "id": "2a322cc6-b8d2-4516-827a-602d5d588793",
+              "content": "乳腺癌免疫组化：ER(50%+)，PR(60++), HER2/CerbB-2(+++)，Top-2(70%+)，p53(++)，EGFR(-)，p63(-)，34BE12(-)，CK5/6（未注明结果）。",
+              "timestamp": 1771448255.535413,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            },
+            {
+              "id": "f64e15ec-068a-44d0-b0c5-79b376ae91e2",
+              "content": "治疗史：已行保乳手术；已完成化疗；目前计划/需要使用赫赛汀（曲妥珠单抗）治疗。",
+              "timestamp": 1771448255.5354176,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            },
+            {
+              "id": "d458f612-1d9b-4d18-aa25-c845cc73a602",
+              "content": "用药咨询：询问赫赛汀（曲妥珠单抗）首次用药需要几支/剂量如何计算。",
+              "timestamp": 1771448255.5354264,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者较早一次就诊时医生给出的服药时间安排提醒，与本次乳腺肿瘤相关咨询中患者提到的后续治疗计划：医生当时强调需要“错开服用时间”的是哪两类药物？而患者当前准备进行的下一步治疗是什么？",
+          "answer": "中药与西药需间隔半小时以上服用；已行保乳手术并完成化疗，当前计划使用赫赛汀（曲妥珠单抗）治疗。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "67028839-7ffb-4dd1-8f17-d3e1f6df48a9",
+                "f64e15ec-068a-44d0-b0c5-79b376ae91e2"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            14,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "初次剂量为4mg/kg(即256mg)。90分钟内静脉输入。维持剂量：建议每周赫赛汀用量为2mg/kg（即128mg）。30分钟内输完。",
+        "to_memory": [
+          "history: 赫赛汀（曲妥珠单抗）给药方案：初次剂量4mg/kg（约256mg），90分钟内静脉输注；维持剂量每周2mg/kg（约128mg），30分钟内输完"
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "9334af28-91fe-4e85-86b9-415faf554f8e",
+              "content": "患儿，15个月；身高81cm，体重22斤",
+              "timestamp": 1771448219.9183402,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "150250b6-6953-42ac-bada-a1dda2f10789",
+              "content": "患者（泽洲宝贝）女，28岁，孕妇",
+              "timestamp": 1771448238.4698246,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            },
+            {
+              "id": "3a5ecde7-538e-41d5-a0ff-d2b10ef4ce31",
+              "content": "体重128斤（约64kg）。",
+              "timestamp": 1771448255.5354218,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            }
+          ],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "1b06dc31-9d70-47da-b898-9dc25eed2187",
+              "content": "医嘱/随访补充：过敏性紫癜稳定期可用中药维持，通常疗程可达1-2年；若出现症状应继续用药；成人患者可至成人医院进一步咨询。",
+              "timestamp": 1771448162.345333,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "eaf09326-e2a5-4c8e-9f0a-44bd0e73ba66",
+              "content": "过敏性紫癜随访要点：需警惕部分进展为紫癜肾，医生建议坚持复查尿常规以便早期发现。",
+              "timestamp": 1771448200.771906,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "20542633-325c-4d20-a043-5904c9d7249e",
+              "content": "过敏性紫癜日常建议：预防感染、避免劳累。",
+              "timestamp": 1771448200.7719142,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "d3a7b6ab-36c2-4e7c-acb0-fa8d8b47b01b",
+              "content": "医生判断：当前下肢症状不像关节型紫癜。",
+              "timestamp": 1771448200.771918,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "67028839-7ffb-4dd1-8f17-d3e1f6df48a9",
+              "content": "用药指导：中药与西药需间隔半小时以上服用。",
+              "timestamp": 1771448200.771922,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "f661723a-a9aa-4f96-9878-e2dc049745b6",
+              "content": "14个月断奶；断断续续补钙；每日奶量约200ml",
+              "timestamp": 1771448219.9183528,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "a1b1ec25-18d8-43b2-916d-3398778cdda1",
+              "content": "医生建议：微量元素缺乏与蛲虫病两种情况均可通过化验确定；微量元素在我院可通过血液检查。",
+              "timestamp": 1771448225.64464,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "70e0c002-ede1-428b-b24d-fe7fd768fc21",
+              "content": "医生建议可口服益生菌类药物调理。",
+              "timestamp": 1771448233.359262,
+              "metadata": {
+                "turn_idx": 27
+              },
+              "turn_idx": 27
+            },
+            {
+              "id": "d880ed6d-818a-4495-a160-9a5292b7f3a1",
+              "content": "既往有心理方面障碍史",
+              "timestamp": 1771448238.4698334,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            },
+            {
+              "id": "45702241-8a08-4907-8ea4-b691f3647e63",
+              "content": "多年前有心理方面障碍史",
+              "timestamp": 1771448245.699843,
+              "metadata": {
+                "turn_idx": 30
+              },
+              "turn_idx": 30
+            },
+            {
+              "id": "0d82dcd3-8d0c-4913-ac7a-df270b13d48d",
+              "content": "2009-09确诊右乳乳腺癌，肿瘤约0.9×0.9cm；病理：乳腺浸润性导管癌（3级）。",
+              "timestamp": 1771448255.5354028,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            },
+            {
+              "id": "2a322cc6-b8d2-4516-827a-602d5d588793",
+              "content": "乳腺癌免疫组化：ER(50%+)，PR(60++), HER2/CerbB-2(+++)，Top-2(70%+)，p53(++)，EGFR(-)，p63(-)，34BE12(-)，CK5/6（未注明结果）。",
+              "timestamp": 1771448255.535413,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            },
+            {
+              "id": "f64e15ec-068a-44d0-b0c5-79b376ae91e2",
+              "content": "治疗史：已行保乳手术；已完成化疗；目前计划/需要使用赫赛汀（曲妥珠单抗）治疗。",
+              "timestamp": 1771448255.5354176,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            },
+            {
+              "id": "d458f612-1d9b-4d18-aa25-c845cc73a602",
+              "content": "用药咨询：询问赫赛汀（曲妥珠单抗）首次用药需要几支/剂量如何计算。",
+              "timestamp": 1771448255.5354264,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            },
+            {
+              "id": "f2d1893c-60c5-4600-a7f8-d2905ef33031",
+              "content": "赫赛汀（曲妥珠单抗）给药方案：初次剂量4mg/kg（约256mg），90分钟内静脉输注；维持剂量每周2mg/kg（约128mg），30分钟内输完。",
+              "timestamp": 1771448262.7810583,
+              "metadata": {
+                "turn_idx": 33
+              },
+              "turn_idx": 33
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 4",
+          "type": "Conflict & Safety Check",
+          "question": "为核对本次给药剂量计算是否存在安全隐患：患者在本次咨询中提供的用于按体重计算剂量的关键身体指标是什么？",
+          "answer": "体重128斤（约64kg）",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "d880ed6d-818a-4495-a160-9a5292b7f3a1"
+              ]
+            },
+            {
+              "layer": "identity",
+              "ids": [
+                "3a5ecde7-538e-41d5-a0ff-d2b10ef4ce31"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            4,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "---诊疗分割线---",
+        "to_memory": [
+          null
+        ],
+        "oracle_memory_base": {
+          "working": [],
+          "identity": [
+            {
+              "id": "9334af28-91fe-4e85-86b9-415faf554f8e",
+              "content": "患儿，15个月；身高81cm，体重22斤",
+              "timestamp": 1771448219.9183402,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "150250b6-6953-42ac-bada-a1dda2f10789",
+              "content": "患者（泽洲宝贝）女，28岁，孕妇",
+              "timestamp": 1771448238.4698246,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            },
+            {
+              "id": "3a5ecde7-538e-41d5-a0ff-d2b10ef4ce31",
+              "content": "体重128斤（约64kg）。",
+              "timestamp": 1771448255.5354218,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            }
+          ],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "1b06dc31-9d70-47da-b898-9dc25eed2187",
+              "content": "医嘱/随访补充：过敏性紫癜稳定期可用中药维持，通常疗程可达1-2年；若出现症状应继续用药；成人患者可至成人医院进一步咨询。",
+              "timestamp": 1771448162.345333,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "eaf09326-e2a5-4c8e-9f0a-44bd0e73ba66",
+              "content": "过敏性紫癜随访要点：需警惕部分进展为紫癜肾，医生建议坚持复查尿常规以便早期发现。",
+              "timestamp": 1771448200.771906,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "20542633-325c-4d20-a043-5904c9d7249e",
+              "content": "过敏性紫癜日常建议：预防感染、避免劳累。",
+              "timestamp": 1771448200.7719142,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "d3a7b6ab-36c2-4e7c-acb0-fa8d8b47b01b",
+              "content": "医生判断：当前下肢症状不像关节型紫癜。",
+              "timestamp": 1771448200.771918,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "67028839-7ffb-4dd1-8f17-d3e1f6df48a9",
+              "content": "用药指导：中药与西药需间隔半小时以上服用。",
+              "timestamp": 1771448200.771922,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "f661723a-a9aa-4f96-9878-e2dc049745b6",
+              "content": "14个月断奶；断断续续补钙；每日奶量约200ml",
+              "timestamp": 1771448219.9183528,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "a1b1ec25-18d8-43b2-916d-3398778cdda1",
+              "content": "医生建议：微量元素缺乏与蛲虫病两种情况均可通过化验确定；微量元素在我院可通过血液检查。",
+              "timestamp": 1771448225.64464,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "70e0c002-ede1-428b-b24d-fe7fd768fc21",
+              "content": "医生建议可口服益生菌类药物调理。",
+              "timestamp": 1771448233.359262,
+              "metadata": {
+                "turn_idx": 27
+              },
+              "turn_idx": 27
+            },
+            {
+              "id": "d880ed6d-818a-4495-a160-9a5292b7f3a1",
+              "content": "既往有心理方面障碍史",
+              "timestamp": 1771448238.4698334,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            },
+            {
+              "id": "45702241-8a08-4907-8ea4-b691f3647e63",
+              "content": "多年前有心理方面障碍史",
+              "timestamp": 1771448245.699843,
+              "metadata": {
+                "turn_idx": 30
+              },
+              "turn_idx": 30
+            },
+            {
+              "id": "0d82dcd3-8d0c-4913-ac7a-df270b13d48d",
+              "content": "2009-09确诊右乳乳腺癌，肿瘤约0.9×0.9cm；病理：乳腺浸润性导管癌（3级）。",
+              "timestamp": 1771448255.5354028,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            },
+            {
+              "id": "2a322cc6-b8d2-4516-827a-602d5d588793",
+              "content": "乳腺癌免疫组化：ER(50%+)，PR(60++), HER2/CerbB-2(+++)，Top-2(70%+)，p53(++)，EGFR(-)，p63(-)，34BE12(-)，CK5/6（未注明结果）。",
+              "timestamp": 1771448255.535413,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            },
+            {
+              "id": "f64e15ec-068a-44d0-b0c5-79b376ae91e2",
+              "content": "治疗史：已行保乳手术；已完成化疗；目前计划/需要使用赫赛汀（曲妥珠单抗）治疗。",
+              "timestamp": 1771448255.5354176,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            },
+            {
+              "id": "d458f612-1d9b-4d18-aa25-c845cc73a602",
+              "content": "用药咨询：询问赫赛汀（曲妥珠单抗）首次用药需要几支/剂量如何计算。",
+              "timestamp": 1771448255.5354264,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            },
+            {
+              "id": "f2d1893c-60c5-4600-a7f8-d2905ef33031",
+              "content": "赫赛汀（曲妥珠单抗）给药方案：初次剂量4mg/kg（约256mg），90分钟内静脉输注；维持剂量每周2mg/kg（约128mg），30分钟内输完。",
+              "timestamp": 1771448262.7810583,
+              "metadata": {
+                "turn_idx": 33
+              },
+              "turn_idx": 33
+            }
+          ],
+          "experience": []
+        }
+      }
+    },
+    {
+      "user": {
+        "content": "种牙，",
+        "to_memory": [
+          "working: 本次主诉/诉求：种牙（牙种植）咨询"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "6980abf3-79ae-45e1-905f-078e6502306f",
+              "content": "本次主诉/诉求：种牙（牙种植）咨询",
+              "timestamp": 1771448268.7351344,
+              "metadata": {
+                "turn_idx": 35
+              },
+              "turn_idx": 35
+            }
+          ],
+          "identity": [
+            {
+              "id": "9334af28-91fe-4e85-86b9-415faf554f8e",
+              "content": "患儿，15个月；身高81cm，体重22斤",
+              "timestamp": 1771448219.9183402,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "150250b6-6953-42ac-bada-a1dda2f10789",
+              "content": "患者（泽洲宝贝）女，28岁，孕妇",
+              "timestamp": 1771448238.4698246,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            },
+            {
+              "id": "3a5ecde7-538e-41d5-a0ff-d2b10ef4ce31",
+              "content": "体重128斤（约64kg）。",
+              "timestamp": 1771448255.5354218,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            }
+          ],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "1b06dc31-9d70-47da-b898-9dc25eed2187",
+              "content": "医嘱/随访补充：过敏性紫癜稳定期可用中药维持，通常疗程可达1-2年；若出现症状应继续用药；成人患者可至成人医院进一步咨询。",
+              "timestamp": 1771448162.345333,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "eaf09326-e2a5-4c8e-9f0a-44bd0e73ba66",
+              "content": "过敏性紫癜随访要点：需警惕部分进展为紫癜肾，医生建议坚持复查尿常规以便早期发现。",
+              "timestamp": 1771448200.771906,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "20542633-325c-4d20-a043-5904c9d7249e",
+              "content": "过敏性紫癜日常建议：预防感染、避免劳累。",
+              "timestamp": 1771448200.7719142,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "d3a7b6ab-36c2-4e7c-acb0-fa8d8b47b01b",
+              "content": "医生判断：当前下肢症状不像关节型紫癜。",
+              "timestamp": 1771448200.771918,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "67028839-7ffb-4dd1-8f17-d3e1f6df48a9",
+              "content": "用药指导：中药与西药需间隔半小时以上服用。",
+              "timestamp": 1771448200.771922,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "f661723a-a9aa-4f96-9878-e2dc049745b6",
+              "content": "14个月断奶；断断续续补钙；每日奶量约200ml",
+              "timestamp": 1771448219.9183528,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "a1b1ec25-18d8-43b2-916d-3398778cdda1",
+              "content": "医生建议：微量元素缺乏与蛲虫病两种情况均可通过化验确定；微量元素在我院可通过血液检查。",
+              "timestamp": 1771448225.64464,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "70e0c002-ede1-428b-b24d-fe7fd768fc21",
+              "content": "医生建议可口服益生菌类药物调理。",
+              "timestamp": 1771448233.359262,
+              "metadata": {
+                "turn_idx": 27
+              },
+              "turn_idx": 27
+            },
+            {
+              "id": "d880ed6d-818a-4495-a160-9a5292b7f3a1",
+              "content": "既往有心理方面障碍史",
+              "timestamp": 1771448238.4698334,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            },
+            {
+              "id": "45702241-8a08-4907-8ea4-b691f3647e63",
+              "content": "多年前有心理方面障碍史",
+              "timestamp": 1771448245.699843,
+              "metadata": {
+                "turn_idx": 30
+              },
+              "turn_idx": 30
+            },
+            {
+              "id": "0d82dcd3-8d0c-4913-ac7a-df270b13d48d",
+              "content": "2009-09确诊右乳乳腺癌，肿瘤约0.9×0.9cm；病理：乳腺浸润性导管癌（3级）。",
+              "timestamp": 1771448255.5354028,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            },
+            {
+              "id": "2a322cc6-b8d2-4516-827a-602d5d588793",
+              "content": "乳腺癌免疫组化：ER(50%+)，PR(60++), HER2/CerbB-2(+++)，Top-2(70%+)，p53(++)，EGFR(-)，p63(-)，34BE12(-)，CK5/6（未注明结果）。",
+              "timestamp": 1771448255.535413,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            },
+            {
+              "id": "f64e15ec-068a-44d0-b0c5-79b376ae91e2",
+              "content": "治疗史：已行保乳手术；已完成化疗；目前计划/需要使用赫赛汀（曲妥珠单抗）治疗。",
+              "timestamp": 1771448255.5354176,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            },
+            {
+              "id": "d458f612-1d9b-4d18-aa25-c845cc73a602",
+              "content": "用药咨询：询问赫赛汀（曲妥珠单抗）首次用药需要几支/剂量如何计算。",
+              "timestamp": 1771448255.5354264,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            },
+            {
+              "id": "f2d1893c-60c5-4600-a7f8-d2905ef33031",
+              "content": "赫赛汀（曲妥珠单抗）给药方案：初次剂量4mg/kg（约256mg），90分钟内静脉输注；维持剂量每周2mg/kg（约128mg），30分钟内输完。",
+              "timestamp": 1771448262.7810583,
+              "metadata": {
+                "turn_idx": 33
+              },
+              "turn_idx": 33
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 3",
+          "type": "Long-range Understanding",
+          "question": "对比患者既往某次随访时医生强调的一个需要长期坚持的复查项目，与本次咨询中患者提出的主要诉求分别是什么？请分别概括。",
+          "answer": "既往随访：坚持复查尿常规以便早期发现紫癜肾等进展；本次诉求：种牙（牙种植）咨询。",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "eaf09326-e2a5-4c8e-9f0a-44bd0e73ba66"
+              ]
+            },
+            {
+              "layer": "working",
+              "ids": [
+                "6980abf3-79ae-45e1-905f-078e6502306f"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            17,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "assistant": {
+        "content": "根据种植计划确定。",
+        "to_memory": [
+          "identity: 患者女，28岁，孕妇；体重128斤（约64kg）",
+          "history: 2009-09确诊右乳乳腺癌（0.9×0.9cm），乳腺浸润性导管癌3级；免疫组化：ER 50%+，PR 60++，HER2/CerbB-2 +++，Top-2 70%+，p53 ++，EGFR(-)，p63(-)，34BE12(-)，CK5/6（未注明结果）；已行保乳手术，化疗已完成；计划使用赫赛汀：首剂4mg/kg（约256mg）90分钟静滴，维持2mg/kg（约128mg）30分钟静滴（每周）",
+          "history: 既往有心理方面障碍，近期抑郁焦虑，曾电话咨询希望调节",
+          "history: 医嘱曾建议口服益生菌调理",
+          "working: 本次咨询：种牙；医生回复：需根据种植计划确定"
+        ],
+        "oracle_memory_base": {
+          "working": [
+            {
+              "id": "6980abf3-79ae-45e1-905f-078e6502306f",
+              "content": "本次主诉/诉求：种牙（牙种植）咨询",
+              "timestamp": 1771448268.7351344,
+              "metadata": {
+                "turn_idx": 35
+              },
+              "turn_idx": 35
+            }
+          ],
+          "identity": [
+            {
+              "id": "9334af28-91fe-4e85-86b9-415faf554f8e",
+              "content": "患儿，15个月；身高81cm，体重22斤",
+              "timestamp": 1771448219.9183402,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "150250b6-6953-42ac-bada-a1dda2f10789",
+              "content": "患者（泽洲宝贝）女，28岁，孕妇",
+              "timestamp": 1771448238.4698246,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            },
+            {
+              "id": "3a5ecde7-538e-41d5-a0ff-d2b10ef4ce31",
+              "content": "体重128斤（约64kg）。",
+              "timestamp": 1771448255.5354218,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            }
+          ],
+          "history": [
+            {
+              "id": "b17194db-5275-4b36-bfde-66039f7a6058",
+              "content": "车祸致颅脑损伤，曾行开颅去骨瓣减压术；2009-12-15于巩义市中医院手术。",
+              "timestamp": 1771448061.7245793,
+              "metadata": {
+                "turn_idx": 1
+              },
+              "turn_idx": 1
+            },
+            {
+              "id": "00068558-aec4-4f53-91f1-8f4c2de8f56b",
+              "content": "右肩（右臂肩关节）疼痛；中医诊断肩周炎并行按摩治疗一疗程无效。",
+              "timestamp": 1771448072.1479855,
+              "metadata": {
+                "turn_idx": 2
+              },
+              "turn_idx": 2
+            },
+            {
+              "id": "e025a6f2-4e48-4bd8-9fb0-c573e749127b",
+              "content": "医生提示右肩/右臂疼痛需面诊检查以鉴别肩周炎或外伤后臂丛神经损伤。",
+              "timestamp": 1771448080.026816,
+              "metadata": {
+                "turn_idx": 3
+              },
+              "turn_idx": 3
+            },
+            {
+              "id": "9f4aa2b5-55b7-4310-be51-a3ea3eb182e3",
+              "content": "患者提到正颌手术前期需要做CT以确定模型。",
+              "timestamp": 1771448086.3700285,
+              "metadata": {
+                "turn_idx": 5
+              },
+              "turn_idx": 5
+            },
+            {
+              "id": "c0e242f8-4b9b-475d-9a5a-e565dee4f2bd",
+              "content": "2009年10月中旬左右出现过敏性紫癜；表现为腿部小红点逐渐成片、颜色深紫；发作时伴膝盖等关节处红肿及明显疼痛。",
+              "timestamp": 1771448128.3288152,
+              "metadata": {
+                "turn_idx": 13
+              },
+              "turn_idx": 13
+            },
+            {
+              "id": "922a3e69-16e3-4f6a-b1d9-a31231b4fa18",
+              "content": "过敏性紫癜治疗建议：稳定期主要靠中药维持，建议坚持中药治疗；仅有皮疹一般很少使用激素。",
+              "timestamp": 1771448135.5012321,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "64aba570-13bb-4898-a1c4-0cdd7e13115f",
+              "content": "过敏性紫癜复查建议：复查血常规，重点关注白细胞、红细胞计数；若降低需进一步查找原因。",
+              "timestamp": 1771448135.5012407,
+              "metadata": {
+                "turn_idx": 14
+              },
+              "turn_idx": 14
+            },
+            {
+              "id": "998aca2e-0d0c-4193-af98-c29e4654b020",
+              "content": "既往用药史：过敏性紫癜曾长期使用激素治疗，后改用中药并停用激素；曾口服中药约2个月。",
+              "timestamp": 1771448151.8570483,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "6fbb58dd-f3e0-4b86-a54a-28e941dca99a",
+              "content": "近况：中药服用约2个月仍未痊愈，已停药1个多月；疑虑中药是否对症、是否应继续服用及继续服用是否相当于重新开始。",
+              "timestamp": 1771448151.857068,
+              "metadata": {
+                "turn_idx": 15
+              },
+              "turn_idx": 15
+            },
+            {
+              "id": "1b06dc31-9d70-47da-b898-9dc25eed2187",
+              "content": "医嘱/随访补充：过敏性紫癜稳定期可用中药维持，通常疗程可达1-2年；若出现症状应继续用药；成人患者可至成人医院进一步咨询。",
+              "timestamp": 1771448162.345333,
+              "metadata": {
+                "turn_idx": 16
+              },
+              "turn_idx": 16
+            },
+            {
+              "id": "eaf09326-e2a5-4c8e-9f0a-44bd0e73ba66",
+              "content": "过敏性紫癜随访要点：需警惕部分进展为紫癜肾，医生建议坚持复查尿常规以便早期发现。",
+              "timestamp": 1771448200.771906,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "20542633-325c-4d20-a043-5904c9d7249e",
+              "content": "过敏性紫癜日常建议：预防感染、避免劳累。",
+              "timestamp": 1771448200.7719142,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "d3a7b6ab-36c2-4e7c-acb0-fa8d8b47b01b",
+              "content": "医生判断：当前下肢症状不像关节型紫癜。",
+              "timestamp": 1771448200.771918,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "67028839-7ffb-4dd1-8f17-d3e1f6df48a9",
+              "content": "用药指导：中药与西药需间隔半小时以上服用。",
+              "timestamp": 1771448200.771922,
+              "metadata": {
+                "turn_idx": 18
+              },
+              "turn_idx": 18
+            },
+            {
+              "id": "f661723a-a9aa-4f96-9878-e2dc049745b6",
+              "content": "14个月断奶；断断续续补钙；每日奶量约200ml",
+              "timestamp": 1771448219.9183528,
+              "metadata": {
+                "turn_idx": 23
+              },
+              "turn_idx": 23
+            },
+            {
+              "id": "a1b1ec25-18d8-43b2-916d-3398778cdda1",
+              "content": "医生建议：微量元素缺乏与蛲虫病两种情况均可通过化验确定；微量元素在我院可通过血液检查。",
+              "timestamp": 1771448225.64464,
+              "metadata": {
+                "turn_idx": 24
+              },
+              "turn_idx": 24
+            },
+            {
+              "id": "70e0c002-ede1-428b-b24d-fe7fd768fc21",
+              "content": "医生建议可口服益生菌类药物调理。",
+              "timestamp": 1771448233.359262,
+              "metadata": {
+                "turn_idx": 27
+              },
+              "turn_idx": 27
+            },
+            {
+              "id": "d880ed6d-818a-4495-a160-9a5292b7f3a1",
+              "content": "既往有心理方面障碍史",
+              "timestamp": 1771448238.4698334,
+              "metadata": {
+                "turn_idx": 29
+              },
+              "turn_idx": 29
+            },
+            {
+              "id": "45702241-8a08-4907-8ea4-b691f3647e63",
+              "content": "多年前有心理方面障碍史",
+              "timestamp": 1771448245.699843,
+              "metadata": {
+                "turn_idx": 30
+              },
+              "turn_idx": 30
+            },
+            {
+              "id": "0d82dcd3-8d0c-4913-ac7a-df270b13d48d",
+              "content": "2009-09确诊右乳乳腺癌，肿瘤约0.9×0.9cm；病理：乳腺浸润性导管癌（3级）。",
+              "timestamp": 1771448255.5354028,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            },
+            {
+              "id": "2a322cc6-b8d2-4516-827a-602d5d588793",
+              "content": "乳腺癌免疫组化：ER(50%+)，PR(60++), HER2/CerbB-2(+++)，Top-2(70%+)，p53(++)，EGFR(-)，p63(-)，34BE12(-)，CK5/6（未注明结果）。",
+              "timestamp": 1771448255.535413,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            },
+            {
+              "id": "f64e15ec-068a-44d0-b0c5-79b376ae91e2",
+              "content": "治疗史：已行保乳手术；已完成化疗；目前计划/需要使用赫赛汀（曲妥珠单抗）治疗。",
+              "timestamp": 1771448255.5354176,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            },
+            {
+              "id": "d458f612-1d9b-4d18-aa25-c845cc73a602",
+              "content": "用药咨询：询问赫赛汀（曲妥珠单抗）首次用药需要几支/剂量如何计算。",
+              "timestamp": 1771448255.5354264,
+              "metadata": {
+                "turn_idx": 32
+              },
+              "turn_idx": 32
+            },
+            {
+              "id": "f2d1893c-60c5-4600-a7f8-d2905ef33031",
+              "content": "赫赛汀（曲妥珠单抗）给药方案：初次剂量4mg/kg（约256mg），90分钟内静脉输注；维持剂量每周2mg/kg（约128mg），30分钟内输完。",
+              "timestamp": 1771448262.7810583,
+              "metadata": {
+                "turn_idx": 33
+              },
+              "turn_idx": 33
+            },
+            {
+              "id": "8334bd4b-aefa-40f4-ab1a-68a6a3cdee99",
+              "content": "近期抑郁焦虑，曾电话咨询希望调节。",
+              "timestamp": 1771448278.3582826,
+              "metadata": {
+                "turn_idx": 36
+              },
+              "turn_idx": 36
+            }
+          ],
+          "experience": []
+        },
+        "memory_query": {
+          "difficulty": "Level 2",
+          "type": "Accurate Retrieval",
+          "question": "患者既往因一次意外事件接受过颅脑手术；该手术是在什么日期、哪家医院完成的？",
+          "answer": "2009-12-15，巩义市中医院",
+          "source": [
+            {
+              "layer": "history",
+              "ids": [
+                "b17194db-5275-4b36-bfde-66039f7a6058"
+              ]
+            }
+          ],
+          "memory_age_turns": [
+            35
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "scenario": "rare_disease_ddx",
+    "scenario_name": "罕见病鉴别诊断",
+    "session_count": 10,
+    "group_key": "综合科"
+  }
+}
