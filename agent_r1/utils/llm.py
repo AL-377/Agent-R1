@@ -29,7 +29,8 @@ model2api = {
     "gpt-oss-120b": os.getenv("GPT_OSS_120B_API_KEY"),
     "gemini-2.5-pro-preview-05-06": os.getenv("GEMINI_2_5_PRO_PREVIEW_05_06_API_KEY"),
     "openai_qwen3-14b": os.getenv("QWEN3_API_KEY"),
-    "openai_qwen3-32b": os.getenv("QWEN3_API_KEY")
+    "openai_qwen3-32b": os.getenv("QWEN3_API_KEY"),
+    "openai_qwen3-8b": os.getenv("QWEN3_API_KEY")
 }
 # for parallel control
 model_name_mapping = {
@@ -68,6 +69,7 @@ def query_llm(
                     del kwargs["max_tokens"]
                 return query_llm_outer(model_name=name, max_tokens=max_tokens,**kwargs)
             else:
+                print("THere")
                 return query_llm_inhouse(model_name=model_name, **kwargs)
 
         except (openai.RateLimitError,
@@ -217,23 +219,23 @@ def query_llm_inhouse(
             },
             **extra_args
         )
-    # elif "qwen" in model_name:
-    #     client = openai.AzureOpenAI(
-    #         azure_endpoint="https://search.bytedance.net/gpt/openapi/online/v2/crawl/openai/deployments/gpt_openapi",
-    #         api_version="2024-03-01-preview",
-    #         api_key=model2api[model_name]
-    #     )
-    #     extra_args["enable_thinking"] = False
-    #     response = client.chat.completions.create(
-    #         model=model_name_mapping.get(model_name,model_name),
-    #         messages=messages,
-    #         max_tokens=max_tokens,
-    #         stream=True,
-    #         extra_headers={
-    #             "X-TT-LOGID": "${your_logid}"
-    #         },
-    #         **extra_args
-    #     )
+    elif "qwen" in model_name:
+        client = openai.AzureOpenAI(
+            azure_endpoint="https://search.bytedance.net/gpt/openapi/online/v2/crawl/openai/deployments/gpt_openapi",
+            api_version="2024-03-01-preview",
+            api_key=model2api[model_name]
+        )
+        response = client.chat.completions.create(
+            model=model_name_mapping.get(model_name,model_name),
+            messages=messages,
+            max_tokens=max_tokens,
+            stream=True,
+            extra_headers={
+                "X-TT-LOGID": "${your_logid}"
+            },
+            **extra_args
+        )
+        print(response)
     else:
         response = client.chat.completions.create(
             model=model_name_mapping.get(model_name,model_name),
