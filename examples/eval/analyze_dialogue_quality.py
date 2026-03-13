@@ -225,7 +225,7 @@ def generate_charts(
         print("matplotlib not available, skipping chart generation.")
         return
 
-    plt.rcParams["font.family"] = ["SimHei", "DejaVu Sans"]
+    plt.rcParams["font.sans-serif"] = ["Heiti TC", "Hiragino Sans GB", "PingFang HK", "STHeiti", "SimHei", "DejaVu Sans"]
     plt.rcParams["axes.unicode_minus"] = False
 
     # Chart 1: Overall dimension comparison bar chart
@@ -334,6 +334,31 @@ def main():
     print("Loading results...")
     df = load_results(args.result_dirs)
     tables = analyze(df)
+
+    # Write Overall Dimension Scores + Win/Tie/Loss to txt in output_dir
+    if tables:
+        txt_path = os.path.join(args.output_dir, "summary.txt")
+        with open(txt_path, "w", encoding="utf-8") as f:
+            if "overall_dimensions" in tables:
+                f.write("=" * 60 + "\n")
+                f.write("  Overall Dimension Scores: with_memory vs no_memory\n")
+                f.write("=" * 60 + "\n")
+                cols = [c for c in tables["overall_dimensions"].columns if c != "delta"]
+                f.write(tables["overall_dimensions"][cols].to_string(index=False))
+                f.write("\n\n")
+            if "win_tie_loss" in tables:
+                f.write("=" * 60 + "\n")
+                f.write("  Win/Tie/Loss Analysis\n")
+                f.write("=" * 60 + "\n")
+                f.write(tables["win_tie_loss"].to_string(index=False))
+                f.write("\n\n")
+            if "per_difficulty" in tables:
+                f.write("=" * 60 + "\n")
+                f.write("  Per Difficulty Level\n")
+                f.write("=" * 60 + "\n")
+                f.write(tables["per_difficulty"].to_string(index=False))
+                f.write("\n")
+        print(f"Summary saved to {txt_path}")
 
     if not args.no_charts:
         generate_charts(tables, args.output_dir)
