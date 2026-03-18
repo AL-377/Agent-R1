@@ -304,6 +304,9 @@ def main():
                         help="Skip oracle memory evaluation")
     parser.add_argument("--no_reflection", action="store_true",
                         help="Disable session-end reflection")
+    parser.add_argument("--force_rerun", action="store_true",
+                        help="Clear done_patients.txt and re-run all patients. "
+                             "Existing trace files are overwritten.")
     parser.add_argument("--seed", type=int, default=42)
     args = parser.parse_args()
 
@@ -314,9 +317,13 @@ def main():
     traces_dir = os.path.join(args.output_dir, "traces")
     os.makedirs(traces_dir, exist_ok=True)
 
-    # Load done patient IDs
-    done_patients = set()
     done_file = os.path.join(args.output_dir, "done_patients.txt")
+    if args.force_rerun:
+        if os.path.exists(done_file):
+            os.remove(done_file)
+            print("  --force_rerun: cleared done_patients.txt")
+
+    done_patients = set()
     if os.path.exists(done_file):
         with open(done_file, "r") as f:
             done_patients = set(line.strip() for line in f if line.strip())

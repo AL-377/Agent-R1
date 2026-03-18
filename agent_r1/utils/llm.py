@@ -69,7 +69,6 @@ def query_llm(
                     del kwargs["max_tokens"]
                 return query_llm_outer(model_name=name, max_tokens=max_tokens,**kwargs)
             else:
-                print("THere")
                 return query_llm_inhouse(model_name=model_name, **kwargs)
 
         except (openai.RateLimitError,
@@ -235,7 +234,6 @@ def query_llm_inhouse(
             },
             **extra_args
         )
-        print(response)
     else:
         response = client.chat.completions.create(
             model=model_name_mapping.get(model_name,model_name),

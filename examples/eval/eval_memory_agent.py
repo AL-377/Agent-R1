@@ -350,32 +350,119 @@ def parse_memory_output(raw: str) -> Tuple[str, List[Dict]]:
     return think, actions
 
 
-def _normalize_action(act: Dict) -> Dict:
+_OP_NAMES = ("memory_insert", "memory_update", "memory_delete", "memory_wait")
+
+
+def _normalize_actions(actions_raw: List[Dict]) -> List[Dict]:
     """
-    Normalize different action formats the Memory Model may produce:
-      Format A: {"name": "memory_insert", "arguments": {"layer": ..., "content": ...}}
-      Format B: {"layer": "history", "content": "..."}  (no name/arguments wrapper)
-      Format C: {"name": "memory_insert", "layer": ..., "content": ...} (flat with name)
+    Normalize a list of raw actions, handling:
+      - Single actions that pack multiple ops in one dict
+      - {"operations": [...]} wrappers
+      - {"type": "memory_insert", ...} style (from "operations" arrays)
+    Then delegates each individual action to _normalize_single.
     """
-    if "name" in act and "arguments" in act:
-        if isinstance(act,str):
-            act = json.loads(act)
+    expanded: List[Dict] = []
+    for act in actions_raw:
+        if not isinstance(act, dict):
+            continue
+
+        # Unwrap {"operations": [...]} or {"operation": [...]}
+        for key in ("operations", "operation"):
+            if key in act and isinstance(act[key], list):
+                for sub in act[key]:
+                    if isinstance(sub, dict):
+                        expanded.append(sub)
+                break
+        else:
+            # Check for multi-op dicts: {"memory_insert": {...}, "memory_update": {...}}
+            op_keys = [k for k in act if k in _OP_NAMES]
+            if len(op_keys) > 1:
+                for k in op_keys:
+                    expanded.append({k: act[k]})
+            else:
+                expanded.append(act)
+
+    return [_normalize_single(a) for a in expanded]
+
+
+def _normalize_single(act: Dict) -> Dict:
+    """
+    Normalize a single action dict into standard format:
+      {"name": "memory_insert", "arguments": {"layer": ..., "content": ...}}
+
+    Observed formats from gpt-4o / DeepSeek-R1 / Qwen3:
+      A: {"name": "memory_insert", "arguments": {"layer": ..., "content": ...}}
+      B: {"layer": "history", "content": "..."}
+      C: {"name": "memory_insert", "layer": ..., "content": ...}
+      D: {"memory_wait": {}}  or {"memory_wait": []}
+      E: {"memory_insert": {"layer": ..., "content": ...}}
+      F: {"memory_insert": ["history", "content text"]}
+      G: {"memory_update": ["history", "id", "content text"]}
+      H: {"memory_insert": "working", "content": "..."}
+      I: {"type": "memory_insert", "layer": ..., "content": ...}
+    """
+    # Format A: already standard
+    if "name" in act and "arguments" in act and isinstance(act["arguments"], dict):
         return act
-    if "name" in act and "arguments" not in act:
+
+    # Format I: {"type": "memory_insert", "layer": ..., "content": ...}
+    if "type" in act and act["type"] in _OP_NAMES:
+        args = {k: v for k, v in act.items() if k != "type"}
+        return {"name": act["type"], "arguments": args}
+
+    # Format D/E/F/G/H: key IS the operation name
+    for op in _OP_NAMES:
+        if op in act:
+            val = act[op]
+
+            if op == "memory_wait":
+                return {"name": "memory_wait", "arguments": {}}
+
+            if isinstance(val, dict):
+                return {"name": op, "arguments": val}
+
+            if isinstance(val, list):
+                if op == "memory_insert" and len(val) >= 2:
+                    return {"name": op, "arguments": {
+                        "layer": str(val[0]).lower(), "content": str(val[1])
+                    }}
+                if op == "memory_update" and len(val) >= 3:
+                    return {"name": op, "arguments": {
+                        "layer": str(val[0]).lower(),
+                        "memory_id": str(val[1]),
+                        "content": str(val[2]),
+                    }}
+                if op == "memory_delete" and len(val) >= 2:
+                    return {"name": op, "arguments": {
+                        "layer": str(val[0]).lower(),
+                        "memory_id": str(val[1]),
+                    }}
+
+            if isinstance(val, str) and "content" in act:
+                return {"name": op, "arguments": {
+                    "layer": val.lower(),
+                    "content": act["content"],
+                }}
+            break
+
+    # Format C: {"name": "memory_insert", "layer": ..., "content": ...}
+    if "name" in act and act["name"] in _OP_NAMES:
         args = {k: v for k, v in act.items() if k != "name"}
         return {"name": act["name"], "arguments": args}
-    if "layer" in act and "content" in act and "name" not in act:
+
+    # Format B: {"layer": "history", "content": "..."}
+    if "layer" in act and "content" in act:
         if "memory_id" in act:
             return {"name": "memory_update", "arguments": act}
         return {"name": "memory_insert", "arguments": act}
+
     return act
 
 
 def execute_actions_on_memory(memory: MemoryBase, actions: List[Dict]) -> List[str]:
     logs = []
-    for raw_act in actions:
+    for act in _normalize_actions(actions):
         try:
-            act = _normalize_action(raw_act)
             name = act.get("name", "")
             args = act.get("arguments", {})
             if name == "memory_insert":
@@ -835,15 +922,31 @@ def evaluate_sample(
     judge_model: str,
     chat_kwargs: Optional[Dict] = None,
     modes: Tuple[str, ...] = ("agent_memory", "oracle_memory", "no_memory"),
+    existing_trace: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
-    result = {
-        "instance_id": sample["instance_id"],
-        "source": sample["source"], "patient_id": sample["patient_id"],
-        "turn_idx": sample["turn_idx"],
-        "difficulty": sample["difficulty"], "query_type": sample["query_type"],
-        "chat_model": chat_model, "judge_model": judge_model,
-        "patient_message": sample["patient_message"][:200],
-    }
+    """Evaluate a single sample.  If *existing_trace* is provided, reuse any
+    mode-level scores that are already present and only run the missing modes.
+    This allows incremental re-evaluation (e.g. re-run agent_memory only while
+    keeping oracle_memory / no_memory scores from the previous run)."""
+
+    if existing_trace is not None:
+        result = dict(existing_trace)
+    else:
+        result = {
+            "instance_id": sample["instance_id"],
+            "source": sample["source"], "patient_id": sample["patient_id"],
+            "turn_idx": sample["turn_idx"],
+            "difficulty": sample["difficulty"], "query_type": sample["query_type"],
+            "chat_model": chat_model, "judge_model": judge_model,
+            "patient_message": sample["patient_message"][:200],
+        }
+    result.pop("error", None)
+
+    def _mode_already_done(mode_name: str) -> bool:
+        col = f"{mode_name}_{DIMENSIONS[0]}"
+        v = result.get(col)
+        return v is not None and v != -1
+
     full_history = sample["full_dialogue_history"]
     recent_ctx = sample["recent_context"]
     patient_msg = sample["patient_message"]
@@ -878,26 +981,26 @@ def evaluate_sample(
                 result[f"{mode_name}_{dim}"] = -1
 
     try:
-        if "agent_memory" in modes and agent_turn_state is not None:
-            retrieved_items = agent_turn_state.get("retrieved_for_chat", [])
-            # Build MemoryItem-like objects for formatting
-            class _FakeItem:
-                def __init__(self, d):
-                    self.layer = d.get("layer", "")
-                    self.content = d.get("content", "")
-            fake_items = [_FakeItem(d) for d in retrieved_items]
-            agent_mem_text = format_retrieved_memories(fake_items)
-            _generate_and_judge("agent_memory", agent_mem_text)
-            result["agent_n_retrieved"] = len(retrieved_items)
-            result["agent_conflicts_detected"] = agent_turn_state.get("conflicts_detected", 0)
-            if agent_turn_state.get("verify"):
-                result["agent_step_verify_score"] = agent_turn_state["verify"].get("score", None)
+        if "agent_memory" in modes and not _mode_already_done("agent_memory"):
+            if agent_turn_state is not None:
+                retrieved_items = agent_turn_state.get("retrieved_for_chat", [])
+                class _FakeItem:
+                    def __init__(self, d):
+                        self.layer = d.get("layer", "")
+                        self.content = d.get("content", "")
+                fake_items = [_FakeItem(d) for d in retrieved_items]
+                agent_mem_text = format_retrieved_memories(fake_items)
+                _generate_and_judge("agent_memory", agent_mem_text)
+                result["agent_n_retrieved"] = len(retrieved_items)
+                result["agent_conflicts_detected"] = agent_turn_state.get("conflicts_detected", 0)
+                if agent_turn_state.get("verify"):
+                    result["agent_step_verify_score"] = agent_turn_state["verify"].get("score", None)
 
-        if "oracle_memory" in modes:
+        if "oracle_memory" in modes and not _mode_already_done("oracle_memory"):
             oracle_mem_text = format_memory_state(oracle_mem)
             _generate_and_judge("oracle_memory", oracle_mem_text)
 
-        if "no_memory" in modes:
+        if "no_memory" in modes and not _mode_already_done("no_memory"):
             _generate_and_judge("no_memory", None)
 
     except Exception as exc:
@@ -936,6 +1039,10 @@ def main():
     parser.add_argument("--modes", nargs="+",
                         default=["agent_memory", "oracle_memory", "no_memory"],
                         choices=["agent_memory", "oracle_memory", "no_memory"])
+    parser.add_argument("--force_rerun_modes", nargs="+", default=None,
+                        choices=["agent_memory", "oracle_memory", "no_memory"],
+                        help="Force re-evaluate these modes even if scores exist in traces. "
+                             "Old scores for these modes are cleared before re-evaluation.")
     parser.add_argument("--seed", type=int, default=42)
     args = parser.parse_args()
 
@@ -950,16 +1057,40 @@ def main():
     os.makedirs(traces_dir, exist_ok=True)
     os.makedirs(agent_dir, exist_ok=True)
 
-    done_ids = set()
+    # Build a map of existing traces so we can do incremental/merge evaluation.
+    # A sample is "fully done" only if the trace already has valid scores for ALL
+    # requested modes AND none of those modes are in --force_rerun_modes.
+    force_modes = set(args.force_rerun_modes or [])
+    existing_traces: Dict[str, Dict[str, Any]] = {}
+    done_ids: set = set()
     for fn in os.listdir(traces_dir):
         if fn.endswith(".json"):
             try:
                 with open(os.path.join(traces_dir, fn), "r", encoding="utf-8") as f:
                     trace = json.load(f)
-                if "error" not in trace:
-                    done_ids.add(trace.get("instance_id", fn[:-5]))
+                if "error" in trace:
+                    continue
+                iid = trace.get("instance_id", fn[:-5])
+                existing_traces[iid] = trace
+                all_present = True
+                for m in modes:
+                    if m in force_modes:
+                        all_present = False
+                        break
+                    score_col = f"{m}_{DIMENSIONS[0]}"
+                    if score_col not in trace or trace[score_col] in (None, -1):
+                        all_present = False
+                        break
+                if all_present:
+                    done_ids.add(iid)
             except Exception:
                 pass
+    n_reuse = len(done_ids)
+    n_partial = len(existing_traces) - n_reuse
+    if force_modes:
+        print(f"  Force re-run modes: {list(force_modes)}")
+    print(f"  Traces: {len(existing_traces)} existing, {n_reuse} fully done for modes {list(modes)}, "
+          f"{n_partial} need partial re-eval")
 
     all_patients = []
     for cache_dir in args.cache_dirs:
@@ -994,7 +1125,8 @@ def main():
         turn_states = {}
         if "agent_memory" in modes:
             agent_trace_path = os.path.join(agent_dir, f"{source}_{pid}.json")
-            if os.path.exists(agent_trace_path):
+            force_agent = "agent_memory" in force_modes
+            if os.path.exists(agent_trace_path) and not force_agent:
                 try:
                     with open(agent_trace_path, "r", encoding="utf-8") as f:
                         cached = json.load(f)
@@ -1035,8 +1167,18 @@ def main():
             agent_ts = None
             if "agent_memory" in modes:
                 agent_ts = turn_states.get(sample["turn_idx"])
+            iid = sample["instance_id"]
+            old_trace = existing_traces.get(iid)
+            if old_trace is not None and force_modes:
+                old_trace = dict(old_trace)
+                for fm in force_modes:
+                    for dim in DIMENSIONS:
+                        old_trace.pop(f"{fm}_{dim}", None)
+                    old_trace.pop(f"{fm}_rationale", None)
+                    old_trace.pop(f"{fm}_response", None)
             return evaluate_sample(sample, agent_ts, args.chat_model,
-                                   args.judge_model, chat_kwargs, modes)
+                                   args.judge_model, chat_kwargs, modes,
+                                   existing_trace=old_trace)
 
         with ThreadPoolExecutor(max_workers=args.workers) as pool:
             futures = {pool.submit(_eval, s): s for s in eval_samples}
