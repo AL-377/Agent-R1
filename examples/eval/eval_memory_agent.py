@@ -1060,6 +1060,7 @@ def main():
     # Build a map of existing traces so we can do incremental/merge evaluation.
     # A sample is "fully done" only if the trace already has valid scores for ALL
     # requested modes AND none of those modes are in --force_rerun_modes.
+    modes = tuple(args.modes)
     force_modes = set(args.force_rerun_modes or [])
     existing_traces: Dict[str, Dict[str, Any]] = {}
     done_ids: set = set()
@@ -1103,7 +1104,6 @@ def main():
 
     mem_kwargs = {"temperature": args.memory_temperature, "max_tokens": args.memory_max_tokens}
     chat_kwargs = {"temperature": args.temperature, "max_tokens": args.max_tokens}
-    modes = tuple(args.modes)
     all_results: List[Dict[str, Any]] = []
 
     for p_idx, patient_data in enumerate(all_patients):
