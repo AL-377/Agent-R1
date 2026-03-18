@@ -25,7 +25,7 @@ echo "=========================================="
 echo " Evaluation 1: Dialogue Quality (Enhanced Agent)"
 echo "=========================================="
 
-for MODEL in gpt-4o-2024-05-13 gpt-4o-mini-2024-07-18 DeepSeek-R1; do
+for MODEL in DeepSeek-R1; do
     echo ""
     echo ">>> Memory+Chat Model: ${MODEL}"
     python examples/eval/eval_memory_agent.py \
@@ -48,7 +48,7 @@ echo "=========================================="
 echo " Evaluation 2: MED-MEM Agent Memory Accuracy (Enhanced)"
 echo "=========================================="
 
-for MODEL in gpt-4o-2024-05-13 gpt-4o-mini-2024-07-18 DeepSeek-R1; do
+for MODEL in DeepSeek-R1; do
     echo ""
     echo ">>> Memory Model: ${MODEL}"
     python examples/eval/eval_medmem_agent.py \
@@ -56,8 +56,9 @@ for MODEL in gpt-4o-2024-05-13 gpt-4o-mini-2024-07-18 DeepSeek-R1; do
         --output_dir eval_results/medmem_agent_${MODEL} \
         --memory_model ${MODEL} \
         --judge_model ${JUDGE} \
-        --max_patients_per_source 50 \
-        --workers 1 \
+        --workers 4 \
+        --max_patients_per_source 20 \
+        --max_eval_samples_per_patient 5 \
         --memory_temperature 0.3
 done
 

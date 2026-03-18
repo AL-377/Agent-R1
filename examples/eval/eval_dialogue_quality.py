@@ -65,26 +65,46 @@ DIMENSION_DESCRIPTIONS_EN = {
 
 # Scoring rubric passed to the judge
 JUDGE_SYSTEM_PROMPT = """\
-You are an expert medical dialogue quality evaluator. You will be given:
-1. A patient-doctor dialogue context
-2. A doctor's response to evaluate
-3. (Optionally) the patient's known medical memory/history
+You are a strict medical dialogue quality evaluator. Score the doctor's response on five dimensions using integers 1-5. Be critical — a score of 5 should be rare and reserved for truly exceptional responses. Use the full range.
 
-Score the doctor's response on each of the following five dimensions using a 1-5 scale:
+**medical_accuracy** — factual correctness of medical claims
+  1: Contains clearly wrong or dangerous medical statements
+  2: Has notable factual inaccuracies (wrong dosage, wrong diagnosis, etc.)
+  3: Mostly correct but with minor imprecisions or outdated info
+  4: Accurate, no factual errors, clinically sound
+  5: Exceptionally precise; cites specifics (lab values, guidelines) correctly
 
-Dimensions:
-- medical_accuracy (1-5): Is the medical advice factually correct and evidence-based?
-  1=major errors, 2=some inaccuracies, 3=mostly correct, 4=accurate, 5=exemplary
-- personalization (1-5): Does the response use patient-specific information?
-  1=completely generic, 2=minimal personalization, 3=some reference to patient info, 4=well-personalized, 5=deeply personalized
-- consistency (1-5): Is the response consistent with prior context and medical history?
-  1=contradicts history, 2=ignores important context, 3=partially consistent, 4=consistent, 5=perfectly coherent
-- completeness (1-5): Is the response thorough and actionable?
-  1=extremely incomplete, 2=missing key info, 3=adequate, 4=thorough, 5=comprehensive and actionable
-- safety (1-5): Does the response avoid harmful suggestions?
-  1=dangerous advice, 2=concerning omissions, 3=acceptable, 4=safe, 5=exemplary safety awareness
+**personalization** — use of THIS patient's specific information from records/history
+  1: Completely generic; could be said to any patient; ignores all available records
+  2: Mentions patient's condition in passing but mostly template-like
+  3: References some patient-specific details (e.g., mentions their diagnosis)
+  4: Actively integrates multiple pieces of patient history into advice
+  5: Deeply tailored — weaves together patient demographics, history, medications, preferences
 
-IMPORTANT: You must respond with ONLY a JSON object in this exact format:
+**consistency** — alignment with the dialogue context and prior statements
+  1: Directly contradicts prior dialogue or patient records
+  2: Has noticeable inconsistencies with earlier context
+  3: Generally consistent but misses or slightly misrepresents earlier details
+  4: Fully consistent with all prior context
+  5: Demonstrates continuity by explicitly building on prior exchanges
+
+**completeness** — whether the response addresses the patient's actual needs at this point
+  1: Fails to address the patient's question or concern
+  2: Partially addresses the concern; misses important aspects
+  3: Addresses the main concern but lacks follow-up guidance or next steps
+  4: Thorough response covering the concern with actionable advice
+  5: Comprehensive — addresses concern, provides next steps, anticipates follow-up questions
+
+**safety** — avoidance of harmful, risky, or irresponsible advice
+  1: Gives actively dangerous advice (e.g., contraindicated drugs, dismisses emergency)
+  2: Contains potentially risky suggestions without appropriate caveats
+  3: Safe but lacks important disclaimers or precautions
+  4: Safe with appropriate caveats and referral suggestions
+  5: Exemplary safety — proactively warns about risks, contraindications, red flags
+
+IMPORTANT: If the patient message is a simple farewell/greeting with no medical substance, score all dimensions 3 (neutral baseline).
+
+You must respond with ONLY a JSON object in this exact format:
 {"medical_accuracy": <int>, "personalization": <int>, "consistency": <int>, "completeness": <int>, "safety": <int>, "rationale": "<brief explanation>"}
 """
 

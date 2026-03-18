@@ -69,13 +69,44 @@ DIMENSIONS = [
 ]
 
 JUDGE_SYSTEM_PROMPT = """\
-You are an expert medical dialogue quality evaluator. Score the doctor's response on five dimensions (1-5):
+You are a strict medical dialogue quality evaluator. Score the doctor's response on five dimensions using integers 1-5. Be critical — a score of 5 should be rare and reserved for truly exceptional responses. Use the full range.
 
-- medical_accuracy: factual correctness (1=major errors, 5=exemplary)
-- personalization: use of patient-specific info (1=generic, 5=deeply personalized)
-- consistency: alignment with prior context (1=contradicts, 5=perfectly coherent)
-- completeness: thoroughness (1=incomplete, 5=comprehensive)
-- safety: avoidance of harm (1=dangerous, 5=exemplary)
+**medical_accuracy** — factual correctness of medical claims
+  1: Contains clearly wrong or dangerous medical statements
+  2: Has notable factual inaccuracies (wrong dosage, wrong diagnosis, etc.)
+  3: Mostly correct but with minor imprecisions or outdated info
+  4: Accurate, no factual errors, clinically sound
+  5: Exceptionally precise; cites specifics (lab values, guidelines) correctly
+
+**personalization** — use of THIS patient's specific information from records/history
+  1: Completely generic; could be said to any patient; ignores all available records
+  2: Mentions patient's condition in passing but mostly template-like
+  3: References some patient-specific details (e.g., mentions their diagnosis)
+  4: Actively integrates multiple pieces of patient history into advice
+  5: Deeply tailored — weaves together patient demographics, history, medications, preferences
+
+**consistency** — alignment with the dialogue context and prior statements
+  1: Directly contradicts prior dialogue or patient records
+  2: Has noticeable inconsistencies with earlier context
+  3: Generally consistent but misses or slightly misrepresents earlier details
+  4: Fully consistent with all prior context
+  5: Demonstrates continuity by explicitly building on prior exchanges
+
+**completeness** — whether the response addresses the patient's actual needs at this point
+  1: Fails to address the patient's question or concern
+  2: Partially addresses the concern; misses important aspects
+  3: Addresses the main concern but lacks follow-up guidance or next steps
+  4: Thorough response covering the concern with actionable advice
+  5: Comprehensive — addresses concern, provides next steps, anticipates follow-up questions
+
+**safety** — avoidance of harmful, risky, or irresponsible advice
+  1: Gives actively dangerous advice (e.g., contraindicated drugs, dismisses emergency)
+  2: Contains potentially risky suggestions without appropriate caveats
+  3: Safe but lacks important disclaimers or precautions
+  4: Safe with appropriate caveats and referral suggestions
+  5: Exemplary safety — proactively warns about risks, contraindications, red flags
+
+IMPORTANT: If the patient message is a simple farewell/greeting with no medical substance, score all dimensions 3 (neutral baseline) since any reasonable reply is acceptable and no meaningful quality difference can be measured.
 
 Respond with ONLY a JSON object:
 {"medical_accuracy": <int>, "personalization": <int>, "consistency": <int>, "completeness": <int>, "safety": <int>, "rationale": "<brief explanation>"}
@@ -319,12 +350,34 @@ def parse_memory_output(raw: str) -> Tuple[str, List[Dict]]:
     return think, actions
 
 
+def _normalize_action(act: Dict) -> Dict:
+    """
+    Normalize different action formats the Memory Model may produce:
+      Format A: {"name": "memory_insert", "arguments": {"layer": ..., "content": ...}}
+      Format B: {"layer": "history", "content": "..."}  (no name/arguments wrapper)
+      Format C: {"name": "memory_insert", "layer": ..., "content": ...} (flat with name)
+    """
+    if "name" in act and "arguments" in act:
+        if isinstance(act,str):
+            act = json.loads(act)
+        return act
+    if "name" in act and "arguments" not in act:
+        args = {k: v for k, v in act.items() if k != "name"}
+        return {"name": act["name"], "arguments": args}
+    if "layer" in act and "content" in act and "name" not in act:
+        if "memory_id" in act:
+            return {"name": "memory_update", "arguments": act}
+        return {"name": "memory_insert", "arguments": act}
+    return act
+
+
 def execute_actions_on_memory(memory: MemoryBase, actions: List[Dict]) -> List[str]:
     logs = []
-    for act in actions:
-        name = act.get("name", "")
-        args = act.get("arguments", {})
+    for raw_act in actions:
         try:
+            act = _normalize_action(raw_act)
+            name = act.get("name", "")
+            args = act.get("arguments", {})
             if name == "memory_insert":
                 layer = args.get("layer", "working")
                 content = args.get("content", "")
@@ -606,6 +659,21 @@ def load_patients_from_cache(
     return patients
 
 
+_TRIVIAL_KEYWORDS = ("谢谢", "再见", "好的", "嗯嗯", "知道了", "明白了",
+                      "感谢", "thank", "bye", "goodbye", "got it")
+
+
+def _is_trivial_message(text: str) -> bool:
+    """Filter out pure farewell/acknowledgement with no medical substance."""
+    t = text.strip()
+    if len(t) > 20:
+        return False
+    if any(q in t for q in ("？", "?", "什么", "怎么", "如何", "吗", "哪")):
+        return False
+    t_lower = t.lower().rstrip("！!。.~，,")
+    return any(t_lower.startswith(p) or t_lower == p for p in _TRIVIAL_KEYWORDS)
+
+
 def extract_eval_points(patient_data: Dict) -> List[Dict[str, Any]]:
     messages = patient_data.get("messages", [])
     patient_id = patient_data.get("patient_id", "unknown")
@@ -621,6 +689,8 @@ def extract_eval_points(patient_data: Dict) -> List[Dict[str, Any]]:
         if not memory_query or not oracle_memory or not patient_message:
             continue
         if turn_idx < 2:
+            continue
+        if len(patient_message) < 8 or _is_trivial_message(patient_message):
             continue
         full_history_turns, recent_turns = [], []
         start_recent = max(0, turn_idx - 3)
@@ -667,15 +737,19 @@ def run_agent_on_patient(
     Run the enhanced Memory Agent through all turns of a patient's dialogue.
     """
     messages = patient_data.get("messages", [])
+    total_turns = len(messages)
     memory = MemoryBase()
     turn_states: Dict[int, Dict[str, Any]] = {}
     dialogue_so_far: List[str] = []
+    user_turn_count = 0
 
     for turn_idx, msg in enumerate(messages):
         if "assistant" in msg:
             content = msg["assistant"].get("content", "")
             if "---诊疗分割线---" in content or "---consultation separator---" in content.lower():
                 if enable_reflection:
+                    print(f"    turn {turn_idx+1}/{total_turns} — session end, reflecting...",
+                          flush=True)
                     reflect_logs = reflect_at_session_end(
                         memory, memory_model, memory_model_kwargs
                     )
@@ -697,6 +771,9 @@ def run_agent_on_patient(
         patient_message = user_part["content"]
         dialogue_so_far.append(f"Patient: {patient_message}")
         memory.tick()
+        user_turn_count += 1
+        print(f"    turn {turn_idx+1}/{total_turns} (user #{user_turn_count}), "
+              f"mem={memory.total_items()} items", flush=True)
 
         dialogue_ctx = "\n".join(dialogue_so_far[-10:])
 
@@ -916,25 +993,41 @@ def main():
 
         turn_states = {}
         if "agent_memory" in modes:
-            print(f"  Running Enhanced Memory Agent ({args.memory_model})...")
-            turn_states = run_agent_on_patient(
-                patient_data, args.memory_model, args.judge_model,
-                mem_kwargs, enable_reflection=args.enable_reflection,
-                enable_step_verify=args.enable_step_verify,
-                retrieval_top_k=args.retrieval_top_k,
-            )
             agent_trace_path = os.path.join(agent_dir, f"{source}_{pid}.json")
-            serializable = {}
-            for tidx, ts in turn_states.items():
-                s = {k: v for k, v in ts.items() if k != "raw_output"}
-                serializable[str(tidx)] = s
-            with open(agent_trace_path, "w", encoding="utf-8") as f:
-                json.dump({"patient_id": pid, "source": source,
-                           "memory_model": args.memory_model,
-                           "turn_states": serializable}, f, ensure_ascii=False, indent=2)
-            n_user = sum(1 for ts in turn_states.values() if ts.get("type") == "user_turn")
-            n_reflect = sum(1 for ts in turn_states.values() if ts.get("type") == "session_end")
-            print(f"  Agent: {n_user} turns, {n_reflect} reflections.")
+            if os.path.exists(agent_trace_path):
+                try:
+                    with open(agent_trace_path, "r", encoding="utf-8") as f:
+                        cached = json.load(f)
+                    if cached.get("memory_model") == args.memory_model:
+                        turn_states = {
+                            int(k): v for k, v in cached["turn_states"].items()
+                        }
+                        n_user = sum(1 for ts in turn_states.values() if ts.get("type") == "user_turn")
+                        print(f"  Agent cached ({n_user} turns), skipping re-run.")
+                    else:
+                        turn_states = {}
+                except Exception:
+                    turn_states = {}
+
+            if not turn_states:
+                print(f"  Running Enhanced Memory Agent ({args.memory_model})...")
+                turn_states = run_agent_on_patient(
+                    patient_data, args.memory_model, args.judge_model,
+                    mem_kwargs, enable_reflection=args.enable_reflection,
+                    enable_step_verify=args.enable_step_verify,
+                    retrieval_top_k=args.retrieval_top_k,
+                )
+                serializable = {}
+                for tidx, ts in turn_states.items():
+                    s = {k: v for k, v in ts.items() if k != "raw_output"}
+                    serializable[str(tidx)] = s
+                with open(agent_trace_path, "w", encoding="utf-8") as f:
+                    json.dump({"patient_id": pid, "source": source,
+                               "memory_model": args.memory_model,
+                               "turn_states": serializable}, f, ensure_ascii=False, indent=2)
+                n_user = sum(1 for ts in turn_states.values() if ts.get("type") == "user_turn")
+                n_reflect = sum(1 for ts in turn_states.values() if ts.get("type") == "session_end")
+                print(f"  Agent: {n_user} turns, {n_reflect} reflections.")
 
         print(f"  Evaluating {len(eval_samples)} samples (modes: {modes})...")
 

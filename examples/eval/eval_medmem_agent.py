@@ -140,12 +140,14 @@ def process_patient(
     memory_kwargs: Optional[Dict] = None,
     also_eval_oracle: bool = True,
     enable_reflection: bool = True,
+    max_eval_samples: Optional[int] = None,
 ) -> List[Dict[str, Any]]:
     """
     Run the Enhanced Memory Agent through a patient's full dialogue history.
     Uses MemoryBase with relevance scoring, conflict detection, and reflection.
     """
     messages = patient_data.get("messages", [])
+    total_turns = len(messages)
     patient_id = patient_data.get("patient_id", "unknown")
     source = patient_data.get("_source", "unknown")
     metadata = patient_data.get("metadata", {})
@@ -153,12 +155,15 @@ def process_patient(
     memory = MemoryBase()
     dialogue_so_far: List[str] = []
     results = []
+    user_turn_count = 0
 
     for turn_idx, msg in enumerate(messages):
         if "assistant" in msg:
             content = msg["assistant"].get("content", "")
             if "---诊疗分割线---" in content or "---consultation separator---" in content.lower():
                 if enable_reflection:
+                    print(f"    turn {turn_idx+1}/{total_turns} — session end, reflecting...",
+                          flush=True)
                     reflect_at_session_end(memory, memory_model, memory_kwargs)
                 memory.clear_working()
                 dialogue_so_far = []
@@ -173,6 +178,9 @@ def process_patient(
         patient_message = user_part["content"]
         dialogue_so_far.append(f"Patient: {patient_message}")
         memory.tick()
+        user_turn_count += 1
+        print(f"    turn {turn_idx+1}/{total_turns} (user #{user_turn_count}), "
+              f"mem={memory.total_items()} items", flush=True)
 
         dialogue_ctx = "\n".join(dialogue_so_far[-10:])
         mem_state_text = memory.get_state_text()
@@ -265,6 +273,10 @@ def process_patient(
                     row["oracle_error"] = str(e)
 
             results.append(row)
+            if max_eval_samples and len(results) >= max_eval_samples:
+                print(f"    reached max_eval_samples={max_eval_samples} for this patient, stopping.",
+                      flush=True)
+                break
 
     return results
 
@@ -284,6 +296,10 @@ def main():
                         help="Parallelism at patient level (memory agent is sequential per patient)")
     parser.add_argument("--memory_temperature", type=float, default=0.3)
     parser.add_argument("--memory_max_tokens", type=int, default=4096)
+    parser.add_argument("--max_eval_samples_per_patient", type=int, default=None,
+                        help="Max eval queries per patient (like eval_memory_agent)")
+    parser.add_argument("--max_eval_queries", type=int, default=None,
+                        help="Cap total eval queries across all patients (e.g. 300)")
     parser.add_argument("--no_oracle", action="store_true",
                         help="Skip oracle memory evaluation")
     parser.add_argument("--no_reflection", action="store_true",
@@ -329,15 +345,25 @@ def main():
             patient, args.memory_model, args.judge_model,
             mem_kwargs, also_eval_oracle=not args.no_oracle,
             enable_reflection=not args.no_reflection,
+            max_eval_samples=args.max_eval_samples_per_patient,
         )
+
+    max_q = args.max_eval_queries
+    total_eval_count = 0
 
     if args.workers <= 1:
         for p_idx, patient in enumerate(remaining):
+            if max_q and total_eval_count >= max_q:
+                print(f"\n  Reached --max_eval_queries={max_q}, stopping early.")
+                break
             pid = patient.get("patient_id", "unknown")
             source = patient.get("_source", "unknown")
-            print(f"\n[{p_idx+1}/{len(remaining)}] Patient {pid} ({source})")
+            print(f"\n[{p_idx+1}/{len(remaining)}] Patient {pid} ({source})"
+                  f"  [eval so far: {total_eval_count}"
+                  f"{'/' + str(max_q) if max_q else ''}]")
             results = _process(patient)
             all_results.extend(results)
+            total_eval_count += len(results)
 
             for r in results:
                 trace_path = os.path.join(traces_dir, f"{r['instance_id']}.json")
@@ -347,11 +373,11 @@ def main():
             with open(done_file, "a") as f:
                 f.write(f"{source}_{pid}\n")
 
-            # Periodic status
             valid = [r for r in all_results if r.get("agent_correct", -2) >= 0]
             if valid:
                 acc = sum(r["agent_correct"] for r in valid) / len(valid)
-                print(f"  → {len(results)} queries | running agent acc: {acc:.3f} ({len(valid)} samples)")
+                print(f"  → {len(results)} queries | running agent acc: {acc:.3f} "
+                      f"({len(valid)}/{total_eval_count} samples)")
     else:
         with ThreadPoolExecutor(max_workers=args.workers) as pool:
             futures = {pool.submit(_process, p): p for p in remaining}
@@ -361,12 +387,17 @@ def main():
                 source = patient.get("_source", "unknown")
                 results = fut.result()
                 all_results.extend(results)
+                total_eval_count += len(results)
                 for r in results:
                     trace_path = os.path.join(traces_dir, f"{r['instance_id']}.json")
                     with open(trace_path, "w", encoding="utf-8") as f:
                         json.dump(r, f, ensure_ascii=False, indent=2)
                 with open(done_file, "a") as f:
                     f.write(f"{source}_{pid}\n")
+                if max_q and total_eval_count >= max_q:
+                    print(f"\n  Reached --max_eval_queries={max_q}, stopping.")
+                    pool.shutdown(wait=False, cancel_futures=True)
+                    break
 
     # Load existing traces
     for fn in os.listdir(traces_dir):
